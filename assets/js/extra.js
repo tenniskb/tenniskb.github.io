@@ -13,7 +13,7 @@
       if (isVi) {
         // Currently on VI site -> point cross-link to EN site
         if (href.indexOf("/vi/index.html") !== -1 || href.indexOf("/vi/") !== -1) {
-          a.setAttribute("href", "https://henryphamduc.github.io/tenniskb/en/index.html");
+          a.setAttribute("href", "https://henryphamduc.github.io/taichiknowledgebase/");
         }
       } else {
         // Currently on EN site (or root) -> point cross-link to VI site
