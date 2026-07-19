@@ -1,0 +1,104 @@
+/* Phase 4: Visual/UI + Navigation Enhancements */
+
+/* === 1. CTA Buttons === */
+a(btn), a.cta, a.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+a.cta, a.button, [class*="card"] a {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+  color: white !important;
+}
+a.cta:hover, a.button:hover, [class*="card"] a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  background: linear-gradient(135deg, #43A047, #7CB342);
+}
+
+/* === 2. Card Enhancements === */
+[class*="card"], td[class*="card"], tr:has(td[class*="card"]) {
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+[class*="card"]:hover, td[class*="card"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+}
+
+/* === 3. Better Typography for 50+ === */
+article, .md-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 1.5em;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* === 4. Navigation Clarity === */
+.md-nav__link {
+  padding: 0.5em 0;
+  font-size: 1rem;
+}
+.md-nav__link:hover {
+  color: #4CAF50;
+  transform: translateX(4px);
+  transition: all 0.2s ease;
+}
+
+/* === 5. Footer Enhancement === */
+footer, .md-footer {
+  padding: 2em 0;
+  text-align: center;
+}
+footer a, .md-footer a {
+  color: #4CAF50;
+  font-weight: 600;
+  text-decoration: none;
+}
+footer a:hover, .md-footer a:hover {
+  text-decoration: underline;
+}
+
+/* === 6. Focus States (Accessibility) === */
+a:focus, button:focus, [tabindex]:focus {
+  outline: 3px solid #4CAF50;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === 7. Mobile Responsiveness === */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  article, .md-content { font-size: 1rem; }
+  a.cta, a.button { padding: 0.6em 1.2em; }
+}
+
+/* === 8. Smooth Scrolling === */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* === 9. Quick Navigation Links === */
+ul:has(a[href*="index.md"]), ul:has(a[href*="../"]) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  list-style: none;
+  padding: 0;
+}
+ul:has(a[href*="index.md"]) li, ul:has(a[href*="../"]) li {
+  display: inline-block;
+}
