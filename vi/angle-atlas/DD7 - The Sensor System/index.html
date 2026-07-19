@@ -1,0 +1,2554 @@
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive tennis training resource - Foundation, Advanced, and Elite levels">
+      
+      
+        <meta name="author" content="Henry Pham">
+      
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../angle-atlas/DD7%20-%20The%20Sensor%20System/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="vi">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DD7 — The Sensor System — Feedback Loops, PV vs SV, and Error Correction - Tennis Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/css/style.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/enhancements.css">
+    
+      <link rel="stylesheet" href="../../../assets/css/phase5.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dd7-the-sensor-system-feedback-loops-pv-vs-sv-and-error-correction" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../../" title="Tennis Knowledge Base" class="md-header__button md-logo" aria-label="Tennis Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tennis Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DD7 — The Sensor System — Feedback Loops, PV vs SV, and Error Correction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Chọn ngôn ngữ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../angle-atlas/DD7%20-%20The%20Sensor%20System/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="vi" class="md-select__link">
+              Tiếng Việt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Trang Chủ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../foundation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nền Tảng
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../advanced/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Cao Cấp
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../elite/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tinh Hoa
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Tennis Knowledge Base" class="md-nav__button md-logo" aria-label="Tennis Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tennis Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../foundation/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nền Tảng
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../advanced/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cao Cấp
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../elite/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tinh Hoa
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dd7-the-sensor-system-feedback-loops-pv-vs-sv-and-error-correction">DD7 — The Sensor System — Feedback Loops, PV vs SV, and Error Correction<a class="headerlink" href="#dd7-the-sensor-system-feedback-loops-pv-vs-sv-and-error-correction" title="Permanent link">&para;</a></h1>
+<h1 id="dd7-he-cam-bien-vong-phan-hoi-pv-vs-sv-va-sua-loi">DD7 — Hệ Cảm Biến — Vòng Phản Hồi, PV vs SV, và Sửa Lỗi<a class="headerlink" href="#dd7-he-cam-bien-vong-phan-hoi-pv-vs-sv-va-sua-loi" title="Permanent link">&para;</a></h1>
+<p><em>Deep Dive #7 — The Anatomy &amp; Geometry Project for Tennis Players 3.5 → 4.5</em>
+<em>Chuyên Đề Số 7 — Dự Án Giải Phẫu &amp; Hình Học cho Người Chơi Tennis 3.5 → 4.5</em>
+<em>Built from the 20-chapter body perception handbook at <code>Cẩm nang về cảm nhận cơ thể trong tennis/</code> and <code>Proprioception in Tennis</code> (Claude coauthor)</em>
+<em>Xây từ cẩm nang 20 chương nhận thức cơ thể tại <code>Cẩm nang về cảm nhận cơ thể trong tennis/</code> và <code>Proprioception in Tennis</code> (đồng tác giả Claude)</em></p>
+<hr />
+<h2 id="document-map-ban-o-tai-lieu">Document Map / Bản Đồ Tài Liệu<a class="headerlink" href="#document-map-ban-o-tai-lieu" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lớp còn thiếu. Các chuyên đề trước (DD1–DD6) bao phủ phần cứng (góc, lò xo, thần kinh, cơ, xương) và bộ điều khiển (vùng não, lớp quyết định). DD này bao phủ cảm biến — 5 kênh phản hồi cơ thể thực sự ĐANG LÀM GÌ, để bộ điều khiển so sánh Giá Trị Quá Trình (PV) với Giá Trị Đặt (SV) và sửa sai.</td>
+</tr>
+<tr>
+<td>5 kênh cảm biến — cảm giác sâu (khớp tôi ở đâu), bàn chân (đất ở đâu), bàn tay (vợt đang làm gì), mắt (bóng ở đâu + sân ở đâu), tai + tiền đình (đầu tôi ở đâu trong không gian + âm thanh tiếp xúc vợt đến từ đâu).</td>
+</tr>
+<tr>
+<td>Vòng điều khiển PV/SV — mỗi cú đánh là bộ điều khiển cố làm PV khớp SV. Khi PV ≠ SV, có sai số. Cơ thể có 3 cách sửa: (1) phản hồi trực tiếp (tốt — thấy trong cú), (2) phản hồi sau cú (tốt hơn — qua nhiều cú), (3) sửa dự đoán (tốt nhất — trước khi cú bắt đầu).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="table-of-contents-muc-luc">Table of Contents / Mục Lục<a class="headerlink" href="#table-of-contents-muc-luc" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Chapter</th>
+<th>Chương</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The Control Engineering View of Tennis</td>
+<td>Góc Nhìn Kỹ Thuật Điều Khiển Của Tennis</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The 5 Sensor Channels</td>
+<td>5 Kênh Cảm Biến</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Channel 1 — Proprioception (The Hidden 6th Sense)</td>
+<td>Kênh 1 — Cảm Giác Sâu (Giác Quan Thứ 6 Ẩn)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Channel 2 — Feet (Ground Contact as PV)</td>
+<td>Kênh 2 — Bàn Chân (Tiếp Đất làm PV)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Channel 3 — Hands (Racket Grip as PV)</td>
+<td>Kênh 3 — Bàn Tay (Cầm Vợt làm PV)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Channel 4 — Eyes (Vision as PV + SV Source)</td>
+<td>Kênh 4 — Mắt (Thị Giác làm PV + Nguồn SV)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Channel 5 — Ears + Vestibular (Sound + Head Position)</td>
+<td>Kênh 5 — Tai + Tiền Đình (Âm Thanh + Vị Trí Đầu)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>The 3 Feedback Loop Types</td>
+<td>3 Loại Vòng Phản Hồi</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Error Correction: From Error to Refinement</td>
+<td>Sửa Lỗi: Từ Sai Số Đến Tinh Chỉnh</td>
+</tr>
+<tr>
+<td>10</td>
+<td>The 5-Phase Body Perception Cycle (Internal vs External Focus)</td>
+<td>Chu Kỳ Nhận Thức Cơ Thể 5 Pha (Tập Trung Trong vs Ngoài)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Training the Sensors (Drills)</td>
+<td>Tập Các Cảm Biến (Bài Tập)</td>
+</tr>
+<tr>
+<td>📋</td>
+<td>Sensor System Cheat Sheet</td>
+<td>Bảng Tóm Tắt Hệ Cảm Biến</td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 1 — The Control Engineering View of Tennis</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 1 — Góc Nhìn Kỹ Thuật Điều Khiển Của Tennis</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mỗi cú tennis là hành động điều khiển phản hồi. Não bạn đặt Giá Trị Đặt (SV) — "Tôi muốn Cú Thuận Tay thẳng xuống, 70% nhịp, có xoáy trên." Cơ thể bạn thực hiện. CẢM BIẾN báo lại Giá Trị Quá Trình (PV) — "Mặt vợt có đóng đúng lúc không? Cổ tay có khóa không? Chân có đáp dưới hông không?"</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chuỗi — SV (mục tiêu não) → Bộ điều khiển (vỏ vận động) → Cơ cấu chấp hành (cơ) → Hành động (vung) → Môi trường (đường bóng) → Cảm biến (mắt, tai, cảm giác sâu) → Phản hồi não → Sửa sai → SV cập nhật.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Insight then chốt — hầu hết hướng dẫn tennis tập trung vào SV và Bộ điều khiển ("vung thấp lên cao", "xoay hông"). Nó KHÔNG tập trung vào CẢM BIẾN. Người chơi cải thiện cảm biến tiến bộ nhanh hơn người chơi cải thiện bộ điều khiển.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tài liệu nguồn đóng đinh điều này (Ch.1, "Tỉnh Thức Cơ Thể"): <em>"Khi bạn chỉ tập trung vào quả bóng (vật thể bên ngoài), bạn bỏ quên cỗ máy đang tạo ra cú đánh (cơ thể của chính bạn)."</em> Dịch: khi bạn chỉ tập trung vào bóng (tập trung ngoài), bạn quên cơ thể (cảm biến trong).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5 kênh cảm biến là 5 nguồn PV. Não nhận PV từ cả 5, so với SV, và hoặc (a) xác nhận khớp (không sửa), (b) phát hiện sai (sửa trực tiếp), hoặc (c) điều chỉnh SV cho cú sau (sửa dự đoán).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Tập cảm biến, không chỉ tập vung."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 2 — The 5 Sensor Channels</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 2 — 5 Kênh Cảm Biến</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>#</td>
+<td>Channel / Kênh</td>
+<td>What It Senses / Nó Cảm Nhận</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Proprioception / Cảm giác sâu</td>
+<td>Joint angles, muscle tension, limb position</td>
+</tr>
+<tr>
+<td>Channel 4 — Feet / Kênh 4 — Bàn chân</td>
+<td>Ground contact, surfás texture, weight distribution, push-off force</td>
+<td>7,000+ nerve endings in sole, plantar fascia, foot joint receptors</td>
+</tr>
+<tr>
+<td><img alt="Foot 26 bones - sensor structure" src="../images/DD7_sensor_system/DD7_sensors_16_foot_26_bones.png" /></td>
+<td><img alt="Bàn chân 26 xương - cấu trúc cảm biến" src="../images/DD7_sensor_system/DD7_sensors_16_foot_26_bones.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0a / Hình 0a — Foot bones as the lever/sensor platform. The 26 bones provide 33 joints that act as both force transmitters (actuator) AND position sensors.</td>
+<td>Hình 0a — Xương bàn chân làm nền tảng đòn bẩy/cảm biến. 26 xương cung cấp 33 khớp hoạt động vừa là bộ truyền lực (cơ cấu chấp hành) VỪA là cảm biến vị trí.</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Foot 7000+ nerve endings" src="../images/DD7_sensor_system/DD7_sensors_17_foot_nerve_endings.png" /></td>
+<td><img alt="Bàn chân 7000+ đầu dây thần kinh" src="../images/DD7_sensor_system/DD7_sensors_17_foot_nerve_endings.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0b / Hình 0b — Plantar view showing the dense nerve lướiwork in the sole. 7,000+ sensors, 30 ms reflex — the foot is the body's fastest external sensor.</td>
+<td>Hình 0b — Nhìn dưới lòng bàn chân thấy mạng lưới thần kinh dày đặc. 7.000+ cảm biến, 30 ms phản xạ — bàn chân là cảm biến bên ngoài nhanh nhất cơ thể.</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Foot windlass - sensor + actuator" src="../images/DD7_sensor_system/DD7_sensors_18_foot_windlass.png" /></td>
+<td><img alt="Windlass bàn chân - cảm biến + cơ cấu chấp hành" src="../images/DD7_sensor_system/DD7_sensors_18_foot_windlass.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0c / Hình 0c — Windlass mechanism: the foot is BOTH a sensor (detects arch tension) AND an actuator (stores energy for push-off). This dual role is why the foot is the most important tennis sensor.</td>
+<td>Hình 0c — Cơ chế windlass: bàn chân vừa là cảm biến (phát hiện căng cung) VỪA là cơ cấu chấp hành (tích năng lượng đẩy). Vai trò kép này là lý do bàn chân là cảm biến tennis quan trọng nhất.</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Cubital tunnel — hand sensor background" src="../images/DD7_sensor_system/DD7_sensors_13_cubital_tunnel.png" /></td>
+<td><img alt="Cubital tunnel - nền cảm biến tay" src="../images/DD7_sensor_system/DD7_sensors_13_cubital_tunnel.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0d / Hình 0d — Cubital tunnel (ulnar nerve pathway). Even before the hand senses anything, the elbow's ulnar nerve pathway is gated by elbow flexion — a hidden sensor constraint.</td>
+<td>Hình 0d — Cubital tunnel (đường dây thần kinh trụ). Ngay cả trước khi tay cảm nhận bất cứ gì, đường dây thần kinh trụ ở khuỷu bị chặn bởi gập khuỷu — một ràng buộc cảm biến ẩn.</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Hand 27 bones — sensor platform" src="../images/DD7_sensor_system/DD7_sensors_14_hand_27_bones.png" /></td>
+<td><img alt="Tay 27 xương - nền cảm biến" src="../images/DD7_sensor_system/DD7_sensors_14_hand_27_bones.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0e / Hình 0e — The 27 hand bones (8 carpals + 5 metacarpals + 14 phalanges) provide the sensor platform for the vợt. More bones = more sensors = more PV detail.</td>
+<td>Hình 0e — 27 xương bàn tay (8 cổ tay + 5 đốt bàn tay + 14 đốt ngón) cung cấp nền cảm biến cho vợt. Nhiều xương hơn = nhiều cảm biến hơn = PV chi tiết hơn.</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Carpal tunnel contents — sensor density" src="../images/DD7_sensor_system/DD7_sensors_15_carpal_tunnel_contents.png" /></td>
+<td><img alt="Nội dung ống cổ tay - mật độ cảm biến" src="../images/DD7_sensor_system/DD7_sensors_15_carpal_tunnel_contents.png" /></td>
+<td></td>
+</tr>
+<tr>
+<td>Figure 0f / Hình 0f — Carpal tunnel cross-section: 9 tendons + 1 median nerve packed into 2 cm². Sensor density is incredibly high — the wrist is one of the most sensor-dense body parts.</td>
+<td>Hình 0f — Mặt cắt ống cổ tay: 9 gân + 1 dây thần kinh giữa nhồi vào 2 cm². Mật độ cảm biến cực cao — cổ tay là một trong những bộ phận cảm biến dày đặc nhất.</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hands / Bàn tay</td>
+<td>Racket position, cách cầm vợt pressure, vibration at contact, fás angle</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Eyes / Mắt</td>
+<td>Ball position, bóng speed, bóng spin, court position, opponent position</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Ears + Vestibular / Tai + Tiền đình</td>
+<td>Sound of contact (line calls), head rotation, head tilt, gravity direction</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5 kênh độc lập nhưng tích hợp. Mỗi kênh chạy tốc độ riêng. Não CÂN ĐÓ chúng theo liên quan:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Với trả giao (tốc độ cao, hướng chưa biết) : mắt (bóng sẽ rơi đâu) &gt; bàn chân (phản xạ split-step) &gt; cảm giác sâu (vị trí cơ thể) &gt; bàn tay (cầm phút cuối) &gt; tai (âm thanh tiếp xúc)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Với Vôlei (cự ly gần, đã ở vị trí) : bàn tay (mặt vợt) &gt; mắt (đối thủ) &gt; cảm giác sâu (góc tay) &gt; tai (âm thanh tiếp xúc cho vị trí) &gt; bàn chân (đã ở vị trí)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Với Phát Bóng (toàn quyền kiểm soát) : cảm giác sâu (thời gian chuỗi) &gt; bàn tay (cầm và phóng) &gt; mắt (mục tiêu) &gt; bàn chân (tung) &gt; tai (xác nhận)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "5 cảm biến. 5 tốc độ. Não cân đó theo cú."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 3 — Channel 1 — Proprioception (The Hidden 6th Sense)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 3 — Kênh 1 — Cảm Giác Sâu (Giác Quan Thứ 6 Ẩn)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cơ thể có 5 giác quan ai cũng biết (thị, thính, xúc, vị, khứu) + 1 mà hầu như không người chơi phong trào nào nghĩ tới : cảm giác sâu — giác về cơ thể ở đâu trong không gian, không cần nhìn.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nhắm mắt. Nâng tay phải lên trên đầu. Bạn biết tay mình ở đâu mà không cần thấy. Đó là cảm giác sâu. Nó chạy 24/7 — ngay cả khi bạn ngủ.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phần cứng cảm giác sâu (đã bao phủ chi tiết trong DD3 Ch.3 và DD5 Ch.7):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Receptor / Thụ Thể</td>
+<td>Where / Vị Trí</td>
+<td>What It Detects / Nó Phát Hiện</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Muscle spindles / Thoi cơ</td>
+<td>Inside every muscle / Bên trong mỗi cơ</td>
+<td>Muscle stretch + velocity of stretch / Giãn cơ + vận tốc giãn</td>
+</tr>
+<tr>
+<td>Golgi tendon organs / Cơ quan Golgi gân</td>
+<td>At muscle-tendon junction / Chỗ nối cơ-gân</td>
+<td>Force / Lực</td>
+</tr>
+<tr>
+<td>Joint receptors / Thụ thể khớp</td>
+<td>Joint capsules (esp. knees, ankles, shoulders) / Bao khớp</td>
+<td>Joint angle + motion direction / Góc khớp + hướng chuyển động</td>
+</tr>
+<tr>
+<td>Skin stretch receptors / Thụ thể giãn da</td>
+<td>Skin around joints / Da quanh khớp</td>
+<td>Skin stretch (extra angle info) / Giãn da</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Độ chính xác cảm giác sâu theo khớp (người 4.0 điển hình, từ DD1 Ch.3 và DD3 Ch.3):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Joint / Khớp</td>
+<td>Detection Accuracy / Độ Chính Xác Phát Hiện</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td></td>
+</tr>
+<tr>
+<td>Shoulder / Vai</td>
+<td>~3°–5° rotation change / thay đổi xoay</td>
+<td></td>
+</tr>
+<tr>
+<td>Elbow / Khuỷu</td>
+<td>~2°–4° flexion change / thay đổi gập</td>
+<td></td>
+</tr>
+<tr>
+<td>Wrist / Cổ tay</td>
+<td>~2°–3° flexion change / thay đổi gập</td>
+<td></td>
+</tr>
+<tr>
+<td>Hip / Hông</td>
+<td>~3°–5° rotation change / thay đổi xoay</td>
+<td></td>
+</tr>
+<tr>
+<td>Knee / Gối</td>
+<td>~2°–4° flexion change / thay đổi gập</td>
+<td></td>
+</tr>
+<tr>
+<td>Ankle / Cổ chân</td>
+<td>~2°–3° dorsiflexion change / thay đổi gập lưng</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tại sao cảm giác sâu quan trọng hơn thị giác lúc tiếp xúc — vào khoảnh khắc tiếp xúc, mắt bạn KHÔNG THỂ theo bóng (VOR ổn định chúng, nhưng xử lý thị giác vẫn mất 30–50 ms). Cảm giác sâu nói cho bạn biết vợt ở đâu trong mili-giây đó — và đó là phản hồi duy nhất bạn có.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khoảng cách cảm giác sâu 3.5 vs 4.5 — người 3.5 có cảm giác sâu kém hơn ~30%–40% so với người 4.5. Khoảng cách này đóng lại bằng tập luyện. Bài tập cụ thể (thăng bằng mắt nhắm, đứng một chân, đối chiếu vị trí vợt) cải thiện cảm giác sâu 30%–50% trong 8 tuần.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Suy giảm 50+ — cảm giác sâu giảm ~10%–15% mỗi thập kỷ sau 50 tuổi. Đây là lý do người chơi lớn tuổi mất thăng bằng. Không phải "vấn đề thăng bằng" — là vấn đề CẢM BIẾN. Tập cảm biến.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Nhắm mắt. Tin khớp bạn. Chúng biết."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 4 — Channel 2 — Feet (Ground Contact as PV)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 4 — Kênh 2 — Bàn Chân (Tiếp Đất làm PV)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bàn chân vừa là cảm biến VỪA là cơ cấu chấp hành. Nó cảm nhận đất (PV) VÀ nó truyền lực (hành động). Hầu hết người chơi chỉ tập nửa cơ cấu chấp hành. Họ quên nửa cảm biến.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phần cứng cảm biến bàn chân (từ Anatomy_Lab DD7):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Component / Thành Phần</td>
+<td>Count / Số Lượng</td>
+<td>Function / Chức Năng</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Nerve endings in sole / Đầu dây thần kinh lòng bàn chân</td>
+<td>7,000+</td>
+<td>Pressure, texture, vibration detection</td>
+</tr>
+<tr>
+<td>Plantar fascia nerve endings / Đầu dây thần kinh cân gan chân</td>
+<td>Dense / Dày đặc</td>
+<td>Arch tension detection</td>
+</tr>
+<tr>
+<td>Foot joint receptors / Thụ thể khớp chân</td>
+<td>33 joints × ~10 receptors each = ~330</td>
+<td>Joint angle + position</td>
+</tr>
+<tr>
+<td>Cutaneous mechanoreceptors / Thụ thể cơ học da</td>
+<td>Meissner + Pacinian + Merkel + Ruffini</td>
+<td>Light touch, vibration, pressure</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phản xạ 30 ms bàn chân — đầu dây thần kinh bàn chân bắn phản xạ trong 30 mili-giây — NHANH HƠN ý thức (~200 ms) . Phản xạ này CHÍNH LÀ cơ chế split-step.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Góc nhìn kỹ thuật điều khiển — cảm biến bàn chân chạy vòng phản hồi NHANH NHẤT trong cơ thể bạn. SV: "thăng bằng." PV từ chân: "tôi có thăng bằng không?" Nếu PV ≠ SV, phản xạ chân bắn trong 30 ms. Não ý thức (vỏ não) chỉ biết về mất thăng bằng 170 ms sau đó.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3 nguồn PV từ bàn chân :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Phân bố áp lực (PV-pressure) — trọng lượng bạn ở đâu trên mỗi chân. Đứng một chân : bạn cảm thấy áp lực chuyển sang mũi chân và ngón cái. Đó là cơ thể nói cho bạn biết trọng tâm ở đâu.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Kết cấu mặt (PV-texture) — sân đất nện, sân cứng, cỏ. Mỗi mặt có ma sát khác nhau. Chân bạn cảm nhận và điều chỉnh lực đẩy.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Thời gian rung (PV-impact) — khi chân bạn đáp, bạn CẢM THẤY khoảnh khắc tiếp xúc. Thời gian PV này quan trọng cho thời gian split-step.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Câu nhắc "rễ cây" — tài liệu nguồn (Ch.1) dùng thuật ngữ "Rễ Cây". Hình dung chân bạn như rễ cây — lan ra, bám, cảm nhận. Mỗi đẩy bắt đầu bằng chân cảm nhận.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Bàn chân là cảm biến trước, động cơ sau."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 5 — Channel 3 — Hands (Racket Grip as PV)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 5 — Kênh 3 — Bàn Tay (Cầm Vợt làm PV)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bàn tay báo lại vợt đang làm gì. Áp lực cầm, góc mặt, rung, vị trí trong không gian. Không có PV tay, bạn không thể tinh chỉnh vợt.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phần cứng cảm biến tay :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Receptor / Thụ Thể</td>
+<td>Where / Vị Trí</td>
+<td>What It Detects / Nó Phát Hiện</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Meissner corpuscles / Thể Meissner</td>
+<td>Fingertips, palm / Đầu ngón, lòng bàn tay</td>
+<td>Light touch, cách cầm vợt / Chạm nhẹ, cầm</td>
+</tr>
+<tr>
+<td>Pacinian corpuscles / Thể Pacini</td>
+<td>Deep in palm + fingers / Sâu trong lòng bàn tay + ngón</td>
+<td>Vibration / Rung</td>
+</tr>
+<tr>
+<td>Merkel disks / Đĩa Merkel</td>
+<td>Skin surfás / Bề mặt da</td>
+<td>Sustained pressure, edges / Áp lực liên tục, cạnh</td>
+</tr>
+<tr>
+<td>Ruffini endings / Đầu Ruffini</td>
+<td>Deep dermis / Bì sâu</td>
+<td>Skin stretch / Giãn da</td>
+</tr>
+<tr>
+<td>Joint receptors / Thụ thể khớp</td>
+<td>Wrist + finger joints / Cổ tay + khớp ngón</td>
+<td>Joint angle / Góc khớp</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4 nguồn PV từ bàn tay :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Áp lực cầm (PV-cách cầm vợt) — tay báo lại bạn đang bóp bao nhiêu. 3/10 lúc nghỉ, 7/10 lúc tiếp xúc, 3/10 lúc follow-through (quy tắc Anatomy_Lab DD3). Đa số người chơi phong trào cầm 8/10 liên tục — họ MẤT PV áp lực vì luôn ở mức tối đa.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Góc mặt (PV-fás) — ngón cái + ngón trỏ cảm nhận hướng mặt vợt. Mở = cắt, đóng = xoáy trên, đứng = phẳng. PV này được xử lý ~50 ms trước tiếp xúc — bạn điều chỉnh trong cú vung.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Rung lúc tiếp xúc (PV-impact) — khoảnh khắc tiếp xúc, rung của bóng truyền qua vợt tới tay. Sweet spot = rung nhỏ (đánh sạch). Lệch tâm = rung lớn (xoắn). PV này được xử lý trong ~10–30 ms.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. Vị trí vợt (PV-position) — tay biết vợt ở đâu trong không gian (cảm giác sâu). Lúc tiếp xúc, bạn biết vợt cao hay thấp, trái hay phải của tâm cơ thể — không cần nhìn.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vấn đề "tay chết" — nhiều HLV nói "thả lỏng cách cầm vợt." Nhưng nếu tay HOÀN TOÀN thả lỏng, bạn mất PV-cách cầm vợt VÀ PV-fás . Câu nhắc tốt hơn: "Tay chủ động, ngón mềm." Tay phải SỐNG — nhận PV liên tục — ngay cả giữa các cú.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Quy tắc "tay mềm tiếp xúc chắc" — tài liệu nguồn (Ch.12 Cú Trái Tay): "Tay mềm tiếp xúc chắc." Tay đủ mềm để hấp thụ phản hồi, đủ chắc để truyền lực. Đây là cân bằng căng tối đa hóa cả độ nhạy PV lẫn lực.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Tay chủ động, ngón mềm. PV mỗi mili-giây."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 6 — Channel 4 — Eyes (Vision as PV + SV Source)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 6 — Kênh 4 — Mắt (Thị Giác làm PV + Nguồn SV)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mắt là KÊNH đầu vào DUY NHẤT cho tennis. Não KHÔNG tiếp xúc trực tiếp với bóng. Mọi thứ nó biết về bóng đến qua thị giác (và đôi khi âm thanh cho line calls).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thị giác có vai trò kép — nó cung cấp CẢ SV (tôi muốn đánh đâu) VÀ PV (đang xảy ra gì). Điều này độc đáo trong 5 kênh. Cảm giác sâu, chân, tay, tai chỉ cung cấp PV. Mắt cung cấp CẢ hai hướng.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PV thị giác (đến) :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Quỹ đạo bóng (PV-bóng) — bóng ở đâu, sẽ ở đâu, nhanh cỡ nào, xoáy bao nhiêu. Cập nhật mỗi 30–50 ms trong thị giác ý thức , nhưng mỗi 15 ms trong tiềm thức (tiền đình + lưới).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Vị trí sân (PV-court) — đường biên ở đâu, đối thủ ở đâu, bạn ở đâu. Cập nhật ít thường xuyên hơn (~200 ms) nhưng ở lại trong thị giác ngoại vi liên tục.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Cơ thể đối thủ (PV-opponent) — đối thủ đang làm gì? Vị trí vợt, chuyển trọng lượng, xoay vai. Đây là nguồn SV cho cú BẠN (bạn chọn dựa trên cái họ cho bạn).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SV thị giác (mục tiêu) :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Vị trí mục tiêu (SV-target) — bạn muốn bóng rơi đâu. SV này được đặt TRƯỚC cú (~200 ms trước). Nó là mục tiêu toàn bộ cơ thể cố đạt.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Ý định quỹ đạo (SV-trajectory) — phẳng, xoáy trên, cắt, lob. Đặt bởi cách cầm vợt + góc mặt + đường vợt.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Ý định tốc độ (SV-speed) — hết, 70%, 50%, chạm. Đặt bởi tốc độ vung.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mắt im lặng (đã bao phủ trong DD3 Ch.2 và xác nhận bởi Anatomy_Lab DD8): người chơi elite cố định ánh nhìn trên vùng tiếp xúc 0.3–0.5 s . Người phong trào: 0.1–0.2 s. Mắt im lặng càng lâu = timing càng tốt = chất lượng cú càng cao.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Theo dõi thị giác và mắt im lặng" src="../images/DD7_sensor_system/DD7_sensors_04_visual_tracking.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 4 — Theo dõi thị giác và mắt im lặng trong hành động. Người chơi elite cố định ánh nhìn trên vùng tiếp xúc 0.3–0.5s, lâu hơn người phong trào (0.1–0.2s). Ánh nhìn duy trì này là thứ cho phép định giờ chính xác.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Chu kỳ thị giác 5 pha" src="../images/DD7_sensor_system/DD7_sensors_05_visual_sequence.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 5 — Chu kỳ thị giác 5 pha: Nhận thức rộng → Khóa mục tiêu → Tập trung hẹp → Mắt im lặng → Mở rộng lại. Mỗi pha có thời gian đo được (0.5s / 0.3s / 0.1s / 0.05–0.1s / 0.2s).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Phản xạ thị giác lúc tiếp xúc" src="../images/DD7_sensor_system/DD7_sensors_07_visual_reaction_contact.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 6 — Phản xạ thị giác khoảnh khắc tiếp xúc. Lúc va chạm, mắt không thể theo dõi — VOR ổn định chúng. Cảm giác sâu tiếp quản trong 50 ms cuối trước tiếp xúc.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Suy giảm thị giác 50+ — lão thị (mất khả năng tập trung gần) bắt đầu ở 40–45 tuổi. Thị giác ngoại vi hẹp ~10°–20° đến 70 tuổi. Dùng bóng vàng trên sân tối cho tương phản tối đa. Xoay đầu thường xuyên hơn để bù thu hẹp ngoại vi.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Mắt đặt mục tiêu. Mắt kiểm kết quả. Cả hai mắt, cả hai việc."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 7 — Channel 5 — Ears + Vestibular (Sound + Head Position)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 7 — Kênh 5 — Tai + Tiền Đình (Âm Thanh + Vị Trí Đầu)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Tổng quan giải phẫu 3D tiền đình" src="../images/DD7_sensor_system/DD7_sensors_01_vestibular_3d_anatomy.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 1 — 3 ống bán nguyệt (trước, sau, ngang) phát hiện xoay đầu. 2 cơ quan otolith phát hiện gia tốc tuyến tính và nghiêng đầu. Đây là TOÀN BỘ giải phẫu tiền đình — một trong những cảm biến tinh vi nhất của cơ thể.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Chi tiết 3D tiền đình" src="../images/DD7_sensor_system/DD7_sensors_02_vestibular_3d_detail.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 2 — Cận cảnh giải phẫu tiền đình hiện các ampullae (cơ quan cảm giác ở đáy mỗi ống bán nguyệt) và cơ quan otolith (utricle + saccule). Ampullae chứa tế bào lông bị uốn khi dịch nội bạch chuyển động trong xoay đầu.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tai cung cấp hai kênh — âm thanh (cho chất lượng tiếp xúc + tín hiệu đối thủ) VÀ tiền đình (cho vị trí đầu + thăng bằng). Chúng chạy song song nhưng cảm nhận khác nhau.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PV-âm thanh tai (âm thanh lúc tiếp xúc):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sound Cue / Tín Hiệu Âm Thanh</td>
+<td>What It Tells You / Nó Nói Gì</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td></td>
+</tr>
+<tr>
+<td>"Bộp" / "Pop" (sweet spot clean hit)</td>
+<td>Center contact. Ball will go where aimed.</td>
+<td></td>
+</tr>
+<tr>
+<td>"Cộc" / "Thud" (off-center)</td>
+<td>Edge contact. Ball will spin unpredictably.</td>
+<td></td>
+</tr>
+<tr>
+<td>"Phập" / "Puff" (open fás)</td>
+<td>Slice / xoáy dưới shot. Ball will float.</td>
+<td></td>
+</tr>
+<tr>
+<td>"Pực" / "Whip crack" (closed fás, fast)</td>
+<td>Topspin shot at speed. Ball will dip.</td>
+<td></td>
+</tr>
+<tr>
+<td>No sound at all / Không âm thanh nào</td>
+<td>Miss or mishit. Ball didn't reach dây.</td>
+<td></td>
+</tr>
+<tr>
+<td>Racket frame sound (clink) / Âm thanh khung vợt</td>
+<td>Frame contact. Ball will fly off-target.</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thời gian PV-âm thanh tai — âm thanh là kênh cảm giác NHANH NHẤT sau phản xạ. ~10–15 ms từ tiếp xúc tới não. Đây là lý do bạn biết NGAY LẬP TỨC cú đánh sạch hay không.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tín hiệu âm thanh đối thủ — âm thanh di chuyển đối thủ nói bạn biết họ ở đâu. Âm thanh tiếp xúc đối thủ nói bạn biết xoáy và nhịp.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Tinh thể Otoconia - hướng nào là LÊN" src="../images/DD7_sensor_system/DD7_sensors_03_otoconia_crystals.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 3 — Otoconia: tinh thể canxi cacbonat tí hon trong các cơ quan otolith. Chúng di chuyển theo trọng lực và nói cho não biết hướng nào là LÊN. Mất otoconia (hoặc trật khỏi vị trí trong tai nạn whiplash) = chóng mặt (BPPV — chóng mặt tư thế kịch phát lành tính).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Hệ Thống Kiểm Soát Thăng Bằng Cơ Thể - vòng đầy đủ" src="../images/DD7_sensor_system/DD7_sensors_19_balance_control_system_full.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 3a — HỆ THỐNG KIỂM SOÁT THĂNG BẰNG CƠ THỂ HOÀN CHỈNH (hình bạn cung cấp). 6 thành phần theo trình tự: Vị trí đầu → Hệ tiền đình → VOR → Mắt → Não bộ → Các bộ phận cơ thể , với vòng phản hồi quay lại vị trí đầu. Đây là sơ đồ tổng cho toàn bộ chương. Khi cảm biến tiền đình thay đổi (vd: đầu xoay), nó kích hoạt VOR (ổn định mắt), gửi PV thị giác tới não, não tích hợp với cảm giác sâu, ra lệnh phản ứng cơ, thay đổi vị trí đầu — đóng vòng. Mỗi khoảnh khắc thăng bằng trong tennis là vòng này chạy thời gian thực.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PV-thăng bằng tiền đình (vị trí đầu trong không gian):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vestibular Input / Đầu Vào Tiền Đình</td>
+<td>What It Detects / Nó Phát Hiện</td>
+<td>Speed / Tốc Độ</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>3 semicircular canals / 3 ống bán nguyệt</td>
+<td>Head rotation (x, y, z axes)</td>
+<td>~15 ms</td>
+</tr>
+<tr>
+<td>Utricle / Utricle</td>
+<td>Horizontal linear acceleration + head tilt</td>
+<td>~20 ms</td>
+</tr>
+<tr>
+<td>Saccule / Saccule</td>
+<td>Vertical linear acceleration + head tilt</td>
+<td>~20 ms</td>
+</tr>
+<tr>
+<td>Hair cells in otoliths / Tế bào lông trong otolith</td>
+<td>Gravity direction (which way is UP)</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PV-xoay tiền đình — mỗi Phát Bóng, đầu xoay ~120° trong &lt;0.5s. Hệ tiền đình theo dõi xoay này theo thời gian thực.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tại sao đầu YÊN quan trọng — khi đầu ổn định, mắt khóa vùng tiếp xúc (mắt im lặng). Khi đầu nảy, mắt nảy. VOR (phản xạ tiền đình-mắt) giữ ánh nhìn ổn định TRONG khi đầu chuyển động.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Suy giảm tiền đình 50+ — tế bào lông chết sau 40 tuổi. Đến 60 tuổi, ~20%–30% giảm độ nhạy tiền đình. Đây là lý do người chơi lớn tuổi mất thăng bằng khi đổi hướng nhanh. Tập tiền đình: xoay đầu chậm (10 lần mỗi hướng hàng ngày) + đứng một chân xoay đầu (30 giây hàng ngày).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Combo tai + tiền đình cho thăng bằng — tai + tiền đình làm việc cùng nhau cho thăng bằng. Tai nghe cơ thể ngã, tiền đình phát hiện đầu xoay. Tennis đòi hỏi CẢ HAI đồng thời.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Nghe cú. Cảm đầu. Cả hai cho bạn PV."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 7.1 — Reading the Balance Control Loop (A Walk-Through)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 7.1 — Đọc Vòng Kiểm Soát Thăng Bằng (Đi Từng Bước)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sơ đồ (Hình 3a) hiện vòng kiểm soát thăng bằng hoàn chỉnh . Để tôi dẫn bạn qua từng bước, trong bối cảnh tennis — dùng một khoảnh khắc thật từ trận đấu của bạn.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Khoảnh khắc — đối thủ đánh một Cú Thuận Tay crosscourt sắc. Bạn split-step, đẩy chân trái, và xoay đầu theo bóng. Chuyện gì xảy ra trong cơ thể bạn trong 200 ms tiếp theo?</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 1 — Vị trí đầu — đầu bạn xoay ~90° sang phải trong 0.15s. Ống bán nguyệt trong tai trong phát hiện xoay này theo thời gian thực. PV ở đây là: "đầu đang chuyển động 600°/s sang phải."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 2 — Hệ tiền đình — 3 ống (trước, sau, ngang) mỗi ống bắn theo trục xoay. Ống ngang bắn mạnh nhất (đây là xoay yaw). Não nhận 3 tín hiệu PV: ống ngang (max), ống trước (nhỏ), ống sau (nhỏ).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 3 — VOR — não gửi tín hiệu ngược tới cơ mắt: xoay mắt TRÁI ở 600°/s, để bù cho đầu xoay phải. Mắt giữ khóa trên bóng, dù đầu đang xoay. Đây là cơ chế mắt im lặng.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 4 — Mắt — võng mạc mắt nhận ảnh bóng. Nó KHÔNG di chuyển (VOR giữ ổn định). Thị thần kinh bắn: "bóng ở vị trí X, Y trên võng mạc, đang chuyển động chậm về ngoại vi." PV là: "bóng còn cách tôi 0.3s, đang tới 1.2 m/s."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 5 — Não bộ — não TÍCH HỢP tất cả PV: tiền đình (đầu xoay phải), VOR (mắt ổn định), mắt (vị trí bóng). Não so với SV (tôi muốn đánh đâu). Quyết định: "đây là Cú Thuận Tay, trả crosscourt, 70% nhịp."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 6 — Các bộ phận cơ thể — não gửi lệnh qua vỏ vận động → tủy sống → cơ. Cơ bắn theo trình tự : chân phải đẩy, thân xoay, tay phải lên, vung. Hệ cảm giác sâu báo lại PV: "vai 90°, khuỷu 110°, cổ tay khóa."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước 7 — Vòng phản hồi — cơ thể thay đổi vị trí đầu (cú vung di chuyển đầu), thay đổi PV tiền đình, kích hoạt lại VOR, ổn định lại mắt, nhận vị trí bóng mới, quay lại não. Vòng chạy LIÊN TỤC, ~50 ms mỗi chu kỳ.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hệ quả tennis — nếu BẤT KỲ mắt xích nào trong vòng này gãy, thăng bằng bạn thất bại. Suy giảm 50+ đánh mạnh nhất vào mắt xích tiền đình (tế bào lông chết, độ nhạy giảm 20–30%). Đó là lý do người chơi lớn tuổi cảm thấy "mất thăng bằng" khi đổi hướng nhanh.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3 bài học từ sơ đồ này — (1) Thăng bằng không phải một thứ — đó là hệ 6 thành phần, (2) VOR là người hùng thầm lặng — không có nó, mắt bạn nảy mỗi lần đầu chuyển động, (3) Vòng phản hồi nghĩa là thăng bằng không bao giờ "xong" — nó chạy liên tục, ngay cả khi bạn nghĩ mình đang đứng yên.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Sơ đồ là chương. Đọc chậm. Mỗi ô là cảm biến. Mỗi mũi tên là vòng phản hồi. Mỗi khoảnh khắc trên sân là vòng này chạy."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 8 — The 3 Feedback Loop Types</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 8 — 3 Loại Vòng Phản Hồi</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mỗi cú tennis tạo 3 loại phản hồi. Chúng xảy ra ở các thời điểm khác nhau và có tác động khác nhau.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Feedback Type / Loại Phản Hồi</td>
+<td>When / Khi Nào</td>
+<td>Speed / Tốc Độ</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1. Live feedback (during stroke) / Trực tiếp (trong cú)</td>
+<td>Within the 0.5s swing</td>
+<td>10–50 ms</td>
+</tr>
+<tr>
+<td>2. Post-stroke feedback (after bóng lands) / Sau cú (sau bóng rơi)</td>
+<td>Within 1–3 seconds</td>
+<td>200–500 ms</td>
+</tr>
+<tr>
+<td>3. Anticipatory feedback (across strokes) / Dự đoán (qua các cú)</td>
+<td>Across 5–50 strokes</td>
+<td>5–30 minutes</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Lỗi người chơi 3.5 — hầu hết người 3.5 tập trung vào LOẠI 2 (sau cú) vì họ được nói nhìn vào đó. "Nhìn bóng" = phản hồi thị giác sau cú.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tập trung người chơi 4.5 — họ dùng LOẠI 1 (trực tiếp) VÀ LOẠI 3 (dự đoán) . Trực tiếp : họ cảm nhận sai số giữa cú qua cảm giác sâu tay. Dự đoán : họ nhớ "3 Cú Thuận Tay trước đều dài" và điều chỉnh cú tiếp theo TRƯỚC khi nó bắt đầu.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hệ quả tập luyện — để trở thành 4.5, bạn cần:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Type / Loại</td>
+<td>Training / Tập Luyện</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td></td>
+</tr>
+<tr>
+<td>Type 1 (live) / Trực tiếp</td>
+<td>Slow-motion swings with focused attention on hand/feet feedback (10 reps daily)</td>
+<td></td>
+</tr>
+<tr>
+<td>Type 2 (post-stroke) / Sau cú</td>
+<td>chuẩn trận play (eyes track bóng, brain notes result)</td>
+<td></td>
+</tr>
+<tr>
+<td>Type 3 (anticipatory) / Dự đoán</td>
+<td>Pattern-recognition bài tậps (deliberate thực hành of adjusting SV based on PV patterns)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Loại bị bỏ qua nhiều nhất — LOẠI 3 (dự đoán) là loại ít được tập nhất. Hầu hết người chơi lặp CÙNG cú 1000 lần mà không thích ứng. Họ chỉ thích ứng khi ai đó bảo họ. Thích ứng tự trị đến từ tập Loại 3.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Ba vòng phản hồi. Tập cả ba. Đa số chỉ tập một."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 9 — Error Correction: From Error to Refinement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 9 — Sửa Lỗi: Từ Sai Số Đến Tinh Chỉnh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sai số là NGUỒN học. Mỗi lỗi tự đánh chứa thông tin. PV ≠ SV. Cơ thể học làm chúng khớp.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hệ thống phân cấp sửa sai (từ nhanh nhất tới chậm nhất):</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Level / Cấp</td>
+<td>Time to Correct / Thời Gian Sửa</td>
+<td>What Happens / Chuyện Gì Xảy Ra</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1. Mid-swing micro-adjustment / Điều chỉnh giữa cú</td>
+<td>10–50 ms</td>
+<td>Hand cách cầm vợt adjusts, foot pivots, vestibular reorients. Body's automatic compensation.</td>
+</tr>
+<tr>
+<td>2. Stroke-to-stroke adjustment / Điều chỉnh giữa các cú</td>
+<td>1–5 seconds</td>
+<td>Eyes + proprioception compare PV (last bóng) to SV (intent). Small SV adjustment for next stroke.</td>
+</tr>
+<tr>
+<td>3. Pattern recognition / Nhận diện mẫu</td>
+<td>5–30 minutes</td>
+<td>Temporal lobe detects: "5 cú thuận tays in a row went long." SV shifts down.</td>
+</tr>
+<tr>
+<td>4. Habit formation / Hình thành thói quen</td>
+<td>1–4 weeks</td>
+<td>Basal ganglia stores new motor pattern. Cerebellum makes it automatic.</td>
+</tr>
+<tr>
+<td>5. Identity change / Thay đổi bản ngã</td>
+<td>Months-Years</td>
+<td>"I am a player who can hit a Cú Trái Tay down-the-line." Brain self-image updates.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vấn đề "chết vì tích tiểu" — hầu hết người 3.5 tạo SAI SỐ NHỎ qua 1000 cú. Mỗi sai số &lt; 5% lệch SV. Tác động tích lũy: mẫu cú lệch SV 30%, nhưng người chơi KHÔNG NHẬN RA vì mỗi sai số riêng lẻ nhỏ.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cách sửa — sai số có chủ đích lớn — tập cố ý tạo SAI SỐ LỚN (lệch SV 50%), rồi sửa về SV. Cái này tập não NHẬN RA tín hiệu sai số. Không có tập này, sai số 5% vẫn vô hình.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Quy tắc "10.000 lần" xem lại — từ DD3 Ch.4: hạch nền cache mẫu vận động sau ~3.000–10.000 lần lặp. Nhưng cache chỉ tốt bằng SỬA SAI trong những lần lặp đó. Lặp không phản hồi = không học.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Quy tắc "tập có chủ đích" — nghiên cứu Anders Ericsson (1993): khác biệt giữa chuyên gia và nghiệp dư KHÔNG phải lượng tập. Đó là CHẤT LƯỢNG phản hồi trong tập. Pro tập với chú ý đầy đủ + sửa ngay. Nghiệp dư tập trên tự động.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Sai số là thầy. Làm chúng to. Rồi sửa."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 10 — The 5-Phase Body Perception Cycle (Internal vs External Focus)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 10 — Chu Kỳ Nhận Thức Cơ Thể 5 Pha (Tập Trung Trong vs Ngoài)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tài liệu nguồn (cẩm nang nhận thức cơ thể 20 chương) định nghĩa chu kỳ 5 pha cho nhận thức cơ thể bên trong khi chơi tennis. Đây là kết nối giữa lớp cảm biến và lớp bộ điều khiển.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Phase / Pha</td>
+<td>Focus / Tập Trung</td>
+<td>Sensors Used / Cảm Biến Dùng</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1. WIDE PERCEPTION (0.5s before) / NHẬN THỨC RỘNG (0.5s trước)</td>
+<td>Court, opponent, bóng</td>
+<td>Eyes (peripheral), ears (ambient sound), vestibular (head position)</td>
+</tr>
+<tr>
+<td>2. ROOTING (0.3s before) / RỄ CÂY (0.3s trước)</td>
+<td>Foot contact with ground</td>
+<td>Feet (plantar nerve endings), proprioception (ankle/hip), vestibular (gravity)</td>
+</tr>
+<tr>
+<td>3. SPACING (0.1s before) / KHOẢNG CÁCH (0.1s trước)</td>
+<td>Ditư thế to bóng</td>
+<td>Eyes (central), proprioception (arm extension), vestibular (lean)</td>
+</tr>
+<tr>
+<td>4. SWING (during) / VUNG (trong)</td>
+<td>Kilướiic chain</td>
+<td>Proprioception (every joint), hand (cách cầm vợt), vestibular (rotation)</td>
+</tr>
+<tr>
+<td>5. CONTACT + AFTER (0.1s after) / TIẾP XÚC + SAU (0.1s sau)</td>
+<td>Hit quality + recovery</td>
+<td>Ears (sound) , hand (vibration), eyes (bóng flight start), feet (re-plant)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Câu nhắc "tập trung trong" — nguồn (Ch.1) nhấn mạnh: "Tư duy hướng nội" (Nhận Thức Vận Động Bên Trong). HLV bậc thầy Federer, Nadal, Djokovic — khi được hỏi họ quyết định đánh gì, họ mô tả cảm giác BÊN TRONG (trọng lượng, thăng bằng, cảm giác vung), KHÔNG phải mục tiêu bên ngoài (bóng đi đâu).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nghiên cứu Wulf — Gabriele Wulf (2007, 2013) cho thấy tập trung trong (vào cơ thể) tạo học NHANH HƠN tập trung ngoài (vào kết quả) cho kỹ năng vận động. Đây là ngược lại cái đa số HLV dạy.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ngoại lệ — cho quyết định chiến thuật — Wulf cũng cho thấy tập trung NGOÀI tốt hơn cho quyết định CHIẾN THUẬT (đánh đâu, khi nào đổi hướng). Dùng TRONG cho cơ học cú, NGOÀI cho chiến thuật.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Câu nhắc thở 3-3-3 — nguồn (Ch.5) khuyến nghị: 3 giây hít vào trong nhận thức rộng, 3 giây giữ trong rễ cây, 3 giây thở ra trong vung.Cái này đồng bộ hơi thở với nhận PV. Thở ra trong vung cũng ổn định cột sống qua áp lực trong lồng ngực.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Trong cho cơ thể, ngoài cho bóng. Chuyển lúc tiếp xúc."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 11 — Training the Sensors (Drills)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 11 — Tập Các Cảm Biến (Bài Tập)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5 bài tập cảm biến (1 mỗi kênh, hàng ngày). 5 phút × 5 cảm biến = 25 phút/ngày. Cộng với thói quen 16 phút từ DD6 = ~40 phút/ngày. Đây là chương trình nhận thức cơ thể đầy đủ.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sensor / Cảm Biến</td>
+<td>Drill / Bài Tập</td>
+<td>Duration / Thời Gian</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>1. Proprioception / Cảm giác sâu</td>
+<td>Slow-motion Cú Thuận Tay with vocal cue — swing at 1/4 speed. Say "load-snap" out loud. Focus on every joint's position.</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>2. Feet / Bàn chân</td>
+<td>Barefoot side-shuffle on grass (or soft surfás). Slow. Focus on foot pressure at every step.</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>3. Hands / Bàn tay</td>
+<td>Grip pressure metronome — hold vợt. 3 sec at 3/10. 1 sec at 7/10. Repeat. 20 reps.</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>4. Eyes / Mắt</td>
+<td>Quiet eye luyện tập — partner tosses bóng. Lock on contact zone for 0.5 sec BEFORE swinging. 20 reps.</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td>5. Ears + Vestibular / Tai + Tiền đình</td>
+<td>Single-leg stand with head rotations + eyes closed . 30 sec × 3 each leg. Focus on sounds in the room (PV-audio) + head movement (PV-vestibular).</td>
+<td>5 min</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bài "blink bài tập" (từ nguồn Ch.1) — bài tập trực tiếp nhất để "buộc" cảm giác sâu khi thị giác bị bỏ:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bước — bạn cùng tung bóng. Bạn theo bóng bình thường. Ở 0.5 giây trước tiếp xúc, NHẮM MẮT. Đánh bóng mắt nhắm. Giữ kết thúc 2 giây. Mở mắt. Kiểm vị trí bóng.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cái nó tiết lộ — độ chính xác cảm giác sâu của bạn. Nếu dáng cú giống hệt mắt nhắm vs mắt mở, cảm giác sâu bạn đã hiệu chỉnh. Nếu dáng sụp, cảm giác sâu bạn cần tập.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chapter 12 — The Sensor Atlas — A Visual Synthesis of the 5 Channels</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Chương 12 — Tập Bản Đồ Cảm Biến — Tổng Hợp Trực Quan 5 Kênh</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chương này là tóm tắt trực quan — mỗi hình còn lại minh họa một khái niệm then chốt từ các chương trước. In chương này thành một tờ để trong túi vợt.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.1 — Reaction Time Cascade (The Aging Sensor)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.1 — Thác Phản Xạ (Cảm Biến Lão Hóa)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Thác phản xạ" src="../images/DD7_sensor_system/DD7_sensors_06_reaction_time_cascade.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 7 — Thác phản xạ theo tuổi: 25 = 400 ms, 50 = 500 ms, 65 = 600 ms, 75 = 700 ms. Đây là GIỚI HẠN TRÊN tốc độ Phát Bóng mà mỗi tuổi có thể trả.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.2 — The 50+ Sensory Triad (Three Sensors Decline Together)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.2 — Bộ Ba Cảm Biến 50+ (Ba Cảm Biến Cùng Suy Giảm)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Suy giảm bộ ba cảm biến ở 50+" src="../images/DD7_sensor_system/DD7_sensors_08_sensory_triad_decline.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 8 — Bộ ba cảm biến 50+: thị giác, tiền đình, VÀ cảm giác sâu đều suy giảm ĐỒNG THỜI. Hầu hết chương trình tập tập trung một — chương trình thông minh tập cả ba.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Chiến lược bù" src="../images/DD7_sensor_system/DD7_sensors_09_compensation_strategy.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 9 — Cách bù: khi một cảm biến suy giảm, tập các cảm biến khác cật lực hơn. Vd: nếu tiền đình giảm → dựa nhiều hơn vào thị giác + cảm giác sâu. Dư thừa là vũ khí bí mật của người chơi 50+.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.3 — Brain Region Integration (The Sensor + Controller Wiring)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.3 — Tích Hợp Vùng Não (Đấu Nối Cảm Biến + Bộ Điều Khiển)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Tích hợp vùng não" src="../images/DD7_sensor_system/DD7_sensors_10_brain_region_integration.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 10 — Cách tất cả vùng não làm việc cùng nhau: vỏ thị giác (PV-mắt) → tiểu não (định giờ) → vỏ vận động (bộ điều khiển) → cơ (cơ cấu chấp hành) → cảm giác sâu (PV phản hồi). Vòng đóng qua phản hồi cảm giác.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Đường thần kinh" src="../images/DD7_sensor_system/DD7_sensors_11_neural_pathway.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 11 — Đường thần kinh: nơ-ron cảm giác → tủy sống → thân não → đồi thị → vỏ cảm giác → vỏ vận động → tủy sống → cơ. Tổng khứ hồi: ~50 ms. Đây là nhanh nhất cơ thể bạn có thể sửa một cú.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.4 — The Use-It-Or-Lose-It Principle (Tennis Is Protective)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.4 — Nguyên Tắc Dùng-Hoặc-Mất (Tennis Là Bảo Vệ)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="Dùng hoặc mất - tiếp tục chơi" src="../images/DD7_sensor_system/DD7_sensors_12_use_it_or_lose_it.png" /></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hình 12 — Nguyên tắc dùng-hoặc-mất 50+. Bản thân tennis là thuốc giải cho suy giảm cảm giác. Người chơi 50+ chơi 3 lần/tuần duy trì 70-80% dung lượng. Người chơi 50+ ngừng mất ở tốc độ gấp 2 lần.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.5 — The Compléte Sensor System Map (One Page)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 12.5 — Bản Đồ Hệ Cảm Biến Hoàn Chỉnh (Một Trang)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5 kênh cảm biến được hình dung như hệ hoàn chỉnh:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sensor / Cảm Biến</td>
+<td>Image / Hình</td>
+<td>Function / Chức Năng</td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Proprioception / Cảm giác sâu</td>
+<td>(covered in DD5 Ch.7 muscle spindle / Golgi diagrams)</td>
+<td>Joint angles, muscle tension</td>
+</tr>
+<tr>
+<td>Feet / Bàn chân</td>
+<td>Figure 0a, 0b, 0c (this chapter)</td>
+<td>Ground contact, push-off</td>
+</tr>
+<tr>
+<td>Hands / Bàn tay</td>
+<td>Figure 0d, 0e, 0f (this chapter)</td>
+<td>Grip, vibration, fás angle</td>
+</tr>
+<tr>
+<td>Eyes / Mắt</td>
+<td>Figure 4, 5, 6 (Ch.6 + this chapter)</td>
+<td>Ball tracking, target, opponent</td>
+</tr>
+<tr>
+<td>Ears + Vestibular / Tai + Tiền đình</td>
+<td>Figure 1, 2, 3 (Ch.7)</td>
+<td>Sound, head position, balance</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vòng phản hồi — mỗi cảm biến cung cấp PV cho não, não so với SV và điều chỉnh:</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="highlight"><pre><span></span><code>SV (target) → Controller (motor cortex) → Actuator (muscles) → Body (swing)
+↑ ↓
+└────────── Sensors (5 channels) ←── Environment (bóng/court) ←─────┘
+</code></pre></div></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Thói quen hàng ngày — 5 phút × 5 cảm biến = 25 phút/ngày tập cảm biến. Cộng với 16 phút thói quen DD6 = 40 phút chương trình nhận thức cơ thể tổng. Đây là cái pro làm tự nhiên. Người phong trào phải làm có chủ đích.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mệnh lệnh 50+ — đến 50 tuổi, bạn đã mất 10–30% mỗi cảm biến. Bạn không thể chơi tennis giống trước. Nhưng bạn có thể chơi tennis TỐT HƠN bằng THÍCH ỨNG hỗn hợp cảm biến: dựa nhiều hơn vào thị giác (bóng vàng, tương phản), nhiều hơn vào cảm giác sâu (bài chậm), nhiều hơn vào tiền đình (thăng bằng xoay đầu).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Câu nhắc tổng:</em> "Năm cảm biến, ba vòng, một cơ thể. Tập cả năm, tập cả ba, rồi chơi tennis."</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 📋 Chapter Card — Printable / Thẻ In Được</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><div class="highlight"><pre><span></span><code>╔═══════════════════════════════════════════════════════════╗
+║ THE SENSOR SYSTEM — KEY IDEAS ║
+║ HỆ CẢM BIẾN — Ý TƯỞNG CHÍNH ║
+╠═══════════════════════════════════════════════════════════╣
+║ ║
+║ 🎯 ONE BIG IDEA / Ý TƯỞNG CỐT LÕI: ║
+║ Tennis is a feedback-controlled action. ║
+║ PV (what&#39;s happening) vs SV (what you wanted) ║
+║ cú đẩys every stroke. Train the 5 SENSORS. ║
+║ Tennis là hành động điều khiển phản hồi. ║
+║ PV (đang xảy ra) vs SV (bạn muốn gì) dẫn ║
+║ mỗi cú. Tập 5 CẢM BIẾN. ║
+║ ║
+║ ──────────────────────────────────────────────────────── ║
+║ THE 5 SENSORS / 5 CẢM BIẾN: ║
+║ ║
+║ 1. Proprioception — joint angles, muscle tension ║
+║ 2. Feet — ground contact, pressure distribution ║
+║ 3. Hands — vợt cách cầm vợt, fás angle, vibration ║
+║ 4. Eyes — bóng position, target, opponent ║
+║ 5. Ears + Vestibular — sound, head position, balance ║
+║ ║
+║ ──────────────────────────────────────────────────────── ║
+║ THE 3 FEEDBACK LOOPS / 3 VÒNG PHẢN HỒI: ║
+║ ║
+║ 1. Live (during stroke) — 10–50 ms — hand + feet + vest ║
+║ 2. Post-stroke (after bóng lands) — 200–500 ms — eyes ║
+║ 3. Anticipatory (across strokes) — minutes — pattern ║
+║ ║
+║ ──────────────────────────────────────────────────────── ║
+║ ⚠️ TOP MISTAKE / LỖI PHỔ BIẾN NHẤT: ║
+║ Training only TYPE 2 feedback (post-stroke &quot;watch ║
+║ the bóng&quot;). Train ALL 3 — especially TYPE 1 (live) ║
+║ and TYPE 3 (anticipatory). ║
+║ Chỉ tập phản hồi LOẠI 2 (sau cú &quot;nhìn bóng&quot;). ║
+║ Tập CẢ 3 — đặc biệt LOẠI 1 (trực tiếp) và ║
+║ LOẠI 3 (dự đoán). ║
+║ ║
+║ ──────────────────────────────────────────────────────── ║
+║ 🔁 DRILL / BÀI TẬP: ║
+║ BLINK DRILL — partner tosses bóng. Close eyes ║
+║ 0.5 sec before contact. Hit. Open eyes. Check. ║
+║ 20 reps daily. Tests proprioception accuracy. ║
+║ BẠI BLINK — bạn cùng tung. Nhắm mắt 0.5 giây ║
+║ trước tiếp xúc. Đánh. Mở mắt. Kiểm. ║
+║ 20 lần hàng ngày. Test cảm giác sâu. ║
+║ ║
+║ ──────────────────────────────────────────────────────── ║
+║ 💭 MASTER CUE / CÂU NHẮC TỔNG: ║
+║ &quot;Five sensors, three loops. Train the difference.&quot; ║
+║ &quot;Năm cảm biến, ba vòng. Tập cái khác biệt.&quot; ║
+║ ║
+╚═══════════════════════════════════════════════════════════╝
+</code></pre></div></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## 🎯 Final Word / Lời Cuối</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bạn ơi, DD7 này hoàn thiện bức tranh. DD1–DD6 = phần cứng (khớp, cơ, não). DD7 = cảm biến (5 kênh phản hồi). Cùng nhau: hệ điều khiển hoàn chỉnh.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tài liệu nguồn nói hoàn hảo (Ch.17, "Giảm Lỗi"): <em>"Kỹ thuật vung tay hiếm khi là thủ phạm chính. Lỗi đánh hỏng thực chất là sự sụp đổ tạm thời của bản đồ không gian và hệ thống cảm nhận nội tại."</em> Dịch: lỗi tự đánh không phải thất bại cơ học cú. Chúng là thất bại CẢM BIẾN.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Điều này thay đổi cách bạn nên tập. Ngừng săn cú vung hoàn hảo. Bắt đầu mài cảm biến.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hẹn gặp trên sân, với cảm biến sắc hơn.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tổng khái niệm tích hợp từ nguồn và tài liệu thần kinh/cảm biến rộng hơn: 70+ bao phủ 5 kênh cảm biến, 3 loại vòng phản hồi, khung PV vs SV, hệ thống phân cấp sửa sai, chu kỳ nhận thức cơ thể 5 pha, nghiên cứu tập trung trong/ngoài của Wulf, 5 bài tập cảm biến, và bài blink.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* * *</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sources / Nguồn :</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Primary : 20-chapter body perception handbook (<code>Cẩm nang về cảm nhận cơ thể trong tennis/Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.docx</code> and per-chapter MDs Ch.1–Ch.20) — your master source for proprioception, foot grounding, split-step as system reset, kilướiic chain awareness, breath, and tactile vợt feedback.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Supporting : <code>proprioception_in_tennis.md</code> (Claude coauthor, 4.3 KB English) + <code>proprioception_in_tennis_detailed_vi.md</code> (Claude coauthor, 1.4 KB Vietnamese).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Cross-references : DD1 (Angle Atlas), DD2 (Joints as Springs), DD3 (Neurological Foundation), DD4 (Muscle Hierarchy), DD5 (Skelétal Architecture), DD6 (The 50+ Body), Anatomy_Lab DD7 (feet + 7,000 nerves), Anatomy_Lab DD8 (control system).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Research : Gabriele Wulf (2007, 2013) on internal vs external focus; Anders Ericsson (1993) on deliberate thực hành; Vickers (1996, 2007) on quiet eye.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>End of Deep Dive #7 — The Sensor System</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>Hết Chuyên Đề Số 7 — Hệ Cảm Biến</em></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis & Tai Chi research · All site content is for educational purposes.
+    </div>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.prune", "search.highlight", "search.suggest", "alternate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../assets/js/extra.js"></script>
+      
+    
+  </body>
+</html>
