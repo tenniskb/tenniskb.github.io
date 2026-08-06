@@ -1,1915 +1,455 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Future Lab - English Handbooks</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tennis Handbooks — English Library — Tennis Future Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
-
-
-  :root {
-
+:root {
     --ink: #0d0d0d;
-
-    --paper: #f5f0e8;
-
+    --paper: #fafaf7;
     --accent: #c8401a;
-
     --green: #1a6b3c;
-
     --gold: #c4952a;
-
-    --muted: #6b6255;
-
-    --divider: #d4cbbf;
-
-  }
-
-
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-
-
-  body {
-
+    --muted: #6b7280;
+    --divider: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
     background: var(--paper);
-
     color: var(--ink);
-
-    font-family: 'DM Sans', sans-serif;
-
-    font-size: 17px;
-
-    line-height: 1.75;
-
-  }
-
-
-
-  /* ─── MASTHEAD ─── */
-
-  .masthead {
-
-    background: var(--ink);
-
-    color: var(--paper);
-
-    padding: 64px 40px 48px;
-
-    position: relative;
-
-    overflow: hidden;
-
-  }
-
-  .masthead::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: -60px; right: -80px;
-
-    width: 420px; height: 420px;
-
-    border: 60px solid rgba(200,64,26,0.18);
-
-    border-radius: 50%;
-
-  }
-
-  .masthead::after {
-
-    content: '';
-
-    position: absolute;
-
-    bottom: -100px; left: -40px;
-
-    width: 280px; height: 280px;
-
-    border: 40px solid rgba(196,149,42,0.15);
-
-    border-radius: 50%;
-
-  }
-
-  .tag {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    color: var(--accent);
-
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-  }
-
-  h1 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
-
-    line-height: 1.1;
-
-    max-width: 700px;
-
-    margin-bottom: 24px;
-
-  }
-
-  .subtitle {
-
-    font-size: 18px;
-
-    color: white;
-
-    max-width: 560px;
-
-    font-weight: 300;
-
-  }
-
-
-
-  /* ─── LAYOUT ─── */
-
-  .content-wrap {
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 0 24px;
-
-  }
-
-
-
-  /* ─── LEAD ─── */
-
-  .lead {
-
-    font-size: 20px;
-
-    font-weight: 500;
-
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-
-    color: var(--ink);
-
-    padding: 52px 0 20px;
-
-    border-bottom: 2px solid var(--ink);
-
-    margin-bottom: 52px;
-
-  }
-
-
-
-  /* ─── SECTION HEADER ─── */
-
-  .section-label {
-
+    padding: 60px 24px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.crumbs {
     font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    margin-bottom: 10px;
-
-  }
-
-  h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-
-    margin-bottom: 20px;
-
-    line-height: 1.2;
-
-  }
-
-  h3 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.3rem;
-
-    margin: 32px 0 12px;
-
-    color: var(--accent);
-
-  }
-
-  p { margin-bottom: 18px; color: #2a2520; }
-
-
-
-  /* ─── PULL QUOTE ─── */
-
-  .pullquote {
-
-    border-left: 5px solid var(--accent);
-
-    padding: 20px 28px;
-
-    margin: 40px 0;
-
-    background: rgba(200,64,26,0.05);
-
-  }
-
-  .pullquote p {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.25rem;
-
-    font-style: italic;
-
-    margin: 0;
-
-    color: var(--ink);
-
-  }
-
-
-
-  /* ─── KINETIC CHAIN DIAGRAM ─── */
-
-  .chain-diagram {
-
-    margin: 48px 0;
-
-    background: var(--ink);
-
-    border-radius: 4px;
-
-    padding: 40px 32px;
-
-    color: var(--paper);
-
-  }
-
-  .chain-diagram h3 { color: var(--gold); margin-top: 0; }
-
-  .chain-nodes {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 0;
-
-  }
-
-  .chain-node {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 12px 0;
-
-    position: relative;
-
-  }
-
-  .chain-node:not(:last-child)::after {
-
-    content: '';
-
-    position: absolute;
-
-    left: 19px;
-
-    top: 44px;
-
-    width: 2px;
-
-    height: 28px;
-
-    background: var(--accent);
-
-  }
-
-  .node-icon {
-
-    width: 40px; height: 40px;
-
-    border-radius: 50%;
-
-    background: var(--accent);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    flex-shrink: 0;
-
-    color: white;
-
-  }
-
-  .node-text strong {
-
-    display: block;
-
-    font-size: 15px;
-
-    color: var(--paper);
-
-    margin-bottom: 2px;
-
-  }
-
-  .node-text span {
-
-    font-size: 13px;
-
-    color: rgba(245,240,232,0.55);
-
-  }
-
-
-
-  /* ─── PHOTO ANALYSIS CARD ─── */
-
-  .analysis-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 24px;
-
-    margin: 40px 0;
-
-  }
-
-  @media (max-width: 640px) { .analysis-grid { grid-template-columns: 1fr; } }
-
-
-
-  .analysis-card {
-
-    border: 1.5px solid var(--divider);
-
-    border-radius: 4px;
-
-    overflow: hidden;
-
-    background: white;
-
-  }
-
-  .analysis-card img {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    object-position: top;
-
-    display: block;
-
-  }
-
-  .card-body { padding: 20px; }
-
-  .card-body .player-tag {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    margin-bottom: 6px;
-
-    display: block;
-
-  }
-
-  .card-body h4 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.1rem;
-
-    margin-bottom: 10px;
-
-    color: var(--ink);
-
-  }
-
-  .card-body p { font-size: 14px; margin-bottom: 0; color: #3a342e; }
-
-  .phase-badge {
-
-    display: inline-block;
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    background: var(--green);
-
-    color: white;
-
-    padding: 3px 10px;
-
-    border-radius: 2px;
-
-    margin-bottom: 10px;
-
-  }
-
-
-
-  /* ─── KNEE ANATOMY VISUAL ─── */
-
-  .anatomy-block {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin: 40px 0;
-
-  }
-
-  @media (max-width: 600px) { .anatomy-block { grid-template-columns: 1fr; } }
-
-
-
-  .anatomy-card {
-
-    padding: 28px;
-
-    border-radius: 4px;
-
-  }
-
-  .anatomy-card.safe {
-
-    background: rgba(26,107,60,0.08);
-
-    border: 1.5px solid rgba(26,107,60,0.3);
-
-  }
-
-  .anatomy-card.danger {
-
-    background: rgba(200,64,26,0.07);
-
-    border: 1.5px solid rgba(200,64,26,0.3);
-
-  }
-
-  .anatomy-card h4 {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 16px;
-
-  }
-
-  .safe h4 { color: var(--green); }
-
-  .danger h4 { color: var(--accent); }
-
-  .anatomy-card ul { list-style: none; padding: 0; }
-
-  .anatomy-card li {
-
-    font-size: 14px;
-
-    padding: 7px 0;
-
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-  }
-
-  .anatomy-card li:last-child { border-bottom: none; }
-
-  .safe li::before { content: '✓'; color: var(--green); font-weight: 700; }
-
-  .danger li::before { content: '✗'; color: var(--accent); font-weight: 700; }
-
-
-
-  /* ─── PLAYER COMPARISON ─── */
-
-  .comparison {
-
-    margin: 48px 0;
-
-  }
-
-  .comparison-header {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin-bottom: 0;
-
-  }
-
-  .player-header {
-
-    padding: 20px 24px;
-
-    color: white;
-
-  }
-
-  .player-header.nj { background: #1a1a2e; }
-
-  .player-header.rf { background: #2e1a1a; }
-
-  .player-header .name {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.4rem;
-
-    font-weight: 700;
-
-    margin-bottom: 4px;
-
-  }
-
-  .player-header .descriptor {
-
-    font-size: 12px;
-
-    font-style: italic;
-
-    opacity: 0.7;
-
-  }
-
-
-
-  .compare-row {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-  .compare-cell {
-
-    padding: 14px 24px;
-
-    font-size: 14px;
-
-    border-bottom: 1px solid var(--divider);
-
-  }
-
-  .compare-cell:first-child { background: rgba(26,26,46,0.04); }
-
-  .compare-cell:last-child { background: rgba(46,26,26,0.04); }
-
-  .compare-label {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    grid-column: 1/-1;
-
-    padding: 10px 24px 4px;
-
-    background: var(--paper);
-
-    border-bottom: 1px solid var(--divider);
-
-    font-weight: 700;
-
-  }
-
-
-
-  /* ─── DRILL CARDS ─── */
-
-  .drills {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 20px;
-
-    margin: 36px 0;
-
-  }
-
-  .drill-card {
-
-    background: white;
-
-    border: 1.5px solid var(--divider);
-
-    border-top: 4px solid var(--gold);
-
-    padding: 24px;
-
-    border-radius: 0 0 4px 4px;
-
-  }
-
-  .drill-number {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 28px;
-
-    font-weight: 700;
-
-    color: var(--gold);
-
-    opacity: 0.4;
-
-    margin-bottom: 8px;
-
-    display: block;
-
-  }
-
-  .drill-card h4 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.05rem;
-
-    margin-bottom: 8px;
-
-  }
-
-  .drill-card p { font-size: 13px; margin: 0; color: var(--muted); }
-
-
-
-  /* ─── SECTION DIVIDER ─── */
-
-  .section {
-
-    padding: 60px 0 40px;
-
-    border-top: 1px solid var(--divider);
-
-  }
-
-  .section:first-of-type { border-top: none; }
-
-
-
-  /* ─── WARNING BOX ─── */
-
-  .warning {
-
-    background: rgba(200,64,26,0.08);
-
-    border: 1.5px solid rgba(200,64,26,0.25);
-
-    padding: 24px 28px;
-
-    margin: 36px 0;
-
-    border-radius: 4px;
-
-  }
-
-  .warning strong { color: var(--accent); }
-
-  .warning p { margin: 0; font-size: 15px; }
-
-
-
-  /* ─── PRINCIPLE STRIP ─── */
-
-  .principle {
-
-    background: var(--green);
-
-    color: white;
-
-    padding: 36px 40px;
-
-    margin: 48px 0;
-
-  }
-
-  .principle p {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.4rem;
-
-    font-style: italic;
-
-    color: white;
-
-    margin: 0;
-
-    max-width: 640px;
-
-  }
-
-
-
-  /* ─── SENSATION LIST ─── */
-
-  .sensation-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 24px;
-
-    margin: 32px 0;
-
-  }
-
-  @media (max-width: 560px) { .sensation-grid { grid-template-columns: 1fr; } }
-
-  .sensation-box { padding: 24px; border-radius: 4px; }
-
-  .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
-
-  .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
-
-  .sensation-box h4 {
-
-    font-family: 'Space Mono', monospace;
-
     font-size: 11px;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-
-    margin-bottom: 14px;
-
-  }
-
-  .feel h4 { color: var(--gold); }
-
-  .avoid h4 { color: var(--accent); }
-
-  .sensation-box li {
-
-    font-size: 14px;
-
-    margin-bottom: 8px;
-
-    padding-left: 20px;
-
-    position: relative;
-
-    list-style: none;
-
-  }
-
-  .feel li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 8px; top: 4px; }
-
-  .avoid li::before { content: '◆'; position: absolute; left: 0; color: var(--accent); font-size: 8px; top: 4px; }
-
-
-
-  /* ─── FOOTER ─── */
-
-  footer {
-
-    background: var(--ink);
-
-    color: white;
-
-    padding: 40px;
-
-    margin-top: 80px;
-
-    text-align: center;
-
-    font-size: 13px;
-
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+.crumbs a { color: var(--accent); text-decoration: none; }
+.masthead {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+}
+.brand-tag {
     font-family: 'Space Mono', monospace;
-
-    letter-spacing: 1px;
-
-  }
-
-
-
-  /* ─── DIAGRAM SVG AREA ─── */
-
-  .svg-diagram {
-
-    margin: 40px 0;
-
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: inline-block;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+.lead {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 700px;
+}
+.book-list { display: grid; gap: 16px; }
+.book-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
+    background: white;
+    border: 1.5px solid var(--divider);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    gap: 24px;
+}
+.book-card:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(200,64,26,0.1);
+}
+.book-card .body { flex: 1; }
+.book-card .book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.book-card .book-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+.book-card .cta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+footer {
+    background: var(--ink);
+    color: white;
+    padding: 40px;
+    margin-top: 80px;
     text-align: center;
-
-  }
-
-  svg text { font-family: 'DM Sans', sans-serif; }
-
-
-
-  @media (max-width: 600px) {
-
-    .masthead { padding: 44px 24px 36px; }
-
-    .content-wrap { padding: 0 16px; }
-
-    .player-header .name { font-size: 1.1rem; }
-
-    .compare-cell { font-size: 13px; padding: 12px 16px; }
-
-    .compare-label { padding: 10px 16px 4px; }
-
-    .player-header { padding: 16px; }
-
-  }
-
-
-.book-group { margin-bottom: 48px; }
-.book-group-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--divider); }
-.book-group-title { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: var(--ink); margin: 0; }
-.book-group-count { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.book-group-lang { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; padding: 4px 10px; border-radius: 2px; }
-.book-group-lang.en { background: rgba(26,107,60,0.1); color: var(--green); border: 1px solid var(--green); }
-.chapter-grid { display: grid; gap: 12px; margin-top: 16px; }
-@media (min-width: 640px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .chapter-grid { grid-template-columns: repeat(3, 1fr); } }
-.chapter-card { background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 20px; transition: border-color 0.2s, box-shadow 0.2s; }
-.chapter-card:hover { border-color: var(--accent); box-shadow: 0 4px 12px rgba(200,64,26,0.1); }
-.chapter-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 8px; color: var(--ink); }
-.chapter-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider); }
-.chapter-card p { font-size: 13px; color: var(--muted); margin: 0 0 12px; line-height: 1.5; }
-.chapter-card .chapter-badge { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--accent); margin-bottom: 8px; display: inline-block; }
-.chapter-card .read-link { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
-.main-book-card { background: rgba(196,149,42,0.08); border: 1.5px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin-bottom: 16px; }
-.main-book-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
-.main-book-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider); }
-.main-book-card p { font-size: 14px; color: var(--muted); margin: 0 0 12px; line-height: 1.6; }
-.main-book-card .read-link { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); }
-.section-header { margin-top: 60px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--divider); }
-.section-header:first-of-type { margin-top: 0; }
-.section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--ink); margin: 0; }
-.section-header .count { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
-.language-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; padding: 4px 12px; border-radius: 2px; margin-bottom: 16px; }
-.language-badge.en { background: rgba(26,107,60,0.1); color: var(--green); border: 1px solid var(--green); }
-</style></head>
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+.cc-license {
+    font-size: 12px;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.cc-license a { color: var(--gold); }
+</style>
+</head>
 <body>
-<div class="masthead">
-    <span class="tag">Tennis Future Lab</span>
-    <h1>English Tennis Handbooks</h1>
-    <p class="subtitle">Comprehensive tennis knowledge base - 43 book groups in English</p>
-</div>
-<div class="content-wrap">
-    <p class="lead">All English books organized by topic, grouped by book with chapters. Consistent design: masthead, lead, auto TOC, pullquotes, warnings, data tables, drill cards, styled lists, CC BY-NC-SA 4.0 footer.</p>
-    
-    <div class="section-header">
-        <span class="language-badge en">English Books</span>
-        <h2>English Books (43 groups)</h2>
+<div class="container">
+    <div class="crumbs">
+        <a href="../">← Tennis Future Lab</a> / <a href="./">Handbooks</a>
     </div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Advanced Tennis Training Manual</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Advanced_Tennis_Training_Manual.html">Advanced Tennis Training Manual</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Advanced_Tennis_Training_Manual.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Analysis of Tennis Techniques from Elite Players</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Analysis_of_Tennis_Techniques_from_Elite_Players.html">Analysis of Tennis Techniques from Elite Players</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Analysis_of_Tennis_Techniques_from_Elite_Players.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">ChatGPT Tennis Book Manuscript</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./ChatGPT_Tennis_Book_Manuscript.html">ChatGPT Tennis Book Manuscript</a></h3>
-        <p>Main reference manual</p>
-        <a href="./ChatGPT_Tennis_Book_Manuscript.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">ChatGPT Tennis Technical Guide</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html">ChatGPT Tennis Technical Guide</a></h3>
-        <p>Main reference manual</p>
-        <a href="./ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Complete Modern Tennis Handbook 2026</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Complete_Modern_Tennis_Handbook_2026.html">Complete Modern Tennis Handbook 2026</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Complete_Modern_Tennis_Handbook_2026.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Cross-Training for Tennis Athletes</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Cross-Training_cho_Van_Dong_Vien_Tennis.html">Cross-Training for Tennis Athletes</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Cross-Training_cho_Van_Dong_Vien_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Dynamics of Spatial Movement in Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Dong_Luc_Hoc_Khong_Gian_Tennis.html">Dynamics of Spatial Movement in Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Dong_Luc_Hoc_Khong_Gian_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Elite Tennis Training Manual (Complete)</h3>
-            <span class="book-group-count">0 chapters + 2 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Elite_Tennis_Training_Manual.html">Elite Tennis Training Manual (Complete)</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Elite_Tennis_Training_Manual.html" class="read-link">Read Now -></a>
-    </article>
-
-    <article class="main-book-card">
-        <h3><a href="./Elite_Tennis_Training_Manual_Architecture.html">Architecture Guide</a></h3>
-        <p>Supplementary edition</p>
-        <a href="./Elite_Tennis_Training_Manual_Architecture.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Federer Code Book</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Federer_Code_Book.html">Federer Code Book</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Federer_Code_Book.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Federer Tennis Handbook</h3>
-            <span class="book-group-count">0 chapters + 2 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Federer_Tennis_Handbook.html">Federer Tennis Handbook</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Federer_Tennis_Handbook.html" class="read-link">Read Now -></a>
-    </article>
-
-    <article class="main-book-card">
-        <h3><a href="./Federer_Tennis_Handbook_Revised.html">Revised Edition</a></h3>
-        <p>Supplementary edition</p>
-        <a href="./Federer_Tennis_Handbook_Revised.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Gemini Tennis Technical Guide</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Gemini_Tennis_Ky_Thuat_Luyen.html">Gemini Tennis Technical Guide</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Gemini_Tennis_Ky_Thuat_Luyen.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Handbook Tennis Research Notebook v3</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Handbook_Tennis_Research_Notebook_v3.html">Handbook Tennis Research Notebook v3</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Handbook_Tennis_Research_Notebook_v3.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Handbook from Tennis Research Project Notebook</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Handbook_from_Tennis_Research_Project_Notebook.html">Handbook from Tennis Research Project Notebook</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Handbook_from_Tennis_Research_Project_Notebook.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Handbook on Anatomy of Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Handbook_on_Anatomy_of_Tennis.html">Handbook on Anatomy of Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Handbook_on_Anatomy_of_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Meta AI Notes Analysis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Meta_AI_Notes_Analysis.html">Meta AI Notes Analysis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Meta_AI_Notes_Analysis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Modern Tennis Volley Handbook 2026</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Modern_Tennis_Volley_Handbook_2026.html">Modern Tennis Volley Handbook 2026</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Modern_Tennis_Volley_Handbook_2026.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Nadal Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Nadal_Tennis.html">Nadal Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Nadal_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Neuro-Biomechanical Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Neuro_Biomechanical_Tennis.html">Neuro-Biomechanical Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Neuro_Biomechanical_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Novak Djokovic Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Novak_Djokovic_Tennis.html">Novak Djokovic Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Novak_Djokovic_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Sampras Tennis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Sampras_Tennis.html">Sampras Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Sampras_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis ATP Forehand Techniques</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_ATP_Forehand_Techniques.html">Tennis ATP Forehand Techniques</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_ATP_Forehand_Techniques.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Backhand Techniques</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Backhand_Techniques.html">Tennis Backhand Techniques</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Backhand_Techniques.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Ballet 20 Chapters</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Ballet_20_Chuong.html">Tennis Ballet 20 Chapters</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Ballet_20_Chuong.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Book Manuscript - Coauthor by ChatGPT</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Book_Manuscript_ChatGPT.html">Tennis Book Manuscript - Coauthor by ChatGPT</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Book_Manuscript_ChatGPT.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Coaching Manual 3.0</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Coaching_Manual_3_0.html">Tennis Coaching Manual 3.0</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Coaching_Manual_3_0.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Curriculum 5 Years by ChatGPT</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Giao_Trinh_Tennis_5_Nam_ChatGPT.html">Tennis Curriculum 5 Years by ChatGPT</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Giao_Trinh_Tennis_5_Nam_ChatGPT.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Elite Analysis Framework</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Elite_Analysis_Framework.html">Tennis Elite Analysis Framework</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Elite_Analysis_Framework.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Mastery 20 Chapters</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Mastery_20_Chapters.html">Tennis Mastery 20 Chapters</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Mastery_20_Chapters.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Mastery Complete</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Mastery_Complete.html">Tennis Mastery Complete</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Mastery_Complete.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Neurological Specialist Deep Research</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Neurological_Specialist_Deep_Research.html">Tennis Neurological Specialist Deep Research</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Neurological_Specialist_Deep_Research.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Neurological Specialist Professional</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Neurological_Specialist_Professional.html">Tennis Neurological Specialist Professional</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Neurological_Specialist_Professional.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis System Elite Manual</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_System_Elite_Manual.html">Tennis System Elite Manual</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_System_Elite_Manual.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis System Playbook</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_System_Playbook.html">Tennis System Playbook</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_System_Playbook.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Tension: Neural & Biomechanical Analysis</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Tension_Neural__Biomechanical_Analysis.html">Tennis Tension: Neural & Biomechanical Analysis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Tension_Neural__Biomechanical_Analysis.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Training Manual</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Training_Manual.html">Tennis Training Manual</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Training_Manual.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Training Manual (Advanced)</h3>
-            <span class="book-group-count">11 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Training_Manual_Complete_11_Chapters.html">Tennis Training Manual (Advanced)</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Training_Manual_Complete_11_Chapters.html" class="read-link">Read Now -></a>
-    </article>
-<div class="chapter-grid">
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 01</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_01.html">Tennis Training Manual (Advanced) - Chapter 01</a></h3>
-                <p>Chapter 01 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_01.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 02</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_02.html">Tennis Training Manual (Advanced) - Chapter 02</a></h3>
-                <p>Chapter 02 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_02.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 03</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_03.html">Tennis Training Manual (Advanced) - Chapter 03</a></h3>
-                <p>Chapter 03 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_03.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 04</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_04.html">Tennis Training Manual (Advanced) - Chapter 04</a></h3>
-                <p>Chapter 04 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_04.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 05</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_05.html">Tennis Training Manual (Advanced) - Chapter 05</a></h3>
-                <p>Chapter 05 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_05.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 06</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_06.html">Tennis Training Manual (Advanced) - Chapter 06</a></h3>
-                <p>Chapter 06 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_06.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 07</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_07.html">Tennis Training Manual (Advanced) - Chapter 07</a></h3>
-                <p>Chapter 07 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_07.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 08</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_08.html">Tennis Training Manual (Advanced) - Chapter 08</a></h3>
-                <p>Chapter 08 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_08.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 09</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_09.html">Tennis Training Manual (Advanced) - Chapter 09</a></h3>
-                <p>Chapter 09 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_09.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 10</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_10.html">Tennis Training Manual (Advanced) - Chapter 10</a></h3>
-                <p>Chapter 10 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_10.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 11</span>
-                <h3><a href="./Tennis_Training_Manual_Advanced_Chapter_11.html">Tennis Training Manual (Advanced) - Chapter 11</a></h3>
-                <p>Chapter 11 of Tennis Training Manual (Advanced)</p>
-                <a href="./Tennis_Training_Manual_Advanced_Chapter_11.html" class="read-link">Read Chapter -></a>
-            </article>
-</div>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Training Manual: Sports Psychology Philosophy</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Training_Manual_Sports_Psychology_Philosophy.html">Tennis Training Manual: Sports Psychology Philosophy</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Training_Manual_Sports_Psychology_Philosophy.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Training: Kinh, GRF, Taichi-24 Forms</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Training_Kinh_GRF_Taichi_24_Forms.html">Tennis Training: Kinh, GRF, Taichi-24 Forms</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Training_Kinh_GRF_Taichi_24_Forms.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Tennis Volley Deep Research</h3>
-            <span class="book-group-count">0 chapters + 2 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Volley_Deep_Research.html">Tennis Volley Deep Research</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Tennis_Volley_Deep_Research.html" class="read-link">Read Now -></a>
-    </article>
-
-    <article class="main-book-card">
-        <h3><a href="./Tennis_Volley_Deep_Research_ChatGPT.html">ChatGPT Version</a></h3>
-        <p>Supplementary edition</p>
-        <a href="./Tennis_Volley_Deep_Research_ChatGPT.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">The Art of Modern Tennis</h3>
-            <span class="book-group-count">24 chapters + 2 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./The_Art_of_Modern_Tennis.html">The Art of Modern Tennis</a></h3>
-        <p>Main reference manual</p>
-        <a href="./The_Art_of_Modern_Tennis.html" class="read-link">Read Now -></a>
-    </article>
-
-    <article class="main-book-card">
-        <h3><a href="./The_Art_of_Modern_Tennis_Full.html">Full Version</a></h3>
-        <p>Supplementary edition</p>
-        <a href="./The_Art_of_Modern_Tennis_Full.html" class="read-link">Read Now -></a>
-    </article>
-<div class="chapter-grid">
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 01</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_01.html">The Art of Modern Tennis - Chapter 01</a></h3>
-                <p>Chapter 01 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_01.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 02</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_02.html">The Art of Modern Tennis - Chapter 02</a></h3>
-                <p>Chapter 02 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_02.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 03</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_03.html">The Art of Modern Tennis - Chapter 03</a></h3>
-                <p>Chapter 03 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_03.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 04</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_04.html">The Art of Modern Tennis - Chapter 04</a></h3>
-                <p>Chapter 04 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_04.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 05</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_05.html">The Art of Modern Tennis - Chapter 05</a></h3>
-                <p>Chapter 05 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_05.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 06</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_06.html">The Art of Modern Tennis - Chapter 06</a></h3>
-                <p>Chapter 06 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_06.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 07</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_07.html">The Art of Modern Tennis - Chapter 07</a></h3>
-                <p>Chapter 07 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_07.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 08</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_08.html">The Art of Modern Tennis - Chapter 08</a></h3>
-                <p>Chapter 08 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_08.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 09</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_09.html">The Art of Modern Tennis - Chapter 09</a></h3>
-                <p>Chapter 09 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_09.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 10</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_10.html">The Art of Modern Tennis - Chapter 10</a></h3>
-                <p>Chapter 10 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_10.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 11</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_11.html">The Art of Modern Tennis - Chapter 11</a></h3>
-                <p>Chapter 11 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_11.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 12</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_12.html">The Art of Modern Tennis - Chapter 12</a></h3>
-                <p>Chapter 12 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_12.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 13</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_13.html">The Art of Modern Tennis - Chapter 13</a></h3>
-                <p>Chapter 13 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_13.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 14</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_14.html">The Art of Modern Tennis - Chapter 14</a></h3>
-                <p>Chapter 14 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_14.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 15</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_15.html">The Art of Modern Tennis - Chapter 15</a></h3>
-                <p>Chapter 15 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_15.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 16</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_16.html">The Art of Modern Tennis - Chapter 16</a></h3>
-                <p>Chapter 16 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_16.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 17</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_17.html">The Art of Modern Tennis - Chapter 17</a></h3>
-                <p>Chapter 17 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_17.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 18</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_18.html">The Art of Modern Tennis - Chapter 18</a></h3>
-                <p>Chapter 18 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_18.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 19</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_19.html">The Art of Modern Tennis - Chapter 19</a></h3>
-                <p>Chapter 19 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_19.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 20</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_20.html">The Art of Modern Tennis - Chapter 20</a></h3>
-                <p>Chapter 20 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_20.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 21</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_21.html">The Art of Modern Tennis - Chapter 21</a></h3>
-                <p>Chapter 21 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_21.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 22</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_22.html">The Art of Modern Tennis - Chapter 22</a></h3>
-                <p>Chapter 22 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_22.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 23</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_23.html">The Art of Modern Tennis - Chapter 23</a></h3>
-                <p>Chapter 23 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_23.html" class="read-link">Read Chapter -></a>
-            </article>
-
-            <article class="chapter-card">
-                <span class="chapter-badge">Chapter 24</span>
-                <h3><a href="./The_Art_of_Modern_Tennis_Chapter_24.html">The Art of Modern Tennis - Chapter 24</a></h3>
-                <p>Chapter 24 of The Art of Modern Tennis</p>
-                <a href="./The_Art_of_Modern_Tennis_Chapter_24.html" class="read-link">Read Chapter -></a>
-            </article>
-</div>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">The Complete Tennis Manual</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./The_Complete_Tennis_Manual.html">The Complete Tennis Manual</a></h3>
-        <p>Main reference manual</p>
-        <a href="./The_Complete_Tennis_Manual.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">The Neuro-Motor Manual of Tennis Mastery</h3>
-            <span class="book-group-count">0 chapters + 2 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery.html">The Neuro-Motor Manual of Tennis Mastery</a></h3>
-        <p>Main reference manual</p>
-        <a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery.html" class="read-link">Read Now -></a>
-    </article>
-
-    <article class="main-book-card">
-        <h3><a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html">Professional Edition</a></h3>
-        <p>Supplementary edition</p>
-        <a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-<div class="book-group">
-
-        <div class="book-group-header">
-            <span class="book-group-lang en">EN</span>
-            <h3 class="book-group-title">Unified Power Model 20 Chapters</h3>
-            <span class="book-group-count">0 chapters + 1 main files</span>
-        </div>
-<div class="chapter-grid">
-
-    <article class="main-book-card">
-        <h3><a href="./Unified_Power_Model_20_Chapters.html">Unified Power Model 20 Chapters</a></h3>
-        <p>Main reference manual</p>
-        <a href="./Unified_Power_Model_20_Chapters.html" class="read-link">Read Now -></a>
-    </article>
-</div>
-</div>
-
-</div>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
-    Tennis Future Lab - English Tennis Handbooks - 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-    <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank" style="color: white;">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
-</body></html>
+    <div class="masthead">
+        <span class="brand-tag">Tennis Future Lab · English Library</span>
+        <h1>Tennis Handbooks — English Library</h1>
+        <p class="lead">Comprehensive collection of English tennis handbooks and training manuals. Click any book to see its full table of contents.</p>
+    </div>
+    <div class="book-list">
+        <a href="./Tennis_Training_Manual_Advanced/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Training Manual (Advanced)</div>
+                <div class="book-desc">11 chapters + 1 main reference. Kinetic chain, biomechanics, tactics, mental game.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./The_Art_of_Modern_Tennis/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">The Art of Modern Tennis</div>
+                <div class="book-desc">24 chapters + 3 reference editions. The definitive Martial + Agentic manual.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Advanced_Tennis_Training_Manual.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Advanced Tennis Training Manual</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Analysis_of_Tennis_Techniques_from_Elite_Players.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Analysis Of Tennis Techniques From Elite Players</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Chatgpt Huong Dan Ky Thuat Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./ChatGPT_Tennis_Book_Manuscript.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Chatgpt Tennis Book Manuscript</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Complete_Modern_Tennis_Handbook_2026.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Complete Modern Tennis Handbook 2026</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Dong_Luc_Hoc_Khong_Gian_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Dong Luc Hoc Khong Gian Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Elite_Tennis_Training_Manual.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Elite Tennis Training Manual</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Elite_Tennis_Training_Manual_Architecture.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Elite Tennis Training Manual Architecture</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Federer_Code_Book.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Federer Code Book</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Federer_Tennis_Handbook.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Federer Tennis Handbook</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Federer_Tennis_Handbook_Revised.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Federer Tennis Handbook Revised</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Gemini_Tennis_Ky_Thuat_Luyen.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Gemini Tennis Ky Thuat Luyen</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Giao_Trinh_Tennis_5_Nam_ChatGPT.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Giao Trinh Tennis 5 Nam Chatgpt</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Handbook_from_Tennis_Research_Project_Notebook.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Handbook From Tennis Research Project Notebook</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Handbook_on_Anatomy_of_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Handbook On Anatomy Of Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Handbook_Tennis_Research_Notebook_v3.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Handbook Tennis Research Notebook V3</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Meta_AI_Notes_Analysis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Meta Ai Notes Analysis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Modern_Tennis_Volley_Handbook_2026.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Modern Tennis Volley Handbook 2026</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Nadal_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Nadal Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Neuro_Biomechanical_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Neuro Biomechanical Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Novak_Djokovic_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Novak Djokovic Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Sampras_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Sampras Tennis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_ATP_Forehand_Techniques.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Atp Forehand Techniques</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Backhand_Techniques.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Backhand Techniques</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Ballet_20_Chuong.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Ballet 20 Chuong</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Book_Manuscript_ChatGPT.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Book Manuscript Chatgpt</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Coaching_Manual_3_0.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Coaching Manual 3 0</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Elite_Analysis_Framework.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Elite Analysis Framework</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Mastery_20_Chapters.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Mastery 20 Chapters</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Mastery_Complete.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Mastery Complete</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Neurological_Specialist_Deep_Research.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Neurological Specialist Deep Research</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Neurological_Specialist_Professional.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Neurological Specialist Professional</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_System_Elite_Manual.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis System Elite Manual</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_System_Playbook.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis System Playbook</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Tension_Neural__Biomechanical_Analysis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Tension Neural Biomechanical Analysis</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Training_Kinh_GRF_Taichi_24_Forms.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Training Kinh Grf Taichi 24 Forms</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Training_Manual_Sports_Psychology_Philosophy.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Training Manual Sports Psychology Philosophy</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Volley_Deep_Research.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Volley Deep Research</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Tennis_Volley_Deep_Research_ChatGPT.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Volley Deep Research Chatgpt</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./The_Complete_Tennis_Manual.html" class="book-card">
+            <div class="body">
+                <div class="book-title">The Complete Tennis Manual</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery.html" class="book-card">
+            <div class="body">
+                <div class="book-title">The Neuro-motor Manual Of Tennis Mastery</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html" class="book-card">
+            <div class="body">
+                <div class="book-title">The Neuro-motor Manual Of Tennis Mastery Professional</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+        <a href="./Unified_Power_Model_20_Chapters.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Unified Power Model 20 Chapters</div>
+                <div class="book-desc">Standalone book — full content in one file.</div>
+            </div>
+            <span class="cta">Read now →</span>
+        </a>
+    </div>
+</div>
+<footer>Tennis Future Lab · Tennis Knowledge Base · 2026</footer>
+<div class="cc-license">
+<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</div>
+</body>
+</html>

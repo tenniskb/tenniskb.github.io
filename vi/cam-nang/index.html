@@ -1,1742 +1,371 @@
 <!DOCTYPE html>
-
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Cẩm Nang Tennis - Thư Viện Toàn Diện</title>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cẩm Nang Tennis — Thư Viện Tiếng Việt — Tennis Future Lab</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
-
-
-  :root {
-
+:root {
     --ink: #0d0d0d;
-
-    --paper: #f5f0e8;
-
+    --paper: #fafaf7;
     --accent: #c8401a;
-
     --green: #1a6b3c;
-
     --gold: #c4952a;
-
-    --muted: #6b6255;
-
-    --divider: #d4cbbf;
-
-  }
-
-
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-
-
-  body {
-
+    --muted: #6b7280;
+    --divider: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
     background: var(--paper);
-
     color: var(--ink);
-
-    font-family: 'DM Sans', sans-serif;
-
-    font-size: 17px;
-
-    line-height: 1.75;
-
-  }
-
-
-
-  /* ─── MASTHEAD ─── */
-
-  .masthead {
-
-    background: var(--ink);
-
-    color: var(--paper);
-
-    padding: 64px 40px 48px;
-
-    position: relative;
-
-    overflow: hidden;
-
-  }
-
-  .masthead::before {
-
-    content: '';
-
-    position: absolute;
-
-    top: -60px; right: -80px;
-
-    width: 420px; height: 420px;
-
-    border: 60px solid rgba(200,64,26,0.18);
-
-    border-radius: 50%;
-
-  }
-
-  .masthead::after {
-
-    content: '';
-
-    position: absolute;
-
-    bottom: -100px; left: -40px;
-
-    width: 280px; height: 280px;
-
-    border: 40px solid rgba(196,149,42,0.15);
-
-    border-radius: 50%;
-
-  }
-
-  .tag {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-    color: var(--accent);
-
-    display: inline-block;
-
-    margin-bottom: 20px;
-
-  }
-
-  h1 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(2.2rem, 5vw, 3.6rem);
-
-    line-height: 1.1;
-
-    max-width: 700px;
-
-    margin-bottom: 24px;
-
-  }
-
-  .subtitle {
-
-    font-size: 18px;
-
-    color: white;
-
-    max-width: 560px;
-
-    font-weight: 300;
-
-  }
-
-
-
-  /* ─── LAYOUT ─── */
-
-  .content-wrap {
-
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 0 24px;
-
-  }
-
-
-
-  /* ─── LEAD ─── */
-
-  .lead {
-
-    font-size: 20px;
-
-    font-weight: 500;
-
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-
-    color: var(--ink);
-
-    padding: 52px 0 20px;
-
-    border-bottom: 2px solid var(--ink);
-
-    margin-bottom: 52px;
-
-  }
-
-
-
-  /* ─── SECTION HEADER ─── */
-
-  .section-label {
-
+    padding: 60px 24px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.crumbs {
     font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    margin-bottom: 10px;
-
-  }
-
-  h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-
-    margin-bottom: 20px;
-
-    line-height: 1.2;
-
-  }
-
-  h3 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.3rem;
-
-    margin: 32px 0 12px;
-
-    color: var(--accent);
-
-  }
-
-  p { margin-bottom: 18px; color: #2a2520; }
-
-
-
-  /* ─── PULL QUOTE ─── */
-
-  .pullquote {
-
-    border-left: 5px solid var(--accent);
-
-    padding: 20px 28px;
-
-    margin: 40px 0;
-
-    background: rgba(200,64,26,0.05);
-
-  }
-
-  .pullquote p {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.25rem;
-
-    font-style: italic;
-
-    margin: 0;
-
-    color: var(--ink);
-
-  }
-
-
-
-  /* ─── KINETIC CHAIN DIAGRAM ─── */
-
-  .chain-diagram {
-
-    margin: 48px 0;
-
-    background: var(--ink);
-
-    border-radius: 4px;
-
-    padding: 40px 32px;
-
-    color: var(--paper);
-
-  }
-
-  .chain-diagram h3 { color: var(--gold); margin-top: 0; }
-
-  .chain-nodes {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 0;
-
-  }
-
-  .chain-node {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    padding: 12px 0;
-
-    position: relative;
-
-  }
-
-  .chain-node:not(:last-child)::after {
-
-    content: '';
-
-    position: absolute;
-
-    left: 19px;
-
-    top: 44px;
-
-    width: 2px;
-
-    height: 28px;
-
-    background: var(--accent);
-
-  }
-
-  .node-icon {
-
-    width: 40px; height: 40px;
-
-    border-radius: 50%;
-
-    background: var(--accent);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    flex-shrink: 0;
-
-    color: white;
-
-  }
-
-  .node-text strong {
-
-    display: block;
-
-    font-size: 15px;
-
-    color: var(--paper);
-
-    margin-bottom: 2px;
-
-  }
-
-  .node-text span {
-
-    font-size: 13px;
-
-    color: rgba(245,240,232,0.55);
-
-  }
-
-
-
-  /* ─── PHOTO ANALYSIS CARD ─── */
-
-  .analysis-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 24px;
-
-    margin: 40px 0;
-
-  }
-
-  @media (max-width: 640px) { .analysis-grid { grid-template-columns: 1fr; } }
-
-
-
-  .analysis-card {
-
-    border: 1.5px solid var(--divider);
-
-    border-radius: 4px;
-
-    overflow: hidden;
-
-    background: white;
-
-  }
-
-  .analysis-card img {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    object-position: top;
-
-    display: block;
-
-  }
-
-  .card-body { padding: 20px; }
-
-  .card-body .player-tag {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    margin-bottom: 6px;
-
-    display: block;
-
-  }
-
-  .card-body h4 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.1rem;
-
-    margin-bottom: 10px;
-
-    color: var(--ink);
-
-  }
-
-  .card-body p { font-size: 14px; margin-bottom: 0; color: #3a342e; }
-
-  .phase-badge {
-
-    display: inline-block;
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    background: var(--green);
-
-    color: white;
-
-    padding: 3px 10px;
-
-    border-radius: 2px;
-
-    margin-bottom: 10px;
-
-  }
-
-
-
-  /* ─── KNEE ANATOMY VISUAL ─── */
-
-  .anatomy-block {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin: 40px 0;
-
-  }
-
-  @media (max-width: 600px) { .anatomy-block { grid-template-columns: 1fr; } }
-
-
-
-  .anatomy-card {
-
-    padding: 28px;
-
-    border-radius: 4px;
-
-  }
-
-  .anatomy-card.safe {
-
-    background: rgba(26,107,60,0.08);
-
-    border: 1.5px solid rgba(26,107,60,0.3);
-
-  }
-
-  .anatomy-card.danger {
-
-    background: rgba(200,64,26,0.07);
-
-    border: 1.5px solid rgba(200,64,26,0.3);
-
-  }
-
-  .anatomy-card h4 {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 16px;
-
-  }
-
-  .safe h4 { color: var(--green); }
-
-  .danger h4 { color: var(--accent); }
-
-  .anatomy-card ul { list-style: none; padding: 0; }
-
-  .anatomy-card li {
-
-    font-size: 14px;
-
-    padding: 7px 0;
-
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-  }
-
-  .anatomy-card li:last-child { border-bottom: none; }
-
-  .safe li::before { content: '✓'; color: var(--green); font-weight: 700; }
-
-  .danger li::before { content: '✗'; color: var(--accent); font-weight: 700; }
-
-
-
-  /* ─── PLAYER COMPARISON ─── */
-
-  .comparison {
-
-    margin: 48px 0;
-
-  }
-
-  .comparison-header {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin-bottom: 0;
-
-  }
-
-  .player-header {
-
-    padding: 20px 24px;
-
-    color: white;
-
-  }
-
-  .player-header.nj { background: #1a1a2e; }
-
-  .player-header.rf { background: #2e1a1a; }
-
-  .player-header .name {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.4rem;
-
-    font-weight: 700;
-
-    margin-bottom: 4px;
-
-  }
-
-  .player-header .descriptor {
-
-    font-size: 12px;
-
-    font-style: italic;
-
-    opacity: 0.7;
-
-  }
-
-
-
-  .compare-row {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-  .compare-cell {
-
-    padding: 14px 24px;
-
-    font-size: 14px;
-
-    border-bottom: 1px solid var(--divider);
-
-  }
-
-  .compare-cell:first-child { background: rgba(26,26,46,0.04); }
-
-  .compare-cell:last-child { background: rgba(46,26,26,0.04); }
-
-  .compare-label {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    color: var(--muted);
-
-    grid-column: 1/-1;
-
-    padding: 10px 24px 4px;
-
-    background: var(--paper);
-
-    border-bottom: 1px solid var(--divider);
-
-    font-weight: 700;
-
-  }
-
-
-
-  /* ─── DRILL CARDS ─── */
-
-  .drills {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 20px;
-
-    margin: 36px 0;
-
-  }
-
-  .drill-card {
-
-    background: white;
-
-    border: 1.5px solid var(--divider);
-
-    border-top: 4px solid var(--gold);
-
-    padding: 24px;
-
-    border-radius: 0 0 4px 4px;
-
-  }
-
-  .drill-number {
-
-    font-family: 'Space Mono', monospace;
-
-    font-size: 28px;
-
-    font-weight: 700;
-
-    color: var(--gold);
-
-    opacity: 0.4;
-
-    margin-bottom: 8px;
-
-    display: block;
-
-  }
-
-  .drill-card h4 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.05rem;
-
-    margin-bottom: 8px;
-
-  }
-
-  .drill-card p { font-size: 13px; margin: 0; color: var(--muted); }
-
-
-
-  /* ─── SECTION DIVIDER ─── */
-
-  .section {
-
-    padding: 60px 0 40px;
-
-    border-top: 1px solid var(--divider);
-
-  }
-
-  .section:first-of-type { border-top: none; }
-
-
-
-  /* ─── WARNING BOX ─── */
-
-  .warning {
-
-    background: rgba(200,64,26,0.08);
-
-    border: 1.5px solid rgba(200,64,26,0.25);
-
-    padding: 24px 28px;
-
-    margin: 36px 0;
-
-    border-radius: 4px;
-
-  }
-
-  .warning strong { color: var(--accent); }
-
-  .warning p { margin: 0; font-size: 15px; }
-
-
-
-  /* ─── PRINCIPLE STRIP ─── */
-
-  .principle {
-
-    background: var(--green);
-
-    color: white;
-
-    padding: 36px 40px;
-
-    margin: 48px 0;
-
-  }
-
-  .principle p {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 1.4rem;
-
-    font-style: italic;
-
-    color: white;
-
-    margin: 0;
-
-    max-width: 640px;
-
-  }
-
-
-
-  /* ─── SENSATION LIST ─── */
-
-  .sensation-grid {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 24px;
-
-    margin: 32px 0;
-
-  }
-
-  @media (max-width: 560px) { .sensation-grid { grid-template-columns: 1fr; } }
-
-  .sensation-box { padding: 24px; border-radius: 4px; }
-
-  .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
-
-  .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
-
-  .sensation-box h4 {
-
-    font-family: 'Space Mono', monospace;
-
     font-size: 11px;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-
-    margin-bottom: 14px;
-
-  }
-
-  .feel h4 { color: var(--gold); }
-
-  .avoid h4 { color: var(--accent); }
-
-  .sensation-box li {
-
-    font-size: 14px;
-
-    margin-bottom: 8px;
-
-    padding-left: 20px;
-
-    position: relative;
-
-    list-style: none;
-
-  }
-
-  .feel li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 8px; top: 4px; }
-
-  .avoid li::before { content: '◆'; position: absolute; left: 0; color: var(--accent); font-size: 8px; top: 4px; }
-
-
-
-  /* ─── FOOTER ─── */
-
-  footer {
-
-    background: var(--ink);
-
-    color: white;
-
-    padding: 40px;
-
-    margin-top: 80px;
-
-    text-align: center;
-
-    font-size: 13px;
-
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+.crumbs a { color: var(--accent); text-decoration: none; }
+.masthead {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+}
+.brand-tag {
     font-family: 'Space Mono', monospace;
-
-    letter-spacing: 1px;
-
-  }
-
-
-
-  /* ─── DIAGRAM SVG AREA ─── */
-
-  .svg-diagram {
-
-    margin: 40px 0;
-
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: inline-block;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+.lead {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 700px;
+}
+.book-list { display: grid; gap: 16px; }
+.book-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px;
+    background: white;
+    border: 1.5px solid var(--divider);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    gap: 24px;
+}
+.book-card:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(200,64,26,0.1);
+}
+.book-card .body { flex: 1; }
+.book-card .book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.book-card .book-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+.book-card .cta {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+footer {
+    background: var(--ink);
+    color: white;
+    padding: 40px;
+    margin-top: 80px;
     text-align: center;
-
-  }
-
-  svg text { font-family: 'DM Sans', sans-serif; }
-
-
-
-  @media (max-width: 600px) {
-
-    .masthead { padding: 44px 24px 36px; }
-
-    .content-wrap { padding: 0 16px; }
-
-    .player-header .name { font-size: 1.1rem; }
-
-    .compare-cell { font-size: 13px; padding: 12px 16px; }
-
-    .compare-label { padding: 10px 16px 4px; }
-
-    .player-header { padding: 16px; }
-
-  }
-
-
-
-/* CSS from template will be injected */
-.book-group { margin-bottom: 48px; }
-.book-group-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--divider); }
-.book-group-title { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: var(--ink); margin: 0; }
-.book-group-count { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.book-group-lang { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; padding: 4px 10px; border-radius: 2px; }
-.book-group-lang.en { background: rgba(26,107,60,0.1); color: var(--green); border: 1px solid var(--green); }
-.book-group-lang.vi { background: rgba(200,64,26,0.1); color: var(--accent); border: 1px solid var(--accent); }
-.chapter-grid { display: grid; gap: 12px; margin-top: 16px; }
-@media (min-width: 640px) { .chapter-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .chapter-grid { grid-template-columns: repeat(3, 1fr); } }
-.chapter-card { background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 20px; transition: border-color 0.2s, box-shadow 0.2s; }
-.chapter-card:hover { border-color: var(--accent); box-shadow: 0 4px 12px rgba(200,64,26,0.1); }
-.chapter-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 8px; color: var(--ink); }
-.chapter-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider); }
-.chapter-card p { font-size: 13px; color: var(--muted); margin: 0 0 12px; line-height: 1.5; }
-.chapter-card .chapter-badge { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 1px; color: var(--accent); margin-bottom: 8px; display: inline-block; }
-.chapter-card .read-link { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
-.main-book-card { background: rgba(196,149,42,0.08); border: 1.5px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin-bottom: 16px; }
-.main-book-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
-.main-book-card h3 a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider); }
-.main-book-card p { font-size: 14px; color: var(--muted); margin: 0 0 12px; line-height: 1.6; }
-.main-book-card .read-link { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); }
-.section-header { margin-top: 60px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--divider); }
-.section-header:first-of-type { margin-top: 0; }
-.section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--ink); margin: 0; }
-.section-header .count { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
-.language-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; padding: 4px 12px; border-radius: 2px; margin-bottom: 16px; }
-.language-badge.en { background: rgba(26,107,60,0.1); color: var(--green); border: 1px solid var(--green); }
-.language-badge.vi { background: rgba(200,64,26,0.1); color: var(--accent); border: 1px solid var(--accent); }
-</style></head>
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+.cc-license {
+    font-size: 12px;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.cc-license a { color: var(--gold); }
+</style>
+</head>
 <body>
-<div class="masthead">
-<span class="tag">Tennis Future Lab</span>
-<h1>Cẩm Nang Tennis Thống Nhất</h1>
-<p class="subtitle">Thư viện toàn diện hơn 170 cuốn sách/cẩm nang tennis tiếng Việt và tiếng Anh</p>
-</div>
-<div class="content-wrap">
-<p class="lead">Tất cả tài liệu được chuyển đổi theo thiết kế thống nhất: masthead, lead, mục lục tự động, pullquote, warning box, data table, drill card, styled list, footer Creative Commons BY-NC-SA 4.0</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="section-header">
-<span class="language-badge vi">Sách Tiếng Việt</span>
-<h2>Sách Tiếng Việt (25 cuốn)</h2>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">ChatGPT Hướng Dẫn Kỹ Thuật Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html">ChatGPT Hướng Dẫn Kỹ Thuật Tennis</a></h3>
-<p>ChatGPT co-authored technical tennis guide.</p>
-<a class="read-link" href="ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cross-Training cho Vận Động Viên Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cross-Training_cho_Vận_Động_Viên_Tennis.html">Cross-Training cho Vận Động Viên Tennis</a></h3>
-<p>Cross-training for tennis athletes — 20 chapters, tích hợp giải phẫu, sinh lý, động học.</p>
-<a class="read-link" href="Cross-Training_cho_Vận_Động_Viên_Tennis.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cảm Nhận Cơ Thể Tennis</h3>
-<span class="book-group-count">20 chương + 0 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="chapter-card">
-<span class="chapter-badge">Chương 01</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_01.html">Cảm Nhận Cơ Thể Tennis - Chương 01</a></h3>
-<p>Chapter 01 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_01.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 02</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_02.html">Cảm Nhận Cơ Thể Tennis - Chương 02</a></h3>
-<p>Chapter 02 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_02.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 03</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_03.html">Cảm Nhận Cơ Thể Tennis - Chương 03</a></h3>
-<p>Chapter 03 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_03.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 04</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_04.html">Cảm Nhận Cơ Thể Tennis - Chương 04</a></h3>
-<p>Chapter 04 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_04.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 05</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_05.html">Cảm Nhận Cơ Thể Tennis - Chương 05</a></h3>
-<p>Chapter 05 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_05.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 06</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_06.html">Cảm Nhận Cơ Thể Tennis - Chương 06</a></h3>
-<p>Chapter 06 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_06.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 07</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_07.html">Cảm Nhận Cơ Thể Tennis - Chương 07</a></h3>
-<p>Chapter 07 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_07.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 08</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_08.html">Cảm Nhận Cơ Thể Tennis - Chương 08</a></h3>
-<p>Chapter 08 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_08.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 09</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_09.html">Cảm Nhận Cơ Thể Tennis - Chương 09</a></h3>
-<p>Chapter 09 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_09.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 10</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_10.html">Cảm Nhận Cơ Thể Tennis - Chương 10</a></h3>
-<p>Chapter 10 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_10.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 11</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_11.html">Cảm Nhận Cơ Thể Tennis - Chương 11</a></h3>
-<p>Chapter 11 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_11.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 12</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_12.html">Cảm Nhận Cơ Thể Tennis - Chương 12</a></h3>
-<p>Chapter 12 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_12.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 13</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_13.html">Cảm Nhận Cơ Thể Tennis - Chương 13</a></h3>
-<p>Chapter 13 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_13.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 14</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_14.html">Cảm Nhận Cơ Thể Tennis - Chương 14</a></h3>
-<p>Chapter 14 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_14.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 15</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_15.html">Cảm Nhận Cơ Thể Tennis - Chương 15</a></h3>
-<p>Chapter 15 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_15.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 16</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_16.html">Cảm Nhận Cơ Thể Tennis - Chương 16</a></h3>
-<p>Chapter 16 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_16.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 17</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_17.html">Cảm Nhận Cơ Thể Tennis - Chương 17</a></h3>
-<p>Chapter 17 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_17.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 18</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_18.html">Cảm Nhận Cơ Thể Tennis - Chương 18</a></h3>
-<p>Chapter 18 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_18.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 19</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_19.html">Cảm Nhận Cơ Thể Tennis - Chương 19</a></h3>
-<p>Chapter 19 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_19.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 20</span>
-<h3><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_20.html">Cảm Nhận Cơ Thể Tennis - Chương 20</a></h3>
-<p>Chapter 20 of Proprioception in Tennis.</p>
-<a class="read-link" href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_20.html">Đọc chương →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Kỹ Thuật Tennis Hiện Đại</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="CamNang_KyThuat_Tennis_HienDai.html">Cẩm Nang Kỹ Thuật Tennis Hiện Đại</a></h3>
-<p>Modern Tennis Technical Manual — 10 chapters, sinh học chuyển động, vật lý quả bóng, nhận thức thần kinh.</p>
-<a class="read-link" href="CamNang_KyThuat_Tennis_HienDai.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis 2026</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_2026.html">Cẩm Nang Tennis 2026</a></h3>
-<p>2026 tennis handbook.</p>
-<a class="read-link" href="Cam_Nang_Tennis_2026.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis 2026 Công Thức Đơn Giản</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_2026_CongThucDonGian.html">Cẩm Nang Tennis 2026 Công Thức Đơn Giản</a></h3>
-<p>2026 tennis handbook with simplified formulas.</p>
-<a class="read-link" href="Cam_Nang_Tennis_2026_CongThucDonGian.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis Cross-Training</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_Cross-Training.html">Cẩm Nang Tennis Cross-Training</a></h3>
-<p>Tennis cross-training với các môn khác — Thiền, Minh Triết, Aikido, Judo, Kendo, Fencing, Samurai. 20 chapters.</p>
-<a class="read-link" href="Cam_Nang_Tennis_Cross-Training.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis Hiện Đại 2026</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_Hien_Dai_2026.html">Cẩm Nang Tennis Hiện Đại 2026</a></h3>
-<p>Modern tennis handbook 2026.</p>
-<a class="read-link" href="Cam_Nang_Tennis_Hien_Dai_2026.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis Hiện Đại Full Formula 2026</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_Hien_Dai_Full_Formula_2026.html">Cẩm Nang Tennis Hiện Đại Full Formula 2026</a></h3>
-<p>Modern tennis handbook with full formulas 2026.</p>
-<a class="read-link" href="Cam_Nang_Tennis_Hien_Dai_Full_Formula_2026.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Tennis Hiện Đại Phong Cách Đạo Gia</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Tennis_Hien_Dai_Phong_Cach_Dao_Gia.html">Cẩm Nang Tennis Hiện Đại Phong Cách Đạo Gia</a></h3>
-<p>Modern tennis manual in Daoist style — Thuật Tu Tiên inspired.</p>
-<a class="read-link" href="Cam_Nang_Tennis_Hien_Dai_Phong_Cach_Dao_Gia.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Cẩm Nang Đào Tạo Tennis 50+</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Cam_Nang_Dao_Tao_Tennis_50_Plus.html">Cẩm Nang Đào Tạo Tennis 50+</a></h3>
-<p>5-year journey to rebuild biomechanics for 50+ players. Effortless Power — Sức Mạnh Không Tốn Sức.</p>
-<a class="read-link" href="Cam_Nang_Dao_Tao_Tennis_50_Plus.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">GOAT Tennis Giáo Trình Tiếng Việt</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="GOAT_Tennis_Giao_Trinh_Tieng_Viet.html">GOAT Tennis Giáo Trình Tiếng Việt</a></h3>
-<p>GOAT Tennis curriculum in Vietnamese.</p>
-<a class="read-link" href="GOAT_Tennis_Giao_Trinh_Tieng_Viet.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Giáo Trình Tennis 5 Năm by ChatGPT</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Giao_Trinh_Tennis_5_Nam_ChatGPT.html">Giáo Trình Tennis 5 Năm by ChatGPT</a></h3>
-<p>5-year tennis curriculum by ChatGPT.</p>
-<a class="read-link" href="Giao_Trinh_Tennis_5_Nam_ChatGPT.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Hướng Dẫn Quần Vợt Toàn Diện</h3>
-<span class="book-group-count">47 chương + 0 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="chapter-card">
-<span class="chapter-badge">Chương 01</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_01.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 01</a></h3>
-<p>Chapter 01 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_01.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 02</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_02.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 02</a></h3>
-<p>Chapter 02 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_02.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 03</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_03.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 03</a></h3>
-<p>Chapter 03 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_03.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 04</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_04.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 04</a></h3>
-<p>Chapter 04 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_04.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 05</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_05.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 05</a></h3>
-<p>Chapter 05 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_05.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 06</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_06.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 06</a></h3>
-<p>Chapter 06 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_06.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 07</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_07.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 07</a></h3>
-<p>Chapter 07 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_07.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 08</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_08.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 08</a></h3>
-<p>Chapter 08 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_08.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 09</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_09.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 09</a></h3>
-<p>Chapter 09 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_09.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 10</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_10.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 10</a></h3>
-<p>Chapter 10 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_10.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 11</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_11.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 11</a></h3>
-<p>Chapter 11 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_11.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 12</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_12.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 12</a></h3>
-<p>Chapter 12 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_12.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 13</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_13.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 13</a></h3>
-<p>Chapter 13 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_13.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 14</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_14.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 14</a></h3>
-<p>Chapter 14 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_14.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 15</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_15.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 15</a></h3>
-<p>Chapter 15 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_15.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 16</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_16.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 16</a></h3>
-<p>Chapter 16 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_16.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 17</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_17.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 17</a></h3>
-<p>Chapter 17 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_17.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 18</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_18.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 18</a></h3>
-<p>Chapter 18 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_18.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 19</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_19.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 19</a></h3>
-<p>Chapter 19 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_19.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 20</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_20.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 20</a></h3>
-<p>Chapter 20 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_20.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 21</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_21.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 21</a></h3>
-<p>Chapter 21 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_21.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 22</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_22.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 22</a></h3>
-<p>Chapter 22 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_22.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 23</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_23.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 23</a></h3>
-<p>Chapter 23 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_23.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 24</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_24.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 24</a></h3>
-<p>Chapter 24 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_24.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 25</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_25.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 25</a></h3>
-<p>Chapter 25 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_25.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 26</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_26.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 26</a></h3>
-<p>Chapter 26 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_26.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 27</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_27.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 27</a></h3>
-<p>Chapter 27 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_27.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 28</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_28.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 28</a></h3>
-<p>Chapter 28 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_28.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 29</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_29.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 29</a></h3>
-<p>Chapter 29 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_29.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 30</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_30.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 30</a></h3>
-<p>Chapter 30 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_30.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 31</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_31.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 31</a></h3>
-<p>Chapter 31 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_31.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 32</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_32.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 32</a></h3>
-<p>Chapter 32 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_32.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 33</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_33.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 33</a></h3>
-<p>Chapter 33 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_33.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 34</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_34.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 34</a></h3>
-<p>Chapter 34 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_34.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 35</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_35.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 35</a></h3>
-<p>Chapter 35 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_35.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 36</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_36.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 36</a></h3>
-<p>Chapter 36 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_36.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 37</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_37.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 37</a></h3>
-<p>Chapter 37 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_37.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 38</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_38.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 38</a></h3>
-<p>Chapter 38 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_38.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 39</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_39.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 39</a></h3>
-<p>Chapter 39 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_39.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 40</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_40.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 40</a></h3>
-<p>Chapter 40 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_40.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 41</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_41.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 41</a></h3>
-<p>Chapter 41 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_41.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 42</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_42.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 42</a></h3>
-<p>Chapter 42 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_42.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 43</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_43.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 43</a></h3>
-<p>Chapter 43 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_43.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 44</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_44.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 44</a></h3>
-<p>Chapter 44 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_44.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 45</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_45.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 45</a></h3>
-<p>Chapter 45 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_45.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 46</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_46.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 46</a></h3>
-<p>Chapter 46 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_46.html">Đọc chương →</a>
-</article>
-<article class="chapter-card">
-<span class="chapter-badge">Chương 47</span>
-<h3><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_47.html">Hướng Dẫn Quần Vợt Toàn Diện - Chương 47</a></h3>
-<p>Chapter 47 of Comprehensive Tennis Guide by Claude.</p>
-<a class="read-link" href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_47.html">Đọc chương →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Hướng Dẫn Thái Cực Quyền Vào Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Huong_Dan_Thai_Cuc_Quyen_Vao_Tennis.html">Hướng Dẫn Thái Cực Quyền Vào Tennis</a></h3>
-<p>Applying Tai Chi Chuan to Tennis — deep manuscript on kinetic chain, spiral engine, elastic power.</p>
-<a class="read-link" href="Huong_Dan_Thai_Cuc_Quyen_Vao_Tennis.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Hệ Trục 52: Vận Hành Không Tải &amp; Tái Tạo Năng Lượng</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="He_Truc_52_Van_Hanh_Khong_Tai.html">Hệ Trục 52: Vận Hành Không Tải &amp; Tái Tạo Năng Lượng</a></h3>
-<p>Framework for 52-year-old working tennis player — no-load operation &amp; energy regeneration.</p>
-<a class="read-link" href="He_Truc_52_Van_Hanh_Khong_Tai.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Khung Huấn Luyện Tennis Đỉnh Cao</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Khung_Huan_Luyen_Tennis_Dinh_Cao.html">Khung Huấn Luyện Tennis Đỉnh Cao</a></h3>
-<p>High-performance tennis training framework for international elite players.</p>
-<a class="read-link" href="Khung_Huan_Luyen_Tennis_Dinh_Cao.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Nghệ Thuật Tennis Đỉnh Cao</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Nghe_Thuat_Tennis_Dinh_Cao.html">Nghệ Thuật Tennis Đỉnh Cao</a></h3>
-<p>The Art of Elite Tennis — Comprehensive guide from international coach for elite athletes.</p>
-<a class="read-link" href="Nghe_Thuat_Tennis_Dinh_Cao.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Quản Lý Game Trong Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="tennis_game_management.html">Quản Lý Game Trong Tennis</a></h3>
-<p>Game Management in Tennis — 20 chapters, comprehensive strategic system for level 5.0.</p>
-<a class="read-link" href="tennis_game_management.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Tennis Sức Bền 20 Chương</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Tennis_Suc_Ben_20_Chuong.html">Tennis Sức Bền 20 Chương</a></h3>
-<p>20-chapter endurance/stamina manual.</p>
-<a class="read-link" href="Tennis_Suc_Ben_20_Chuong.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Tennis Đẳng Cấp Cao 20 Chương</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="TENNIS_DANG_CAP_CAO_20_Chuong.html">Tennis Đẳng Cấp Cao 20 Chương</a></h3>
-<p>High-level tennis 20 chapters for coaches &amp; pro athletes.</p>
-<a class="read-link" href="TENNIS_DANG_CAP_CAO_20_Chuong.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Thần Kinh Học Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="THAN_KINH_HOC_TENNIS_FULL.html">Thần Kinh Học Tennis</a></h3>
-<p>Quản Lý Nhận Thức, Thị Giác Và Thần Kinh Trong Thi Đấu Tennis Đỉnh Cao — cho VĐV và HLV cấp 5.0.</p>
-<a class="read-link" href="THAN_KINH_HOC_TENNIS_FULL.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Tuyển Tập Kỹ Thuật Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Tuyen_Tap_KyThuat_Tennis.html">Tuyển Tập Kỹ Thuật Tennis</a></h3>
-<p>Collected tennis techniques.</p>
-<a class="read-link" href="Tuyen_Tap_KyThuat_Tennis.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Vi Nhận Thức Cơ Thể Tennis 20 Chương</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html">Vi Nhận Thức Cơ Thể Tennis 20 Chương</a></h3>
-<p>Proprioception — Nền Tảng Ẩn Của Tennis Đỉnh Cao — 20 chapters, 400 pages.</p>
-<a class="read-link" href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-<div class="book-group">
-<div class="book-group-header">
-<span class="book-group-lang vi">VI</span>
-<h3 class="book-group-title">Động Lực Học Không Gian Trong Tennis</h3>
-<span class="book-group-count">0 chương + 1 file chính</span>
-</div>
-<div class="chapter-grid">
-<article class="main-book-card">
-<h3><a href="Dong_Luc_Hoc_Khong_Gian_Tennis.html">Động Lực Học Không Gian Trong Tennis</a></h3>
-<p>Dynamics of spatial movement in tennis.</p>
-<a class="read-link" href="Dong_Luc_Hoc_Khong_Gian_Tennis.html">Đọc ngay →</a>
-</article>
-</div>
-</div>
-</div>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
-    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" style="color: white;" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
-</body></html>
+<div class="container">
+    <div class="crumbs">
+        <a href="../">← Tennis Future Lab</a> / <a href="./">Handbooks</a>
+    </div>
+    <div class="masthead">
+        <span class="brand-tag">Tennis Future Lab · English Library</span>
+        <h1>Cẩm Nang Tennis — Thư Viện Tiếng Việt</h1>
+        <p class="lead">Bộ sưu tập cẩm nang tennis tiếng Việt toàn diện. Nhấp vào bất kỳ cuốn sách nào để xem mục lục đầy đủ.</p>
+    </div>
+    <div class="book-list">
+        <a href="./Cam_Nang_Cam_Nhan_Co_The_Tennis/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cảm Nhận Cơ Thể Tennis</div>
+                <div class="book-desc">20 chương — proprioception và nhận thức cơ thể trong tennis.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Huong_Dan_Quan_Vot_Toan_Dien/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Hướng Dẫn Quần Vợt Toàn Diện</div>
+                <div class="book-desc">29 chương — cẩm nang quần vợt toàn diện từ cơ bản đến nâng cao.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Huong_Dan_Quan_Vot_Toan_Dien_Claude/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Hướng Dẫn Quần Vợt Toàn Diện (Claude)</div>
+                <div class="book-desc">47 chương — phiên bản mở rộng đồng tác giả với Claude.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Advanced_Tennis_Training_Manual/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Advanced Tennis Training Manual (VI)</div>
+                <div class="book-desc">11 chương — bản tiếng Việt của Advanced Training Manual.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./The_Art_of_Modern_Tennis_Complete/index.html" class="book-card">
+            <div class="body">
+                <div class="book-title">The Art of Modern Tennis Complete (VI)</div>
+                <div class="book-desc">12 chương — bản tiếng Việt tổng hợp Martial + Agentic.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Advanced_Neuro-Biomechanical_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Advanced Neuro-biomechanical Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cam_Nang_Tennis_2026.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cam Nang Tennis 2026</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cam_Nang_Tennis_2026_CongThucDonGian.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cam Nang Tennis 2026 Congthucdongian</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cam_Nang_Tennis_Hien_Dai_2026.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cam Nang Tennis Hien Dai 2026</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cam_Nang_Tennis_Hien_Dai_Full_Formula_2026.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cam Nang Tennis Hien Dai Full Formula 2026</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cross-Training_cho_Vận_Động_Viên_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cross-training Cho Vận Động Viên Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cẩm_Nang_Kỹ_Thuật_Tennis_Hiện_Đại.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cẩm Nang Kỹ Thuật Tennis Hiện Đại</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cẩm_Nang_Tennis_Cross-Training.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cẩm Nang Tennis Cross-training</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cẩm_Nang_Tennis_Hiện_Đại_Phong_Cách_Đạo_Gia.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cẩm Nang Tennis Hiện Đại Phong Cách Đạo Gia</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Cẩm_Nang_Đào_Tạo_Tennis_50.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Cẩm Nang Đào Tạo Tennis 50</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Goat Tennis Giao Trinh Tieng Viet</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Hướng_Dẫn_Thái_Cực_Quyền_Vào_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Hướng Dẫn Thái Cực Quyền Vào Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Hệ_Trục_52_Vận_Hành_Không_Tải.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Hệ Trục 52 Vận Hành Không Tải</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Khung_Huấn_Luyện_Tennis_Đỉnh_Cao.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Khung Huấn Luyện Tennis Đỉnh Cao</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Nghe_Thuat_Tennis_Dinh_Cao.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Nghe Thuat Tennis Dinh Cao</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Nghệ_Thuật_Tennis_Đỉnh_Cao.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Nghệ Thuật Tennis Đỉnh Cao</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Quản_Lý_Game_Trong_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Quản Lý Game Trong Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tennis_Biomechanics_50_Complete.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Biomechanics 50 Complete</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tennis_Handbook_2026_Vietnamese.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Handbook 2026 Vietnamese</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tennis_Mastery.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Mastery</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tennis_Suc_Ben_20_Chuong.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Suc Ben 20 Chuong</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./TENNIS_TRAINING_MANUAL_Professional.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Training Manual Professional</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tennis_Đẳng_Cấp_Cao_20_Chương.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tennis Đẳng Cấp Cao 20 Chương</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Thần_Kinh_Học_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Thần Kinh Học Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tuyen_Tap_KyThuat_Tennis.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tuyen Tap Kythuat Tennis</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Tóm_tắt_Giáo_trình_Tennis_5_Năm_50.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Tóm Tắt Giáo Trình Tennis 5 Năm 50</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Vi Nhan Thuc Co The Tennis 20 Chuong</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+        <a href="./Vi_Nhận_Thức_Cơ_Thể_Tennis_20_Chương.html" class="book-card">
+            <div class="body">
+                <div class="book-title">Vi Nhận Thức Cơ Thể Tennis 20 Chương</div>
+                <div class="book-desc">Sách độc lập — toàn bộ nội dung trong một file.</div>
+            </div>
+            <span class="cta">Đọc ngay →</span>
+        </a>
+    </div>
+</div>
+<footer>Tennis Future Lab · Tennis Knowledge Base · 2026</footer>
+<div class="cc-license">
+<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</div>
+</body>
+</html>
