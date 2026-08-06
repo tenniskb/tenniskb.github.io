@@ -1,272 +1,200 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Future Lab - Tennis Knowledge Base</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennis Knowledge Base</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900&display=swap" rel="stylesheet">
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-        --ink: #0d0d0d;
-        --paper: #f5f0e8;
-        --accent: #c8401a;
-        --green: #1a6b3c;
-        --gold: #c4952a;
-        --muted: #6b6255;
-        --divider: #d4cbbf;
-    }
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-    body {
-        background: var(--paper);
-        color: var(--ink);
-        font-family: 'DM Sans', sans-serif;
-        font-size: 17px;
-        line-height: 1.75;
-    }
-    .hero {
-        text-align: center;
-        padding: 100px 24px 80px;
-        background: linear-gradient(180deg, var(--paper) 0%, #faf5ec 100%);
-    }
-    .hero .brand-tag {
-        display: inline-block;
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        color: var(--accent);
-        margin-bottom: 20px;
-    }
-    .hero h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        line-height: 1.1;
-        max-width: 800px;
-        margin: 0 auto 24px;
-        color: var(--ink);
-    }
-    .hero .subtitle {
-        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-        color: var(--muted);
-        max-width: 700px;
-        margin: 0 auto 48px;
-        font-weight: 300;
-    }
-    .lang-cards {
-        display: flex;
-        justify-content: center;
-        gap: 32px;
-        max-width: 900px;
-        margin: 0 auto 80px;
-        flex-wrap: wrap;
-    }
-    .lang-card {
-        flex: 1;
-        min-width: 300px;
-        max-width: 420px;
-        background: white;
-        border: 1.5px solid var(--divider);
-        border-radius: 4px;
-        padding: 40px 32px;
-        text-decoration: none;
-        color: inherit;
-        transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-    }
-    .lang-card:hover {
-        border-color: var(--accent);
-        box-shadow: 0 8px 24px rgba(200,64,26,0.15);
-        transform: translateY(-4px);
-    }
-    .lang-card .flag {
-        font-size: 48px;
-        display: block;
-        margin-bottom: 16px;
-    }
-    .lang-card h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
-        margin-bottom: 16px;
-        color: var(--ink);
-    }
-    .lang-card p {
-        font-size: 16px;
-        color: var(--muted);
-        margin-bottom: 24px;
-        line-height: 1.7;
-    }
-    .lang-card .btn {
-        display: inline-block;
-        font-family: 'Space Mono', monospace;
-        font-size: 12px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 14px 28px;
-        border-radius: 2px;
-        text-decoration: none;
-        font-weight: 700;
-    }
-    .lang-card.en .btn {
-        background: var(--accent);
-        color: white;
-        border: 2px solid var(--accent);
-    }
-    .lang-card.en .btn:hover {
-        background: var(--ink);
-        border-color: var(--ink);
-    }
-    .lang-card.vi .btn {
-        background: var(--green);
-        color: white;
-        border: 2px solid var(--green);
-    }
-    .lang-card.vi .btn:hover {
-        background: var(--ink);
-        border-color: var(--ink);
-    }
-    .intro-section {
-        max-width: 900px;
-        margin: 0 auto 100px;
-        padding: 0 24px;
-    }
-    .intro-block {
-        margin-bottom: 60px;
-        padding: 40px;
-        background: rgba(196,149,42,0.05);
-        border: 1px solid rgba(196,149,42,0.2);
-        border-radius: 4px;
-    }
-    .intro-block h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        color: var(--ink);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
-    .intro-block h3 .label {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--accent);
-        background: rgba(200,64,26,0.1);
-        padding: 4px 12px;
-        border-radius: 2px;
-    }
-    .intro-block p {
-        font-size: 18px;
-        line-height: 1.85;
-        color: #2a2520;
-        margin: 0;
-        text-align: justify;
-    }
-    .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 24px;
-        margin: 60px 0;
-        padding: 0 24px;
-    }
-    .stat {
-        text-align: center;
-        padding: 32px 24px;
-        background: white;
-        border: 1.5px solid var(--divider);
-        border-radius: 4px;
-    }
-    .stat .num {
-        font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--accent);
-        line-height: 1;
-        margin-bottom: 8px;
-    }
-    .stat .lbl {
-        font-family: 'Space Mono', monospace;
-        font-size: 11px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--muted);
-    }
-    footer {
-        background: var(--ink);
-        color: white;
-        padding: 40px;
-        margin-top: 80px;
-        text-align: center;
-        font-size: 13px;
-        font-family: 'Space Mono', monospace;
-        letter-spacing: 1px;
-    }
-    .cc-license {
-        color: white;
-        font-size: 0.88em;
-        border-top: 1px solid #e5e7eb;
-        margin-top: 32px;
-        padding-top: 14px;
-    }
-    .cc-license a { color: var(--gold); }
-    @media (max-width: 640px) {
-        .hero { padding: 60px 16px 40px; }
-        .lang-cards { flex-direction: column; align-items: center; }
-        .intro-block { padding: 24px; }
-    }
-</style></head>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --ink: #0d0d0d;
+    --paper: #fafaf7;
+    --accent: #c8401a;
+    --green: #1a6b3c;
+    --gold: #c4952a;
+    --muted: #6b7280;
+    --divider: #e5e7eb;
+}
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--ink);
+}
+h1 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 16px; }
+h2 { font-size: 1.5rem; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
+h3 { font-size: 1.2rem; margin: 24px 0 8px; }
+p { margin-bottom: 16px; }
+.lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 32px; }
+hr { border: none; border-top: 1px solid var(--divider); margin: 32px 0; }
+.lang-cards {
+    display: flex;
+    gap: 24px;
+    margin: 48px 0;
+    flex-wrap: wrap;
+}
+.lang-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 32px;
+    background: white;
+    border: 1.5px solid var(--divider);
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+}
+.lang-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+.lang-card .flag { font-size: 32px; margin-bottom: 12px; display: block; }
+.lang-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.lang-card p { font-size: 14px; color: var(--muted); margin: 0; }
+.site-structure { margin-top: 48px; }
+.site-structure ul { list-style: none; padding: 0; }
+.site-structure li {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: white;
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+}
+.site-structure strong { color: var(--ink); }
+.site-structure a { color: var(--accent); text-decoration: none; }
+.site-structure a:hover { text-decoration: underline; }
+.about { margin-top: 48px; padding-top: 24px; border-top: 2px solid var(--ink); }
+footer {
+    margin-top: 80px;
+    padding: 32px;
+    background: var(--ink);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+}
+</style>
+</head>
 <body>
-<div class="hero">
-    <span class="brand-tag">Tennis Future Lab</span>
-    <h1>Tennis Knowledge Base</h1>
-    <p class="subtitle">Bilingual tennis resource for players and coaches — systematic, scientific, practical</p>
+<div class="container">
+    <h1>Welcome to Tennis Knowledge Base</h1>
+    <p class="lead">This is a bilingual tennis resource — English and Vietnamese — built from the ground up for players who want more than just tips and drills. Here you'll find the <strong>why</strong> behind the techniques, the <strong>neural control theory</strong> that explains how movement actually works, and the <strong>principles</strong> that transfer across strokes.</p>
+
+    <hr>
+
+    <h1>Chào Mừng Đến Cơ Sở Kiến Thức Tennis</h1>
+    <p class="lead">Đây là nguồn tài liệu tennis song ngữ — Tiếng Anh và Tiếng Việt — được xây dựng từ đầu dành cho những người chơi muốn tìm hiểu sâu hơn những mẹo nhỏ và bài tập rời rạc. Tại đây bạn sẽ tìm thấy <strong>lý do tại sao</strong> đằng sau các kỹ thuật, <strong>lý thuyết điều khiển thần kinh</strong> giải thích cách chuyển động thực sự hoạt động, và <strong>các nguyên lý</strong> có thể áp dụng xuyên suốt mọi cú đánh.</p>
+
+    <hr>
+
+    <h2>Choose Your Language / Chọn Ngôn Ngữ</h2>
+    <div class="lang-cards">
+        <a href="file:///C:/Users/Henry/Documents/Github%20Repos/tenniskb.github.io/en/index.html" class="lang-card">
+            <span class="flag">🇬🇧</span>
+            <h3>English</h3>
+            <p>Start here for English content</p>
+        </a>
+        <a href="file:///C:/Users/Henry/Documents/Github%20Repos/tenniskb.github.io/vi/index.html" class="lang-card">
+            <span class="flag">🇻🇳</span>
+            <h3>Tiếng Việt</h3>
+            <p>Bắt đầu ở đây cho nội dung tiếng Việt</p>
+        </a>
+    </div>
+
+    <hr>
+
+    <h2>How to Use This Site</h2>
+    <p><strong>Everything is reachable in 3 clicks or less:</strong></p>
+    <ol>
+        <li>Click your language → English or Vietnamese</li>
+        <li>Choose your section → Foundation, Advanced, Elite, Science Lab, Players, System, or Handbook</li>
+        <li>Pick a topic → Drills, deep dives, or specific techniques</li>
+    </ol>
+    <p>No dead ends. No mysterious folders. Just clear paths to what you need.</p>
+
+    <hr>
+
+    <h2>Cách Sử Dụng Trang Web</h2>
+    <p><strong>Mọi thứ đều trong tầm 3 nhấp chuột:</strong></p>
+    <ol>
+        <li>Chọn ngôn ngữ → Tiếng Anh hoặc Tiếng Việt</li>
+        <li>Chọn mục → Cơ Bản, Nâng Cao, Cao Cấp, Khoa Học, Cầu Thủ, Hệ Thống, hoặc Sổ Tay</li>
+        <li>Chọn chủ đề → Bài tập, phân tích sâu, hoặc kỹ thuật cụ thể</li>
+    </ol>
+    <p>Không có ngõ cụt. Không có thư mục bí ẩn. Chỉ có đường thẳng đến thứ bạn cần.</p>
+
+    <hr>
+
+    <h2>Site Structure</h2>
+    <div class="site-structure">
+        <ul>
+            <li><strong><a href="https://tnkb.github.io/tnkb/foundation/basics/" target="_blank" rel="noopener">Foundation</a></strong> — strokes, grips, footwork, doubles patterns, and the core coaching guides.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/advanced/basics/" target="_blank" rel="noopener">Advanced</a></strong> — tactical patterns, scouting, in-match adaptation, and the neurological/biomechanical deep-dives underneath advanced play.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/elite/basics/" target="_blank" rel="noopener">Elite</a></strong> — for players who've outgrown copying pro technique and are building a personalized system.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/science-lab/" target="_blank" rel="noopener">Science Lab</a></strong> — anatomy and joint-by-joint biomechanics, independent of playing level.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/players/" target="_blank" rel="noopener">Players and System</a></strong> — supporting reference sections.</li>
+            <li><strong><a href="https://tenniskb.github.io/tenniskb/" target="_blank" rel="noopener">The Q-V-ROOT-8-45-Impulse-Jin System</a></strong> — The complete biomechanical framework for consistent, powerful tennis.</li>
+            <li><strong><a href="https://tenniskb.github.io/tenniskb/en/chapter/" target="_blank" rel="noopener">United Tennis Handbook</a></strong> — a complete 30-chapter unified system (Q-V-ROOT-8-45-Impulse-Jin) connecting grip, footwork, vision, and biomechanics into one working model, from first principles to match play.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Cấu Trúc Trang Web</h2>
+    <div class="site-structure">
+        <ul>
+            <li><strong><a href="https://tnkb.github.io/tnkb/vi/foundation/basics/" target="_blank" rel="noopener">Cơ Bản</a></strong> — cú đánh, tay cầm, di chuyển, mẫu hình đôi, và các hướng dẫn cốt lõi.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/vi/advanced/basics/" target="_blank" rel="noopener">Nâng Cao</a></strong> — mẫu hình chiến thuật, thám đối thủ, thích ứng trong trận, và các phân tích sâu về thần kinh/cơ học bên dưới trình độ cao.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/vi/elite/basics/" target="_blank" rel="noopener">Cao Cấp</a></strong> — cho những cầu thủ đã vượt qua việc mô phỏng kỹ thuật pro và đang xây dựng hệ thống cá nhân hóa.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/vi/science-lab/" target="_blank" rel="noopener">Khoa Học</a></strong> — giải phẫu và cơ học khớp theo khớp, độc lập với trình độ chơi.</li>
+            <li><strong><a href="https://tnkb.github.io/tnkb/vi/players/" target="_blank" rel="noopener">Tay Vợt và Hệ Thống</a></strong> — các phần tham khảo hỗ trợ.</li>
+            <li><strong><a href="https://tenniskb.github.io/tenniskb/vi/" target="_blank" rel="noopener">Hệ Thống Q-V-ROOT-8-45-Impulse-Kình</a></strong> — Khung sinh cơ học đầy đủ cho quần vợt nhất quán và mạnh mẽ.</li>
+            <li><strong><a href="https://tenniskb.github.io/tenniskb/vi/chuong/" target="_blank" rel="noopener">Sổ Tay Tennis Thống Nhất</a></strong> — hệ thống 30 chương hoàn chỉnh (Q-V-ROOT-8-45-Impulse-Kình) kết nối tay cầm, di chuyển, tầm nhìn, và cơ học sinh học thành một mô hình thống nhất, từ nguyên lý đầu tiên đến thi đấu thực tế.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="about">
+        <h2>About This Site</h2>
+        <p>This knowledge base grew out of my need for a systematic and in-depth knowledge instead of haphazard tennis tips. Most coaching tells you <em>what</em> to do — "get under the ball," "hit through it," "use your legs" — but never explains <em>why</em> or <em>how</em> your nervous system actually learns these patterns.</p>
+        <p>Everything here is grounded in:</p>
+        <ul>
+            <li><strong>Authoritative coaching materials</strong> — coming from text books and research.</li>
+            <li><strong>Bilingual by design</strong> — not translated, but written natively in both languages.</li>
+            <li><strong>Neural control theory</strong> — understanding movement as the brain learns it.</li>
+            <li><strong>Practical application</strong> — drills and progressions you can use today.</li>
+        </ul>
+        <p><em>For educational purposes only. Not a substitute for professional coaching.</em></p>
+
+        <hr>
+
+        <h2>Về Trang Web Này</h2>
+        <p>Kho tri thức này xuất phát từ nhu cầu học có hệ thống và chuyên sâu về tennis của tôi. Hầu hết huấn luyện chỉ nói <em>cái gì</em> cần làm — "đi dưới bóng," "đánh xuyên qua nó," "dùng chân" — nhưng không bao giờ giải thích <em>tại sao</em> hay <em>cách</em> hệ thần kinh của bạn thực sự học được các mẫu hình này.</p>
+        <p>Mọi thứ ở đây đều dựa trên:</p>
+        <ul>
+            <li><strong>Tài liệu huấn luyện uy tín</strong> — từ các sách giáo khoa và tài liệu nghiên cứu về tennis.</li>
+            <li><strong>Song ngữ theo thiết kế</strong> — không phải dịch máy, mà viết bằng ngôn ngữ của con người.</li>
+            <li><strong>Lý thuyết điều khiển thần kinh</strong> — hiểu chuyển động như cách não bộ làm việc.</li>
+            <li><strong>Ứng dụng thực tiễn</strong> — bài tập và lộ trình tiến bộ bạn có thể dùng ngay hôm nay.</li>
+        </ul>
+        <p><em>Chỉ dành cho mục đích giáo dục. Không thay thế cho huấn luyện chuyên nghiệp.</em></p>
+    </div>
+
+    <footer>
+        © 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.
+    </footer>
 </div>
-
-<div class="lang-cards">
-    <a href="file:///C:/Users/Henry/Documents/Github%20Repos/tenniskb.github.io/en/index.html" class="lang-card en">
-        <span class="flag">🇬🇧</span>
-        <h2>English</h2>
-        <p>Complete tennis library in English — 80+ handbooks, manuals, and research papers covering biomechanics, neuroscience, tactics, and mental game. From foundation to elite level.</p>
-        <span class="btn">Explore English Library →</span>
-    </a>
-    <a href="file:///C:/Users/Henry/Documents/Github%20Repos/tenniskb.github.io/vi/index.html" class="lang-card vi">
-        <span class="flag">🇻🇳</span>
-        <h2>Tiếng Việt</h2>
-        <p>Thư viện tennis toàn diện tiếng Việt — 90+ cẩm nang, sách hướng dẫn, và nghiên cứu chuyên sâu về cơ sinh học, thần kinh học, chiến thuật, và game tâm lý.</p>
-        <span class="btn">Khám phá Cẩm Nang →</span>
-    </a>
-</div>
-
-<div class="stats">
-    <div class="stat">
-        <div class="num">170+</div>
-        <div class="lbl">Books & Manuals</div>
-    </div>
-    <div class="stat">
-        <div class="num">2</div>
-        <div class="lbl">Languages</div>
-    </div>
-    <div class="stat">
-        <div class="num">73</div>
-        <div class="lbl">Book Groups</div>
-    </div>
-    <div class="stat">
-        <div class="num">20+</div>
-        <div class="lbl">Years Research</div>
-    </div>
-</div>
-
-<div class="intro-section">
-    <div class="intro-block">
-        <h3><span class="label">EN</span> English Introduction</h3>
-        <p>Tennis is undergoing a quiet revolution. Today's elite players — Djokovic, Alcaraz, Sinner, Swiatek — don't just hit harder; they play smarter. Sports biomechanics, neuroscience, and data analytics have transformed tennis from a feel-based sport into a measurable, optimizable, and teachable system. This shift isn't just for pros; recreational players benefit from understanding the mechanics behind every shot. However, most tennis resources remain fragmented: one book on grip, one video on footwork, one article on tactics. Few present tennis as a unified system — where grip determines swing path, swing path determines contact point, contact point determines ball flight, and it all starts from how you plant your feet. The Tennis Future Lab library exists to fill this gap. It is the most comprehensive tennis knowledge base available, built on the Martial-Agentic framework: Martial (body) — biomechanically precise technique following physics and physiology; Agentic (mind) — tactical thinking, opponent reading, in-match self-adjustment. These are inseparable: a perfect shot requires both a correctly built body and a clear mind. The library holds 170+ books/manuals including The Art of Modern Tennis, The Neuro-Motor Manual of Tennis Mastery, Modern Tennis Volley Handbook 2026, and dozens of specialized manuals on serve, forehand, backhand, footwork, tactics, and mental game.</p>
-    </div>
-
-    <div class="intro-block">
-        <h3><span class="label">VI</span> Giới Thiệu Tiếng Việt</h3>
-        <p>Tennis đang trải qua một cuộc cách mạng tĩnh lặng. Các tay vợt hàng đầu ngày nay — Djokovic, Alcaraz, Sinner, Swiatek — không chỉ đánh mạnh hơn, họ chơi thông minh hơn. Khoa học vận động học, thần kinh học và công nghệ phân tích dữ liệu đã biến tennis từ một môn thể thao dựa trên cảm tính thành một hệ thống có thể đo lường, tối ưu và dạy lại được. Xu hướng này không chỉ dành cho chuyên nghiệp; người chơi giải trí cũng đang hưởng lợi từ việc hiểu rõ cơ chế đằng sau từng cú đánh. Tuy nhiên, phần lớn tài liệu tennis hiện nay vẫn phân mảnh: một sách dạy grip, một video dạy footwork, một bài viết về tactic. Rất ít nơi trình bày tennis như một hệ thống thống nhất — nơi grip quyết định swing path, swing path quyết định contact point, contact point quyết định ball flight, và tất cả bắt đầu từ cách bạn đặt chân lên mặt sân. Cẩm nang Tennis Future Lab ra đời để lấp đầy khoảng trống này. Đây là thư viện tài liệu toàn diện nhất tiếng Việt về tennis hiện đại, được biên soạn theo tư duy Martial-Agentic: Martial (thân pháp) — kỹ thuật cơ sinh học chính xác, tuân theo quy luật vật lý và sinh học; Agentic (tâm pháp) — tư duy chiến thuật, nhận thức đối thủ, tự điều chỉnh trong trận đấu. Hai khía cạnh này không tách rời: một cú đánh hoàn hảo cần cả cơ thể đúng chuẩn và tâm trí sáng suốt. Thư viện hiện có hơn 100 cuốn sách/cẩm nang đã được chuyển đổi sang HTML chuyên nghiệp, bao gồm The Art of Modern Tennis, The Neuro-Motor Manual of Tennis Mastery, Modern Tennis Volley Handbook 2026, Tennis Training Manual, Advanced Neuro-Biomechanical Tennis, Cẩm Nang Đào Tạo Tennis 50+, và hàng chục cẩm nang chuyên môn khác.</p>
-    </div>
-</div>
-
-<footer>
-    Tennis Future Lab · Tennis Knowledge Base · 2026
-</footer>
-<footer class="cc-license">
-    <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
-</body></html>
+</body>
+</html>
