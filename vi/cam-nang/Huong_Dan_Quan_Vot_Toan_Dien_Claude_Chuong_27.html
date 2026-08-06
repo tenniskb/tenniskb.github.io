@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 27 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 27</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,496 +896,476 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 27</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 27</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 27</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">Chương 27: Biến Kỹ Thuật Thành Chiến Thắng</h2><hr>
-> <em>"Tennis là môn thể thao của angles. Ai kiểm soát geometry, người đó kiểm soát trận đấu."</em>
-<p>> — Martina Navratilova</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 27 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#singles-tactics-nâng-cao--court-geometry-angle-creation-và-point-construction' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>SINGLES TACTICS NÂNG CAO — COURT GEOMETRY, ANGLE CREATION, VÀ POINT CONSTRUCTION</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-27-biến-kỹ-thuật-thành-chiến-thắng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 27: Biến Kỹ Thuật Thành Chiến Thắng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#271-hiểu-court-geometry--nền-tảng-của-tactics' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.1 Hiểu Court Geometry — Nền Tảng Của Tactics</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#272-angle-creation--the-primary-weapon' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.2 Angle Creation — The Primary Weapon</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#273-the-t-zone-attack' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.3 The T-Zone Attack</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#274-controlling-the-net-level-advantage' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.4 Controlling The Net Level Advantage</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#275-the-serve-plus-one-system' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.5 The Serve-Plus-One System</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#276-the-return-plus-one-system' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.6 The Return-Plus-One System</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#277-high-percentage-tennis--math-matters' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.7 High-Percentage Tennis — Math Matters</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#278-defensive-tactics--converting-defense-to-offense' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.8 Defensive Tactics — Converting Defense To Offense</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#279-winning-and-losing-points--learn-the-difference' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.9 Winning And Losing Points — Learn The Difference</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2710-point-construction-by-situation' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.10 Point Construction By Situation</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2711-eight-week-tactical-development-program' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.11 Eight-Week Tactical Development Program</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2712-năm-lỗi-singles-tactics-phổ-biến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>27.12 Năm Lỗi Singles Tactics Phổ Biến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-27' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 27</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="singles-tactics-nang-cao-court-geometry-angle-creation-va-point-construction">SINGLES TACTICS NÂNG CAO — COURT GEOMETRY, ANGLE CREATION, VÀ POINT CONSTRUCTION</h1>
+<h2 id="chuong-27-bien-ky-thuat-thanh-chien-thang">Chương 27: Biến Kỹ Thuật Thành Chiến Thắng</h2>
+<hr/>
+<div class="pullquote"><p>*"Tennis là môn thể thao của angles. Ai kiểm soát geometry, người đó kiểm soát trận đấu."*
+&gt; — Martina Navratilova</p></div>
+<hr/>
 <p>Roland Garros 2022. Rafael Nadal vs. Novak Djokovic. Quarterfinal.</p>
 <p>Nadal win 6-2, 4-6, 6-2, 7-6.</p>
 <p>Xem lại trận này, điều đáng chú ý nhất không phải là pace hay spin. Đó là geometry.</p>
 <p>Nadal liên tục serve wide sang ad court, buộc Djokovic chạy sang trái, sau đó Nadal tấn công crosscourt sắc vào góc deuce đang mở. Djokovic chạy ngược lại sang phải — và Nadal lại tấn công vào angle khác.</p>
 <p>Đây không phải brute force. Đây là systematic angle creation — từng ball một, từng pattern một — buộc Djokovic phải cover nhiều court hơn anh ta có thể.</p>
 <p>Đây là chapter về court geometry và how to USE it to win points.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.1 Hiểu Court Geometry — Nền Tảng Của Tactics</h2><h3>The Basic Numbers</h3>
+<hr/>
+<h2 id="271-hieu-court-geometry-nen-tang-cua-tactics">27.1 Hiểu Court Geometry — Nền Tảng Của Tactics</h2>
+<h3 id="the-basic-numbers">The Basic Numbers</h3>
 <p>Tennis court là 23.77m × 8.23m (singles).</p>
 <p>Nhưng court mà bạn thực sự phải cover trong rally KHÔNG phải 8.23m width. Vì angles.</p>
-<strong>When opponent is at center baseline:</strong>
-<ul class="styled-list">
-<li>Widest crosscourt angle they can hit = approximately 9-10m wide at opponent's baseline</li>
-<li>Effective court width you must cover = larger than physical court</li>
-</ul>
-<strong>When opponent is pulled wide:</strong>
-<ul class="styled-list">
-<li>Their crosscourt angle opens dramatically</li>
-<li>They can hit ball that lands 11-12m from center = you're running off court</li>
-</ul>
-<strong>Key insight:</strong> Every ball you hit OPENS certain angles and CLOSES others. Understanding which opens which is the foundation of tactical tennis.
-<h3>The Three Zones Of The Court</h3>
-<strong>Zone 1 — Danger Zone (opponent's perspective):</strong>
-<p>Deep in either corner, behind baseline.</p>
-<p>From here:</p>
-<ul class="styled-list">
-<li>Hard to create angles</li>
-<li>Must generate pace yourself</li>
-<li>Defensive position</li>
-</ul>
-<strong>Zone 2 — Neutral Zone:</strong>
-<p>Center baseline area, inside baseline.</p>
-<p>From here:</p>
-<ul class="styled-list">
-<li>Can build points</li>
-<li>Some angles available</li>
-<li>Transitional position</li>
-</ul>
-<strong>Zone 3 — Attack Zone:</strong>
-<p>Inside service line, mid-court area.</p>
-<p>From here:</p>
-<ul class="styled-list">
-<li>Full angles available</li>
-<li>Can attack sharp</li>
-<li>Finishing position</li>
-</ul>
-<strong>Tactical objective:</strong> Move opponent from Zone 3 → Zone 1 while you move from Zone 1 → Zone 3.
-<h3>The Golden Rule Of Tennis Geometry</h3>
-<strong>Every shot moves opponent → their next shot tells you where to go → your next shot moves them again.</strong>
+<p><strong>When opponent is at center baseline:</strong>
+- Widest crosscourt angle they can hit = approximately 9-10m wide at opponent's baseline
+- Effective court width you must cover = larger than physical court</p>
+<p><strong>When opponent is pulled wide:</strong>
+- Their crosscourt angle opens dramatically
+- They can hit ball that lands 11-12m from center = you're running off court</p>
+<p><strong>Key insight:</strong> Every ball you hit OPENS certain angles and CLOSES others. Understanding which opens which is the foundation of tactical tennis.</p>
+<h3 id="the-three-zones-of-the-court">The Three Zones Of The Court</h3>
+<p><strong>Zone 1 — Danger Zone (opponent's perspective):</strong>
+Deep in either corner, behind baseline.</p>
+<p>From here:
+- Hard to create angles
+- Must generate pace yourself
+- Defensive position</p>
+<p><strong>Zone 2 — Neutral Zone:</strong>
+Center baseline area, inside baseline.</p>
+<p>From here:
+- Can build points
+- Some angles available
+- Transitional position</p>
+<p><strong>Zone 3 — Attack Zone:</strong>
+Inside service line, mid-court area.</p>
+<p>From here:
+- Full angles available
+- Can attack sharp
+- Finishing position</p>
+<p><strong>Tactical objective:</strong> Move opponent from Zone 3 → Zone 1 while you move from Zone 1 → Zone 3.</p>
+<h3 id="the-golden-rule-of-tennis-geometry">The Golden Rule Of Tennis Geometry</h3>
+<p><strong>Every shot moves opponent → their next shot tells you where to go → your next shot moves them again.</strong></p>
 <p>This is point construction. Not random hitting — DIRECTED movement of opponent through court, opening spaces to attack.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.2 Angle Creation — The Primary Weapon</h2><h3>Creating Angles vs. Using Angles</h3>
-<strong>Creating angles:</strong> Your shot that moves opponent wide, OFF the court, or pulls them from comfortable zone.
-<strong>Using angles:</strong> Hitting into the OPEN SPACE that their wide position created.
+<hr/>
+<h2 id="272-angle-creation-the-primary-weapon">27.2 Angle Creation — The Primary Weapon</h2>
+<h3 id="creating-angles-vs-using-angles">Creating Angles vs. Using Angles</h3>
+<p><strong>Creating angles:</strong> Your shot that moves opponent wide, OFF the court, or pulls them from comfortable zone.</p>
+<p><strong>Using angles:</strong> Hitting into the OPEN SPACE that their wide position created.</p>
 <p>Most points are won by USING angles. But angles must first be CREATED.</p>
-<strong>The two-shot combo:</strong>
-<p>Shot 1: Angle creation (pull opponent wide)</p>
-<p>Shot 2: Use the open court</p>
-<strong>Example:</strong>
-<p>Shot 1: Deep topspin to opponent's backhand corner (wide)</p>
-<p>→ Opponent runs right, now positioned right side of baseline</p>
-<p>Shot 2: Inside-out forehand to open left side of their court</p>
-<p>→ Opponent cannot reach — angle used</p>
-<h3>Opening The Court — The Core Skill</h3>
-<strong>Principle:</strong> Before attacking, OPEN the court by moving opponent out of center.
-<strong>How to open court:</strong>
-<em>Option A — Wide crosscourt:</em>
-<p>Hit heavy topspin wide to opponent's corner → they run wide → center and opposite side OPEN.</p>
-<em>Option B — Deep approach:</em>
-<p>Push deep to either corner → opponent pinned behind baseline → short ball or weak return → attack open court.</p>
-<em>Option C — Serve wide:</em>
-<p>Wide serve pulls opponent off court → Serve+1 into open court.</p>
-<em>Option D — Body shot:</em>
-<p>Hit directly at opponent's body → jams their swing → weak return → attack angle.</p>
-<h3>The Three-Shot Pattern Structure</h3>
+<p><strong>The two-shot combo:</strong>
+Shot 1: Angle creation (pull opponent wide)
+Shot 2: Use the open court</p>
+<p><strong>Example:</strong>
+Shot 1: Deep topspin to opponent's backhand corner (wide)
+→ Opponent runs right, now positioned right side of baseline
+Shot 2: Inside-out forehand to open left side of their court
+→ Opponent cannot reach — angle used</p>
+<h3 id="opening-the-court-the-core-skill">Opening The Court — The Core Skill</h3>
+<p><strong>Principle:</strong> Before attacking, OPEN the court by moving opponent out of center.</p>
+<p><strong>How to open court:</strong></p>
+<p><em>Option A — Wide crosscourt:</em>
+Hit heavy topspin wide to opponent's corner → they run wide → center and opposite side OPEN.</p>
+<p><em>Option B — Deep approach:</em>
+Push deep to either corner → opponent pinned behind baseline → short ball or weak return → attack open court.</p>
+<p><em>Option C — Serve wide:</em>
+Wide serve pulls opponent off court → Serve+1 into open court.</p>
+<p><em>Option D — Body shot:</em>
+Hit directly at opponent's body → jams their swing → weak return → attack angle.</p>
+<h3 id="the-three-shot-pattern-structure">The Three-Shot Pattern Structure</h3>
 <p>Most point-winning sequences follow three-shot logic:</p>
-<strong>Shot 1 (Setup):</strong> Neutral → move opponent or establish position
+<p><strong>Shot 1 (Setup):</strong> Neutral → move opponent or establish position
 <strong>Shot 2 (Open):</strong> Create angle, open court, move opponent further
-<strong>Shot 3 (Win):</strong> Attack the opened court
-<strong>This is not always three shots — sometimes two, sometimes four or five.</strong>
-<p>But the LOGIC is always:</p>
-<p>Setup → Open → Attack</p>
+<strong>Shot 3 (Win):</strong> Attack the opened court</p>
+<p><strong>This is not always three shots — sometimes two, sometimes four or five.</strong></p>
+<p>But the LOGIC is always:
+Setup → Open → Attack</p>
 <p>Never: Random → Random → Hope</p>
-<h3>Specific Angle Creation Patterns</h3>
-<strong>Pattern 1 — The Classic Inside-Out:</strong>
-<p>Setup: Build rally, position yourself center-left baseline</p>
-<p>Open: Run around ball, hit forehand inside-out wide to opponent's backhand corner</p>
-<p>Win: Opponent runs right → open court is left → inside-in forehand OR wait for short ball</p>
-<strong>Pattern 2 — The Wide-And-Switch:</strong>
-<p>Setup: Heavy crosscourt to opponent's backhand (wide right)</p>
-<p>Open: Hit heavy crosscourt again — they run right again, further</p>
-<p>Win: Suddenly down-the-line forehand into now-open left side</p>
-<strong>Pattern 3 — The Deep-And-Short:</strong>
-<p>Setup: Push opponent deep with heavy topspin</p>
-<p>Open: Hit another deep ball — keep them behind baseline</p>
-<p>Win: Drop shot or short angle — they must cover 10m in 2 seconds</p>
-<strong>Pattern 4 — The Body-Then-Wide:</strong>
-<p>Setup: Hit at opponent's body → they jam their swing</p>
-<p>Open: Weak return to center → you set up</p>
-<p>Win: Wide angle to empty corner</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.3 The T-Zone Attack</h2><h3>What Is T-Zone Control</h3>
+<h3 id="specific-angle-creation-patterns">Specific Angle Creation Patterns</h3>
+<p><strong>Pattern 1 — The Classic Inside-Out:</strong></p>
+<p>Setup: Build rally, position yourself center-left baseline
+Open: Run around ball, hit forehand inside-out wide to opponent's backhand corner
+Win: Opponent runs right → open court is left → inside-in forehand OR wait for short ball</p>
+<p><strong>Pattern 2 — The Wide-And-Switch:</strong></p>
+<p>Setup: Heavy crosscourt to opponent's backhand (wide right)
+Open: Hit heavy crosscourt again — they run right again, further
+Win: Suddenly down-the-line forehand into now-open left side</p>
+<p><strong>Pattern 3 — The Deep-And-Short:</strong></p>
+<p>Setup: Push opponent deep with heavy topspin
+Open: Hit another deep ball — keep them behind baseline
+Win: Drop shot or short angle — they must cover 10m in 2 seconds</p>
+<p><strong>Pattern 4 — The Body-Then-Wide:</strong></p>
+<p>Setup: Hit at opponent's body → they jam their swing
+Open: Weak return to center → you set up
+Win: Wide angle to empty corner</p>
+<hr/>
+<h2 id="273-the-t-zone-attack">27.3 The T-Zone Attack</h2>
+<h3 id="what-is-t-zone-control">What Is T-Zone Control</h3>
 <p>The T-zone = the intersection of center service line and baseline — the CENTER of the opponent's court.</p>
-<strong>Why target the T-zone?</strong>
+<p><strong>Why target the T-zone?</strong></p>
 <p>When ball goes through center, opponent has FEWER angles available for their reply. They cannot angle crosscourt sharply from center position without taking risk.</p>
-<strong>Forcing through center vs. wide:</strong>
-<em>Your ball wide (crosscourt):</em>
-<p>→ Opponent on right side → can hit sharp crosscourt left OR down the line right</p>
-<p>→ Two clear options available</p>
-<em>Your ball through center (T-zone):</em>
-<p>→ Opponent in center → sharp angles require more effort → default is back to center</p>
-<p>→ Their angle options limited</p>
-<h3>T-Zone Tactics</h3>
-<strong>Use T-zone to:</strong>
-<ul class="styled-list">
-<li>Neutralize opponent when you're in trouble (push through center, limit their angles)</li>
-<li>Reset rally after being pulled wide (recover to center, hit center)</li>
-<li>Force opponent to GENERATE angles themselves (they must work harder)</li>
-</ul>
-<strong>Use wide angles to:</strong>
-<ul class="styled-list">
-<li>Create open court when you have opportunity</li>
-<li>Attack when opponent is off-center</li>
-<li>Move opponent out of position</li>
-</ul>
-<strong>The alternation:</strong>
-<p>Wide to pull them → center to pin them → wide to finish.</p>
-<p>NOT: Wide, wide, wide (they anticipate and cover).</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.4 Controlling The Net Level Advantage</h2><h3>The Net Is Not Uniform</h3>
+<p><strong>Forcing through center vs. wide:</strong></p>
+<p><em>Your ball wide (crosscourt):</em>
+→ Opponent on right side → can hit sharp crosscourt left OR down the line right
+→ Two clear options available</p>
+<p><em>Your ball through center (T-zone):</em>
+→ Opponent in center → sharp angles require more effort → default is back to center
+→ Their angle options limited</p>
+<h3 id="t-zone-tactics">T-Zone Tactics</h3>
+<p><strong>Use T-zone to:</strong>
+- Neutralize opponent when you're in trouble (push through center, limit their angles)
+- Reset rally after being pulled wide (recover to center, hit center)
+- Force opponent to GENERATE angles themselves (they must work harder)</p>
+<p><strong>Use wide angles to:</strong>
+- Create open court when you have opportunity
+- Attack when opponent is off-center
+- Move opponent out of position</p>
+<p><strong>The alternation:</strong>
+Wide to pull them → center to pin them → wide to finish.
+NOT: Wide, wide, wide (they anticipate and cover).</p>
+<hr/>
+<h2 id="274-controlling-the-net-level-advantage">27.4 Controlling The Net Level Advantage</h2>
+<h3 id="the-net-is-not-uniform">The Net Is Not Uniform</h3>
 <p>The net is 91.4cm at posts, 91.4cm at the outer edges BUT only 91.4cm at the POSTS. At the CENTER, it is 85.7cm — approximately 6cm lower.</p>
-<strong>This matters:</strong>
-<p>Crosscourt shots pass over the CENTER of the net → lowest point → highest margin.</p>
-<p>Down-the-line shots pass over the SIDE of the net → slightly higher → slightly less margin.</p>
-<strong>Practical application:</strong>
+<p><strong>This matters:</strong></p>
+<p>Crosscourt shots pass over the CENTER of the net → lowest point → highest margin.
+Down-the-line shots pass over the SIDE of the net → slightly higher → slightly less margin.</p>
+<p><strong>Practical application:</strong></p>
 <ul class="styled-list">
 <li>Default crosscourt gives you net clearance advantage</li>
 <li>Down-the-line requires slightly more precision</li>
 <li>Always factor in this 6cm when calculating risk</li>
 </ul>
-<h3>Using Height Intelligently</h3>
-<strong>Low and deep (offensive):</strong>
-<p>Ball barely clears net (30-50cm) → opponent must contact low ball → difficult to generate pace or angles → usually defensive return.</p>
-<strong>Medium height (neutral/building):</strong>
-<p>Ball 60-100cm above net → allows topspin to develop → controls depth → building shot.</p>
-<strong>High and deep (reset/pressure):</strong>
-<p>Ball 1.5-2m above net → high topspin → opponent must contact ball at shoulder height or higher → very difficult to attack → often forces defensive error.</p>
-<strong>Mix heights deliberately.</strong> Opponent calibrated to one height will mis-hit when you change suddenly.
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.5 The Serve-Plus-One System</h2><h3>Why Serve-Plus-One Matters</h3>
+<h3 id="using-height-intelligently">Using Height Intelligently</h3>
+<p><strong>Low and deep (offensive):</strong>
+Ball barely clears net (30-50cm) → opponent must contact low ball → difficult to generate pace or angles → usually defensive return.</p>
+<p><strong>Medium height (neutral/building):</strong>
+Ball 60-100cm above net → allows topspin to develop → controls depth → building shot.</p>
+<p><strong>High and deep (reset/pressure):</strong>
+Ball 1.5-2m above net → high topspin → opponent must contact ball at shoulder height or higher → very difficult to attack → often forces defensive error.</p>
+<p><strong>Mix heights deliberately.</strong> Opponent calibrated to one height will mis-hit when you change suddenly.</p>
+<hr/>
+<h2 id="275-the-serve-plus-one-system">27.5 The Serve-Plus-One System</h2>
+<h3 id="why-serve-plus-one-matters">Why Serve-Plus-One Matters</h3>
 <p>Data from professional tennis:</p>
-<strong>Servers who win the third shot (serve+2, or first ball after serve) → win the game approximately 70% of the time.</strong>
-<p>This means the pattern is:</p>
-<p>1. Serve</p>
-<p>2. Return (opponent)</p>
-<p>3. YOUR Serve+1 shot ← This is the key shot</p>
+<p><strong>Servers who win the third shot (serve+2, or first ball after serve) → win the game approximately 70% of the time.</strong></p>
+<p>This means the pattern is:
+1. Serve
+2. Return (opponent)
+3. YOUR Serve+1 shot ← This is the key shot</p>
 <p>Serve+1 is the most important groundstroke in the game for the server. More important than any other rally shot.</p>
-<h3>Building Serve-Plus-One Systems</h3>
-<strong>Serve → Serve+1 must be PLANNED as a unit.</strong>
-<p>Not: Serve and then react to return.</p>
-<p>But: Plan BOTH serve AND Serve+1 before hitting the serve.</p>
-<strong>Example system 1 — Deuce court:</strong>
-<p>Serve: Flat serve wide (pulls opponent off right side)</p>
-<p>Expected return: Crosscourt (back to center-left area)</p>
-<p>Serve+1: Inside-out forehand to open right side (they just left)</p>
-<p>This works because:</p>
-<ul class="styled-list">
-<li>Wide serve pulls them right</li>
-<li>They return crosscourt (standard)</li>
-<li>Right side is now OPEN</li>
-<li>Inside-out forehand wins the point OR forces weak defensive ball</li>
-</ul>
-<strong>Example system 2 — Ad court:</strong>
-<p>Serve: Kick serve wide to backhand</p>
-<p>Expected return: Crosscourt backhand (natural direction from that position)</p>
-<p>Serve+1: Inside-out forehand back to crosscourt (deep, to open right side)</p>
-<strong>Example system 3 — Body serve:</strong>
-<p>Serve: Flat serve at body (jams return)</p>
-<p>Expected return: Weak, middle-ish return</p>
-<p>Serve+1: Move to attack wherever return goes → aggressive forehand or backhand</p>
-<h3>Practicing Serve-Plus-One</h3>
-<strong>Drill:</strong>
-<p>Step 1: Decide serve target before hitting.</p>
-<p>Step 2: Serve to that target.</p>
-<p>Step 3: Watch where return goes (it will follow patterns).</p>
-<p>Step 4: Attack with Serve+1 to pre-decided location.</p>
+<h3 id="building-serve-plus-one-systems">Building Serve-Plus-One Systems</h3>
+<p><strong>Serve → Serve+1 must be PLANNED as a unit.</strong></p>
+<p>Not: Serve and then react to return.
+But: Plan BOTH serve AND Serve+1 before hitting the serve.</p>
+<p><strong>Example system 1 — Deuce court:</strong></p>
+<p>Serve: Flat serve wide (pulls opponent off right side)
+Expected return: Crosscourt (back to center-left area)
+Serve+1: Inside-out forehand to open right side (they just left)</p>
+<p>This works because:
+- Wide serve pulls them right
+- They return crosscourt (standard)
+- Right side is now OPEN
+- Inside-out forehand wins the point OR forces weak defensive ball</p>
+<p><strong>Example system 2 — Ad court:</strong></p>
+<p>Serve: Kick serve wide to backhand
+Expected return: Crosscourt backhand (natural direction from that position)
+Serve+1: Inside-out forehand back to crosscourt (deep, to open right side)</p>
+<p><strong>Example system 3 — Body serve:</strong></p>
+<p>Serve: Flat serve at body (jams return)
+Expected return: Weak, middle-ish return
+Serve+1: Move to attack wherever return goes → aggressive forehand or backhand</p>
+<h3 id="practicing-serve-plus-one">Practicing Serve-Plus-One</h3>
+<p><strong>Drill:</strong></p>
+<p>Step 1: Decide serve target before hitting.
+Step 2: Serve to that target.
+Step 3: Watch where return goes (it will follow patterns).
+Step 4: Attack with Serve+1 to pre-decided location.</p>
 <p>After 20 repetitions of one specific system, serves and Serve+1 become linked → automatic in match.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.6 The Return-Plus-One System</h2><h3>Returner's Version Of The Same Concept</h3>
+<hr/>
+<h2 id="276-the-return-plus-one-system">27.6 The Return-Plus-One System</h2>
+<h3 id="returners-version-of-the-same-concept">Returner's Version Of The Same Concept</h3>
 <p>Just as server has Serve+1 system, returner needs RETURN+1 system.</p>
-<strong>Return+1 = the shot after the return.</strong>
-<p>Most returners: Return → react to whatever comes.</p>
-<p>Elite returners: Return → anticipate server's Serve+1 → already positioned for Return+1.</p>
-<h3>Building Return-Plus-One Systems</h3>
-<strong>Based on:</strong>
-<p>1. Where your return goes</p>
-<p>2. Where server typically hits Serve+1</p>
-<p>3. Where YOU should position</p>
-<strong>Example:</strong>
-<p>Your return: Deep crosscourt to server's backhand</p>
-<p>Server's Serve+1: They'll likely hit back to your forehand (natural crosscourt recovery)</p>
-<p>Your Return+1: Pre-positioned for forehand → attack down the line into open court</p>
-<strong>The chain:</strong>
-<p>Return crosscourt → Server hits crosscourt (predictable) → You attack down the line (they're moving wrong direction)</p>
-<strong>Practice:</strong>
+<p><strong>Return+1 = the shot after the return.</strong></p>
+<p>Most returners: Return → react to whatever comes.
+Elite returners: Return → anticipate server's Serve+1 → already positioned for Return+1.</p>
+<h3 id="building-return-plus-one-systems">Building Return-Plus-One Systems</h3>
+<p><strong>Based on:</strong>
+1. Where your return goes
+2. Where server typically hits Serve+1
+3. Where YOU should position</p>
+<p><strong>Example:</strong></p>
+<p>Your return: Deep crosscourt to server's backhand
+Server's Serve+1: They'll likely hit back to your forehand (natural crosscourt recovery)
+Your Return+1: Pre-positioned for forehand → attack down the line into open court</p>
+<p><strong>The chain:</strong>
+Return crosscourt → Server hits crosscourt (predictable) → You attack down the line (they're moving wrong direction)</p>
+<p><strong>Practice:</strong></p>
 <p>Play return games. For each return, IMMEDIATELY call your intended Return+1 target out loud. Builds automatic thinking.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.7 High-Percentage Tennis — Math Matters</h2><h3>The Percentage Framework</h3>
-<p>Every shot has:</p>
-<ul class="styled-list">
-<li>Making percentage (how often ball goes in)</li>
-<li>Quality percentage (how often it achieves tactical goal)</li>
-</ul>
+<hr/>
+<h2 id="277-high-percentage-tennis-math-matters">27.7 High-Percentage Tennis — Math Matters</h2>
+<h3 id="the-percentage-framework">The Percentage Framework</h3>
+<p>Every shot has:
+- Making percentage (how often ball goes in)
+- Quality percentage (how often it achieves tactical goal)</p>
 <p>Good tactics = high making percentage + high quality percentage.</p>
-<strong>The problem:</strong> Many players chase high quality at cost of making percentage. They go for brilliant angles that go in 40% of the time.
-<strong>The solution:</strong> Seek shots that go in 85%+ AND achieve tactical goal 60%+.
-<h3>High Percentage Shot Selection</h3>
-<strong>Crosscourt vs. down-the-line:</strong>
-<ul class="styled-list">
-<li>Crosscourt: Lower net, longer court diagonal = higher percentage</li>
-<li>Down-the-line: Higher net, shorter court = lower percentage</li>
-</ul>
+<p><strong>The problem:</strong> Many players chase high quality at cost of making percentage. They go for brilliant angles that go in 40% of the time.</p>
+<p><strong>The solution:</strong> Seek shots that go in 85%+ AND achieve tactical goal 60%+.</p>
+<h3 id="high-percentage-shot-selection">High Percentage Shot Selection</h3>
+<p><strong>Crosscourt vs. down-the-line:</strong>
+- Crosscourt: Lower net, longer court diagonal = higher percentage
+- Down-the-line: Higher net, shorter court = lower percentage</p>
 <p>Default crosscourt. Go down-the-line only when you have clear advantage.</p>
-<strong>Deep vs. short:</strong>
-<ul class="styled-list">
-<li>Deep: More margin at baseline, easier to keep in</li>
-<li>Short (drop shot, angle): Requires precision, higher error rate</li>
-</ul>
+<p><strong>Deep vs. short:</strong>
+- Deep: More margin at baseline, easier to keep in
+- Short (drop shot, angle): Requires precision, higher error rate</p>
 <p>Default deep. Go short only when you have setup and position.</p>
-<strong>Aggressive vs. safe:</strong>
-<p>Aggressive shot may have 60% making rate but high winner value.</p>
-<p>Safe shot has 90% making rate but lower winner value.</p>
-<strong>Score context determines which to use:</strong>
-<ul class="styled-list">
-<li>Ahead in game: Can afford lower percentage</li>
-<li>Behind in game: Need higher percentage</li>
-<li>Break point: Choose your most reliable option</li>
-</ul>
-<h3>The 75% Rule Revisited</h3>
-<p>In professional tennis:</p>
-<ul class="styled-list">
-<li>75% of points end from errors</li>
-<li>25% of points end from outright winners</li>
-</ul>
-<strong>What this means tactically:</strong>
-<p>Your primary goal should be FORCING ERRORS, not hitting winners.</p>
+<p><strong>Aggressive vs. safe:</strong>
+Aggressive shot may have 60% making rate but high winner value.
+Safe shot has 90% making rate but lower winner value.</p>
+<p><strong>Score context determines which to use:</strong>
+- Ahead in game: Can afford lower percentage
+- Behind in game: Need higher percentage
+- Break point: Choose your most reliable option</p>
+<h3 id="the-75-rule-revisited">The 75% Rule Revisited</h3>
+<p>In professional tennis:
+- 75% of points end from errors
+- 25% of points end from outright winners</p>
+<p><strong>What this means tactically:</strong>
+Your primary goal should be FORCING ERRORS, not hitting winners.</p>
 <p>Forcing errors requires: Moving opponent, creating difficult contact points, adding pressure through consistency.</p>
 <p>Hitting winners requires: Technical perfection, ideal positioning, risk.</p>
 <p>Both are valid. But FORCING ERRORS should be your primary approach, winners your secondary.</p>
-<strong>Practical:</strong> If you're trying for winner every 3rd ball → adjust. Build more, look for winner only when geometry is ideal.
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.8 Defensive Tactics — Converting Defense To Offense</h2><h3>Defense Is Not Passive</h3>
+<p><strong>Practical:</strong> If you're trying for winner every 3rd ball → adjust. Build more, look for winner only when geometry is ideal.</p>
+<hr/>
+<h2 id="278-defensive-tactics-converting-defense-to-offense">27.8 Defensive Tactics — Converting Defense To Offense</h2>
+<h3 id="defense-is-not-passive">Defense Is Not Passive</h3>
 <p>Being pushed deep or wide doesn't mean you must be purely defensive.</p>
-<strong>Active defense:</strong>
-<ul class="styled-list">
-<li>Choosing where to send ball (not just keeping it in)</li>
-<li>Recovering position while opponent hits</li>
-<li>Creating transition from defense to offense quickly</li>
-</ul>
-<strong>Passive defense:</strong>
-<ul class="styled-list">
-<li>Just getting ball back anywhere</li>
-<li>Hoping for error</li>
-<li>Not thinking about NEXT shot</li>
-</ul>
+<p><strong>Active defense:</strong>
+- Choosing where to send ball (not just keeping it in)
+- Recovering position while opponent hits
+- Creating transition from defense to offense quickly</p>
+<p><strong>Passive defense:</strong>
+- Just getting ball back anywhere
+- Hoping for error
+- Not thinking about NEXT shot</p>
 <p>Always think: "This defensive shot sets up NEXT shot."</p>
-<h3>The Defensive Hierarchy</h3>
+<h3 id="the-defensive-hierarchy">The Defensive Hierarchy</h3>
 <p>When under pressure, default to (in order of safety):</p>
-<p>1. <strong>Deep crosscourt:</strong> Safest. Most net clearance. Longest court. Buys recovery time.</p>
-<p>2. <strong>Deep center:</strong> Second safest. Limits opponent's angles. Slightly less crosscourt margin.</p>
-<p>3. <strong>Lob:</strong> When opponent at net. Gets them off net, buys time.</p>
-<p>4. <strong>Down-the-line:</strong> Only when clearly right position. Higher risk but breaks pattern.</p>
-<h3>The Counter-Attack Principle</h3>
+<ol class="styled-list numbered">
+<li>
+<p><strong>Deep crosscourt:</strong> Safest. Most net clearance. Longest court. Buys recovery time.</p>
+</li>
+<li>
+<p><strong>Deep center:</strong> Second safest. Limits opponent's angles. Slightly less crosscourt margin.</p>
+</li>
+<li>
+<p><strong>Lob:</strong> When opponent at net. Gets them off net, buys time.</p>
+</li>
+<li>
+<p><strong>Down-the-line:</strong> Only when clearly right position. Higher risk but breaks pattern.</p>
+</li>
+</ol>
+<h3 id="the-counter-attack-principle">The Counter-Attack Principle</h3>
 <p>Under pressure → opponent expects weak ball → they move to attack.</p>
 <p>Counter-attack = take risk in defensive moment → produce quality ball → surprise opponent.</p>
-<strong>Requirements for counter-attack:</strong>
-<ul class="styled-list">
-<li>You must have SOME time and position (not completely stretched)</li>
-<li>Ball quality must allow it</li>
-<li>Opponent must have moved prematurely</li>
-</ul>
-<strong>Example:</strong>
-<p>Opponent pushes you wide → expects weak defensive slice → you drive topspin crosscourt instead → they're caught moving wrong direction</p>
+<p><strong>Requirements for counter-attack:</strong>
+- You must have SOME time and position (not completely stretched)
+- Ball quality must allow it
+- Opponent must have moved prematurely</p>
+<p><strong>Example:</strong>
+Opponent pushes you wide → expects weak defensive slice → you drive topspin crosscourt instead → they're caught moving wrong direction</p>
 <p>This wins points AND psychologically disrupts opponent (they expected easy point).</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.9 Winning And Losing Points — Learn The Difference</h2><h3>Understanding Point Endings</h3>
-<strong>Four ways to win a point:</strong>
-<p>1. Outright winner (unreachable ball)</p>
-<p>2. Forced error (opponent hits out due to your pressure)</p>
-<p>3. Unforced error by opponent (they miss without direct pressure)</p>
-<p>4. Double fault by opponent (serve)</p>
-<strong>Four ways to lose a point:</strong>
-<p>1. Unforced error (your miss with no pressure)</p>
-<p>2. Forced error (opponent's shot makes you miss)</p>
-<p>3. Opponent winner (their unreachable ball)</p>
-<p>4. Your double fault</p>
-<h3>What Each Error Type Tells You</h3>
-<strong>You unforced errors increasing:</strong>
-<p>→ You're attempting too-difficult shots</p>
-<p>→ Reduce pace, increase margin, or simplify shot selection</p>
-<p>→ Percentage tennis needed</p>
-<strong>Opponent's unforced errors increasing:</strong>
-<p>→ Your tactics are creating discomfort</p>
-<p>→ CONTINUE what you're doing</p>
-<p>→ This is working — don't change</p>
-<strong>Your forced errors increasing:</strong>
-<p>→ Opponent's quality is too high for your position</p>
-<p>→ Need to improve your defensive position OR change pattern</p>
-<strong>Opponent's forced errors increasing:</strong>
-<p>→ Your pressure is working</p>
-<p>→ Continue building pressure</p>
-<p>→ Good ball quality, good placement</p>
-<h3>Tracking Your Point Endings</h3>
-<strong>Simple match tracking system:</strong>
-<p>Use phone or simple notation:</p>
-<ul class="styled-list">
-<li>UE: Your unforced error</li>
-<li>FE: Your forced error</li>
-<li>W: Your winner</li>
-<li>OUE: Opponent unforced error</li>
-<li>OFE: Opponent forced error</li>
-<li>OW: Opponent winner</li>
-</ul>
-<p>After match:</p>
-<p>Calculate: UE+FE vs. W</p>
-<p>Calculate: OUE+OFE vs. OW</p>
-<p>If your errors > 2x your winners → you're attempting too much. Simplify.</p>
-<p>If opponent errors > 2x their winners → your tactics working. Continue.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.10 Point Construction By Situation</h2><h3>From Strong Position</h3>
-<strong>You're ahead in rally, opponent defensive:</strong>
-<p>Checklist before shooting:</p>
-<p>1. Is there open court? → Attack to it.</p>
-<p>2. Is there no clear open court? → Build with heavy ball, wait for opening.</p>
-<p>3. Is opponent at net? → Pass or lob.</p>
+<hr/>
+<h2 id="279-winning-and-losing-points-learn-the-difference">27.9 Winning And Losing Points — Learn The Difference</h2>
+<h3 id="understanding-point-endings">Understanding Point Endings</h3>
+<p><strong>Four ways to win a point:</strong>
+1. Outright winner (unreachable ball)
+2. Forced error (opponent hits out due to your pressure)
+3. Unforced error by opponent (they miss without direct pressure)
+4. Double fault by opponent (serve)</p>
+<p><strong>Four ways to lose a point:</strong>
+1. Unforced error (your miss with no pressure)
+2. Forced error (opponent's shot makes you miss)
+3. Opponent winner (their unreachable ball)
+4. Your double fault</p>
+<h3 id="what-each-error-type-tells-you">What Each Error Type Tells You</h3>
+<p><strong>You unforced errors increasing:</strong>
+→ You're attempting too-difficult shots
+→ Reduce pace, increase margin, or simplify shot selection
+→ Percentage tennis needed</p>
+<p><strong>Opponent's unforced errors increasing:</strong>
+→ Your tactics are creating discomfort
+→ CONTINUE what you're doing
+→ This is working — don't change</p>
+<p><strong>Your forced errors increasing:</strong>
+→ Opponent's quality is too high for your position
+→ Need to improve your defensive position OR change pattern</p>
+<p><strong>Opponent's forced errors increasing:</strong>
+→ Your pressure is working
+→ Continue building pressure
+→ Good ball quality, good placement</p>
+<h3 id="tracking-your-point-endings">Tracking Your Point Endings</h3>
+<p><strong>Simple match tracking system:</strong></p>
+<p>Use phone or simple notation:
+- UE: Your unforced error
+- FE: Your forced error
+- W: Your winner
+- OUE: Opponent unforced error
+- OFE: Opponent forced error
+- OW: Opponent winner</p>
+<p>After match:
+Calculate: UE+FE vs. W
+Calculate: OUE+OFE vs. OW</p>
+<p>If your errors &gt; 2x your winners → you're attempting too much. Simplify.
+If opponent errors &gt; 2x their winners → your tactics working. Continue.</p>
+<hr/>
+<h2 id="2710-point-construction-by-situation">27.10 Point Construction By Situation</h2>
+<h3 id="from-strong-position">From Strong Position</h3>
+<p><strong>You're ahead in rally, opponent defensive:</strong></p>
+<p>Checklist before shooting:
+1. Is there open court? → Attack to it.
+2. Is there no clear open court? → Build with heavy ball, wait for opening.
+3. Is opponent at net? → Pass or lob.</p>
 <p>Never go for miracle shot when simple shot wins.</p>
-<h3>From Neutral Position</h3>
-<strong>Rally is even, ball is comfortable:</strong>
-<p>Checklist:</p>
-<p>1. What's my primary pattern? → Execute it (usually crosscourt building).</p>
-<p>2. Is there a better option? → Only deviate if clear advantage.</p>
-<p>3. Am I setting up the next shot? → Think two shots ahead.</p>
-<h3>From Weak Position</h3>
-<strong>You're stretched, defensive, off-balance:</strong>
-<p>Checklist:</p>
-<p>1. Get ball deep (this is the ONLY goal).</p>
-<p>2. Recover position.</p>
-<p>3. Next ball may also be defensive — accept this.</p>
-<p>4. DO NOT attempt winners from weak position.</p>
-<p>The mistake: Attempting winners when stretched → errors → give opponent easy points.</p>
-<p>The discipline: Get it back deep, recover, reset.</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.11 Eight-Week Tactical Development Program</h2><h3>Week 1-2: Geometry Awareness</h3>
-<strong>Exercise 1 — Court mapping:</strong>
-<p>Draw a tennis court on paper. Mark where you typically stand when you hit forehand, backhand, after being pulled wide, etc.</p>
+<h3 id="from-neutral-position">From Neutral Position</h3>
+<p><strong>Rally is even, ball is comfortable:</strong></p>
+<p>Checklist:
+1. What's my primary pattern? → Execute it (usually crosscourt building).
+2. Is there a better option? → Only deviate if clear advantage.
+3. Am I setting up the next shot? → Think two shots ahead.</p>
+<h3 id="from-weak-position">From Weak Position</h3>
+<p><strong>You're stretched, defensive, off-balance:</strong></p>
+<p>Checklist:
+1. Get ball deep (this is the ONLY goal).
+2. Recover position.
+3. Next ball may also be defensive — accept this.
+4. DO NOT attempt winners from weak position.</p>
+<p>The mistake: Attempting winners when stretched → errors → give opponent easy points.
+The discipline: Get it back deep, recover, reset.</p>
+<hr/>
+<h2 id="2711-eight-week-tactical-development-program">27.11 Eight-Week Tactical Development Program</h2>
+<h3 id="week-1-2-geometry-awareness">Week 1-2: Geometry Awareness</h3>
+<p><strong>Exercise 1 — Court mapping:</strong>
+Draw a tennis court on paper. Mark where you typically stand when you hit forehand, backhand, after being pulled wide, etc.</p>
 <p>Now mark where OPEN COURT is from each position.</p>
 <p>This visual exercise creates court awareness.</p>
-<strong>Exercise 2 — Pattern calling:</strong>
-<p>In practice rallies, after each ball you hit, call out loud: "I aimed to open [left/right/center]."</p>
+<p><strong>Exercise 2 — Pattern calling:</strong>
+In practice rallies, after each ball you hit, call out loud: "I aimed to open [left/right/center]."</p>
 <p>After the point: "Did it work?"</p>
 <p>Build awareness of whether your shots actually achieve tactical goal.</p>
-<hr>
-<h3>Week 3-4: Serve-Plus-One System Development</h3>
-<strong>Session 1:</strong>
-<p>Choose ONE serve+1 system (serve wide, attack open court). Serve 30 balls with this system only. Track: How many times did the pattern work as planned?</p>
-<strong>Session 2:</strong>
-<p>Different system (serve T, Serve+1 inside-in). Same approach. 30 balls.</p>
-<strong>Session 3:</strong>
-<p>Live points. Pre-decide serve+1 system before each service game. Execute. Did system work?</p>
-<hr>
-<h3>Week 5-6: Point Construction Patterns</h3>
-<strong>Session 1:</strong>
-<p>Three-shot pattern: Feed self, hit Setup → Open → Win. 20 three-shot sequences without opponent. Focus on LOGIC of each shot.</p>
-<strong>Session 2:</strong>
-<p>Live practice with pattern declaration: Before each point, declare intended pattern. Execute. Did you execute the plan? Did it work?</p>
-<strong>Session 3:</strong>
-<p>Full games. Count: how many points where you executed a pre-planned pattern? How many were reactive?</p>
+<hr/>
+<h3 id="week-3-4-serve-plus-one-system-development">Week 3-4: Serve-Plus-One System Development</h3>
+<p><strong>Session 1:</strong>
+Choose ONE serve+1 system (serve wide, attack open court). Serve 30 balls with this system only. Track: How many times did the pattern work as planned?</p>
+<p><strong>Session 2:</strong>
+Different system (serve T, Serve+1 inside-in). Same approach. 30 balls.</p>
+<p><strong>Session 3:</strong>
+Live points. Pre-decide serve+1 system before each service game. Execute. Did system work?</p>
+<hr/>
+<h3 id="week-5-6-point-construction-patterns">Week 5-6: Point Construction Patterns</h3>
+<p><strong>Session 1:</strong>
+Three-shot pattern: Feed self, hit Setup → Open → Win. 20 three-shot sequences without opponent. Focus on LOGIC of each shot.</p>
+<p><strong>Session 2:</strong>
+Live practice with pattern declaration: Before each point, declare intended pattern. Execute. Did you execute the plan? Did it work?</p>
+<p><strong>Session 3:</strong>
+Full games. Count: how many points where you executed a pre-planned pattern? How many were reactive?</p>
 <p>Target: 40%+ planned patterns by week 6.</p>
-<hr>
-<h3>Week 7-8: Integration And Adaptation</h3>
-<strong>Session 1:</strong>
-<p>Match play with error tracking. After match, calculate UE vs. W ratio. Compare to target.</p>
-<strong>Session 2:</strong>
-<p>Opponent-specific tactics: Play against different player types (aggressive, defensive, net rusher). Apply appropriate tactical approach.</p>
-<strong>Session 3:</strong>
-<p>Full match with tactical focus: Am I building points? Am I using angles? Am I forcing errors rather than hitting winners?</p>
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">27.12 Năm Lỗi Singles Tactics Phổ Biến</h2><h3>Lỗi 1: Going For Winner Too Early</h3>
-<strong>Mô tả:</strong> Ball is comfortable, player immediately goes for winner from neutral position. Miss. Repeat.
-<strong>Fix:</strong> Winners come AFTER point has been built. From neutral → build first. Attack only when geometry is right (opponent wide, off-balance, court is open).
-<hr>
-<h3>Lỗi 2: Always Hitting Same Direction</h3>
-<strong>Mô tả:</strong> Player hits crosscourt forehand every ball. Opponent adjusts, covers it, returns well. Player still hits crosscourt forehand.
-<strong>Fix:</strong> Recognize when opponent has adjusted. Down-the-line when they shade crosscourt. Body when they anticipate angles. Vary — be unpredictable.
-<hr>
-<h3>Lỗi 3: No Serve-Plus-One Plan</h3>
-<strong>Mô tả:</strong> Player serves well, then waits to see what return does and reacts. Misses opportunity to attack.
-<strong>Fix:</strong> Plan serve AND serve+1 together before serving. Know where you're hitting serve and where you plan to hit next ball BEFORE the point starts.
-<hr>
-<h3>Lỗi 4: Defensive Shot From Good Position</h3>
-<strong>Mô tả:</strong> Player has comfortable mid-court ball but hits conservative, middle-of-court shot from good position.
-<strong>Fix:</strong> Comfortable position = attack opportunity. From mid-court, you should be finishing points or at minimum creating angles aggressively.
-<hr>
-<h3>Lỗi 5: Not Using Court Width</h3>
-<strong>Mô tả:</strong> Player hits all balls within 1-2m of center. Never actually pulls opponent wide. Opponent covers everything comfortably.
-<strong>Fix:</strong> Use the full court. Crosscourt shots should actually go TO the corner (within 1m of sideline). Wide serves should go wide. Opening the court requires actually opening the court.
-<hr></div>
-<div class="chapter" id="chapter-27"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 27</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 27</h2><ul class="styled-list">
-<li><strong>Court geometry is the foundation:</strong> Every shot opens and closes angles. Understanding this transforms tennis from hitting to construction.</li>
-</ul>
+<hr/>
+<h3 id="week-7-8-integration-and-adaptation">Week 7-8: Integration And Adaptation</h3>
+<p><strong>Session 1:</strong>
+Match play with error tracking. After match, calculate UE vs. W ratio. Compare to target.</p>
+<p><strong>Session 2:</strong>
+Opponent-specific tactics: Play against different player types (aggressive, defensive, net rusher). Apply appropriate tactical approach.</p>
+<p><strong>Session 3:</strong>
+Full match with tactical focus: Am I building points? Am I using angles? Am I forcing errors rather than hitting winners?</p>
+<hr/>
+<h2 id="2712-nam-loi-singles-tactics-pho-bien">27.12 Năm Lỗi Singles Tactics Phổ Biến</h2>
+<h3 id="loi-1-going-for-winner-too-early">Lỗi 1: Going For Winner Too Early</h3>
+<p><strong>Mô tả:</strong> Ball is comfortable, player immediately goes for winner from neutral position. Miss. Repeat.</p>
+<p><strong>Fix:</strong> Winners come AFTER point has been built. From neutral → build first. Attack only when geometry is right (opponent wide, off-balance, court is open).</p>
+<hr/>
+<h3 id="loi-2-always-hitting-same-direction">Lỗi 2: Always Hitting Same Direction</h3>
+<p><strong>Mô tả:</strong> Player hits crosscourt forehand every ball. Opponent adjusts, covers it, returns well. Player still hits crosscourt forehand.</p>
+<p><strong>Fix:</strong> Recognize when opponent has adjusted. Down-the-line when they shade crosscourt. Body when they anticipate angles. Vary — be unpredictable.</p>
+<hr/>
+<h3 id="loi-3-no-serve-plus-one-plan">Lỗi 3: No Serve-Plus-One Plan</h3>
+<p><strong>Mô tả:</strong> Player serves well, then waits to see what return does and reacts. Misses opportunity to attack.</p>
+<p><strong>Fix:</strong> Plan serve AND serve+1 together before serving. Know where you're hitting serve and where you plan to hit next ball BEFORE the point starts.</p>
+<hr/>
+<h3 id="loi-4-defensive-shot-from-good-position">Lỗi 4: Defensive Shot From Good Position</h3>
+<p><strong>Mô tả:</strong> Player has comfortable mid-court ball but hits conservative, middle-of-court shot from good position.</p>
+<p><strong>Fix:</strong> Comfortable position = attack opportunity. From mid-court, you should be finishing points or at minimum creating angles aggressively.</p>
+<hr/>
+<h3 id="loi-5-not-using-court-width">Lỗi 5: Not Using Court Width</h3>
+<p><strong>Mô tả:</strong> Player hits all balls within 1-2m of center. Never actually pulls opponent wide. Opponent covers everything comfortably.</p>
+<p><strong>Fix:</strong> Use the full court. Crosscourt shots should actually go TO the corner (within 1m of sideline). Wide serves should go wide. Opening the court requires actually opening the court.</p>
+<hr/>
+<h2 id="tom-tat-chuong-27">Tóm Tắt Chương 27</h2>
 <ul class="styled-list">
-<li><strong>Three zones:</strong> Zone 1 (defensive, behind baseline) → Zone 2 (neutral, center baseline) → Zone 3 (attacking, inside service line). Move opponent backward while moving yourself forward.</li>
+<li>
+<p><strong>Court geometry is the foundation:</strong> Every shot opens and closes angles. Understanding this transforms tennis from hitting to construction.</p>
+</li>
+<li>
+<p><strong>Three zones:</strong> Zone 1 (defensive, behind baseline) → Zone 2 (neutral, center baseline) → Zone 3 (attacking, inside service line). Move opponent backward while moving yourself forward.</p>
+</li>
+<li>
+<p><strong>Angle creation is two-shot:</strong> Shot 1 creates angle (pulls opponent wide). Shot 2 uses the open court.</p>
+</li>
+<li>
+<p><strong>Three-shot pattern structure:</strong> Setup → Open → Win. The logic of every constructed point.</p>
+</li>
+<li>
+<p><strong>Serve-plus-one system:</strong> Plan serve and Serve+1 as a unit BEFORE serving. This is the most important tactical development for server.</p>
+</li>
+<li>
+<p><strong>T-zone control:</strong> Hitting through center limits opponent's angles. Alternate between wide and center strategically.</p>
+</li>
+<li>
+<p><strong>High percentage vs. low percentage:</strong> Match crosscourt to down-the-line ratio should be 3:1 or higher in most situations.</p>
+</li>
+<li>
+<p><strong>75% rule:</strong> Focus on forcing errors through movement and pressure, not just hitting winners.</p>
+</li>
+<li>
+<p><strong>Defense is active:</strong> Even defensive balls must be directed purposefully. Deep crosscourt is default defensive shot.</p>
+</li>
+<li>
+<p><strong>Key insight:</strong> Most players think about the ball they're hitting. Elite players think about the ball after the ball they're hitting. Two-shot thinking minimum. Three-shot thinking is excellence.</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Angle creation is two-shot:</strong> Shot 1 creates angle (pulls opponent wide). Shot 2 uses the open court.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Three-shot pattern structure:</strong> Setup → Open → Win. The logic of every constructed point.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Serve-plus-one system:</strong> Plan serve and Serve+1 as a unit BEFORE serving. This is the most important tactical development for server.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>T-zone control:</strong> Hitting through center limits opponent's angles. Alternate between wide and center strategically.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>High percentage vs. low percentage:</strong> Match crosscourt to down-the-line ratio should be 3:1 or higher in most situations.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>75% rule:</strong> Focus on forcing errors through movement and pressure, not just hitting winners.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Defense is active:</strong> Even defensive balls must be directed purposefully. Deep crosscourt is default defensive shot.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Key insight:</strong> Most players think about the ball they're hitting. Elite players think about the ball after the ball they're hitting. Two-shot thinking minimum. Three-shot thinking is excellence.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 27 đã xây dựng framework cho point construction. Chương 28 sẽ đi vào <strong>Doubles Tactics Nâng Cao — Formations, Communication, Và Winning As A Team</strong> — vì doubles tennis là một game hoàn toàn khác với hệ thống tactics riêng biệt đòi hỏi specific knowledge.</p>
-<hr>
-<em>Chương 28: Doubles Tactics Nâng Cao — Formations, Communication, Và Winning As A Team →</em></div>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 27 đã xây dựng framework cho point construction. Chương 28 sẽ đi vào <strong>Doubles Tactics Nâng Cao — Formations, Communication, Và Winning As A Team</strong> — vì doubles tennis là một game hoàn toàn khác với hệ thống tactics riêng biệt đòi hỏi specific knowledge.</p>
+<hr/>
+<p><em>Chương 28: Doubles Tactics Nâng Cao — Formations, Communication, Và Winning As A Team →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

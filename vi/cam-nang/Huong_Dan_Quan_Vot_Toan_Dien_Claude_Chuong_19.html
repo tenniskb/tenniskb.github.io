@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 19 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 19</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,555 +896,491 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 19</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 19</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 19</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">Chương 19: Nghệ Thuật Giành Lợi Thế Tâm Lý</h2><hr>
-> <em>"Tennis là chess trên chân. Người thắng không phải là người đánh mạnh nhất — mà là người khiến đối thủ nghĩ nhiều nhất."</em>
-> — Brad Gilbert, <em>Winning Ugly</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 19 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#thi-đấu-thông-minh--psychological-edge' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>THI ĐẤU THÔNG MINH — PSYCHOLOGICAL EDGE</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-19-nghệ-thuật-giành-lợi-thế-tâm-lý' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 19: Nghệ Thuật Giành Lợi Thế Tâm Lý</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#191-competition-là-psychological-as-well-as-physical' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.1 Competition Là Psychological As Well As Physical</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#192-reading-opponents-mental-state' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.2 Reading Opponent's Mental State</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#193-using-time--the-tempo-game' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.3 Using Time — The Tempo Game</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#194-gamesmanship-vs-sportsmanship--the-line' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.4 Gamesmanship vs. Sportsmanship — The Line</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#195-scouting-và-pre-match-intelligence' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.5 Scouting và Pre-Match Intelligence</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#196-momentum--understanding-and-using-it' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.6 Momentum — Understanding And Using It</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#197-the-psychological-battle-at-the-net' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.7 The Psychological Battle At The Net</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#198-doubles--unique-psychological-dynamics' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.8 Doubles — Unique Psychological Dynamics</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#199-specific-match-situations--psychological-playbook' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.9 Specific Match Situations — Psychological Playbook</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1910-long-term-psychological-development' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.10 Long-Term Psychological Development</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1911-training-the-competitive-mind' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.11 Training The Competitive Mind</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1912-reading-the-match-situation--advanced-pattern-recognition' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.12 Reading The Match Situation — Advanced Pattern Recognition</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1913-mental-fitness-program--competitive-intelligence' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.13 Mental Fitness Program — Competitive Intelligence</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1914-five-common-competitive-intelligence-mistakes' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>19.14 Five Common Competitive Intelligence Mistakes</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-19' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 19</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="thi-au-thong-minh-psychological-edge">THI ĐẤU THÔNG MINH — PSYCHOLOGICAL EDGE</h1>
+<h2 id="chuong-19-nghe-thuat-gianh-loi-the-tam-ly">Chương 19: Nghệ Thuật Giành Lợi Thế Tâm Lý</h2>
+<hr/>
+<div class="pullquote"><p>*"Tennis là chess trên chân. Người thắng không phải là người đánh mạnh nhất — mà là người khiến đối thủ nghĩ nhiều nhất."*
+&gt; — Brad Gilbert, *Winning Ugly*</p></div>
+<hr/>
 <p>US Open 1994. Third round. Andre Agassi vs. a highly ranked opponent.</p>
 <p>Agassi đang thua 1-4 ở set đầu tiên. Theo logic thông thường, ông nên focus vào technical game — serve tốt hơn, return chính xác hơn.</p>
 <p>Thay vào đó, Agassi làm một điều kỳ lạ: Ông bắt đầu chú ý.</p>
 <p>Ông nhận ra đối thủ serve vào body khi đang nervous. Ông nhận ra rhythm giữa các điểm thay đổi khi đối thủ bắt đầu feel pressure. Ông nhận ra đối thủ nhìn xuống ground sau bad mistakes — một tell.</p>
 <p>Agassi dùng những observations này để anticipate, disrupt, và eventually win.</p>
 <p>Đây không phải luck. Đây là <strong>competitive intelligence</strong> — kỹ năng đọc và leverage psychological dynamics trong một match.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.1 Competition Là Psychological As Well As Physical</h2><p>Tennis modern tập trung nhiều vào physical: technique, fitness, footwork. Ít hơn vào psychological dimension của competition.</p>
-<p>Nhưng competition, by definition, involves two humans interacting. Và humans có:</p>
-<ul class="styled-list">
-<li>Patterns và tendencies</li>
-<li>Strengths và weaknesses — không chỉ technical</li>
-<li>Emotional responses đến adversity</li>
-<li>Pressure points</li>
-<li>Tells và habits</li>
-</ul>
+<hr/>
+<h2 id="191-competition-la-psychological-as-well-as-physical">19.1 Competition Là Psychological As Well As Physical</h2>
+<p>Tennis modern tập trung nhiều vào physical: technique, fitness, footwork. Ít hơn vào psychological dimension của competition.</p>
+<p>Nhưng competition, by definition, involves two humans interacting. Và humans có:
+- Patterns và tendencies
+- Strengths và weaknesses — không chỉ technical
+- Emotional responses đến adversity
+- Pressure points
+- Tells và habits</p>
 <p>Player biết đọc và leverage những factors này có <strong>edge</strong> không liên quan đến technical ability.</p>
 <p>Chương này về cách develop và use edge đó.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.2 Reading Opponent's Mental State</h2><h3>Behavioral Tells — Signs Đối Thủ Đang Under Pressure</h3>
-<strong>Physical tells:</strong>
-<em>Serve routine changes:</em>
-<ul class="styled-list">
-<li>Bounce ball nhiều hơn bình thường → nervous, taking longer to decide</li>
-<li>Bounce it fewer times → rushing, wanting to get it over with</li>
-<li>Toss height varies → anxiety affecting consistency</li>
-</ul>
-<em>Between-point behavior:</em>
-<ul class="styled-list">
-<li>Walking slower → tired hoặc discouraged</li>
-<li>Avoiding eye contact → feeling beaten</li>
-<li>Talking to self (negative) → emotional spiral</li>
-<li>Excessive string-adjusting → stalling, disrupting own rhythm accidentally</li>
-</ul>
-<em>Body language:</em>
-<ul class="styled-list">
-<li>Shoulders drooping → discouraged</li>
-<li>Head down after errors → self-criticism spiral</li>
-<li>Stiff, hurried movements → anxiety manifesting physically</li>
-</ul>
-<em>Shot patterns under pressure:</em>
-<ul class="styled-list">
-<li>Suddenly more conservative second serves → afraid of double fault</li>
-<li>Shorter backswings → muscle tension from nerves</li>
-<li>Switching from aggressive tactics → losing confidence in them</li>
-</ul>
-<h3>What These Tells Tell You</h3>
+<hr/>
+<h2 id="192-reading-opponents-mental-state">19.2 Reading Opponent's Mental State</h2>
+<h3 id="behavioral-tells-signs-oi-thu-ang-under-pressure">Behavioral Tells — Signs Đối Thủ Đang Under Pressure</h3>
+<p><strong>Physical tells:</strong></p>
+<p><em>Serve routine changes:</em>
+- Bounce ball nhiều hơn bình thường → nervous, taking longer to decide
+- Bounce it fewer times → rushing, wanting to get it over with
+- Toss height varies → anxiety affecting consistency</p>
+<p><em>Between-point behavior:</em>
+- Walking slower → tired hoặc discouraged
+- Avoiding eye contact → feeling beaten
+- Talking to self (negative) → emotional spiral
+- Excessive string-adjusting → stalling, disrupting own rhythm accidentally</p>
+<p><em>Body language:</em>
+- Shoulders drooping → discouraged
+- Head down after errors → self-criticism spiral
+- Stiff, hurried movements → anxiety manifesting physically</p>
+<p><em>Shot patterns under pressure:</em>
+- Suddenly more conservative second serves → afraid of double fault
+- Shorter backswings → muscle tension from nerves
+- Switching from aggressive tactics → losing confidence in them</p>
+<h3 id="what-these-tells-tell-you">What These Tells Tell You</h3>
 <p>Khi đối thủ shows multiple pressure signs:</p>
-<strong>Opportunity 1:</strong> Increase pressure on them.
-<ul class="styled-list">
-<li>Take more time between points (allowed time is your right)</li>
-<li>Play higher percentage — force THEM to make the plays</li>
-<li>Go after their weaker wing now — kick serve to their backhand, target backhand in rallies</li>
-</ul>
-<strong>Opportunity 2:</strong> Disrupt their rhythm.
-<ul class="styled-list">
-<li>Change pace — topspin then slice then flat</li>
-<li>Mix serve locations — don't let them groove returns</li>
-<li>Approach net — force them to pass under pressure</li>
-</ul>
-<h3>Reading Opponent's Strengths (Not Just Weaknesses)</h3>
+<p><strong>Opportunity 1:</strong> Increase pressure on them.
+- Take more time between points (allowed time is your right)
+- Play higher percentage — force THEM to make the plays
+- Go after their weaker wing now — kick serve to their backhand, target backhand in rallies</p>
+<p><strong>Opportunity 2:</strong> Disrupt their rhythm.
+- Change pace — topspin then slice then flat
+- Mix serve locations — don't let them groove returns
+- Approach net — force them to pass under pressure</p>
+<h3 id="reading-opponents-strengths-not-just-weaknesses">Reading Opponent's Strengths (Not Just Weaknesses)</h3>
 <p>Equally important: Understanding what đối thủ is confident in, so you don't walk into their strength.</p>
-<strong>Signs đối thủ is in a rhythm/confident:</strong>
-<ul class="styled-list">
-<li>Consistent, clean footwork</li>
-<li>Decisive shot selection</li>
-<li>Full swings even under pressure</li>
-<li>Good between-point composure</li>
-</ul>
-<strong>Response:</strong>
-<ul class="styled-list">
-<li>Don't give them their favorite ball (high looping ball to their big forehand, etc.)</li>
-<li>Change pace and spin to disrupt their rhythm</li>
-<li>Make the match uncomfortable and physical</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.3 Using Time — The Tempo Game</h2><h3>Tempo Control Is Underrated</h3>
+<p><strong>Signs đối thủ is in a rhythm/confident:</strong>
+- Consistent, clean footwork
+- Decisive shot selection
+- Full swings even under pressure
+- Good between-point composure</p>
+<p><strong>Response:</strong>
+- Don't give them their favorite ball (high looping ball to their big forehand, etc.)
+- Change pace and spin to disrupt their rhythm
+- Make the match uncomfortable and physical</p>
+<hr/>
+<h2 id="193-using-time-the-tempo-game">19.3 Using Time — The Tempo Game</h2>
+<h3 id="tempo-control-is-underrated">Tempo Control Is Underrated</h3>
 <p>Within rules, you control much of match tempo — especially when serving.</p>
-<strong>Slow tempo benefits:</strong>
-<ul class="styled-list">
-<li>More time to recover physically and mentally</li>
-<li>Forces opponent to stay in "wait" mode longer</li>
-<li>Can disrupt opponent who likes fast-paced matches</li>
-</ul>
-<strong>Fast tempo benefits:</strong>
-<ul class="styled-list">
-<li>Opponent has less time to think/recover</li>
-<li>Can exploit an opponent in emotional spiral (don't let them recover)</li>
-<li>Keeps YOU in rhythm and focus</li>
-</ul>
-<h3>Tactical Tempo Changes</h3>
-<strong>When opponent is on a roll (momentum against you):</strong>
-<p>→ Slow down significantly. Take full 25 seconds. Towel off. Tie shoelace. Bounce ball many times.</p>
+<p><strong>Slow tempo benefits:</strong>
+- More time to recover physically and mentally
+- Forces opponent to stay in "wait" mode longer
+- Can disrupt opponent who likes fast-paced matches</p>
+<p><strong>Fast tempo benefits:</strong>
+- Opponent has less time to think/recover
+- Can exploit an opponent in emotional spiral (don't let them recover)
+- Keeps YOU in rhythm and focus</p>
+<h3 id="tactical-tempo-changes">Tactical Tempo Changes</h3>
+<p><strong>When opponent is on a roll (momentum against you):</strong>
+→ Slow down significantly. Take full 25 seconds. Towel off. Tie shoelace. Bounce ball many times.</p>
 <p>Tại sao này works: Momentum is partly psychological — it feeds on rhythm and energy. Breaking rhythm with extended pauses disrupts their flow.</p>
-<strong>When you have momentum:</strong>
-<p>→ Keep pace relatively brisk. Don't let opponent reset. Win the next point before they fully recover mentally.</p>
-<strong>After a big point win:</strong>
-<p>→ Don't rush to the next serve. Take a breath, acknowledge the point briefly internally, then execute your routine with composure.</p>
-<strong>After opponent's hot streak:</strong>
-<p>→ Medical timeout (if legitimately needed), bathroom break (one per set allowed), or simply use maximum time. These are legitimate tools.</p>
-<h3>Respecting Opponent's Tempo Preferences</h3>
+<p><strong>When you have momentum:</strong>
+→ Keep pace relatively brisk. Don't let opponent reset. Win the next point before they fully recover mentally.</p>
+<p><strong>After a big point win:</strong>
+→ Don't rush to the next serve. Take a breath, acknowledge the point briefly internally, then execute your routine with composure.</p>
+<p><strong>After opponent's hot streak:</strong>
+→ Medical timeout (if legitimately needed), bathroom break (one per set allowed), or simply use maximum time. These are legitimate tools.</p>
+<h3 id="respecting-opponents-tempo-preferences">Respecting Opponent's Tempo Preferences</h3>
 <p>Some players love fast matches. Others prefer slow. Identifying which and playing OPPOSITE can be tactically useful.</p>
-<strong>Big servers who want quick points:</strong>
-<p>→ Slow the game down after their service games. Take full time. Make them wait on YOUR serve.</p>
-<strong>Grinders who love long rallies:</strong>
-<p>→ Use net approaches and serve-and-volley to shorten points. Don't play their game.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.4 Gamesmanship vs. Sportsmanship — The Line</h2><p>This chapter covers psychological tactics. Important to address where legitimate competitive strategy ends and poor sportsmanship begins.</p>
-<h3>Legitimate Psychological Tactics</h3>
-<p>✅ <strong>Using allowed time strategically</strong> — bouncing ball, taking full 25 seconds</p>
-<p>✅ <strong>Changing pace and rhythm</strong> to disrupt opponent</p>
-<p>✅ <strong>Targeting opponent's weaker wing</strong> more after identifying it</p>
+<p><strong>Big servers who want quick points:</strong>
+→ Slow the game down after their service games. Take full time. Make them wait on YOUR serve.</p>
+<p><strong>Grinders who love long rallies:</strong>
+→ Use net approaches and serve-and-volley to shorten points. Don't play their game.</p>
+<hr/>
+<h2 id="194-gamesmanship-vs-sportsmanship-the-line">19.4 Gamesmanship vs. Sportsmanship — The Line</h2>
+<p>This chapter covers psychological tactics. Important to address where legitimate competitive strategy ends and poor sportsmanship begins.</p>
+<h3 id="legitimate-psychological-tactics">Legitimate Psychological Tactics</h3>
+<p>✅ <strong>Using allowed time strategically</strong> — bouncing ball, taking full 25 seconds
+✅ <strong>Changing pace and rhythm</strong> to disrupt opponent
+✅ <strong>Targeting opponent's weaker wing</strong> more after identifying it
 ✅ <strong>Approaching net to put pressure on opponent's passing shots</strong>
-<p>✅ <strong>Serving to different locations</strong> to prevent opponent grooving returns</p>
-<p>✅ <strong>Body language</strong> — walking tall, projecting confidence</p>
+✅ <strong>Serving to different locations</strong> to prevent opponent grooving returns
+✅ <strong>Body language</strong> — walking tall, projecting confidence</p>
 <p>These are all within rules and spirit of the game.</p>
-<h3>Unacceptable Gamesmanship</h3>
-<p>❌ <strong>Intentional time violations</strong> — delaying serves beyond rules</p>
-<p>❌ <strong>Fake injuries</strong> to disrupt opponent's momentum</p>
-<p>❌ <strong>Deliberate foot faults</strong> on return service</p>
-<p>❌ <strong>Loud grunting designed to mask ball sound</strong> (vs. natural grunting)</p>
-<p>❌ <strong>Poor calls</strong> on close balls when you can see clearly</p>
-❌ <strong>Verbal intimidation or disrespect</strong>
-
+<h3 id="unacceptable-gamesmanship">Unacceptable Gamesmanship</h3>
+<p>❌ <strong>Intentional time violations</strong> — delaying serves beyond rules
+❌ <strong>Fake injuries</strong> to disrupt opponent's momentum
+❌ <strong>Deliberate foot faults</strong> on return service
+❌ <strong>Loud grunting designed to mask ball sound</strong> (vs. natural grunting)
+❌ <strong>Poor calls</strong> on close balls when you can see clearly
+❌ <strong>Verbal intimidation or disrespect</strong></p>
 <p>These are poor sportsmanship, often penalizable, and corrosive to the game.</p>
-<h3>The Practical Standard</h3>
+<h3 id="the-practical-standard">The Practical Standard</h3>
 <p>Ask yourself: "Would I be comfortable if my opponent did exactly this to me?"</p>
-<p>If yes → legitimate tactic.</p>
-<p>If no → reconsider.</p>
+<p>If yes → legitimate tactic.
+If no → reconsider.</p>
 <p>Great competitors compete hard within the spirit of fair play. This also happens to be the most sustainable approach — you can play with confidence knowing your victories are clean.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.5 Scouting và Pre-Match Intelligence</h2><h3>Before The Match — What To Know</h3>
+<hr/>
+<h2 id="195-scouting-va-pre-match-intelligence">19.5 Scouting và Pre-Match Intelligence</h2>
+<h3 id="before-the-match-what-to-know">Before The Match — What To Know</h3>
 <p>If you've played opponent before or seen them play:</p>
-<strong>Technical:</strong>
-<ul class="styled-list">
-<li>Serve type (kick, flat, slice) and preferred locations</li>
-<li>Forehand and backhand strengths/weaknesses</li>
-<li>Net game — do they volley well?</li>
-<li>Overhead — reliable or nervous?</li>
-<li>High ball handling — good or weak?</li>
-</ul>
-<strong>Tactical:</strong>
-<ul class="styled-list">
-<li>Do they come net? When?</li>
-<li>Preferred rally direction (always cross-court? Always DTL?)</li>
-<li>Second serve pattern under pressure</li>
-<li>How do they respond when behind?</li>
-</ul>
-<strong>Physical:</strong>
-<ul class="styled-list">
-<li>Endurance — do they slow down in long matches?</li>
-<li>Movement — better on one side?</li>
-<li>Any physical limitations (knee, shoulder)?</li>
-</ul>
-<strong>Mental:</strong>
-<ul class="styled-list">
-<li>Do they get emotional? Does it help or hurt them?</li>
-<li>Do they play better when comfortable or when pushed?</li>
-<li>How do they respond to losing the first set?</li>
-</ul>
-<h3>What To Do With This Information</h3>
+<p><strong>Technical:</strong>
+- Serve type (kick, flat, slice) and preferred locations
+- Forehand and backhand strengths/weaknesses
+- Net game — do they volley well?
+- Overhead — reliable or nervous?
+- High ball handling — good or weak?</p>
+<p><strong>Tactical:</strong>
+- Do they come net? When?
+- Preferred rally direction (always cross-court? Always DTL?)
+- Second serve pattern under pressure
+- How do they respond when behind?</p>
+<p><strong>Physical:</strong>
+- Endurance — do they slow down in long matches?
+- Movement — better on one side?
+- Any physical limitations (knee, shoulder)?</p>
+<p><strong>Mental:</strong>
+- Do they get emotional? Does it help or hurt them?
+- Do they play better when comfortable or when pushed?
+- How do they respond to losing the first set?</p>
+<h3 id="what-to-do-with-this-information">What To Do With This Information</h3>
 <p>Create a simple match plan:</p>
-<em>Example:</em>
-<p>"Opponent has big forehand but weaker backhand. Serve wide to backhand in ad court. Rally cross-court to backhand. Attack when they lift with slice. Watch for them to try forehand inside-in when they get frustrated with backhand work."</p>
+<p><em>Example:</em>
+"Opponent has big forehand but weaker backhand. Serve wide to backhand in ad court. Rally cross-court to backhand. Attack when they lift with slice. Watch for them to try forehand inside-in when they get frustrated with backhand work."</p>
 <p>Write it down. Review it. Then put it away during warmup — don't over-think during match.</p>
-<h3>When You Don't Know Opponent</h3>
+<h3 id="when-you-dont-know-opponent">When You Don't Know Opponent</h3>
 <p>First 4-5 games become your "intelligence gathering phase."</p>
-<p>Track:</p>
-<ul class="styled-list">
-<li>Serve tendencies</li>
-<li>Rally direction preferences</li>
-<li>Response to pressure (tighten up or open up?)</li>
-<li>Best and weakest shots</li>
-</ul>
+<p>Track:
+- Serve tendencies
+- Rally direction preferences
+- Response to pressure (tighten up or open up?)
+- Best and weakest shots</p>
 <p>By game 6-7, you should have enough information to adjust your tactics.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.6 Momentum — Understanding And Using It</h2><h3>What Is Momentum In Tennis?</h3>
+<hr/>
+<h2 id="196-momentum-understanding-and-using-it">19.6 Momentum — Understanding And Using It</h2>
+<h3 id="what-is-momentum-in-tennis">What Is Momentum In Tennis?</h3>
 <p>Momentum is when one player is playing well AND the other is playing poorly, creating a compounding effect.</p>
-<strong>Components of momentum:</strong>
-<ul class="styled-list">
-<li>Technical: Player A making shots, Player B missing</li>
-<li>Psychological: Player A feels confident, Player B feels beaten</li>
-<li>Physical: Player A moving well, Player B heavy-legged</li>
-<li>Crowd: (In watched matches) Energy with Player A</li>
-</ul>
+<p><strong>Components of momentum:</strong>
+- Technical: Player A making shots, Player B missing
+- Psychological: Player A feels confident, Player B feels beaten
+- Physical: Player A moving well, Player B heavy-legged
+- Crowd: (In watched matches) Energy with Player A</p>
 <p>All four feeding each other.</p>
-<h3>Creating Momentum</h3>
-<strong>Win consecutive points decisively:</strong>
-<p>Not just winning — winning with clean shots. A winner creates more momentum than an opponent error.</p>
-<strong>Be physical:</strong>
-<p>Big serves, big groundstrokes — when you're winning physical exchanges, it sends a message.</p>
-<strong>Project composure after big points:</strong>
-<p>After a big winner — brief acknowledgment, then back to routine immediately. No excessive celebration. Composure under success is as powerful as composure under adversity.</p>
-<strong>Aggressive game plan:</strong>
-<p>Playing aggressive, attacking tennis naturally creates momentum even when some errors occur — it signals confidence and pressures opponent psychologically.</p>
-<h3>Stopping Opponent's Momentum</h3>
+<h3 id="creating-momentum">Creating Momentum</h3>
+<p><strong>Win consecutive points decisively:</strong>
+Not just winning — winning with clean shots. A winner creates more momentum than an opponent error.</p>
+<p><strong>Be physical:</strong>
+Big serves, big groundstrokes — when you're winning physical exchanges, it sends a message.</p>
+<p><strong>Project composure after big points:</strong>
+After a big winner — brief acknowledgment, then back to routine immediately. No excessive celebration. Composure under success is as powerful as composure under adversity.</p>
+<p><strong>Aggressive game plan:</strong>
+Playing aggressive, attacking tennis naturally creates momentum even when some errors occur — it signals confidence and pressures opponent psychologically.</p>
+<h3 id="stopping-opponents-momentum">Stopping Opponent's Momentum</h3>
 <p>When opponent is on a run (3-5 consecutive points):</p>
-<strong>Disrupt rhythm:</strong>
-<ul class="styled-list">
-<li>Take maximum time between points</li>
-<li>Change pace of play — slow it WAY down</li>
-<li>Change tactical plan — if you've been baseline, approach net</li>
-<li>Change spin — if you've been topspin, hit slice</li>
-</ul>
-<strong>Reset yourself:</strong>
-<ul class="styled-list">
-<li>Acknowledge internally: "They're playing well right now. That's OK."</li>
-<li>Return to your routine completely</li>
-<li>Give yourself one specific technical focus for next point</li>
-</ul>
-<strong>Don't rush:</strong>
-<p>Rushing to "get back in the game" often makes it worse. Playing faster when behind → less careful → more errors → more momentum to opponent.</p>
-<h3>Momentum Myth</h3>
+<p><strong>Disrupt rhythm:</strong>
+- Take maximum time between points
+- Change pace of play — slow it WAY down
+- Change tactical plan — if you've been baseline, approach net
+- Change spin — if you've been topspin, hit slice</p>
+<p><strong>Reset yourself:</strong>
+- Acknowledge internally: "They're playing well right now. That's OK."
+- Return to your routine completely
+- Give yourself one specific technical focus for next point</p>
+<p><strong>Don't rush:</strong>
+Rushing to "get back in the game" often makes it worse. Playing faster when behind → less careful → more errors → more momentum to opponent.</p>
+<h3 id="momentum-myth">Momentum Myth</h3>
 <p>"Momentum" can be overstated. A player who is technically executing well will often maintain that execution even after their opponent fights back. Don't assume one point changing is "momentum shift" — it might just be normal score variation.</p>
-<strong>Real momentum shift requires:</strong>
-<ul class="styled-list">
-<li>Multiple consecutive points</li>
-<li>Clear change in both players' quality</li>
-<li>Often accompanied by a tactical adjustment by the player gaining momentum</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.7 The Psychological Battle At The Net</h2><p>When you approach the net, something psychological happens beyond just the geometry.</p>
-<h3>Net Approach As Psychological Pressure</h3>
+<p><strong>Real momentum shift requires:</strong>
+- Multiple consecutive points
+- Clear change in both players' quality
+- Often accompanied by a tactical adjustment by the player gaining momentum</p>
+<hr/>
+<h2 id="197-the-psychological-battle-at-the-net">19.7 The Psychological Battle At The Net</h2>
+<p>When you approach the net, something psychological happens beyond just the geometry.</p>
+<h3 id="net-approach-as-psychological-pressure">Net Approach As Psychological Pressure</h3>
 <p>Standing at the net sends clear message: "I'm taking control of this point. You need to beat me with a passing shot under pressure."</p>
-<p>This puts <strong>execution pressure</strong> on the opponent:</p>
-<ul class="styled-list">
-<li>They must choose direction</li>
-<li>Execute with pace AND placement</li>
-<li>Beat a moving target</li>
-<li>Do it under time pressure</li>
-</ul>
+<p>This puts <strong>execution pressure</strong> on the opponent:
+- They must choose direction
+- Execute with pace AND placement
+- Beat a moving target
+- Do it under time pressure</p>
 <p>Many players, even technically capable of passing shots, mentally fold at this decision point.</p>
-<h3>Making Approaches Feel Inevitable</h3>
+<h3 id="making-approaches-feel-inevitable">Making Approaches Feel Inevitable</h3>
 <p>The most psychologically effective net approach:</p>
-<p>1. Approach AFTER a shot that genuinely pressures opponent (deep, wide, or to their feet)</p>
-<p>2. Approach with conviction — no hesitation visible</p>
-<p>3. Split-step and hold position in center of court</p>
-<p>4. React based on opponent's shot — don't guess</p>
+<ol class="styled-list numbered">
+<li>Approach AFTER a shot that genuinely pressures opponent (deep, wide, or to their feet)</li>
+<li>Approach with conviction — no hesitation visible</li>
+<li>Split-step and hold position in center of court</li>
+<li>React based on opponent's shot — don't guess</li>
+</ol>
 <p>The hesitant approach (approach, then back up when opponent winds up) communicates lack of conviction, which gives opponent psychological confidence to pass.</p>
-<h3>The Psychological Trophy Shot</h3>
+<h3 id="the-psychological-trophy-shot">The Psychological Trophy Shot</h3>
 <p>After a clean passing shot against you — acknowledge it internally. "Good shot." Don't react negatively. Don't hang head.</p>
 <p>This signals to opponent: "That didn't crack me." Over time, this psychological composure wears on opponents — they know they have to hit perfect shots to beat you.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.8 Doubles — Unique Psychological Dynamics</h2><p>Doubles introduces team psychology — the relationship between partners under pressure.</p>
-<h3>Partner Communication Under Pressure</h3>
-<strong>When things go wrong in doubles:</strong>
-<ul class="styled-list">
-<li>Partner double faults → say nothing negative. "Next point" or just a nod.</li>
-<li>Partner misses easy volley → "Let's go" — forward, not backward.</li>
-<li>Your own error when partner played perfect setup → take responsibility clearly: "My fault. I got it."</li>
-</ul>
-<strong>Why this matters:</strong>
-<p>Negative partner communication → partner gets tight → partner plays worse → you get frustrated → both play worse → match lost.</p>
-<strong>Positive partner communication:</strong>
-<ul class="styled-list">
-<li>Keeps both players focused on next point</li>
-<li>Maintains team morale</li>
-<li>Keeps nervous players from going into spiral</li>
-</ul>
-<h3>Doubles Momentum Disruption</h3>
+<hr/>
+<h2 id="198-doubles-unique-psychological-dynamics">19.8 Doubles — Unique Psychological Dynamics</h2>
+<p>Doubles introduces team psychology — the relationship between partners under pressure.</p>
+<h3 id="partner-communication-under-pressure">Partner Communication Under Pressure</h3>
+<p><strong>When things go wrong in doubles:</strong>
+- Partner double faults → say nothing negative. "Next point" or just a nod.
+- Partner misses easy volley → "Let's go" — forward, not backward.
+- Your own error when partner played perfect setup → take responsibility clearly: "My fault. I got it."</p>
+<p><strong>Why this matters:</strong>
+Negative partner communication → partner gets tight → partner plays worse → you get frustrated → both play worse → match lost.</p>
+<p><strong>Positive partner communication:</strong>
+- Keeps both players focused on next point
+- Maintains team morale
+- Keeps nervous players from going into spiral</p>
+<h3 id="doubles-momentum-disruption">Doubles Momentum Disruption</h3>
 <p>Doubles momentum is particularly powerful because crowd/opponents feel energy of two players clicking together.</p>
-<strong>Disrupting opponents' doubles momentum:</strong>
-<ul class="styled-list">
-<li>Change formation (go I-formation, Australian stance)</li>
-<li>Change serving speed and location completely</li>
-<li>Poach aggressively — force them to think about net partner</li>
-<li>Have both partners talk calmly to each other between points (signals you're not rattled)</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.9 Specific Match Situations — Psychological Playbook</h2><h3>Situation 1: You're Serving For The Set At 5-4</h3>
-<strong>Mental trap:</strong> Start playing conservatively to "protect the lead."
-<strong>Psychology:</strong> First serve percentage often drops. Second serves become tentative. Opponent returns better on tentative serves. Score tightens. Anxiety increases. Classic "protecting the lead" collapse.
-<strong>Correct approach:</strong>
-<ul class="styled-list">
-<li>Recognize the mental trap</li>
-<li>Remind yourself: "Play the SAME game that got me to 5-4"</li>
-<li>Be willing to miss some shots — play YOUR tennis, not fear tennis</li>
-<li>Win the game with your normal aggressive game, not by hoping opponent errors</li>
-</ul>
-<h3>Situation 2: You're Receiving At 4-5 — Opponent Serving For Set</h3>
-<strong>Mental opportunity:</strong>
-<ul class="styled-list">
-<li>Opponent is nervous. You can feel it (their routine changes, pace slows or rushes).</li>
-<li>Nothing to lose as returner.</li>
-<li>Aggressive returns are psychologically smart here.</li>
-</ul>
-<strong>Tactical approach:</strong>
-<ul class="styled-list">
-<li>Attack second serve particularly — opponent most nervous on these</li>
-<li>Even if return not perfect, moving forward aggressively sends message</li>
-<li>Win one game to make it 5-5 and see what happens to their serving</li>
-</ul>
-<h3>Situation 3: Losing By Wide Margin (e.g., 1-5 In Set)</h3>
+<p><strong>Disrupting opponents' doubles momentum:</strong>
+- Change formation (go I-formation, Australian stance)
+- Change serving speed and location completely
+- Poach aggressively — force them to think about net partner
+- Have both partners talk calmly to each other between points (signals you're not rattled)</p>
+<hr/>
+<h2 id="199-specific-match-situations-psychological-playbook">19.9 Specific Match Situations — Psychological Playbook</h2>
+<h3 id="situation-1-youre-serving-for-the-set-at-5-4">Situation 1: You're Serving For The Set At 5-4</h3>
+<p><strong>Mental trap:</strong> Start playing conservatively to "protect the lead."</p>
+<p><strong>Psychology:</strong> First serve percentage often drops. Second serves become tentative. Opponent returns better on tentative serves. Score tightens. Anxiety increases. Classic "protecting the lead" collapse.</p>
+<p><strong>Correct approach:</strong>
+- Recognize the mental trap
+- Remind yourself: "Play the SAME game that got me to 5-4"
+- Be willing to miss some shots — play YOUR tennis, not fear tennis
+- Win the game with your normal aggressive game, not by hoping opponent errors</p>
+<h3 id="situation-2-youre-receiving-at-4-5-opponent-serving-for-set">Situation 2: You're Receiving At 4-5 — Opponent Serving For Set</h3>
+<p><strong>Mental opportunity:</strong>
+- Opponent is nervous. You can feel it (their routine changes, pace slows or rushes).
+- Nothing to lose as returner.
+- Aggressive returns are psychologically smart here.</p>
+<p><strong>Tactical approach:</strong>
+- Attack second serve particularly — opponent most nervous on these
+- Even if return not perfect, moving forward aggressively sends message
+- Win one game to make it 5-5 and see what happens to their serving</p>
+<h3 id="situation-3-losing-by-wide-margin-eg-1-5-in-set">Situation 3: Losing By Wide Margin (e.g., 1-5 In Set)</h3>
 <p>Already covered some of this in Chapter 17, but psychological angle:</p>
-<strong>Internal reframe:</strong>
-<p>"I cannot lose more than 6-1. So mathematically, worst case is one more game. Can I win ONE more game? Absolutely."</p>
+<p><strong>Internal reframe:</strong>
+"I cannot lose more than 6-1. So mathematically, worst case is one more game. Can I win ONE more game? Absolutely."</p>
 <p>Win that one game → "Can I win another?" → Suddenly 3-5 → tension in match → opponent's nerves.</p>
-<strong>Never give away games:</strong>
-<p>Even at 1-5, compete fully in each game. Opponents who get foot off the pedal at 5-1 often "wake up" at 5-3 and play worse. If you've been competing hard all along, you're better positioned to capitalize.</p>
-<h3>Situation 4: Opponent Is Emotional — Arguing Calls, Racket Abuse</h3>
-<strong>What NOT to do:</strong>
-<ul class="styled-list">
-<li>React to their emotion — don't get drawn into their drama</li>
-<li>Change your game plan based on their behavior</li>
-<li>Rush through the next point (common mistake — wanting to get away from the tension)</li>
-</ul>
-<strong>What to DO:</strong>
-<ul class="styled-list">
-<li>Continue your full between-point routine</li>
-<li>Take YOUR time — don't rush on THEIR account</li>
-<li>Play YOUR patterns — their emotional state often means errors coming</li>
-<li>Let them "stew" in their emotion while you remain composed</li>
-</ul>
+<p><strong>Never give away games:</strong>
+Even at 1-5, compete fully in each game. Opponents who get foot off the pedal at 5-1 often "wake up" at 5-3 and play worse. If you've been competing hard all along, you're better positioned to capitalize.</p>
+<h3 id="situation-4-opponent-is-emotional-arguing-calls-racket-abuse">Situation 4: Opponent Is Emotional — Arguing Calls, Racket Abuse</h3>
+<p><strong>What NOT to do:</strong>
+- React to their emotion — don't get drawn into their drama
+- Change your game plan based on their behavior
+- Rush through the next point (common mistake — wanting to get away from the tension)</p>
+<p><strong>What to DO:</strong>
+- Continue your full between-point routine
+- Take YOUR time — don't rush on THEIR account
+- Play YOUR patterns — their emotional state often means errors coming
+- Let them "stew" in their emotion while you remain composed</p>
 <p>Often, the most competitive thing you can do when opponent is emotional is simply... be calm and continue playing your game. Their emotion is doing your work for you.</p>
-<h3>Situation 5: You're The One Getting Emotional</h3>
-<strong>Step 1:</strong> Recognize it. "I am emotional right now."
-<strong>Step 2:</strong> Physical reset. Exhale fully. Slow your walking pace. Look at strings.
-<strong>Step 3:</strong> If truly out of control — take the maximum allowed time. There's no shame in bouncing the ball 8-10 times before a serve if you need it.
-<strong>Step 4:</strong> Return to one specific technical focus for next point. Makes emotional thought compete with technical thought — technical usually wins.
-<strong>Never:</strong> Rage on court. Racket abuse. Verbal outbursts. These spike cortisol, tighten muscles, and sabotage your own performance. Your opponent benefits more from your rage than you do.
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.10 Long-Term Psychological Development</h2><h3>Building Match Toughness Over Time</h3>
+<h3 id="situation-5-youre-the-one-getting-emotional">Situation 5: You're The One Getting Emotional</h3>
+<p><strong>Step 1:</strong> Recognize it. "I am emotional right now."</p>
+<p><strong>Step 2:</strong> Physical reset. Exhale fully. Slow your walking pace. Look at strings.</p>
+<p><strong>Step 3:</strong> If truly out of control — take the maximum allowed time. There's no shame in bouncing the ball 8-10 times before a serve if you need it.</p>
+<p><strong>Step 4:</strong> Return to one specific technical focus for next point. Makes emotional thought compete with technical thought — technical usually wins.</p>
+<p><strong>Never:</strong> Rage on court. Racket abuse. Verbal outbursts. These spike cortisol, tighten muscles, and sabotage your own performance. Your opponent benefits more from your rage than you do.</p>
+<hr/>
+<h2 id="1910-long-term-psychological-development">19.10 Long-Term Psychological Development</h2>
+<h3 id="building-match-toughness-over-time">Building Match Toughness Over Time</h3>
 <p>Match toughness — the ability to compete effectively under pressure — is built through exposure. There's no shortcut.</p>
-<strong>Requirements:</strong>
-<ul class="styled-list">
-<li>Play matches, not just practice</li>
-<li>Play competitive matches (with real stakes), not just friendly hits</li>
-<li>Play matches against better players (uncomfortable)</li>
-<li>Play matches against different styles (unpredictable opponents)</li>
-<li>Reflect after matches with honest assessment</li>
-</ul>
-<strong>The volume equation:</strong>
-<p>A player who plays 100 competitive matches per year will develop match toughness faster than a player who plays 20, even if the 20-match player practices more.</p>
-<h3>Learning From Losses (And Wins)</h3>
-<strong>After losses:</strong>
+<p><strong>Requirements:</strong>
+- Play matches, not just practice
+- Play competitive matches (with real stakes), not just friendly hits
+- Play matches against better players (uncomfortable)
+- Play matches against different styles (unpredictable opponents)
+- Reflect after matches with honest assessment</p>
+<p><strong>The volume equation:</strong>
+A player who plays 100 competitive matches per year will develop match toughness faster than a player who plays 20, even if the 20-match player practices more.</p>
+<h3 id="learning-from-losses-and-wins">Learning From Losses (And Wins)</h3>
+<p><strong>After losses:</strong></p>
 <p>Difficult but necessary: Honest post-match analysis.</p>
-<p>Questions to ask:</p>
-<p>1. Was this a technical loss? (Better technique would have changed outcome)</p>
-<p>2. Was this a tactical loss? (Better game plan would have changed outcome)</p>
-<p>3. Was this a mental loss? (Better mental game would have changed outcome)</p>
-<p>4. Was this just a better player? (They played well, I played okay — that's okay)</p>
+<p>Questions to ask:
+1. Was this a technical loss? (Better technique would have changed outcome)
+2. Was this a tactical loss? (Better game plan would have changed outcome)
+3. Was this a mental loss? (Better mental game would have changed outcome)
+4. Was this just a better player? (They played well, I played okay — that's okay)</p>
 <p>Each answer points to a different development area.</p>
-<strong>After wins:</strong>
+<p><strong>After wins:</strong></p>
 <p>Don't skip analysis after wins — there's as much to learn.</p>
-<p>Questions to ask:</p>
-<p>1. What tactical patterns worked particularly well?</p>
-<p>2. What mental situations handled well that used to be problems?</p>
-<p>3. What still needs work even though I won?</p>
-<h3>Journaling For Psychological Development</h3>
+<p>Questions to ask:
+1. What tactical patterns worked particularly well?
+2. What mental situations handled well that used to be problems?
+3. What still needs work even though I won?</p>
+<h3 id="journaling-for-psychological-development">Journaling For Psychological Development</h3>
 <p>Keeping a brief match journal is one of the highest-leverage tools for mental development.</p>
-<strong>Format (5 minutes per match):</strong>
-<em>Date, Opponent Level, Score:</em>
-<p>[Quick factual record]</p>
-<em>Technical:</em>
-<p>[What worked, what didn't — 2-3 sentences max]</p>
-<em>Tactical:</em>
-<p>[What patterns used, what adjusted — 2-3 sentences]</p>
-<em>Mental:</em>
-<p>[How mental game performed — specific moments. What went well? What needed work?]</p>
-<em>One thing to focus on next time:</em>
-<p>[One specific, actionable improvement area]</p>
-<strong>Review monthly:</strong>
-<p>Look for patterns in your journal. If "got tight at 30-40" appears in 7 of last 10 matches → that's your focus for next training cycle.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.11 Training The Competitive Mind</h2><h3>Pressure Inoculation In Practice</h3>
+<p><strong>Format (5 minutes per match):</strong></p>
+<p><em>Date, Opponent Level, Score:</em>
+[Quick factual record]</p>
+<p><em>Technical:</em>
+[What worked, what didn't — 2-3 sentences max]</p>
+<p><em>Tactical:</em>
+[What patterns used, what adjusted — 2-3 sentences]</p>
+<p><em>Mental:</em>
+[How mental game performed — specific moments. What went well? What needed work?]</p>
+<p><em>One thing to focus on next time:</em>
+[One specific, actionable improvement area]</p>
+<p><strong>Review monthly:</strong>
+Look for patterns in your journal. If "got tight at 30-40" appears in 7 of last 10 matches → that's your focus for next training cycle.</p>
+<hr/>
+<h2 id="1911-training-the-competitive-mind">19.11 Training The Competitive Mind</h2>
+<h3 id="pressure-inoculation-in-practice">Pressure Inoculation In Practice</h3>
 <p>The gap between practice performance and match performance is the mental game gap. Bridge it with pressure in practice.</p>
-<strong>Methods:</strong>
-<em>Score-based drills:</em>
-<p>Everything has stakes. Not just playing — keeping score. Even in groundstroke drills: first to 20 crosscourt winners, loser does 10 pushups.</p>
-<em>Consequence games:</em>
-<p>Something is at stake in every practice match. Loser buys water. Loser runs sprints. Loser serves a bucket of balls. Small stakes work — even tiny consequences activate pressure response.</p>
-<em>Spectator pressure:</em>
-<p>Practice with people watching when possible. Being watched creates real pressure.</p>
-<em>Critical moment simulations:</em>
-<p>Start games from 30-40 or game point situations. Play from 5-4 serving for set. Practice the exact situations you struggle with most.</p>
-<h3>Competition Mindset Transfer</h3>
+<p><strong>Methods:</strong></p>
+<p><em>Score-based drills:</em>
+Everything has stakes. Not just playing — keeping score. Even in groundstroke drills: first to 20 crosscourt winners, loser does 10 pushups.</p>
+<p><em>Consequence games:</em>
+Something is at stake in every practice match. Loser buys water. Loser runs sprints. Loser serves a bucket of balls. Small stakes work — even tiny consequences activate pressure response.</p>
+<p><em>Spectator pressure:</em>
+Practice with people watching when possible. Being watched creates real pressure.</p>
+<p><em>Critical moment simulations:</em>
+Start games from 30-40 or game point situations. Play from 5-4 serving for set. Practice the exact situations you struggle with most.</p>
+<h3 id="competition-mindset-transfer">Competition Mindset Transfer</h3>
 <p>The mindset that works in competition must be practiced IN competition, not just theorized.</p>
-<strong>Drills vs. Matches:</strong>
-<p>Drills build skills. Matches build match toughness. Both needed, but many players over-drill and under-compete.</p>
-<strong>Recommended ratio:</strong>
-<p>60-65% practice/drills, 35-40% competitive play. For players who lack match toughness: shift toward 50/50 temporarily.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.12 Reading The Match Situation — Advanced Pattern Recognition</h2><h3>Identifying "Turning Point" Opportunities</h3>
+<p><strong>Drills vs. Matches:</strong>
+Drills build skills. Matches build match toughness. Both needed, but many players over-drill and under-compete.</p>
+<p><strong>Recommended ratio:</strong>
+60-65% practice/drills, 35-40% competitive play. For players who lack match toughness: shift toward 50/50 temporarily.</p>
+<hr/>
+<h2 id="1912-reading-the-match-situation-advanced-pattern-recognition">19.12 Reading The Match Situation — Advanced Pattern Recognition</h2>
+<h3 id="identifying-turning-point-opportunities">Identifying "Turning Point" Opportunities</h3>
 <p>Every match has moments where the balance of probability shifts. Recognizing these in real time is advanced competitive intelligence.</p>
-<strong>Turning point indicators:</strong>
-<em>For you:</em>
-<ul class="styled-list">
-<li>Opponent's first serve percentage dropping</li>
-<li>Opponent missing shots they usually make</li>
-<li>Opponent's between-point routine changing (rushing or slowing abnormally)</li>
-<li>You winning 3+ consecutive points</li>
-<li>You executing a pattern cleanly that had been failing</li>
-</ul>
-<em>Against you:</em>
-<ul class="styled-list">
-<li>Your first serve percentage dropping</li>
-<li>You missing shots you usually make</li>
-<li>You feeling rushed between points</li>
-<li>Opponent making balls they weren't making earlier</li>
-</ul>
-<strong>Response to turning point:</strong>
-<p>When you see opportunity turning: Push, don't ease. Be MORE aggressive at this moment, not less.</p>
+<p><strong>Turning point indicators:</strong></p>
+<p><em>For you:</em>
+- Opponent's first serve percentage dropping
+- Opponent missing shots they usually make
+- Opponent's between-point routine changing (rushing or slowing abnormally)
+- You winning 3+ consecutive points
+- You executing a pattern cleanly that had been failing</p>
+<p><em>Against you:</em>
+- Your first serve percentage dropping
+- You missing shots you usually make
+- You feeling rushed between points
+- Opponent making balls they weren't making earlier</p>
+<p><strong>Response to turning point:</strong>
+When you see opportunity turning: Push, don't ease. Be MORE aggressive at this moment, not less.</p>
 <p>When you see things turning against you: Slow down. Reset. Make one tactical adjustment.</p>
-<h3>The "Third Ball" Insight</h3>
+<h3 id="the-third-ball-insight">The "Third Ball" Insight</h3>
 <p>In a competitive match, the THIRD ball of each rally often determines who controls the point.</p>
-<strong>Observation:</strong>
-<ul class="styled-list">
-<li>Ball 1: Your serve</li>
-<li>Ball 2: Opponent's return</li>
-<li>Ball 3: YOUR response to their return</li>
-</ul>
+<p><strong>Observation:</strong>
+- Ball 1: Your serve
+- Ball 2: Opponent's return
+- Ball 3: YOUR response to their return</p>
 <p>If you execute Ball 3 aggressively and decisively → you control the rally. If you go neutral or defensive on Ball 3 → opponent can take control.</p>
 <p>Training implication: The serve + 1 is not just about winning the point directly. It's about taking control early in the rally structure.</p>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.13 Mental Fitness Program — Competitive Intelligence</h2><h3>Month 1: Observation Skills</h3>
-<strong>During every match:</strong>
-<ul class="styled-list">
-<li>After each of opponent's service games, note: "Where did they serve most?" (T/Wide/Body, Deuce/Ad)</li>
-<li>After losing 3+ consecutive points: Identify one thing opponent did differently</li>
-<li>Note one "tell" per match — one behavior that correlates with opponent's performance state</li>
-</ul>
-<strong>Goal:</strong> Start building real-time observation habits.
-<hr>
-<h3>Month 2: Tempo Awareness</h3>
-<strong>Experiment:</strong>
-<ul class="styled-list">
-<li>In one set, play at your natural pace</li>
-<li>In next set, deliberately slow down pace by 20-30%</li>
-<li>Note: How does slowing down affect YOUR game? Opponent's?</li>
-</ul>
-<strong>Pressure scenarios:</strong>
-<p>Simulate 30-40 and 40-AD situations in practice. Use full between-point routine. Note whether routine helps.</p>
-<hr>
-<h3>Month 3: Pressure Integration</h3>
-<strong>Challenge:</strong> Play 10 competitive matches this month.
+<hr/>
+<h2 id="1913-mental-fitness-program-competitive-intelligence">19.13 Mental Fitness Program — Competitive Intelligence</h2>
+<h3 id="month-1-observation-skills">Month 1: Observation Skills</h3>
+<p><strong>During every match:</strong>
+- After each of opponent's service games, note: "Where did they serve most?" (T/Wide/Body, Deuce/Ad)
+- After losing 3+ consecutive points: Identify one thing opponent did differently
+- Note one "tell" per match — one behavior that correlates with opponent's performance state</p>
+<p><strong>Goal:</strong> Start building real-time observation habits.</p>
+<hr/>
+<h3 id="month-2-tempo-awareness">Month 2: Tempo Awareness</h3>
+<p><strong>Experiment:</strong>
+- In one set, play at your natural pace
+- In next set, deliberately slow down pace by 20-30%
+- Note: How does slowing down affect YOUR game? Opponent's?</p>
+<p><strong>Pressure scenarios:</strong>
+Simulate 30-40 and 40-AD situations in practice. Use full between-point routine. Note whether routine helps.</p>
+<hr/>
+<h3 id="month-3-pressure-integration">Month 3: Pressure Integration</h3>
+<p><strong>Challenge:</strong> Play 10 competitive matches this month.</p>
 <ul class="styled-list">
 <li>Before each: Write brief game plan (half page max)</li>
 <li>After each: Journal entry (5 min)</li>
 <li>Monthly: Review all 10 entries for patterns</li>
 </ul>
-<strong>Goal:</strong> Start seeing your own patterns under pressure — both successful and unsuccessful.
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">19.14 Five Common Competitive Intelligence Mistakes</h2><h3>Mistake 1: Only Watching The Ball — Never Watching The Opponent</h3>
-<strong>Description:</strong> Eyes on ball only. Never observing opponent's body language, patterns, tells.
-<strong>Result:</strong> Missing valuable information. Playing "blind" to psychological dynamics.
-<strong>Fix:</strong> Consciously allocate some attention to opponent observation — between points, during changeovers, even occasionally during points (via peripheral awareness).
-<hr>
-<h3>Mistake 2: Ignoring Your Own Tells</h3>
-<strong>Description:</strong> Not recognizing that you also have tells — patterns your opponent can read.
-<strong>Result:</strong> Opponent benefits from reading you, while you're not aware of being read.
-<strong>Fix:</strong> Video review. Ask training partner to note your patterns under pressure. Work to vary them.
-<hr>
-<h3>Mistake 3: Letting Opponent Control Tempo Entirely</h3>
-<strong>Description:</strong> Rushing to next point because opponent rushes. Or dawdling because opponent dawdles.
-<strong>Result:</strong> Playing at opponent's preferred pace — their comfort zone.
-<strong>Fix:</strong> Take YOUR time. Your routine is YOUR routine. Don't let opponent dictate it.
-<hr>
-<h3>Mistake 4: Overreacting To Momentum Shifts</h3>
-<strong>Description:</strong> When losing 3-4 points in a row, panic and completely change game plan.
-<strong>Result:</strong> No continuity. Multiple half-executed plans instead of one well-executed plan.
-<strong>Fix:</strong> Distinguish between normal variance (miss 3 shots) and actual tactical problem (plan clearly not working). Former: stay the course. Latter: make ONE adjustment.
-<hr>
-<h3>Mistake 5: Not Preparing Psychologically For Competition</h3>
-<strong>Description:</strong> Physical warm-up done meticulously. Mental warm-up: zero.
-<strong>Result:</strong> First few games spent mentally "warming up" — tentative shots, unclear intentions, reactive rather than proactive.
-<strong>Fix:</strong> Pre-match mental routine: Review game plan, set process intention, brief visualization of executing your patterns, physical anchoring before stepping on court.
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 19</h2><ul class="styled-list">
-<li><strong>Competitive intelligence</strong> là khả năng đọc và leverage psychological dynamics — distinct skill từ technique và tactics</li>
-</ul>
+<p><strong>Goal:</strong> Start seeing your own patterns under pressure — both successful and unsuccessful.</p>
+<hr/>
+<h2 id="1914-five-common-competitive-intelligence-mistakes">19.14 Five Common Competitive Intelligence Mistakes</h2>
+<h3 id="mistake-1-only-watching-the-ball-never-watching-the-opponent">Mistake 1: Only Watching The Ball — Never Watching The Opponent</h3>
+<p><strong>Description:</strong> Eyes on ball only. Never observing opponent's body language, patterns, tells.</p>
+<p><strong>Result:</strong> Missing valuable information. Playing "blind" to psychological dynamics.</p>
+<p><strong>Fix:</strong> Consciously allocate some attention to opponent observation — between points, during changeovers, even occasionally during points (via peripheral awareness).</p>
+<hr/>
+<h3 id="mistake-2-ignoring-your-own-tells">Mistake 2: Ignoring Your Own Tells</h3>
+<p><strong>Description:</strong> Not recognizing that you also have tells — patterns your opponent can read.</p>
+<p><strong>Result:</strong> Opponent benefits from reading you, while you're not aware of being read.</p>
+<p><strong>Fix:</strong> Video review. Ask training partner to note your patterns under pressure. Work to vary them.</p>
+<hr/>
+<h3 id="mistake-3-letting-opponent-control-tempo-entirely">Mistake 3: Letting Opponent Control Tempo Entirely</h3>
+<p><strong>Description:</strong> Rushing to next point because opponent rushes. Or dawdling because opponent dawdles.</p>
+<p><strong>Result:</strong> Playing at opponent's preferred pace — their comfort zone.</p>
+<p><strong>Fix:</strong> Take YOUR time. Your routine is YOUR routine. Don't let opponent dictate it.</p>
+<hr/>
+<h3 id="mistake-4-overreacting-to-momentum-shifts">Mistake 4: Overreacting To Momentum Shifts</h3>
+<p><strong>Description:</strong> When losing 3-4 points in a row, panic and completely change game plan.</p>
+<p><strong>Result:</strong> No continuity. Multiple half-executed plans instead of one well-executed plan.</p>
+<p><strong>Fix:</strong> Distinguish between normal variance (miss 3 shots) and actual tactical problem (plan clearly not working). Former: stay the course. Latter: make ONE adjustment.</p>
+<hr/>
+<h3 id="mistake-5-not-preparing-psychologically-for-competition">Mistake 5: Not Preparing Psychologically For Competition</h3>
+<p><strong>Description:</strong> Physical warm-up done meticulously. Mental warm-up: zero.</p>
+<p><strong>Result:</strong> First few games spent mentally "warming up" — tentative shots, unclear intentions, reactive rather than proactive.</p>
+<p><strong>Fix:</strong> Pre-match mental routine: Review game plan, set process intention, brief visualization of executing your patterns, physical anchoring before stepping on court.</p>
+<hr/>
+<h2 id="tom-tat-chuong-19">Tóm Tắt Chương 19</h2>
 <ul class="styled-list">
-<li><strong>Reading opponent</strong> includes behavioral tells (serve routine changes, body language), tactical tendencies, and mental state indicators</li>
+<li>
+<p><strong>Competitive intelligence</strong> là khả năng đọc và leverage psychological dynamics — distinct skill từ technique và tactics</p>
+</li>
+<li>
+<p><strong>Reading opponent</strong> includes behavioral tells (serve routine changes, body language), tactical tendencies, and mental state indicators</p>
+</li>
+<li>
+<p><strong>Tempo control</strong> is a legitimate competitive tool — slow down opponent's momentum, maintain your own rhythm</p>
+</li>
+<li>
+<p><strong>Sportsmanship line:</strong> Strategic tempo use, targeting weaknesses, body language are legitimate. Intentional delays, fake injuries, poor calls are not.</p>
+</li>
+<li>
+<p><strong>Momentum</strong> is real but can be disrupted with rhythm changes, tactical adjustments, and composure</p>
+</li>
+<li>
+<p><strong>Specific situation playbook:</strong> Serving for set, receiving to save set, wide margin, emotional opponent — each has specific psychological approach</p>
+</li>
+<li>
+<p><strong>Long-term development</strong> requires match volume, honest post-match analysis, and journaling for pattern recognition</p>
+</li>
+<li>
+<p><strong>Pressure inoculation</strong> in practice bridges gap between practice performance and match performance</p>
+</li>
+<li>
+<p><strong>Third ball insight:</strong> Controlling Ball 3 (your serve+1) often determines who controls entire rally</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Tempo control</strong> is a legitimate competitive tool — slow down opponent's momentum, maintain your own rhythm</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Sportsmanship line:</strong> Strategic tempo use, targeting weaknesses, body language are legitimate. Intentional delays, fake injuries, poor calls are not.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Momentum</strong> is real but can be disrupted with rhythm changes, tactical adjustments, and composure</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Specific situation playbook:</strong> Serving for set, receiving to save set, wide margin, emotional opponent — each has specific psychological approach</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Long-term development</strong> requires match volume, honest post-match analysis, and journaling for pattern recognition</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Pressure inoculation</strong> in practice bridges gap between practice performance and match performance</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Third ball insight:</strong> Controlling Ball 3 (your serve+1) often determines who controls entire rally</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-17"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 17</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chúng ta đã hoàn thành hai chương về mental game (Chương 18-19). Chương 20 sẽ chuyển sang lĩnh vực hoàn toàn khác nhưng equally important: <strong>Thể Lực Và Conditioning</strong> — xây dựng physical foundation để support technical và mental excellence trong suốt một trận đấu dài.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chúng ta đã hoàn thành hai chương về mental game (Chương 18-19). Chương 20 sẽ chuyển sang lĩnh vực hoàn toàn khác nhưng equally important: <strong>Thể Lực Và Conditioning</strong> — xây dựng physical foundation để support technical và mental excellence trong suốt một trận đấu dài.</p>
 <p>Không có gì phá hủy game plan và mental game nhanh hơn là <strong>physical fatigue</strong>. Chương 20 sẽ giải thích tại sao, và làm thế nào để build tennis-specific fitness.</p>
-<hr>
-<em>Chương 20: Thể Lực Và Conditioning — Nền Tảng Vật Lý →</em></div>
+<hr/>
+<p><em>Chương 20: Thể Lực Và Conditioning — Nền Tảng Vật Lý →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

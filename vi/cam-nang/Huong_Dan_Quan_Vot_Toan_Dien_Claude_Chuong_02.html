@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 02 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 02</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,278 +896,280 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 02</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 02</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 02</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">Chương 2: Cốt Lõi Xoay và Sức Mạnh Quay Người</h2><hr>
-> <em>"Khoảng cách giữa vai và hông — đó là nơi sinh ra mọi cú đánh nặng."</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 02 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#hông-vai-và-bí-mật-của-x-factor' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>HÔng, VAI VÀ BÍ MẬT CỦA X-FACTOR</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-2-cốt-lõi-xoay-và-sức-mạnh-quay-người' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 2: Cốt Lõi Xoay và Sức Mạnh Quay Người</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#21-x-factor-là-gì' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.1 X-Factor Là Gì?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#22-giải-phẫu-của-x-factor--những-cơ-nào-đang-làm-việc' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.2 Giải Phẫu Của X-Factor — Những Cơ Nào Đang Làm Việc?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#23-tại-sao-x-factor-quan-trọng-hơn-sức-mạnh-tay' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.3 Tại Sao X-Factor Quan Trọng Hơn Sức Mạnh Tay?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#24-timing-quan-trọng-hơn-góc-độ' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.4 Timing Quan Trọng Hơn Góc Độ</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#25-hai-cơ-chế-của-cốt-lõi-trong-tennis-hiện-đại' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.5 Hai Cơ Chế Của Cốt Lõi Trong Tennis Hiện Đại</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#26-bốn-lỗi-cốt-lõi-phổ-biến-nhất' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.6 Bốn Lỗi Cốt Lõi Phổ Biến Nhất</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#27-x-factor-trong-các-cú-đánh-khác-nhau' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.7 X-Factor Trong Các Cú Đánh Khác Nhau</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#28-đo-lường-x-factor-của-bạn' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.8 Đo Lường X-Factor Của Bạn</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#29-bài-tập-xây-dựng-x-factor' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.9 Bài Tập Xây Dựng X-Factor</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#210-chỉ-số-tiến-bộ--biết-bạn-đang-tiến-bộ-như-thế-nào' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.10 Chỉ Số Tiến Bộ — Biết Bạn Đang Tiến Bộ Như Thế Nào</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#211-x-factor-và-phòng-chống-chấn-thương' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.11 X-Factor Và Phòng Chống Chấn Thương</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#212-phân-tích-các-tay-vợt-chuyên-nghiệp' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.12 Phân Tích Các Tay Vợt Chuyên Nghiệp</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#213-cách-tích-hợp-x-factor-vào-tập-luyện-hàng-ngày' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>2.13 Cách Tích Hợp X-Factor Vào Tập Luyện Hàng Ngày</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-2' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 2</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#đọc-thêm-cho-chương-tiếp-theo' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Đọc Thêm Cho Chương Tiếp Theo</a></li></ul></div>
+    <h1 id="hong-vai-va-bi-mat-cua-x-factor">HÔng, VAI VÀ BÍ MẬT CỦA X-FACTOR</h1>
+<h2 id="chuong-2-cot-loi-xoay-va-suc-manh-quay-nguoi">Chương 2: Cốt Lõi Xoay và Sức Mạnh Quay Người</h2>
+<hr/>
+<div class="pullquote"><p>*"Khoảng cách giữa vai và hông — đó là nơi sinh ra mọi cú đánh nặng."*</p></div>
+<hr/>
 <p>Năm 2005, các nhà khoa học thể thao đo lường cú forehand của Rafael Nadal và phát hiện một điều kỳ lạ: góc xoay của vai anh ta ở đỉnh backswing vượt xa góc xoay của hông đến mức gần như khó tin. Khi hông đã xoay 45 độ về phía sau, vai anh ta đã xoay thêm 60 độ nữa so với hông — tổng cộng vai cách hông hơn 100 độ.</p>
 <p>Cái khoảng cách đó — giữa góc xoay của vai và của hông — chính là <strong>X-Factor</strong>.</p>
 <p>Và khi Nadal "buông" cái lò xo khổng lồ đó ra, bóng bay với lực topspin 4500 vòng/phút, khiến đối thủ phải đánh bóng ở ngang tai.</p>
 <p>Chương này sẽ giải thích tại sao X-Factor là nguồn sức mạnh lớn nhất trong quần vợt — và quan trọng hơn, làm thế nào để <em>bạn</em> phát triển nó dù bạn không có thân hình hay thể lực như Nadal.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.1 X-Factor Là Gì?</h2><p>Trước tiên, hãy hình dung rõ ràng X-Factor trông như thế nào.</p>
+<hr/>
+<h2 id="21-x-factor-la-gi">2.1 X-Factor Là Gì?</h2>
+<p>Trước tiên, hãy hình dung rõ ràng X-Factor trông như thế nào.</p>
 <p>Đứng thẳng, mặt hướng về phía trước. Bây giờ xoay phần thân trên (từ eo trở lên) sang trái, trong khi giữ hông <em>không nhúc nhích</em>. Bạn sẽ cảm thấy một lực kéo căng dọc theo bên sườn và bụng. Đó chính là cảm giác của X-Factor.</p>
-<strong>Định nghĩa chính xác:</strong> X-Factor là <em>sự chênh lệch góc xoay</em> giữa vai (thoracic rotation) và hông (pelvic rotation) ở đỉnh của backswing. Nếu hông xoay 30 độ về sau mà vai xoay 90 độ — X-Factor là 60 độ.
+<p><strong>Định nghĩa chính xác:</strong> X-Factor là <em>sự chênh lệch góc xoay</em> giữa vai (thoracic rotation) và hông (pelvic rotation) ở đỉnh của backswing. Nếu hông xoay 30 độ về sau mà vai xoay 90 độ — X-Factor là 60 độ.</p>
 <p>Khoảng cách đó không phải chỉ là hình học. Nó đại diện cho lượng <strong>năng lượng đàn hồi</strong> được tích trữ trong các cơ chéo bụng (obliques), các dây chằng cột sống, và hệ thống cân cơ (fascia) của toàn thân mình.</p>
 <p>Cơ thể bạn giống như một chiếc cung tên. X-Factor càng lớn, cung được kéo căng càng nhiều, và mũi tên (đầu vợt) sẽ bắn ra càng mạnh.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.2 Giải Phẫu Của X-Factor — Những Cơ Nào Đang Làm Việc?</h2><p>Để hiểu X-Factor, bạn cần biết những cơ nào đang tham gia. Đây không phải kiến thức y học khô khan — hiểu điều này sẽ giúp bạn tập đúng cơ và tránh tập sai.</p>
-<h3>Cơ Chéo Bụng Ngoài và Trong (External & Internal Obliques)</h3>
+<hr/>
+<h2 id="22-giai-phau-cua-x-factor-nhung-co-nao-ang-lam-viec">2.2 Giải Phẫu Của X-Factor — Những Cơ Nào Đang Làm Việc?</h2>
+<p>Để hiểu X-Factor, bạn cần biết những cơ nào đang tham gia. Đây không phải kiến thức y học khô khan — hiểu điều này sẽ giúp bạn tập đúng cơ và tránh tập sai.</p>
+<h3 id="co-cheo-bung-ngoai-va-trong-external-internal-obliques">Cơ Chéo Bụng Ngoài và Trong (External &amp; Internal Obliques)</h3>
 <p>Đây là những "anh hùng thầm lặng" của X-Factor. Chúng chạy chéo qua bụng bạn như các dải ruy băng bắt chéo nhau. Khi vai xoay ngược chiều với hông, các cơ chéo bụng bị kéo căng ra theo cả hai hướng cùng lúc — tạo ra sức kéo đàn hồi cực lớn.</p>
-<strong>Hình dung:</strong> Bạn đang vắt nước một cái khăn. Khi vặn khăn, vải khăn (cơ chéo bụng) bị xoắn và tích trữ lực. Khi thả ra, khăn bung ngược lại đột ngột. Đó là X-Factor.
-<h3>Dây Chằng Thoracolumbar Fascia (Cân Lưng Thắt Lưng)</h3>
+<p><strong>Hình dung:</strong> Bạn đang vắt nước một cái khăn. Khi vặn khăn, vải khăn (cơ chéo bụng) bị xoắn và tích trữ lực. Khi thả ra, khăn bung ngược lại đột ngột. Đó là X-Factor.</p>
+<h3 id="day-chang-thoracolumbar-fascia-can-lung-that-lung">Dây Chằng Thoracolumbar Fascia (Cân Lưng Thắt Lưng)</h3>
 <p>Đây là một tấm cân cơ rộng ở vùng lưng dưới, kết nối cột sống với cơ lưng dưới, cơ mông và cơ lưng trên. Nó hoạt động như một "dây đai truyền lực" trong X-Factor.</p>
 <p>Khi hông giữ im và vai xoay, tấm cân này bị kéo căng. Khi hông bắt đầu xoay tới, nó "đẩy" vai theo sau với lực gấp nhiều lần lực cơ bắp thuần túy.</p>
-<h3>Cơ Lưng Rộng (Latissimus Dorsi)</h3>
+<h3 id="co-lung-rong-latissimus-dorsi">Cơ Lưng Rộng (Latissimus Dorsi)</h3>
 <p>Cơ lưng rộng — hay "lat" như người tập gym thường gọi — kết nối xương bả vai với xương chậu. Trong X-Factor, nó giúp duy trì sự liên kết giữa vai và hông trong khi tạo ra độ kéo căng tối đa.</p>
-<h3>Cơ Hông Xoay Ngoài (Hip External Rotators)</h3>
+<h3 id="co-hong-xoay-ngoai-hip-external-rotators">Cơ Hông Xoay Ngoài (Hip External Rotators)</h3>
 <p>Nhóm cơ này bao gồm piriformis và các cơ nhỏ quanh khớp hông. Chúng giúp hông "giữ vững" trong khi vai xoay về sau — tạo ra thế đối nghịch cần thiết cho X-Factor.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.3 Tại Sao X-Factor Quan Trọng Hơn Sức Mạnh Tay?</h2><p>Đây là một câu hỏi hay, và câu trả lời sẽ làm thay đổi cách bạn nhìn nhận việc tập luyện.</p>
+<hr/>
+<h2 id="23-tai-sao-x-factor-quan-trong-hon-suc-manh-tay">2.3 Tại Sao X-Factor Quan Trọng Hơn Sức Mạnh Tay?</h2>
+<p>Đây là một câu hỏi hay, và câu trả lời sẽ làm thay đổi cách bạn nhìn nhận việc tập luyện.</p>
 <p>Hãy so sánh hai tình huống:</p>
-<strong>Tình huống A:</strong> Người A có cơ tay và vai rất mạnh, nhưng ít khi xoay thân mình. Khi đánh forehand, vai anh ta chỉ xoay thêm khoảng 20 độ so với hông.
-<strong>Tình huống B:</strong> Người B có cơ tay bình thường, nhưng xoay vai tốt. Vai anh ta xoay thêm 70 độ so với hông khi backswing.
+<p><strong>Tình huống A:</strong> Người A có cơ tay và vai rất mạnh, nhưng ít khi xoay thân mình. Khi đánh forehand, vai anh ta chỉ xoay thêm khoảng 20 độ so với hông.</p>
+<p><strong>Tình huống B:</strong> Người B có cơ tay bình thường, nhưng xoay vai tốt. Vai anh ta xoay thêm 70 độ so với hông khi backswing.</p>
 <p>Ai sẽ đánh bóng mạnh hơn?</p>
 <p>Câu trả lời là Người B — và cách biệt không nhỏ.</p>
-<strong>Lý do toán học:</strong>
+<p><strong>Lý do toán học:</strong></p>
 <p>Tốc độ đầu vợt = bán kính xoay × vận tốc góc</p>
 <p>Khi X-Factor tăng gấp đôi (từ 20 lên 70 độ), lực đàn hồi tích trữ tăng lên theo luỹ thừa — không phải tuyến tính. Thêm vào đó, khi vai "kéo theo sau" hông trong khi xoay tới, nó tạo ra hiệu ứng roi da (whip effect) — mỗi mắt xích của chuỗi phóng lực lên mắt xích tiếp theo.</p>
 <p>Kết quả thực tế: Các cú forehand với X-Factor tốt thường tạo ra tốc độ đầu vợt cao hơn 30-40% so với những cú đánh cùng người nhưng không có X-Factor.</p>
-<strong>Bằng chứng từ thực tế:</strong> Justine Henin — một trong những tay vợt nữ nhỏ nhắt nhất của tour WTA — có cú backhand một tay nổi tiếng là đánh nặng không kém gì các tay vợt lớn hơn. Lý do: kỹ thuật X-Factor của cô ấy gần như hoàn hảo. Cô đẩy hông giữ lại trong khi vai xoay tối đa về sau, rồi "bung" với tốc độ rất cao.
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.4 Timing Quan Trọng Hơn Góc Độ</h2><p>Đây là điều quan trọng nhất trong chương này — và là điều mà nhiều sách dạy tennis cũ bỏ sót hoàn toàn.</p>
+<p><strong>Bằng chứng từ thực tế:</strong> Justine Henin — một trong những tay vợt nữ nhỏ nhắt nhất của tour WTA — có cú backhand một tay nổi tiếng là đánh nặng không kém gì các tay vợt lớn hơn. Lý do: kỹ thuật X-Factor của cô ấy gần như hoàn hảo. Cô đẩy hông giữ lại trong khi vai xoay tối đa về sau, rồi "bung" với tốc độ rất cao.</p>
+<hr/>
+<h2 id="24-timing-quan-trong-hon-goc-o">2.4 Timing Quan Trọng Hơn Góc Độ</h2>
+<p>Đây là điều quan trọng nhất trong chương này — và là điều mà nhiều sách dạy tennis cũ bỏ sót hoàn toàn.</p>
 <p>X-Factor không chỉ là <em>bao nhiêu</em> bạn xoay, mà là <em>khi nào</em> bạn bắt đầu từng chuyển động.</p>
-<h3>X-Factor Tĩnh (Old School) vs X-Factor Động (Modern Tennis)</h3>
-<strong>Cách hiểu cũ (X-Factor Tĩnh):</strong>
-<p>"Xoay vai thật nhiều ở đỉnh backswing, giữ nguyên đó, rồi mới đánh tới."</p>
-<strong>Cách hiểu hiện đại (X-Factor Động):</strong>
-<p>"Hông bắt đầu xoay về phía trước <em>trước khi</em> vai hoàn thành xoay về sau."</p>
+<h3 id="x-factor-tinh-old-school-vs-x-factor-ong-modern-tennis">X-Factor Tĩnh (Old School) vs X-Factor Động (Modern Tennis)</h3>
+<p><strong>Cách hiểu cũ (X-Factor Tĩnh):</strong>
+"Xoay vai thật nhiều ở đỉnh backswing, giữ nguyên đó, rồi mới đánh tới."</p>
+<p><strong>Cách hiểu hiện đại (X-Factor Động):</strong>
+"Hông bắt đầu xoay về phía trước <em>trước khi</em> vai hoàn thành xoay về sau."</p>
 <p>Đây là sự khác biệt cực kỳ lớn.</p>
 <p>Hãy nhìn Alcaraz hoặc Sinner trong slow motion. Tại thời điểm hông của họ đã bắt đầu xoay về phía lưới — vai của họ vẫn đang xoay về sau. Trong khoảnh khắc đó, cơ thể của họ đang bị "kéo từ hai đầu" cùng lúc — hông đi tới, vai đang vẫn đi lui.</p>
 <p>Khoảnh khắc đó tạo ra một độ kéo căng cực đại — <strong>lớn hơn nhiều so với bất kỳ X-Factor tĩnh nào có thể đạt được</strong>.</p>
-<h3>Tại Sao Điều Này Tạo Ra Nhiều Lực Hơn?</h3>
+<h3 id="tai-sao-ieu-nay-tao-ra-nhieu-luc-hon">Tại Sao Điều Này Tạo Ra Nhiều Lực Hơn?</h3>
 <p>Khi hông đã xoay tới trong khi vai còn đang xoay lui — sự chênh lệch góc (X-Factor) thực sự còn lớn hơn so với đỉnh backswing. Và vì sự chênh lệch này tạo ra <em>ngay trước khi</em> vai bắt đầu xoay tới, SSC (chu trình lò xo đàn hồi từ Chương 1) được tối ưu hóa hoàn toàn.</p>
 <p>Đây là lý do tại sao hướng dẫn "hoàn thành backswing rồi mới đánh" là một <strong>cái bẫy</strong>. Nếu bạn chờ vai hoàn thành xoay về sau trước, bạn đang mất đi nguồn lực đàn hồi lớn nhất.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.5 Hai Cơ Chế Của Cốt Lõi Trong Tennis Hiện Đại</h2><p>Nhiều người nghĩ "cốt lõi" (core) trong tennis là để "giữ thăng bằng" hoặc "ổn định thân mình". Đó là đúng nhưng chưa đủ — và đây là điểm quan trọng cần hiểu rõ.</p>
+<hr/>
+<h2 id="25-hai-co-che-cua-cot-loi-trong-tennis-hien-ai">2.5 Hai Cơ Chế Của Cốt Lõi Trong Tennis Hiện Đại</h2>
+<p>Nhiều người nghĩ "cốt lõi" (core) trong tennis là để "giữ thăng bằng" hoặc "ổn định thân mình". Đó là đúng nhưng chưa đủ — và đây là điểm quan trọng cần hiểu rõ.</p>
 <p>Trong tennis hiện đại, cốt lõi thực hiện <strong>hai vai trò rất khác nhau</strong> trong cùng một cú đánh:</p>
-<h3>Vai Trò 1: Phát Sinh Lực Xoay (Power Generator)</h3>
+<h3 id="vai-tro-1-phat-sinh-luc-xoay-power-generator">Vai Trò 1: Phát Sinh Lực Xoay (Power Generator)</h3>
 <p>Trong giai đoạn kéo về sau và đầu giai đoạn đánh tới, cốt lõi là <strong>động cơ chính</strong> tạo ra lực xoay. Các cơ chéo bụng, cơ lưng dưới và cân lưng thắt lưng cùng hoạt động để tạo ra và truyền lực từ hông lên vai.</p>
 <p>Ở giai đoạn này, cốt lõi cần <strong>linh hoạt và có thể di chuyển qua biên độ lớn</strong> — giống như dây cung được kéo căng.</p>
-<h3>Vai Trò 2: Cứng Hóa Tại Thời Điểm Tiếp Xúc (Stiffening at Impact)</h3>
+<h3 id="vai-tro-2-cung-hoa-tai-thoi-iem-tiep-xuc-stiffening-at-impact">Vai Trò 2: Cứng Hóa Tại Thời Điểm Tiếp Xúc (Stiffening at Impact)</h3>
 <p>Vào đúng khoảnh khắc vợt chạm bóng, cốt lõi cần <strong>cứng lại đột ngột</strong> — tạo ra một nền tảng vững chắc để lực từ tay truyền thẳng vào bóng, không bị "hút" vào trong cơ thể.</p>
 <p>Hãy hình dung bạn đang đánh búa. Nếu tay cầm búa mềm và dẻo, lực bị hấp thụ vào tay cầm. Nếu tay cầm cứng và thẳng, lực truyền thẳng vào cái đinh. Cốt lõi trong tennis hoạt động y như vậy tại thời điểm tiếp xúc bóng.</p>
-<h3>Hậu Quả Nếu Hiểu Sai Điều Này</h3>
+<h3 id="hau-qua-neu-hieu-sai-ieu-nay">Hậu Quả Nếu Hiểu Sai Điều Này</h3>
 <p>Nhiều người tập "plank" (chống tay nằm) để tăng cường cốt lõi cho tennis. Plank tốt cho "cứng hóa cốt lõi tĩnh" — nhưng không tốt cho "cốt lõi xoay động".</p>
 <p>Ngược lại, nhiều người chỉ tập xoay mà không luyện tập sự cứng chắc tại thời điểm tiếp xúc — dẫn đến bóng đánh ra không có "bite" (độ cắn vào).</p>
 <p>Bài tập lý tưởng phải <strong>kết hợp cả hai</strong>: xoay mạnh và cứng đột ngột.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.6 Bốn Lỗi Cốt Lõi Phổ Biến Nhất</h2><p>Trong thực tế huấn luyện, có bốn dạng lỗi cốt lõi phổ biến nhất. Mỗi dạng có dấu hiệu nhận biết khác nhau và cách sửa khác nhau.</p>
-<h3>Lỗi 1: "Bucket Leak" — Hông Nghiêng Khi Đánh</h3>
-<strong>Dấu hiệu nhận biết:</strong> Bóng bạn đánh ra trông có vẻ kỹ thuật đúng nhưng thiếu "độ nặng" — không xuyên sâu vào sân đối thủ. Đôi khi hông bạn "trễ" sang một bên khi tay vợt đánh tới.
-<strong>Nguyên nhân:</strong> Khi hông nghiêng (tilt) thay vì xoay ngang, toàn bộ trục xoay bị lệch. Lực từ hông không truyền lên được mà thoát ra khỏi đáy của chuỗi.
-<strong>Hình dung:</strong> Tưởng tượng một cái xô nước. Nếu bạn vặn cái xô theo trục đứng, nước không bị tràn. Nếu bạn nghiêng xô, nước tràn ra khỏi miệng. Hông nghiêng = nước tràn = lực thoát ra trước khi lên tới vai và tay.
-<strong>Cách sửa:</strong> Đặt một cây gậy hoặc racket ngang qua hông trước gương. Khi xoay, cây gậy phải giữ nằm ngang — không được đầu một bên thấp hơn đầu kia.
-<hr>
-<h3>Lỗi 2: "Sway Fault" — Đung Đưa Thay Vì Xoay</h3>
-<strong>Dấu hiệu nhận biết:</strong> Thay vì cơ thể xoay quanh một trục đứng cố định, toàn bộ cơ thể "đung đưa" sang trái hoặc phải. Bóng thường bị "đẩy" thay vì "quất". Người xem sẽ thấy bạn trông như đang "lăn" sang một bên.
-<strong>Nguyên nhân:</strong> Đây thường là di chứng của việc học tennis theo kiểu cũ — "bước vào bóng" theo chiều ngang. Khi thói quen này ăn sâu, cơ thể học cách tạo lực bằng đung đưa ngang thay vì xoay dọc.
-<strong>Hậu quả kỹ thuật:</strong> Bóng đi có tốc độ nhưng không có "spin" hay "depth" thực sự. Và khi mệt, bóng càng ngày càng lạc hơn vì không có trục xoay ổn định.
-<strong>Cách sửa:</strong> Tập shadow forehand (đánh không bóng) với một người bạn đứng phía sau đặt tay lên hai vai bạn. Nếu vai bạn đung đưa qua lại thay vì xoay vòng, người bạn sẽ cảm nhận ngay. Mục tiêu: vai bạn xoay vòng tròn trong khi đầu và cột sống giữ nguyên vị trí theo chiều thẳng đứng.
-<hr>
-<h3>Lỗi 3: "Braking Failure" — Không Phanh Được Sau Khi Đánh</h3>
-<strong>Dấu hiệu nhận biết:</strong> Sau khi đánh, cơ thể tiếp tục xoay "mất kiểm soát" — bạn phải bước nhiều bước mới giữ được thăng bằng. Bạn thường cảm thấy "hụt hẫng" hoặc "bị kéo" sau cú đánh.
-<strong>Nguyên nhân:</strong> Cốt lõi không đủ khả năng phanh lực xoay sau khi tiếp xúc bóng. Đây không phải vấn đề về sức mạnh xoay mà là về <strong>sức mạnh phanh</strong>.
-<strong>Tại sao quan trọng:</strong> Khi cơ thể không phanh được, bóng thường bị "kéo" theo chiều xoay của thân — tức là ra ngoài court. Và chấn thương lưng dưới mãn tính thường bắt nguồn từ đây: cột sống phải hấp thụ lực xoay dư thừa mà cốt lõi không phanh được.
-<strong>Cách sửa:</strong> Bài tập Pallof Press (xem mục 2.9) và tập anti-rotation — các bài tập cốt lõi chống xoay — sẽ xây dựng khả năng phanh này.
-<hr>
-<h3>Lỗi 4: "The Disconnect" — Hông và Vai Xoay Cùng Lúc</h3>
-<strong>Dấu hiệu nhận biết:</strong> Đây là lỗi phổ biến nhất ở người mới và cả nhiều người chơi lâu năm. Khi bạn xoay, hông và vai di chuyển cùng nhau như một khối cứng thay vì hông đi trước vai. Kết quả là không có X-Factor, không có hiệu ứng lò xo.
-<strong>Nguyên nhân:</strong> Bộ não thường dạy cơ thể di chuyển "an toàn" — và xoay cả khối là cách di chuyển an toàn nhất. X-Factor đòi hỏi cơ thể chấp nhận một trạng thái "không thoải mái" tạm thời khi hai phần cơ thể kéo ngược chiều nhau.
-<strong>Hậu quả:</strong> Đây là nguyên nhân số một khiến người mới tập không tạo được lực xoay. Họ "thay thế" bằng lực tay — và vòng luẩn quẩn của việc dùng tay quá nhiều bắt đầu từ đây.
-<strong>Cách sửa:</strong> Bài tập Medicine Ball Slingshot ở mục 2.9 là công cụ tốt nhất để sửa lỗi này vì nó buộc bạn <strong>cảm nhận</strong> sự trễ giữa hông và vai thay vì chỉ "nghĩ" về nó.
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.7 X-Factor Trong Các Cú Đánh Khác Nhau</h2><p>X-Factor không chỉ xuất hiện trong forehand. Nó có mặt trong mọi cú đánh — nhưng biểu hiện theo những cách khác nhau.</p>
-<h3>Trong Serve</h3>
+<hr/>
+<h2 id="26-bon-loi-cot-loi-pho-bien-nhat">2.6 Bốn Lỗi Cốt Lõi Phổ Biến Nhất</h2>
+<p>Trong thực tế huấn luyện, có bốn dạng lỗi cốt lõi phổ biến nhất. Mỗi dạng có dấu hiệu nhận biết khác nhau và cách sửa khác nhau.</p>
+<h3 id="loi-1-bucket-leak-hong-nghieng-khi-anh">Lỗi 1: "Bucket Leak" — Hông Nghiêng Khi Đánh</h3>
+<p><strong>Dấu hiệu nhận biết:</strong> Bóng bạn đánh ra trông có vẻ kỹ thuật đúng nhưng thiếu "độ nặng" — không xuyên sâu vào sân đối thủ. Đôi khi hông bạn "trễ" sang một bên khi tay vợt đánh tới.</p>
+<p><strong>Nguyên nhân:</strong> Khi hông nghiêng (tilt) thay vì xoay ngang, toàn bộ trục xoay bị lệch. Lực từ hông không truyền lên được mà thoát ra khỏi đáy của chuỗi.</p>
+<p><strong>Hình dung:</strong> Tưởng tượng một cái xô nước. Nếu bạn vặn cái xô theo trục đứng, nước không bị tràn. Nếu bạn nghiêng xô, nước tràn ra khỏi miệng. Hông nghiêng = nước tràn = lực thoát ra trước khi lên tới vai và tay.</p>
+<p><strong>Cách sửa:</strong> Đặt một cây gậy hoặc racket ngang qua hông trước gương. Khi xoay, cây gậy phải giữ nằm ngang — không được đầu một bên thấp hơn đầu kia.</p>
+<hr/>
+<h3 id="loi-2-sway-fault-ung-ua-thay-vi-xoay">Lỗi 2: "Sway Fault" — Đung Đưa Thay Vì Xoay</h3>
+<p><strong>Dấu hiệu nhận biết:</strong> Thay vì cơ thể xoay quanh một trục đứng cố định, toàn bộ cơ thể "đung đưa" sang trái hoặc phải. Bóng thường bị "đẩy" thay vì "quất". Người xem sẽ thấy bạn trông như đang "lăn" sang một bên.</p>
+<p><strong>Nguyên nhân:</strong> Đây thường là di chứng của việc học tennis theo kiểu cũ — "bước vào bóng" theo chiều ngang. Khi thói quen này ăn sâu, cơ thể học cách tạo lực bằng đung đưa ngang thay vì xoay dọc.</p>
+<p><strong>Hậu quả kỹ thuật:</strong> Bóng đi có tốc độ nhưng không có "spin" hay "depth" thực sự. Và khi mệt, bóng càng ngày càng lạc hơn vì không có trục xoay ổn định.</p>
+<p><strong>Cách sửa:</strong> Tập shadow forehand (đánh không bóng) với một người bạn đứng phía sau đặt tay lên hai vai bạn. Nếu vai bạn đung đưa qua lại thay vì xoay vòng, người bạn sẽ cảm nhận ngay. Mục tiêu: vai bạn xoay vòng tròn trong khi đầu và cột sống giữ nguyên vị trí theo chiều thẳng đứng.</p>
+<hr/>
+<h3 id="loi-3-braking-failure-khong-phanh-uoc-sau-khi-anh">Lỗi 3: "Braking Failure" — Không Phanh Được Sau Khi Đánh</h3>
+<p><strong>Dấu hiệu nhận biết:</strong> Sau khi đánh, cơ thể tiếp tục xoay "mất kiểm soát" — bạn phải bước nhiều bước mới giữ được thăng bằng. Bạn thường cảm thấy "hụt hẫng" hoặc "bị kéo" sau cú đánh.</p>
+<p><strong>Nguyên nhân:</strong> Cốt lõi không đủ khả năng phanh lực xoay sau khi tiếp xúc bóng. Đây không phải vấn đề về sức mạnh xoay mà là về <strong>sức mạnh phanh</strong>.</p>
+<p><strong>Tại sao quan trọng:</strong> Khi cơ thể không phanh được, bóng thường bị "kéo" theo chiều xoay của thân — tức là ra ngoài court. Và chấn thương lưng dưới mãn tính thường bắt nguồn từ đây: cột sống phải hấp thụ lực xoay dư thừa mà cốt lõi không phanh được.</p>
+<p><strong>Cách sửa:</strong> Bài tập Pallof Press (xem mục 2.9) và tập anti-rotation — các bài tập cốt lõi chống xoay — sẽ xây dựng khả năng phanh này.</p>
+<hr/>
+<h3 id="loi-4-the-disconnect-hong-va-vai-xoay-cung-luc">Lỗi 4: "The Disconnect" — Hông và Vai Xoay Cùng Lúc</h3>
+<p><strong>Dấu hiệu nhận biết:</strong> Đây là lỗi phổ biến nhất ở người mới và cả nhiều người chơi lâu năm. Khi bạn xoay, hông và vai di chuyển cùng nhau như một khối cứng thay vì hông đi trước vai. Kết quả là không có X-Factor, không có hiệu ứng lò xo.</p>
+<p><strong>Nguyên nhân:</strong> Bộ não thường dạy cơ thể di chuyển "an toàn" — và xoay cả khối là cách di chuyển an toàn nhất. X-Factor đòi hỏi cơ thể chấp nhận một trạng thái "không thoải mái" tạm thời khi hai phần cơ thể kéo ngược chiều nhau.</p>
+<p><strong>Hậu quả:</strong> Đây là nguyên nhân số một khiến người mới tập không tạo được lực xoay. Họ "thay thế" bằng lực tay — và vòng luẩn quẩn của việc dùng tay quá nhiều bắt đầu từ đây.</p>
+<p><strong>Cách sửa:</strong> Bài tập Medicine Ball Slingshot ở mục 2.9 là công cụ tốt nhất để sửa lỗi này vì nó buộc bạn <strong>cảm nhận</strong> sự trễ giữa hông và vai thay vì chỉ "nghĩ" về nó.</p>
+<hr/>
+<h2 id="27-x-factor-trong-cac-cu-anh-khac-nhau">2.7 X-Factor Trong Các Cú Đánh Khác Nhau</h2>
+<p>X-Factor không chỉ xuất hiện trong forehand. Nó có mặt trong mọi cú đánh — nhưng biểu hiện theo những cách khác nhau.</p>
+<h3 id="trong-serve">Trong Serve</h3>
 <p>Đây là X-Factor "dọc" — thay vì xoay ngang, cơ thể tạo ra sự căng bằng cách nghiêng vai (shoulder tilt) trong khi hông đẩy về phía trước.</p>
 <p>Nhìn Sinner hay Djokovic ở trophy position (tư thế chuẩn bị serve): vai đánh của họ cao hơn vai còn lại rất nhiều, và hông đang đẩy ra phía lưới trong khi lưng cong về sau. Toàn bộ cơ thể trông giống một cái cung dọc được kéo căng. Khi họ "bung" ra — năng lượng đó chuyển hóa thành vận tốc xoay cực lớn của cánh tay (internal shoulder rotation), tạo ra serve 200+ km/h.</p>
-<h3>Trong Backhand Hai Tay</h3>
+<h3 id="trong-backhand-hai-tay">Trong Backhand Hai Tay</h3>
 <p>X-Factor trong backhand hai tay hoạt động "đối xứng" với forehand — nhưng tay không thuận (tay trái với người thuận tay phải) là tay <em>chủ động</em> tạo ra lực, không phải tay thuận.</p>
 <p>Đây là lý do tại sao backhand hai tay thực chất là "forehand tay trái" của người thuận tay phải. Khi bạn hiểu điều này, việc luyện tập backhand hai tay sẽ hoàn toàn khác đi.</p>
-<h3>Trong Backhand Một Tay</h3>
+<h3 id="trong-backhand-mot-tay">Trong Backhand Một Tay</h3>
 <p>Backhand một tay sử dụng một biến thể X-Factor nhỏ hơn về góc độ nhưng đòi hỏi độ chính xác cao hơn trong timing. Cần có scapular retraction (kéo xương bả vai ra sau) — một kỹ năng riêng sẽ được đề cập chi tiết ở Chương 7.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.8 Đo Lường X-Factor Của Bạn</h2><p>Bạn không cần thiết bị phức tạp để đánh giá X-Factor của mình. Đây là một bài kiểm tra đơn giản:</p>
-<h3>Bài Kiểm Tra X-Factor Cơ Bản</h3>
-<strong>Bước 1:</strong> Đứng trước gương lớn hoặc nhờ bạn bè quay video từ góc nhìn từ trên xuống (top-down view).
-<strong>Bước 2:</strong> Thực hiện shadow forehand backswing — kéo tay vợt về sau đến vị trí chuẩn bị đánh.
-<strong>Bước 3:</strong> Đừng nhìn vào tay hay vợt. Nhìn vào <strong>đường nối hai vai</strong> và <strong>đường nối hai hông</strong>.
-<strong>Đánh giá:</strong>
-<ul class="styled-list">
-<li>Nếu hai đường này gần song song với nhau → X-Factor thấp (lỗi Disconnect)</li>
-<li>Nếu đường vai xoay thêm 30-40 độ so với đường hông → X-Factor trung bình</li>
-<li>Nếu đường vai xoay thêm 50-70+ độ so với đường hông → X-Factor tốt</li>
-</ul>
-<strong>Kiểm tra thêm:</strong> Từ vị trí backswing đó, cảm nhận xem bạn có cảm giác "kéo căng" ở bên sườn và bụng không? Nếu có — đó là năng lượng đàn hồi đang tích lũy. Nếu không có cảm giác đó — X-Factor của bạn chưa đủ sâu.
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.9 Bài Tập Xây Dựng X-Factor</h2><p>Đây là bốn bài tập được thiết kế đặc biệt để xây dựng X-Factor. Mỗi bài nhắm vào một khía cạnh khác nhau.</p>
-<h3>Bài Tập 1: Medicine Ball Slingshot (Ném Bóng Như Dây Treo)</h3>
-<strong>Mục tiêu:</strong> Cảm nhận sự "trễ" của vai so với hông — đây là bài tập quan trọng nhất để sửa lỗi Disconnect.
-<strong>Thiết bị:</strong> Bóng medicine 3-4 kg, tường chắc hoặc người bắt bóng.
-<strong>Cách thực hiện:</strong>
-<p>1. Đứng sideways với tường, cách khoảng 1.5 mét</p>
-<p>2. Giữ bóng ngang ngực bằng hai tay, duỗi thẳng tay ra trước</p>
-<p>3. <strong>Bước quan trọng:</strong> Xoay hông về phía tường <strong>trước tiên</strong>, xa nhất có thể</p>
-<p>4. Dừng hông ở đó — đừng để hông tiếp tục xoay</p>
-<p>5. Chờ một giây (đây là thời điểm X-Factor tối đa)</p>
-<p>6. Bây giờ mới để vai và tay theo sau, ném bóng mạnh vào tường</p>
-<strong>Điều cần chú ý:</strong> Trong thời điểm dừng lại ở bước 5, bạn phải cảm thấy lực căng rõ ràng ở bên sườn và bụng. Đó là cảm giác bạn cần tìm kiếm trong mọi cú đánh tennis.
-<strong>Lịch tập:</strong> 3 hiệp × 10 lần mỗi bên. Bắt đầu với bóng nhẹ, tăng dần khi cảm giác thuần thục hơn.
-<hr>
-<h3>Bài Tập 2: Anti-Rotation Holds (Chống Xoay)</h3>
-<strong>Mục tiêu:</strong> Xây dựng sức mạnh cốt lõi để "phanh" sau cú đánh — sửa lỗi Braking Failure.
-<strong>Thiết bị:</strong> Dây kháng lực (resistance band) hoặc máy cáp, cố định ở ngang hông.
-<strong>Cách thực hiện:</strong>
-<p>1. Đứng thẳng, tay cầm dây kháng lực duỗi thẳng trước ngực, dây kéo về một bên</p>
-<p>2. Giữ nguyên tư thế đó trong 30-45 giây — không để dây kéo xoay người bạn</p>
-<p>3. Cơ thể bạn phải đang "chống lại" lực kéo của dây</p>
-<p>4. Đổi bên</p>
-<strong>Điều cần chú ý:</strong> Bài tập này không phải về xoay — mà về <em>chống xoay</em>. Đây chính xác là sức mạnh bạn cần để dừng cơ thể lại sau khi đánh bóng.
-<strong>Lịch tập:</strong> 3 hiệp × 30-45 giây mỗi bên. Tập chậm và có kiểm soát.
-<hr>
-<h3>Bài Tập 3: Rotational Wall Throw (Ném Xoay Vào Tường)</h3>
-<strong>Mục tiêu:</strong> Luyện X-Factor kết hợp với SSC — tốc độ và lực xoay thực tế.
-<strong>Thiết bị:</strong> Bóng medicine nhỏ 2-3 kg.
-<strong>Cách thực hiện:</strong>
-<p>1. Đứng cách tường 1.5 mét, sideways</p>
-<p>2. Giữ bóng ngang hông, bên xa tường</p>
-<p>3. Nhanh chóng xoay hông tới trước (phía tường) — <em>ngay lập tức</em> sau đó để vai và tay theo sau</p>
+<hr/>
+<h2 id="28-o-luong-x-factor-cua-ban">2.8 Đo Lường X-Factor Của Bạn</h2>
+<p>Bạn không cần thiết bị phức tạp để đánh giá X-Factor của mình. Đây là một bài kiểm tra đơn giản:</p>
+<h3 id="bai-kiem-tra-x-factor-co-ban">Bài Kiểm Tra X-Factor Cơ Bản</h3>
+<p><strong>Bước 1:</strong> Đứng trước gương lớn hoặc nhờ bạn bè quay video từ góc nhìn từ trên xuống (top-down view).</p>
+<p><strong>Bước 2:</strong> Thực hiện shadow forehand backswing — kéo tay vợt về sau đến vị trí chuẩn bị đánh.</p>
+<p><strong>Bước 3:</strong> Đừng nhìn vào tay hay vợt. Nhìn vào <strong>đường nối hai vai</strong> và <strong>đường nối hai hông</strong>.</p>
+<p><strong>Đánh giá:</strong>
+- Nếu hai đường này gần song song với nhau → X-Factor thấp (lỗi Disconnect)
+- Nếu đường vai xoay thêm 30-40 độ so với đường hông → X-Factor trung bình
+- Nếu đường vai xoay thêm 50-70+ độ so với đường hông → X-Factor tốt</p>
+<p><strong>Kiểm tra thêm:</strong> Từ vị trí backswing đó, cảm nhận xem bạn có cảm giác "kéo căng" ở bên sườn và bụng không? Nếu có — đó là năng lượng đàn hồi đang tích lũy. Nếu không có cảm giác đó — X-Factor của bạn chưa đủ sâu.</p>
+<hr/>
+<h2 id="29-bai-tap-xay-dung-x-factor">2.9 Bài Tập Xây Dựng X-Factor</h2>
+<p>Đây là bốn bài tập được thiết kế đặc biệt để xây dựng X-Factor. Mỗi bài nhắm vào một khía cạnh khác nhau.</p>
+<h3 id="bai-tap-1-medicine-ball-slingshot-nem-bong-nhu-day-treo">Bài Tập 1: Medicine Ball Slingshot (Ném Bóng Như Dây Treo)</h3>
+<p><strong>Mục tiêu:</strong> Cảm nhận sự "trễ" của vai so với hông — đây là bài tập quan trọng nhất để sửa lỗi Disconnect.</p>
+<p><strong>Thiết bị:</strong> Bóng medicine 3-4 kg, tường chắc hoặc người bắt bóng.</p>
+<p><strong>Cách thực hiện:</strong>
+1. Đứng sideways với tường, cách khoảng 1.5 mét
+2. Giữ bóng ngang ngực bằng hai tay, duỗi thẳng tay ra trước
+3. <strong>Bước quan trọng:</strong> Xoay hông về phía tường <strong>trước tiên</strong>, xa nhất có thể
+4. Dừng hông ở đó — đừng để hông tiếp tục xoay
+5. Chờ một giây (đây là thời điểm X-Factor tối đa)
+6. Bây giờ mới để vai và tay theo sau, ném bóng mạnh vào tường</p>
+<p><strong>Điều cần chú ý:</strong> Trong thời điểm dừng lại ở bước 5, bạn phải cảm thấy lực căng rõ ràng ở bên sườn và bụng. Đó là cảm giác bạn cần tìm kiếm trong mọi cú đánh tennis.</p>
+<p><strong>Lịch tập:</strong> 3 hiệp × 10 lần mỗi bên. Bắt đầu với bóng nhẹ, tăng dần khi cảm giác thuần thục hơn.</p>
+<hr/>
+<h3 id="bai-tap-2-anti-rotation-holds-chong-xoay">Bài Tập 2: Anti-Rotation Holds (Chống Xoay)</h3>
+<p><strong>Mục tiêu:</strong> Xây dựng sức mạnh cốt lõi để "phanh" sau cú đánh — sửa lỗi Braking Failure.</p>
+<p><strong>Thiết bị:</strong> Dây kháng lực (resistance band) hoặc máy cáp, cố định ở ngang hông.</p>
+<p><strong>Cách thực hiện:</strong>
+1. Đứng thẳng, tay cầm dây kháng lực duỗi thẳng trước ngực, dây kéo về một bên
+2. Giữ nguyên tư thế đó trong 30-45 giây — không để dây kéo xoay người bạn
+3. Cơ thể bạn phải đang "chống lại" lực kéo của dây
+4. Đổi bên</p>
+<p><strong>Điều cần chú ý:</strong> Bài tập này không phải về xoay — mà về <em>chống xoay</em>. Đây chính xác là sức mạnh bạn cần để dừng cơ thể lại sau khi đánh bóng.</p>
+<p><strong>Lịch tập:</strong> 3 hiệp × 30-45 giây mỗi bên. Tập chậm và có kiểm soát.</p>
+<hr/>
+<h3 id="bai-tap-3-rotational-wall-throw-nem-xoay-vao-tuong">Bài Tập 3: Rotational Wall Throw (Ném Xoay Vào Tường)</h3>
+<p><strong>Mục tiêu:</strong> Luyện X-Factor kết hợp với SSC — tốc độ và lực xoay thực tế.</p>
+<p><strong>Thiết bị:</strong> Bóng medicine nhỏ 2-3 kg.</p>
+<p><strong>Cách thực hiện:</strong>
+1. Đứng cách tường 1.5 mét, sideways
+2. Giữ bóng ngang hông, bên xa tường
+3. Nhanh chóng xoay hông tới trước (phía tường) — <em>ngay lập tức</em> sau đó để vai và tay theo sau
 4. Ném bóng vào tường bằng lực xoay, <em>không dùng tay đơn thuần</em>
-<p>5. Bắt bóng dội lại và lặp lại ngay — không dừng giữa chừng</p>
-<strong>Điều cần chú ý:</strong> Trọng tâm là "hông trước, tay sau" — không phải "tay ném". Nếu vai và tay bạn khởi động cùng lúc với hông, bạn đang mất đi X-Factor.
-<strong>Lịch tập:</strong> 2 hiệp × 12 lần mỗi bên. Tập với tốc độ tối đa, nghỉ 45 giây giữa hiệp.
-<hr>
-<h3>Bài Tập 4: Pallof Press (Ép Cáp Thẳng Ngực)</h3>
-<strong>Mục tiêu:</strong> Xây dựng sự cứng chắc của cốt lõi tại thời điểm tiếp xúc — đây là bài tập hoàn thiện sức mạnh phanh.
-<strong>Thiết bị:</strong> Dây kháng lực hoặc máy cáp ở độ cao ngang ngực.
-<strong>Cách thực hiện:</strong>
-<p>1. Đứng thẳng, dây kéo từ bên cạnh</p>
-<p>2. Giữ dây bằng hai tay sát ngực</p>
-<p>3. Duỗi thẳng tay ra phía trước, giữ nguyên tư thế đó 2 giây</p>
-<p>4. Từ từ kéo tay về ngực</p>
-<strong>Điều cần chú ý:</strong> Cơ thể bạn không được xoay dù chỉ một chút khi duỗi tay ra. Toàn bộ "kháng lực" phải đến từ cốt lõi, không phải từ tay hay vai.
-<strong>Lịch tập:</strong> 3 hiệp × 10 lần mỗi bên. Tiến bộ dần từ chậm sang nhanh hơn khi sức mạnh tăng.
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.10 Chỉ Số Tiến Bộ — Biết Bạn Đang Tiến Bộ Như Thế Nào</h2><p>Một trong những thách thức khi tập X-Factor là khó biết mình có tiến bộ không. Đây là một số chỉ số cụ thể:</p>
-<h3>Chỉ Số 1: Âm Thanh Của Bóng</h3>
+5. Bắt bóng dội lại và lặp lại ngay — không dừng giữa chừng</p>
+<p><strong>Điều cần chú ý:</strong> Trọng tâm là "hông trước, tay sau" — không phải "tay ném". Nếu vai và tay bạn khởi động cùng lúc với hông, bạn đang mất đi X-Factor.</p>
+<p><strong>Lịch tập:</strong> 2 hiệp × 12 lần mỗi bên. Tập với tốc độ tối đa, nghỉ 45 giây giữa hiệp.</p>
+<hr/>
+<h3 id="bai-tap-4-pallof-press-ep-cap-thang-nguc">Bài Tập 4: Pallof Press (Ép Cáp Thẳng Ngực)</h3>
+<p><strong>Mục tiêu:</strong> Xây dựng sự cứng chắc của cốt lõi tại thời điểm tiếp xúc — đây là bài tập hoàn thiện sức mạnh phanh.</p>
+<p><strong>Thiết bị:</strong> Dây kháng lực hoặc máy cáp ở độ cao ngang ngực.</p>
+<p><strong>Cách thực hiện:</strong>
+1. Đứng thẳng, dây kéo từ bên cạnh
+2. Giữ dây bằng hai tay sát ngực
+3. Duỗi thẳng tay ra phía trước, giữ nguyên tư thế đó 2 giây
+4. Từ từ kéo tay về ngực</p>
+<p><strong>Điều cần chú ý:</strong> Cơ thể bạn không được xoay dù chỉ một chút khi duỗi tay ra. Toàn bộ "kháng lực" phải đến từ cốt lõi, không phải từ tay hay vai.</p>
+<p><strong>Lịch tập:</strong> 3 hiệp × 10 lần mỗi bên. Tiến bộ dần từ chậm sang nhanh hơn khi sức mạnh tăng.</p>
+<hr/>
+<h2 id="210-chi-so-tien-bo-biet-ban-ang-tien-bo-nhu-the-nao">2.10 Chỉ Số Tiến Bộ — Biết Bạn Đang Tiến Bộ Như Thế Nào</h2>
+<p>Một trong những thách thức khi tập X-Factor là khó biết mình có tiến bộ không. Đây là một số chỉ số cụ thể:</p>
+<h3 id="chi-so-1-am-thanh-cua-bong">Chỉ Số 1: Âm Thanh Của Bóng</h3>
 <p>Khi X-Factor và SSC hoạt động đúng, âm thanh khi vợt chạm bóng sẽ trở nên sâu và đầy hơn (thường được mô tả là âm "ịch" dày). Âm thanh mỏng, gõ nhẹ thường là dấu hiệu của cú đánh "đẩy tay" không có X-Factor.</p>
-<h3>Chỉ Số 2: Cảm Giác Nhẹ Nhàng Khi Đánh Mạnh</h3>
+<h3 id="chi-so-2-cam-giac-nhe-nhang-khi-anh-manh">Chỉ Số 2: Cảm Giác Nhẹ Nhàng Khi Đánh Mạnh</h3>
 <p>Nghịch lý của kỹ thuật tốt là: khi X-Factor hoạt động đúng, cú đánh mạnh nhất của bạn sẽ <em>cảm thấy nhẹ nhàng hơn</em> cú đánh trung bình khi dùng tay. Nếu mọi cú đánh đều "nặng nề" và mệt mỏi, chuỗi chưa hoạt động đúng.</p>
-<h3>Chỉ Số 3: Độ Ổn Định</h3>
+<h3 id="chi-so-3-o-on-inh">Chỉ Số 3: Độ Ổn Định</h3>
 <p>Kỹ thuật X-Factor tốt tạo ra sự ổn định. Khi bạn đánh 10 cú liên tiếp, tốc độ và hướng bóng sẽ ít dao động hơn so với khi dùng kỹ thuật "tay".</p>
-<h3>Chỉ Số 4: Mệt Ở Đâu Sau Khi Tập</h3>
+<h3 id="chi-so-4-met-o-au-sau-khi-tap">Chỉ Số 4: Mệt Ở Đâu Sau Khi Tập</h3>
 <p>Sau một buổi tập dài, bạn mệt ở đâu? Nếu vai và khuỷu tay mệt hơn hông và đùi — chuỗi của bạn vẫn đang bị đứt ở phần trên. Tennis đúng kỹ thuật làm mệt chân và hông nhiều hơn tay.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.11 X-Factor Và Phòng Chống Chấn Thương</h2><p>Ngoài việc tạo ra sức mạnh, X-Factor còn là công cụ phòng chống chấn thương quan trọng.</p>
-<h3>Tại Sao Đau Lưng Dưới Liên Quan Đến X-Factor?</h3>
+<hr/>
+<h2 id="211-x-factor-va-phong-chong-chan-thuong">2.11 X-Factor Và Phòng Chống Chấn Thương</h2>
+<p>Ngoài việc tạo ra sức mạnh, X-Factor còn là công cụ phòng chống chấn thương quan trọng.</p>
+<h3 id="tai-sao-au-lung-duoi-lien-quan-en-x-factor">Tại Sao Đau Lưng Dưới Liên Quan Đến X-Factor?</h3>
 <p>Nhiều vận động viên tennis bị đau lưng dưới mãn tính — đặc biệt là sau nhiều năm chơi. Nguyên nhân thường không phải là "lưng yếu" mà là <strong>cốt lõi không phanh được lực xoay</strong>.</p>
 <p>Khi cú đánh hoàn thành, cơ thể đang xoay với tốc độ rất cao. Nếu cốt lõi không dừng được xoay đó, cột sống phải "hấp thụ" phần còn lại. Hàng nghìn lần lặp lại, điều này tích lũy thành chấn thương mãn tính.</p>
 <p>Giải pháp không phải là "xoay ít hơn" — mà là <strong>phanh tốt hơn</strong>. Các bài tập anti-rotation (như Pallof Press) trực tiếp giải quyết vấn đề này.</p>
-<h3>Tại Sao Đau Khuỷu Liên Quan Đến X-Factor?</h3>
+<h3 id="tai-sao-au-khuyu-lien-quan-en-x-factor">Tại Sao Đau Khuỷu Liên Quan Đến X-Factor?</h3>
 <p>Khi X-Factor quá yếu, tay phải làm bù công việc của hông và thân mình. Cánh tay đang tạo ra lực mà lẽ ra phải được tạo ra ở nơi khác. Đây là nguyên nhân thực sự của phần lớn các trường hợp "tennis elbow" — không phải kỹ thuật tay sai, mà là thiếu lực từ thân mình.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.12 Phân Tích Các Tay Vợt Chuyên Nghiệp</h2><p>Hãy cùng xem X-Factor biểu hiện như thế nào ở ba tay vợt có phong cách khác nhau, để bạn có thể học từ quan sát thực tế:</p>
-<h3>Nadal — X-Factor Cực Đại</h3>
+<hr/>
+<h2 id="212-phan-tich-cac-tay-vot-chuyen-nghiep">2.12 Phân Tích Các Tay Vợt Chuyên Nghiệp</h2>
+<p>Hãy cùng xem X-Factor biểu hiện như thế nào ở ba tay vợt có phong cách khác nhau, để bạn có thể học từ quan sát thực tế:</p>
+<h3 id="nadal-x-factor-cuc-ai">Nadal — X-Factor Cực Đại</h3>
 <p>Khi nhìn Nadal đánh forehand, điều dễ nhận thấy nhất là khi vai xoay về sau, hông của anh ta gần như đứng yên hoặc chỉ xoay rất nhẹ. Điều này tạo ra một X-Factor "tĩnh" khổng lồ ngay từ đầu.</p>
 <p>Sau đó, điều thú vị hơn: hông của anh ta <em>bắt đầu xoay về phía trước ngay khi vai vẫn còn đang xoay về sau</em>. Đây chính là X-Factor động. Toàn bộ cơ thể anh ta trong khoảnh khắc đó giống như một sợi dây bị xoắn đến mức căng tột độ — rồi bung ra.</p>
-<h3>Djokovic — X-Factor Nhỏ Hơn Nhưng Timing Hoàn Hảo</h3>
+<h3 id="djokovic-x-factor-nho-hon-nhung-timing-hoan-hao">Djokovic — X-Factor Nhỏ Hơn Nhưng Timing Hoàn Hảo</h3>
 <p>Djokovic không có X-Factor cực đại như Nadal. Anh ta backswing compact hơn, vai không xoay quá xa so với hông.</p>
 <p>Nhưng điều làm anh ta đặc biệt là <strong>timing</strong>. Thời điểm hông bắt đầu xoay trước vai của anh ta chính xác gần như cơ học đồng hồ. Không sớm quá, không muộn quá — đúng vào khoảnh khắc SSC đạt tối đa.</p>
 <p>Điều này chứng minh: X-Factor không chỉ là về <em>độ lớn của góc</em> mà còn về <em>chính xác của timing</em>.</p>
-<h3>Sinner — X-Factor Kết Hợp Với Tốc Độ</h3>
+<h3 id="sinner-x-factor-ket-hop-voi-toc-o">Sinner — X-Factor Kết Hợp Với Tốc Độ</h3>
 <p>Sinner là ví dụ tốt nhất về kết hợp X-Factor với "bent arm" (khuỷu tay cong). Anh ta xoay hông trước vai một cách rõ ràng, nhưng cánh tay ở trạng thái cong hơn so với Federer hay Alcaraz.</p>
 <p>Cánh tay cong tạo ra khoảng cách xoay ngắn hơn — điều này cho phép Sinner xoay <em>nhanh hơn</em> (vì bán kính nhỏ hơn = vận tốc góc cao hơn), giúp anh ta đánh bóng trên đà lên rất sớm và lấy thời gian của đối thủ.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">2.13 Cách Tích Hợp X-Factor Vào Tập Luyện Hàng Ngày</h2><p>Bạn không cần tập riêng một buổi chỉ cho X-Factor. Đây là cách tích hợp nó vào mỗi buổi tập trên sân:</p>
-<h3>Khởi Động (5-10 phút)</h3>
+<hr/>
+<h2 id="213-cach-tich-hop-x-factor-vao-tap-luyen-hang-ngay">2.13 Cách Tích Hợp X-Factor Vào Tập Luyện Hàng Ngày</h2>
+<p>Bạn không cần tập riêng một buổi chỉ cho X-Factor. Đây là cách tích hợp nó vào mỗi buổi tập trên sân:</p>
+<h3 id="khoi-ong-5-10-phut">Khởi Động (5-10 phút)</h3>
 <p>Trước khi đánh bóng, thực hiện 15-20 lần "shadow swing" (vung vợt không bóng) với trọng tâm duy nhất: <strong>cảm nhận hông đi trước vai</strong>. Không cần đánh mạnh. Chỉ cần cảm nhận thứ tự đúng.</p>
-<h3>Khi Tập Groundstroke</h3>
+<h3 id="khi-tap-groundstroke">Khi Tập Groundstroke</h3>
 <p>Mỗi 20 cú, dừng lại và tự hỏi: "Trong 20 cú vừa rồi, cú nào tôi cảm thấy hông đi trước?" Nếu câu trả lời là "không cú nào" — tập chậm lại, đánh với 60-70% tốc độ, tập trung vào cảm giác hông trước vai.</p>
 <p>Khi cảm giác đó ổn định rồi, mới tăng tốc độ dần dần.</p>
-<h3>Cuối Buổi Tập</h3>
+<h3 id="cuoi-buoi-tap">Cuối Buổi Tập</h3>
 <p>Thực hiện 2 hiệp Rotational Wall Throw hoặc Medicine Ball Slingshot. Kết thúc buổi tập bằng cách "khắc sâu" cảm giác X-Factor vào cơ thể, để hệ thần kinh ghi nhớ cảm giác đó qua đêm.</p>
-<hr></div>
-<div class="chapter" id="chapter-02"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 02</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 2</h2><ul class="styled-list">
-<li><strong>X-Factor</strong> là sự chênh lệch góc xoay giữa vai và hông — là nguồn sức mạnh chính của mọi cú đánh mạnh trong tennis hiện đại</li>
-</ul>
+<hr/>
+<h2 id="tom-tat-chuong-2">Tóm Tắt Chương 2</h2>
 <ul class="styled-list">
-<li><strong>X-Factor động</strong> (hông xoay tới trong khi vai còn xoay lui) tạo ra nhiều lực hơn X-Factor tĩnh (xoay xong rồi mới đánh)</li>
+<li>
+<p><strong>X-Factor</strong> là sự chênh lệch góc xoay giữa vai và hông — là nguồn sức mạnh chính của mọi cú đánh mạnh trong tennis hiện đại</p>
+</li>
+<li>
+<p><strong>X-Factor động</strong> (hông xoay tới trong khi vai còn xoay lui) tạo ra nhiều lực hơn X-Factor tĩnh (xoay xong rồi mới đánh)</p>
+</li>
+<li>
+<p>Bốn cơ chính tham gia: cơ chéo bụng, cân lưng thắt lưng, cơ lưng rộng, và cơ hông xoay ngoài</p>
+</li>
+<li>
+<p><strong>Cốt lõi có hai vai trò:</strong> tạo ra lực xoay (giai đoạn backswing → impact) và cứng hóa đột ngột (tại thời điểm tiếp xúc bóng)</p>
+</li>
+<li>
+<p>Bốn lỗi phổ biến: Bucket Leak, Sway Fault, Braking Failure, và Disconnect</p>
+</li>
+<li>
+<p><strong>Medicine Ball Slingshot</strong> là bài tập hiệu quả nhất để xây dựng cảm giác X-Factor</p>
+</li>
+<li>
+<p>X-Factor không chỉ tạo ra sức mạnh mà còn phòng chống chấn thương lưng và khuỷu tay</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li>Bốn cơ chính tham gia: cơ chéo bụng, cân lưng thắt lưng, cơ lưng rộng, và cơ hông xoay ngoài</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Cốt lõi có hai vai trò:</strong> tạo ra lực xoay (giai đoạn backswing → impact) và cứng hóa đột ngột (tại thời điểm tiếp xúc bóng)</li>
-</ul>
-<ul class="styled-list">
-<li>Bốn lỗi phổ biến: Bucket Leak, Sway Fault, Braking Failure, và Disconnect</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Medicine Ball Slingshot</strong> là bài tập hiệu quả nhất để xây dựng cảm giác X-Factor</li>
-</ul>
-<ul class="styled-list">
-<li>X-Factor không chỉ tạo ra sức mạnh mà còn phòng chống chấn thương lưng và khuỷu tay</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-16"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 16</p><h2 style="margin-bottom: 40px;">Đọc Thêm Cho Chương Tiếp Theo</h2><p>Bây giờ bạn đã hiểu về nguồn năng lượng (GRF từ Chương 1) và bộ máy khuếch đại (X-Factor từ Chương 2). Chương 3 sẽ nói về <strong>chuyển động</strong> — cụ thể là di chuyển chân và cách định vị trên sân.</p>
+<hr/>
+<h2 id="oc-them-cho-chuong-tiep-theo">Đọc Thêm Cho Chương Tiếp Theo</h2>
+<p>Bây giờ bạn đã hiểu về nguồn năng lượng (GRF từ Chương 1) và bộ máy khuếch đại (X-Factor từ Chương 2). Chương 3 sẽ nói về <strong>chuyển động</strong> — cụ thể là di chuyển chân và cách định vị trên sân.</p>
 <p>Đây là chương mà hầu hết người tập quần vợt không bao giờ học đủ kỹ — vì di chuyển chân không "hào hứng" như kỹ thuật đánh. Nhưng 70% thành công trong một điểm tennis được quyết định trước khi vợt chạm bóng — và đó là di chuyển chân tốt hay không.</p>
-<hr>
-<em>Chương 3: Di Chuyển Chân — Nền Tảng Của Mọi Cú Đánh →</em></div>
+<hr/>
+<p><em>Chương 3: Di Chuyển Chân — Nền Tảng Của Mọi Cú Đánh →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

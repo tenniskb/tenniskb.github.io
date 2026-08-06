@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 08 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 08</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,439 +896,412 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 08</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 08</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 08</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">Chương 8: Kỹ Thuật, Positioning và Tư Duy Tại Lưới</h2><hr>
-> <em>"Lưới không phải nơi nguy hiểm. Lưới là nơi điểm số được quyết định nhanh nhất — và người biết dùng nó có lợi thế khổng lồ so với người trốn tránh nó."</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 08 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#volley-và-net-play--nghệ-thuật-kết-thúc-điểm' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>VOLLEY VÀ NET PLAY — NGHỆ THUẬT KẾT THÚC ĐIỂM</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-8-kỹ-thuật-positioning-và-tư-duy-tại-lưới' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 8: Kỹ Thuật, Positioning và Tư Duy Tại Lưới</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#81-tại-sao-người-chơi-amateur-sợ-lưới' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.1 Tại Sao Người Chơi Amateur Sợ Lưới</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#82-geometry-của-lưới--tại-sao-vị-trí-là-tất-cả' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.2 Geometry Của Lưới — Tại Sao Vị Trí Là Tất Cả</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#83-tư-thế-sẵn-sàng-tại-lưới--continental-grip-và-ready-position' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.3 Tư Thế Sẵn Sàng Tại Lưới — Continental Grip Và Ready Position</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#84-kỹ-thuật-forehand-volley--punch-không-phải-swing' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.4 Kỹ Thuật Forehand Volley — Punch, Không Phải Swing</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#85-kỹ-thuật-backhand-volley' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.5 Kỹ Thuật Backhand Volley</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#86-underspin--bí-mật-của-volley-tốt' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.6 Underspin — Bí Mật Của Volley Tốt</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#87-approach-shot--cầu-nối-từ-baseline-đến-lưới' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.7 Approach Shot — Cầu Nối Từ Baseline Đến Lưới</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#88-approach-volley-sequence--chuỗi-hoàn-chỉnh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.8 Approach-Volley Sequence — Chuỗi Hoàn Chỉnh</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#89-overhead-smash--khi-đối-thủ-lob' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.9 Overhead Smash — Khi Đối Thủ Lob</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#810-half-volley--cú-đánh-cứu-cánh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.10 Half Volley — Cú Đánh "Cứu Cánh"</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#811-positioning-tại-lưới--di-chuyển-theo-bóng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.11 Positioning Tại Lưới — Di Chuyển Theo Bóng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#812-chiến-thuật-net-play--khi-nào-và-tại-sao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.12 Chiến Thuật Net Play — Khi Nào Và Tại Sao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#813-passing-shot--góc-nhìn-của-người-ở-lưới' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.13 Passing Shot — Góc Nhìn Của Người Ở Lưới</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#814-bài-tập-volley-và-net-play' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.14 Bài Tập Volley Và Net Play</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#815-chương-trình-8-tuần--net-play' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.15 Chương Trình 8 Tuần — Net Play</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#816-năm-lỗi-phổ-biến-tại-lưới' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>8.16 Năm Lỗi Phổ Biến Tại Lưới</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-8' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 8</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="volley-va-net-play-nghe-thuat-ket-thuc-iem">VOLLEY VÀ NET PLAY — NGHỆ THUẬT KẾT THÚC ĐIỂM</h1>
+<h2 id="chuong-8-ky-thuat-positioning-va-tu-duy-tai-luoi">Chương 8: Kỹ Thuật, Positioning và Tư Duy Tại Lưới</h2>
+<hr/>
+<div class="pullquote"><p>*"Lưới không phải nơi nguy hiểm. Lưới là nơi điểm số được quyết định nhanh nhất — và người biết dùng nó có lợi thế khổng lồ so với người trốn tránh nó."*</p></div>
+<hr/>
 <p>Năm 2001. Wimbledon. Tứ kết. Tim Henman đối đầu với Roger Federer.</p>
 <p>Henman — một trong những net player xuất sắc nhất thế hệ của ông — tiến vào lưới 47 lần trong trận đó. Federer, lúc đó mới 19 tuổi, liên tục passing shot qua ông.</p>
 <p>Henman thua. Federer vào bán kết.</p>
 <p>Nhưng điều thú vị không phải kết quả. Điều thú vị là: dù thua, Henman vẫn tiếp tục tiến vào lưới — vì ông biết rằng net play là con đường của mình. Ông không từ bỏ phong cách chỉ vì thua một trận.</p>
 <p>Net play không phải về dũng cảm hay liều lĩnh. Nó là về <strong>kỹ năng, positioning, và quyết định đúng thời điểm</strong>. Và khi được thực hiện đúng, nó là cách kết thúc điểm hiệu quả nhất trong tennis.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.1 Tại Sao Người Chơi Amateur Sợ Lưới</h2><p>Trước khi học kỹ thuật, hãy hiểu <strong>tại sao</strong> hầu hết người chơi amateur tránh lưới như tránh bệnh dịch.</p>
-<h3>Lý Do 1: Không Gian Thu Hẹp Gây Ra Cảm Giác Bị Phơi Bày</h3>
+<hr/>
+<h2 id="81-tai-sao-nguoi-choi-amateur-so-luoi">8.1 Tại Sao Người Chơi Amateur Sợ Lưới</h2>
+<p>Trước khi học kỹ thuật, hãy hiểu <strong>tại sao</strong> hầu hết người chơi amateur tránh lưới như tránh bệnh dịch.</p>
+<h3 id="ly-do-1-khong-gian-thu-hep-gay-ra-cam-giac-bi-phoi-bay">Lý Do 1: Không Gian Thu Hẹp Gây Ra Cảm Giác Bị Phơi Bày</h3>
 <p>Khi đứng ở baseline, bạn có toàn bộ sân để "trốn" — có thể chạy sang trái, sang phải, lùi ra sau. Cảm giác an toàn.</p>
 <p>Khi đứng ở lưới, bạn chỉ cách lưới 2-3 mét. Không có chỗ lùi. Đối thủ có thể đánh lob qua đầu bạn, hoặc passing shot qua hai bên. Cảm giác bị phơi bày hoàn toàn.</p>
 <p>Đây là phản ứng tâm lý tự nhiên — nhưng nó dựa trên hiểu lầm về geometry của lưới. Thực ra, khi đứng đúng vị trí tại lưới, bạn <strong>đóng</strong> nhiều góc của đối thủ hơn là mở ra.</p>
-<h3>Lý Do 2: Volley Là Kỹ Năng Phản Xạ, Không Phải Kỹ Năng Kỹ Thuật</h3>
+<h3 id="ly-do-2-volley-la-ky-nang-phan-xa-khong-phai-ky-nang-ky-thuat">Lý Do 2: Volley Là Kỹ Năng Phản Xạ, Không Phải Kỹ Năng Kỹ Thuật</h3>
 <p>Groundstrokes có thể được "nghĩ" trong khi đánh — bạn có 1-2 giây để setup, điều chỉnh, và swing. Volley xảy ra trong 0.1-0.2 giây. Không có thời gian cho suy nghĩ có ý thức.</p>
 <p>Vì chưa tập đủ, hầu hết người chơi amateur đến lưới và bị "đóng băng" — não cố tìm "quy trình kỹ thuật đúng" nhưng không kịp → miss volley → kết luận "tôi không giỏi lưới" → tránh lưới hơn nữa.</p>
 <p>Đây là vòng tròn luẩn quẩn có thể phá vỡ bằng tập luyện đúng cách.</p>
-<h3>Lý Do 3: Thiếu Tập Luyện Chuyên Biệt</h3>
+<h3 id="ly-do-3-thieu-tap-luyen-chuyen-biet">Lý Do 3: Thiếu Tập Luyện Chuyên Biệt</h3>
 <p>Trong phần lớn buổi tập, volley được tập 5-10 phút cuối buổi — thường là tập nhẹ nhàng, không có áp lực. Không đủ để xây dựng phản xạ tự động.</p>
-<h3>Hậu Quả Với Game Của Bạn</h3>
-<p>Tránh lưới có nghĩa là:</p>
-<ul class="styled-list">
-<li>Bạn không bao giờ "finishing" điểm — chỉ rally mãi cho đến khi ai đó lỗi</li>
-<li>Đối thủ không bao giờ phải lo lắng về việc bạn tiến lên → thoải mái rally với bạn</li>
-<li>Những cú ngắn và yếu từ đối thủ không được khai thác → bỏ qua nhiều cơ hội chiến thắng</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.2 Geometry Của Lưới — Tại Sao Vị Trí Là Tất Cả</h2><p>Để hiểu volley, trước tiên phải hiểu <strong>geometry của lưới</strong> — tại sao đứng đúng vị trí là yếu tố quyết định hơn kỹ thuật volley.</p>
-<h3>Lưới Là Bức Tường Chặn Góc</h3>
+<h3 id="hau-qua-voi-game-cua-ban">Hậu Quả Với Game Của Bạn</h3>
+<p>Tránh lưới có nghĩa là:
+- Bạn không bao giờ "finishing" điểm — chỉ rally mãi cho đến khi ai đó lỗi
+- Đối thủ không bao giờ phải lo lắng về việc bạn tiến lên → thoải mái rally với bạn
+- Những cú ngắn và yếu từ đối thủ không được khai thác → bỏ qua nhiều cơ hội chiến thắng</p>
+<hr/>
+<h2 id="82-geometry-cua-luoi-tai-sao-vi-tri-la-tat-ca">8.2 Geometry Của Lưới — Tại Sao Vị Trí Là Tất Cả</h2>
+<p>Để hiểu volley, trước tiên phải hiểu <strong>geometry của lưới</strong> — tại sao đứng đúng vị trí là yếu tố quyết định hơn kỹ thuật volley.</p>
+<h3 id="luoi-la-buc-tuong-chan-goc">Lưới Là Bức Tường Chặn Góc</h3>
 <p>Khi bạn đứng ở baseline và đối thủ đứng ở baseline, cả hai đều có toàn bộ góc của sân để đánh vào.</p>
 <p>Khi bạn tiến vào lưới, bạn "đóng" một phần không gian bằng thân thể và raket của mình. Đối thủ giờ phải đánh <strong>qua hoặc quanh</strong> bạn thay vì vào toàn bộ sân trống.</p>
-<strong>Nguyên tắc geometry:</strong>
-<p>Càng tiến gần lưới, bạn càng đóng nhiều góc. Nhưng càng gần lưới, góc lob qua đầu bạn càng dễ. Có một điểm tối ưu — <strong>T-zone</strong> tại lưới — nơi bạn đóng đủ góc mà vẫn có thể cover lob.</p>
-<h3>T-Zone — Vị Trí Lý Tưởng Tại Lưới</h3>
-<strong>T-zone</strong> là khu vực khoảng 2.5-3.5 mét từ lưới, ngay giữa sân theo chiều ngang.
-<p>Từ T-zone:</p>
-<ul class="styled-list">
-<li>Bạn có thể với được volley sang cả hai bên (forehand và backhand) mà không cần di chuyển quá nhiều</li>
-<li>Bạn có thể nhảy lên smash lob hầu hết</li>
-<li>Góc passing shot của đối thủ bị giới hạn đáng kể</li>
-</ul>
-<strong>Tại sao không đứng sát lưới hơn (1-1.5 mét)?</strong>
-<p>Sát lưới quá: lob qua đầu rất dễ (chỉ cần nâng bóng lên cao một chút), không có đủ thời gian để di chuyển sang bên, và nếu bóng đến nhanh thì không có không gian để swing.</p>
-<strong>Tại sao không đứng xa hơn (4-5 mét)?</strong>
-<p>Xa lưới quá: góc của đối thủ mở rộng nhiều hơn, volley phải "reach" nhiều hơn, và advantage của net position giảm đáng kể.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.3 Tư Thế Sẵn Sàng Tại Lưới — Continental Grip Và Ready Position</h2><h3>Continental Grip — Grip Duy Nhất Cho Volley</h3>
+<p><strong>Nguyên tắc geometry:</strong>
+Càng tiến gần lưới, bạn càng đóng nhiều góc. Nhưng càng gần lưới, góc lob qua đầu bạn càng dễ. Có một điểm tối ưu — <strong>T-zone</strong> tại lưới — nơi bạn đóng đủ góc mà vẫn có thể cover lob.</p>
+<h3 id="t-zone-vi-tri-ly-tuong-tai-luoi">T-Zone — Vị Trí Lý Tưởng Tại Lưới</h3>
+<p><strong>T-zone</strong> là khu vực khoảng 2.5-3.5 mét từ lưới, ngay giữa sân theo chiều ngang.</p>
+<p>Từ T-zone:
+- Bạn có thể với được volley sang cả hai bên (forehand và backhand) mà không cần di chuyển quá nhiều
+- Bạn có thể nhảy lên smash lob hầu hết
+- Góc passing shot của đối thủ bị giới hạn đáng kể</p>
+<p><strong>Tại sao không đứng sát lưới hơn (1-1.5 mét)?</strong>
+Sát lưới quá: lob qua đầu rất dễ (chỉ cần nâng bóng lên cao một chút), không có đủ thời gian để di chuyển sang bên, và nếu bóng đến nhanh thì không có không gian để swing.</p>
+<p><strong>Tại sao không đứng xa hơn (4-5 mét)?</strong>
+Xa lưới quá: góc của đối thủ mở rộng nhiều hơn, volley phải "reach" nhiều hơn, và advantage của net position giảm đáng kể.</p>
+<hr/>
+<h2 id="83-tu-the-san-sang-tai-luoi-continental-grip-va-ready-position">8.3 Tư Thế Sẵn Sàng Tại Lưới — Continental Grip Và Ready Position</h2>
+<h3 id="continental-grip-grip-duy-nhat-cho-volley">Continental Grip — Grip Duy Nhất Cho Volley</h3>
 <p>Không giống groundstrokes (nơi có nhiều lựa chọn grip), volley <strong>chỉ dùng continental grip</strong> (grip mà cạnh thứ hai của tay cầm nằm trên bevel thứ hai).</p>
-<strong>Tại sao?</strong>
-<ul class="styled-list">
-<li>Volley xảy ra quá nhanh để đổi grip</li>
-<li>Continental cho phép đánh cả forehand và backhand volley mà không cần thay đổi grip</li>
-<li>Continental tạo ra góc tự nhiên của mặt vợt phù hợp với volley (hơi mở, tạo underspin nhẹ)</li>
-</ul>
-<strong>Kiểm tra continental grip:</strong> Giữ vợt như đang bắt tay với ai đó (handshake grip). Đó là continental.
-<h3>Ready Position Tại Lưới</h3>
-<strong>Tư thế sẵn sàng:</strong>
-<ul class="styled-list">
-<li>Hai chân rộng bằng vai hoặc hơn</li>
-<li>Đầu gối hơi cong — không sụp xuống quá, chỉ đủ để "loaded"</li>
-<li>Trọng tâm về phía trước, trên ngón chân trước</li>
-<li>Vợt được giữ phía trước mặt, cao ngang ngực</li>
-<li>Khuỷu tay hơi cong và ra phía trước — không sát vào thân người</li>
-<li>Mắt nhìn vào đối thủ, không nhìn bóng (bóng sẽ đến quá nhanh — bạn cần đọc body language của đối thủ trước)</li>
-</ul>
-<strong>"Fence post" body:</strong> Thân trên tương đối thẳng đứng — không ngả về trước hay ra sau quá. Bạn cần có thể di chuyển sang cả hai bên như nhau.
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.4 Kỹ Thuật Forehand Volley — Punch, Không Phải Swing</h2><h3>Nguyên Tắc Cốt Lõi: Volley Là Punch</h3>
+<p><strong>Tại sao?</strong>
+- Volley xảy ra quá nhanh để đổi grip
+- Continental cho phép đánh cả forehand và backhand volley mà không cần thay đổi grip
+- Continental tạo ra góc tự nhiên của mặt vợt phù hợp với volley (hơi mở, tạo underspin nhẹ)</p>
+<p><strong>Kiểm tra continental grip:</strong> Giữ vợt như đang bắt tay với ai đó (handshake grip). Đó là continental.</p>
+<h3 id="ready-position-tai-luoi">Ready Position Tại Lưới</h3>
+<p><strong>Tư thế sẵn sàng:</strong>
+- Hai chân rộng bằng vai hoặc hơn
+- Đầu gối hơi cong — không sụp xuống quá, chỉ đủ để "loaded"
+- Trọng tâm về phía trước, trên ngón chân trước
+- Vợt được giữ phía trước mặt, cao ngang ngực
+- Khuỷu tay hơi cong và ra phía trước — không sát vào thân người
+- Mắt nhìn vào đối thủ, không nhìn bóng (bóng sẽ đến quá nhanh — bạn cần đọc body language của đối thủ trước)</p>
+<p><strong>"Fence post" body:</strong> Thân trên tương đối thẳng đứng — không ngả về trước hay ra sau quá. Bạn cần có thể di chuyển sang cả hai bên như nhau.</p>
+<hr/>
+<h2 id="84-ky-thuat-forehand-volley-punch-khong-phai-swing">8.4 Kỹ Thuật Forehand Volley — Punch, Không Phải Swing</h2>
+<h3 id="nguyen-tac-cot-loi-volley-la-punch">Nguyên Tắc Cốt Lõi: Volley Là Punch</h3>
 <p>Đây là điểm khác biệt lớn nhất giữa groundstrokes và volley:</p>
-<strong>Groundstroke:</strong> Swing — cánh tay di chuyển theo cung tròn dài, tạo ra tốc độ và spin.
-<strong>Volley:</strong> Punch — cánh tay di chuyển về phía trước ngắn và quyết đoán, không có backswing dài, không có follow-through dài.
+<p><strong>Groundstroke:</strong> Swing — cánh tay di chuyển theo cung tròn dài, tạo ra tốc độ và spin.</p>
+<p><strong>Volley:</strong> Punch — cánh tay di chuyển về phía trước ngắn và quyết đoán, không có backswing dài, không có follow-through dài.</p>
 <p>Lý do: Bạn không cần — và không có thời gian — cho swing đầy đủ. Tốc độ của bóng đến sẽ cung cấp đủ pace cho volley. Nhiệm vụ của bạn là <strong>hướng bóng đi</strong>, không phải tạo ra tốc độ.</p>
-<h3>Cơ Học Forehand Volley</h3>
-<strong>Bước 1: Nhận biết và split step</strong>
-<p>Khi đối thủ chuẩn bị đánh, bạn thực hiện split step nhỏ — cùng nguyên tắc với return.</p>
-<strong>Bước 2: Unit turn nhỏ</strong>
-<p>Xoay vai phải về phía trước một chút (với người thuận tay phải) để chuẩn bị forehand volley. Không phải full unit turn như groundstroke — chỉ khoảng 30-45 độ.</p>
-<strong>Bước 3: Compact backswing</strong>
-<p>Vợt chỉ di chuyển về phía sau đến khoảng ngang vai — không hơn. Đầu vợt cao hơn cổ tay.</p>
-<strong>Bước 4: Step and punch</strong>
-<p>Bước về phía bóng (step into the ball) đồng thời "punch" vợt về phía trước. Step về phía trước tạo ra lực thêm vào volley.</p>
-<strong>Đầu vợt tại tiếp xúc:</strong> Cao hơn cổ tay — điều này tạo ra góc xuống tự nhiên, giúp bóng đi xuống vào sân đối thủ.
-<strong>Follow-through:</strong> Ngắn — chỉ kéo dài ra một chút sau tiếp xúc. Không sweep dài như forehand groundstroke.
-<h3>High Volley vs. Low Volley</h3>
-<strong>High volley (bóng đến ngang ngực hoặc cao hơn):</strong>
-<p>Đây là loại volley mạnh nhất — cơ hội để kết thúc điểm.</p>
-<ul class="styled-list">
-<li>Punch quyết đoán, đầu vợt high, angle xuống</li>
-<li>Aim vào đường biên ngắn hoặc vào góc trống</li>
-</ul>
-<strong>Low volley (bóng đến dưới lưới):</strong>
-<p>Đây là volley khó nhất và phổ biến nhất ở cấp độ amateur.</p>
-<ul class="styled-list">
-<li>Phải "mở" mặt vợt để nâng bóng qua lưới</li>
-<li>Open stance hơn</li>
-<li>Không cố punch mạnh — chỉ cần "scoop" nhẹ qua lưới</li>
-<li>Mục tiêu: đặt bóng vào sân gần mình, không phải winner</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.5 Kỹ Thuật Backhand Volley</h2><p>Backhand volley thường cảm thấy yếu hơn forehand volley với nhiều người — nhưng thực ra về cơ học, backhand volley đơn giản hơn và thường consistent hơn.</p>
-<h3>Cơ Học Backhand Volley</h3>
-<strong>Tư thế cơ bản:</strong>
-<ul class="styled-list">
-<li>Continental grip (không thay đổi từ forehand)</li>
-<li>Tay trái (với người thuận tay phải) hỗ trợ ở cổ vợt khi chuẩn bị</li>
-<li>Vai trái xoay về phía trước</li>
-</ul>
-<strong>Compact backswing:</strong>
-<p>Tương tự forehand — chỉ đến ngang vai. Đầu vợt cao hơn cổ tay.</p>
-<strong>Punch:</strong>
-<p>Bước về phía bóng bằng chân trái, punch về phía trước. Tay trái buông ra tại tiếp xúc.</p>
-<strong>Đặc điểm của backhand volley tốt:</strong>
-<p>Mặt vợt hơi mở (slightly open face) — tạo ra underspin nhẹ giúp bóng bám sân và khó lấy.</p>
-<h3>Two-Handed Backhand Volley</h3>
+<h3 id="co-hoc-forehand-volley">Cơ Học Forehand Volley</h3>
+<p><strong>Bước 1: Nhận biết và split step</strong>
+Khi đối thủ chuẩn bị đánh, bạn thực hiện split step nhỏ — cùng nguyên tắc với return.</p>
+<p><strong>Bước 2: Unit turn nhỏ</strong>
+Xoay vai phải về phía trước một chút (với người thuận tay phải) để chuẩn bị forehand volley. Không phải full unit turn như groundstroke — chỉ khoảng 30-45 độ.</p>
+<p><strong>Bước 3: Compact backswing</strong>
+Vợt chỉ di chuyển về phía sau đến khoảng ngang vai — không hơn. Đầu vợt cao hơn cổ tay.</p>
+<p><strong>Bước 4: Step and punch</strong>
+Bước về phía bóng (step into the ball) đồng thời "punch" vợt về phía trước. Step về phía trước tạo ra lực thêm vào volley.</p>
+<p><strong>Đầu vợt tại tiếp xúc:</strong> Cao hơn cổ tay — điều này tạo ra góc xuống tự nhiên, giúp bóng đi xuống vào sân đối thủ.</p>
+<p><strong>Follow-through:</strong> Ngắn — chỉ kéo dài ra một chút sau tiếp xúc. Không sweep dài như forehand groundstroke.</p>
+<h3 id="high-volley-vs-low-volley">High Volley vs. Low Volley</h3>
+<p><strong>High volley (bóng đến ngang ngực hoặc cao hơn):</strong>
+Đây là loại volley mạnh nhất — cơ hội để kết thúc điểm.
+- Punch quyết đoán, đầu vợt high, angle xuống
+- Aim vào đường biên ngắn hoặc vào góc trống</p>
+<p><strong>Low volley (bóng đến dưới lưới):</strong>
+Đây là volley khó nhất và phổ biến nhất ở cấp độ amateur.
+- Phải "mở" mặt vợt để nâng bóng qua lưới
+- Open stance hơn
+- Không cố punch mạnh — chỉ cần "scoop" nhẹ qua lưới
+- Mục tiêu: đặt bóng vào sân gần mình, không phải winner</p>
+<hr/>
+<h2 id="85-ky-thuat-backhand-volley">8.5 Kỹ Thuật Backhand Volley</h2>
+<p>Backhand volley thường cảm thấy yếu hơn forehand volley với nhiều người — nhưng thực ra về cơ học, backhand volley đơn giản hơn và thường consistent hơn.</p>
+<h3 id="co-hoc-backhand-volley">Cơ Học Backhand Volley</h3>
+<p><strong>Tư thế cơ bản:</strong>
+- Continental grip (không thay đổi từ forehand)
+- Tay trái (với người thuận tay phải) hỗ trợ ở cổ vợt khi chuẩn bị
+- Vai trái xoay về phía trước</p>
+<p><strong>Compact backswing:</strong>
+Tương tự forehand — chỉ đến ngang vai. Đầu vợt cao hơn cổ tay.</p>
+<p><strong>Punch:</strong>
+Bước về phía bóng bằng chân trái, punch về phía trước. Tay trái buông ra tại tiếp xúc.</p>
+<p><strong>Đặc điểm của backhand volley tốt:</strong>
+Mặt vợt hơi mở (slightly open face) — tạo ra underspin nhẹ giúp bóng bám sân và khó lấy.</p>
+<h3 id="two-handed-backhand-volley">Two-Handed Backhand Volley</h3>
 <p>Một số người chơi dùng hai tay cho backhand volley — thường là những người có two-handed backhand groundstroke. Điều này không sai nhưng giới hạn reach (tầm với) vì cánh tay thứ hai hạn chế extension.</p>
 <p>Phần lớn huấn luyện viên khuyến khích chuyển sang one-handed backhand volley — reach tốt hơn và linh hoạt hơn ở lưới.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.6 Underspin — Bí Mật Của Volley Tốt</h2><p>Một điều mà nhiều người chơi không biết: <strong>volley tốt không phải flat — nó có underspin nhẹ</strong>.</p>
-<h3>Tại Sao Underspin Trong Volley?</h3>
-<strong>Kiểm soát:</strong> Underspin tạo ra backspin trên bóng, làm bóng "bite" khi tiếp đất — nảy thấp và dừng lại, khó cho đối thủ tấn công.
-<strong>Consistency:</strong> Underspin giúp bóng đi đúng hướng và depth — dễ control hơn flat.
-<strong>Touch:</strong> Với low volley, underspin là bắt buộc để "scoop" bóng qua lưới một cách nhẹ nhàng.
-<h3>Cách Tạo Underspin Trong Volley</h3>
+<hr/>
+<h2 id="86-underspin-bi-mat-cua-volley-tot">8.6 Underspin — Bí Mật Của Volley Tốt</h2>
+<p>Một điều mà nhiều người chơi không biết: <strong>volley tốt không phải flat — nó có underspin nhẹ</strong>.</p>
+<h3 id="tai-sao-underspin-trong-volley">Tại Sao Underspin Trong Volley?</h3>
+<p><strong>Kiểm soát:</strong> Underspin tạo ra backspin trên bóng, làm bóng "bite" khi tiếp đất — nảy thấp và dừng lại, khó cho đối thủ tấn công.</p>
+<p><strong>Consistency:</strong> Underspin giúp bóng đi đúng hướng và depth — dễ control hơn flat.</p>
+<p><strong>Touch:</strong> Với low volley, underspin là bắt buộc để "scoop" bóng qua lưới một cách nhẹ nhàng.</p>
+<h3 id="cach-tao-underspin-trong-volley">Cách Tạo Underspin Trong Volley</h3>
 <p>Swing path từ <strong>cao xuống thấp</strong> — đầu vợt bắt đầu cao, punch về phía trước và hơi xuống. Không phải xuống thẳng đứng — chỉ hơi xuống (10-15 độ dưới nằm ngang).</p>
 <p>Mặt vợt hơi mở (open face) — không phẳng, không đóng.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.7 Approach Shot — Cầu Nối Từ Baseline Đến Lưới</h2><p>Bạn không thể chỉ "chạy vào lưới" mà không có lý do. Approach shot là cú đánh mà bạn đánh <strong>trong khi đang tiến vào lưới</strong> — cầu nối giữa rally và net play.</p>
-<h3>Khi Nào Nên Approach</h3>
-<strong>Nguyên tắc chính:</strong> Approach khi đối thủ đánh bóng ngắn (short ball) — bóng rơi trong vùng service box hoặc gần lưới hơn bình thường.
-<strong>Short ball:</strong> Bóng ngắn là bóng mà bạn có thể tiến lên đánh <strong>trước baseline</strong> mà không cần chạy ra sau. Đây là "invitation" để approach.
-<strong>Dấu hiệu khác:</strong>
-<ul class="styled-list">
-<li>Đối thủ bị kéo rộng ra ngoài → bạn có thể approach vào phần sân trống</li>
-<li>Đối thủ ở vị trí tấn công yếu (ví dụ: đang chạy lui)</li>
-<li>Bóng nảy lên cao (topspin nặng) ở mid-court — đây là "sitting duck"</li>
-</ul>
-<h3>Kỹ Thuật Approach Shot</h3>
-<strong>Không phải "full swing groundstroke":</strong>
-<p>Approach shot thường có backswing nhỏ hơn groundstroke thông thường vì:</p>
-<p>1. Bạn đang chuyển động về phía trước — cơ thể bạn đã thêm vào pace</p>
-<p>2. Bạn cần giữ balance để tiếp tục di chuyển vào lưới ngay sau khi đánh</p>
-<strong>Slice approach vs. topspin approach:</strong>
-<strong>Slice approach (phổ biến hơn, đặc biệt trên grass và hard):</strong>
-<ul class="styled-list">
-<li>Tạo ra bóng thấp, nảy thấp — đối thủ phải đánh passing shot từ bên dưới</li>
-<li>Giữ được balance tốt hơn khi di chuyển vào lưới</li>
-<li>Thích hợp cho mid-court balls</li>
-</ul>
-<strong>Topspin approach:</strong>
-<ul class="styled-list">
-<li>Tạo ra bóng sâu với bounce cao — đối thủ phải đánh từ shoulder level</li>
-<li>Mạnh hơn nhưng khó control hơn khi đang di chuyển</li>
-</ul>
-<strong>Hướng approach:</strong>
-<ul class="styled-list">
-<li><strong>Down-the-line approach (phổ biến nhất):</strong> Đánh dọc theo đường biên dọc. Sau đó tiến vào lưới và cover đường đó. Đối thủ muốn cross-court passing shot sẽ phải qua ngay trước mặt bạn.</li>
-<li><strong>Cross-court approach:</strong> Ít phổ biến hơn nhưng hữu ích khi bạn muốn setup volley vào góc cụ thể.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.8 Approach-Volley Sequence — Chuỗi Hoàn Chỉnh</h2><p>Đây là chuỗi hoàn chỉnh của net play:</p>
-<h3>Bước 1: Nhận Ra Short Ball</h3>
+<hr/>
+<h2 id="87-approach-shot-cau-noi-tu-baseline-en-luoi">8.7 Approach Shot — Cầu Nối Từ Baseline Đến Lưới</h2>
+<p>Bạn không thể chỉ "chạy vào lưới" mà không có lý do. Approach shot là cú đánh mà bạn đánh <strong>trong khi đang tiến vào lưới</strong> — cầu nối giữa rally và net play.</p>
+<h3 id="khi-nao-nen-approach">Khi Nào Nên Approach</h3>
+<p><strong>Nguyên tắc chính:</strong> Approach khi đối thủ đánh bóng ngắn (short ball) — bóng rơi trong vùng service box hoặc gần lưới hơn bình thường.</p>
+<p><strong>Short ball:</strong> Bóng ngắn là bóng mà bạn có thể tiến lên đánh <strong>trước baseline</strong> mà không cần chạy ra sau. Đây là "invitation" để approach.</p>
+<p><strong>Dấu hiệu khác:</strong>
+- Đối thủ bị kéo rộng ra ngoài → bạn có thể approach vào phần sân trống
+- Đối thủ ở vị trí tấn công yếu (ví dụ: đang chạy lui)
+- Bóng nảy lên cao (topspin nặng) ở mid-court — đây là "sitting duck"</p>
+<h3 id="ky-thuat-approach-shot">Kỹ Thuật Approach Shot</h3>
+<p><strong>Không phải "full swing groundstroke":</strong>
+Approach shot thường có backswing nhỏ hơn groundstroke thông thường vì:
+1. Bạn đang chuyển động về phía trước — cơ thể bạn đã thêm vào pace
+2. Bạn cần giữ balance để tiếp tục di chuyển vào lưới ngay sau khi đánh</p>
+<p><strong>Slice approach vs. topspin approach:</strong></p>
+<p><strong>Slice approach (phổ biến hơn, đặc biệt trên grass và hard):</strong>
+- Tạo ra bóng thấp, nảy thấp — đối thủ phải đánh passing shot từ bên dưới
+- Giữ được balance tốt hơn khi di chuyển vào lưới
+- Thích hợp cho mid-court balls</p>
+<p><strong>Topspin approach:</strong>
+- Tạo ra bóng sâu với bounce cao — đối thủ phải đánh từ shoulder level
+- Mạnh hơn nhưng khó control hơn khi đang di chuyển</p>
+<p><strong>Hướng approach:</strong>
+- <strong>Down-the-line approach (phổ biến nhất):</strong> Đánh dọc theo đường biên dọc. Sau đó tiến vào lưới và cover đường đó. Đối thủ muốn cross-court passing shot sẽ phải qua ngay trước mặt bạn.
+- <strong>Cross-court approach:</strong> Ít phổ biến hơn nhưng hữu ích khi bạn muốn setup volley vào góc cụ thể.</p>
+<hr/>
+<h2 id="88-approach-volley-sequence-chuoi-hoan-chinh">8.8 Approach-Volley Sequence — Chuỗi Hoàn Chỉnh</h2>
+<p>Đây là chuỗi hoàn chỉnh của net play:</p>
+<h3 id="buoc-1-nhan-ra-short-ball">Bước 1: Nhận Ra Short Ball</h3>
 <p>Đối thủ đánh bóng ngắn. Bạn nhận ra ngay khi bóng chạm raket của đối thủ (hoặc khi nó qua lưới và bạn thấy nó sẽ ngắn).</p>
-<strong>Phản ứng ngay lập tức:</strong> Bắt đầu di chuyển về phía trước, không đợi bóng nảy.
-<h3>Bước 2: Approach Shot</h3>
+<p><strong>Phản ứng ngay lập tức:</strong> Bắt đầu di chuyển về phía trước, không đợi bóng nảy.</p>
+<h3 id="buoc-2-approach-shot">Bước 2: Approach Shot</h3>
 <p>Đến gần bóng, setup nhanh, đánh approach — thường là slice down-the-line.</p>
-<strong>Quan trọng:</strong> Không dừng lại sau approach. Tiếp tục di chuyển về phía lưới <strong>ngay khi raket chạm bóng</strong>.
-<h3>Bước 3: Split Step Khi Đối Thủ Đánh</h3>
+<p><strong>Quan trọng:</strong> Không dừng lại sau approach. Tiếp tục di chuyển về phía lưới <strong>ngay khi raket chạm bóng</strong>.</p>
+<h3 id="buoc-3-split-step-khi-oi-thu-anh">Bước 3: Split Step Khi Đối Thủ Đánh</h3>
 <p>Tiếp tục tiến vào lưới cho đến khi đối thủ chuẩn bị đánh. Lúc đó: <strong>split step</strong>.</p>
 <p>Split step tại thời điểm này cực kỳ quan trọng — nó là "anchor" cho mọi di chuyển tiếp theo. Không split step = không phản ứng kịp với volley.</p>
-<h3>Bước 4: Volley</h3>
+<h3 id="buoc-4-volley">Bước 4: Volley</h3>
 <p>Từ split step, di chuyển sang phía bóng và thực hiện volley.</p>
-<h3>Bước 5: Close In (Tiến Thêm Vào)</h3>
+<h3 id="buoc-5-close-in-tien-them-vao">Bước 5: Close In (Tiến Thêm Vào)</h3>
 <p>Sau volley đầu tiên, tiến thêm vào lưới nếu bóng chưa kết thúc điểm. Mỗi volley tốt là cơ hội để "close" — rút ngắn khoảng cách với lưới và đóng thêm góc.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.9 Overhead Smash — Khi Đối Thủ Lob</h2><p>Lob là vũ khí chính để counter net play. Overhead smash (đập qua đầu) là cách xử lý lob.</p>
-<h3>Hai Loại Overhead</h3>
-<strong>In-the-air overhead (smash bóng trên không):</strong>
-<p>Bóng lob không quá cao, bạn có thể nhảy hoặc với lên để đánh trước khi bóng nảy.</p>
-<strong>Bounce overhead (smash sau khi bóng nảy):</strong>
-<p>Bóng lob quá sâu hoặc quá cao — để nảy rồi đánh. Thường xảy ra với topspin lob mạnh.</p>
-<h3>Kỹ Thuật Overhead</h3>
-<strong>Di chuyển:</strong>
-<p>Ngay khi nhận ra đối thủ lob, bước lui nhanh — không đi lùi thẳng, mà <strong>xoay người và chạy</strong> (pivot and run). Nhiều người chơi mất overhead vì cứ đi lùi từng bước nhỏ — quá chậm với lob sâu.</p>
-<strong>Toss arm (cánh tay chỉ):</strong>
-<p>Tay không vợt giơ lên chỉ vào bóng. Đây không phải chỉ để aesthetic — nó thực sự giúp tracking bóng, giữ balance, và chuẩn bị position.</p>
-<strong>Cơ học swing:</strong>
-<p>Rất giống với serve. Backswing theo racket drop (vợt rơi ra sau), sau đó swing lên và tiếp xúc bóng ở điểm cao nhất có thể.</p>
-<strong>Vị trí tiếp xúc:</strong>
-<p>Tại điểm cao nhất, hơi trước người — không để bóng rơi quá ra sau đầu.</p>
-<strong>Hướng đánh:</strong>
-<p>Hầu hết overhead nên đánh vào phần sân mở nhất — thường là cross-court hoặc down-the-line vào góc trống nhất.</p>
-<strong>Lỗi phổ biến nhất:</strong>
-<p>Không di chuyển đủ nhanh → đánh overhead ở điểm bóng đã qua đỉnh và đang rơi xuống → khó kiểm soát và thường vào lưới.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.10 Half Volley — Cú Đánh "Cứu Cánh"</h2><p>Half volley là cú đánh mà bạn tiếp xúc bóng ngay sau khi nó nảy — không phải trước khi nảy (volley) và không phải sau khi đã lên cao (groundstroke). Bóng tiếp xúc khi còn rất thấp, ngay sau điểm nảy.</p>
-<h3>Khi Nào Dùng Half Volley</h3>
-<p>Half volley không phải lựa chọn — đó là <strong>bắt buộc</strong> khi bóng nảy ngay ở chân bạn và bạn không kịp lùi ra. Thường xảy ra khi:</p>
-<ul class="styled-list">
-<li>Bạn đang tiến vào lưới và bóng của đối thủ đánh vào feet bạn</li>
-<li>Return ngắn của đối thủ bắt bạn bất ngờ</li>
-</ul>
-<h3>Kỹ Thuật Half Volley</h3>
-<strong>Squat down:</strong> Hạ thấp người bằng cách cúi gối — không cúi lưng. Đây là yếu tố số một trong half volley.
-<strong>Mặt vợt hơi mở:</strong> Để nâng bóng qua lưới từ điểm rất thấp.
-<strong>Swing ngắn:</strong> Compact forward motion, không cần big swing.
-<strong>Mục tiêu:</strong> Chỉ cần bóng vào sân sâu và bạn có thể tiếp tục. Half volley không phải cú đánh để tấn công.
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.11 Positioning Tại Lưới — Di Chuyển Theo Bóng</h2><p>Đứng đúng vị trí ban đầu là quan trọng, nhưng <strong>di chuyển theo bóng</strong> sau mỗi volley là thứ phân biệt net player tốt với net player trung bình.</p>
-<h3>Nguyên Tắc: Cover The Line Of The Ball</h3>
+<hr/>
+<h2 id="89-overhead-smash-khi-oi-thu-lob">8.9 Overhead Smash — Khi Đối Thủ Lob</h2>
+<p>Lob là vũ khí chính để counter net play. Overhead smash (đập qua đầu) là cách xử lý lob.</p>
+<h3 id="hai-loai-overhead">Hai Loại Overhead</h3>
+<p><strong>In-the-air overhead (smash bóng trên không):</strong>
+Bóng lob không quá cao, bạn có thể nhảy hoặc với lên để đánh trước khi bóng nảy.</p>
+<p><strong>Bounce overhead (smash sau khi bóng nảy):</strong>
+Bóng lob quá sâu hoặc quá cao — để nảy rồi đánh. Thường xảy ra với topspin lob mạnh.</p>
+<h3 id="ky-thuat-overhead">Kỹ Thuật Overhead</h3>
+<p><strong>Di chuyển:</strong>
+Ngay khi nhận ra đối thủ lob, bước lui nhanh — không đi lùi thẳng, mà <strong>xoay người và chạy</strong> (pivot and run). Nhiều người chơi mất overhead vì cứ đi lùi từng bước nhỏ — quá chậm với lob sâu.</p>
+<p><strong>Toss arm (cánh tay chỉ):</strong>
+Tay không vợt giơ lên chỉ vào bóng. Đây không phải chỉ để aesthetic — nó thực sự giúp tracking bóng, giữ balance, và chuẩn bị position.</p>
+<p><strong>Cơ học swing:</strong>
+Rất giống với serve. Backswing theo racket drop (vợt rơi ra sau), sau đó swing lên và tiếp xúc bóng ở điểm cao nhất có thể.</p>
+<p><strong>Vị trí tiếp xúc:</strong>
+Tại điểm cao nhất, hơi trước người — không để bóng rơi quá ra sau đầu.</p>
+<p><strong>Hướng đánh:</strong>
+Hầu hết overhead nên đánh vào phần sân mở nhất — thường là cross-court hoặc down-the-line vào góc trống nhất.</p>
+<p><strong>Lỗi phổ biến nhất:</strong>
+Không di chuyển đủ nhanh → đánh overhead ở điểm bóng đã qua đỉnh và đang rơi xuống → khó kiểm soát và thường vào lưới.</p>
+<hr/>
+<h2 id="810-half-volley-cu-anh-cuu-canh">8.10 Half Volley — Cú Đánh "Cứu Cánh"</h2>
+<p>Half volley là cú đánh mà bạn tiếp xúc bóng ngay sau khi nó nảy — không phải trước khi nảy (volley) và không phải sau khi đã lên cao (groundstroke). Bóng tiếp xúc khi còn rất thấp, ngay sau điểm nảy.</p>
+<h3 id="khi-nao-dung-half-volley">Khi Nào Dùng Half Volley</h3>
+<p>Half volley không phải lựa chọn — đó là <strong>bắt buộc</strong> khi bóng nảy ngay ở chân bạn và bạn không kịp lùi ra. Thường xảy ra khi:
+- Bạn đang tiến vào lưới và bóng của đối thủ đánh vào feet bạn
+- Return ngắn của đối thủ bắt bạn bất ngờ</p>
+<h3 id="ky-thuat-half-volley">Kỹ Thuật Half Volley</h3>
+<p><strong>Squat down:</strong> Hạ thấp người bằng cách cúi gối — không cúi lưng. Đây là yếu tố số một trong half volley.</p>
+<p><strong>Mặt vợt hơi mở:</strong> Để nâng bóng qua lưới từ điểm rất thấp.</p>
+<p><strong>Swing ngắn:</strong> Compact forward motion, không cần big swing.</p>
+<p><strong>Mục tiêu:</strong> Chỉ cần bóng vào sân sâu và bạn có thể tiếp tục. Half volley không phải cú đánh để tấn công.</p>
+<hr/>
+<h2 id="811-positioning-tai-luoi-di-chuyen-theo-bong">8.11 Positioning Tại Lưới — Di Chuyển Theo Bóng</h2>
+<p>Đứng đúng vị trí ban đầu là quan trọng, nhưng <strong>di chuyển theo bóng</strong> sau mỗi volley là thứ phân biệt net player tốt với net player trung bình.</p>
+<h3 id="nguyen-tac-cover-the-line-of-the-ball">Nguyên Tắc: Cover The Line Of The Ball</h3>
 <p>Sau mỗi lần đánh volley, di chuyển để đứng trên <strong>đường thẳng từ bóng đến trung điểm của lưới phía sân bạn</strong>.</p>
-<strong>Ví dụ:</strong>
-<p>Bạn volley sang phải của sân đối thủ. Ngay lập tức, di chuyển sang phải một chút — vì đối thủ muốn return cross-court sẽ đánh sang bên trái của bạn, nhưng đối thủ muốn return down-the-line sẽ đánh thẳng về phía bạn. Đứng ở điểm trung gian giữa hai đường đó.</p>
-<h3>T-Zone Revisited</h3>
+<p><strong>Ví dụ:</strong>
+Bạn volley sang phải của sân đối thủ. Ngay lập tức, di chuyển sang phải một chút — vì đối thủ muốn return cross-court sẽ đánh sang bên trái của bạn, nhưng đối thủ muốn return down-the-line sẽ đánh thẳng về phía bạn. Đứng ở điểm trung gian giữa hai đường đó.</p>
+<h3 id="t-zone-revisited">T-Zone Revisited</h3>
 <p>Sau mỗi volley, bạn sẽ không còn ở T-zone nữa (vì đã di chuyển sang bên hoặc tiến lên). Sau khi đối thủ đánh, tiến vào lưới thêm một bước và điều chỉnh sang trái/phải theo nguyên tắc trên.</p>
-<h3>Không Đứng Yên</h3>
+<h3 id="khong-ung-yen">Không Đứng Yên</h3>
 <p>Một trong những lỗi phổ biến nhất ở lưới: đứng yên sau volley và chờ đợi. Net player giỏi <strong>luôn di chuyển</strong> — tiến lên một chút sau mỗi volley tốt, điều chỉnh sang bên sau mỗi volley.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.12 Chiến Thuật Net Play — Khi Nào Và Tại Sao</h2><h3>Serve and Volley</h3>
+<hr/>
+<h2 id="812-chien-thuat-net-play-khi-nao-va-tai-sao">8.12 Chiến Thuật Net Play — Khi Nào Và Tại Sao</h2>
+<h3 id="serve-and-volley">Serve and Volley</h3>
 <p>Tiến vào lưới ngay sau serve. Phổ biến ở Wimbledon era nhưng ít gặp hơn trong tennis baseline hiện đại.</p>
-<strong>Khi hoạt động tốt:</strong>
-<ul class="styled-list">
-<li>Trên grass hoặc fast hard courts (bóng nảy thấp → passing shot khó hơn)</li>
-<li>Khi serve rất tốt (đối thủ return yếu → volley dễ)</li>
-<li>Khi đối thủ có return kém</li>
-</ul>
-<strong>Rủi ro:</strong> Đối thủ có passing shot tốt hoặc lob tốt → mất điểm nhanh.
-<h3>Chip and Charge</h3>
+<p><strong>Khi hoạt động tốt:</strong>
+- Trên grass hoặc fast hard courts (bóng nảy thấp → passing shot khó hơn)
+- Khi serve rất tốt (đối thủ return yếu → volley dễ)
+- Khi đối thủ có return kém</p>
+<p><strong>Rủi ro:</strong> Đối thủ có passing shot tốt hoặc lob tốt → mất điểm nhanh.</p>
+<h3 id="chip-and-charge">Chip and Charge</h3>
 <p>Return ngắn (chip return) ngay sau serve, sau đó charge (tiến nhanh) vào lưới.</p>
-<strong>Khi hoạt động tốt:</strong>
-<ul class="styled-list">
-<li>Với second serve chậm — chip return thấp, server phải đánh bóng thấp → lý tưởng để charge</li>
-<li>Khi đối thủ serve and stay (không tiến vào lưới) — bạn tiến vào lưới thay vì ở baseline</li>
-</ul>
-<h3>Approach and Volley (Pattern Phổ Biến Nhất)</h3>
+<p><strong>Khi hoạt động tốt:</strong>
+- Với second serve chậm — chip return thấp, server phải đánh bóng thấp → lý tưởng để charge
+- Khi đối thủ serve and stay (không tiến vào lưới) — bạn tiến vào lưới thay vì ở baseline</p>
+<h3 id="approach-and-volley-pattern-pho-bien-nhat">Approach and Volley (Pattern Phổ Biến Nhất)</h3>
 <p>Như đã mô tả ở mục 8.8 — approach từ short ball và tiến vào lưới.</p>
-<strong>Đây là con đường vào lưới an toàn và phổ biến nhất</strong> — vì bạn đã có bóng ngắn, setup tốt trước khi tiến vào.
-<h3>Net Rush Sau Cú Tấn Công Sâu</h3>
+<p><strong>Đây là con đường vào lưới an toàn và phổ biến nhất</strong> — vì bạn đã có bóng ngắn, setup tốt trước khi tiến vào.</p>
+<h3 id="net-rush-sau-cu-tan-cong-sau">Net Rush Sau Cú Tấn Công Sâu</h3>
 <p>Sau một forehand tấn công hoặc backhand sâu vào góc → đối thủ bị kéo rộng → bạn tiến vào lưới trong khi họ đang chạy và phải đánh từ vị trí không lý tưởng.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.13 Passing Shot — Góc Nhìn Của Người Ở Lưới</h2><p>Để net play tốt, bạn phải hiểu cả phía đối diện: làm thế nào đối thủ sẽ cố đánh passing shot qua bạn?</p>
-<h3>Hai Loại Passing Shot</h3>
-<strong>1. Down-the-line pass:</strong>
-<p>Đánh dọc theo đường biên dọc, qua một bên của bạn. Nhanh nhưng cần chính xác cao — phải đi sát đường biên.</p>
-<strong>2. Cross-court pass:</strong>
-<p>Đánh chéo sân, qua phía đối diện. Có nhiều sân để đánh vào hơn, nhưng bạn đang đứng ngay trong đường đó.</p>
-<strong>3. Lob:</strong>
-<p>Đánh qua đầu bạn. Không phải passing shot kỹ thuật nhưng cũng là cách để counter net play.</p>
-<h3>Cách Anticipate Passing Shot</h3>
+<hr/>
+<h2 id="813-passing-shot-goc-nhin-cua-nguoi-o-luoi">8.13 Passing Shot — Góc Nhìn Của Người Ở Lưới</h2>
+<p>Để net play tốt, bạn phải hiểu cả phía đối diện: làm thế nào đối thủ sẽ cố đánh passing shot qua bạn?</p>
+<h3 id="hai-loai-passing-shot">Hai Loại Passing Shot</h3>
+<p><strong>1. Down-the-line pass:</strong>
+Đánh dọc theo đường biên dọc, qua một bên của bạn. Nhanh nhưng cần chính xác cao — phải đi sát đường biên.</p>
+<p><strong>2. Cross-court pass:</strong>
+Đánh chéo sân, qua phía đối diện. Có nhiều sân để đánh vào hơn, nhưng bạn đang đứng ngay trong đường đó.</p>
+<p><strong>3. Lob:</strong>
+Đánh qua đầu bạn. Không phải passing shot kỹ thuật nhưng cũng là cách để counter net play.</p>
+<h3 id="cach-anticipate-passing-shot">Cách Anticipate Passing Shot</h3>
 <p>Khi ở lưới, đọc body language của đối thủ để anticipate:</p>
-<strong>Đối thủ mở vai về phía down-the-line:</strong>
-<p>Họ đang chuẩn bị đánh down-the-line → di chuyển một bước về phía đó.</p>
-<strong>Đối thủ nhìn qua bạn về phía cross-court:</strong>
-<p>Họ đang chuẻn bị đánh cross-court → stay hoặc di chuyển sang cross-court.</p>
-<strong>Đối thủ hơi ngả đầu ra sau, bóng tung lên:</strong>
-<p>Họ chuẩn bị lob → bắt đầu lùi và chuẩn bị overhead.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.14 Bài Tập Volley Và Net Play</h2><h3>Bài Tập 1: Wall Volley — Phản Xạ Cơ Bản</h3>
+<p><strong>Đối thủ mở vai về phía down-the-line:</strong>
+Họ đang chuẩn bị đánh down-the-line → di chuyển một bước về phía đó.</p>
+<p><strong>Đối thủ nhìn qua bạn về phía cross-court:</strong>
+Họ đang chuẻn bị đánh cross-court → stay hoặc di chuyển sang cross-court.</p>
+<p><strong>Đối thủ hơi ngả đầu ra sau, bóng tung lên:</strong>
+Họ chuẩn bị lob → bắt đầu lùi và chuẩn bị overhead.</p>
+<hr/>
+<h2 id="814-bai-tap-volley-va-net-play">8.14 Bài Tập Volley Và Net Play</h2>
+<h3 id="bai-tap-1-wall-volley-phan-xa-co-ban">Bài Tập 1: Wall Volley — Phản Xạ Cơ Bản</h3>
 <p>Đứng cách tường 2-3 mét. Đánh volley vào tường liên tục. Mục tiêu: giữ bóng đập qua lại càng nhiều lần càng tốt mà không miss.</p>
-<strong>Tiến độ:</strong>
-<ul class="styled-list">
-<li>Tuần 1: Forehand volley liên tục 20 lần</li>
-<li>Tuần 2: Backhand volley liên tục 20 lần</li>
-<li>Tuần 3: Xen kẽ forehand-backhand</li>
-<li>Tuần 4: Tăng tốc độ, giảm khoảng cách xuống 1.5 mét</li>
-</ul>
-<hr>
-<h3>Bài Tập 2: Feed and Volley</h3>
+<p><strong>Tiến độ:</strong>
+- Tuần 1: Forehand volley liên tục 20 lần
+- Tuần 2: Backhand volley liên tục 20 lần
+- Tuần 3: Xen kẽ forehand-backhand
+- Tuần 4: Tăng tốc độ, giảm khoảng cách xuống 1.5 mét</p>
+<hr/>
+<h3 id="bai-tap-2-feed-and-volley">Bài Tập 2: Feed and Volley</h3>
 <p>Người tập đứng ở baseline feed bóng nhẹ vào vùng service box. Người luyện đứng ở T-zone và volley mỗi bóng vào đích cụ thể.</p>
-<strong>Targets:</strong> Đặt 4 cone ở 4 góc service box của đối thủ. Lần lượt volley vào từng cone.
-<strong>Tiến độ:</strong>
-<ul class="styled-list">
-<li>Tuần 1-2: Bóng chậm, không áp lực</li>
-<li>Tuần 3-4: Bóng nhanh hơn, yêu cầu split step</li>
-<li>Tuần 5-6: Người feed không thông báo trước hướng — must read và react</li>
-</ul>
-<hr>
-<h3>Bài Tập 3: Approach and Volley Sequence</h3>
-<p>Người tập feed short ball vào giữa sân. Người luyện:</p>
-<p>1. Chạy lên approach</p>
-<p>2. Đánh approach shot</p>
-<p>3. Tiếp tục tiến vào lưới</p>
-<p>4. Split step khi người feed chuẩn bị đánh tiếp</p>
-<p>5. Volley</p>
+<p><strong>Targets:</strong> Đặt 4 cone ở 4 góc service box của đối thủ. Lần lượt volley vào từng cone.</p>
+<p><strong>Tiến độ:</strong>
+- Tuần 1-2: Bóng chậm, không áp lực
+- Tuần 3-4: Bóng nhanh hơn, yêu cầu split step
+- Tuần 5-6: Người feed không thông báo trước hướng — must read và react</p>
+<hr/>
+<h3 id="bai-tap-3-approach-and-volley-sequence">Bài Tập 3: Approach and Volley Sequence</h3>
+<p>Người tập feed short ball vào giữa sân. Người luyện:
+1. Chạy lên approach
+2. Đánh approach shot
+3. Tiếp tục tiến vào lưới
+4. Split step khi người feed chuẩn bị đánh tiếp
+5. Volley</p>
 <p>Thực hiện 20 lần mỗi buổi.</p>
-<hr>
-<h3>Bài Tập 4: Overhead Drill</h3>
-<p>Người tập lob bóng theo các mức độ khác nhau: ngắn, sâu, sang phải, sang trái. Người luyện phải:</p>
-<ul class="styled-list">
-<li>Di chuyển về đúng vị trí</li>
-<li>Đánh overhead vào đích</li>
-</ul>
-<strong>Quan trọng:</strong> Drill này phải yêu cầu <strong>di chuyển thực sự</strong> — không phải tất cả lob đều overhead từ cùng một chỗ.
-<hr>
-<h3>Bài Tập 5: 1-2-3 Net Game Drill</h3>
+<hr/>
+<h3 id="bai-tap-4-overhead-drill">Bài Tập 4: Overhead Drill</h3>
+<p>Người tập lob bóng theo các mức độ khác nhau: ngắn, sâu, sang phải, sang trái. Người luyện phải:
+- Di chuyển về đúng vị trí
+- Đánh overhead vào đích</p>
+<p><strong>Quan trọng:</strong> Drill này phải yêu cầu <strong>di chuyển thực sự</strong> — không phải tất cả lob đều overhead từ cùng một chỗ.</p>
+<hr/>
+<h3 id="bai-tap-5-1-2-3-net-game-drill">Bài Tập 5: 1-2-3 Net Game Drill</h3>
 <p>Drill hoàn chỉnh nhất cho net play:</p>
-<strong>Setup:</strong> Hai người tập. Người A ở lưới. Người B ở baseline.
-<strong>Flow:</strong>
-<p>1. Người B feed bóng short vào giữa sân</p>
-<p>2. Người A approach và volley</p>
-<p>3. Người B đánh passing shot (thực sự, không feed)</p>
-<p>4. Người A volley hoặc overhead tiếp theo</p>
-<p>5. Điểm kết thúc khi ai đó thắng điểm</p>
+<p><strong>Setup:</strong> Hai người tập. Người A ở lưới. Người B ở baseline.</p>
+<p><strong>Flow:</strong>
+1. Người B feed bóng short vào giữa sân
+2. Người A approach và volley
+3. Người B đánh passing shot (thực sự, không feed)
+4. Người A volley hoặc overhead tiếp theo
+5. Điểm kết thúc khi ai đó thắng điểm</p>
 <p>Điều này buộc người A phải xử lý toàn bộ sequence trong tình huống thực chiến.</p>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.15 Chương Trình 8 Tuần — Net Play</h2><h3>Tuần 1-2: Kỹ Thuật Cơ Bản</h3>
+<hr/>
+<h2 id="815-chuong-trinh-8-tuan-net-play">8.15 Chương Trình 8 Tuần — Net Play</h2>
+<h3 id="tuan-1-2-ky-thuat-co-ban">Tuần 1-2: Kỹ Thuật Cơ Bản</h3>
 <ul class="styled-list">
 <li>10 phút: Wall volley (forehand và backhand)</li>
 <li>10 phút: Feed and volley với target</li>
 <li>5 phút: Continental grip drill — thay đổi grip từ groundstroke sang continental nhiều lần cho đến khi tự động</li>
 </ul>
-<hr>
-<h3>Tuần 3-4: Approach và Positioning</h3>
+<hr/>
+<h3 id="tuan-3-4-approach-va-positioning">Tuần 3-4: Approach và Positioning</h3>
 <ul class="styled-list">
 <li>10 phút: Approach and volley sequence drill</li>
 <li>10 phút: Positioning drill — sau mỗi volley, di chuyển đúng vị trí trước khi đối thủ đánh</li>
 <li>5 phút: Low volley chuyên biệt — tập squat và scoop</li>
 </ul>
-<hr>
-<h3>Tuần 5-6: Overhead Và Reaction</h3>
+<hr/>
+<h3 id="tuan-5-6-overhead-va-reaction">Tuần 5-6: Overhead Và Reaction</h3>
 <ul class="styled-list">
 <li>10 phút: Overhead drill với di chuyển</li>
 <li>10 phút: Rapid fire volley — người feed đánh nhanh liên tiếp, người luyện volley phản xạ</li>
 <li>5 phút: Half volley drill — người feed aim vào feet</li>
 </ul>
-<hr>
-<h3>Tuần 7-8: Match Play Integration</h3>
+<hr/>
+<h3 id="tuan-7-8-match-play-integration">Tuần 7-8: Match Play Integration</h3>
 <ul class="styled-list">
 <li>10 phút: 1-2-3 net game drill (full sequence)</li>
 <li>10 phút: Mini-tennis toàn sân nhưng một người phải ở lưới</li>
 <li>10 phút: Approach + rally game — mỗi khi có short ball, bắt buộc phải approach</li>
 </ul>
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">8.16 Năm Lỗi Phổ Biến Tại Lưới</h2><h3>Lỗi 1: Dừng Di Chuyển Sau Approach</h3>
-<strong>Mô tả:</strong> Đánh approach shot rồi dừng lại, không tiến vào lưới tiếp.
-<strong>Hậu quả:</strong> Bị kẹt ở "no man's land" — vùng giữa sân không thuận lợi cho cả baseline lẫn lưới.
-<strong>Sửa:</strong> Rule cứng — sau approach, luôn luôn tiến thêm ít nhất 2-3 bước về phía lưới.
-<hr>
-<h3>Lỗi 2: Không Split Step</h3>
-<strong>Mô tả:</strong> Tiến vào lưới liên tục mà không split step khi đối thủ đánh.
-<strong>Hậu quả:</strong> Không có thời gian phản ứng, bị passing shot qua dễ dàng.
-<strong>Sửa:</strong> Tập habit: split step LUÔN xảy ra khi đối thủ chạm bóng — dù ở đâu trên sân.
-<hr>
-<h3>Lỗi 3: Big Swing Volley</h3>
-<strong>Mô tả:</strong> Cố swing đầy đủ như groundstroke khi volley — backswing dài, follow-through dài.
-<strong>Hậu quả:</strong> Bóng vào lưới, ra ngoài, hoặc khó control.
-<strong>Sửa:</strong> Mental cue: "Punch, không phải swing." Backswing chỉ đến ngang vai.
-<hr>
-<h3>Lỗi 4: Đứng Quá Sát Lưới</h3>
-<strong>Mô tả:</strong> Tiến vào lưới cho đến khi gần chạm lưới.
-<strong>Hậu quả:</strong> Lob qua đầu không thể với được, không có thời gian phản ứng với bóng nhanh.
-<strong>Sửa:</strong> Nhớ T-zone — 2.5-3.5 mét từ lưới. Đặt tape hoặc cone trên sân để nhắc nhở.
-<hr>
-<h3>Lỗi 5: Không Đọc Passing Shot Situation</h3>
-<strong>Mô tả:</strong> Ở lưới nhưng không di chuyển anticipate — đứng yên cho đến khi bóng đến.
-<strong>Hậu quả:</strong> Chỉ có thể volley bóng đến thẳng, miss tất cả bóng sang bên.
-<strong>Sửa:</strong> Tập bài tập 5 (1-2-3 net game drill) thường xuyên — buộc phải đọc và react.
-<hr></div>
-<div class="chapter" id="chapter-08"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 08</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 8</h2><ul class="styled-list">
-<li><strong>Hầu hết người chơi amateur sợ lưới</strong> vì thiếu tập luyện và hiểu lầm về geometry — thực ra lưới đóng góc của đối thủ, không phải mở góc</li>
-</ul>
+<hr/>
+<h2 id="816-nam-loi-pho-bien-tai-luoi">8.16 Năm Lỗi Phổ Biến Tại Lưới</h2>
+<h3 id="loi-1-dung-di-chuyen-sau-approach">Lỗi 1: Dừng Di Chuyển Sau Approach</h3>
+<p><strong>Mô tả:</strong> Đánh approach shot rồi dừng lại, không tiến vào lưới tiếp.</p>
+<p><strong>Hậu quả:</strong> Bị kẹt ở "no man's land" — vùng giữa sân không thuận lợi cho cả baseline lẫn lưới.</p>
+<p><strong>Sửa:</strong> Rule cứng — sau approach, luôn luôn tiến thêm ít nhất 2-3 bước về phía lưới.</p>
+<hr/>
+<h3 id="loi-2-khong-split-step">Lỗi 2: Không Split Step</h3>
+<p><strong>Mô tả:</strong> Tiến vào lưới liên tục mà không split step khi đối thủ đánh.</p>
+<p><strong>Hậu quả:</strong> Không có thời gian phản ứng, bị passing shot qua dễ dàng.</p>
+<p><strong>Sửa:</strong> Tập habit: split step LUÔN xảy ra khi đối thủ chạm bóng — dù ở đâu trên sân.</p>
+<hr/>
+<h3 id="loi-3-big-swing-volley">Lỗi 3: Big Swing Volley</h3>
+<p><strong>Mô tả:</strong> Cố swing đầy đủ như groundstroke khi volley — backswing dài, follow-through dài.</p>
+<p><strong>Hậu quả:</strong> Bóng vào lưới, ra ngoài, hoặc khó control.</p>
+<p><strong>Sửa:</strong> Mental cue: "Punch, không phải swing." Backswing chỉ đến ngang vai.</p>
+<hr/>
+<h3 id="loi-4-ung-qua-sat-luoi">Lỗi 4: Đứng Quá Sát Lưới</h3>
+<p><strong>Mô tả:</strong> Tiến vào lưới cho đến khi gần chạm lưới.</p>
+<p><strong>Hậu quả:</strong> Lob qua đầu không thể với được, không có thời gian phản ứng với bóng nhanh.</p>
+<p><strong>Sửa:</strong> Nhớ T-zone — 2.5-3.5 mét từ lưới. Đặt tape hoặc cone trên sân để nhắc nhở.</p>
+<hr/>
+<h3 id="loi-5-khong-oc-passing-shot-situation">Lỗi 5: Không Đọc Passing Shot Situation</h3>
+<p><strong>Mô tả:</strong> Ở lưới nhưng không di chuyển anticipate — đứng yên cho đến khi bóng đến.</p>
+<p><strong>Hậu quả:</strong> Chỉ có thể volley bóng đến thẳng, miss tất cả bóng sang bên.</p>
+<p><strong>Sửa:</strong> Tập bài tập 5 (1-2-3 net game drill) thường xuyên — buộc phải đọc và react.</p>
+<hr/>
+<h2 id="tom-tat-chuong-8">Tóm Tắt Chương 8</h2>
 <ul class="styled-list">
-<li><strong>T-zone (2.5-3.5 mét từ lưới)</strong> là vị trí tối ưu — đóng góc đủ và vẫn cover được lob</li>
+<li>
+<p><strong>Hầu hết người chơi amateur sợ lưới</strong> vì thiếu tập luyện và hiểu lầm về geometry — thực ra lưới đóng góc của đối thủ, không phải mở góc</p>
+</li>
+<li>
+<p><strong>T-zone (2.5-3.5 mét từ lưới)</strong> là vị trí tối ưu — đóng góc đủ và vẫn cover được lob</p>
+</li>
+<li>
+<p><strong>Continental grip</strong> là grip duy nhất cho volley — không thay đổi giữa forehand và backhand</p>
+</li>
+<li>
+<p><strong>Volley là punch, không phải swing</strong> — compact backswing, punch về phía trước, underspin nhẹ</p>
+</li>
+<li>
+<p><strong>Approach shot là cầu nối</strong> — từ short ball đến lưới, thường là slice down-the-line</p>
+</li>
+<li>
+<p><strong>Split step tại lưới</strong> là bắt buộc — xảy ra mỗi khi đối thủ chuẩn bị đánh</p>
+</li>
+<li>
+<p><strong>Di chuyển sau volley</strong> — không đứng yên, cover line of ball sau mỗi volley</p>
+</li>
+<li>
+<p><strong>Overhead</strong> giống serve về cơ học — di chuyển sớm, pivot and run, đánh ở điểm cao nhất</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Continental grip</strong> là grip duy nhất cho volley — không thay đổi giữa forehand và backhand</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Volley là punch, không phải swing</strong> — compact backswing, punch về phía trước, underspin nhẹ</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Approach shot là cầu nối</strong> — từ short ball đến lưới, thường là slice down-the-line</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Split step tại lưới</strong> là bắt buộc — xảy ra mỗi khi đối thủ chuẩn bị đánh</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Di chuyển sau volley</strong> — không đứng yên, cover line of ball sau mỗi volley</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Overhead</strong> giống serve về cơ học — di chuyển sớm, pivot and run, đánh ở điểm cao nhất</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-19"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 19</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 9 sẽ đi sâu vào <strong>Slice, Drop Shot và Lob</strong> — ba cú đánh "touch" đòi hỏi tinh tế hơn power.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 9 sẽ đi sâu vào <strong>Slice, Drop Shot và Lob</strong> — ba cú đánh "touch" đòi hỏi tinh tế hơn power.</p>
 <p>Nếu volley là về phản xạ nhanh và quyết đoán, thì slice, drop shot và lob là về <strong>cảm giác, kiểm soát và deception</strong>. Đây là những cú đánh phân biệt người chơi tốt với người chơi trung bình ở cấp độ club và beyond — vì chúng đòi hỏi touch và tư duy chiến thuật, không chỉ là sức mạnh thể chất.</p>
-<hr>
-<em>Chương 9: Slice, Drop Shot và Lob — Nghệ Thuật Của Touch và Deception →</em></div>
+<hr/>
+<p><em>Chương 9: Slice, Drop Shot và Lob — Nghệ Thuật Của Touch và Deception →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

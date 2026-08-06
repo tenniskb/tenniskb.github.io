@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 03 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 03</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,239 +896,258 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 03</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 03</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 03</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">Chương 3: Footwork, Tư Thế và Nghệ Thuật Đến Đúng Chỗ</h2><hr>
-> <em>"Không cần đánh bóng giỏi nếu bạn không bao giờ đến được chỗ bóng rơi."</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 03 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#di-chuyển-chân--nền-tảng-của-mọi-cú-đánh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>DI CHUYỂN CHÂN — NỀN TẢNG CỦA MỌI CÚ ĐÁNH</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-3-footwork-tư-thế-và-nghệ-thuật-đến-đúng-chỗ' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 3: Footwork, Tư Thế và Nghệ Thuật Đến Đúng Chỗ</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#31-tại-sao-chân-đi-trước-tay-đi-sau' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.1 Tại Sao Chân Đi Trước, Tay Đi Sau</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#32-ba-tư-thế-cơ-bản--khi-nào-dùng-tư-thế-nào' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.2 Ba Tư Thế Cơ Bản — Khi Nào Dùng Tư Thế Nào</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#33-split-step--bước-nhảy-quan-trọng-nhất-trong-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.3 Split Step — Bước Nhảy Quan Trọng Nhất Trong Tennis</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#34-gravity-step--bước-khởi-động-nhanh-nhất' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.4 Gravity Step — Bước Khởi Động Nhanh Nhất</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#35-scs-recovery-rhythm--nhịp-hồi-phục-sau-khi-đánh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.5 SCS Recovery Rhythm — Nhịp Hồi Phục Sau Khi Đánh</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#36-trung-tâm-chiến-thuật--đứng-đâu-là-đúng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.6 Trung Tâm Chiến Thuật — Đứng Đâu Là Đúng?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#37-sliding--kỹ-thuật-di-chuyển-cách-mạng-của-tennis-hiện-đại' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.7 Sliding — Kỹ Thuật Di Chuyển Cách Mạng Của Tennis Hiện Đại</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#38-the-active-split-step--tiêu-chuẩn-2026' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.8 The Active Split Step — Tiêu Chuẩn 2026</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#39-footwork-cho-bóng-thấp--một-điểm-yếu-phổ-biến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.9 Footwork Cho Bóng Thấp — Một Điểm Yếu Phổ Biến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#310-bài-tập-footwork-toàn-diện' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.10 Bài Tập Footwork Toàn Diện</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#311-chấn-thương-liên-quan-đến-footwork-hiện-đại' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.11 Chấn Thương Liên Quan Đến Footwork Hiện Đại</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#312-lộ-trình-học-footwork--từ-cơ-bản-đến-nâng-cao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>3.12 Lộ Trình Học Footwork — Từ Cơ Bản Đến Nâng Cao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-3' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 3</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#đọc-thêm-cho-chương-tiếp-theo' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Đọc Thêm Cho Chương Tiếp Theo</a></li></ul></div>
+    <h1 id="di-chuyen-chan-nen-tang-cua-moi-cu-anh">DI CHUYỂN CHÂN — NỀN TẢNG CỦA MỌI CÚ ĐÁNH</h1>
+<h2 id="chuong-3-footwork-tu-the-va-nghe-thuat-en-ung-cho">Chương 3: Footwork, Tư Thế và Nghệ Thuật Đến Đúng Chỗ</h2>
+<hr/>
+<div class="pullquote"><p>*"Không cần đánh bóng giỏi nếu bạn không bao giờ đến được chỗ bóng rơi."*</p></div>
+<hr/>
 <p>Có một thống kê thú vị trong quần vợt chuyên nghiệp: khoảng 70% điểm tennis được "thắng" hoặc "thua" trước khi vợt chạm bóng.</p>
 <p>Điều đó có nghĩa là gì? Nghĩa là vị trí của bạn trên sân — bạn đến đúng chỗ chưa, bạn có đủ thời gian để chuẩn bị chưa, bạn đang đứng đúng tư thế chưa — quyết định phần lớn kết quả của cú đánh, <em>trước</em> khi bạn vung vợt.</p>
 <p>Một cú forehand hoàn hảo từ tư thế xấu sẽ là một cú đánh tệ. Một cú forehand trung bình từ tư thế tốt sẽ là một cú đánh tốt.</p>
 <p>Đây là lý do tại sao di chuyển chân — footwork — là kỹ năng quan trọng nhất trong tennis mà ít người chịu luyện tập một cách có hệ thống.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.1 Tại Sao Chân Đi Trước, Tay Đi Sau</h2><p>Trong Chương 1 và 2, chúng ta đã học rằng sức mạnh đến từ đất và từ X-Factor của thân mình. Nhưng cả hai điều đó chỉ có thể xảy ra nếu chân bạn <strong>đặt bạn vào đúng vị trí</strong> trước khi cú đánh bắt đầu.</p>
+<hr/>
+<h2 id="31-tai-sao-chan-i-truoc-tay-i-sau">3.1 Tại Sao Chân Đi Trước, Tay Đi Sau</h2>
+<p>Trong Chương 1 và 2, chúng ta đã học rằng sức mạnh đến từ đất và từ X-Factor của thân mình. Nhưng cả hai điều đó chỉ có thể xảy ra nếu chân bạn <strong>đặt bạn vào đúng vị trí</strong> trước khi cú đánh bắt đầu.</p>
 <p>Hãy nghĩ về nó theo cách này:</p>
 <p>Nếu bạn phải đánh bóng trong khi đang chạy, hoặc vừa dừng lại, hoặc không có nền tảng vững chắc — X-Factor không thể hoạt động. Lực từ đất không thể truyền lên. Chuỗi động lực bị đứt ngay từ mắt xích đầu tiên.</p>
-<strong>Kết quả thực tế:</strong> Người chơi có footwork tốt nhưng kỹ thuật tay trung bình sẽ đánh tốt hơn người có kỹ thuật tay xuất sắc nhưng footwork kém — trong một trận đấu thực tế.
+<p><strong>Kết quả thực tế:</strong> Người chơi có footwork tốt nhưng kỹ thuật tay trung bình sẽ đánh tốt hơn người có kỹ thuật tay xuất sắc nhưng footwork kém — trong một trận đấu thực tế.</p>
 <p>Câu nói nổi tiếng của Graham Bailey, một trong những chuyên gia footwork hàng đầu thế giới: <em>"Chân đặt xuống trước bao giờ cũng là chân đặt xuống đúng."</em> Ý nghĩa: trước khi lo kỹ thuật tay, hãy lo đặt chân vào đúng vị trí.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.2 Ba Tư Thế Cơ Bản — Khi Nào Dùng Tư Thế Nào</h2><p>Không có một tư thế đứng duy nhất "đúng nhất" cho mọi tình huống. Tùy theo loại bóng, thời gian, và vị trí trên sân, bạn cần chọn tư thế phù hợp. Có ba tư thế cơ bản:</p>
-<hr>
-<h3>Tư Thế 1: Neutral Stance (Tư Thế Trung Tính)</h3>
-<strong>Hình dung:</strong> Đứng với hai chân vuông góc với lưới, chân trái ở phía trước (với người thuận tay phải đánh forehand). Đường nối hai bàn chân vuông góc với đường cơ sở.
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li>Chuyển trọng lượng thẳng về phía trước — tạo ra lực tuyến tính tốt nhất</li>
-<li>Bóng đi sâu và xuyên thấu hơn</li>
-<li>Tốt nhất để "bước vào bóng" khi tấn công</li>
-</ul>
-<strong>Nhược điểm:</strong>
-<ul class="styled-list">
-<li>Mất nhiều thời gian hơn để thiết lập — không dùng được khi bị dồn ép</li>
-<li>Khó hồi phục (recover) về giữa sân sau khi đánh</li>
-<li>Không phù hợp với bóng cao hoặc bóng kéo ra xa</li>
-</ul>
-<strong>Dùng khi nào:</strong>
-<ul class="styled-list">
-<li>Bóng ngắn, bạn có thời gian bước tới</li>
-<li>Muốn tấn công mạnh vào góc</li>
-<li>Đánh tiếp cận lưới (approach shot)</li>
-<li>Bóng thấp ở giữa sân</li>
-</ul>
-<strong>Mẹo thực hành:</strong> Trong neutral stance, chân sau phải <em>kéo theo sau</em> khi bạn đánh — không được "khóa cứng" ở đó. Chân sau nên tự nhiên pivot (xoay) lên khi hông xoay tới, để hông được giải phóng hoàn toàn.
-<hr>
-<h3>Tư Thế 2: Open Stance (Tư Thế Mở)</h3>
-<strong>Hình dung:</strong> Hai chân song song với lưới, hoặc chân ngoài (chân trái khi đánh forehand phải) hơi lùi ra sau. Ngực hướng về phía lưới hoặc hơi chéo.
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li>Thiết lập nhanh nhất — không cần bước thêm nhiều bước</li>
-<li>Hồi phục về giữa sân ngay lập tức sau khi đánh</li>
-<li>Phù hợp với bóng kéo ra ngoài rộng</li>
-<li>Tạo ra lực xoay (rotational power) tốt nhất</li>
-</ul>
-<strong>Nhược điểm:</strong>
-<ul class="styled-list">
-<li>Phụ thuộc hoàn toàn vào X-Factor để tạo lực — nếu không có X-Factor tốt, bóng sẽ yếu</li>
-<li>Đòi hỏi chân ngoài phải "tải trọng" tốt trước khi đánh</li>
-</ul>
-<strong>Dùng khi nào:</strong>
-<ul class="styled-list">
-<li>Bóng kéo rộng sang phải (forehand phải)</li>
-<li>Bóng đến rất nhanh — không có thời gian bước vào neutral stance</li>
-<li>Muốn recover nhanh sau khi đánh</li>
-<li>Bóng nảy cao hơn thắt lưng</li>
-</ul>
-<strong>Điểm kỹ thuật quan trọng:</strong> Trong open stance, chân ngoài phải "tải" trọng lượng sâu xuống — gối uốn, trọng lượng dồn vào chân ngoài <em>trước</em> khi xoay. Nếu bạn chỉ đứng thẳng ở open stance mà không tải trọng chân ngoài, bạn không có nền tảng để xoay và bóng sẽ yếu.
-<hr>
-<h3>Tư Thế 3: Semi-Open Stance (Tư Thế Nửa Mở)</h3>
-<strong>Hình dung:</strong> Chân trái (forehand phải) bước chéo về phía trước khoảng 45 độ so với đường cơ sở. Không hoàn toàn như neutral stance cũng không hoàn toàn như open stance.
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li>Kết hợp ưu điểm của cả hai: có lực tuyến tính và lực xoay</li>
-<li>Linh hoạt hơn — có thể điều chỉnh tùy tình huống</li>
-<li>Recover tốt hơn neutral stance, lực tốt hơn open stance trong nhiều tình huống</li>
-</ul>
-<strong>Dùng khi nào:</strong>
-<ul class="styled-list">
-<li>Bóng đến vừa phải — không quá nhanh, không quá chậm</li>
-<li>Bóng ở vùng giữa sân trong rally bình thường</li>
-<li>Khi bạn muốn có sự linh hoạt tối đa</li>
-</ul>
-<strong>Ghi chú:</strong> Semi-open stance là tư thế phổ biến nhất trong tennis chuyên nghiệp hiện đại, xuất hiện trong 50-60% các cú groundstroke.
-<hr>
-<h3>Bảng Quyết Định Nhanh</h3>
-| Tình huống | Tư thế nên dùng | Lý do |
-|---|---|---|
-| Bóng ngắn, có thời gian | Neutral | Tấn công mạnh |
-| Bóng kéo rộng ra ngoài | Open | Thiết lập nhanh, recover ngay |
-| Bóng bình thường ở giữa | Semi-open | Linh hoạt nhất |
-| Bóng nảy rất cao | Open | Xử lý bóng cao tốt hơn |
-| Đánh tiếp cận lưới | Neutral | Lực tuyến tính + bước tới |
-| Bóng bắt buộc phải defend | Open | Không đủ thời gian cho neutral |
-
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.3 Split Step — Bước Nhảy Quan Trọng Nhất Trong Tennis</h2><p>Nếu bạn chỉ học được một kỹ năng footwork từ cuốn sách này, hãy học Split Step.</p>
-<strong>Split Step</strong> là bước nhảy nhỏ — thực ra chỉ là "nhún" nhẹ cả hai chân — thực hiện đúng vào lúc đối thủ chạm bóng. Từ tư thế đó, bạn có thể bùng phát về bất kỳ hướng nào trong thời gian ngắn nhất.
-<h3>Tại Sao Split Step Hoạt Động?</h3>
+<hr/>
+<h2 id="32-ba-tu-the-co-ban-khi-nao-dung-tu-the-nao">3.2 Ba Tư Thế Cơ Bản — Khi Nào Dùng Tư Thế Nào</h2>
+<p>Không có một tư thế đứng duy nhất "đúng nhất" cho mọi tình huống. Tùy theo loại bóng, thời gian, và vị trí trên sân, bạn cần chọn tư thế phù hợp. Có ba tư thế cơ bản:</p>
+<hr/>
+<h3 id="tu-the-1-neutral-stance-tu-the-trung-tinh">Tư Thế 1: Neutral Stance (Tư Thế Trung Tính)</h3>
+<p><strong>Hình dung:</strong> Đứng với hai chân vuông góc với lưới, chân trái ở phía trước (với người thuận tay phải đánh forehand). Đường nối hai bàn chân vuông góc với đường cơ sở.</p>
+<p><strong>Ưu điểm:</strong>
+- Chuyển trọng lượng thẳng về phía trước — tạo ra lực tuyến tính tốt nhất
+- Bóng đi sâu và xuyên thấu hơn
+- Tốt nhất để "bước vào bóng" khi tấn công</p>
+<p><strong>Nhược điểm:</strong>
+- Mất nhiều thời gian hơn để thiết lập — không dùng được khi bị dồn ép
+- Khó hồi phục (recover) về giữa sân sau khi đánh
+- Không phù hợp với bóng cao hoặc bóng kéo ra xa</p>
+<p><strong>Dùng khi nào:</strong>
+- Bóng ngắn, bạn có thời gian bước tới
+- Muốn tấn công mạnh vào góc
+- Đánh tiếp cận lưới (approach shot)
+- Bóng thấp ở giữa sân</p>
+<p><strong>Mẹo thực hành:</strong> Trong neutral stance, chân sau phải <em>kéo theo sau</em> khi bạn đánh — không được "khóa cứng" ở đó. Chân sau nên tự nhiên pivot (xoay) lên khi hông xoay tới, để hông được giải phóng hoàn toàn.</p>
+<hr/>
+<h3 id="tu-the-2-open-stance-tu-the-mo">Tư Thế 2: Open Stance (Tư Thế Mở)</h3>
+<p><strong>Hình dung:</strong> Hai chân song song với lưới, hoặc chân ngoài (chân trái khi đánh forehand phải) hơi lùi ra sau. Ngực hướng về phía lưới hoặc hơi chéo.</p>
+<p><strong>Ưu điểm:</strong>
+- Thiết lập nhanh nhất — không cần bước thêm nhiều bước
+- Hồi phục về giữa sân ngay lập tức sau khi đánh
+- Phù hợp với bóng kéo ra ngoài rộng
+- Tạo ra lực xoay (rotational power) tốt nhất</p>
+<p><strong>Nhược điểm:</strong>
+- Phụ thuộc hoàn toàn vào X-Factor để tạo lực — nếu không có X-Factor tốt, bóng sẽ yếu
+- Đòi hỏi chân ngoài phải "tải trọng" tốt trước khi đánh</p>
+<p><strong>Dùng khi nào:</strong>
+- Bóng kéo rộng sang phải (forehand phải)
+- Bóng đến rất nhanh — không có thời gian bước vào neutral stance
+- Muốn recover nhanh sau khi đánh
+- Bóng nảy cao hơn thắt lưng</p>
+<p><strong>Điểm kỹ thuật quan trọng:</strong> Trong open stance, chân ngoài phải "tải" trọng lượng sâu xuống — gối uốn, trọng lượng dồn vào chân ngoài <em>trước</em> khi xoay. Nếu bạn chỉ đứng thẳng ở open stance mà không tải trọng chân ngoài, bạn không có nền tảng để xoay và bóng sẽ yếu.</p>
+<hr/>
+<h3 id="tu-the-3-semi-open-stance-tu-the-nua-mo">Tư Thế 3: Semi-Open Stance (Tư Thế Nửa Mở)</h3>
+<p><strong>Hình dung:</strong> Chân trái (forehand phải) bước chéo về phía trước khoảng 45 độ so với đường cơ sở. Không hoàn toàn như neutral stance cũng không hoàn toàn như open stance.</p>
+<p><strong>Ưu điểm:</strong>
+- Kết hợp ưu điểm của cả hai: có lực tuyến tính và lực xoay
+- Linh hoạt hơn — có thể điều chỉnh tùy tình huống
+- Recover tốt hơn neutral stance, lực tốt hơn open stance trong nhiều tình huống</p>
+<p><strong>Dùng khi nào:</strong>
+- Bóng đến vừa phải — không quá nhanh, không quá chậm
+- Bóng ở vùng giữa sân trong rally bình thường
+- Khi bạn muốn có sự linh hoạt tối đa</p>
+<p><strong>Ghi chú:</strong> Semi-open stance là tư thế phổ biến nhất trong tennis chuyên nghiệp hiện đại, xuất hiện trong 50-60% các cú groundstroke.</p>
+<hr/>
+<h3 id="bang-quyet-inh-nhanh">Bảng Quyết Định Nhanh</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Tình huống</th>
+<th>Tư thế nên dùng</th>
+<th>Lý do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bóng ngắn, có thời gian</td>
+<td>Neutral</td>
+<td>Tấn công mạnh</td>
+</tr>
+<tr>
+<td>Bóng kéo rộng ra ngoài</td>
+<td>Open</td>
+<td>Thiết lập nhanh, recover ngay</td>
+</tr>
+<tr>
+<td>Bóng bình thường ở giữa</td>
+<td>Semi-open</td>
+<td>Linh hoạt nhất</td>
+</tr>
+<tr>
+<td>Bóng nảy rất cao</td>
+<td>Open</td>
+<td>Xử lý bóng cao tốt hơn</td>
+</tr>
+<tr>
+<td>Đánh tiếp cận lưới</td>
+<td>Neutral</td>
+<td>Lực tuyến tính + bước tới</td>
+</tr>
+<tr>
+<td>Bóng bắt buộc phải defend</td>
+<td>Open</td>
+<td>Không đủ thời gian cho neutral</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="33-split-step-buoc-nhay-quan-trong-nhat-trong-tennis">3.3 Split Step — Bước Nhảy Quan Trọng Nhất Trong Tennis</h2>
+<p>Nếu bạn chỉ học được một kỹ năng footwork từ cuốn sách này, hãy học Split Step.</p>
+<p><strong>Split Step</strong> là bước nhảy nhỏ — thực ra chỉ là "nhún" nhẹ cả hai chân — thực hiện đúng vào lúc đối thủ chạm bóng. Từ tư thế đó, bạn có thể bùng phát về bất kỳ hướng nào trong thời gian ngắn nhất.</p>
+<h3 id="tai-sao-split-step-hoat-ong">Tại Sao Split Step Hoạt Động?</h3>
 <p>Khi bạn đang đứng im, toàn bộ trọng lượng cơ thể "chìm xuống" gót chân — đây là trạng thái quán tính (inertia). Muốn di chuyển, bạn phải đầu tiên khắc phục quán tính này, rồi mới bắt đầu di chuyển — mất thêm thời gian quý báu.</p>
 <p>Split step giải quyết vấn đề này bằng cách <strong>nén cơ chân xuống</strong> ngay trước khi cần di chuyển. Khi bạn nhảy nhẹ lên, rồi hạ xuống — bạn đang "tải" năng lượng đàn hồi vào gân Achilles và cơ bắp chân. Lúc hạ xuống chính là lúc bóng rời khỏi vợt đối thủ. Ngay khi bạn nhận ra hướng bóng, bạn có thể bùng phát ra ngay mà không cần "khởi động" từ đầu.</p>
-<h3>Timing Của Split Step — Đây Là Điểm Phân Biệt Giữa Tốt Và Xuất Sắc</h3>
-<strong>Người mới (sai):</strong> Split step sau khi đối thủ đánh bóng — lúc này bóng đã bay rồi, bạn đang react muộn.
-<strong>Người chơi trung bình:</strong> Split step đồng thời khi đối thủ chạm bóng — đúng hơn nhưng chưa tối ưu.
-<strong>Người chơi giỏi:</strong> Split step <em>ngay trước</em> khi đối thủ chạm bóng — bạn đang trong không khí khi bóng rời vợt, và khi chân chạm đất, bạn đã biết hướng cần đi.
-<strong>Người chơi xuất sắc (2026 standard):</strong> Split step với <em>directional pre-load</em> — khi nhảy lên, bạn đã đọc được hướng bóng từ vai và vợt của đối thủ, và khi hạ xuống, 60% trọng lượng đã dồn vào chân <em>đúng hướng</em> — giúp bùng phát nhanh hơn 50ms so với hạ xuống đều hai chân.
+<h3 id="timing-cua-split-step-ay-la-iem-phan-biet-giua-tot-va-xuat-sac">Timing Của Split Step — Đây Là Điểm Phân Biệt Giữa Tốt Và Xuất Sắc</h3>
+<p><strong>Người mới (sai):</strong> Split step sau khi đối thủ đánh bóng — lúc này bóng đã bay rồi, bạn đang react muộn.</p>
+<p><strong>Người chơi trung bình:</strong> Split step đồng thời khi đối thủ chạm bóng — đúng hơn nhưng chưa tối ưu.</p>
+<p><strong>Người chơi giỏi:</strong> Split step <em>ngay trước</em> khi đối thủ chạm bóng — bạn đang trong không khí khi bóng rời vợt, và khi chân chạm đất, bạn đã biết hướng cần đi.</p>
+<p><strong>Người chơi xuất sắc (2026 standard):</strong> Split step với <em>directional pre-load</em> — khi nhảy lên, bạn đã đọc được hướng bóng từ vai và vợt của đối thủ, và khi hạ xuống, 60% trọng lượng đã dồn vào chân <em>đúng hướng</em> — giúp bùng phát nhanh hơn 50ms so với hạ xuống đều hai chân.</p>
 <p>50ms nghe có vẻ nhỏ. Nhưng với bóng bay 150 km/h, 50ms = 2 mét. Đó là khoảng cách giữa đánh được và không đánh được.</p>
-<h3>Cách Tập Split Step</h3>
-<strong>Bài tập cơ bản — Nhảy Theo Âm Thanh:</strong>
+<h3 id="cach-tap-split-step">Cách Tập Split Step</h3>
+<p><strong>Bài tập cơ bản — Nhảy Theo Âm Thanh:</strong></p>
 <p>Nhờ người tập cầm vợt đứng ở phía bên kia lưới. Họ vung vợt đánh bóng (hoặc chỉ vung vợt không bóng). Nhiệm vụ của bạn: nhảy split step đúng lúc bạn nghe tiếng vợt chạm bóng (hoặc thấy vợt chuyển động về phía trước).</p>
 <p>Lặp lại 30-40 lần cho đến khi timing trở nên tự nhiên, không cần nghĩ.</p>
-<strong>Bài tập nâng cao — Đọc Hướng:</strong>
+<p><strong>Bài tập nâng cao — Đọc Hướng:</strong></p>
 <p>Cùng bài tập trên, nhưng bây giờ bạn phải sprint về hướng bóng <em>ngay khi</em> chân chạm đất sau split step. Không được dừng lại thêm một bước nào.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.4 Gravity Step — Bước Khởi Động Nhanh Nhất</h2><p>Sau khi split step, bước đầu tiên về phía bóng quyết định bạn có kịp đến không. Và "gravity step" là cách bắt đầu di chuyển nhanh nhất.</p>
-<strong>Nguyên lý:</strong>
+<hr/>
+<h2 id="34-gravity-step-buoc-khoi-ong-nhanh-nhat">3.4 Gravity Step — Bước Khởi Động Nhanh Nhất</h2>
+<p>Sau khi split step, bước đầu tiên về phía bóng quyết định bạn có kịp đến không. Và "gravity step" là cách bắt đầu di chuyển nhanh nhất.</p>
+<p><strong>Nguyên lý:</strong></p>
 <p>Thay vì "đẩy" chân để di chuyển — cần thời gian co cơ — bạn sử dụng trọng lực.</p>
 <p>Bằng cách <strong>thả lỏng hông về phía muốn đi</strong> — để cơ thể "rơi" về hướng đó — bạn sử dụng trọng lực làm lực khởi động ban đầu. Khi cơ thể đã nghiêng sang một bên, chân tự nhiên phải bước theo để giữ thăng bằng. Đây là bước đầu tiên — và nó nhanh hơn bất kỳ bước "đẩy" tích cực nào.</p>
-<strong>Hình dung:</strong> Bạn đứng trên một cái ghế đẩu. Ai đó đẩy nhẹ vai bạn sang trái — bạn bước chân trái ra để không ngã. Đó là gravity step. Thay vì đợi ai đẩy, bạn tự "cho phép" mình nghiêng về phía bóng.
-<strong>Tại Sao Điều Này Quan Trọng:</strong>
+<p><strong>Hình dung:</strong> Bạn đứng trên một cái ghế đẩu. Ai đó đẩy nhẹ vai bạn sang trái — bạn bước chân trái ra để không ngã. Đó là gravity step. Thay vì đợi ai đẩy, bạn tự "cho phép" mình nghiêng về phía bóng.</p>
+<p><strong>Tại Sao Điều Này Quan Trọng:</strong></p>
 <p>Các vận động viên chạy nước rút đẳng cấp Olympic đều biết điều này: bước đầu tiên nhanh nhất không phải từ việc co cơ mạnh nhất, mà từ việc "rơi" về phía trước trước tiên. Đây là kỹ thuật mà Federer, Edberg, và Nadal sử dụng — di chuyển trông nhẹ nhàng và effortless vì họ đang dùng trọng lực, không phải sức cơ, để khởi động.</p>
-<h3>Cách Tập Gravity Step</h3>
-<strong>Bài tập Tường Nghiêng:</strong>
-<p>1. Đứng cách tường 1 mét, mặt hướng vào tường</p>
-<p>2. Nghiêng người về phía trước — giống như sắp ngã</p>
-<p>3. Chân tự động bước ra để giữ thăng bằng</p>
-<p>4. Lặp lại, cảm nhận cảm giác "rơi về phía trước"</p>
+<h3 id="cach-tap-gravity-step">Cách Tập Gravity Step</h3>
+<p><strong>Bài tập Tường Nghiêng:</strong></p>
+<ol class="styled-list numbered">
+<li>Đứng cách tường 1 mét, mặt hướng vào tường</li>
+<li>Nghiêng người về phía trước — giống như sắp ngã</li>
+<li>Chân tự động bước ra để giữ thăng bằng</li>
+<li>Lặp lại, cảm nhận cảm giác "rơi về phía trước"</li>
+</ol>
 <p>Bây giờ áp dụng cùng cảm giác đó nhưng sang phải và sang trái.</p>
-<strong>Bài tập 2: Gravity Step + Sprint</strong>
+<p><strong>Bài tập 2: Gravity Step + Sprint</strong></p>
 <p>Đứng ở vị trí split step. Khi huấn luyện viên chỉ trái hoặc phải, thực hiện gravity step về hướng đó rồi sprint 3-4 bước.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.5 SCS Recovery Rhythm — Nhịp Hồi Phục Sau Khi Đánh</h2><p>Đây là kỹ năng mà hầu hết người chơi tennis hoàn toàn bỏ qua — và cũng là lý do tại sao nhiều người liên tục bị bắt "hở" sân.</p>
-<strong>SCS</strong> viết tắt của: <strong>S</strong>plit → <strong>C</strong>rossover → <strong>S</strong>huffle
+<hr/>
+<h2 id="35-scs-recovery-rhythm-nhip-hoi-phuc-sau-khi-anh">3.5 SCS Recovery Rhythm — Nhịp Hồi Phục Sau Khi Đánh</h2>
+<p>Đây là kỹ năng mà hầu hết người chơi tennis hoàn toàn bỏ qua — và cũng là lý do tại sao nhiều người liên tục bị bắt "hở" sân.</p>
+<p><strong>SCS</strong> viết tắt của: <strong>S</strong>plit → <strong>C</strong>rossover → <strong>S</strong>huffle</p>
 <p>Đây là chuỗi di chuyển bạn thực hiện <em>ngay sau khi đánh bóng</em> để về vị trí trung tâm chiến thuật trước khi đối thủ đánh trở lại.</p>
-<h3>Ba Bước Của SCS</h3>
-<strong>Bước 1 — Split (Nhảy Reset):</strong>
-<p>Ngay sau khi vợt chạm bóng, thực hiện split step nhỏ. Không phải để di chuyển — mà để "reset" quán tính của cú đánh. Nếu bạn đang chạy sang phải khi đánh, bước này giúp bạn không tiếp tục đà sang phải.</p>
-<strong>Bước 2 — Crossover (Bước Chéo Phủ Khoảng Cách):</strong>
-<p>Từ vị trí đánh bóng, thực hiện một bước chéo lớn về phía trung tâm chiến thuật. Crossover (bước chân này chéo qua chân kia) giúp bạn phủ khoảng cách lớn nhanh nhất — gấp đôi so với bước bình thường.</p>
-<strong>Bước 3 — Shuffle (Bước Phụ Điều Chỉnh):</strong>
-<p>Khi đến gần vị trí trung tâm, chuyển sang shuffle steps (bước nhỏ sang ngang) để điều chỉnh vị trí chính xác và sẵn sàng cho split step tiếp theo.</p>
-<h3>Tại Sao SCS Không Chỉ Là "Chạy Về Giữa"</h3>
+<h3 id="ba-buoc-cua-scs">Ba Bước Của SCS</h3>
+<p><strong>Bước 1 — Split (Nhảy Reset):</strong>
+Ngay sau khi vợt chạm bóng, thực hiện split step nhỏ. Không phải để di chuyển — mà để "reset" quán tính của cú đánh. Nếu bạn đang chạy sang phải khi đánh, bước này giúp bạn không tiếp tục đà sang phải.</p>
+<p><strong>Bước 2 — Crossover (Bước Chéo Phủ Khoảng Cách):</strong>
+Từ vị trí đánh bóng, thực hiện một bước chéo lớn về phía trung tâm chiến thuật. Crossover (bước chân này chéo qua chân kia) giúp bạn phủ khoảng cách lớn nhanh nhất — gấp đôi so với bước bình thường.</p>
+<p><strong>Bước 3 — Shuffle (Bước Phụ Điều Chỉnh):</strong>
+Khi đến gần vị trí trung tâm, chuyển sang shuffle steps (bước nhỏ sang ngang) để điều chỉnh vị trí chính xác và sẵn sàng cho split step tiếp theo.</p>
+<h3 id="tai-sao-scs-khong-chi-la-chay-ve-giua">Tại Sao SCS Không Chỉ Là "Chạy Về Giữa"</h3>
 <p>Nhiều người nghĩ: "Sau khi đánh, tôi chạy thẳng về giữa là xong." Nhưng có hai vấn đề:</p>
-<p>1. <strong>"Giữa" không phải lúc nào cũng là giữa sân</strong> — đó là "trung tâm chiến thuật" (tactical center), tức là điểm cân bằng giữa hai góc đánh xa nhất mà đối thủ có thể đánh về phía bạn. Tùy theo bạn vừa đánh bóng đến đâu, trung tâm chiến thuật thay đổi.</p>
-<p>2. <strong>Chạy thẳng về giữa không cho phép split step đúng thời điểm</strong> — nếu bạn đang chạy khi đối thủ đánh, bạn không thể split step và bùng phát hiệu quả.</p>
+<ol class="styled-list numbered">
+<li>
+<p><strong>"Giữa" không phải lúc nào cũng là giữa sân</strong> — đó là "trung tâm chiến thuật" (tactical center), tức là điểm cân bằng giữa hai góc đánh xa nhất mà đối thủ có thể đánh về phía bạn. Tùy theo bạn vừa đánh bóng đến đâu, trung tâm chiến thuật thay đổi.</p>
+</li>
+<li>
+<p><strong>Chạy thẳng về giữa không cho phép split step đúng thời điểm</strong> — nếu bạn đang chạy khi đối thủ đánh, bạn không thể split step và bùng phát hiệu quả.</p>
+</li>
+</ol>
 <p>SCS giải quyết cả hai vấn đề này.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.6 Trung Tâm Chiến Thuật — Đứng Đâu Là Đúng?</h2><p>Đây là một khái niệm quan trọng mà nhiều huấn luyện viên không giải thích rõ.</p>
-<strong>Quy tắc đơn giản:</strong> Sau khi đánh bóng, hãy di chuyển đến điểm chia đôi góc đánh rộng nhất của đối thủ.
-<strong>Ví dụ cụ thể:</strong>
-<p>Bạn đánh bóng sang góc forehand phải của đối thủ (góc xa bên phải sân họ). Từ đó, góc đánh wide nhất của đối thủ về phía sân bạn là:</p>
-<ul class="styled-list">
-<li>Down the line: sang góc trái sân bạn</li>
-<li>Cross-court: sang góc phải sân bạn (bên họ vừa đứng)</li>
-</ul>
+<hr/>
+<h2 id="36-trung-tam-chien-thuat-ung-au-la-ung">3.6 Trung Tâm Chiến Thuật — Đứng Đâu Là Đúng?</h2>
+<p>Đây là một khái niệm quan trọng mà nhiều huấn luyện viên không giải thích rõ.</p>
+<p><strong>Quy tắc đơn giản:</strong> Sau khi đánh bóng, hãy di chuyển đến điểm chia đôi góc đánh rộng nhất của đối thủ.</p>
+<p><strong>Ví dụ cụ thể:</strong></p>
+<p>Bạn đánh bóng sang góc forehand phải của đối thủ (góc xa bên phải sân họ). Từ đó, góc đánh wide nhất của đối thủ về phía sân bạn là:
+- Down the line: sang góc trái sân bạn
+- Cross-court: sang góc phải sân bạn (bên họ vừa đứng)</p>
 <p>"Trung tâm chiến thuật" không phải là giữa sân bạn — mà là điểm cách đều hai góc đó. Thường sẽ lệch một chút về phía góc mà đối thủ dễ đánh nhất.</p>
-<strong>Hình dung thực tế:</strong> Nếu bạn đánh sang góc trái sân đối thủ, bạn nên recover về <em>hơi lệch sang trái</em> so với giữa sân — không phải ngay giữa sân. Vì đối thủ từ góc trái có thể đánh cross-court sang phải của bạn với góc rộng hơn so với down the line.
+<p><strong>Hình dung thực tế:</strong> Nếu bạn đánh sang góc trái sân đối thủ, bạn nên recover về <em>hơi lệch sang trái</em> so với giữa sân — không phải ngay giữa sân. Vì đối thủ từ góc trái có thể đánh cross-court sang phải của bạn với góc rộng hơn so với down the line.</p>
 <p>Nhiều người chơi tennis bị mất điểm không vì kỹ thuật kém mà vì <strong>luôn về giữa sân thay vì về trung tâm chiến thuật</strong>. Họ luôn bị bắt chạy thêm một bước extra không cần thiết.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.7 Sliding — Kỹ Thuật Di Chuyển Cách Mạng Của Tennis Hiện Đại</h2><p>Đây là một trong những thay đổi lớn nhất của footwork tennis từ năm 2010 đến nay.</p>
-<strong>Lịch sử:</strong> Trước đây, sliding (trượt chân) chỉ được dùng trên sân đất nện (clay) — vì bề mặt trơn cho phép giảm tốc an toàn. Trên sân cứng (hard court), ai sliding đều bị coi là... ngã.
-<strong>Bước ngoặt:</strong> Djokovic bắt đầu sliding trên hard court một cách có kiểm soát từ khoảng 2012-2013. Sau đó Alcaraz và Sinner tiếp tục phát triển và chuẩn hóa kỹ thuật này. Đến 2026, sliding trên mọi mặt sân là tiêu chuẩn của tennis đỉnh cao.
-<h3>Tại Sao Sliding Tốt Hơn "Dừng Cứng"</h3>
-<strong>Cách dừng cứng truyền thống:</strong> Khi chạy đến bóng, bạn đặt chân ra để dừng hoàn toàn rồi mới đánh. Toàn bộ lực quán tính dồn vào một điểm — khớp gối, khớp cổ chân, dây chằng.
-<strong>Sliding:</strong> Thay vì dừng cứng, bạn <strong>kiểm soát việc trượt</strong> — phân tán lực quán tính theo chiều dài của đế giày trên mặt sân. Ít lực dồn vào một điểm hơn, thời gian giảm tốc dài hơn.
-<strong>Lợi ích kép:</strong>
-<p>1. <strong>Ít chấn thương hơn:</strong> Lực dồn vào khớp gối và cổ chân giảm đáng kể</p>
-<p>2. <strong>Vùng đánh rộng hơn:</strong> Khi sliding, bạn vẫn có thể điều chỉnh vị trí sau khi bắt đầu cú đánh — dừng cứng thì không thể</p>
-<p>3. <strong>Recovery nhanh hơn:</strong> Năng lượng từ cú trượt có thể chuyển thành lực đẩy ngược lại (từ chân ngoài), giúp recover nhanh hơn là dừng hẳn rồi mới chạy.</p>
-<h3>Cơ Chế Sinh Cơ Học Của Sliding</h3>
+<hr/>
+<h2 id="37-sliding-ky-thuat-di-chuyen-cach-mang-cua-tennis-hien-ai">3.7 Sliding — Kỹ Thuật Di Chuyển Cách Mạng Của Tennis Hiện Đại</h2>
+<p>Đây là một trong những thay đổi lớn nhất của footwork tennis từ năm 2010 đến nay.</p>
+<p><strong>Lịch sử:</strong> Trước đây, sliding (trượt chân) chỉ được dùng trên sân đất nện (clay) — vì bề mặt trơn cho phép giảm tốc an toàn. Trên sân cứng (hard court), ai sliding đều bị coi là... ngã.</p>
+<p><strong>Bước ngoặt:</strong> Djokovic bắt đầu sliding trên hard court một cách có kiểm soát từ khoảng 2012-2013. Sau đó Alcaraz và Sinner tiếp tục phát triển và chuẩn hóa kỹ thuật này. Đến 2026, sliding trên mọi mặt sân là tiêu chuẩn của tennis đỉnh cao.</p>
+<h3 id="tai-sao-sliding-tot-hon-dung-cung">Tại Sao Sliding Tốt Hơn "Dừng Cứng"</h3>
+<p><strong>Cách dừng cứng truyền thống:</strong> Khi chạy đến bóng, bạn đặt chân ra để dừng hoàn toàn rồi mới đánh. Toàn bộ lực quán tính dồn vào một điểm — khớp gối, khớp cổ chân, dây chằng.</p>
+<p><strong>Sliding:</strong> Thay vì dừng cứng, bạn <strong>kiểm soát việc trượt</strong> — phân tán lực quán tính theo chiều dài của đế giày trên mặt sân. Ít lực dồn vào một điểm hơn, thời gian giảm tốc dài hơn.</p>
+<p><strong>Lợi ích kép:</strong></p>
+<ol class="styled-list numbered">
+<li><strong>Ít chấn thương hơn:</strong> Lực dồn vào khớp gối và cổ chân giảm đáng kể</li>
+<li>
+<p><strong>Vùng đánh rộng hơn:</strong> Khi sliding, bạn vẫn có thể điều chỉnh vị trí sau khi bắt đầu cú đánh — dừng cứng thì không thể</p>
+</li>
+<li>
+<p><strong>Recovery nhanh hơn:</strong> Năng lượng từ cú trượt có thể chuyển thành lực đẩy ngược lại (từ chân ngoài), giúp recover nhanh hơn là dừng hẳn rồi mới chạy.</p>
+</li>
+</ol>
+<h3 id="co-che-sinh-co-hoc-cua-sliding">Cơ Chế Sinh Cơ Học Của Sliding</h3>
 <p>Khi bạn chạy ngang và muốn sliding:</p>
-<p>1. Chân ngoài (chân xa hướng bóng) tiếp xúc đất trước — nhưng không "cứng" mà để hơi nghiêng</p>
-<p>2. Gót chân hơi chạm trước, giày trượt theo hướng di chuyển</p>
-<p>3. Gối uốn sâu — đây là cơ chế hấp thụ lực chính</p>
-<p>4. Cơ đùi trong (adductors) và cơ mông (glutes) hoạt động để kiểm soát tốc độ trượt</p>
-<p>5. Khi tốc độ giảm đủ, chân đẩy ra — chân ngoài "nổ" ngược lại để khởi động recovery</p>
-<strong>Điều không bao giờ làm khi sliding:</strong> Duỗi thẳng gối. Nếu gối thẳng khi sliding, toàn bộ lực dồn vào sụn gối — chấn thương tức thì.
-<h3>Cách Tập Sliding Từ Cơ Bản</h3>
-<strong>Giai đoạn 1 — Tập Trên Sân Đất Nện:</strong>
-<p>Nếu bạn có cơ hội tập trên clay, hãy bắt đầu ở đây. Mặt sân tự nhiên cho phép sliding, ít rủi ro hơn.</p>
+<ol class="styled-list numbered">
+<li>Chân ngoài (chân xa hướng bóng) tiếp xúc đất trước — nhưng không "cứng" mà để hơi nghiêng</li>
+<li>Gót chân hơi chạm trước, giày trượt theo hướng di chuyển</li>
+<li>Gối uốn sâu — đây là cơ chế hấp thụ lực chính</li>
+<li>Cơ đùi trong (adductors) và cơ mông (glutes) hoạt động để kiểm soát tốc độ trượt</li>
+<li>Khi tốc độ giảm đủ, chân đẩy ra — chân ngoài "nổ" ngược lại để khởi động recovery</li>
+</ol>
+<p><strong>Điều không bao giờ làm khi sliding:</strong> Duỗi thẳng gối. Nếu gối thẳng khi sliding, toàn bộ lực dồn vào sụn gối — chấn thương tức thì.</p>
+<h3 id="cach-tap-sliding-tu-co-ban">Cách Tập Sliding Từ Cơ Bản</h3>
+<p><strong>Giai đoạn 1 — Tập Trên Sân Đất Nện:</strong>
+Nếu bạn có cơ hội tập trên clay, hãy bắt đầu ở đây. Mặt sân tự nhiên cho phép sliding, ít rủi ro hơn.</p>
 <p>Tập chạy sang bên phải, đến gần "điểm đích", thay vì dừng cứng hãy để chân phải trượt nhẹ khi bàn chân chạm đất. Tốc độ thấp, cảm nhận cảm giác trượt có kiểm soát.</p>
-<strong>Giai đoạn 2 — Tăng Tốc Dần:</strong>
-<p>Khi cảm giác ổn định, tăng dần tốc độ. Chú ý: tốc độ trượt không đến từ việc "ném chân ra" mà từ momentum của cơ thể đang chạy.</p>
-<strong>Giai đoạn 3 — Micro-slide Trên Hard Court:</strong>
-<p>Khi đã tự tin, tập micro-slide (trượt ngắn 10-20 cm) trên hard court. Điều quan trọng: giày phải có đế lateral support tốt và không quá mòn.</p>
-<strong>Cảnh báo:</strong> Không tập sliding trên hard court với giày tennis cũ mòn đế — nguy cơ trượt không kiểm soát được.
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.8 The Active Split Step — Tiêu Chuẩn 2026</h2><p>Trong tennis hiện đại đỉnh cao, split step không còn là "nhảy đều hai chân" như thế hệ trước. Tiêu chuẩn 2026 là <strong>Active Split Step với directional pre-load</strong>.</p>
-<strong>Sự khác biệt:</strong>
-<strong>Split step cũ:</strong> Nhảy lên đều hai chân, hạ xuống đều hai chân, <em>sau đó</em> mới quyết định đi hướng nào.
-<strong>Active split step:</strong> Trong khi đang nhảy lên, bạn đã đọc được hướng bóng từ vợt và vai của đối thủ. Khi hạ xuống, khoảng 60% trọng lượng đã tự động dồn vào chân <em>hướng về phía bóng</em> — chuẩn bị cho gravity step ngay lập tức.
-<strong>Lợi ích:</strong> 50ms nhanh hơn trong bước đầu tiên. Nghe nhỏ nhưng ở tốc độ tennis chuyên nghiệp, đó là khoảng cách giữa defensive và offensive shot.
-<strong>Làm thế nào để đọc hướng bóng sớm?</strong>
+<p><strong>Giai đoạn 2 — Tăng Tốc Dần:</strong>
+Khi cảm giác ổn định, tăng dần tốc độ. Chú ý: tốc độ trượt không đến từ việc "ném chân ra" mà từ momentum của cơ thể đang chạy.</p>
+<p><strong>Giai đoạn 3 — Micro-slide Trên Hard Court:</strong>
+Khi đã tự tin, tập micro-slide (trượt ngắn 10-20 cm) trên hard court. Điều quan trọng: giày phải có đế lateral support tốt và không quá mòn.</p>
+<p><strong>Cảnh báo:</strong> Không tập sliding trên hard court với giày tennis cũ mòn đế — nguy cơ trượt không kiểm soát được.</p>
+<hr/>
+<h2 id="38-the-active-split-step-tieu-chuan-2026">3.8 The Active Split Step — Tiêu Chuẩn 2026</h2>
+<p>Trong tennis hiện đại đỉnh cao, split step không còn là "nhảy đều hai chân" như thế hệ trước. Tiêu chuẩn 2026 là <strong>Active Split Step với directional pre-load</strong>.</p>
+<p><strong>Sự khác biệt:</strong></p>
+<p><strong>Split step cũ:</strong> Nhảy lên đều hai chân, hạ xuống đều hai chân, <em>sau đó</em> mới quyết định đi hướng nào.</p>
+<p><strong>Active split step:</strong> Trong khi đang nhảy lên, bạn đã đọc được hướng bóng từ vợt và vai của đối thủ. Khi hạ xuống, khoảng 60% trọng lượng đã tự động dồn vào chân <em>hướng về phía bóng</em> — chuẩn bị cho gravity step ngay lập tức.</p>
+<p><strong>Lợi ích:</strong> 50ms nhanh hơn trong bước đầu tiên. Nghe nhỏ nhưng ở tốc độ tennis chuyên nghiệp, đó là khoảng cách giữa defensive và offensive shot.</p>
+<p><strong>Làm thế nào để đọc hướng bóng sớm?</strong></p>
 <p>Đây là kỹ năng đọc đối thủ (anticipation) — không phải phản ứng bóng. Bạn không đợi bóng bay để biết nó đi đâu. Bạn đọc:</p>
 <ul class="styled-list">
 <li><strong>Góc vai</strong> của đối thủ: vai nghiêng phải/trái cho biết hướng bóng</li>
@@ -1135,118 +1155,122 @@ footer .credit-label { color: var(--gold); }
 <li><strong>Trọng lượng</strong> của đối thủ: trọng lượng dồn vào chân nào, bóng thường đi về hướng đó</li>
 </ul>
 <p>Kỹ năng này cần thời gian để phát triển — không thể học trong một ngày. Nhưng nếu bạn chủ động quan sát đối thủ thay vì chỉ nhìn bóng, bạn sẽ cải thiện nhanh đáng kể.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.9 Footwork Cho Bóng Thấp — Một Điểm Yếu Phổ Biến</h2><p>Trong tennis hiện đại với topspin cao, bóng nảy thường rất cao — nhưng bóng thấp (drop shot, slice) là điểm yếu của rất nhiều người.</p>
-<strong>Vấn đề phổ biến:</strong> Khi bóng thấp, người chơi thường cúi người (bend at the waist — uốn eo) thay vì uốn gối. Kết quả là cột sống bị gập, mất thăng bằng, và cú đánh mất lực.
-<strong>Nguyên tắc:</strong> Với mọi bóng thấp, <strong>gối phải uốn sâu hơn — lưng phải thẳng đứng</strong>. Hãy "ngồi" xuống bóng thay vì "cúi" xuống bóng.
-<strong>Cách phân biệt:</strong>
-<ul class="styled-list">
-<li>Cúi người: lưng gập về phía trước, gối ít hoặc không uốn</li>
-<li>Ngồi xuống: lưng giữ thẳng đứng, gối uốn sâu, hông xuống thấp</li>
-</ul>
-<strong>Bài tập cảm giác:</strong> Đặt một cây gậy dọc theo lưng, cố giữ gậy tiếp xúc đầu và lưng dưới trong khi "ngồi" xuống đánh bóng thấp. Nếu gậy rời khỏi lưng — bạn đang cúi, không ngồi.
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.10 Bài Tập Footwork Toàn Diện</h2><h3>Bài Tập 1: Spider Drill (Nhện)</h3>
-<strong>Mục tiêu:</strong> Xây dựng phản ứng tổng hợp — sprint, dừng, sprint theo nhiều hướng.
-<strong>Thiết lập:</strong> Đặt 5 bóng tennis ở 5 vị trí: góc deuce (phải gần), góc ad (trái gần), góc deuce (phải xa), góc ad (trái xa), và giữa sân.
-<strong>Cách chạy:</strong> Từ giữa sân, chạy đến nhặt một bóng, chạy về thả bóng xuống vạch T (giao nhau của đường trung tuyến và baseline), rồi chạy đến bóng tiếp theo. Làm đến hết tất cả 5 bóng.
-<strong>Yêu cầu:</strong> Sử dụng split step nhỏ trước mỗi lần đổi hướng. Dùng crossover step để phủ khoảng cách.
-<strong>Mục tiêu thời gian cho người mới:</strong> Dưới 25 giây. Trung bình: 18-20 giây. Tiên tiến: dưới 15 giây.
-<hr>
-<h3>Bài Tập 2: Side Shuffle + Sprint</h3>
-<strong>Mục tiêu:</strong> Xây dựng chuỗi SCS Recovery.
-<strong>Thiết lập:</strong> Vạch kẻ hoặc cones ở hai mép sân, cách nhau 5-6 mét.
-<strong>Thực hiện:</strong>
-<p>1. Shuffle sang phải đến vạch phải</p>
-<p>2. Crossover step lớn về giữa (như sau khi đánh wide)</p>
-<p>3. Shuffle nhỏ điều chỉnh vào giữa</p>
-<p>4. Split step</p>
-<p>5. Ngay lập tức crossover về phía trái</p>
-<p>6. Lặp lại</p>
-<strong>Nhịp điệu:</strong> shuffle → crossover big → shuffle small → split → crossover → lặp lại
-<hr>
-<h3>Bài Tập 3: Cone Reaction Drill</h3>
-<strong>Mục tiêu:</strong> Xây dựng active split step và đọc hướng.
-<strong>Thiết lập:</strong> 4 cones ở 4 hướng quanh bạn, cách 2 mét mỗi hướng.
-<strong>Thực hiện:</strong> Người tập luyện đứng ở giữa, split step nhỏ liên tục. Huấn luyện viên hoặc người bạn tập chỉ một cái cone bất kỳ — bạn phải đến đó và quay về giữa trong thời gian ngắn nhất.
-<strong>Tiến bộ:</strong> Bắt đầu với 1 cone, tăng lên 2 cones cùng lúc (người hướng dẫn chỉ hai hướng liên tiếp).
-<hr>
-<h3>Bài Tập 4: Shadow Tennis (Tennis Không Bóng)</h3>
-<strong>Đây là bài tập quan trọng nhất</strong> — được Djokovic sử dụng thường xuyên trong sự nghiệp.
-<strong>Cách thực hiện:</strong> Tập toàn bộ chuỗi di chuyển trong một rally tưởng tượng, không có bóng. Chạy đến vị trí forehand, đánh shadow, SCS về giữa, split step, chạy đến backhand, đánh shadow, SCS về giữa... liên tục trong 2-3 phút.
-<strong>Lợi ích:</strong> Khi không có bóng để theo dõi, não bạn tập trung 100% vào footwork — không bị phân tâm bởi bóng. 15-20 phút shadow tennis hàng ngày cải thiện footwork nhanh hơn nhiều so với chỉ đánh bóng.
-<strong>Intensity:</strong> Tập ở cường độ match — không phải đi bộ thoải mái. Sau 2-3 phút liên tục ở tốc độ match, bạn nên thở gấp và đổ mồ hôi. Đó mới là đúng cách.
-<hr>
-<h3>Bài Tập 5: Heel Strike Correction (Sửa Lỗi Đi Bằng Gót)</h3>
-<strong>Mục tiêu:</strong> Sửa thói quen di chuyển bằng gót chân — một lỗi phổ biến làm chậm phản ứng.
-<strong>Thiết lập:</strong> Thang dây agility (agility ladder) — hoặc đơn giản vẽ các ô trên sân bằng phấn.
-<strong>Cách thực hiện:</strong> Di chuyển qua thang dây với trọng tâm luôn trên ngón chân — không bao giờ để gót chân "nặng". Sau khi cảm nhận được cảm giác đúng, chuyển sang di chuyển trên sân tennis thực với cùng cảm giác.
-<strong>Dấu hiệu sai:</strong> Nghe tiếng gót chân "đập" nặng khi chạy. Đúng thì di chuyển gần như không có tiếng.
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.11 Chấn Thương Liên Quan Đến Footwork Hiện Đại</h2><p>Tennis hiện đại với sliding và tốc độ cao tạo ra các chấn thương khác với thế hệ trước.</p>
-<h3>Chấn Thương Phổ Biến Mới: Hip Labrum</h3>
+<hr/>
+<h2 id="39-footwork-cho-bong-thap-mot-iem-yeu-pho-bien">3.9 Footwork Cho Bóng Thấp — Một Điểm Yếu Phổ Biến</h2>
+<p>Trong tennis hiện đại với topspin cao, bóng nảy thường rất cao — nhưng bóng thấp (drop shot, slice) là điểm yếu của rất nhiều người.</p>
+<p><strong>Vấn đề phổ biến:</strong> Khi bóng thấp, người chơi thường cúi người (bend at the waist — uốn eo) thay vì uốn gối. Kết quả là cột sống bị gập, mất thăng bằng, và cú đánh mất lực.</p>
+<p><strong>Nguyên tắc:</strong> Với mọi bóng thấp, <strong>gối phải uốn sâu hơn — lưng phải thẳng đứng</strong>. Hãy "ngồi" xuống bóng thay vì "cúi" xuống bóng.</p>
+<p><strong>Cách phân biệt:</strong>
+- Cúi người: lưng gập về phía trước, gối ít hoặc không uốn
+- Ngồi xuống: lưng giữ thẳng đứng, gối uốn sâu, hông xuống thấp</p>
+<p><strong>Bài tập cảm giác:</strong> Đặt một cây gậy dọc theo lưng, cố giữ gậy tiếp xúc đầu và lưng dưới trong khi "ngồi" xuống đánh bóng thấp. Nếu gậy rời khỏi lưng — bạn đang cúi, không ngồi.</p>
+<hr/>
+<h2 id="310-bai-tap-footwork-toan-dien">3.10 Bài Tập Footwork Toàn Diện</h2>
+<h3 id="bai-tap-1-spider-drill-nhen">Bài Tập 1: Spider Drill (Nhện)</h3>
+<p><strong>Mục tiêu:</strong> Xây dựng phản ứng tổng hợp — sprint, dừng, sprint theo nhiều hướng.</p>
+<p><strong>Thiết lập:</strong> Đặt 5 bóng tennis ở 5 vị trí: góc deuce (phải gần), góc ad (trái gần), góc deuce (phải xa), góc ad (trái xa), và giữa sân.</p>
+<p><strong>Cách chạy:</strong> Từ giữa sân, chạy đến nhặt một bóng, chạy về thả bóng xuống vạch T (giao nhau của đường trung tuyến và baseline), rồi chạy đến bóng tiếp theo. Làm đến hết tất cả 5 bóng.</p>
+<p><strong>Yêu cầu:</strong> Sử dụng split step nhỏ trước mỗi lần đổi hướng. Dùng crossover step để phủ khoảng cách.</p>
+<p><strong>Mục tiêu thời gian cho người mới:</strong> Dưới 25 giây. Trung bình: 18-20 giây. Tiên tiến: dưới 15 giây.</p>
+<hr/>
+<h3 id="bai-tap-2-side-shuffle-sprint">Bài Tập 2: Side Shuffle + Sprint</h3>
+<p><strong>Mục tiêu:</strong> Xây dựng chuỗi SCS Recovery.</p>
+<p><strong>Thiết lập:</strong> Vạch kẻ hoặc cones ở hai mép sân, cách nhau 5-6 mét.</p>
+<p><strong>Thực hiện:</strong>
+1. Shuffle sang phải đến vạch phải
+2. Crossover step lớn về giữa (như sau khi đánh wide)
+3. Shuffle nhỏ điều chỉnh vào giữa
+4. Split step
+5. Ngay lập tức crossover về phía trái
+6. Lặp lại</p>
+<p><strong>Nhịp điệu:</strong> shuffle → crossover big → shuffle small → split → crossover → lặp lại</p>
+<hr/>
+<h3 id="bai-tap-3-cone-reaction-drill">Bài Tập 3: Cone Reaction Drill</h3>
+<p><strong>Mục tiêu:</strong> Xây dựng active split step và đọc hướng.</p>
+<p><strong>Thiết lập:</strong> 4 cones ở 4 hướng quanh bạn, cách 2 mét mỗi hướng.</p>
+<p><strong>Thực hiện:</strong> Người tập luyện đứng ở giữa, split step nhỏ liên tục. Huấn luyện viên hoặc người bạn tập chỉ một cái cone bất kỳ — bạn phải đến đó và quay về giữa trong thời gian ngắn nhất.</p>
+<p><strong>Tiến bộ:</strong> Bắt đầu với 1 cone, tăng lên 2 cones cùng lúc (người hướng dẫn chỉ hai hướng liên tiếp).</p>
+<hr/>
+<h3 id="bai-tap-4-shadow-tennis-tennis-khong-bong">Bài Tập 4: Shadow Tennis (Tennis Không Bóng)</h3>
+<p><strong>Đây là bài tập quan trọng nhất</strong> — được Djokovic sử dụng thường xuyên trong sự nghiệp.</p>
+<p><strong>Cách thực hiện:</strong> Tập toàn bộ chuỗi di chuyển trong một rally tưởng tượng, không có bóng. Chạy đến vị trí forehand, đánh shadow, SCS về giữa, split step, chạy đến backhand, đánh shadow, SCS về giữa... liên tục trong 2-3 phút.</p>
+<p><strong>Lợi ích:</strong> Khi không có bóng để theo dõi, não bạn tập trung 100% vào footwork — không bị phân tâm bởi bóng. 15-20 phút shadow tennis hàng ngày cải thiện footwork nhanh hơn nhiều so với chỉ đánh bóng.</p>
+<p><strong>Intensity:</strong> Tập ở cường độ match — không phải đi bộ thoải mái. Sau 2-3 phút liên tục ở tốc độ match, bạn nên thở gấp và đổ mồ hôi. Đó mới là đúng cách.</p>
+<hr/>
+<h3 id="bai-tap-5-heel-strike-correction-sua-loi-i-bang-got">Bài Tập 5: Heel Strike Correction (Sửa Lỗi Đi Bằng Gót)</h3>
+<p><strong>Mục tiêu:</strong> Sửa thói quen di chuyển bằng gót chân — một lỗi phổ biến làm chậm phản ứng.</p>
+<p><strong>Thiết lập:</strong> Thang dây agility (agility ladder) — hoặc đơn giản vẽ các ô trên sân bằng phấn.</p>
+<p><strong>Cách thực hiện:</strong> Di chuyển qua thang dây với trọng tâm luôn trên ngón chân — không bao giờ để gót chân "nặng". Sau khi cảm nhận được cảm giác đúng, chuyển sang di chuyển trên sân tennis thực với cùng cảm giác.</p>
+<p><strong>Dấu hiệu sai:</strong> Nghe tiếng gót chân "đập" nặng khi chạy. Đúng thì di chuyển gần như không có tiếng.</p>
+<hr/>
+<h2 id="311-chan-thuong-lien-quan-en-footwork-hien-ai">3.11 Chấn Thương Liên Quan Đến Footwork Hiện Đại</h2>
+<p>Tennis hiện đại với sliding và tốc độ cao tạo ra các chấn thương khác với thế hệ trước.</p>
+<h3 id="chan-thuong-pho-bien-moi-hip-labrum">Chấn Thương Phổ Biến Mới: Hip Labrum</h3>
 <p>Với sliding và open stance thường xuyên, hông bị "mở rộng" (deep abduction) hàng nghìn lần mỗi mùa. Sụn viền khớp hông (labrum) không được thiết kế để chịu tải liên tục ở tư thế đó mà không có chuẩn bị.</p>
-<strong>Phòng tránh:</strong> Tập hip internal rotation mobility (xoay trong khớp hông) hàng ngày, và tập eccentric hip strengthening để cơ hấp thụ lực thay vì sụn.
-<h3>Chấn Thương Phổ Biến Mới: Adductor Strain</h3>
+<p><strong>Phòng tránh:</strong> Tập hip internal rotation mobility (xoay trong khớp hông) hàng ngày, và tập eccentric hip strengthening để cơ hấp thụ lực thay vì sụn.</p>
+<h3 id="chan-thuong-pho-bien-moi-adductor-strain">Chấn Thương Phổ Biến Mới: Adductor Strain</h3>
 <p>Cơ đùi trong (adductor) phải kiểm soát cú trượt khi sliding ra xa. Nếu cơ không đủ sức mạnh eccentric (sức mạnh khi cơ đang bị kéo dài), nó bị rách.</p>
-<strong>Phòng tránh:</strong> Tập Copenhagen Plank và các bài tập adductor eccentric.
-<h3>Chấn Thương Cổ Điển Giảm Dần: Bong Gân Cổ Chân</h3>
+<p><strong>Phòng tránh:</strong> Tập Copenhagen Plank và các bài tập adductor eccentric.</p>
+<h3 id="chan-thuong-co-ien-giam-dan-bong-gan-co-chan">Chấn Thương Cổ Điển Giảm Dần: Bong Gân Cổ Chân</h3>
 <p>Nhờ sliding thay thế việc "dừng cứng", số ca bong gân cổ chân cấp tính đã giảm đáng kể. Nhưng nếu bạn không biết sliding đúng kỹ thuật, nguy cơ vẫn còn.</p>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">3.12 Lộ Trình Học Footwork — Từ Cơ Bản Đến Nâng Cao</h2><p>Đây là thứ tự học footwork được khuyến nghị, tránh học nhảy cóc:</p>
-<strong>Giai đoạn 1 (Tuần 1-4):</strong>
+<hr/>
+<h2 id="312-lo-trinh-hoc-footwork-tu-co-ban-en-nang-cao">3.12 Lộ Trình Học Footwork — Từ Cơ Bản Đến Nâng Cao</h2>
+<p>Đây là thứ tự học footwork được khuyến nghị, tránh học nhảy cóc:</p>
+<p><strong>Giai đoạn 1 (Tuần 1-4):</strong>
+- Split step đúng timing
+- Gravity step cơ bản
+- Ba tư thế (neutral, open, semi-open) — biết chọn đúng tư thế</p>
+<p><strong>Giai đoạn 2 (Tuần 5-10):</strong>
+- SCS Recovery Rhythm
+- Tactical center (trung tâm chiến thuật)
+- Shadow tennis 10 phút mỗi ngày</p>
+<p><strong>Giai đoạn 3 (Tuần 11-20):</strong>
+- Active split step với directional pre-load
+- Micro-sliding (bắt đầu trên clay nếu có thể)
+- Spider drill với target times</p>
+<p><strong>Giai đoạn 4 (Sau 20 tuần):</strong>
+- Full sliding trên mọi mặt sân
+- Reading đối thủ để pre-load split step
+- Tích hợp footwork tự động với kỹ thuật tay</p>
+<hr/>
+<h2 id="tom-tat-chuong-3">Tóm Tắt Chương 3</h2>
 <ul class="styled-list">
-<li>Split step đúng timing</li>
-<li>Gravity step cơ bản</li>
-<li>Ba tư thế (neutral, open, semi-open) — biết chọn đúng tư thế</li>
+<li>
+<p><strong>70% điểm tennis</strong> được quyết định bởi vị trí chứ không phải kỹ thuật tay</p>
+</li>
+<li>
+<p><strong>Ba tư thế cơ bản:</strong> neutral (lực tuyến tính, tấn công), open (lực xoay, phục hồi nhanh), semi-open (linh hoạt nhất, phổ biến nhất)</p>
+</li>
+<li>
+<p><strong>Split step</strong> là kỹ năng quan trọng nhất — phải thực hiện <em>ngay trước</em> khi đối thủ chạm bóng, không phải sau</p>
+</li>
+<li>
+<p><strong>Active split step</strong> với directional pre-load là tiêu chuẩn 2026 — nhanh hơn 50ms so với split step thụ động</p>
+</li>
+<li>
+<p><strong>Gravity step</strong> là cách bắt đầu di chuyển nhanh nhất — dùng trọng lực, không dùng sức cơ</p>
+</li>
+<li>
+<p><strong>SCS Recovery</strong> (Split-Crossover-Shuffle) là chuỗi hồi phục tiêu chuẩn về trung tâm chiến thuật</p>
+</li>
+<li>
+<p><strong>Sliding</strong> là kỹ thuật giảm tốc an toàn hơn "dừng cứng" và giờ là tiêu chuẩn trên mọi mặt sân</p>
+</li>
+<li>
+<p><strong>Shadow tennis</strong> là bài tập footwork hiệu quả nhất — 15-20 phút mỗi ngày</p>
+</li>
 </ul>
-<strong>Giai đoạn 2 (Tuần 5-10):</strong>
-<ul class="styled-list">
-<li>SCS Recovery Rhythm</li>
-<li>Tactical center (trung tâm chiến thuật)</li>
-<li>Shadow tennis 10 phút mỗi ngày</li>
-</ul>
-<strong>Giai đoạn 3 (Tuần 11-20):</strong>
-<ul class="styled-list">
-<li>Active split step với directional pre-load</li>
-<li>Micro-sliding (bắt đầu trên clay nếu có thể)</li>
-<li>Spider drill với target times</li>
-</ul>
-<strong>Giai đoạn 4 (Sau 20 tuần):</strong>
-<ul class="styled-list">
-<li>Full sliding trên mọi mặt sân</li>
-<li>Reading đối thủ để pre-load split step</li>
-<li>Tích hợp footwork tự động với kỹ thuật tay</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-03"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 03</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 3</h2><ul class="styled-list">
-<li><strong>70% điểm tennis</strong> được quyết định bởi vị trí chứ không phải kỹ thuật tay</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Ba tư thế cơ bản:</strong> neutral (lực tuyến tính, tấn công), open (lực xoay, phục hồi nhanh), semi-open (linh hoạt nhất, phổ biến nhất)</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Split step</strong> là kỹ năng quan trọng nhất — phải thực hiện <em>ngay trước</em> khi đối thủ chạm bóng, không phải sau</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Active split step</strong> với directional pre-load là tiêu chuẩn 2026 — nhanh hơn 50ms so với split step thụ động</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Gravity step</strong> là cách bắt đầu di chuyển nhanh nhất — dùng trọng lực, không dùng sức cơ</li>
-</ul>
-<ul class="styled-list">
-<li><strong>SCS Recovery</strong> (Split-Crossover-Shuffle) là chuỗi hồi phục tiêu chuẩn về trung tâm chiến thuật</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Sliding</strong> là kỹ thuật giảm tốc an toàn hơn "dừng cứng" và giờ là tiêu chuẩn trên mọi mặt sân</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Shadow tennis</strong> là bài tập footwork hiệu quả nhất — 15-20 phút mỗi ngày</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Đọc Thêm Cho Chương Tiếp Theo</h2><p>Bây giờ bạn đã có nền tảng về sức mạnh (Chương 1), X-Factor (Chương 2), và di chuyển chân (Chương 3). Chương 4 sẽ đi vào kỹ thuật đầu tiên cụ thể: <strong>Cú Forehand</strong> — cú đánh phổ biến nhất trong tennis và cũng là cú đánh đã thay đổi nhiều nhất từ năm 2000 đến nay.</p>
+<hr/>
+<h2 id="oc-them-cho-chuong-tiep-theo">Đọc Thêm Cho Chương Tiếp Theo</h2>
+<p>Bây giờ bạn đã có nền tảng về sức mạnh (Chương 1), X-Factor (Chương 2), và di chuyển chân (Chương 3). Chương 4 sẽ đi vào kỹ thuật đầu tiên cụ thể: <strong>Cú Forehand</strong> — cú đánh phổ biến nhất trong tennis và cũng là cú đánh đã thay đổi nhiều nhất từ năm 2000 đến nay.</p>
 <p>Bạn sẽ được học tại sao forehand của Federer và forehand của Alcaraz trông rất khác nhau — nhưng cả hai đều đúng — và làm thế nào để tìm ra forehand phù hợp nhất với thể hình và phong cách của bạn.</p>
-<hr>
-<em>Chương 4: Forehand — Cú Đánh Chủ Lực Của Tennis Hiện Đại →</em></div>
+<hr/>
+<p><em>Chương 4: Forehand — Cú Đánh Chủ Lực Của Tennis Hiện Đại →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

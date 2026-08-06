@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 22 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 22</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,261 +896,241 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 22</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 22</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 22</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">Chương 22: Weaponize Serve Như Một Professional</h2><hr>
-> <em>"Serve là cú đánh duy nhất trong tennis mà bạn hoàn toàn kiểm soát. Không ai có thể lấy đi điều đó từ bạn — chỉ có bạn tự lấy đi."</em>
-<p>> — Pete Sampras</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 22 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#kỹ-thuật-serve-nâng-cao--disguise-placement-và-patterns' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>KỸ THUẬT SERVE NÂNG CAO — DISGUISE, PLACEMENT, VÀ PATTERNS</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-22-weaponize-serve-như-một-professional' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 22: Weaponize Serve Như Một Professional</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#221-tại-sao-serve-là-vũ-khí-quan-trọng-nhất' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.1 Tại Sao Serve Là Vũ Khí Quan Trọng Nhất</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#222-ba-loại-serve-cơ-bản--nhìn-lại-qua-lens-nâng-cao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.2 Ba Loại Serve Cơ Bản — Nhìn Lại Qua Lens Nâng Cao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#223-toss-placement--the-key-to-disguise' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.3 Toss Placement — The Key To Disguise</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#224-placement-strategy--t-body-wide' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.4 Placement Strategy — T, Body, Wide</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#225-disguise-techniques--look-the-same-do-different' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.5 Disguise Techniques — Look The Same, Do Different</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#226-serve-sequences--patterns-across-multiple-points' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.6 Serve Sequences — Patterns Across Multiple Points</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#227-second-serve--the-underrated-weapon' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.7 Second Serve — The Underrated Weapon</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#228-serve-in-the-wind-and-on-different-surfaces' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.8 Serve In The Wind And On Different Surfaces</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#229-serve-under-pressure--clutch-situations' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.9 Serve Under Pressure — Clutch Situations</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2210-tracking-your-serve-stats' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.10 Tracking Your Serve Stats</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2211-eight-week-serve-improvement-program' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.11 Eight-Week Serve Improvement Program</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2212-năm-lỗi-serve-nâng-cao-phổ-biến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>22.12 Năm Lỗi Serve Nâng Cao Phổ Biến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-22' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 22</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="ky-thuat-serve-nang-cao-disguise-placement-va-patterns">KỸ THUẬT SERVE NÂNG CAO — DISGUISE, PLACEMENT, VÀ PATTERNS</h1>
+<h2 id="chuong-22-weaponize-serve-nhu-mot-professional">Chương 22: Weaponize Serve Như Một Professional</h2>
+<hr/>
+<div class="pullquote"><p>*"Serve là cú đánh duy nhất trong tennis mà bạn hoàn toàn kiểm soát. Không ai có thể lấy đi điều đó từ bạn — chỉ có bạn tự lấy đi."*
+&gt; — Pete Sampras</p></div>
+<hr/>
 <p>Wimbledon 2001. Pete Sampras vs. Andre Agassi. Quarterfinal.</p>
 <p>Agassi là một trong những returner vĩ đại nhất lịch sử tennis. Anh ta đọc serve tốt hơn bất kỳ ai. Anh ta biết điều này. Sampras biết điều này.</p>
 <p>Và Sampras vẫn win 6-7, 7-5, 6-4, 6-2.</p>
 <p>Sau trận, Agassi được hỏi: "Anh đọc serve của Sampras như thế nào?"</p>
 <p>Agassi trả lời thành thật: "Tôi không đọc được gì cả. Tôi không biết anh ta sẽ đánh đâu cho đến khi bóng đã đi rồi."</p>
 <p>Đây là đỉnh cao của serve disguise. Và đây là điều chapter này sẽ dạy bạn — không phải để bạn serve nhanh như Sampras, mà để bạn serve thông minh như Sampras.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.1 Tại Sao Serve Là Vũ Khí Quan Trọng Nhất</h2><h3>Numbers Không Nói Dối</h3>
-<p>Ở cấp độ professional:</p>
-<ul class="styled-list">
-<li>Ace hoặc service winner (return error) trực tiếp từ serve = <strong>kết thúc point ngay lập tức</strong></li>
-<li>Serve kéo returner ra wide → open court + tấn công = <strong>win rate 65-70%</strong></li>
-<li>Serve body → returner jammed → weak return → tấn công = <strong>win rate 60-65%</strong></li>
-<li>Serve trung bình, returner comfortable → <strong>win rate drop về 50-55%</strong></li>
-</ul>
+<hr/>
+<h2 id="221-tai-sao-serve-la-vu-khi-quan-trong-nhat">22.1 Tại Sao Serve Là Vũ Khí Quan Trọng Nhất</h2>
+<h3 id="numbers-khong-noi-doi">Numbers Không Nói Dối</h3>
+<p>Ở cấp độ professional:
+- Ace hoặc service winner (return error) trực tiếp từ serve = <strong>kết thúc point ngay lập tức</strong>
+- Serve kéo returner ra wide → open court + tấn công = <strong>win rate 65-70%</strong>
+- Serve body → returner jammed → weak return → tấn công = <strong>win rate 60-65%</strong>
+- Serve trung bình, returner comfortable → <strong>win rate drop về 50-55%</strong></p>
 <p>Ở cấp độ amateur, khoảng cách này thậm chí còn lớn hơn — vì kỹ thuật return ở amateur level yếu hơn, một serve tốt tạo ra advantage thậm chí bigger.</p>
-<h3>Serve Kiểm Soát Nhịp Trận Đấu</h3>
-<strong>Server controls:</strong>
-<ul class="styled-list">
-<li>Khi bắt đầu point (pace)</li>
-<li>Loại point (tấn công, defensive, neutral)</li>
-<li>Vị trí của returner ngay từ đầu</li>
-<li>Psychological pressure (double fault fear từ returner's perspective)</li>
-</ul>
-<strong>Returner phải:</strong>
-<ul class="styled-list">
-<li>React trong fraction of second</li>
-<li>Guess hoặc read serve direction</li>
-<li>Adjust footwork và swing trong milliseconds</li>
-</ul>
+<h3 id="serve-kiem-soat-nhip-tran-au">Serve Kiểm Soát Nhịp Trận Đấu</h3>
+<p><strong>Server controls:</strong>
+- Khi bắt đầu point (pace)
+- Loại point (tấn công, defensive, neutral)
+- Vị trí của returner ngay từ đầu
+- Psychological pressure (double fault fear từ returner's perspective)</p>
+<p><strong>Returner phải:</strong>
+- React trong fraction of second
+- Guess hoặc read serve direction
+- Adjust footwork và swing trong milliseconds</p>
 <p>Server có structural advantage. Chapter này dạy bạn maximize advantage đó.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.2 Ba Loại Serve Cơ Bản — Nhìn Lại Qua Lens Nâng Cao</h2><h3>Flat Serve — Revisited</h3>
-<strong>Cơ bản đã biết:</strong> Topspin ít, speed cao, trajectory thẳng.
-<strong>Nâng cao:</strong>
-<em>Khi dùng flat serve:</em>
-<ul class="styled-list">
-<li>First serve với high margin (vào deep deuce hoặc ad corner)</li>
-<li>Khi muốn bóng đến nhanh để jolt returner — không có thời gian set up</li>
-<li>Khi score favorable và có thể risk higher error rate</li>
-<li>Wide body serve (xuống giữa T thì thường slice/kick hiệu quả hơn)</li>
-</ul>
-<em>Flat serve mechanics nâng cao:</em>
-<p>Flat serve không có spin hoàn toàn — impossible. "Flat" trong thực tế là minimal spin với slight sidespin.</p>
+<hr/>
+<h2 id="222-ba-loai-serve-co-ban-nhin-lai-qua-lens-nang-cao">22.2 Ba Loại Serve Cơ Bản — Nhìn Lại Qua Lens Nâng Cao</h2>
+<h3 id="flat-serve-revisited">Flat Serve — Revisited</h3>
+<p><strong>Cơ bản đã biết:</strong> Topspin ít, speed cao, trajectory thẳng.</p>
+<p><strong>Nâng cao:</strong></p>
+<p><em>Khi dùng flat serve:</em>
+- First serve với high margin (vào deep deuce hoặc ad corner)
+- Khi muốn bóng đến nhanh để jolt returner — không có thời gian set up
+- Khi score favorable và có thể risk higher error rate
+- Wide body serve (xuống giữa T thì thường slice/kick hiệu quả hơn)</p>
+<p><em>Flat serve mechanics nâng cao:</em>
+Flat serve không có spin hoàn toàn — impossible. "Flat" trong thực tế là minimal spin với slight sidespin.</p>
 <p>Contact point: Slightly behind và above ball (12 o'clock position hoặc 12:30).</p>
 <p>Pronation: Aggressive, full pronation through contact — đây là cái tạo ra speed.</p>
-<em>Common mistake ở level nâng cao:</em>
-<p>Hitting DOWN quá nhiều → ball goes into net. Flat serve cần forward motion predominant, với slight downward trajectory từ toss position height.</p>
-<hr>
-<h3>Slice Serve — Revisited</h3>
-<strong>Cơ bản đã biết:</strong> Sidespin, kicks wide hoặc into body, lower bounce.
-<strong>Nâng cao:</strong>
-<em>Geometry của slice serve:</em>
+<p><em>Common mistake ở level nâng cao:</em>
+Hitting DOWN quá nhiều → ball goes into net. Flat serve cần forward motion predominant, với slight downward trajectory từ toss position height.</p>
+<hr/>
+<h3 id="slice-serve-revisited">Slice Serve — Revisited</h3>
+<p><strong>Cơ bản đã biết:</strong> Sidespin, kicks wide hoặc into body, lower bounce.</p>
+<p><strong>Nâng cao:</strong></p>
+<p><em>Geometry của slice serve:</em></p>
 <p>Deuce court wide slice: Bóng kicks ra ngoài sideline → kéo returner off court → open court forehand tấn công.</p>
 <p>Ad court wide slice: Tương tự → kéo lefthander out wide hoặc weaker backhand return from righthander.</p>
 <p>Body slice: Aim vào hip của returner. Jams them. Không có clean swing. Return đi lên → volley hoặc high ball tấn công.</p>
 <p>T-slice: Trên deuce court, slice vào T kicks away from ad court → returner runs right for backhand return hoặc stretched forehand.</p>
-<em>Slice serve mechanics nâng cao:</em>
+<p><em>Slice serve mechanics nâng cao:</em></p>
 <p>Contact point: 2-3 o'clock position. Brushing right side của ball (from server's perspective).</p>
 <p>Toss placement: Slightly to the right và trong front (slightly less to the left than flat serve).</p>
 <p>Key insight: Slice không có nghĩa là gentle. A sharp, snapping slice serve with heavy sidespin is more difficult to return than a hard flat serve because the movement is unexpected.</p>
-<em>Spin rate matters:</em> More brushing (edge of ball, not center) = more sidespin = more lateral movement.
-<hr>
-<h3>Kick Serve — Revisited</h3>
-<strong>Cơ bản đã biết:</strong> Topspin + sidespin, high bounce, kicks up và away.
-<strong>Nâng cao:</strong>
-<em>Kick serve là second serve king:</em>
-<p>High net clearance + high bounce = lowest double fault risk + highest difficulty for returner.</p>
+<p><em>Spin rate matters:</em> More brushing (edge of ball, not center) = more sidespin = more lateral movement.</p>
+<hr/>
+<h3 id="kick-serve-revisited">Kick Serve — Revisited</h3>
+<p><strong>Cơ bản đã biết:</strong> Topspin + sidespin, high bounce, kicks up và away.</p>
+<p><strong>Nâng cao:</strong></p>
+<p><em>Kick serve là second serve king:</em>
+High net clearance + high bounce = lowest double fault risk + highest difficulty for returner.</p>
 <p>Professional players hit kick serves at 75-90 mph that kick up to shoulder height — làm returner không thể tấn công comfortably.</p>
-<em>Kick serve mechanics nâng cao:</em>
+<p><em>Kick serve mechanics nâng cao:</em></p>
 <p>Toss placement: Critical. Slightly to the LEFT và behind head (for right-handed server). This is what enables the brushing motion.</p>
 <p>Contact point: 7-11 o'clock brushing motion (từ low-left đến high-right của ball). This creates topspin + sidespin combined.</p>
 <p>Back arch: Kick serve requires aggressive back arch in trophy position — enables upward swing path.</p>
 <p>Hip drive: Hips drive forward và upward — không chỉ forward như flat serve.</p>
-<em>Common mistake:</em> Not enough upward swing. Players swing "at" the ball rather than "up through" the ball → không đủ topspin → ball kicks low → returner attacks easily.
-<em>Test:</em> After hit, racket should finish on right side of body (right-handed player), above shoulder level, with face roughly facing away from court.
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.3 Toss Placement — The Key To Disguise</h2><h3>Tại Sao Toss Là Bí Quyết Disguise</h3>
-<p>Returner đọc serve dựa trên:</p>
-<p>1. Server's body motion</p>
-<p>2. <strong>Toss placement</strong> — most readable cue</p>
-<p>3. Contact point</p>
-<p>4. Racket path và follow-through</p>
+<p><em>Common mistake:</em> Not enough upward swing. Players swing "at" the ball rather than "up through" the ball → không đủ topspin → ball kicks low → returner attacks easily.</p>
+<p><em>Test:</em> After hit, racket should finish on right side of body (right-handed player), above shoulder level, with face roughly facing away from court.</p>
+<hr/>
+<h2 id="223-toss-placement-the-key-to-disguise">22.3 Toss Placement — The Key To Disguise</h2>
+<h3 id="tai-sao-toss-la-bi-quyet-disguise">Tại Sao Toss Là Bí Quyết Disguise</h3>
+<p>Returner đọc serve dựa trên:
+1. Server's body motion
+2. <strong>Toss placement</strong> — most readable cue
+3. Contact point
+4. Racket path và follow-through</p>
 <p>Nếu toss của bạn khác nhau cho mỗi loại serve → returner biết ngay loại serve trước khi bạn hit.</p>
-<strong>Goal:</strong> Same toss cho tất cả loại serve. Điều chỉnh swing path — không phải toss.
-<em>Reality check:</em> Perfect identical toss cho tất cả serve là extremely advanced. Even professionals have slight variations. But minimizing toss variation is one of the highest-value improvements available.
-<h3>Toss Variation Mapping</h3>
-<strong>Most players' tells:</strong>
-| Serve type | Common toss mistake |
-|---|---|
-| Flat serve | Toss forward và slightly right |
-| Slice serve | Toss noticeably to the right |
-| Kick serve | Toss behind head và left |
-
+<p><strong>Goal:</strong> Same toss cho tất cả loại serve. Điều chỉnh swing path — không phải toss.</p>
+<p><em>Reality check:</em> Perfect identical toss cho tất cả serve là extremely advanced. Even professionals have slight variations. But minimizing toss variation is one of the highest-value improvements available.</p>
+<h3 id="toss-variation-mapping">Toss Variation Mapping</h3>
+<p><strong>Most players' tells:</strong></p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Serve type</th>
+<th>Common toss mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat serve</td>
+<td>Toss forward và slightly right</td>
+</tr>
+<tr>
+<td>Slice serve</td>
+<td>Toss noticeably to the right</td>
+</tr>
+<tr>
+<td>Kick serve</td>
+<td>Toss behind head và left</td>
+</tr>
+</tbody>
+</table>
 <p>Returner spots pattern trong warm-up → exploits entire match.</p>
-<h3>Building Consistent Toss</h3>
-<strong>Drill — Single toss, three serves:</strong>
+<h3 id="building-consistent-toss">Building Consistent Toss</h3>
+<p><strong>Drill — Single toss, three serves:</strong></p>
 <p>Toss once. Decide mid-flight which serve to hit. Force yourself to adapt swing path, not toss.</p>
 <p>This is advanced but extremely valuable. Start at slow speed, build up.</p>
-<strong>Drill — Toss pattern analysis:</strong>
+<p><strong>Drill — Toss pattern analysis:</strong></p>
 <p>Record your serves from behind (phone on tripod). Watch toss position for each serve type. Document differences. Work to minimize.</p>
-<strong>Target toss position (right-handed player):</strong>
-<ul class="styled-list">
-<li>Slightly in front of body (inside baseline)</li>
-<li>Slightly to the right of ball-toss shoulder (not far right for slice)</li>
-<li>At maximum height you can comfortably reach</li>
-</ul>
+<p><strong>Target toss position (right-handed player):</strong>
+- Slightly in front of body (inside baseline)
+- Slightly to the right of ball-toss shoulder (not far right for slice)
+- At maximum height you can comfortably reach</p>
 <p>This single toss position is achievable for flat serve và approximate starting point for slice với minimal path adjustment.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.4 Placement Strategy — T, Body, Wide</h2><h3>The Three Zones</h3>
-<strong>T (Center service line):</strong>
-<ul class="styled-list">
-<li>Reduces return angle available</li>
-<li>Forces returner to move toward center</li>
-<li>Opens court opposite direction (opposite corner available after serve)</li>
-<li>Particularly effective on deuce court (backhand return for most players)</li>
-</ul>
-<strong>Body (Hip/torso):</strong>
-<ul class="styled-list">
-<li>Jams returner — no clean swing</li>
-<li>Produces weak, elevated returns</li>
-<li>Especially effective vs. players who stand far back</li>
-<li>Returns go up in air → easy attack</li>
-</ul>
-<strong>Wide:</strong>
-<ul class="styled-list">
-<li>Pulls returner off court</li>
-<li>Opens entire court for Serve+1</li>
-<li>Return must travel longer distance → server has more time</li>
-<li>Risk: More net to clear (sharper angle)</li>
-</ul>
-<h3>Zone Preferences By Court Side</h3>
-<strong>Deuce Court (right side):</strong>
-<em>T serve:</em> Attacks returner's backhand (most players' weaker side). Low-risk entry to point.
-<em>Body serve:</em> Right-handed returner's backhand hip — very difficult swing. Left-handed returner less effective here.
-<em>Wide serve:</em> Pulls returner to deuce sideline. Must return to backhand side (for right-hander) → defensive return likely.
-<strong>Best combination on deuce:</strong> T into backhand (first serve) + body (mix-up) + occasionally wide (when expecting T return reaction).
-<hr>
-<strong>Ad Court (left side):</strong>
-<em>T serve:</em> Attacks returner's forehand (for right-hander). Good if want to neutralize forehand by making them hit from T (less angle available).
-<em>Body serve:</em> Right-hander's forehand hip or backhand hip depending on exact placement. Forehand hip more common — very effective.
-<em>Wide serve:</em> Pulls right-handed returner to forehand side. Left-hander's backhand. Can generate weak slice returns or missed returns.
-<strong>Best combination on ad:</strong> Body (first serve) + wide kick (second serve) + occasional T (surprise).
-<h3>Score-Based Placement</h3>
-<strong>15-0, 30-0 (comfortable lead):</strong>
-<p>Mix up serves — experiment. You can afford errors.</p>
-<strong>0-15, 0-30 (behind):</strong>
-<p>Go to highest-percentage serve for you. Not necessarily safest, but what you execute best under pressure.</p>
-<strong>30-30, 40-30 (important point, comfortable):</strong>
-<p>Go to best first serve. Take the point early.</p>
-<strong>30-40, Deuce (pressure):</strong>
-<p>Body or T — reduce returner's options. Not wide unless you're very consistent with it.</p>
-<strong>40-0, Game point comfortably ahead:</strong>
-<p>Body serve — take away return angles. Get weak return, put away.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.5 Disguise Techniques — Look The Same, Do Different</h2><h3>Upper Body Disguise</h3>
-<strong>Shoulder alignment:</strong>
-<p>Some servers align shoulders more open for flat, more sideways for slice. Eliminating this variation disguises serve.</p>
-<em>Drill:</em> Stand sideways (more closed, slice position) và hit all three serve types. This forces reliance on swing path rather than body orientation.
-<strong>Ball hand position:</strong>
-<p>Tossing hand motion gives away serve to careful observers. Practice keeping same release motion.</p>
-<strong>Trophy position:</strong>
-<p>At trophy position, racket and body should look identical regardless of serve type. Disguise built into this position before swing even starts.</p>
-<h3>The "Same Picture, Different Movie" Principle</h3>
+<hr/>
+<h2 id="224-placement-strategy-t-body-wide">22.4 Placement Strategy — T, Body, Wide</h2>
+<h3 id="the-three-zones">The Three Zones</h3>
+<p><strong>T (Center service line):</strong>
+- Reduces return angle available
+- Forces returner to move toward center
+- Opens court opposite direction (opposite corner available after serve)
+- Particularly effective on deuce court (backhand return for most players)</p>
+<p><strong>Body (Hip/torso):</strong>
+- Jams returner — no clean swing
+- Produces weak, elevated returns
+- Especially effective vs. players who stand far back
+- Returns go up in air → easy attack</p>
+<p><strong>Wide:</strong>
+- Pulls returner off court
+- Opens entire court for Serve+1
+- Return must travel longer distance → server has more time
+- Risk: More net to clear (sharper angle)</p>
+<h3 id="zone-preferences-by-court-side">Zone Preferences By Court Side</h3>
+<p><strong>Deuce Court (right side):</strong></p>
+<p><em>T serve:</em> Attacks returner's backhand (most players' weaker side). Low-risk entry to point.</p>
+<p><em>Body serve:</em> Right-handed returner's backhand hip — very difficult swing. Left-handed returner less effective here.</p>
+<p><em>Wide serve:</em> Pulls returner to deuce sideline. Must return to backhand side (for right-hander) → defensive return likely.</p>
+<p><strong>Best combination on deuce:</strong> T into backhand (first serve) + body (mix-up) + occasionally wide (when expecting T return reaction).</p>
+<hr/>
+<p><strong>Ad Court (left side):</strong></p>
+<p><em>T serve:</em> Attacks returner's forehand (for right-hander). Good if want to neutralize forehand by making them hit from T (less angle available).</p>
+<p><em>Body serve:</em> Right-hander's forehand hip or backhand hip depending on exact placement. Forehand hip more common — very effective.</p>
+<p><em>Wide serve:</em> Pulls right-handed returner to forehand side. Left-hander's backhand. Can generate weak slice returns or missed returns.</p>
+<p><strong>Best combination on ad:</strong> Body (first serve) + wide kick (second serve) + occasional T (surprise).</p>
+<h3 id="score-based-placement">Score-Based Placement</h3>
+<p><strong>15-0, 30-0 (comfortable lead):</strong>
+Mix up serves — experiment. You can afford errors.</p>
+<p><strong>0-15, 0-30 (behind):</strong>
+Go to highest-percentage serve for you. Not necessarily safest, but what you execute best under pressure.</p>
+<p><strong>30-30, 40-30 (important point, comfortable):</strong>
+Go to best first serve. Take the point early.</p>
+<p><strong>30-40, Deuce (pressure):</strong>
+Body or T — reduce returner's options. Not wide unless you're very consistent with it.</p>
+<p><strong>40-0, Game point comfortably ahead:</strong>
+Body serve — take away return angles. Get weak return, put away.</p>
+<hr/>
+<h2 id="225-disguise-techniques-look-the-same-do-different">22.5 Disguise Techniques — Look The Same, Do Different</h2>
+<h3 id="upper-body-disguise">Upper Body Disguise</h3>
+<p><strong>Shoulder alignment:</strong>
+Some servers align shoulders more open for flat, more sideways for slice. Eliminating this variation disguises serve.</p>
+<p><em>Drill:</em> Stand sideways (more closed, slice position) và hit all three serve types. This forces reliance on swing path rather than body orientation.</p>
+<p><strong>Ball hand position:</strong>
+Tossing hand motion gives away serve to careful observers. Practice keeping same release motion.</p>
+<p><strong>Trophy position:</strong>
+At trophy position, racket and body should look identical regardless of serve type. Disguise built into this position before swing even starts.</p>
+<h3 id="the-same-picture-different-movie-principle">The "Same Picture, Different Movie" Principle</h3>
 <p>Visualize this: Two film screenshots at trophy position. One is a flat serve. One is a kick serve. To the returner, they should look like the same screenshot.</p>
 <p>The difference is in what happens AFTER trophy — the swing path, contact point, and follow-through. Returner cannot see this until it's too late.</p>
-<strong>Practice protocol:</strong>
-<p>Hit serves in sets of three: flat → slice → kick → all from identical trophy position. Video yourself. Are they distinguishable at trophy position?</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.6 Serve Sequences — Patterns Across Multiple Points</h2><h3>The Concept Of Serve Sequences</h3>
+<p><strong>Practice protocol:</strong>
+Hit serves in sets of three: flat → slice → kick → all from identical trophy position. Video yourself. Are they distinguishable at trophy position?</p>
+<hr/>
+<h2 id="226-serve-sequences-patterns-across-multiple-points">22.6 Serve Sequences — Patterns Across Multiple Points</h2>
+<h3 id="the-concept-of-serve-sequences">The Concept Of Serve Sequences</h3>
 <p>One serve doesn't exist in isolation. Serves across a game form a sequence that can be used tactically.</p>
-<strong>Basic sequencing principle:</strong>
-<ul class="styled-list">
-<li>Set up serve B by hitting serve A first</li>
-<li>Create expectation, then violate it</li>
-</ul>
-<strong>Examples:</strong>
-<em>Pattern 1 — The T Setup:</em>
-<ul class="styled-list">
-<li>Point 1: T serve (returner moves toward center, backhand)</li>
-<li>Point 2: T serve again (confirming expectation)</li>
-<li>Point 3: Wide serve — returner is leaning toward center → too far to reach wide ball</li>
-</ul>
-<em>Pattern 2 — The Body Setup:</em>
-<ul class="styled-list">
-<li>Point 1: Body serve (jams returner)</li>
-<li>Point 2: Body serve again</li>
-<li>Point 3: Wide serve — returner stands farther from center to avoid body → wide ball now open</li>
-</ul>
-<em>Pattern 3 — The Speed Variation:</em>
-<ul class="styled-list">
-<li>Points 1-2: Hard, flat first serves</li>
-<li>Point 3: Slower kick serve to T — same motion, different pace → returner swings too early</li>
-</ul>
-<h3>Reading Returner's Positioning</h3>
+<p><strong>Basic sequencing principle:</strong>
+- Set up serve B by hitting serve A first
+- Create expectation, then violate it</p>
+<p><strong>Examples:</strong></p>
+<p><em>Pattern 1 — The T Setup:</em>
+- Point 1: T serve (returner moves toward center, backhand)
+- Point 2: T serve again (confirming expectation)
+- Point 3: Wide serve — returner is leaning toward center → too far to reach wide ball</p>
+<p><em>Pattern 2 — The Body Setup:</em>
+- Point 1: Body serve (jams returner)
+- Point 2: Body serve again
+- Point 3: Wide serve — returner stands farther from center to avoid body → wide ball now open</p>
+<p><em>Pattern 3 — The Speed Variation:</em>
+- Points 1-2: Hard, flat first serves
+- Point 3: Slower kick serve to T — same motion, different pace → returner swings too early</p>
+<h3 id="reading-returners-positioning">Reading Returner's Positioning</h3>
 <p>Smart server reads where returner stands and serves opposite:</p>
-<strong>Returner hugging sideline (anticipating wide):</strong>
-<p>→ Serve body or T</p>
-<strong>Returner standing at center:</strong>
-<p>→ Serve wide with good angle</p>
-<strong>Returner standing very far back (aggressive baseliner):</strong>
-<p>→ Serve body (their biggest weakness — can't use full swing)</p>
-<strong>Returner standing inside baseline (rushing serve):</strong>
-<p>→ Kick serve high — they can't handle the high bounce close to baseline</p>
-<h3>Recording And Analyzing Return Positions</h3>
+<p><strong>Returner hugging sideline (anticipating wide):</strong>
+→ Serve body or T</p>
+<p><strong>Returner standing at center:</strong>
+→ Serve wide with good angle</p>
+<p><strong>Returner standing very far back (aggressive baseliner):</strong>
+→ Serve body (their biggest weakness — can't use full swing)</p>
+<p><strong>Returner standing inside baseline (rushing serve):</strong>
+→ Kick serve high — they can't handle the high bounce close to baseline</p>
+<h3 id="recording-and-analyzing-return-positions">Recording And Analyzing Return Positions</h3>
 <p>In matches you care about, after the match note:</p>
 <ul class="styled-list">
 <li>Where does this opponent stand for deuce return?</li>
@@ -1158,240 +1139,250 @@ footer .credit-label { color: var(--gold); }
 <li>Do they lean early (indicating read)?</li>
 </ul>
 <p>Build a mental database of returner tendencies. Return to this database next time you play them.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.7 Second Serve — The Underrated Weapon</h2><h3>Second Serve Is Not Just About "Not Double Faulting"</h3>
+<hr/>
+<h2 id="227-second-serve-the-underrated-weapon">22.7 Second Serve — The Underrated Weapon</h2>
+<h3 id="second-serve-is-not-just-about-not-double-faulting">Second Serve Is Not Just About "Not Double Faulting"</h3>
 <p>Most amateurs treat second serve as defensive — "just get it in." This is a wasted opportunity.</p>
-<strong>Aggressive second serve philosophy:</strong>
-<p>Second serve should be a weapon in its own right, not merely a backup. The goal is:</p>
-<ul class="styled-list">
-<li>High enough percentage to not double fault</li>
-<li>Enough quality that returner cannot attack freely</li>
-</ul>
+<p><strong>Aggressive second serve philosophy:</strong>
+Second serve should be a weapon in its own right, not merely a backup. The goal is:
+- High enough percentage to not double fault
+- Enough quality that returner cannot attack freely</p>
 <p>A kick serve at 70-75 mph that bounces to shoulder height is MORE difficult to attack than a slow, safe, "just get it in" serve at 50 mph.</p>
-<h3>Second Serve Targets</h3>
-<strong>Best second serve for most players:</strong> Kick serve to backhand.
-<p>Why:</p>
-<ul class="styled-list">
-<li>High net clearance = low double fault risk</li>
-<li>High bounce to backhand = difficult angle for return</li>
-<li>Kick away from backhand = returner moved further from center</li>
-<li>Sets up forehand approach to open court</li>
-</ul>
-<strong>Second serve to body:</strong>
-<p>A kick or flat serve directly at the hip is an underused weapon. Returner has no angle on return regardless of where they stand.</p>
-<h3>Double Fault Prevention — Mental And Technical</h3>
-<strong>Technical causes of double fault:</strong>
-<ul class="styled-list">
-<li>Toss too far forward (serve goes into net)</li>
-<li>Toss too far back (serve goes long)</li>
-<li>Swinging at reduced speed but same timing (timing error)</li>
-<li>Tension causing shortened swing</li>
-</ul>
-<strong>Mental causes:</strong>
-<ul class="styled-list">
-<li>Fear of double fault causing tentative swing</li>
-<li>Tentative swing causes exactly the result feared (self-fulfilling)</li>
-<li>"Just get it in" mindset removes commitment</li>
-</ul>
-<strong>Solution:</strong>
-<em>Commit fully</em> to second serve. A full, confident kick serve at appropriate pace enters more often than a tentative, "safe" serve hit without commitment.
-<p>Before second serve, routine:</p>
-<p>1. Decide exact target</p>
-<p>2. Decide exact serve type</p>
-<p>3. Visualize ball landing on target</p>
-<p>4. Commit fully — swing with the same confidence as first serve</p>
-<p>5. Trust the process</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.8 Serve In The Wind And On Different Surfaces</h2><h3>Serving In The Wind</h3>
-<strong>Wind behind you:</strong>
-<ul class="styled-list">
-<li>Ball travels faster</li>
-<li>Reduce pace slightly, ensure ball stays in</li>
-<li>Use to advantage: flat serve goes even faster, less detectable</li>
-</ul>
-<strong>Wind against you:</strong>
-<ul class="styled-list">
-<li>Ball is slowed</li>
-<li>Increase toss height slightly to maintain contact at peak</li>
-<li>Kick serve affected most — less topspin due to resistance</li>
-<li>Slice serve may kick less sideways</li>
-</ul>
-<strong>Crosswind (from right for right-hander):</strong>
-<ul class="styled-list">
-<li>Ball drifts left — aim more right than usual for flat/slice</li>
-<li>Kick serve may kick more than usual</li>
-</ul>
-<strong>Practical approach:</strong>
-<p>First 2-3 service games of a windy match: Test all serves, note actual landing, adjust target.</p>
-<h3>Serving On Different Surfaces</h3>
-<strong>Hard Court:</strong>
-<ul class="styled-list">
-<li>Standard bounce, relatively predictable</li>
-<li>All serve types effective</li>
-<li>Flat serve particularly effective (true bounce, maintains speed)</li>
-</ul>
-<strong>Clay Court:</strong>
-<ul class="styled-list">
-<li>Slower surface, higher bounce</li>
-<li>Kick serve MOST effective — already high bounce made higher</li>
-<li>Flat serve loses speed advantage</li>
-<li>Wide serve less effective (longer to reach opponent but also more time to recover)</li>
-</ul>
-<strong>Grass:</strong>
-<ul class="styled-list">
-<li>Fast surface, low, skidding bounce</li>
-<li>Flat and slice serves MOST effective</li>
-<li>Slice stays low, doesn't kick up → returner cannot attack</li>
-<li>Kick serve loses some effectiveness (bounce stays lower on grass)</li>
-</ul>
-<strong>Indoor Hard:</strong>
-<ul class="styled-list">
-<li>Fast surface</li>
-<li>Flat serve particularly effective</li>
-<li>Less wind variable → disguise more possible</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.9 Serve Under Pressure — Clutch Situations</h2><h3>The Tiebreak Serve</h3>
+<h3 id="second-serve-targets">Second Serve Targets</h3>
+<p><strong>Best second serve for most players:</strong> Kick serve to backhand.</p>
+<p>Why:
+- High net clearance = low double fault risk
+- High bounce to backhand = difficult angle for return
+- Kick away from backhand = returner moved further from center
+- Sets up forehand approach to open court</p>
+<p><strong>Second serve to body:</strong>
+A kick or flat serve directly at the hip is an underused weapon. Returner has no angle on return regardless of where they stand.</p>
+<h3 id="double-fault-prevention-mental-and-technical">Double Fault Prevention — Mental And Technical</h3>
+<p><strong>Technical causes of double fault:</strong>
+- Toss too far forward (serve goes into net)
+- Toss too far back (serve goes long)
+- Swinging at reduced speed but same timing (timing error)
+- Tension causing shortened swing</p>
+<p><strong>Mental causes:</strong>
+- Fear of double fault causing tentative swing
+- Tentative swing causes exactly the result feared (self-fulfilling)
+- "Just get it in" mindset removes commitment</p>
+<p><strong>Solution:</strong></p>
+<p><em>Commit fully</em> to second serve. A full, confident kick serve at appropriate pace enters more often than a tentative, "safe" serve hit without commitment.</p>
+<p>Before second serve, routine:
+1. Decide exact target
+2. Decide exact serve type
+3. Visualize ball landing on target
+4. Commit fully — swing with the same confidence as first serve
+5. Trust the process</p>
+<hr/>
+<h2 id="228-serve-in-the-wind-and-on-different-surfaces">22.8 Serve In The Wind And On Different Surfaces</h2>
+<h3 id="serving-in-the-wind">Serving In The Wind</h3>
+<p><strong>Wind behind you:</strong>
+- Ball travels faster
+- Reduce pace slightly, ensure ball stays in
+- Use to advantage: flat serve goes even faster, less detectable</p>
+<p><strong>Wind against you:</strong>
+- Ball is slowed
+- Increase toss height slightly to maintain contact at peak
+- Kick serve affected most — less topspin due to resistance
+- Slice serve may kick less sideways</p>
+<p><strong>Crosswind (from right for right-hander):</strong>
+- Ball drifts left — aim more right than usual for flat/slice
+- Kick serve may kick more than usual</p>
+<p><strong>Practical approach:</strong>
+First 2-3 service games of a windy match: Test all serves, note actual landing, adjust target.</p>
+<h3 id="serving-on-different-surfaces">Serving On Different Surfaces</h3>
+<p><strong>Hard Court:</strong>
+- Standard bounce, relatively predictable
+- All serve types effective
+- Flat serve particularly effective (true bounce, maintains speed)</p>
+<p><strong>Clay Court:</strong>
+- Slower surface, higher bounce
+- Kick serve MOST effective — already high bounce made higher
+- Flat serve loses speed advantage
+- Wide serve less effective (longer to reach opponent but also more time to recover)</p>
+<p><strong>Grass:</strong>
+- Fast surface, low, skidding bounce
+- Flat and slice serves MOST effective
+- Slice stays low, doesn't kick up → returner cannot attack
+- Kick serve loses some effectiveness (bounce stays lower on grass)</p>
+<p><strong>Indoor Hard:</strong>
+- Fast surface
+- Flat serve particularly effective
+- Less wind variable → disguise more possible</p>
+<hr/>
+<h2 id="229-serve-under-pressure-clutch-situations">22.9 Serve Under Pressure — Clutch Situations</h2>
+<h3 id="the-tiebreak-serve">The Tiebreak Serve</h3>
 <p>Tiebreak points are higher pressure. Server's natural tendency: tighten, aim safe, lose serve quality.</p>
-<strong>Tiebreak serve strategy:</strong>
-<em>Mini-break awareness:</em> First point of tiebreak is not more important than 6th or 7th, despite feeling that way. Play all points equally.
-<em>Go to strengths:</em> Tiebreak is not time for experimentation. Serve to your highest-percentage patterns.
-<em>Body serve under extreme pressure:</em> When serving at 5-6 in tiebreak, body serve removes angle from returner and minimizes your risk. Often underused in pressure.
-<h3>Serving For The Set</h3>
-<strong>At 5-4 serving for set:</strong>
+<p><strong>Tiebreak serve strategy:</strong></p>
+<p><em>Mini-break awareness:</em> First point of tiebreak is not more important than 6th or 7th, despite feeling that way. Play all points equally.</p>
+<p><em>Go to strengths:</em> Tiebreak is not time for experimentation. Serve to your highest-percentage patterns.</p>
+<p><em>Body serve under extreme pressure:</em> When serving at 5-6 in tiebreak, body serve removes angle from returner and minimizes your risk. Often underused in pressure.</p>
+<h3 id="serving-for-the-set">Serving For The Set</h3>
+<p><strong>At 5-4 serving for set:</strong></p>
 <p>Common mistake: Increase pace trying to "close it out" → lose serve quality → breaks of serve → set gets away.</p>
-<strong>Correct approach:</strong>
-<ul class="styled-list">
-<li>Same serve strategy as any game</li>
-<li>Focus on process (execute my patterns) not outcome (win the set)</li>
-<li>If anything, serve MORE deliberately — ensure good first serve percentage</li>
-<li>Body serve reduces returner's options → less variability for you</li>
-</ul>
-<h3>Serving To Save Match</h3>
-<strong>Down a set, serving to stay in match:</strong>
+<p><strong>Correct approach:</strong>
+- Same serve strategy as any game
+- Focus on process (execute my patterns) not outcome (win the set)
+- If anything, serve MORE deliberately — ensure good first serve percentage
+- Body serve reduces returner's options → less variability for you</p>
+<h3 id="serving-to-save-match">Serving To Save Match</h3>
+<p><strong>Down a set, serving to stay in match:</strong></p>
 <p>Here the psychological challenge is greatest. Two approaches:</p>
-<em>Option A — Go for big first serve:</em> Force returner to play defensively immediately. High risk, high reward.
-<em>Option B — Pattern serve:</em> Execute your best patterns, focus on getting to Serve+1 advantage, trust your groundstrokes.
-<strong>Recommendation:</strong> Option B for most players. Big first serve only works if you actually have a big first serve in your arsenal executed consistently. Otherwise pattern serve reduces pressure and puts match back on your groundstrokes.
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.10 Tracking Your Serve Stats</h2><h3>Why Stats Matter</h3>
+<p><em>Option A — Go for big first serve:</em> Force returner to play defensively immediately. High risk, high reward.</p>
+<p><em>Option B — Pattern serve:</em> Execute your best patterns, focus on getting to Serve+1 advantage, trust your groundstrokes.</p>
+<p><strong>Recommendation:</strong> Option B for most players. Big first serve only works if you actually have a big first serve in your arsenal executed consistently. Otherwise pattern serve reduces pressure and puts match back on your groundstrokes.</p>
+<hr/>
+<h2 id="2210-tracking-your-serve-stats">22.10 Tracking Your Serve Stats</h2>
+<h3 id="why-stats-matter">Why Stats Matter</h3>
 <p>You cannot improve what you don't measure.</p>
 <p>Basic serve stats to track in matches:</p>
-| Stat | Target |
-|---|---|
-| First serve percentage | 60-65%+ |
-| First serve points won | 70%+ |
-| Second serve points won | 50%+ |
-| Double fault rate | Under 3% of total service points |
-| Aces / service winners | Context dependent |
-
-<h3>What The Stats Tell You</h3>
-<strong>First serve % below 55%:</strong>
-<p>Too aggressive on first serve OR technical issue with first serve → increase percentage, may reduce pace</p>
-<strong>First serve % over 75%:</strong>
-<p>First serve too safe → can afford to be more aggressive</p>
-<strong>Second serve points won below 45%:</strong>
-<p>Second serve too attackable → improve kick/topspin serve quality</p>
-<strong>Double fault rate above 5%:</strong>
-<p>Mental commitment issue OR technical second serve issue → routine and commitment focus</p>
-<h3>Simple Match Tracking Method</h3>
-<p>After each service game, note (in score sheet or phone):</p>
-<ul class="styled-list">
-<li>"1" = first serve in</li>
-<li>"2" = second serve needed</li>
-<li>"D" = double fault</li>
-<li>"A" = ace/service winner</li>
-</ul>
+<table class="data-table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First serve percentage</td>
+<td>60-65%+</td>
+</tr>
+<tr>
+<td>First serve points won</td>
+<td>70%+</td>
+</tr>
+<tr>
+<td>Second serve points won</td>
+<td>50%+</td>
+</tr>
+<tr>
+<td>Double fault rate</td>
+<td>Under 3% of total service points</td>
+</tr>
+<tr>
+<td>Aces / service winners</td>
+<td>Context dependent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-stats-tell-you">What The Stats Tell You</h3>
+<p><strong>First serve % below 55%:</strong>
+Too aggressive on first serve OR technical issue with first serve → increase percentage, may reduce pace</p>
+<p><strong>First serve % over 75%:</strong>
+First serve too safe → can afford to be more aggressive</p>
+<p><strong>Second serve points won below 45%:</strong>
+Second serve too attackable → improve kick/topspin serve quality</p>
+<p><strong>Double fault rate above 5%:</strong>
+Mental commitment issue OR technical second serve issue → routine and commitment focus</p>
+<h3 id="simple-match-tracking-method">Simple Match Tracking Method</h3>
+<p>After each service game, note (in score sheet or phone):
+- "1" = first serve in
+- "2" = second serve needed
+- "D" = double fault
+- "A" = ace/service winner</p>
 <p>Review pattern after match. What percentage of games were double-fault-free? Which court side is weaker?</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.11 Eight-Week Serve Improvement Program</h2><h3>Week 1-2: Foundation And Analysis</h3>
-<strong>Session 1:</strong>
-<p>Video record entire serve session from behind. Review:</p>
+<hr/>
+<h2 id="2211-eight-week-serve-improvement-program">22.11 Eight-Week Serve Improvement Program</h2>
+<h3 id="week-1-2-foundation-and-analysis">Week 1-2: Foundation And Analysis</h3>
+<p><strong>Session 1:</strong>
+Video record entire serve session from behind. Review:
+- Toss consistency (does it vary by serve type?)
+- Trophy position (looking for differences)
+- Contact point location</p>
+<p><strong>Session 2:</strong>
+Practice serves in boxes. T zone, body zone, wide zone. Start slow. 20 serves each zone × 3 serve types = 180 serves. No pressure. Focus on landing target.</p>
+<p><strong>Session 3:</strong>
+Focus exclusively on toss consistency. Same toss, three serve types. Start with "just toss and catch" — no swing — focusing on toss landing in same spot.</p>
+<hr/>
+<h3 id="week-3-4-second-serve-development">Week 3-4: Second Serve Development</h3>
+<p><strong>Focus:</strong> Kick serve reliability and quality.</p>
+<p><strong>Session 1:</strong>
+50 kick serves to backhand corner only. Count how many land in and how many kick above waist height. Target: 80%+ in, 60%+ above waist.</p>
+<p><strong>Session 2:</strong>
+Alternate kick serve (second serve pace) and flat serve (first serve pace) — same toss. Feel the difference in swing path without changing setup.</p>
+<p><strong>Session 3:</strong>
+Pressure simulation: Serve 5 second serves. If 4 of 5 land in = success. Miss 2 = start over. Build mental resistance to double fault fear.</p>
+<hr/>
+<h3 id="week-5-6-disguise-work">Week 5-6: Disguise Work</h3>
+<p><strong>Session 1:</strong>
+"Call it at trophy" drill: Partner calls "flat, slice, or kick" when you reach trophy position. You must execute called serve. Forces adaptation at trophy position.</p>
+<p><strong>Session 2:</strong>
+Same toss, three serve types. Video from returner's perspective. Can the serve type be identified at toss release?</p>
+<p><strong>Session 3:</strong>
+Pattern sequences: Serve 3-ball sequences (T/T/wide, body/body/T, etc.). Practice intentional variety within sequences.</p>
+<hr/>
+<h3 id="week-7-8-pressure-and-match-integration">Week 7-8: Pressure And Match Integration</h3>
+<p><strong>Session 1:</strong>
+Serve practice with full ritual (routine, bounce ball, toss, hit). Not just serving mechanically. Simulate match execution.</p>
+<p><strong>Session 2:</strong>
+Rally practice: Serve + play out point. Focus on Serve+1 — what happens after the serve?</p>
+<p><strong>Session 3:</strong>
+Match play with tracking. After match, review stats. Identify one improvement from 8-week program visible in match.</p>
+<hr/>
+<h2 id="2212-nam-loi-serve-nang-cao-pho-bien">22.12 Năm Lỗi Serve Nâng Cao Phổ Biến</h2>
+<h3 id="loi-1-different-toss-for-each-serve-type">Lỗi 1: Different Toss For Each Serve Type</h3>
+<p><strong>Mô tả:</strong> Flat toss forward, slice toss right, kick toss left và back. Completely readable.</p>
+<p><strong>Fix:</strong> Video analysis of toss. Identify variation. Work specifically on neutral toss. Start slow.</p>
+<hr/>
+<h3 id="loi-2-reducing-speed-on-second-serve-instead-of-adding-spin">Lỗi 2: Reducing Speed On Second Serve Instead Of Adding Spin</h3>
+<p><strong>Mô tả:</strong> Second serve = same motion as first, just slower. Result: Ball lands shorter, sits up, returner attacks.</p>
+<p><strong>Fix:</strong> Second serve needs MORE spin, not less speed. Learn kick serve properly. The margin comes from topspin clearing net with margin, not from hitting softer.</p>
+<hr/>
+<h3 id="loi-3-predictable-patterns-no-variety">Lỗi 3: Predictable Patterns — No Variety</h3>
+<p><strong>Mô tả:</strong> Every first serve to T, every second serve to backhand corner. Returner memorizes in 3 games, starts crushing returns.</p>
+<p><strong>Fix:</strong> Track where you serve. Conscious variety. 3-serve sequences. Use body serve.</p>
+<hr/>
+<h3 id="loi-4-serving-to-opponents-strength-under-pressure">Lỗi 4: Serving To Opponent's Strength Under Pressure</h3>
+<p><strong>Mô tả:</strong> Under pressure, players often serve to opponent's forehand (feels "safer" — bigger target). But opponent's forehand is their weapon.</p>
+<p><strong>Fix:</strong> Map your patterns. Under pressure, serve to weakness (usually backhand, or body) not to strength.</p>
+<hr/>
+<h3 id="loi-5-no-routine-inconsistent-execution">Lỗi 5: No Routine — Inconsistent Execution</h3>
+<p><strong>Mô tả:</strong> Before first serve: bounce 3 times. Before second serve: bounce 8 times, adjust strings, look around. Completely different physical and mental preparation.</p>
+<p><strong>Fix:</strong> Same pre-serve routine for first AND second serve. Same bounce count, same breath, same reset. This equalizes mental state between first and second serve.</p>
+<hr/>
+<h2 id="tom-tat-chuong-22">Tóm Tắt Chương 22</h2>
 <ul class="styled-list">
-<li>Toss consistency (does it vary by serve type?)</li>
-<li>Trophy position (looking for differences)</li>
-<li>Contact point location</li>
+<li>
+<p><strong>Serve là vũ khí số một</strong> — điều khiển pace, position, và psychology của returner ngay từ đầu mỗi point</p>
+</li>
+<li>
+<p><strong>Three serves revisited:</strong> Flat (forward pronation, minimal spin), Slice (2-3 o'clock contact, heavy sidespin), Kick (7-11 brushing, high bounce) — mỗi loại có advanced mechanics và use cases</p>
+</li>
+<li>
+<p><strong>Toss consistency = disguise:</strong> Same toss → different swing path → serve type unreadable. Varying toss = readable serve.</p>
+</li>
+<li>
+<p><strong>Three zones:</strong> T (reduces return angle), Body (jams swing), Wide (opens court). Different optimal uses per court side và score situation.</p>
+</li>
+<li>
+<p><strong>Serve sequences:</strong> Single serves are tactics; sequences are strategy. Set up with A, finish with B.</p>
+</li>
+<li>
+<p><strong>Second serve philosophy:</strong> Not defensive backup — aggressive weapon. Kick serve at 70% pace with heavy spin &gt; tentative "safe" serve.</p>
+</li>
+<li>
+<p><strong>Surface và wind adjustments:</strong> Different serves excel on different surfaces. Wind requires target adjustment.</p>
+</li>
+<li>
+<p><strong>Stats tracking:</strong> First serve %, second serve points won, double fault rate. Measure to improve.</p>
+</li>
+<li>
+<p><strong>Key insight:</strong> "Same picture, different movie" — trophy position looks identical for all serve types. Returner reads at trophy position; disguise must be built there.</p>
+</li>
 </ul>
-<strong>Session 2:</strong>
-<p>Practice serves in boxes. T zone, body zone, wide zone. Start slow. 20 serves each zone × 3 serve types = 180 serves. No pressure. Focus on landing target.</p>
-<strong>Session 3:</strong>
-<p>Focus exclusively on toss consistency. Same toss, three serve types. Start with "just toss and catch" — no swing — focusing on toss landing in same spot.</p>
-<hr>
-<h3>Week 3-4: Second Serve Development</h3>
-<strong>Focus:</strong> Kick serve reliability and quality.
-<strong>Session 1:</strong>
-<p>50 kick serves to backhand corner only. Count how many land in and how many kick above waist height. Target: 80%+ in, 60%+ above waist.</p>
-<strong>Session 2:</strong>
-<p>Alternate kick serve (second serve pace) and flat serve (first serve pace) — same toss. Feel the difference in swing path without changing setup.</p>
-<strong>Session 3:</strong>
-<p>Pressure simulation: Serve 5 second serves. If 4 of 5 land in = success. Miss 2 = start over. Build mental resistance to double fault fear.</p>
-<hr>
-<h3>Week 5-6: Disguise Work</h3>
-<strong>Session 1:</strong>
-<p>"Call it at trophy" drill: Partner calls "flat, slice, or kick" when you reach trophy position. You must execute called serve. Forces adaptation at trophy position.</p>
-<strong>Session 2:</strong>
-<p>Same toss, three serve types. Video from returner's perspective. Can the serve type be identified at toss release?</p>
-<strong>Session 3:</strong>
-<p>Pattern sequences: Serve 3-ball sequences (T/T/wide, body/body/T, etc.). Practice intentional variety within sequences.</p>
-<hr>
-<h3>Week 7-8: Pressure And Match Integration</h3>
-<strong>Session 1:</strong>
-<p>Serve practice with full ritual (routine, bounce ball, toss, hit). Not just serving mechanically. Simulate match execution.</p>
-<strong>Session 2:</strong>
-<p>Rally practice: Serve + play out point. Focus on Serve+1 — what happens after the serve?</p>
-<strong>Session 3:</strong>
-<p>Match play with tracking. After match, review stats. Identify one improvement from 8-week program visible in match.</p>
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">22.12 Năm Lỗi Serve Nâng Cao Phổ Biến</h2><h3>Lỗi 1: Different Toss For Each Serve Type</h3>
-<strong>Mô tả:</strong> Flat toss forward, slice toss right, kick toss left và back. Completely readable.
-<strong>Fix:</strong> Video analysis of toss. Identify variation. Work specifically on neutral toss. Start slow.
-<hr>
-<h3>Lỗi 2: Reducing Speed On Second Serve Instead Of Adding Spin</h3>
-<strong>Mô tả:</strong> Second serve = same motion as first, just slower. Result: Ball lands shorter, sits up, returner attacks.
-<strong>Fix:</strong> Second serve needs MORE spin, not less speed. Learn kick serve properly. The margin comes from topspin clearing net with margin, not from hitting softer.
-<hr>
-<h3>Lỗi 3: Predictable Patterns — No Variety</h3>
-<strong>Mô tả:</strong> Every first serve to T, every second serve to backhand corner. Returner memorizes in 3 games, starts crushing returns.
-<strong>Fix:</strong> Track where you serve. Conscious variety. 3-serve sequences. Use body serve.
-<hr>
-<h3>Lỗi 4: Serving To Opponent's Strength Under Pressure</h3>
-<strong>Mô tả:</strong> Under pressure, players often serve to opponent's forehand (feels "safer" — bigger target). But opponent's forehand is their weapon.
-<strong>Fix:</strong> Map your patterns. Under pressure, serve to weakness (usually backhand, or body) not to strength.
-<hr>
-<h3>Lỗi 5: No Routine — Inconsistent Execution</h3>
-<strong>Mô tả:</strong> Before first serve: bounce 3 times. Before second serve: bounce 8 times, adjust strings, look around. Completely different physical and mental preparation.
-<strong>Fix:</strong> Same pre-serve routine for first AND second serve. Same bounce count, same breath, same reset. This equalizes mental state between first and second serve.
-<hr></div>
-<div class="chapter" id="chapter-22"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 22</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 22</h2><ul class="styled-list">
-<li><strong>Serve là vũ khí số một</strong> — điều khiển pace, position, và psychology của returner ngay từ đầu mỗi point</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Three serves revisited:</strong> Flat (forward pronation, minimal spin), Slice (2-3 o'clock contact, heavy sidespin), Kick (7-11 brushing, high bounce) — mỗi loại có advanced mechanics và use cases</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Toss consistency = disguise:</strong> Same toss → different swing path → serve type unreadable. Varying toss = readable serve.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Three zones:</strong> T (reduces return angle), Body (jams swing), Wide (opens court). Different optimal uses per court side và score situation.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Serve sequences:</strong> Single serves are tactics; sequences are strategy. Set up with A, finish with B.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Second serve philosophy:</strong> Not defensive backup — aggressive weapon. Kick serve at 70% pace with heavy spin > tentative "safe" serve.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Surface và wind adjustments:</strong> Different serves excel on different surfaces. Wind requires target adjustment.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Stats tracking:</strong> First serve %, second serve points won, double fault rate. Measure to improve.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Key insight:</strong> "Same picture, different movie" — trophy position looks identical for all serve types. Returner reads at trophy position; disguise must be built there.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 22 đã weaponize serve. Chương 23 sẽ đi vào mặt đối lập — <strong>Return Of Serve Nâng Cao: Reading, Positioning, Và Attacking</strong> — cách đọc serve của đối thủ, positioning tối ưu, và biến return thành vũ khí tấn công thay vì chỉ "lấy bóng vào".</p>
-<hr>
-<em>Chương 23: Return Of Serve Nâng Cao →</em></div>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 22 đã weaponize serve. Chương 23 sẽ đi vào mặt đối lập — <strong>Return Of Serve Nâng Cao: Reading, Positioning, Và Attacking</strong> — cách đọc serve của đối thủ, positioning tối ưu, và biến return thành vũ khí tấn công thay vì chỉ "lấy bóng vào".</p>
+<hr/>
+<p><em>Chương 23: Return Of Serve Nâng Cao →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

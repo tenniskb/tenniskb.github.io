@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 09 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 09</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,460 +896,426 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 09</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 09</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 09</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">Chương 9: Kỹ Thuật, Chiến Thuật và Cảm Giác Bóng</h2><hr>
-> <em>"Tennis không chỉ là đánh mạnh nhất — đó là đánh đúng nhất. Và đôi khi, cú đánh đúng nhất là cú đánh nhẹ nhất, tinh tế nhất, bất ngờ nhất."</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 09 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#slice-drop-shot-và-lob--nghệ-thuật-của-touch-và-deception' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>SLICE, DROP SHOT VÀ LOB — NGHỆ THUẬT CỦA TOUCH VÀ DECEPTION</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-9-kỹ-thuật-chiến-thuật-và-cảm-giác-bóng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 9: Kỹ Thuật, Chiến Thuật và Cảm Giác Bóng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#91-tư-duy-về-touch-shots' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.1 Tư Duy Về "Touch Shots"</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#92-slice-groundstroke--cơ-học-và-ứng-dụng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.2 Slice Groundstroke — Cơ Học Và Ứng Dụng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#93-slice-trong-chiến-thuật--khi-nào-và-tại-sao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.3 Slice Trong Chiến Thuật — Khi Nào Và Tại Sao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#94-drop-shot--kỹ-thuật-và-bí-quyết' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.4 Drop Shot — Kỹ Thuật Và Bí Quyết</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#95-khi-nào-dùng-drop-shot--timing-chiến-thuật' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.5 Khi Nào Dùng Drop Shot — Timing Chiến Thuật</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#96-drop-shot-counter--khi-đối-thủ-đến-kịp' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.6 Drop Shot Counter — Khi Đối Thủ Đến Kịp</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#97-lob--defensive-và-offensive' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.7 Lob — Defensive và Offensive</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#98-kỹ-thuật-defensive-lob-chi-tiết' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.8 Kỹ Thuật Defensive Lob Chi Tiết</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#99-kỹ-thuật-offensive-topspin-lob-chi-tiết' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.9 Kỹ Thuật Offensive Topspin Lob Chi Tiết</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#910-slice-drop-shot-và-lob-kết-hợp--pattern-chiến-thuật' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.10 Slice, Drop Shot Và Lob Kết Hợp — Pattern Chiến Thuật</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#911-tập-luyện-touch-shots--cảm-giác-bóng-là-kỹ-năng-học-được' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.11 Tập Luyện Touch Shots — Cảm Giác Bóng Là Kỹ Năng Học Được</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#912-chương-trình-8-tuần--touch-shots' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.12 Chương Trình 8 Tuần — Touch Shots</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#913-năm-lỗi-phổ-biến-với-touch-shots' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>9.13 Năm Lỗi Phổ Biến Với Touch Shots</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-9' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 9</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="slice-drop-shot-va-lob-nghe-thuat-cua-touch-va-deception">SLICE, DROP SHOT VÀ LOB — NGHỆ THUẬT CỦA TOUCH VÀ DECEPTION</h1>
+<h2 id="chuong-9-ky-thuat-chien-thuat-va-cam-giac-bong">Chương 9: Kỹ Thuật, Chiến Thuật và Cảm Giác Bóng</h2>
+<hr/>
+<div class="pullquote"><p>*"Tennis không chỉ là đánh mạnh nhất — đó là đánh đúng nhất. Và đôi khi, cú đánh đúng nhất là cú đánh nhẹ nhất, tinh tế nhất, bất ngờ nhất."*</p></div>
+<hr/>
 <p>Năm 2009, Roland Garros. Bán kết. Roger Federer đối đầu với Juan Martin del Potro.</p>
 <p>Set thứ tư, tỷ số căng thẳng. Del Potro đang ở đỉnh phong độ với forehand cực kỳ mạnh. Federer không thể đánh nhanh hơn ông ta trong cuộc chiến baseline thuần túy.</p>
 <p>Thay vào đó, Federer liên tục dùng slice backhand thấp, cắt ngang sân, buộc del Potro phải đánh từ tầm rất thấp — thứ mà forehand mạnh của del Potro không xử lý được tốt.</p>
 <p>Federer thắng set đó và vào chung kết.</p>
 <p>Đó là bài học về slice: <strong>sức mạnh không phải lúc nào cũng đánh bại sức mạnh — đôi khi touch đánh bại power</strong>.</p>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.1 Tư Duy Về "Touch Shots"</h2><p>Trước khi đi vào kỹ thuật, hãy hiểu tại sao slice, drop shot và lob thường bị bỏ qua trong tập luyện — và tại sao đó là sai lầm lớn.</p>
-<h3>Hiểu Lầm Phổ Biến</h3>
-<strong>Hiểu lầm 1:</strong> "Slice là cú đánh phòng thủ của người yếu hơn."
-<strong>Thực tế:</strong> Federer, Djokovic và Nadal đều dùng slice như vũ khí tấn công. Slice backhand của Federer được coi là một trong những cú đánh kỹ thuật hoàn hảo nhất trong lịch sử tennis. Nó không phải phòng thủ — nó là <strong>điều khiển tốc độ và spin</strong> của cuộc đấu.
-<strong>Hiểu lầm 2:</strong> "Drop shot là may rủi — hoặc vào hoặc không."
-<strong>Thực tế:</strong> Drop shot là cú đánh kỹ thuật cao nhất trong tennis, đòi hỏi touch tinh tế và timing chính xác. Khi được tập đúng cách, nó trở thành vũ khí đáng tin cậy.
-<strong>Hiểu lầm 3:</strong> "Lob chỉ dùng khi bị ép hoàn toàn."
-<strong>Thực tế:</strong> Có hai loại lob hoàn toàn khác nhau: defensive lob (đúng là khi bị ép) và offensive topspin lob (một cú tấn công thực sự có thể kết thúc điểm hoặc đảo ngược thế trận hoàn toàn).
-<h3>Tại Sao Touch Shots Quan Trọng</h3>
+<hr/>
+<h2 id="91-tu-duy-ve-touch-shots">9.1 Tư Duy Về "Touch Shots"</h2>
+<p>Trước khi đi vào kỹ thuật, hãy hiểu tại sao slice, drop shot và lob thường bị bỏ qua trong tập luyện — và tại sao đó là sai lầm lớn.</p>
+<h3 id="hieu-lam-pho-bien">Hiểu Lầm Phổ Biến</h3>
+<p><strong>Hiểu lầm 1:</strong> "Slice là cú đánh phòng thủ của người yếu hơn."</p>
+<p><strong>Thực tế:</strong> Federer, Djokovic và Nadal đều dùng slice như vũ khí tấn công. Slice backhand của Federer được coi là một trong những cú đánh kỹ thuật hoàn hảo nhất trong lịch sử tennis. Nó không phải phòng thủ — nó là <strong>điều khiển tốc độ và spin</strong> của cuộc đấu.</p>
+<p><strong>Hiểu lầm 2:</strong> "Drop shot là may rủi — hoặc vào hoặc không."</p>
+<p><strong>Thực tế:</strong> Drop shot là cú đánh kỹ thuật cao nhất trong tennis, đòi hỏi touch tinh tế và timing chính xác. Khi được tập đúng cách, nó trở thành vũ khí đáng tin cậy.</p>
+<p><strong>Hiểu lầm 3:</strong> "Lob chỉ dùng khi bị ép hoàn toàn."</p>
+<p><strong>Thực tế:</strong> Có hai loại lob hoàn toàn khác nhau: defensive lob (đúng là khi bị ép) và offensive topspin lob (một cú tấn công thực sự có thể kết thúc điểm hoặc đảo ngược thế trận hoàn toàn).</p>
+<h3 id="tai-sao-touch-shots-quan-trong">Tại Sao Touch Shots Quan Trọng</h3>
 <p>Trong tennis hiện đại, hầu hết đối thủ ở cấp club-level đều có thể rally từ baseline với tốc độ vừa phải. Họ đã quen với nhịp điệu baseline.</p>
-<p>Touch shots <strong>phá vỡ nhịp điệu đó</strong>:</p>
-<ul class="styled-list">
-<li>Slice thay đổi tốc độ và spin đột ngột</li>
-<li>Drop shot thay đổi depth hoàn toàn — từ baseline xuống service box</li>
-<li>Offensive lob đảo ngược thế trận từ phòng thủ sang tấn công trong một cú đánh</li>
-</ul>
+<p>Touch shots <strong>phá vỡ nhịp điệu đó</strong>:
+- Slice thay đổi tốc độ và spin đột ngột
+- Drop shot thay đổi depth hoàn toàn — từ baseline xuống service box
+- Offensive lob đảo ngược thế trận từ phòng thủ sang tấn công trong một cú đánh</p>
 <p>Người chơi không có touch shots bị đọc hoàn toàn — đối thủ biết mọi cú đánh sẽ đến ở đâu với tốc độ như thế nào.</p>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.2 Slice Groundstroke — Cơ Học Và Ứng Dụng</h2><h3>Slice Là Gì?</h3>
+<hr/>
+<h2 id="92-slice-groundstroke-co-hoc-va-ung-dung">9.2 Slice Groundstroke — Cơ Học Và Ứng Dụng</h2>
+<h3 id="slice-la-gi">Slice Là Gì?</h3>
 <p>Slice là cú đánh tạo ra <strong>underspin (backspin)</strong> trên bóng — vợt di chuyển từ cao xuống thấp và từ phía sau ra phía trước, "cắt" qua bóng thay vì "quét" lên bóng như topspin.</p>
-<strong>Hiệu ứng vật lý của underspin:</strong>
-<ul class="styled-list">
-<li>Bóng bay thấp hơn qua lưới</li>
-<li>Bóng nảy thấp hơn — khi tiếp đất, backspin chống lại lực đẩy của sân, làm bóng nảy thấp và "trơn" hơn</li>
-<li>Bóng chậm hơn — backspin "hãm" tốc độ của bóng khi bay</li>
-<li>Trên grass và fast hard: bóng có thể "skid" (trượt) thay vì nảy — cực kỳ khó xử lý</li>
-</ul>
-<h3>Backhand Slice — Kỹ Thuật Cơ Bản</h3>
+<p><strong>Hiệu ứng vật lý của underspin:</strong>
+- Bóng bay thấp hơn qua lưới
+- Bóng nảy thấp hơn — khi tiếp đất, backspin chống lại lực đẩy của sân, làm bóng nảy thấp và "trơn" hơn
+- Bóng chậm hơn — backspin "hãm" tốc độ của bóng khi bay
+- Trên grass và fast hard: bóng có thể "skid" (trượt) thay vì nảy — cực kỳ khó xử lý</p>
+<h3 id="backhand-slice-ky-thuat-co-ban">Backhand Slice — Kỹ Thuật Cơ Bản</h3>
 <p>Backhand slice phổ biến hơn forehand slice vì cơ học tự nhiên hơn. Đây là mô tả chi tiết:</p>
-<strong>Grip:</strong> Continental (bevel 2) — cùng grip với volley. Điều này rất quan trọng và thường là điểm mà người chơi mắc lỗi đầu tiên.
-<strong>Preparation (chuẩn bị):</strong>
-<ul class="styled-list">
-<li>Unit turn sang trái (với người thuận tay phải)</li>
-<li>Vợt được đưa lên cao — <strong>cao hơn bóng sẽ tiếp xúc</strong> — đây là điểm khác biệt với groundstroke topspin (vợt thấp hơn bóng khi backswing)</li>
-<li>Đầu vợt cao hơn cổ tay tại điểm chuẩn bị</li>
-</ul>
-<strong>Swing path:</strong>
-<ul class="styled-list">
-<li>Từ cao xuống thấp — đây là swing path tạo ra underspin</li>
-<li>Không thẳng đứng (too steep = bóng vào lưới hoặc ngắn)</li>
-<li>Không nằm ngang (too flat = không có underspin)</li>
-<li>Góc lý tưởng: khoảng 30-45 độ xuống dưới so với nằm ngang</li>
-</ul>
-<strong>Tiếp xúc:</strong>
-<ul class="styled-list">
-<li>Mặt vợt hơi mở (open face) — không đóng như topspin</li>
-<li>Tiếp xúc ở phía trước thân — không để bóng qua người</li>
-<li>Cánh tay duỗi ra — không gập khuỷu</li>
-</ul>
-<strong>Follow-through:</strong>
-<ul class="styled-list">
-<li>Vợt tiếp tục đi về phía trước và hơi lên sau tiếp xúc — không dừng đột ngột</li>
-<li>Kết thúc ở khoảng ngang vai hoặc cao hơn một chút</li>
-</ul>
-<h3>Hai Loại Backhand Slice</h3>
-<strong>1. Drive slice (slice drive):</strong>
-<p>Mạnh hơn, pace cao hơn, ít spin hơn. Dùng để tấn công hoặc keep depth.</p>
+<p><strong>Grip:</strong> Continental (bevel 2) — cùng grip với volley. Điều này rất quan trọng và thường là điểm mà người chơi mắc lỗi đầu tiên.</p>
+<p><strong>Preparation (chuẩn bị):</strong>
+- Unit turn sang trái (với người thuận tay phải)
+- Vợt được đưa lên cao — <strong>cao hơn bóng sẽ tiếp xúc</strong> — đây là điểm khác biệt với groundstroke topspin (vợt thấp hơn bóng khi backswing)
+- Đầu vợt cao hơn cổ tay tại điểm chuẩn bị</p>
+<p><strong>Swing path:</strong>
+- Từ cao xuống thấp — đây là swing path tạo ra underspin
+- Không thẳng đứng (too steep = bóng vào lưới hoặc ngắn)
+- Không nằm ngang (too flat = không có underspin)
+- Góc lý tưởng: khoảng 30-45 độ xuống dưới so với nằm ngang</p>
+<p><strong>Tiếp xúc:</strong>
+- Mặt vợt hơi mở (open face) — không đóng như topspin
+- Tiếp xúc ở phía trước thân — không để bóng qua người
+- Cánh tay duỗi ra — không gập khuỷu</p>
+<p><strong>Follow-through:</strong>
+- Vợt tiếp tục đi về phía trước và hơi lên sau tiếp xúc — không dừng đột ngột
+- Kết thúc ở khoảng ngang vai hoặc cao hơn một chút</p>
+<h3 id="hai-loai-backhand-slice">Hai Loại Backhand Slice</h3>
+<p><strong>1. Drive slice (slice drive):</strong>
+Mạnh hơn, pace cao hơn, ít spin hơn. Dùng để tấn công hoặc keep depth.</p>
 <p>Đặc điểm: Swing nhanh hơn, ít steep hơn. Kết quả là bóng bay nhanh và thấp, vẫn có underspin nhưng không nhiều như carve slice.</p>
-<strong>Khi dùng:</strong> Tấn công short ball bằng slice, return of serve, tiếp cận lưới (approach shot).
-<strong>2. Carve slice (pure slice):</strong>
-<p>Chậm hơn, spin nhiều hơn, kiểm soát cao hơn. Dùng để neutralize, thay đổi tempo, setup.</p>
+<p><strong>Khi dùng:</strong> Tấn công short ball bằng slice, return of serve, tiếp cận lưới (approach shot).</p>
+<p><strong>2. Carve slice (pure slice):</strong>
+Chậm hơn, spin nhiều hơn, kiểm soát cao hơn. Dùng để neutralize, thay đổi tempo, setup.</p>
 <p>Đặc điểm: Swing chậm hơn, steep hơn. Kết quả là bóng bay chậm với nhiều underspin — nảy rất thấp và thường "bò" trên mặt sân.</p>
-<strong>Khi dùng:</strong> Khi muốn thay đổi tempo, khi bị ép và cần reset, khi đối thủ ở lưới và muốn bóng nảy thấp dưới tầm volley.
-<h3>Forehand Slice</h3>
+<p><strong>Khi dùng:</strong> Khi muốn thay đổi tempo, khi bị ép và cần reset, khi đối thủ ở lưới và muốn bóng nảy thấp dưới tầm volley.</p>
+<h3 id="forehand-slice">Forehand Slice</h3>
 <p>Forehand slice ít phổ biến hơn backhand slice nhưng vẫn là công cụ hữu ích:</p>
-<strong>Grip:</strong> Continental hoặc Eastern forehand (Eastern cho forehand slice dễ control hơn với nhiều người).
-<strong>Cơ học tương tự:</strong> Vợt cao hơn bóng, swing path từ cao xuống, mặt vợt hơi mở.
-<strong>Khi dùng:</strong>
-<ul class="styled-list">
-<li>Approach shot trên forehand side</li>
-<li>Drop shot forehand (xem mục 9.3)</li>
-<li>Defensive shot khi bị kéo rộng</li>
-<li>Với bóng nảy thấp trên grass hoặc fast court</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.3 Slice Trong Chiến Thuật — Khi Nào Và Tại Sao</h2><h3>1. Thay Đổi Tempo</h3>
+<p><strong>Grip:</strong> Continental hoặc Eastern forehand (Eastern cho forehand slice dễ control hơn với nhiều người).</p>
+<p><strong>Cơ học tương tự:</strong> Vợt cao hơn bóng, swing path từ cao xuống, mặt vợt hơi mở.</p>
+<p><strong>Khi dùng:</strong>
+- Approach shot trên forehand side
+- Drop shot forehand (xem mục 9.3)
+- Defensive shot khi bị kéo rộng
+- Với bóng nảy thấp trên grass hoặc fast court</p>
+<hr/>
+<h2 id="93-slice-trong-chien-thuat-khi-nao-va-tai-sao">9.3 Slice Trong Chiến Thuật — Khi Nào Và Tại Sao</h2>
+<h3 id="1-thay-oi-tempo">1. Thay Đổi Tempo</h3>
 <p>Đây là ứng dụng chiến thuật quan trọng nhất của slice.</p>
 <p>Khi rally đang diễn ra ở tốc độ cao với topspin nặng — đột ngột slice một cú — thay đổi tốc độ, spin và bounce hoàn toàn. Đối thủ đã "nhịp" với bóng topspin bây giờ phải adjust hoàn toàn.</p>
-<strong>Ví dụ:</strong> Rally topspin tốc độ cao, đột nhiên slice backhand thấp xuống cross-court. Đối thủ phải hạ thấp người, đánh bóng dưới tầm thắt lưng với underspin — cực kỳ khó tạo ra tốc độ từ vị trí đó.
-<h3>2. Tấn Công Backhand Yếu Của Đối Thủ</h3>
+<p><strong>Ví dụ:</strong> Rally topspin tốc độ cao, đột nhiên slice backhand thấp xuống cross-court. Đối thủ phải hạ thấp người, đánh bóng dưới tầm thắt lưng với underspin — cực kỳ khó tạo ra tốc độ từ vị trí đó.</p>
+<h3 id="2-tan-cong-backhand-yeu-cua-oi-thu">2. Tấn Công Backhand Yếu Của Đối Thủ</h3>
 <p>Nếu đối thủ có backhand yếu, đặc biệt là khó xử lý bóng thấp ở backhand, slice liên tục vào backhand là chiến thuật rất hiệu quả.</p>
-<strong>Lý do:</strong> Slice nảy thấp → đối thủ phải đánh bóng dưới tầm thắt lưng → khó tạo topspin hoặc pace → return yếu → bạn có cơ hội tấn công.
-<h3>3. Approach Shot Vào Lưới</h3>
-<p>Slice approach shot là lựa chọn phổ biến và hiệu quả:</p>
-<ul class="styled-list">
-<li>Bóng thấp buộc đối thủ đánh passing shot từ bên dưới → khó tạo góc và pace</li>
-<li>Bạn giữ được balance tốt trong khi tiến vào lưới</li>
-<li>Underspin giúp bóng "trú" lại trong sân thay vì đi sâu quá (dễ kiểm soát depth)</li>
-</ul>
-<h3>4. Return Of Serve Chiến Thuật</h3>
-<p>Chip return (slice return ngắn và thấp) là vũ khí để:</p>
-<ul class="styled-list">
-<li>Counter serve and volley — bóng thấp buộc server phải volley từ dưới</li>
-<li>Reset nhịp điệu sau first serve nhanh</li>
-<li>"Chip and charge" — chip return rồi tiến vào lưới</li>
-</ul>
-<h3>5. Trên Đất Nện Khi Bị Ép</h3>
-<p>Trên clay, khi bị ép ra ngoài sân rộng, slice cross-court thấp là cách tốt nhất để:</p>
-<ul class="styled-list">
-<li>Reset về neutral position</li>
-<li>Bóng thấp không cho đối thủ tấn công ngay</li>
-<li>Mua thời gian để chạy về position</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.4 Drop Shot — Kỹ Thuật Và Bí Quyết</h2><p>Drop shot là cú đánh mà bóng vừa qua lưới và "chết" ngay tại đó — nảy hai lần trước khi đối thủ có thể chạy đến.</p>
-<h3>Tại Sao Drop Shot Khó</h3>
-<p>Drop shot đòi hỏi sự kết hợp của:</p>
-<p>1. <strong>Touch (cảm giác):</strong> Lực đánh phải cực kỳ tinh tế — quá mạnh thì bóng đi sâu, không phải drop shot. Quá nhẹ thì bóng vào lưới.</p>
-<p>2. <strong>Spin (underspin):</strong> Underspin làm bóng "ngồi xuống" sau khi nảy thay vì bật về phía đối thủ.</p>
-<p>3. <strong>Deception (đánh lừa):</strong> Preparation phải trông như một cú đánh bình thường — không để lộ ý định.</p>
-<p>4. <strong>Timing:</strong> Chọn đúng thời điểm — đối thủ đang ở vị trí xa, đang di chuyển ra sau, hoặc đang "nặng chân".</p>
-<h3>Cơ Học Drop Shot</h3>
-<strong>Grip:</strong> Continental — tạo ra underspin tự nhiên nhất.
-<strong>Preparation (cực kỳ quan trọng):</strong>
-<p>Preparation phải <strong>trông giống</strong> như một cú slice groundstroke bình thường — cùng unit turn, cùng backswing. Deception bắt đầu từ đây.</p>
-<strong>Tiếp xúc:</strong>
-<ul class="styled-list">
-<li>Đây là điểm mà drop shot khác với slice groundstroke</li>
-<li>Thay vì swing qua bóng, bạn <strong>"cradle" (ôm) bóng</strong> — vợt tiếp xúc nhẹ nhàng và cắt sâu dưới bóng</li>
-<li>Cổ tay mở ra một chút tại tiếp xúc để "absorb" (hấp thụ) lực của bóng</li>
-<li>Swing path rất steep (dốc) — gần như thẳng đứng xuống dưới</li>
-</ul>
-<strong>Follow-through:</strong>
-<p>Ngắn và mềm mại. Không có swing mạnh qua bóng như slice groundstroke. Vợt dừng lại gần ngay sau tiếp xúc.</p>
-<strong>Kết quả lý tưởng:</strong>
-<p>Bóng qua lưới với quỹ đạo cao (tránh lưới), rơi xuống ngay sau lưới với nhiều backspin — sau khi nảy, bóng "chết" hoặc thậm chí nảy ngược về phía lưới.</p>
-<h3>Forehand Drop Shot vs. Backhand Drop Shot</h3>
-<strong>Forehand drop shot:</strong>
-<p>Dùng grip Continental hoặc Eastern forehand. Thường dễ execute hơn với nhiều người vì cổ tay forehand linh hoạt hơn. Phổ biến từ mid-court position.</p>
-<strong>Backhand drop shot:</strong>
-<p>Dùng Continental. Slice backhand tự nhiên tạo ra underspin — drop shot backhand chỉ cần "soften" thêm touch. Nhiều người thấy backhand drop shot dễ hơn forehand vì cơ học tự nhiên hơn.</p>
-<h3>Kỹ Thuật "Disguise" — Đánh Lừa Đối Thủ</h3>
-<strong>Rule vàng:</strong> Đối thủ không được biết bạn đang drop shot cho đến khi bóng đã qua lưới.
-<strong>Cách disguise:</strong>
-<p>1. <strong>Same preparation:</strong> Unit turn và backswing y chang cú slice thường.</p>
-<p>2. <strong>Eye contact neutral:</strong> Không nhìn vào vùng ngắn của sân trước khi đánh.</p>
-<p>3. <strong>Slow deceleration:</strong> Thay vì "dừng lại đột ngột" khi drop shot, hãy decelerate (giảm tốc dần) swing của bạn — trông tự nhiên hơn.</p>
-<p>4. <strong>Body posture:</strong> Giữ body posture giống như bạn đang đánh bình thường — không "lean forward" trước khi drop shot.</p>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.5 Khi Nào Dùng Drop Shot — Timing Chiến Thuật</h2><p>Drop shot đúng thời điểm = winner. Drop shot sai thời điểm = lỗi dễ hoặc đối thủ chạy đến dễ dàng.</p>
-<h3>Tình Huống Lý Tưởng Cho Drop Shot</h3>
-<strong>1. Đối thủ đứng sâu sau baseline:</strong>
-<p>Khi đối thủ đang ở 2-3 mét sau baseline (thường vì bạn vừa đánh bóng sâu), drop shot tạo ra quãng đường xa nhất mà họ phải chạy.</p>
-<strong>2. Đối thủ đang di chuyển ra sau:</strong>
-<p>Nếu bạn vừa đánh bóng sâu và thấy đối thủ đang "load" để đánh từ xa — lúc đó họ đang di chuyển về sau và "committed" vào direction đó. Drop shot làm họ phải đảo chiều.</p>
-<strong>3. Sau cú tấn công sâu vào góc:</strong>
-<p>Bạn đánh bóng sâu vào góc, đối thủ chạy ra ngoài sân → drop shot vào phần sân trống.</p>
-<strong>4. Đối thủ đang mệt:</strong>
-<p>Cuối set, cuối trận — đối thủ mệt và "nặng chân". Drop shot bây giờ đòi hỏi họ sprint một quãng dài khi đã kiệt sức.</p>
-<strong>5. Đối thủ không dự đoán được:</strong>
-<p>Nếu bạn đã xây dựng pattern baseline và đối thủ hoàn toàn "settled" vào nhịp điệu baseline, drop shot bất ngờ là devastating.</p>
-<h3>Tình Huống Không Nên Drop Shot</h3>
-<strong>1. Đối thủ đang ở gần baseline hoặc mid-court:</strong>
-<p>Họ không cần chạy nhiều → dễ dàng đến bóng → bạn bị ép.</p>
-<strong>2. Khi bạn đang bị ép:</strong>
-<p>Drop shot đòi hỏi setup tốt. Nếu bạn đang chạy và bị ép, touch sẽ kém → drop shot thiếu kiểm soát.</p>
-<strong>3. Gió ngược (headwind mạnh):</strong>
-<p>Gió ngược đẩy bóng vào lưới với cú đánh nhẹ. Hoặc đẩy bóng quá sâu với gió sau lưng.</p>
-<strong>4. Trên clay khi đối thủ chạy tốt:</strong>
-<p>Trên clay, bóng chậm hơn → drop shot không đủ ngắn. Đối thủ chạy tốt có thể đến kịp hầu hết drop shot trên clay.</p>
-<strong>5. Đối thủ đã anticipate (đã đọc được):</strong>
-<p>Nếu bạn đã drop shot 2-3 lần ở cùng tình huống, đối thủ đã "imprint" pattern đó. Lần thứ 4, họ có thể bắt đầu di chuyển trước.</p>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.6 Drop Shot Counter — Khi Đối Thủ Đến Kịp</h2><p>Ngay cả drop shot tốt đôi khi đối thủ vẫn đến kịp — đặc biệt với những người chạy nhanh. Khi đó, bạn cần biết làm gì tiếp theo.</p>
-<h3>Tình Huống 1: Đối Thủ Chạy Đến Và Lob</h3>
+<p><strong>Lý do:</strong> Slice nảy thấp → đối thủ phải đánh bóng dưới tầm thắt lưng → khó tạo topspin hoặc pace → return yếu → bạn có cơ hội tấn công.</p>
+<h3 id="3-approach-shot-vao-luoi">3. Approach Shot Vào Lưới</h3>
+<p>Slice approach shot là lựa chọn phổ biến và hiệu quả:
+- Bóng thấp buộc đối thủ đánh passing shot từ bên dưới → khó tạo góc và pace
+- Bạn giữ được balance tốt trong khi tiến vào lưới
+- Underspin giúp bóng "trú" lại trong sân thay vì đi sâu quá (dễ kiểm soát depth)</p>
+<h3 id="4-return-of-serve-chien-thuat">4. Return Of Serve Chiến Thuật</h3>
+<p>Chip return (slice return ngắn và thấp) là vũ khí để:
+- Counter serve and volley — bóng thấp buộc server phải volley từ dưới
+- Reset nhịp điệu sau first serve nhanh
+- "Chip and charge" — chip return rồi tiến vào lưới</p>
+<h3 id="5-tren-at-nen-khi-bi-ep">5. Trên Đất Nện Khi Bị Ép</h3>
+<p>Trên clay, khi bị ép ra ngoài sân rộng, slice cross-court thấp là cách tốt nhất để:
+- Reset về neutral position
+- Bóng thấp không cho đối thủ tấn công ngay
+- Mua thời gian để chạy về position</p>
+<hr/>
+<h2 id="94-drop-shot-ky-thuat-va-bi-quyet">9.4 Drop Shot — Kỹ Thuật Và Bí Quyết</h2>
+<p>Drop shot là cú đánh mà bóng vừa qua lưới và "chết" ngay tại đó — nảy hai lần trước khi đối thủ có thể chạy đến.</p>
+<h3 id="tai-sao-drop-shot-kho">Tại Sao Drop Shot Khó</h3>
+<p>Drop shot đòi hỏi sự kết hợp của:
+1. <strong>Touch (cảm giác):</strong> Lực đánh phải cực kỳ tinh tế — quá mạnh thì bóng đi sâu, không phải drop shot. Quá nhẹ thì bóng vào lưới.
+2. <strong>Spin (underspin):</strong> Underspin làm bóng "ngồi xuống" sau khi nảy thay vì bật về phía đối thủ.
+3. <strong>Deception (đánh lừa):</strong> Preparation phải trông như một cú đánh bình thường — không để lộ ý định.
+4. <strong>Timing:</strong> Chọn đúng thời điểm — đối thủ đang ở vị trí xa, đang di chuyển ra sau, hoặc đang "nặng chân".</p>
+<h3 id="co-hoc-drop-shot">Cơ Học Drop Shot</h3>
+<p><strong>Grip:</strong> Continental — tạo ra underspin tự nhiên nhất.</p>
+<p><strong>Preparation (cực kỳ quan trọng):</strong>
+Preparation phải <strong>trông giống</strong> như một cú slice groundstroke bình thường — cùng unit turn, cùng backswing. Deception bắt đầu từ đây.</p>
+<p><strong>Tiếp xúc:</strong>
+- Đây là điểm mà drop shot khác với slice groundstroke
+- Thay vì swing qua bóng, bạn <strong>"cradle" (ôm) bóng</strong> — vợt tiếp xúc nhẹ nhàng và cắt sâu dưới bóng
+- Cổ tay mở ra một chút tại tiếp xúc để "absorb" (hấp thụ) lực của bóng
+- Swing path rất steep (dốc) — gần như thẳng đứng xuống dưới</p>
+<p><strong>Follow-through:</strong>
+Ngắn và mềm mại. Không có swing mạnh qua bóng như slice groundstroke. Vợt dừng lại gần ngay sau tiếp xúc.</p>
+<p><strong>Kết quả lý tưởng:</strong>
+Bóng qua lưới với quỹ đạo cao (tránh lưới), rơi xuống ngay sau lưới với nhiều backspin — sau khi nảy, bóng "chết" hoặc thậm chí nảy ngược về phía lưới.</p>
+<h3 id="forehand-drop-shot-vs-backhand-drop-shot">Forehand Drop Shot vs. Backhand Drop Shot</h3>
+<p><strong>Forehand drop shot:</strong>
+Dùng grip Continental hoặc Eastern forehand. Thường dễ execute hơn với nhiều người vì cổ tay forehand linh hoạt hơn. Phổ biến từ mid-court position.</p>
+<p><strong>Backhand drop shot:</strong>
+Dùng Continental. Slice backhand tự nhiên tạo ra underspin — drop shot backhand chỉ cần "soften" thêm touch. Nhiều người thấy backhand drop shot dễ hơn forehand vì cơ học tự nhiên hơn.</p>
+<h3 id="ky-thuat-disguise-anh-lua-oi-thu">Kỹ Thuật "Disguise" — Đánh Lừa Đối Thủ</h3>
+<p><strong>Rule vàng:</strong> Đối thủ không được biết bạn đang drop shot cho đến khi bóng đã qua lưới.</p>
+<p><strong>Cách disguise:</strong>
+1. <strong>Same preparation:</strong> Unit turn và backswing y chang cú slice thường.
+2. <strong>Eye contact neutral:</strong> Không nhìn vào vùng ngắn của sân trước khi đánh.
+3. <strong>Slow deceleration:</strong> Thay vì "dừng lại đột ngột" khi drop shot, hãy decelerate (giảm tốc dần) swing của bạn — trông tự nhiên hơn.
+4. <strong>Body posture:</strong> Giữ body posture giống như bạn đang đánh bình thường — không "lean forward" trước khi drop shot.</p>
+<hr/>
+<h2 id="95-khi-nao-dung-drop-shot-timing-chien-thuat">9.5 Khi Nào Dùng Drop Shot — Timing Chiến Thuật</h2>
+<p>Drop shot đúng thời điểm = winner. Drop shot sai thời điểm = lỗi dễ hoặc đối thủ chạy đến dễ dàng.</p>
+<h3 id="tinh-huong-ly-tuong-cho-drop-shot">Tình Huống Lý Tưởng Cho Drop Shot</h3>
+<p><strong>1. Đối thủ đứng sâu sau baseline:</strong>
+Khi đối thủ đang ở 2-3 mét sau baseline (thường vì bạn vừa đánh bóng sâu), drop shot tạo ra quãng đường xa nhất mà họ phải chạy.</p>
+<p><strong>2. Đối thủ đang di chuyển ra sau:</strong>
+Nếu bạn vừa đánh bóng sâu và thấy đối thủ đang "load" để đánh từ xa — lúc đó họ đang di chuyển về sau và "committed" vào direction đó. Drop shot làm họ phải đảo chiều.</p>
+<p><strong>3. Sau cú tấn công sâu vào góc:</strong>
+Bạn đánh bóng sâu vào góc, đối thủ chạy ra ngoài sân → drop shot vào phần sân trống.</p>
+<p><strong>4. Đối thủ đang mệt:</strong>
+Cuối set, cuối trận — đối thủ mệt và "nặng chân". Drop shot bây giờ đòi hỏi họ sprint một quãng dài khi đã kiệt sức.</p>
+<p><strong>5. Đối thủ không dự đoán được:</strong>
+Nếu bạn đã xây dựng pattern baseline và đối thủ hoàn toàn "settled" vào nhịp điệu baseline, drop shot bất ngờ là devastating.</p>
+<h3 id="tinh-huong-khong-nen-drop-shot">Tình Huống Không Nên Drop Shot</h3>
+<p><strong>1. Đối thủ đang ở gần baseline hoặc mid-court:</strong>
+Họ không cần chạy nhiều → dễ dàng đến bóng → bạn bị ép.</p>
+<p><strong>2. Khi bạn đang bị ép:</strong>
+Drop shot đòi hỏi setup tốt. Nếu bạn đang chạy và bị ép, touch sẽ kém → drop shot thiếu kiểm soát.</p>
+<p><strong>3. Gió ngược (headwind mạnh):</strong>
+Gió ngược đẩy bóng vào lưới với cú đánh nhẹ. Hoặc đẩy bóng quá sâu với gió sau lưng.</p>
+<p><strong>4. Trên clay khi đối thủ chạy tốt:</strong>
+Trên clay, bóng chậm hơn → drop shot không đủ ngắn. Đối thủ chạy tốt có thể đến kịp hầu hết drop shot trên clay.</p>
+<p><strong>5. Đối thủ đã anticipate (đã đọc được):</strong>
+Nếu bạn đã drop shot 2-3 lần ở cùng tình huống, đối thủ đã "imprint" pattern đó. Lần thứ 4, họ có thể bắt đầu di chuyển trước.</p>
+<hr/>
+<h2 id="96-drop-shot-counter-khi-oi-thu-en-kip">9.6 Drop Shot Counter — Khi Đối Thủ Đến Kịp</h2>
+<p>Ngay cả drop shot tốt đôi khi đối thủ vẫn đến kịp — đặc biệt với những người chạy nhanh. Khi đó, bạn cần biết làm gì tiếp theo.</p>
+<h3 id="tinh-huong-1-oi-thu-chay-en-va-lob">Tình Huống 1: Đối Thủ Chạy Đến Và Lob</h3>
 <p>Đây là counter phổ biến nhất cho drop shot — đối thủ chạy đến, không có thời gian setup, nên lob.</p>
-<strong>Phản ứng của bạn:</strong> Khi drop shot, đừng đứng yên nhìn — <strong>tiến vào lưới</strong>. Nếu đối thủ lob, bạn đã ở vị trí gần để smash. Nếu đối thủ đánh thẳng, bạn đã ở vị trí tốt để volley.
-<h3>Tình Huống 2: Đối Thủ Chạy Đến Và Drop Shot Lại</h3>
+<p><strong>Phản ứng của bạn:</strong> Khi drop shot, đừng đứng yên nhìn — <strong>tiến vào lưới</strong>. Nếu đối thủ lob, bạn đã ở vị trí gần để smash. Nếu đối thủ đánh thẳng, bạn đã ở vị trí tốt để volley.</p>
+<h3 id="tinh-huong-2-oi-thu-chay-en-va-drop-shot-lai">Tình Huống 2: Đối Thủ Chạy Đến Và Drop Shot Lại</h3>
 <p>Drop shot counter-drop shot — một trong những điểm thú vị nhất trong tennis.</p>
-<strong>Phản ứng:</strong> Nếu bạn đã tiến vào lưới sau drop shot của mình, bạn ở vị trí tốt để xử lý drop shot trả lại. Volley hoặc half volley.
-<h3>Tình Huống 3: Đối Thủ Chạy Đến Và Passing Shot</h3>
+<p><strong>Phản ứng:</strong> Nếu bạn đã tiến vào lưới sau drop shot của mình, bạn ở vị trí tốt để xử lý drop shot trả lại. Volley hoặc half volley.</p>
+<h3 id="tinh-huong-3-oi-thu-chay-en-va-passing-shot">Tình Huống 3: Đối Thủ Chạy Đến Và Passing Shot</h3>
 <p>Nếu đối thủ đến kịp và có thời gian setup → passing shot.</p>
-<strong>Phản ứng:</strong> Đây là lúc bạn phải anticipate. Nếu bạn ở lưới sau drop shot, di chuyển theo đường passing shot của đối thủ.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.7 Lob — Defensive và Offensive</h2><p>Lob thường được coi là "cú phòng thủ cuối cùng" — nhưng thực ra có hai loại lob với mục đích hoàn toàn khác nhau.</p>
-<h3>Defensive Lob</h3>
-<strong>Mục đích:</strong> Mua thời gian, reset position khi bị ép hoàn toàn.
-<strong>Khi dùng:</strong>
-<ul class="styled-list">
-<li>Bị kéo rộng ra ngoài sân</li>
-<li>Không có thời gian setup groundstroke tốt</li>
-<li>Đối thủ đang áp lực tại lưới và bạn cần thời gian để reset</li>
-</ul>
-<strong>Kỹ thuật:</strong>
-<ul class="styled-list">
-<li>Mặt vợt mở nhiều</li>
-<li>Swing nhẹ từ dưới lên cao</li>
-<li>Bóng phải đủ cao để không bị smash (ít nhất 3-4 mét trên đầu net player)</li>
-<li>Bóng phải đủ sâu để không nảy trong service box (đối thủ có thể smash dễ dàng)</li>
-</ul>
-<strong>Mục tiêu:</strong> Không phải winner — chỉ cần qua đầu đối thủ và bạn có thời gian chạy về position.
-<h3>Offensive Topspin Lob</h3>
+<p><strong>Phản ứng:</strong> Đây là lúc bạn phải anticipate. Nếu bạn ở lưới sau drop shot, di chuyển theo đường passing shot của đối thủ.</p>
+<hr/>
+<h2 id="97-lob-defensive-va-offensive">9.7 Lob — Defensive và Offensive</h2>
+<p>Lob thường được coi là "cú phòng thủ cuối cùng" — nhưng thực ra có hai loại lob với mục đích hoàn toàn khác nhau.</p>
+<h3 id="defensive-lob">Defensive Lob</h3>
+<p><strong>Mục đích:</strong> Mua thời gian, reset position khi bị ép hoàn toàn.</p>
+<p><strong>Khi dùng:</strong>
+- Bị kéo rộng ra ngoài sân
+- Không có thời gian setup groundstroke tốt
+- Đối thủ đang áp lực tại lưới và bạn cần thời gian để reset</p>
+<p><strong>Kỹ thuật:</strong>
+- Mặt vợt mở nhiều
+- Swing nhẹ từ dưới lên cao
+- Bóng phải đủ cao để không bị smash (ít nhất 3-4 mét trên đầu net player)
+- Bóng phải đủ sâu để không nảy trong service box (đối thủ có thể smash dễ dàng)</p>
+<p><strong>Mục tiêu:</strong> Không phải winner — chỉ cần qua đầu đối thủ và bạn có thời gian chạy về position.</p>
+<h3 id="offensive-topspin-lob">Offensive Topspin Lob</h3>
 <p>Đây là loại lob hoàn toàn khác — <strong>một cú tấn công thực sự</strong>.</p>
-<strong>Mục đích:</strong> Kết thúc điểm hoặc đảo ngược thế trận hoàn toàn — từ phòng thủ sang tấn công.
-<strong>Cơ học:</strong>
-<ul class="styled-list">
-<li>Grip: Semi-western hoặc full western forehand (tạo topspin nhiều nhất)</li>
-<li>Swing path: Mạnh từ thấp lên cao — như forehand topspin bình thường nhưng <strong>steep hơn và mở mặt vợt nhiều hơn</strong></li>
-<li>Kết quả: Bóng có topspin nặng, bay cao qua đầu đối thủ, <strong>nảy sâu và cao</strong> sau khi tiếp đất</li>
-</ul>
-<strong>Tại sao topspin lob khác defensive lob:</strong>
-<ul class="styled-list">
-<li>Topspin làm bóng "kéo xuống" sau khi đạt đỉnh — kiểm soát tốt hơn</li>
-<li>Sau khi nảy, topspin đẩy bóng về phía sau sân của đối thủ — đối thủ ở lưới không thể chạy đến kịp</li>
-<li>Cú đánh này thường được thực hiện với disguise giống forehand topspin thường — rất khó anticipate</li>
-</ul>
-<strong>Deception là chìa khóa:</strong>
-<p>Preparation của offensive lob trông giống forehand topspin bình thường. Sự khác biệt chỉ xảy ra tại tiếp xúc — mặt vợt mở hơn và swing path steep hơn. Đối thủ ở lưới thường không nhận ra cho đến khi bóng đã bay qua đầu họ.</p>
-<strong>Timing lý tưởng:</strong>
-<ul class="styled-list">
-<li>Khi đối thủ ở lưới đang tấn công aggressively và tiến lên gần</li>
-<li>Khi đối thủ vừa volley sang một phía — họ đang di chuyển sang đó và không thể lùi nhanh</li>
-<li>Khi bóng đến ở tầm thắt lưng hoặc thấp hơn — cơ học swing path từ thấp lên cao là tự nhiên</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.8 Kỹ Thuật Defensive Lob Chi Tiết</h2><h3>Setup</h3>
-<strong>Từ vị trí bị ép:</strong>
-<p>Bạn đang bị kéo rộng hoặc bị ép ra sau. Không có thời gian cho full groundstroke.</p>
-<strong>Grip:</strong> Giữ nguyên grip bạn đang dùng — không có thời gian thay đổi.
-<strong>Stance:</strong> Open stance — để có thể tạo ra swing nhanh nhất có thể.
-<h3>Swing</h3>
-<strong>Mặt vợt mở:</strong>
-<p>Đây là yếu tố quan trọng nhất. Mặt vợt mở nhiều → bóng sẽ đi lên cao.</p>
-<strong>Swing từ dưới lên:</strong>
-<p>Bắt đầu từ thấp, swing mạnh lên cao. Không cần nhiều topspin — chỉ cần bóng đủ cao.</p>
-<strong>Lực:</strong>
-<p>Đủ để bóng đi sâu vào sân đối thủ (gần baseline của họ) — không quá nhẹ (bóng ra ngoài hoặc quá ngắn để smash).</p>
-<h3>Targeting</h3>
-<strong>Depth:</strong> Bóng nên rơi trong vòng 1-2 mét từ baseline của đối thủ. Quá ngắn = dễ smash. Quá dài = ra ngoài.
-<strong>Hướng:</strong> Thường là cross-court — đường dài nhất của sân → thêm margin. Nếu biết đối thủ yếu backhand overhead (smash), lob sang backhand của họ.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.9 Kỹ Thuật Offensive Topspin Lob Chi Tiết</h2><h3>Disguise</h3>
-<strong>Preparation:</strong> Giống forehand topspin hoàn toàn — cùng unit turn, cùng backswing. Đối thủ ở lưới phải nhìn thấy forehand topspin thường.
-<strong>"Commitment" sang bên:</strong> Đôi khi, nhìn sang phía đối diện như đang chuẩn bị cross-court — rồi đột ngột lob qua đầu. Đây là "fake" tốt nhất.
-<h3>Tiếp Xúc</h3>
-<strong>Mặt vợt:</strong> Hơi mở hơn forehand topspin bình thường — không đóng như khi đánh flat topspin.
-<strong>Swing path:</strong> Từ thấp lên cao và steep hơn bình thường — like a heavy topspin forehand nhưng với góc lên cao hơn.
-<strong>Contact point:</strong> Hơi thấp hơn so với topspin bình thường — thấp hơn → dễ tạo ra trajectory lên cao hơn.
-<h3>Trajectory Lý Tưởng</h3>
-<strong>Đỉnh bay:</strong> Bóng phải đủ cao để qua đầu đối thủ ngay cả khi họ nhảy — thường khoảng 3-4 mét trên đầu.
-<strong>Sau tiếp đất:</strong> Topspin kéo bóng xuống nhanh và đẩy bóng về sau — thường nảy cao và deep, rất khó đánh được từ phía sau sân.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.10 Slice, Drop Shot Và Lob Kết Hợp — Pattern Chiến Thuật</h2><p>Ba cú đánh này mạnh nhất khi được kết hợp với nhau và với groundstrokes thông thường. Đây là một số pattern phổ biến:</p>
-<h3>Pattern 1: Slice Deep → Drop Shot</h3>
-<strong>Setup:</strong> Slice backhand sâu vào backhand của đối thủ. Đối thủ đánh trả từ deep → bạn slice tiếp. Sau 2-3 cú slice deep, đối thủ bắt đầu đứng sâu hơn để deal với bóng sâu...
-<strong>Finishing:</strong> Khi đối thủ đứng đủ sâu, drop shot bất ngờ.
-<strong>Tâm lý:</strong> Đối thủ đã "imprint" pattern slice sâu → không anticipate drop shot.
-<hr>
-<h3>Pattern 2: Topspin Deep → Topspin Deep → Drop Shot</h3>
-<strong>Setup:</strong> 2 cú topspin sâu vào cùng góc → đối thủ bắt đầu di chuyển về góc đó...
-<strong>Finishing:</strong> Drop shot vào góc ngược lại hoặc vào giữa sân.
-<hr>
-<h3>Pattern 3: Topspin Deep → Offensive Lob</h3>
-<strong>Setup:</strong> Forehand topspin deep vào backhand của đối thủ ở lưới. Đối thủ đang chuẩn bị volley...
-<strong>Finishing:</strong> Thay vào đó, offensive lob qua đầu họ.
-<hr>
-<h3>Pattern 4: Drop Shot → Approach Net</h3>
-<strong>Setup:</strong> Drop shot vào vùng ngắn. Ngay khi đánh, tiến vào lưới...
-<strong>Finishing:</strong> Đối thủ chạy đến drop shot và lob lên → bạn đã ở vị trí để smash overhead.
-<hr>
-<h3>Pattern 5: Body Shot → Drop Shot</h3>
-<strong>Setup:</strong> Đánh vào thân đối thủ (body) — ép họ phải trả bóng từ vị trí khó, thường trả về giữa sân và không có depth...
-<strong>Finishing:</strong> Bóng trả về ngắn → drop shot hoặc approach shot.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.11 Tập Luyện Touch Shots — Cảm Giác Bóng Là Kỹ Năng Học Được</h2><p>Nhiều người tin rằng "touch" là thiên bẩm — hoặc bạn có hoặc không. Điều này không đúng. Touch là kỹ năng học được qua tập luyện đúng cách.</p>
-<h3>Nguyên Tắc Phát Triển Touch</h3>
-<strong>1. Volume thấp, ý thức cao:</strong>
-<p>Tập touch shots với ý thức hoàn toàn về cảm giác trong tay. Không thể tập touch shots như tập drill tốc độ cao — cần chậm lại và cảm nhận.</p>
-<strong>2. Feedback ngay lập tức:</strong>
-<p>Mỗi cú drop shot, lob hoặc slice, ngay lập tức "đánh giá" cảm giác: bóng có đúng không? Quá mạnh? Quá nhẹ? Touch training là loop liên tục giữa execution và feedback.</p>
-<strong>3. Progressions:</strong>
-<p>Bắt đầu từ gần, bóng chậm. Dần dần tăng khoảng cách và tốc độ.</p>
-<h3>Bài Tập 1: Mini Tennis (Bài Tập Nền Tảng)</h3>
+<p><strong>Mục đích:</strong> Kết thúc điểm hoặc đảo ngược thế trận hoàn toàn — từ phòng thủ sang tấn công.</p>
+<p><strong>Cơ học:</strong>
+- Grip: Semi-western hoặc full western forehand (tạo topspin nhiều nhất)
+- Swing path: Mạnh từ thấp lên cao — như forehand topspin bình thường nhưng <strong>steep hơn và mở mặt vợt nhiều hơn</strong>
+- Kết quả: Bóng có topspin nặng, bay cao qua đầu đối thủ, <strong>nảy sâu và cao</strong> sau khi tiếp đất</p>
+<p><strong>Tại sao topspin lob khác defensive lob:</strong>
+- Topspin làm bóng "kéo xuống" sau khi đạt đỉnh — kiểm soát tốt hơn
+- Sau khi nảy, topspin đẩy bóng về phía sau sân của đối thủ — đối thủ ở lưới không thể chạy đến kịp
+- Cú đánh này thường được thực hiện với disguise giống forehand topspin thường — rất khó anticipate</p>
+<p><strong>Deception là chìa khóa:</strong>
+Preparation của offensive lob trông giống forehand topspin bình thường. Sự khác biệt chỉ xảy ra tại tiếp xúc — mặt vợt mở hơn và swing path steep hơn. Đối thủ ở lưới thường không nhận ra cho đến khi bóng đã bay qua đầu họ.</p>
+<p><strong>Timing lý tưởng:</strong>
+- Khi đối thủ ở lưới đang tấn công aggressively và tiến lên gần
+- Khi đối thủ vừa volley sang một phía — họ đang di chuyển sang đó và không thể lùi nhanh
+- Khi bóng đến ở tầm thắt lưng hoặc thấp hơn — cơ học swing path từ thấp lên cao là tự nhiên</p>
+<hr/>
+<h2 id="98-ky-thuat-defensive-lob-chi-tiet">9.8 Kỹ Thuật Defensive Lob Chi Tiết</h2>
+<h3 id="setup">Setup</h3>
+<p><strong>Từ vị trí bị ép:</strong>
+Bạn đang bị kéo rộng hoặc bị ép ra sau. Không có thời gian cho full groundstroke.</p>
+<p><strong>Grip:</strong> Giữ nguyên grip bạn đang dùng — không có thời gian thay đổi.</p>
+<p><strong>Stance:</strong> Open stance — để có thể tạo ra swing nhanh nhất có thể.</p>
+<h3 id="swing">Swing</h3>
+<p><strong>Mặt vợt mở:</strong>
+Đây là yếu tố quan trọng nhất. Mặt vợt mở nhiều → bóng sẽ đi lên cao.</p>
+<p><strong>Swing từ dưới lên:</strong>
+Bắt đầu từ thấp, swing mạnh lên cao. Không cần nhiều topspin — chỉ cần bóng đủ cao.</p>
+<p><strong>Lực:</strong>
+Đủ để bóng đi sâu vào sân đối thủ (gần baseline của họ) — không quá nhẹ (bóng ra ngoài hoặc quá ngắn để smash).</p>
+<h3 id="targeting">Targeting</h3>
+<p><strong>Depth:</strong> Bóng nên rơi trong vòng 1-2 mét từ baseline của đối thủ. Quá ngắn = dễ smash. Quá dài = ra ngoài.</p>
+<p><strong>Hướng:</strong> Thường là cross-court — đường dài nhất của sân → thêm margin. Nếu biết đối thủ yếu backhand overhead (smash), lob sang backhand của họ.</p>
+<hr/>
+<h2 id="99-ky-thuat-offensive-topspin-lob-chi-tiet">9.9 Kỹ Thuật Offensive Topspin Lob Chi Tiết</h2>
+<h3 id="disguise">Disguise</h3>
+<p><strong>Preparation:</strong> Giống forehand topspin hoàn toàn — cùng unit turn, cùng backswing. Đối thủ ở lưới phải nhìn thấy forehand topspin thường.</p>
+<p><strong>"Commitment" sang bên:</strong> Đôi khi, nhìn sang phía đối diện như đang chuẩn bị cross-court — rồi đột ngột lob qua đầu. Đây là "fake" tốt nhất.</p>
+<h3 id="tiep-xuc">Tiếp Xúc</h3>
+<p><strong>Mặt vợt:</strong> Hơi mở hơn forehand topspin bình thường — không đóng như khi đánh flat topspin.</p>
+<p><strong>Swing path:</strong> Từ thấp lên cao và steep hơn bình thường — like a heavy topspin forehand nhưng với góc lên cao hơn.</p>
+<p><strong>Contact point:</strong> Hơi thấp hơn so với topspin bình thường — thấp hơn → dễ tạo ra trajectory lên cao hơn.</p>
+<h3 id="trajectory-ly-tuong">Trajectory Lý Tưởng</h3>
+<p><strong>Đỉnh bay:</strong> Bóng phải đủ cao để qua đầu đối thủ ngay cả khi họ nhảy — thường khoảng 3-4 mét trên đầu.</p>
+<p><strong>Sau tiếp đất:</strong> Topspin kéo bóng xuống nhanh và đẩy bóng về sau — thường nảy cao và deep, rất khó đánh được từ phía sau sân.</p>
+<hr/>
+<h2 id="910-slice-drop-shot-va-lob-ket-hop-pattern-chien-thuat">9.10 Slice, Drop Shot Và Lob Kết Hợp — Pattern Chiến Thuật</h2>
+<p>Ba cú đánh này mạnh nhất khi được kết hợp với nhau và với groundstrokes thông thường. Đây là một số pattern phổ biến:</p>
+<h3 id="pattern-1-slice-deep-drop-shot">Pattern 1: Slice Deep → Drop Shot</h3>
+<p><strong>Setup:</strong> Slice backhand sâu vào backhand của đối thủ. Đối thủ đánh trả từ deep → bạn slice tiếp. Sau 2-3 cú slice deep, đối thủ bắt đầu đứng sâu hơn để deal với bóng sâu...</p>
+<p><strong>Finishing:</strong> Khi đối thủ đứng đủ sâu, drop shot bất ngờ.</p>
+<p><strong>Tâm lý:</strong> Đối thủ đã "imprint" pattern slice sâu → không anticipate drop shot.</p>
+<hr/>
+<h3 id="pattern-2-topspin-deep-topspin-deep-drop-shot">Pattern 2: Topspin Deep → Topspin Deep → Drop Shot</h3>
+<p><strong>Setup:</strong> 2 cú topspin sâu vào cùng góc → đối thủ bắt đầu di chuyển về góc đó...</p>
+<p><strong>Finishing:</strong> Drop shot vào góc ngược lại hoặc vào giữa sân.</p>
+<hr/>
+<h3 id="pattern-3-topspin-deep-offensive-lob">Pattern 3: Topspin Deep → Offensive Lob</h3>
+<p><strong>Setup:</strong> Forehand topspin deep vào backhand của đối thủ ở lưới. Đối thủ đang chuẩn bị volley...</p>
+<p><strong>Finishing:</strong> Thay vào đó, offensive lob qua đầu họ.</p>
+<hr/>
+<h3 id="pattern-4-drop-shot-approach-net">Pattern 4: Drop Shot → Approach Net</h3>
+<p><strong>Setup:</strong> Drop shot vào vùng ngắn. Ngay khi đánh, tiến vào lưới...</p>
+<p><strong>Finishing:</strong> Đối thủ chạy đến drop shot và lob lên → bạn đã ở vị trí để smash overhead.</p>
+<hr/>
+<h3 id="pattern-5-body-shot-drop-shot">Pattern 5: Body Shot → Drop Shot</h3>
+<p><strong>Setup:</strong> Đánh vào thân đối thủ (body) — ép họ phải trả bóng từ vị trí khó, thường trả về giữa sân và không có depth...</p>
+<p><strong>Finishing:</strong> Bóng trả về ngắn → drop shot hoặc approach shot.</p>
+<hr/>
+<h2 id="911-tap-luyen-touch-shots-cam-giac-bong-la-ky-nang-hoc-uoc">9.11 Tập Luyện Touch Shots — Cảm Giác Bóng Là Kỹ Năng Học Được</h2>
+<p>Nhiều người tin rằng "touch" là thiên bẩm — hoặc bạn có hoặc không. Điều này không đúng. Touch là kỹ năng học được qua tập luyện đúng cách.</p>
+<h3 id="nguyen-tac-phat-trien-touch">Nguyên Tắc Phát Triển Touch</h3>
+<p><strong>1. Volume thấp, ý thức cao:</strong>
+Tập touch shots với ý thức hoàn toàn về cảm giác trong tay. Không thể tập touch shots như tập drill tốc độ cao — cần chậm lại và cảm nhận.</p>
+<p><strong>2. Feedback ngay lập tức:</strong>
+Mỗi cú drop shot, lob hoặc slice, ngay lập tức "đánh giá" cảm giác: bóng có đúng không? Quá mạnh? Quá nhẹ? Touch training là loop liên tục giữa execution và feedback.</p>
+<p><strong>3. Progressions:</strong>
+Bắt đầu từ gần, bóng chậm. Dần dần tăng khoảng cách và tốc độ.</p>
+<h3 id="bai-tap-1-mini-tennis-bai-tap-nen-tang">Bài Tập 1: Mini Tennis (Bài Tập Nền Tảng)</h3>
 <p>Mini tennis là bài tập tốt nhất để phát triển touch — chơi tennis trong service boxes (nửa trước của sân), bóng phải rơi trong service box của đối thủ.</p>
-<strong>Lý do hiệu quả:</strong> Không gian nhỏ → phải kiểm soát lực hoàn toàn → buộc phát triển touch.
-<strong>Tiến độ:</strong>
-<ul class="styled-list">
-<li>Tuần 1-2: Mini tennis với tất cả cú đánh đều slice</li>
-<li>Tuần 3-4: Mini tennis kết hợp — một người topspin, một người slice</li>
-<li>Tuần 5-6: Mini tennis drop shots — cả hai người chỉ drop shot</li>
-</ul>
-<hr>
-<h3>Bài Tập 2: Drop Shot Consistency Drill</h3>
-<strong>Setup:</strong> Đứng ở baseline. Người tập feed bóng đến mid-court.
-<strong>Mục tiêu:</strong> Drop shot sao cho bóng nảy hai lần trước đường service box T (tức là nảy cực ngắn).
-<strong>Theo dõi:</strong> Bao nhiêu phần trăm nảy đủ ngắn? Mục tiêu: 50% sau 4 tuần.
-<strong>Tiến độ:</strong>
-<ul class="styled-list">
-<li>Tuần 1: Feed chậm, thực hiện 20 drop shots/buổi</li>
-<li>Tuần 2: Feed nhanh hơn, 25 drop shots/buổi</li>
-<li>Tuần 3: Feed từ các vị trí khác nhau — forehand và backhand</li>
-<li>Tuần 4: Chèn drop shot vào giữa các cú đánh thường (không phải chỉ drill đơn thuần)</li>
-</ul>
-<hr>
-<h3>Bài Tập 3: Slice Depth Control</h3>
-<strong>Setup:</strong> Đứng ở baseline. Người tập rally với bạn.
-<strong>Mục tiêu:</strong> Mọi cú slice phải rơi trong vùng 1 mét cuối trước baseline của đối thủ.
-<strong>Lý do:</strong> Slice cạn là loại slice nguy hiểm nhất — đối thủ có thể tấn công. Slice sâu buộc đối thủ phải đánh từ deep và khó tạo áp lực.
-<hr>
-<h3>Bài Tập 4: Lob Accuracy Drill</h3>
-<strong>Setup:</strong> Người tập đứng ở lưới. Bạn đứng ở baseline.
-<strong>Mục tiêu:</strong> Lob sao cho bóng rơi trong vùng 1 mét cuối trước baseline — sâu nhưng không ra ngoài.
-<strong>Tiến độ:</strong>
-<ul class="styled-list">
-<li>Tuần 1-2: Defensive lob từ position bình thường</li>
-<li>Tuần 3-4: Offensive topspin lob — cố tạo topspin nhiều nhất có thể</li>
-<li>Tuần 5-6: Lob từ vị trí bị ép (đứng rộng hơn, chuẩn bị ít hơn)</li>
-</ul>
-<hr>
-<h3>Bài Tập 5: Disguise Drill — Slice Vs. Drop Shot</h3>
-<strong>Setup:</strong> Đứng ở baseline. Người tập rally với bạn.
-<strong>Rules:</strong> Bạn có thể đánh slice sâu hoặc drop shot — nhưng preparation phải hoàn toàn giống nhau. Người tập cố đoán xem bạn sẽ đánh gì.
-<strong>Mục tiêu:</strong> Người tập đoán đúng ít hơn 60% → bạn đang disguise tốt.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.12 Chương Trình 8 Tuần — Touch Shots</h2><h3>Tuần 1-2: Nền Tảng Touch</h3>
+<p><strong>Lý do hiệu quả:</strong> Không gian nhỏ → phải kiểm soát lực hoàn toàn → buộc phát triển touch.</p>
+<p><strong>Tiến độ:</strong>
+- Tuần 1-2: Mini tennis với tất cả cú đánh đều slice
+- Tuần 3-4: Mini tennis kết hợp — một người topspin, một người slice
+- Tuần 5-6: Mini tennis drop shots — cả hai người chỉ drop shot</p>
+<hr/>
+<h3 id="bai-tap-2-drop-shot-consistency-drill">Bài Tập 2: Drop Shot Consistency Drill</h3>
+<p><strong>Setup:</strong> Đứng ở baseline. Người tập feed bóng đến mid-court.</p>
+<p><strong>Mục tiêu:</strong> Drop shot sao cho bóng nảy hai lần trước đường service box T (tức là nảy cực ngắn).</p>
+<p><strong>Theo dõi:</strong> Bao nhiêu phần trăm nảy đủ ngắn? Mục tiêu: 50% sau 4 tuần.</p>
+<p><strong>Tiến độ:</strong>
+- Tuần 1: Feed chậm, thực hiện 20 drop shots/buổi
+- Tuần 2: Feed nhanh hơn, 25 drop shots/buổi
+- Tuần 3: Feed từ các vị trí khác nhau — forehand và backhand
+- Tuần 4: Chèn drop shot vào giữa các cú đánh thường (không phải chỉ drill đơn thuần)</p>
+<hr/>
+<h3 id="bai-tap-3-slice-depth-control">Bài Tập 3: Slice Depth Control</h3>
+<p><strong>Setup:</strong> Đứng ở baseline. Người tập rally với bạn.</p>
+<p><strong>Mục tiêu:</strong> Mọi cú slice phải rơi trong vùng 1 mét cuối trước baseline của đối thủ.</p>
+<p><strong>Lý do:</strong> Slice cạn là loại slice nguy hiểm nhất — đối thủ có thể tấn công. Slice sâu buộc đối thủ phải đánh từ deep và khó tạo áp lực.</p>
+<hr/>
+<h3 id="bai-tap-4-lob-accuracy-drill">Bài Tập 4: Lob Accuracy Drill</h3>
+<p><strong>Setup:</strong> Người tập đứng ở lưới. Bạn đứng ở baseline.</p>
+<p><strong>Mục tiêu:</strong> Lob sao cho bóng rơi trong vùng 1 mét cuối trước baseline — sâu nhưng không ra ngoài.</p>
+<p><strong>Tiến độ:</strong>
+- Tuần 1-2: Defensive lob từ position bình thường
+- Tuần 3-4: Offensive topspin lob — cố tạo topspin nhiều nhất có thể
+- Tuần 5-6: Lob từ vị trí bị ép (đứng rộng hơn, chuẩn bị ít hơn)</p>
+<hr/>
+<h3 id="bai-tap-5-disguise-drill-slice-vs-drop-shot">Bài Tập 5: Disguise Drill — Slice Vs. Drop Shot</h3>
+<p><strong>Setup:</strong> Đứng ở baseline. Người tập rally với bạn.</p>
+<p><strong>Rules:</strong> Bạn có thể đánh slice sâu hoặc drop shot — nhưng preparation phải hoàn toàn giống nhau. Người tập cố đoán xem bạn sẽ đánh gì.</p>
+<p><strong>Mục tiêu:</strong> Người tập đoán đúng ít hơn 60% → bạn đang disguise tốt.</p>
+<hr/>
+<h2 id="912-chuong-trinh-8-tuan-touch-shots">9.12 Chương Trình 8 Tuần — Touch Shots</h2>
+<h3 id="tuan-1-2-nen-tang-touch">Tuần 1-2: Nền Tảng Touch</h3>
 <ul class="styled-list">
 <li>15 phút: Mini tennis (toàn bộ session trong service boxes)</li>
 <li>10 phút: Slice backhand depth control drill</li>
 <li>5 phút: Drop shot cơ bản với feed chậm</li>
 </ul>
-<strong>Focus:</strong> Cảm giác — không phải tốc độ hay accuracy. Chú ý cảm giác trong tay với mỗi cú đánh.
-<hr>
-<h3>Tuần 3-4: Drop Shot Development</h3>
+<p><strong>Focus:</strong> Cảm giác — không phải tốc độ hay accuracy. Chú ý cảm giác trong tay với mỗi cú đánh.</p>
+<hr/>
+<h3 id="tuan-3-4-drop-shot-development">Tuần 3-4: Drop Shot Development</h3>
 <ul class="styled-list">
 <li>10 phút: Drop shot consistency drill</li>
 <li>10 phút: Disguise drill (slice vs. drop shot)</li>
 <li>10 phút: Pattern 1 (slice deep → drop shot)</li>
 </ul>
-<strong>Focus:</strong> Disguise là ưu tiên số một. Cú drop shot không disguise là cú drop shot nguy hiểm.
-<hr>
-<h3>Tuần 5-6: Lob Development</h3>
+<p><strong>Focus:</strong> Disguise là ưu tiên số một. Cú drop shot không disguise là cú drop shot nguy hiểm.</p>
+<hr/>
+<h3 id="tuan-5-6-lob-development">Tuần 5-6: Lob Development</h3>
 <ul class="styled-list">
 <li>10 phút: Defensive lob accuracy drill</li>
 <li>10 phút: Offensive topspin lob drill</li>
 <li>10 phút: Pattern 3 (topspin deep → lob) và pattern 4 (drop shot → net → overhead)</li>
 </ul>
-<strong>Focus:</strong> Offensive lob là kỹ năng mới hoàn toàn với nhiều người — cần thời gian để kiểm soát trajectory.
-<hr>
-<h3>Tuần 7-8: Match Integration</h3>
+<p><strong>Focus:</strong> Offensive lob là kỹ năng mới hoàn toàn với nhiều người — cần thời gian để kiểm soát trajectory.</p>
+<hr/>
+<h3 id="tuan-7-8-match-integration">Tuần 7-8: Match Integration</h3>
 <ul class="styled-list">
 <li>10 phút: Full rally với instruction "phải dùng ít nhất 1 touch shot mỗi 3 điểm"</li>
 <li>10 phút: Specific scenarios — khi đối thủ ở lưới (practice lob), khi đối thủ đứng sâu (practice drop shot)</li>
 <li>10 phút: Full points — không có instruction, chỉ chơi và chú ý khi nào touch shots phát huy tác dụng</li>
 </ul>
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">9.13 Năm Lỗi Phổ Biến Với Touch Shots</h2><h3>Lỗi 1: Drop Shot Từ Vị Trí Tấn Công (Thay Vì Setup Tốt)</h3>
-<strong>Mô tả:</strong> Cố drop shot khi đang bị ép, đang chạy, hoặc bóng đến tầm khó.
-<strong>Hậu quả:</strong> Touch kém → bóng vào lưới hoặc quá sâu để được gọi là drop shot.
-<strong>Sửa:</strong> Drop shot chỉ khi có setup tốt — position ổn định, bóng đến tầm thắt lưng hoặc thấp hơn một chút, có thời gian chuẩn bị.
-<hr>
-<h3>Lỗi 2: Slice Cạn (Không Đủ Depth)</h3>
-<strong>Mô tả:</strong> Slice rơi vào mid-court thay vì sâu gần baseline.
-<strong>Hậu quả:</strong> Đối thủ có bóng tấn công từ mid-court — đây là worst case scenario từ slice.
-<strong>Sửa:</strong> Aim bóng sâu hơn bạn nghĩ cần thiết. Khi tập, đặt target ở 1 mét cuối trước baseline.
-<hr>
-<h3>Lỗi 3: Defensive Lob Không Đủ Cao</h3>
-<strong>Mô tả:</strong> Defensive lob bay ở tầm vừa phải → đối thủ dễ dàng smash.
-<strong>Hậu quả:</strong> Bạn đã "cứu" điểm bằng lob nhưng lại trao điểm cho đối thủ qua overhead dễ.
-<strong>Sửa:</strong> Với defensive lob, luôn ưu tiên chiều cao hơn là vị trí rơi. Thà bóng ra ngoài một chút còn hơn là để đối thủ smash.
-<hr>
-<h3>Lỗi 4: Offensive Lob Không Có Topspin</h3>
-<strong>Mô tả:</strong> Offensive lob thực ra chỉ là lob cao, flat — không có topspin thực sự.
-<strong>Hậu quả:</strong> Bóng dễ kiểm soát hơn nhưng mất tác dụng "pulling down" của topspin → đối thủ có thể chạy đến kịp.
-<strong>Sửa:</strong> Tập offensive lob chuyên biệt với swing path steep và mặt vợt hơi mở — cảm nhận bóng xoáy nhiều hơn forehand bình thường.
-<hr>
-<h3>Lỗi 5: Không Tiến Vào Lưới Sau Drop Shot</h3>
-<strong>Mô tả:</strong> Drop shot xong đứng yên ở baseline nhìn đối thủ chạy đến.
-<strong>Hậu quả:</strong> Nếu đối thủ đến kịp, bạn đang ở vị trí không lý tưởng để xử lý counter.
-<strong>Sửa:</strong> Rule cứng — sau drop shot, <strong>luôn tiến vào lưới</strong>. Ngay cả khi drop shot tốt (nảy hai lần trước khi đối thủ đến), bạn đã ở vị trí lưới để volley nếu cần.
-<hr></div>
-<div class="chapter" id="chapter-09"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 09</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 9</h2><ul class="styled-list">
-<li><strong>Slice, drop shot và lob phá vỡ nhịp điệu</strong> của đối thủ — thứ mà power shots không làm được</li>
-</ul>
+<hr/>
+<h2 id="913-nam-loi-pho-bien-voi-touch-shots">9.13 Năm Lỗi Phổ Biến Với Touch Shots</h2>
+<h3 id="loi-1-drop-shot-tu-vi-tri-tan-cong-thay-vi-setup-tot">Lỗi 1: Drop Shot Từ Vị Trí Tấn Công (Thay Vì Setup Tốt)</h3>
+<p><strong>Mô tả:</strong> Cố drop shot khi đang bị ép, đang chạy, hoặc bóng đến tầm khó.</p>
+<p><strong>Hậu quả:</strong> Touch kém → bóng vào lưới hoặc quá sâu để được gọi là drop shot.</p>
+<p><strong>Sửa:</strong> Drop shot chỉ khi có setup tốt — position ổn định, bóng đến tầm thắt lưng hoặc thấp hơn một chút, có thời gian chuẩn bị.</p>
+<hr/>
+<h3 id="loi-2-slice-can-khong-u-depth">Lỗi 2: Slice Cạn (Không Đủ Depth)</h3>
+<p><strong>Mô tả:</strong> Slice rơi vào mid-court thay vì sâu gần baseline.</p>
+<p><strong>Hậu quả:</strong> Đối thủ có bóng tấn công từ mid-court — đây là worst case scenario từ slice.</p>
+<p><strong>Sửa:</strong> Aim bóng sâu hơn bạn nghĩ cần thiết. Khi tập, đặt target ở 1 mét cuối trước baseline.</p>
+<hr/>
+<h3 id="loi-3-defensive-lob-khong-u-cao">Lỗi 3: Defensive Lob Không Đủ Cao</h3>
+<p><strong>Mô tả:</strong> Defensive lob bay ở tầm vừa phải → đối thủ dễ dàng smash.</p>
+<p><strong>Hậu quả:</strong> Bạn đã "cứu" điểm bằng lob nhưng lại trao điểm cho đối thủ qua overhead dễ.</p>
+<p><strong>Sửa:</strong> Với defensive lob, luôn ưu tiên chiều cao hơn là vị trí rơi. Thà bóng ra ngoài một chút còn hơn là để đối thủ smash.</p>
+<hr/>
+<h3 id="loi-4-offensive-lob-khong-co-topspin">Lỗi 4: Offensive Lob Không Có Topspin</h3>
+<p><strong>Mô tả:</strong> Offensive lob thực ra chỉ là lob cao, flat — không có topspin thực sự.</p>
+<p><strong>Hậu quả:</strong> Bóng dễ kiểm soát hơn nhưng mất tác dụng "pulling down" của topspin → đối thủ có thể chạy đến kịp.</p>
+<p><strong>Sửa:</strong> Tập offensive lob chuyên biệt với swing path steep và mặt vợt hơi mở — cảm nhận bóng xoáy nhiều hơn forehand bình thường.</p>
+<hr/>
+<h3 id="loi-5-khong-tien-vao-luoi-sau-drop-shot">Lỗi 5: Không Tiến Vào Lưới Sau Drop Shot</h3>
+<p><strong>Mô tả:</strong> Drop shot xong đứng yên ở baseline nhìn đối thủ chạy đến.</p>
+<p><strong>Hậu quả:</strong> Nếu đối thủ đến kịp, bạn đang ở vị trí không lý tưởng để xử lý counter.</p>
+<p><strong>Sửa:</strong> Rule cứng — sau drop shot, <strong>luôn tiến vào lưới</strong>. Ngay cả khi drop shot tốt (nảy hai lần trước khi đối thủ đến), bạn đã ở vị trí lưới để volley nếu cần.</p>
+<hr/>
+<h2 id="tom-tat-chuong-9">Tóm Tắt Chương 9</h2>
 <ul class="styled-list">
-<li><strong>Slice có hai loại:</strong> Drive slice (pace cao, ít spin) và carve slice (chậm, nhiều spin, nảy thấp)</li>
+<li>
+<p><strong>Slice, drop shot và lob phá vỡ nhịp điệu</strong> của đối thủ — thứ mà power shots không làm được</p>
+</li>
+<li>
+<p><strong>Slice có hai loại:</strong> Drive slice (pace cao, ít spin) và carve slice (chậm, nhiều spin, nảy thấp)</p>
+</li>
+<li>
+<p><strong>Slice chiến thuật:</strong> Thay đổi tempo, tấn công backhand yếu, approach shot, return of serve, reset khi bị ép</p>
+</li>
+<li>
+<p><strong>Drop shot đòi hỏi disguise hoàn hảo</strong> — preparation phải trông như slice bình thường. Dùng khi đối thủ đứng sâu, đang di chuyển ra sau, hoặc đang mệt</p>
+</li>
+<li>
+<p><strong>Sau drop shot, tiến vào lưới</strong> — chuẩn bị cho counter-lob bằng overhead</p>
+</li>
+<li>
+<p><strong>Hai loại lob:</strong> Defensive (mua thời gian, ưu tiên chiều cao) và offensive topspin (vũ khí tấn công, ưu tiên disguise và topspin)</p>
+</li>
+<li>
+<p><strong>Touch là kỹ năng học được</strong> — mini tennis, drop shot consistency drill, và lob accuracy drill là ba bài tập nền tảng</p>
+</li>
+<li>
+<p><strong>Pattern phổ biến nhất:</strong> Slice deep → drop shot, và drop shot → lưới → overhead</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Slice chiến thuật:</strong> Thay đổi tempo, tấn công backhand yếu, approach shot, return of serve, reset khi bị ép</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Drop shot đòi hỏi disguise hoàn hảo</strong> — preparation phải trông như slice bình thường. Dùng khi đối thủ đứng sâu, đang di chuyển ra sau, hoặc đang mệt</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Sau drop shot, tiến vào lưới</strong> — chuẩn bị cho counter-lob bằng overhead</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Hai loại lob:</strong> Defensive (mua thời gian, ưu tiên chiều cao) và offensive topspin (vũ khí tấn công, ưu tiên disguise và topspin)</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Touch là kỹ năng học được</strong> — mini tennis, drop shot consistency drill, và lob accuracy drill là ba bài tập nền tảng</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Pattern phổ biến nhất:</strong> Slice deep → drop shot, và drop shot → lưới → overhead</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-16"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 16</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 10 sẽ tổng hợp tất cả kỹ thuật đã học trong chương 1-9 vào một framework hoàn chỉnh: <strong>Serve Tactics, Return Patterns và Game Management</strong> — cách xây dựng và thực thi một game plan trong trận đấu thực.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 10 sẽ tổng hợp tất cả kỹ thuật đã học trong chương 1-9 vào một framework hoàn chỉnh: <strong>Serve Tactics, Return Patterns và Game Management</strong> — cách xây dựng và thực thi một game plan trong trận đấu thực.</p>
 <p>Đây là bước chuyển từ "biết kỹ thuật" sang "biết cách dùng kỹ thuật". Hai thứ hoàn toàn khác nhau — và đây là nơi nhiều người chơi bị stuck dù kỹ thuật đã tốt.</p>
-<hr>
-<em>Chương 10: Serve Tactics, Return Patterns và Game Management — Xây Dựng Game Plan →</em></div>
+<hr/>
+<p><em>Chương 10: Serve Tactics, Return Patterns và Game Management — Xây Dựng Game Plan →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 40 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 40</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,268 +896,276 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 40</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 40</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 40</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">Chương 40: Nghệ Thuật Dạy Tennis</h2><hr>
-> <em>"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."</em>
-<p>> — William Arthur Ward</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 40 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#phần-iv-coaching-và-phát-triển' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>PHẦN IV: COACHING VÀ PHÁT TRIỂN</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-40-nghệ-thuật-dạy-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 40: Nghệ Thuật Dạy Tennis</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#401-tại-sao-coaching-matters' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.1 Tại Sao Coaching Matters</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#402-the-anatomy-of-a-good-coach' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.2 The Anatomy Of A Good Coach</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#403-understanding-how-people-learn' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.3 Understanding How People Learn</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#404-lesson-structure--cách-thiết-kế-một-buổi-học' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.4 Lesson Structure — Cách Thiết Kế Một Buổi Học</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#405-coaching-different-types-of-students' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.5 Coaching Different Types Of Students</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#406-structuring-a-coaching-program' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.6 Structuring A Coaching Program</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#407-self-development-as-a-coach' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.7 Self-Development As A Coach</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#408-the-ethics-of-coaching' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>40.8 The Ethics Of Coaching</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-40' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 40</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="phan-iv-coaching-va-phat-trien">PHẦN IV: COACHING VÀ PHÁT TRIỂN</h1>
+<h2 id="chuong-40-nghe-thuat-day-tennis">Chương 40: Nghệ Thuật Dạy Tennis</h2>
+<hr/>
+<div class="pullquote"><p>*"The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires."*
+&gt; — William Arthur Ward</p></div>
+<hr/>
 <p>Có một sự thật thú vị trong tennis:</p>
 <p>Nhiều player giỏi nhất thế giới là những coach tệ nhất.</p>
 <p>Và nhiều coach giỏi nhất thế giới chưa bao giờ chơi ở level chuyên nghiệp.</p>
-Lý do: <strong>Playing và coaching là hai skill hoàn toàn khác nhau.</strong>
-
+<p>Lý do: <strong>Playing và coaching là hai skill hoàn toàn khác nhau.</strong></p>
 <p>Playing đòi hỏi bạn execute — làm đúng một thứ, lặp lại hàng nghìn lần, đến mức automatic. Coaching đòi hỏi bạn observe, diagnose, explain, và motivate — giúp người khác execute, với body khác, mind khác, và learning style khác với bạn.</p>
 <p>Một player xuất sắc thường làm mọi thứ bằng intuition — họ không biết tại sao mình làm đúng, họ chỉ làm đúng. Khi một học viên làm sai, player đó nhìn thấy cái sai nhưng không biết giải thích tại sao — và càng không biết cách fix nó cho người khác.</p>
 <p>Coaching là một profession riêng biệt với knowledge riêng, skill riêng, và craft riêng.</p>
 <p>Chương này bắt đầu Phần IV — dành cho những ai không chỉ muốn chơi tennis tốt hơn, mà muốn <strong>giúp người khác</strong> chơi tennis tốt hơn.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.1 Tại Sao Coaching Matters</h2><h3>The Multiplier Effect</h3>
+<hr/>
+<h2 id="401-tai-sao-coaching-matters">40.1 Tại Sao Coaching Matters</h2>
+<h3 id="the-multiplier-effect">The Multiplier Effect</h3>
 <p>Một player giỏi ảnh hưởng đến game của chính họ.</p>
 <p>Một coach giỏi ảnh hưởng đến game của hàng chục, hàng trăm players — qua nhiều năm, nhiều thập kỷ.</p>
 <p>Đây là multiplier effect của coaching. Kiến thức và kỹ năng của bạn không chỉ benefit bạn — nó benefit mọi người bạn dạy. Và nếu bạn dạy tốt, những học viên đó có thể dạy người khác — kiến thức lan rộng ra ngoài tầm với của bạn.</p>
 <p>Ít nghề nào có potential impact lớn như vậy.</p>
-<hr>
-<h3>Coaching Là Nghề Hay Passion?</h3>
+<hr/>
+<h3 id="coaching-la-nghe-hay-passion">Coaching Là Nghề Hay Passion?</h3>
 <p>Trong tennis, coaching tồn tại ở nhiều hình thức:</p>
-<strong>Professional coaching:</strong> Career chính. Làm việc tại club, academy, hoặc với individual players. Thu nhập từ coaching.
-<strong>Semi-professional:</strong> Coaching part-time bên cạnh công việc khác. Common ở recreational tennis communities.
-<strong>Volunteer/community coaching:</strong> Dạy tại câu lạc bộ, school programs, community centers. Không phải vì tiền — vì passion và muốn grow the game.
-<strong>Peer coaching:</strong> Helping friends và hitting partners improve. Informal nhưng có giá trị thực sự.
+<p><strong>Professional coaching:</strong> Career chính. Làm việc tại club, academy, hoặc với individual players. Thu nhập từ coaching.</p>
+<p><strong>Semi-professional:</strong> Coaching part-time bên cạnh công việc khác. Common ở recreational tennis communities.</p>
+<p><strong>Volunteer/community coaching:</strong> Dạy tại câu lạc bộ, school programs, community centers. Không phải vì tiền — vì passion và muốn grow the game.</p>
+<p><strong>Peer coaching:</strong> Helping friends và hitting partners improve. Informal nhưng có giá trị thực sự.</p>
 <p>Dù ở hình thức nào, principles của effective coaching đều giống nhau.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.2 The Anatomy Of A Good Coach</h2><h3>Knowledge — Biết Cái Gì Cần Dạy</h3>
+<hr/>
+<h2 id="402-the-anatomy-of-a-good-coach">40.2 The Anatomy Of A Good Coach</h2>
+<h3 id="knowledge-biet-cai-gi-can-day">Knowledge — Biết Cái Gì Cần Dạy</h3>
 <p>Một coach cần hiểu:</p>
-<strong>Technical knowledge:</strong> Biomechanics của mọi stroke. Tại sao technique đúng là đúng — không chỉ "what" mà "why." Có thể break down complex movements thành teachable components.
-<strong>Tactical knowledge:</strong> Patterns, strategy, shot selection (chapters 35). Biết khi nào dạy technique vs. khi nào dạy tactics.
-<strong>Physical development knowledge:</strong> Strength, movement, energy systems (chapters 31-33). Đặc biệt quan trọng khi coaching juniors — physical development ảnh hưởng đến kỹ thuật có thể dạy được ở từng tuổi.
-<strong>Mental game knowledge:</strong> Psychology of learning, performance anxiety, motivation (chapter 34). Coaching không chỉ là dạy shots.
-<strong>Học viên knowledge:</strong> Hiểu learning styles, common errors ở từng level, typical progression pathways.
-<hr>
-<h3>Observation — Nhìn Thấy Cái Gì Đang Xảy Ra</h3>
+<p><strong>Technical knowledge:</strong> Biomechanics của mọi stroke. Tại sao technique đúng là đúng — không chỉ "what" mà "why." Có thể break down complex movements thành teachable components.</p>
+<p><strong>Tactical knowledge:</strong> Patterns, strategy, shot selection (chapters 35). Biết khi nào dạy technique vs. khi nào dạy tactics.</p>
+<p><strong>Physical development knowledge:</strong> Strength, movement, energy systems (chapters 31-33). Đặc biệt quan trọng khi coaching juniors — physical development ảnh hưởng đến kỹ thuật có thể dạy được ở từng tuổi.</p>
+<p><strong>Mental game knowledge:</strong> Psychology of learning, performance anxiety, motivation (chapter 34). Coaching không chỉ là dạy shots.</p>
+<p><strong>Học viên knowledge:</strong> Hiểu learning styles, common errors ở từng level, typical progression pathways.</p>
+<hr/>
+<h3 id="observation-nhin-thay-cai-gi-ang-xay-ra">Observation — Nhìn Thấy Cái Gì Đang Xảy Ra</h3>
 <p>Knowledge không đủ nếu bạn không thể observe accurately.</p>
 <p>Nhiều coaches nhìn học viên nhưng không thực sự thấy. Họ thấy kết quả (bóng vào lưới) nhưng không thấy cause (racket face quá closed tại contact).</p>
-<strong>Developing observation skills:</strong>
-<strong>Watch contact point first.</strong> Hầu hết errors originate ở hoặc ngay trước contact. Đừng nhìn cả stroke từ đầu — nhìn contact point.
-<strong>Watch feet và body trước khi nhìn arm.</strong> Nhiều arm errors là consequence của body/footwork errors. Fix root cause, không fix symptom.
-<strong>Watch từ nhiều angles.</strong> Side view cho thấy swing path và contact point. Front/back view cho thấy footwork và rotation. Top-down (video từ gallery) cho thấy positioning.
-<strong>Watch multiple shots.</strong> Pattern mới quan trọng, không phải single occurrence. Một shot hỏng có thể là fluke. Ba shots hỏng cùng kiểu là pattern.
-<hr>
-<h3>Communication — Truyền Đạt Cái Gì Học Viên Cần Nghe</h3>
+<p><strong>Developing observation skills:</strong></p>
+<p><strong>Watch contact point first.</strong> Hầu hết errors originate ở hoặc ngay trước contact. Đừng nhìn cả stroke từ đầu — nhìn contact point.</p>
+<p><strong>Watch feet và body trước khi nhìn arm.</strong> Nhiều arm errors là consequence của body/footwork errors. Fix root cause, không fix symptom.</p>
+<p><strong>Watch từ nhiều angles.</strong> Side view cho thấy swing path và contact point. Front/back view cho thấy footwork và rotation. Top-down (video từ gallery) cho thấy positioning.</p>
+<p><strong>Watch multiple shots.</strong> Pattern mới quan trọng, không phải single occurrence. Một shot hỏng có thể là fluke. Ba shots hỏng cùng kiểu là pattern.</p>
+<hr/>
+<h3 id="communication-truyen-at-cai-gi-hoc-vien-can-nghe">Communication — Truyền Đạt Cái Gì Học Viên Cần Nghe</h3>
 <p>Biết technical knowledge và observe correctly chưa đủ. Phải communicate hiệu quả.</p>
-<strong>The problem with technical language:</strong>
+<p><strong>The problem with technical language:</strong></p>
 <p>"Pronate your forearm through contact with simultaneous external rotation of the shoulder while maintaining scapular stability" — technically accurate. Hoàn toàn useless cho học viên.</p>
 <p>Effective coaching communication:</p>
-<strong>Simple cues over technical explanations.</strong> "Hit through the ball" communicates more than a biomechanical breakdown for most learners.
-<strong>Feel-based cues.</strong> "Swing like you're throwing a frisbee" creates kinesthetic understanding that "extend your arm on the follow-through" doesn't.
-<strong>Visual metaphors.</strong> "Brush the back of the ball from 7 o'clock to 1 o'clock" for topspin creates an image that a student can visualize và attempt.
-<strong>One thing at a time.</strong> Giving 5 corrections simultaneously creates overload. Nothing gets fixed. One clear cue, executed, before moving to next.
-<hr>
-<h3>Rapport — Tạo Môi Trường Học Tốt</h3>
+<p><strong>Simple cues over technical explanations.</strong> "Hit through the ball" communicates more than a biomechanical breakdown for most learners.</p>
+<p><strong>Feel-based cues.</strong> "Swing like you're throwing a frisbee" creates kinesthetic understanding that "extend your arm on the follow-through" doesn't.</p>
+<p><strong>Visual metaphors.</strong> "Brush the back of the ball from 7 o'clock to 1 o'clock" for topspin creates an image that a student can visualize và attempt.</p>
+<p><strong>One thing at a time.</strong> Giving 5 corrections simultaneously creates overload. Nothing gets fixed. One clear cue, executed, before moving to next.</p>
+<hr/>
+<h3 id="rapport-tao-moi-truong-hoc-tot">Rapport — Tạo Môi Trường Học Tốt</h3>
 <p>Technical knowledge, observation, và communication skills mean nothing without rapport — the relationship between coach và student that makes learning possible.</p>
-<strong>Trust:</strong> Student must believe coach understands their game và has their best interest in mind.
-<strong>Safety:</strong> Student must feel safe to make mistakes. Fear of judgment shuts down learning.
-<strong>Respect:</strong> Mutual. Coach respects student's effort, time, và current level. Student respects coach's expertise và guidance.
-<strong>Enjoyment:</strong> Learning happens faster when it's enjoyable. Not every drill must be fun — but the overall experience should be positive.
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.3 Understanding How People Learn</h2><h3>The Four Stages Of Learning</h3>
+<p><strong>Trust:</strong> Student must believe coach understands their game và has their best interest in mind.</p>
+<p><strong>Safety:</strong> Student must feel safe to make mistakes. Fear of judgment shuts down learning.</p>
+<p><strong>Respect:</strong> Mutual. Coach respects student's effort, time, và current level. Student respects coach's expertise và guidance.</p>
+<p><strong>Enjoyment:</strong> Learning happens faster when it's enjoyable. Not every drill must be fun — but the overall experience should be positive.</p>
+<hr/>
+<h2 id="403-understanding-how-people-learn">40.3 Understanding How People Learn</h2>
+<h3 id="the-four-stages-of-learning">The Four Stages Of Learning</h3>
 <p>This model — originally from psychology, widely applied in skill development — is essential for every coach.</p>
-<strong>Stage 1: Unconscious Incompetence</strong>
-<p>Student doesn't know what they don't know. They think they're hitting correctly because they have no reference for what correct feels like.</p>
+<p><strong>Stage 1: Unconscious Incompetence</strong>
+Student doesn't know what they don't know. They think they're hitting correctly because they have no reference for what correct feels like.</p>
 <p>Coach's role: Create awareness. Show what correct looks like. Demonstrate the gap between current và target performance. Don't overwhelm — just open eyes.</p>
-<hr>
-<strong>Stage 2: Conscious Incompetence</strong>
-<p>Student now knows what they don't know. They understand what correct looks like but can't do it yet. This stage is uncomfortable — often feels like getting worse.</p>
+<hr/>
+<p><strong>Stage 2: Conscious Incompetence</strong>
+Student now knows what they don't know. They understand what correct looks like but can't do it yet. This stage is uncomfortable — often feels like getting worse.</p>
 <p>Coach's role: This is the most important stage for the coach. Student needs encouragement và clear, simple guidance. Break skill into smallest learnable pieces. Celebrate any partial success. Normalize struggle.</p>
-<hr>
-<strong>Stage 3: Conscious Competence</strong>
-<p>Student can do the skill correctly — but only when thinking about it deliberately. Execution is there but requires full concentration. Falls apart under pressure.</p>
+<hr/>
+<p><strong>Stage 3: Conscious Competence</strong>
+Student can do the skill correctly — but only when thinking about it deliberately. Execution is there but requires full concentration. Falls apart under pressure.</p>
 <p>Coach's role: Build repetition và confidence. Introduce mild pressure gradually. Remind student this stage is temporary — automation is coming.</p>
-<hr>
-<strong>Stage 4: Unconscious Competence</strong>
-<p>Skill is automatic. Student executes without thinking. Can focus on tactics, reading opponent, court positioning — not technique.</p>
+<hr/>
+<p><strong>Stage 4: Unconscious Competence</strong>
+Skill is automatic. Student executes without thinking. Can focus on tactics, reading opponent, court positioning — not technique.</p>
 <p>Coach's role: Maintain quality. Now introduce higher-level challenges. Occasionally revisit fundamentals to prevent drift from correct technique.</p>
-<hr>
-<h3>Learning Styles In Tennis</h3>
+<hr/>
+<h3 id="learning-styles-in-tennis">Learning Styles In Tennis</h3>
 <p>Not every student learns the same way. Effective coaches adapt delivery to the learner.</p>
-<strong>Visual learners:</strong> Need to see correct execution. Demonstration is primary. Video of themselves và professionals. "Watch my racket path here."
-<strong>Kinesthetic learners:</strong> Need to feel correct execution. Guided practice, physical demonstration of position (with permission), drills that create the feeling.
-<strong>Analytical learners:</strong> Want to understand why. Benefit from brief explanations of biomechanics và physics. "The reason the ball goes long is because..."
-<strong>Trial-and-error learners:</strong> Learn through doing và adjusting. Less explanation, more repetition with feedback. Let them discover.
-<strong>Key insight:</strong> Most students use combination of styles. Start with what seems to work for this student. Adjust if it's not landing.
-<hr>
-<h3>The Importance Of Feedback Timing</h3>
+<p><strong>Visual learners:</strong> Need to see correct execution. Demonstration is primary. Video of themselves và professionals. "Watch my racket path here."</p>
+<p><strong>Kinesthetic learners:</strong> Need to feel correct execution. Guided practice, physical demonstration of position (with permission), drills that create the feeling.</p>
+<p><strong>Analytical learners:</strong> Want to understand why. Benefit from brief explanations of biomechanics và physics. "The reason the ball goes long is because..."</p>
+<p><strong>Trial-and-error learners:</strong> Learn through doing và adjusting. Less explanation, more repetition with feedback. Let them discover.</p>
+<p><strong>Key insight:</strong> Most students use combination of styles. Start with what seems to work for this student. Adjust if it's not landing.</p>
+<hr/>
+<h3 id="the-importance-of-feedback-timing">The Importance Of Feedback Timing</h3>
 <p>Not all feedback is equally effective. When và how you give feedback affects learning rate dramatically.</p>
-<strong>Immediate feedback (during or right after attempt):</strong>
-<p>Best for: New skills being learned. Student needs immediate connection between action và consequence.</p>
-<strong>Delayed feedback (after several attempts):</strong>
-<p>Best for: When student is self-correcting. Give them time to find the feeling themselves. Too much immediate feedback creates dependence — student waits for coach instead of developing self-awareness.</p>
-<strong>Summary feedback (after a set of attempts):</strong>
-<p>Best for: Pattern identification. "In those 10 serves, I noticed X happening on 7 of them."</p>
-<strong>Self-discovery questions (Socratic method):</strong>
-<p>Instead of: "Your elbow is dropping."</p>
-<p>Try: "What did you notice about your arm position on that serve?"</p>
+<p><strong>Immediate feedback (during or right after attempt):</strong>
+Best for: New skills being learned. Student needs immediate connection between action và consequence.</p>
+<p><strong>Delayed feedback (after several attempts):</strong>
+Best for: When student is self-correcting. Give them time to find the feeling themselves. Too much immediate feedback creates dependence — student waits for coach instead of developing self-awareness.</p>
+<p><strong>Summary feedback (after a set of attempts):</strong>
+Best for: Pattern identification. "In those 10 serves, I noticed X happening on 7 of them."</p>
+<p><strong>Self-discovery questions (Socratic method):</strong>
+Instead of: "Your elbow is dropping."
+Try: "What did you notice about your arm position on that serve?"</p>
 <p>When students discover corrections themselves, they own the change — and it sticks better.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.4 Lesson Structure — Cách Thiết Kế Một Buổi Học</h2><h3>The IDEA Framework</h3>
-<strong>Introduction:</strong> What are we working on today và why. Set context và intention. 2-3 minutes maximum.
-<strong>Demonstration:</strong> Show correct execution. Coach demonstrates or use video reference. Student observes with specific focus point. "Watch my contact point."
-<strong>Execution:</strong> Student practices. Coach observes, gives feedback. Adjust cue if first isn't working. This is the bulk of the lesson (70-80% of time).
-<strong>Application:</strong> Put the skill in context. Live ball, points, or game-like drill. Can they use the skill when it's not isolated?
-<hr>
-<h3>Lesson Time Distribution</h3>
-<strong>Warm-up (10%):</strong> Physical và mental preparation. Not coaching time — preparation time.
-<strong>Technical work (40%):</strong> Isolated skill development. Drilling, feeding, repetition.
-<strong>Applied practice (30%):</strong> Skill in live/game context. Cooperative rallies, patterns, points.
-<strong>Match play / games (15%):</strong> Full competitive application.
-<strong>Cool-down và review (5%):</strong> Physical cool-down, summary of lesson, homework for next session.
-<hr>
-<h3>The Feedback Sandwich — And Why To Use It Carefully</h3>
+<hr/>
+<h2 id="404-lesson-structure-cach-thiet-ke-mot-buoi-hoc">40.4 Lesson Structure — Cách Thiết Kế Một Buổi Học</h2>
+<h3 id="the-idea-framework">The IDEA Framework</h3>
+<p><strong>Introduction:</strong> What are we working on today và why. Set context và intention. 2-3 minutes maximum.</p>
+<p><strong>Demonstration:</strong> Show correct execution. Coach demonstrates or use video reference. Student observes with specific focus point. "Watch my contact point."</p>
+<p><strong>Execution:</strong> Student practices. Coach observes, gives feedback. Adjust cue if first isn't working. This is the bulk of the lesson (70-80% of time).</p>
+<p><strong>Application:</strong> Put the skill in context. Live ball, points, or game-like drill. Can they use the skill when it's not isolated?</p>
+<hr/>
+<h3 id="lesson-time-distribution">Lesson Time Distribution</h3>
+<p><strong>Warm-up (10%):</strong> Physical và mental preparation. Not coaching time — preparation time.</p>
+<p><strong>Technical work (40%):</strong> Isolated skill development. Drilling, feeding, repetition.</p>
+<p><strong>Applied practice (30%):</strong> Skill in live/game context. Cooperative rallies, patterns, points.</p>
+<p><strong>Match play / games (15%):</strong> Full competitive application.</p>
+<p><strong>Cool-down và review (5%):</strong> Physical cool-down, summary of lesson, homework for next session.</p>
+<hr/>
+<h3 id="the-feedback-sandwich-and-why-to-use-it-carefully">The Feedback Sandwich — And Why To Use It Carefully</h3>
 <p>Traditional coaching advice: Positive feedback → correction → positive feedback.</p>
 <p>"That backswing looked great! But your contact point was too late. Good effort though!"</p>
-<strong>Problem with the sandwich:</strong> Students learn to wait through the positive for the "but." The sandwich becomes a signal that criticism is coming.
-<strong>Better approach:</strong>
+<p><strong>Problem with the sandwich:</strong> Students learn to wait through the positive for the "but." The sandwich becomes a signal that criticism is coming.</p>
+<p><strong>Better approach:</strong></p>
 <p>Be specific và direct with corrections — without wrapping in false positives.</p>
 <p>Use genuine positive feedback when earned. "That swing path on that shot was exactly what we've been working on." (Not manufactured.)</p>
 <p>Be matter-of-fact about corrections. "Contact point was behind your body — let's move it forward." (Not harsh, just clear.)</p>
-<hr>
-<h3>Homework And Between-Session Practice</h3>
+<hr/>
+<h3 id="homework-and-between-session-practice">Homework And Between-Session Practice</h3>
 <p>The lesson is a fraction of total practice time. What happens between lessons determines improvement rate.</p>
-<strong>Effective homework:</strong>
-<ul class="styled-list">
-<li>Specific và simple: One thing to practice, clearly described.</li>
-<li>Measurable: "Hit 50 forehands to the crosscourt target" not "practice your forehand."</li>
-<li>Connected to lesson: Continues the work started in session.</li>
-<li>Realistic: Can be done in their available practice time.</li>
-</ul>
-<strong>Follow-up:</strong> At start of next lesson, briefly check in on homework. This creates accountability và shows you care about their between-session work.
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.5 Coaching Different Types Of Students</h2><h3>Coaching Beginners</h3>
-<strong>Primary goal:</strong> Create positive first experience and establish correct fundamental patterns.
-<strong>Key principles:</strong>
-<strong>Make it fun first.</strong> Beginners who don't enjoy the experience quit before reaching the level where they can appreciate the challenge. Fun is not opposed to learning — it accelerates it.
-<strong>Simplify ruthlessly.</strong> Beginners cannot process multiple technical cues. One simple instruction. Once it's working reasonably, introduce the next.
-<strong>Use feeding generously.</strong> Beginners struggle to rally. Too much time spent chasing bad balls creates frustration và doesn't build the right patterns. Feed controlled balls that set up success.
-<strong>Success builds confidence builds motivation.</strong> Design drills where beginners can succeed. Then gradually increase challenge.
-<strong>Don't rush to complex technique.</strong> A beginner who can rally 10 shots crosscourt is ready to learn more than a beginner who can't rally 3 shots. Fundamentals first.
-<strong>Common beginner errors và simple fixes:</strong>
-| Error | Simple Cue |
-|---|---|
-| Hitting late (behind body) | "Meet the ball in front of your front foot" |
-| No follow-through | "Finish with racket over your shoulder" |
-| Looking up too early | "Watch the ball onto the strings" |
-| Stiff arm | "Relax your grip — hold it like an egg" |
-| No split step | "Bounce when I bounce" (mirror the feed) |
-
-<hr>
-<h3>Coaching Intermediate Players</h3>
-<strong>Primary challenge:</strong> Breaking bad habits that have become ingrained. Intermediate players often have significant technical issues but can compensate for them — until they can't.
-<strong>Key principles:</strong>
-<strong>Identify the highest-leverage issue.</strong> Not every flaw needs fixing. What is the one thing most limiting this player's development? Fix that first.
-<strong>Explain why, not just what.</strong> Intermediate players can understand biomechanical reasoning. "Your wrist is collapsing because you're gripping too tight, which tenses the forearm and prevents natural pronation." This helps them understand và motivate change.
-<strong>Expect và prepare for regression.</strong> Changing a habit that's been grooved for years will make performance worse before better. Warn the student. Agree on a trial period ("let's work on this for 6 weeks before evaluating").
-<strong>Video analysis is powerful here.</strong> Intermediate players often don't believe they have the error until they see it on video. Seeing is believing.
-<strong>Introduce tactical work.</strong> Intermediate players can start thinking about patterns, not just survival. Begin introducing point construction concepts alongside technical work.
-<hr>
-<h3>Coaching Advanced Players</h3>
-<strong>Primary challenge:</strong> The coach may be working with a player who is technically better than themselves. This is psychologically difficult for many coaches — and handled poorly, it undermines credibility.
-<strong>Key principles:</strong>
-<strong>Your value is observation, not demonstration.</strong> Advanced players don't need you to show them how to hit. They need you to see what they can't see themselves. Fresh eyes on a familiar pattern.
-<strong>Be humble about what you don't know.</strong> "I'm not sure why that's happening — let me think about it" is far better than a wrong confident answer that a skilled player sees through immediately.
-<strong>Prepare more.</strong> Advanced players ask harder questions. Do your homework. Know their game deeply before sessions.
-<strong>Focus on mental and tactical layers.</strong> At advanced level, mental game và tactical refinement often yield more than technical adjustments. Many advanced coaches specialize in these areas.
-<strong>Respect autonomy.</strong> Advanced players have developed their game over years. Don't discard everything and rebuild — identify the specific 10% to improve while respecting the 90% that works.
-<hr>
-<h3>Coaching Children</h3>
+<p><strong>Effective homework:</strong>
+- Specific và simple: One thing to practice, clearly described.
+- Measurable: "Hit 50 forehands to the crosscourt target" not "practice your forehand."
+- Connected to lesson: Continues the work started in session.
+- Realistic: Can be done in their available practice time.</p>
+<p><strong>Follow-up:</strong> At start of next lesson, briefly check in on homework. This creates accountability và shows you care about their between-session work.</p>
+<hr/>
+<h2 id="405-coaching-different-types-of-students">40.5 Coaching Different Types Of Students</h2>
+<h3 id="coaching-beginners">Coaching Beginners</h3>
+<p><strong>Primary goal:</strong> Create positive first experience and establish correct fundamental patterns.</p>
+<p><strong>Key principles:</strong></p>
+<p><strong>Make it fun first.</strong> Beginners who don't enjoy the experience quit before reaching the level where they can appreciate the challenge. Fun is not opposed to learning — it accelerates it.</p>
+<p><strong>Simplify ruthlessly.</strong> Beginners cannot process multiple technical cues. One simple instruction. Once it's working reasonably, introduce the next.</p>
+<p><strong>Use feeding generously.</strong> Beginners struggle to rally. Too much time spent chasing bad balls creates frustration và doesn't build the right patterns. Feed controlled balls that set up success.</p>
+<p><strong>Success builds confidence builds motivation.</strong> Design drills where beginners can succeed. Then gradually increase challenge.</p>
+<p><strong>Don't rush to complex technique.</strong> A beginner who can rally 10 shots crosscourt is ready to learn more than a beginner who can't rally 3 shots. Fundamentals first.</p>
+<p><strong>Common beginner errors và simple fixes:</strong></p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Error</th>
+<th>Simple Cue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hitting late (behind body)</td>
+<td>"Meet the ball in front of your front foot"</td>
+</tr>
+<tr>
+<td>No follow-through</td>
+<td>"Finish with racket over your shoulder"</td>
+</tr>
+<tr>
+<td>Looking up too early</td>
+<td>"Watch the ball onto the strings"</td>
+</tr>
+<tr>
+<td>Stiff arm</td>
+<td>"Relax your grip — hold it like an egg"</td>
+</tr>
+<tr>
+<td>No split step</td>
+<td>"Bounce when I bounce" (mirror the feed)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="coaching-intermediate-players">Coaching Intermediate Players</h3>
+<p><strong>Primary challenge:</strong> Breaking bad habits that have become ingrained. Intermediate players often have significant technical issues but can compensate for them — until they can't.</p>
+<p><strong>Key principles:</strong></p>
+<p><strong>Identify the highest-leverage issue.</strong> Not every flaw needs fixing. What is the one thing most limiting this player's development? Fix that first.</p>
+<p><strong>Explain why, not just what.</strong> Intermediate players can understand biomechanical reasoning. "Your wrist is collapsing because you're gripping too tight, which tenses the forearm and prevents natural pronation." This helps them understand và motivate change.</p>
+<p><strong>Expect và prepare for regression.</strong> Changing a habit that's been grooved for years will make performance worse before better. Warn the student. Agree on a trial period ("let's work on this for 6 weeks before evaluating").</p>
+<p><strong>Video analysis is powerful here.</strong> Intermediate players often don't believe they have the error until they see it on video. Seeing is believing.</p>
+<p><strong>Introduce tactical work.</strong> Intermediate players can start thinking about patterns, not just survival. Begin introducing point construction concepts alongside technical work.</p>
+<hr/>
+<h3 id="coaching-advanced-players">Coaching Advanced Players</h3>
+<p><strong>Primary challenge:</strong> The coach may be working with a player who is technically better than themselves. This is psychologically difficult for many coaches — and handled poorly, it undermines credibility.</p>
+<p><strong>Key principles:</strong></p>
+<p><strong>Your value is observation, not demonstration.</strong> Advanced players don't need you to show them how to hit. They need you to see what they can't see themselves. Fresh eyes on a familiar pattern.</p>
+<p><strong>Be humble about what you don't know.</strong> "I'm not sure why that's happening — let me think about it" is far better than a wrong confident answer that a skilled player sees through immediately.</p>
+<p><strong>Prepare more.</strong> Advanced players ask harder questions. Do your homework. Know their game deeply before sessions.</p>
+<p><strong>Focus on mental and tactical layers.</strong> At advanced level, mental game và tactical refinement often yield more than technical adjustments. Many advanced coaches specialize in these areas.</p>
+<p><strong>Respect autonomy.</strong> Advanced players have developed their game over years. Don't discard everything and rebuild — identify the specific 10% to improve while respecting the 90% that works.</p>
+<hr/>
+<h3 id="coaching-children">Coaching Children</h3>
 <p>Coaching children requires different mindset, energy, và methods than coaching adults.</p>
-<strong>Developmental awareness:</strong> Children's physical và cognitive development affects what they can learn and how. A 7-year-old's nervous system is different from a 14-year-old's. Technique appropriate for adults may not be appropriate for young children.
-<strong>Attention spans:</strong> Children have shorter attention spans. Drills should be shorter. Games và competition integrated more frequently. Change activity every 8-12 minutes.
-<strong>Short instruction, long practice:</strong> Maximum 30-60 seconds of instruction before practice. Children learn by doing, not listening.
-<strong>Make it a game:</strong> Any drill can become a game. "First to 5 targets wins." Competition and games motivate children more than most instruction.
-<strong>Praise effort and process:</strong> "You worked really hard on that" và "I love how you kept trying" is more development-appropriate than outcome praise.
-<strong>Safety is non-negotiable:</strong> Children are more vulnerable to overuse injuries because their growth plates are still open. Monitor training loads carefully. Never push children through pain.
-<strong>Communication with parents:</strong> This is its own skill. Setting expectations, giving progress updates, managing parent pressure on children — navigating this well is a significant part of coaching juniors.
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.6 Structuring A Coaching Program</h2><h3>From Single Lessons To Long-Term Development</h3>
+<p><strong>Developmental awareness:</strong> Children's physical và cognitive development affects what they can learn and how. A 7-year-old's nervous system is different from a 14-year-old's. Technique appropriate for adults may not be appropriate for young children.</p>
+<p><strong>Attention spans:</strong> Children have shorter attention spans. Drills should be shorter. Games và competition integrated more frequently. Change activity every 8-12 minutes.</p>
+<p><strong>Short instruction, long practice:</strong> Maximum 30-60 seconds of instruction before practice. Children learn by doing, not listening.</p>
+<p><strong>Make it a game:</strong> Any drill can become a game. "First to 5 targets wins." Competition and games motivate children more than most instruction.</p>
+<p><strong>Praise effort and process:</strong> "You worked really hard on that" và "I love how you kept trying" is more development-appropriate than outcome praise.</p>
+<p><strong>Safety is non-negotiable:</strong> Children are more vulnerable to overuse injuries because their growth plates are still open. Monitor training loads carefully. Never push children through pain.</p>
+<p><strong>Communication with parents:</strong> This is its own skill. Setting expectations, giving progress updates, managing parent pressure on children — navigating this well is a significant part of coaching juniors.</p>
+<hr/>
+<h2 id="406-structuring-a-coaching-program">40.6 Structuring A Coaching Program</h2>
+<h3 id="from-single-lessons-to-long-term-development">From Single Lessons To Long-Term Development</h3>
 <p>A single lesson can provide value. But real development comes from a structured, long-term program with clear progression.</p>
-<strong>Assessment:</strong> Before designing a program, understand where the student is. Watch them play. Ask about their history, goals, available practice time, và any injuries or limitations.
-<strong>Goal setting:</strong> Collaborative, not unilateral. "What do you want to achieve in the next 3 months?" Their goals should drive the program.
-<strong>Periodization:</strong> Apply same principle as physical training (chapter 32, 36). Structure work into phases — foundation, development, competition. Avoid trying to work on everything simultaneously.
-<strong>Regular review:</strong> Every 4-6 weeks, review progress against goals. Adjust program if needed. Celebrate improvements. Identify what isn't working.
-<strong>Communication:</strong> Students should understand the plan — not just follow instructions. "Here's why we're working on this, here's what we're building toward." Informed students are more motivated students.
-<hr>
-<h3>Group Lessons vs. Private Lessons</h3>
-<strong>Private lessons:</strong>
-<p>Maximum individual attention. Coach can tailor every moment to this student's needs. Most efficient for isolated skill development.</p>
+<p><strong>Assessment:</strong> Before designing a program, understand where the student is. Watch them play. Ask about their history, goals, available practice time, và any injuries or limitations.</p>
+<p><strong>Goal setting:</strong> Collaborative, not unilateral. "What do you want to achieve in the next 3 months?" Their goals should drive the program.</p>
+<p><strong>Periodization:</strong> Apply same principle as physical training (chapter 32, 36). Structure work into phases — foundation, development, competition. Avoid trying to work on everything simultaneously.</p>
+<p><strong>Regular review:</strong> Every 4-6 weeks, review progress against goals. Adjust program if needed. Celebrate improvements. Identify what isn't working.</p>
+<p><strong>Communication:</strong> Students should understand the plan — not just follow instructions. "Here's why we're working on this, here's what we're building toward." Informed students are more motivated students.</p>
+<hr/>
+<h3 id="group-lessons-vs-private-lessons">Group Lessons vs. Private Lessons</h3>
+<p><strong>Private lessons:</strong>
+Maximum individual attention. Coach can tailor every moment to this student's needs. Most efficient for isolated skill development.</p>
 <p>Limitation: Expensive for student, less development of competitive instincts (no opponent).</p>
-<strong>Group lessons (2-6 students):</strong>
-<p>More economical. Students benefit from watching each other. More competitive và social dynamics — closer to real match conditions.</p>
+<p><strong>Group lessons (2-6 students):</strong>
+More economical. Students benefit from watching each other. More competitive và social dynamics — closer to real match conditions.</p>
 <p>Limitation: Less individual attention. Coach must manage multiple students simultaneously.</p>
-<strong>Best practices for group coaching:</strong>
+<p><strong>Best practices for group coaching:</strong></p>
 <p>Design drills that keep everyone active — not one person hitting while others watch.</p>
 <p>Use stations: rotate students through different exercises simultaneously.</p>
 <p>Give individual feedback briefly và specifically during group practice.</p>
 <p>Use the group creatively — games, competitions, cooperative drills that use all players.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.7 Self-Development As A Coach</h2><h3>The Learning Coach</h3>
+<hr/>
+<h2 id="407-self-development-as-a-coach">40.7 Self-Development As A Coach</h2>
+<h3 id="the-learning-coach">The Learning Coach</h3>
 <p>The best coaches are perpetual students.</p>
 <p>Tennis evolves. Biomechanical research develops. Sports psychology advances. New teaching methodologies emerge. Equipment changes.</p>
 <p>A coach who stopped learning when they got their first certification is already behind.</p>
-<strong>Continuing education:</strong>
+<p><strong>Continuing education:</strong></p>
 <p>ITF (International Tennis Federation) và national tennis associations offer coaching education programs at multiple levels.</p>
 <p>PTR (Professional Tennis Registry) và USPTA (United States Professional Tennis Association) offer internationally recognized certifications.</p>
 <p>Online platforms, coaching conferences, và clinics provide ongoing education.</p>
-<strong>Watch other coaches:</strong> Learn from peers. Visit other clubs, watch how different coaches structure lessons, see different approaches to common problems.
-<strong>Record và review your own coaching:</strong> Video yourself coaching. You will see things — habits, patterns, communication styles — that you don't notice in the moment. Same principle as recording students.
-<strong>Get coached yourself:</strong> Regular sessions with a mentor coach — someone more experienced who can observe your coaching và provide feedback. The best coaches at every level have mentors.
-<hr>
-<h3>Building Your Coaching Philosophy</h3>
+<p><strong>Watch other coaches:</strong> Learn from peers. Visit other clubs, watch how different coaches structure lessons, see different approaches to common problems.</p>
+<p><strong>Record và review your own coaching:</strong> Video yourself coaching. You will see things — habits, patterns, communication styles — that you don't notice in the moment. Same principle as recording students.</p>
+<p><strong>Get coached yourself:</strong> Regular sessions with a mentor coach — someone more experienced who can observe your coaching và provide feedback. The best coaches at every level have mentors.</p>
+<hr/>
+<h3 id="building-your-coaching-philosophy">Building Your Coaching Philosophy</h3>
 <p>Every effective coach has an underlying philosophy — a set of beliefs about how people learn, what tennis is for, and what they want to accomplish through coaching.</p>
-<strong>Questions to clarify your philosophy:</strong>
+<p><strong>Questions to clarify your philosophy:</strong></p>
 <ul class="styled-list">
 <li>Is winning the primary goal, or is development the primary goal? (Or some balance of both?)</li>
 <li>What is the relationship between fun and rigor in your sessions?</li>
@@ -1167,56 +1176,67 @@ Lý do: <strong>Playing và coaching là hai skill hoàn toàn khác nhau.</stro
 </ul>
 <p>Your answers shape every coaching decision — from drill selection to how you respond when a student misses the same shot for the tenth time.</p>
 <p>There's no single correct philosophy. But having a clear one makes you a more consistent và purposeful coach.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">40.8 The Ethics Of Coaching</h2><h3>The Coach-Student Relationship</h3>
+<hr/>
+<h2 id="408-the-ethics-of-coaching">40.8 The Ethics Of Coaching</h2>
+<h3 id="the-coach-student-relationship">The Coach-Student Relationship</h3>
 <p>The coach-student relationship involves a power differential — the coach has expertise, authority, và influence over the student's development. This comes with ethical responsibilities.</p>
-<strong>Do no harm:</strong> Physical harm (overtraining, pushing through injury) và psychological harm (humiliation, excessive pressure, eroding confidence) are both violations of coaching ethics.
-<strong>Student's interests first:</strong> The student's development và wellbeing takes priority over the coach's ego, schedule, or business interests.
-<strong>Appropriate boundaries:</strong> The coaching relationship is professional. Clear boundaries protect both parties.
-<strong>Confidentiality:</strong> What happens in the lesson — student struggles, personal disclosures — stays between coach và student. Not shared with other students or parents without permission.
-<strong>Honest communication:</strong> Don't tell students what they want to hear. Tell them what they need to hear — with kindness and respect. False praise is dishonest và ultimately harmful.
-<hr>
-<h3>When To Refer</h3>
+<p><strong>Do no harm:</strong> Physical harm (overtraining, pushing through injury) và psychological harm (humiliation, excessive pressure, eroding confidence) are both violations of coaching ethics.</p>
+<p><strong>Student's interests first:</strong> The student's development và wellbeing takes priority over the coach's ego, schedule, or business interests.</p>
+<p><strong>Appropriate boundaries:</strong> The coaching relationship is professional. Clear boundaries protect both parties.</p>
+<p><strong>Confidentiality:</strong> What happens in the lesson — student struggles, personal disclosures — stays between coach và student. Not shared with other students or parents without permission.</p>
+<p><strong>Honest communication:</strong> Don't tell students what they want to hear. Tell them what they need to hear — with kindness and respect. False praise is dishonest và ultimately harmful.</p>
+<hr/>
+<h3 id="when-to-refer">When To Refer</h3>
 <p>A good coach knows their limits.</p>
 <p>If a student's development has stalled and you've exhausted your knowledge, refer them to a more experienced coach. This is a sign of professional maturity, not weakness.</p>
 <p>If a student has a physical issue beyond your expertise (injury, chronic pain), refer to appropriate medical professional. Don't attempt to diagnose or treat injuries.</p>
 <p>If a student shows signs of serious mental health challenges, refer appropriately. A tennis coach is not a therapist.</p>
 <p>Knowing when you're not the right resource — và directing the student to who is — is one of the most important things a coach can do.</p>
-<hr></div>
-<div class="chapter" id="chapter-40"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 40</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 40</h2><ul class="styled-list">
-<li><strong>Coaching và playing are different skills.</strong> Great players aren't automatically great coaches. Coaching has its own knowledge base, observation skills, communication craft, và relationship dynamics.</li>
-</ul>
+<hr/>
+<h2 id="tom-tat-chuong-40">Tóm Tắt Chương 40</h2>
 <ul class="styled-list">
-<li><strong>The four pillars of coaching:</strong> Knowledge (what to teach), Observation (seeing what's happening), Communication (conveying it effectively), Rapport (creating the environment for learning).</li>
+<li>
+<p><strong>Coaching và playing are different skills.</strong> Great players aren't automatically great coaches. Coaching has its own knowledge base, observation skills, communication craft, và relationship dynamics.</p>
+</li>
+<li>
+<p><strong>The four pillars of coaching:</strong> Knowledge (what to teach), Observation (seeing what's happening), Communication (conveying it effectively), Rapport (creating the environment for learning).</p>
+</li>
+<li>
+<p><strong>Four stages of learning:</strong> Unconscious incompetence → Conscious incompetence → Conscious competence → Unconscious competence. Each stage needs different coaching approach.</p>
+</li>
+<li>
+<p><strong>IDEA lesson framework:</strong> Introduction → Demonstration → Execution → Application.</p>
+</li>
+<li>
+<p><strong>One correction at a time.</strong> Overloading students with feedback slows learning. One clear cue, executed, before moving to next.</p>
+</li>
+<li>
+<p><strong>Different students need different approaches:</strong> Beginners need fun và success. Intermediate players need habit-breaking với explanation. Advanced players need observation, not demonstration.</p>
+</li>
+<li>
+<p><strong>Children require developmental awareness:</strong> Shorter attention spans, game-based learning, effort praise, và strict load management.</p>
+</li>
+<li>
+<p><strong>Long-term program design:</strong> Assessment → goal setting → periodization → regular review.</p>
+</li>
+<li>
+<p><strong>The learning coach:</strong> Best coaches are perpetual students — certifications, mentors, peer observation, self-review.</p>
+</li>
+<li>
+<p><strong>Ethics:</strong> Student's interests first. No harm. Appropriate boundaries. Refer when appropriate.</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Four stages of learning:</strong> Unconscious incompetence → Conscious incompetence → Conscious competence → Unconscious competence. Each stage needs different coaching approach.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>IDEA lesson framework:</strong> Introduction → Demonstration → Execution → Application.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>One correction at a time.</strong> Overloading students with feedback slows learning. One clear cue, executed, before moving to next.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Different students need different approaches:</strong> Beginners need fun và success. Intermediate players need habit-breaking với explanation. Advanced players need observation, not demonstration.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Children require developmental awareness:</strong> Shorter attention spans, game-based learning, effort praise, và strict load management.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Long-term program design:</strong> Assessment → goal setting → periodization → regular review.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>The learning coach:</strong> Best coaches are perpetual students — certifications, mentors, peer observation, self-review.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Ethics:</strong> Student's interests first. No harm. Appropriate boundaries. Refer when appropriate.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-11"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 11</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 40 đã đặt nền tảng của coaching philosophy và methodology.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 40 đã đặt nền tảng của coaching philosophy và methodology.</p>
 <p>Chương 41 sẽ đi sâu hơn vào <strong>Coaching The Technical Game</strong> — cụ thể làm thế nào để teach từng stroke: forehand, backhand, serve, volley, và overhead — với breakdown of common errors và progressions cho từng shot.</p>
-<hr>
-<em>Chương 41: Coaching The Technical Game — Dạy Từng Stroke →</em></div>
+<hr/>
+<p><em>Chương 41: Coaching The Technical Game — Dạy Từng Stroke →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

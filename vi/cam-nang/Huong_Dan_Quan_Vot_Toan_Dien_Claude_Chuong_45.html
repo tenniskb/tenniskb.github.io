@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 45 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 45</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,262 +896,249 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 45</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 45</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 45</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">Chương 45: Kinh Doanh Nghề Huấn Luyện</h2><hr>
-> <em>"Do what you love and the money will follow — but only if you also understand how money works."</em>
-<p>> — Adapted</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 45 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#the-business-of-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>THE BUSINESS OF TENNIS</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-45-kinh-doanh-nghề-huấn-luyện' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 45: Kinh Doanh Nghề Huấn Luyện</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#451-hiểu-mô-hình-kinh-doanh-của-tennis-coaching' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.1 Hiểu Mô Hình Kinh Doanh Của Tennis Coaching</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#452-pricing--đặt-giá-đúng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.2 Pricing — Đặt Giá Đúng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#453-marketing--làm-cho-người-ta-biết-bạn-tồn-tại' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.3 Marketing — Làm Cho Người Ta Biết Bạn Tồn Tại</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#454-student-retention--giữ-học-viên-ở-lại' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.4 Student Retention — Giữ Học Viên Ở Lại</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#455-operations--chạy-doanh-nghiệp-hiệu-quả' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.5 Operations — Chạy Doanh Nghiệp Hiệu Quả</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#456-building-long-term-business-value' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.6 Building Long-Term Business Value</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#457-professional-development-as-a-business-investment' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.7 Professional Development As A Business Investment</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#458-common-business-mistakes--và-cách-tránh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>45.8 Common Business Mistakes — Và Cách Tránh</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-45' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 45</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="the-business-of-tennis">THE BUSINESS OF TENNIS</h1>
+<h2 id="chuong-45-kinh-doanh-nghe-huan-luyen">Chương 45: Kinh Doanh Nghề Huấn Luyện</h2>
+<hr/>
+<div class="pullquote"><p>*"Do what you love and the money will follow — but only if you also understand how money works."*
+&gt; — Adapted</p></div>
+<hr/>
 <p>Nhiều coach giỏi về tennis nhưng struggle về business.</p>
 <p>Họ biết dạy forehand. Họ biết design curriculum. Họ genuine về passion với game và với học viên của mình.</p>
 <p>Nhưng họ không biết đặt giá, không biết marketing, không biết manage cash flow, không biết retain students — và kết quả là brilliant coaches làm việc kiệt sức với thu nhập thấp hơn xứng đáng, hoặc quit coaching hoàn toàn vì không sustainable.</p>
 <p>Chương này là business education cho tennis coaches — practical, direct, và không apologize về việc nói về tiền. Vì một coaching business không sustainable là một coaching business không tồn tại — và đó không tốt cho ai, kể cả học viên.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.1 Hiểu Mô Hình Kinh Doanh Của Tennis Coaching</h2><h3>Ba Mô Hình Chính</h3>
-<strong>Model 1: Sole Practitioner (Tự Kinh Doanh)</strong>
+<hr/>
+<h2 id="451-hieu-mo-hinh-kinh-doanh-cua-tennis-coaching">45.1 Hiểu Mô Hình Kinh Doanh Của Tennis Coaching</h2>
+<h3 id="ba-mo-hinh-chinh">Ba Mô Hình Chính</h3>
+<p><strong>Model 1: Sole Practitioner (Tự Kinh Doanh)</strong></p>
 <p>Một coach, tự làm mọi thứ. Dạy học, admin, marketing, billing — tất cả là bạn.</p>
-<p>Pros: Tự do cao, overhead thấp, direct relationship với học viên.</p>
-<p>Cons: Income có ceiling (chỉ có nhiêu giờ trong ngày), không có team, vulnerable khi bị bệnh hay muốn nghỉ.</p>
+<p>Pros: Tự do cao, overhead thấp, direct relationship với học viên.
+Cons: Income có ceiling (chỉ có nhiêu giờ trong ngày), không có team, vulnerable khi bị bệnh hay muốn nghỉ.</p>
 <p>Phù hợp với: Coach mới bắt đầu, coach muốn flexibility, coach không muốn manage people.</p>
-<hr>
-<strong>Model 2: Club Coach (Làm Việc Tại Club)</strong>
+<hr/>
+<p><strong>Model 2: Club Coach (Làm Việc Tại Club)</strong></p>
 <p>Coach làm việc tại tennis club hoặc facility — có thể là employee hoặc contractor.</p>
-<p>Pros: Court access provided, member base existing, less admin, stable income.</p>
-<p>Cons: Less autonomy, revenue limited bởi club structure, dependent on club's health.</p>
+<p>Pros: Court access provided, member base existing, less admin, stable income.
+Cons: Less autonomy, revenue limited bởi club structure, dependent on club's health.</p>
 <p>Phù hợp với: Coaches muốn focus vào coaching không phải business operations.</p>
-<hr>
-<strong>Model 3: Academy / Program Director (Xây Dựng Academy)</strong>
+<hr/>
+<p><strong>Model 3: Academy / Program Director (Xây Dựng Academy)</strong></p>
 <p>Build a full program — multiple coaches, multiple students, structured curriculum.</p>
-<p>Pros: Scale, impact, brand building, multiple revenue streams.</p>
-<p>Cons: High complexity, management responsibility, significant capital requirements.</p>
+<p>Pros: Scale, impact, brand building, multiple revenue streams.
+Cons: High complexity, management responsibility, significant capital requirements.</p>
 <p>Phù hợp với: Coaches với entrepreneurial drive và management skills.</p>
-<hr>
-<h3>Revenue Streams Trong Tennis Coaching</h3>
+<hr/>
+<h3 id="revenue-streams-trong-tennis-coaching">Revenue Streams Trong Tennis Coaching</h3>
 <p>Đừng phụ thuộc vào một nguồn thu nhập duy nhất.</p>
-<strong>Primary revenue streams:</strong>
+<p><strong>Primary revenue streams:</strong></p>
 <p>Private lessons: Highest rate per hour, lowest scale.</p>
 <p>Group lessons: Lower rate per person, higher total per hour of court time.</p>
 <p>Programs và clinics: Structured multi-week programs. Predictable, block-paid revenue.</p>
 <p>Match supervision: Accompany students to tournaments, on-court coaching at events.</p>
-<strong>Secondary revenue streams:</strong>
+<p><strong>Secondary revenue streams:</strong></p>
 <p>String rackets: Requires skill, machine, materials — good add-on service.</p>
 <p>Equipment referrals: Partner with pro shop for commission.</p>
 <p>Online content: YouTube, courses, written content. Long-term passive income potential.</p>
 <p>Coach education: Train other coaches, consult for other facilities.</p>
-<strong>Revenue diversification principle:</strong> No single stream should represent more than 60% of total revenue. Diversification protects against losing key students, court access, or seasonal downturns.
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.2 Pricing — Đặt Giá Đúng</h2><h3>Tại Sao Underpricing Là Vấn Đề</h3>
+<p><strong>Revenue diversification principle:</strong> No single stream should represent more than 60% of total revenue. Diversification protects against losing key students, court access, or seasonal downturns.</p>
+<hr/>
+<h2 id="452-pricing-at-gia-ung">45.2 Pricing — Đặt Giá Đúng</h2>
+<h3 id="tai-sao-underpricing-la-van-e">Tại Sao Underpricing Là Vấn Đề</h3>
 <p>Nhiều coaches undercharge vì imposter syndrome, fear of losing students, hoặc confusion về giá trị họ cung cấp.</p>
-<strong>Consequences of underpricing:</strong>
+<p><strong>Consequences of underpricing:</strong></p>
 <p>Financial stress → coaching quality suffers (rushed, distracted, resentful).</p>
 <p>Unsustainable workload → burnout.</p>
 <p>Student perception: Low price signals low quality. Students often value coaching less when paying less.</p>
 <p>No margin to invest in development (certifications, equipment, education).</p>
-<strong>The reframe:</strong> Charging appropriately is not greed — it's what allows you to show up fully for your students, invest in your development, and sustain a career that benefits many people over many years.
-<hr>
-<h3>How To Set Your Rate</h3>
-<strong>Step 1: Research the market</strong>
-<p>What do coaches at comparable level charge in your area?</p>
-<p>What do facilities charge for group programs?</p>
-<p>What is the range from lowest to highest?</p>
+<p><strong>The reframe:</strong> Charging appropriately is not greed — it's what allows you to show up fully for your students, invest in your development, and sustain a career that benefits many people over many years.</p>
+<hr/>
+<h3 id="how-to-set-your-rate">How To Set Your Rate</h3>
+<p><strong>Step 1: Research the market</strong></p>
+<p>What do coaches at comparable level charge in your area?
+What do facilities charge for group programs?
+What is the range from lowest to highest?</p>
 <p>Don't just match lowest — understand the full range.</p>
-<strong>Step 2: Calculate your minimum viable rate</strong>
-<p>What do you need to earn per month to live sustainably?</p>
-<p>How many coaching hours per week are you willing/able to work?</p>
-<p>Divide monthly need by monthly hours. That's your floor.</p>
-<p>Example: Need 20 million VND/month. Can coach 80 hours/month.</p>
-<p>Floor rate: 250,000 VND/hour minimum.</p>
-<strong>Step 3: Position relative to value</strong>
-<p>Are you a certified coach with years of experience? Price toward upper range.</p>
-<p>New coach? Price mid-range and build up as reputation grows.</p>
-<p>Specialized expertise (high performance juniors, serve specialist)? Premium pricing justified.</p>
-<strong>Step 4: Test and adjust</strong>
-<p>Set a rate. If you're fully booked with a waiting list → rate is too low. Increase.</p>
-<p>If you're consistently losing potential students on price → may be too high for your market, or your value communication needs work.</p>
-<hr>
-<h3>Pricing Structure Options</h3>
-<strong>Hourly rate:</strong> Simple. Most common for private lessons.
-<strong>Package pricing:</strong> Buy 10 lessons, get discount vs. paying per lesson.
-<p>Benefits: Commitment from student, cash flow predictability for coach.</p>
-<p>Structure: Single lesson rate vs. 10-pack rate (typically 10-15% discount).</p>
-<strong>Monthly membership:</strong> Fixed monthly fee for defined number of sessions.
-<p>Benefits: Maximum revenue predictability. Student feels invested.</p>
-<p>Challenge: Managing cancellations and makeups.</p>
-<strong>Program fees:</strong> Single payment for entire block (e.g., 8-week program).
-<p>Benefits: Full payment upfront, high commitment from students.</p>
-<p>Challenge: Refund policy must be clear.</p>
-<strong>Group vs. private pricing:</strong>
+<p><strong>Step 2: Calculate your minimum viable rate</strong></p>
+<p>What do you need to earn per month to live sustainably?
+How many coaching hours per week are you willing/able to work?
+Divide monthly need by monthly hours. That's your floor.</p>
+<p>Example: Need 20 million VND/month. Can coach 80 hours/month.
+Floor rate: 250,000 VND/hour minimum.</p>
+<p><strong>Step 3: Position relative to value</strong></p>
+<p>Are you a certified coach with years of experience? Price toward upper range.
+New coach? Price mid-range and build up as reputation grows.
+Specialized expertise (high performance juniors, serve specialist)? Premium pricing justified.</p>
+<p><strong>Step 4: Test and adjust</strong></p>
+<p>Set a rate. If you're fully booked with a waiting list → rate is too low. Increase.
+If you're consistently losing potential students on price → may be too high for your market, or your value communication needs work.</p>
+<hr/>
+<h3 id="pricing-structure-options">Pricing Structure Options</h3>
+<p><strong>Hourly rate:</strong> Simple. Most common for private lessons.</p>
+<p><strong>Package pricing:</strong> Buy 10 lessons, get discount vs. paying per lesson.</p>
+<p>Benefits: Commitment from student, cash flow predictability for coach.
+Structure: Single lesson rate vs. 10-pack rate (typically 10-15% discount).</p>
+<p><strong>Monthly membership:</strong> Fixed monthly fee for defined number of sessions.</p>
+<p>Benefits: Maximum revenue predictability. Student feels invested.
+Challenge: Managing cancellations and makeups.</p>
+<p><strong>Program fees:</strong> Single payment for entire block (e.g., 8-week program).</p>
+<p>Benefits: Full payment upfront, high commitment from students.
+Challenge: Refund policy must be clear.</p>
+<p><strong>Group vs. private pricing:</strong></p>
 <p>Group lessons should NOT be priced as "private divided by number of students." Group provides different value (competition, social, variety) — price accordingly.</p>
 <p>Typical relationship: Group lesson = 30-50% of private rate per person.</p>
 <p>Example: Private = 500,000 VND/hour. Group of 4 = 150,000-200,000 VND per person per hour. Total court revenue = 600,000-800,000 VND/hour — higher than private.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.3 Marketing — Làm Cho Người Ta Biết Bạn Tồn Tại</h2><h3>The Best Marketing Is Great Coaching</h3>
+<hr/>
+<h2 id="453-marketing-lam-cho-nguoi-ta-biet-ban-ton-tai">45.3 Marketing — Làm Cho Người Ta Biết Bạn Tồn Tại</h2>
+<h3 id="the-best-marketing-is-great-coaching">The Best Marketing Is Great Coaching</h3>
 <p>Word of mouth is the most powerful marketing for tennis coaches — and it's earned, not bought.</p>
 <p>A student who improves dramatically tells their friends. A student who has great experience at your clinic tells their club. A junior player who develops well under your coaching becomes your living portfolio.</p>
-<strong>Implication:</strong> Invest in coaching quality first. Marketing amplifies what's already there — it cannot compensate for poor coaching.
-<hr>
-<h3>Building Your Reputation</h3>
-<strong>Results:</strong> Track and share student improvements. "John went from 0 to 60kph serve in 3 months." Specific, concrete, believable.
-<strong>Testimonials:</strong> Ask satisfied students (and parents of juniors) for written testimonials. Use on website, social media, and when pitching to new students.
-<strong>Community presence:</strong> Show up at club events, local tournaments, tennis community gatherings. Be known, be visible, be generous with knowledge.
-<strong>Referral program:</strong> Incentivize current students to refer new students. Simple: "Refer a friend who signs up for a program — you get one free lesson."
-<hr>
-<h3>Digital Presence</h3>
+<p><strong>Implication:</strong> Invest in coaching quality first. Marketing amplifies what's already there — it cannot compensate for poor coaching.</p>
+<hr/>
+<h3 id="building-your-reputation">Building Your Reputation</h3>
+<p><strong>Results:</strong> Track and share student improvements. "John went from 0 to 60kph serve in 3 months." Specific, concrete, believable.</p>
+<p><strong>Testimonials:</strong> Ask satisfied students (and parents of juniors) for written testimonials. Use on website, social media, and when pitching to new students.</p>
+<p><strong>Community presence:</strong> Show up at club events, local tournaments, tennis community gatherings. Be known, be visible, be generous with knowledge.</p>
+<p><strong>Referral program:</strong> Incentivize current students to refer new students. Simple: "Refer a friend who signs up for a program — you get one free lesson."</p>
+<hr/>
+<h3 id="digital-presence">Digital Presence</h3>
 <p>In 2026, potential students and parents will search for you online before contacting you. What will they find?</p>
-<strong>Minimum digital presence:</strong>
+<p><strong>Minimum digital presence:</strong></p>
 <p>Social media (Facebook, Instagram, or TikTok depending on your market): Regular posts showing coaching in action, student progress highlights, tips. Consistency matters more than production quality.</p>
 <p>Google Business Profile: Free listing that appears in local searches. Include photos, hours, contact info, and collect reviews.</p>
-<strong>Optional but valuable:</strong>
+<p><strong>Optional but valuable:</strong></p>
 <p>Website: Professional presence, detailed program information, booking capability.</p>
 <p>YouTube channel: Coaching tips content builds authority and attracts students who discover you through search.</p>
-<hr>
-<h3>Content Marketing For Coaches</h3>
+<hr/>
+<h3 id="content-marketing-for-coaches">Content Marketing For Coaches</h3>
 <p>Create value before asking for anything in return.</p>
-<strong>Ideas:</strong>
+<p><strong>Ideas:</strong></p>
 <p>Short video tips: "3 things recreational players do wrong with their serve" — posted on social media. Demonstrates expertise. Attracts potential students.</p>
 <p>Written content: Blog posts or Facebook notes about common tennis problems. "Why your forehand breaks down under pressure — and what to do about it."</p>
 <p>Free clinics: Offer a free 1-hour intro clinic monthly. Low barrier to experience your coaching. Convert interested participants to paying students.</p>
-<strong>The trust-building sequence:</strong>
+<p><strong>The trust-building sequence:</strong></p>
 <p>Stranger sees your free content → finds it valuable → trusts your expertise → reaches out → becomes student.</p>
 <p>Content marketing accelerates this sequence compared to cold outreach.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.4 Student Retention — Giữ Học Viên Ở Lại</h2><h3>Why Retention Is More Important Than Acquisition</h3>
+<hr/>
+<h2 id="454-student-retention-giu-hoc-vien-o-lai">45.4 Student Retention — Giữ Học Viên Ở Lại</h2>
+<h3 id="why-retention-is-more-important-than-acquisition">Why Retention Is More Important Than Acquisition</h3>
 <p>Finding a new student costs significantly more time and energy than keeping an existing one.</p>
 <p>The economics: If you retain 90% of students each term vs. 70%, you need far less new student acquisition to maintain or grow your business.</p>
-<strong>Retention is the foundation of a sustainable coaching business.</strong>
-<hr>
-<h3>Why Students Leave — And How To Prevent It</h3>
-<strong>Reason 1: Not seeing progress</strong>
+<p><strong>Retention is the foundation of a sustainable coaching business.</strong></p>
+<hr/>
+<h3 id="why-students-leave-and-how-to-prevent-it">Why Students Leave — And How To Prevent It</h3>
+<p><strong>Reason 1: Not seeing progress</strong></p>
 <p>Students who don't feel they're improving quit — even if they objectively are.</p>
 <p>Prevention: Make progress visible. Regular assessments. Specific acknowledgment of improvements. "Remember two months ago when you couldn't sustain a rally? Watch you now."</p>
-<hr>
-<strong>Reason 2: Life changes</strong>
+<hr/>
+<p><strong>Reason 2: Life changes</strong></p>
 <p>Schedule changes, financial pressure, relocation, family demands. Some churn is inevitable.</p>
 <p>Prevention: Build deep enough relationship that students communicate before quitting. If you know someone is struggling financially, you can offer solutions (reduced schedule, group instead of private) rather than losing them completely.</p>
-<hr>
-<strong>Reason 3: Plateaued and bored</strong>
+<hr/>
+<p><strong>Reason 3: Plateaued and bored</strong></p>
 <p>Students who feel stuck often disengage.</p>
 <p>Prevention: Regular curriculum refresh, new challenges, competition opportunities, variety in sessions. If a student has been in the same group for 2 years — is it time to advance them?</p>
-<hr>
-<strong>Reason 4: Relationship with coach deteriorated</strong>
+<hr/>
+<p><strong>Reason 4: Relationship with coach deteriorated</strong></p>
 <p>Student feels unheard, disrespected, or that coach doesn't care about them personally.</p>
 <p>Prevention: Regular check-ins beyond tennis. "How's school/work going?" Remember details about their life. Students stay where they feel valued as people, not just as clients.</p>
-<hr>
-<strong>Reason 5: Found a better option</strong>
+<hr/>
+<p><strong>Reason 5: Found a better option</strong></p>
 <p>Another program, another coach, better facilities.</p>
 <p>Prevention: Know your competition. Continuously improve. Build loyalty through relationship depth — hard to replicate with a new coach.</p>
-<hr>
-<h3>Retention Practices</h3>
-<strong>Regular progress conversations:</strong> Every 6-8 weeks, brief check-in: "How are you feeling about your progress? What would you like to focus on?"
-<strong>Re-enrollment system:</strong> Don't wait for students to ask about next term. Proactively communicate: "Term 3 starts in 3 weeks — here's what we'll be working on. Are you in?"
-<strong>Milestone recognition:</strong> Celebrate when students reach milestones. First tournament win. First time completing a rally target. First kick serve. Recognition costs nothing and builds loyalty significantly.
-<strong>Community building:</strong> Students who have friends in the program are far less likely to leave than those who attend solo. Create opportunities for student connection — team events, social matches, end-of-term gatherings.
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.5 Operations — Chạy Doanh Nghiệp Hiệu Quả</h2><h3>Scheduling Systems</h3>
+<hr/>
+<h3 id="retention-practices">Retention Practices</h3>
+<p><strong>Regular progress conversations:</strong> Every 6-8 weeks, brief check-in: "How are you feeling about your progress? What would you like to focus on?"</p>
+<p><strong>Re-enrollment system:</strong> Don't wait for students to ask about next term. Proactively communicate: "Term 3 starts in 3 weeks — here's what we'll be working on. Are you in?"</p>
+<p><strong>Milestone recognition:</strong> Celebrate when students reach milestones. First tournament win. First time completing a rally target. First kick serve. Recognition costs nothing and builds loyalty significantly.</p>
+<p><strong>Community building:</strong> Students who have friends in the program are far less likely to leave than those who attend solo. Create opportunities for student connection — team events, social matches, end-of-term gatherings.</p>
+<hr/>
+<h2 id="455-operations-chay-doanh-nghiep-hieu-qua">45.5 Operations — Chạy Doanh Nghiệp Hiệu Quả</h2>
+<h3 id="scheduling-systems">Scheduling Systems</h3>
 <p>Scheduling is where many coaches waste enormous time — back-and-forth messages, double bookings, forgotten sessions.</p>
-<strong>Invest in scheduling software:</strong>
+<p><strong>Invest in scheduling software:</strong></p>
 <p>Options: Acuity Scheduling, Calendly, CoachSeek (tennis-specific), or even a well-maintained Google Calendar.</p>
-<p>Features to look for:</p>
-<ul class="styled-list">
-<li>Online booking (students book themselves — saves your time)</li>
-<li>Automated reminders (reduces no-shows)</li>
-<li>Payment integration (collect payment at booking)</li>
-<li>Group lesson management</li>
-</ul>
-<strong>Policy clarity:</strong>
+<p>Features to look for:
+- Online booking (students book themselves — saves your time)
+- Automated reminders (reduces no-shows)
+- Payment integration (collect payment at booking)
+- Group lesson management</p>
+<p><strong>Policy clarity:</strong></p>
 <p>Cancellation policy: How much notice required? What happens to missed sessions? Be clear in writing before problems arise.</p>
 <p>Payment terms: When is payment due? What happens with late payment?</p>
 <p>Makeup policy: Do missed sessions get made up? Under what conditions?</p>
 <p>Students (and parents) respect clear policies — even strict ones — more than unclear or inconsistently applied ones.</p>
-<hr>
-<h3>Financial Management</h3>
-<strong>Separate business và personal finances:</strong> Open a dedicated bank account for coaching income and expenses. This is non-negotiable for clarity and tax purposes.
-<strong>Track everything:</strong>
+<hr/>
+<h3 id="financial-management">Financial Management</h3>
+<p><strong>Separate business và personal finances:</strong> Open a dedicated bank account for coaching income and expenses. This is non-negotiable for clarity and tax purposes.</p>
+<p><strong>Track everything:</strong></p>
 <p>Income: Every lesson, every program payment, every other revenue source.</p>
 <p>Expenses: Court rental, equipment, certifications, transport, marketing, insurance, software.</p>
-<strong>Know your numbers monthly:</strong>
-<p>Total income this month?</p>
-<p>Total expenses?</p>
-<p>Net profit?</p>
-<p>Which revenue stream is largest? Which is growing?</p>
-<strong>Tax obligations:</strong>
+<p><strong>Know your numbers monthly:</strong></p>
+<p>Total income this month?
+Total expenses?
+Net profit?
+Which revenue stream is largest? Which is growing?</p>
+<p><strong>Tax obligations:</strong></p>
 <p>Understand your local tax requirements. In Vietnam, individual business income is taxable. Keep records. Consider working with an accountant once income is significant.</p>
-<hr>
-<h3>Insurance</h3>
+<hr/>
+<h3 id="insurance">Insurance</h3>
 <p>Often overlooked until something goes wrong.</p>
-<strong>Professional liability insurance:</strong> Covers claims that your coaching caused harm (injury, negligence).
-<strong>Personal accident insurance:</strong> Covers you if you're injured while coaching.
+<p><strong>Professional liability insurance:</strong> Covers claims that your coaching caused harm (injury, negligence).</p>
+<p><strong>Personal accident insurance:</strong> Covers you if you're injured while coaching.</p>
 <p>Check requirements of the facility you coach at — many require coaches to carry their own insurance.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.6 Building Long-Term Business Value</h2><h3>From Freelancer To Business</h3>
+<hr/>
+<h2 id="456-building-long-term-business-value">45.6 Building Long-Term Business Value</h2>
+<h3 id="from-freelancer-to-business">From Freelancer To Business</h3>
 <p>Many sole practitioner coaches are "freelancers" — their income stops when they stop working.</p>
 <p>Building a business means creating systems, reputation, and assets that have value beyond your personal effort.</p>
-<strong>Assets that build business value:</strong>
+<p><strong>Assets that build business value:</strong></p>
 <p>Established student base: A loyal student base is a business asset — it has value even if you hire another coach to serve it.</p>
 <p>Brand reputation: Your name, your methodology, your documented results.</p>
 <p>Systems and curriculum: Documented, teachable coaching systems that others can deliver.</p>
 <p>Multiple coaches: A team means the business can grow beyond your personal hours.</p>
-<strong>The test:</strong> Could you take 4 weeks off without your business collapsing? If no — you have a job, not a business. Building toward "yes" is the entrepreneurial goal.
-<hr>
-<h3>Scaling Options</h3>
-<strong>Option 1: Raise rates</strong>
+<p><strong>The test:</strong> Could you take 4 weeks off without your business collapsing? If no — you have a job, not a business. Building toward "yes" is the entrepreneurial goal.</p>
+<hr/>
+<h3 id="scaling-options">Scaling Options</h3>
+<p><strong>Option 1: Raise rates</strong></p>
 <p>Serve fewer students at higher rates. Same or better income, more time for quality, less burnout.</p>
 <p>Best when: You're consistently fully booked and turning students away.</p>
-<strong>Option 2: Add group programs</strong>
+<p><strong>Option 2: Add group programs</strong></p>
 <p>More students per court hour. Higher total revenue without more court time.</p>
 <p>Best when: You have individual student base to seed groups from.</p>
-<strong>Option 3: Hire coaches</strong>
+<p><strong>Option 3: Hire coaches</strong></p>
 <p>Bring in additional coaches. You earn margin on their coaching hours. Revenue scales beyond your personal hours.</p>
 <p>Challenge: Quality control. Your reputation is attached to their coaching.</p>
-<strong>Option 4: Online revenue</strong>
+<p><strong>Option 4: Online revenue</strong></p>
 <p>Courses, video content, memberships. Revenue not tied to court time.</p>
 <p>Best when: You have established reputation and content creation skills/time.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.7 Professional Development As A Business Investment</h2><h3>Certifications And Their Value</h3>
+<hr/>
+<h2 id="457-professional-development-as-a-business-investment">45.7 Professional Development As A Business Investment</h2>
+<h3 id="certifications-and-their-value">Certifications And Their Value</h3>
 <p>Coaching certifications from ITF, PTR, USPTA, và national federations have real business value:</p>
 <ul class="styled-list">
 <li>Credibility with students và parents</li>
@@ -1159,84 +1147,95 @@ footer .credit-label { color: var(--gold); }
 <li>Professional network</li>
 <li>Structured knowledge framework</li>
 </ul>
-<strong>Investment vs. return:</strong>
+<p><strong>Investment vs. return:</strong></p>
 <p>A certification course costs time and money. Return comes from higher rates justified by credentials và access to better opportunities.</p>
-<strong>Minimum recommended certifications:</strong>
+<p><strong>Minimum recommended certifications:</strong></p>
 <p>National federation level 1 or 2 (appropriate for your coaching scope).</p>
 <p>First aid/CPR certification (often required by facilities, essential for safety).</p>
-<strong>Advanced certifications:</strong>
+<p><strong>Advanced certifications:</strong></p>
 <p>ITF Level 3, PTR Professional, or equivalent — for coaches building serious careers or working with competitive juniors.</p>
-<hr>
-<h3>Networking As Business Development</h3>
+<hr/>
+<h3 id="networking-as-business-development">Networking As Business Development</h3>
 <p>Your professional network determines your opportunities.</p>
-<strong>Who to know:</strong>
+<p><strong>Who to know:</strong></p>
 <p>Other coaches: Referrals when you're full or don't cover certain specialties.</p>
 <p>Club managers: Access to court time and facilities.</p>
 <p>Tournament organizers: Visibility, competition opportunities for students.</p>
 <p>Parents in influential positions: Many club boards are dominated by parent volunteers.</p>
 <p>Sports medical professionals: Physiotherapists, sports doctors — mutual referral relationships.</p>
 <p>School PE departments: Access to school programs, recruitment pipeline.</p>
-<strong>How to build network:</strong>
+<p><strong>How to build network:</strong></p>
 <p>Show up at tennis community events. Be generous — share knowledge, offer help. Follow up after meetings. Reciprocate referrals.</p>
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">45.8 Common Business Mistakes — Và Cách Tránh</h2><h3>Mistake 1: Undercharging And Overworking</h3>
+<hr/>
+<h2 id="458-common-business-mistakes-va-cach-tranh">45.8 Common Business Mistakes — Và Cách Tránh</h2>
+<h3 id="mistake-1-undercharging-and-overworking">Mistake 1: Undercharging And Overworking</h3>
 <p>The most common path to burnout. Charging too little forces too many hours. Too many hours reduces quality and personal sustainability.</p>
-<strong>Fix:</strong> Calculate minimum viable rate. Raise rates gradually. Reduce hours as rates increase. Quality over quantity.
-<hr>
-<h3>Mistake 2: No Written Agreements</h3>
+<p><strong>Fix:</strong> Calculate minimum viable rate. Raise rates gradually. Reduce hours as rates increase. Quality over quantity.</p>
+<hr/>
+<h3 id="mistake-2-no-written-agreements">Mistake 2: No Written Agreements</h3>
 <p>Verbal agreements are forgotten, misremembered, và legally unenforceable.</p>
-<strong>Fix:</strong> Simple written agreement for every student covering: rates, cancellation policy, payment terms, program structure. Does not need to be a legal document — a clear email confirmation works.
-<hr>
-<h3>Mistake 3: Mixing Business And Personal Relationships</h3>
+<p><strong>Fix:</strong> Simple written agreement for every student covering: rates, cancellation policy, payment terms, program structure. Does not need to be a legal document — a clear email confirmation works.</p>
+<hr/>
+<h3 id="mistake-3-mixing-business-and-personal-relationships">Mistake 3: Mixing Business And Personal Relationships</h3>
 <p>Coaching friends or family at heavily discounted or free rates, then feeling resentful. Or lending money to struggling students. Or becoming too personally enmeshed.</p>
-<strong>Fix:</strong> Professional boundaries. Friends and family who want coaching pay standard rate (or you decide not to coach them). Personal relationships and business relationships are different.
-<hr>
-<h3>Mistake 4: No Emergency Fund</h3>
+<p><strong>Fix:</strong> Professional boundaries. Friends and family who want coaching pay standard rate (or you decide not to coach them). Personal relationships and business relationships are different.</p>
+<hr/>
+<h3 id="mistake-4-no-emergency-fund">Mistake 4: No Emergency Fund</h3>
 <p>One injury, one illness, one facility closure — and income stops.</p>
-<strong>Fix:</strong> Build 3 months of operating expenses as emergency fund before scaling. Protects against disruption.
-<hr>
-<h3>Mistake 5: Neglecting Admin Until It's Overwhelming</h3>
+<p><strong>Fix:</strong> Build 3 months of operating expenses as emergency fund before scaling. Protects against disruption.</p>
+<hr/>
+<h3 id="mistake-5-neglecting-admin-until-its-overwhelming">Mistake 5: Neglecting Admin Until It's Overwhelming</h3>
 <p>Letting invoices pile up, not tracking income, missing tax obligations.</p>
-<strong>Fix:</strong> 30 minutes per week of admin — invoicing, record-keeping, responding to inquiries. Regular small effort prevents crisis.
-<hr>
-<h3>Mistake 6: Not Asking For Referrals</h3>
+<p><strong>Fix:</strong> 30 minutes per week of admin — invoicing, record-keeping, responding to inquiries. Regular small effort prevents crisis.</p>
+<hr/>
+<h3 id="mistake-6-not-asking-for-referrals">Mistake 6: Not Asking For Referrals</h3>
 <p>Most coaches wait passively for word of mouth. Referrals can be accelerated.</p>
-<strong>Fix:</strong> When a student is clearly happy — ask directly: "Do you know anyone who might benefit from coaching? I'd love an introduction." Most satisfied students are happy to refer — they just need to be asked.
-<hr></div>
-<div class="chapter" id="chapter-45"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 45</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 45</h2><ul class="styled-list">
-<li><strong>Three coaching business models:</strong> Sole practitioner, club coach, academy director. Each has different tradeoffs. Know which fits your goals.</li>
-</ul>
+<p><strong>Fix:</strong> When a student is clearly happy — ask directly: "Do you know anyone who might benefit from coaching? I'd love an introduction." Most satisfied students are happy to refer — they just need to be asked.</p>
+<hr/>
+<h2 id="tom-tat-chuong-45">Tóm Tắt Chương 45</h2>
 <ul class="styled-list">
-<li><strong>Diversify revenue streams.</strong> Private lessons, groups, programs, secondary services. No single stream over 60% of revenue.</li>
+<li>
+<p><strong>Three coaching business models:</strong> Sole practitioner, club coach, academy director. Each has different tradeoffs. Know which fits your goals.</p>
+</li>
+<li>
+<p><strong>Diversify revenue streams.</strong> Private lessons, groups, programs, secondary services. No single stream over 60% of revenue.</p>
+</li>
+<li>
+<p><strong>Pricing:</strong> Calculate minimum viable rate. Position relative to value. Test and adjust. Don't underprice — it hurts you and your students.</p>
+</li>
+<li>
+<p><strong>Marketing:</strong> Great coaching is foundation. Build reputation through results, testimonials, community presence. Minimum digital: social media + Google Business Profile.</p>
+</li>
+<li>
+<p><strong>Retention over acquisition.</strong> Make progress visible. Build relationships. Proactive re-enrollment. Community among students.</p>
+</li>
+<li>
+<p><strong>Operations:</strong> Scheduling software, clear policies, separate finances, track everything monthly, insurance.</p>
+</li>
+<li>
+<p><strong>Build business value.</strong> Systems, curriculum, team, reputation. Test: Can you take 4 weeks off?</p>
+</li>
+<li>
+<p><strong>Scaling options:</strong> Raise rates, add groups, hire coaches, online revenue.</p>
+</li>
+<li>
+<p><strong>Professional development:</strong> Certifications build credibility and opportunity. Network determines access.</p>
+</li>
+<li>
+<p><strong>Common mistakes:</strong> Undercharging, no written agreements, mixed personal/business relationships, no emergency fund, neglecting admin, not asking for referrals.</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Pricing:</strong> Calculate minimum viable rate. Position relative to value. Test and adjust. Don't underprice — it hurts you and your students.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Marketing:</strong> Great coaching is foundation. Build reputation through results, testimonials, community presence. Minimum digital: social media + Google Business Profile.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Retention over acquisition.</strong> Make progress visible. Build relationships. Proactive re-enrollment. Community among students.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Operations:</strong> Scheduling software, clear policies, separate finances, track everything monthly, insurance.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Build business value.</strong> Systems, curriculum, team, reputation. Test: Can you take 4 weeks off?</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Scaling options:</strong> Raise rates, add groups, hire coaches, online revenue.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Professional development:</strong> Certifications build credibility and opportunity. Network determines access.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Common mistakes:</strong> Undercharging, no written agreements, mixed personal/business relationships, no emergency fund, neglecting admin, not asking for referrals.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-11"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 11</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Phần IV (Chương 40-45) đã cover toàn bộ coaching world — từ individual teaching skills đến program design đến business sustainability.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Phần IV (Chương 40-45) đã cover toàn bộ coaching world — từ individual teaching skills đến program design đến business sustainability.</p>
 <p>Chương 46 mở Phần V với một chủ đề hoàn toàn khác: <strong>Tennis Culture And History</strong> — câu chuyện của tennis, những nhân vật định hình nó, những moments làm nên lịch sử, và tennis như là văn hóa toàn cầu. Đây là phần dành cho người yêu tennis muốn hiểu sâu hơn về game họ đang chơi.</p>
-<hr>
-<em>Chương 46: Tennis Culture And History — Câu Chuyện Của Một Môn Thể Thao →</em></div>
+<hr/>
+<p><em>Chương 46: Tennis Culture And History — Câu Chuyện Của Một Môn Thể Thao →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

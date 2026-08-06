@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 41 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 41</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,286 +896,266 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 41</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 41</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 41</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">Chương 41: Dạy Từng Stroke</h2><hr>
-> <em>"A good teacher makes the difficult seem simple. A great teacher makes the simple seem profound."</em>
-<p>> — Anonymous</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 41 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#coaching-the-technical-game' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>COACHING THE TECHNICAL GAME</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-41-dạy-từng-stroke' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 41: Dạy Từng Stroke</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#411-nguyên-tắc-chung-khi-dạy-kỹ-thuật' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.1 Nguyên Tắc Chung Khi Dạy Kỹ Thuật</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#412-dạy-forehand' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.2 Dạy Forehand</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#413-dạy-backhand' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.3 Dạy Backhand</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#414-dạy-serve' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.4 Dạy Serve</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#415-dạy-volley' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.5 Dạy Volley</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#416-dạy-overhead' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.6 Dạy Overhead</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#417-specialty-shots' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.7 Specialty Shots</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#418-return-of-serve' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>41.8 Return Of Serve</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-41' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 41</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="coaching-the-technical-game">COACHING THE TECHNICAL GAME</h1>
+<h2 id="chuong-41-day-tung-stroke">Chương 41: Dạy Từng Stroke</h2>
+<hr/>
+<div class="pullquote"><p>*"A good teacher makes the difficult seem simple. A great teacher makes the simple seem profound."*
+&gt; — Anonymous</p></div>
+<hr/>
 <p>Chương 40 đặt nền tảng của coaching philosophy và methodology.</p>
-Chương này đi vào thực chiến: <strong>Làm thế nào để dạy từng stroke cụ thể?</strong>
-
+<p>Chương này đi vào thực chiến: <strong>Làm thế nào để dạy từng stroke cụ thể?</strong></p>
 <p>Đây là kiến thức mà coaches cần hàng ngày — không phải lý thuyết trừu tượng mà là practical blueprint: cách break down mỗi shot, những errors phổ biến nhất, cách identify nguyên nhân, và cách design progressions để học viên phát triển từ beginner đến advanced.</p>
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.1 Nguyên Tắc Chung Khi Dạy Kỹ Thuật</h2><h3>Dạy Từ Ground Up</h3>
+<hr/>
+<h2 id="411-nguyen-tac-chung-khi-day-ky-thuat">41.1 Nguyên Tắc Chung Khi Dạy Kỹ Thuật</h2>
+<h3 id="day-tu-ground-up">Dạy Từ Ground Up</h3>
 <p>Mọi stroke trong tennis bắt đầu từ mặt đất: Feet → legs → hips → core → shoulder → arm → wrist → racket → ball.</p>
 <p>Đây là kinetic chain. Khi một link bị break — thường là ở feet hoặc hips — toàn bộ chain bị ảnh hưởng.</p>
-<strong>Practical implication:</strong> Khi học viên có arm error, hãy check feet và hips trước. Hầu hết arm errors là downstream consequence của upstream problems.
-<h3>Dạy Pattern Trước Detail</h3>
+<p><strong>Practical implication:</strong> Khi học viên có arm error, hãy check feet và hips trước. Hầu hết arm errors là downstream consequence của upstream problems.</p>
+<h3 id="day-pattern-truoc-detail">Dạy Pattern Trước Detail</h3>
 <p>Beginners không cần biết về pronation hay external rotation. Họ cần biết cách swing racket trong đúng shape và timing.</p>
-<strong>Teaching order:</strong>
-<p>1. Overall pattern (shape of swing, timing)</p>
-<p>2. Contact point (where và when to meet ball)</p>
-<p>3. Footwork (how to set up for the pattern)</p>
-<p>4. Finish (follow-through and recovery)</p>
-<p>5. Technical refinements (intermediate và advanced only)</p>
-<h3>Technique Phục Vụ Outcome</h3>
+<p><strong>Teaching order:</strong>
+1. Overall pattern (shape of swing, timing)
+2. Contact point (where và when to meet ball)
+3. Footwork (how to set up for the pattern)
+4. Finish (follow-through and recovery)
+5. Technical refinements (intermediate và advanced only)</p>
+<h3 id="technique-phuc-vu-outcome">Technique Phục Vụ Outcome</h3>
 <p>Technique không phải là mục tiêu — nó là phương tiện. Mục tiêu là bóng đi đúng hướng, đúng tốc độ, đúng spin, một cách consistent.</p>
-<strong>Coach's question trước mọi technical intervention:</strong> "Is this technique causing a problem? If not, don't fix it."
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.2 Dạy Forehand</h2><h3>Forehand Progressions</h3>
-<strong>Level 1: Catch và Feed (Complete Beginners)</strong>
+<p><strong>Coach's question trước mọi technical intervention:</strong> "Is this technique causing a problem? If not, don't fix it."</p>
+<hr/>
+<h2 id="412-day-forehand">41.2 Dạy Forehand</h2>
+<h3 id="forehand-progressions">Forehand Progressions</h3>
+<p><strong>Level 1: Catch và Feed (Complete Beginners)</strong></p>
 <p>Trước khi swing, học viên phải hiểu contact point.</p>
 <p>Drill: Coach toss bóng chậm, học viên catch bằng tay ở vị trí contact — in front of body, arm extended. Sau khi consistent, replace hand với racket.</p>
 <p>Teaching point: Contact point in front of front foot, arm slightly extended.</p>
-<strong>Level 2: Mini Tennis (Beginner)</strong>
+<p><strong>Level 2: Mini Tennis (Beginner)</strong></p>
 <p>Chơi từ service line. Khoảng cách ngắn → bóng chậm → thời gian để set up.</p>
 <p>Focus: Unit turn, contact point in front, simple follow-through. Không quan tâm đến power hay topspin.</p>
-<strong>Level 3: Full Court Groundstroke (Beginner-Intermediate)</strong>
+<p><strong>Level 3: Full Court Groundstroke (Beginner-Intermediate)</strong></p>
 <p>Coach feed từ basket. Focus: Split step, adjustment steps, loading position. Swing path từ low đến high.</p>
-<strong>Cue:</strong> "Wait, wait, NOW" — develop patience for contact point.
-<strong>Level 4: Topspin Development (Intermediate)</strong>
+<p><strong>Cue:</strong> "Wait, wait, NOW" — develop patience for contact point.</p>
+<p><strong>Level 4: Topspin Development (Intermediate)</strong></p>
 <p>Focus: Steeper low-to-high swing path. Brush back of ball từ 7 o'clock đến 1 o'clock.</p>
-<strong>Feel cue:</strong> "Brush up the back of the ball like wiping a dirty windshield."
-<strong>Common error:</strong> Arm swing without body rotation.
-<strong>Fix:</strong> "Turn your belly button to the target as you swing."
-<strong>Level 5: Open Stance và Power (Intermediate-Advanced)</strong>
+<p><strong>Feel cue:</strong> "Brush up the back of the ball like wiping a dirty windshield."</p>
+<p><strong>Common error:</strong> Arm swing without body rotation.
+<strong>Fix:</strong> "Turn your belly button to the target as you swing."</p>
+<p><strong>Level 5: Open Stance và Power (Intermediate-Advanced)</strong></p>
 <p>Focus: Hip rotation initiates swing. Shoulders follow hips. Arm follows shoulders.</p>
-<strong>Drill:</strong> Hit từ open stance only for 20 balls. Exaggerate hip rotation.
-<strong>Level 6: Inside-Out Forehand (Advanced)</strong>
+<p><strong>Drill:</strong> Hit từ open stance only for 20 balls. Exaggerate hip rotation.</p>
+<p><strong>Level 6: Inside-Out Forehand (Advanced)</strong></p>
 <p>Step around backhand side ball to hit forehand.</p>
-<strong>Drill:</strong> Coach feeds alternately to forehand và backhand side. On backhand feed, player decides whether to run around it or hit backhand.
-<hr>
-<h3>Common Forehand Errors</h3>
-<strong>Ball goes into net consistently:</strong>
-<ul class="styled-list">
-<li>Check contact point — is it too late?</li>
-<li>Check swing path — is player swinging flat?</li>
-<li><strong>Fix:</strong> "Finish with your racket on your left shoulder" — teaches upward path.</li>
-</ul>
-<strong>Ball consistently goes wide:</strong>
-<ul class="styled-list">
-<li>Check racket face at contact — is it open?</li>
-<li><strong>Fix:</strong> "After contact, racket crosses your body to the left."</li>
-</ul>
-<strong>No power despite big swing:</strong>
-<ul class="styled-list">
-<li>Check body rotation — is player all arm?</li>
-<li><strong>Fix:</strong> "Grip loosely until contact — then firm up at impact."</li>
-</ul>
-<strong>Inconsistency:</strong>
-<ul class="styled-list">
-<li>Usually contact point varies — sometimes in front, sometimes late.</li>
-<li><strong>Fix:</strong> Ball toss drill to establish consistent contact height and timing.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.3 Dạy Backhand</h2><h3>One-Handed vs. Two-Handed</h3>
-<strong>Two-handed:</strong> Easier to learn, more stable for children, less reach, less slice versatility.
-<strong>One-handed:</strong> More reach, more versatility, higher ceiling, harder to develop.
-<strong>General recommendation:</strong>
-<ul class="styled-list">
-<li>Children under 10: Two-handed almost always better.</li>
-<li>Adults: Ask preference, observe what feels natural.</li>
-<li>Once committed: Don't switch unless compelling reason.</li>
-</ul>
-<hr>
-<h3>Two-Handed Backhand Progressions</h3>
-<strong>Level 1: Wall Rally</strong>
-<p>Stand 2 meters from wall. Rally two-handed backhand.</p>
-<p>Focus: Unit turn to backhand side, contact in front, two hands firm through contact.</p>
-<strong>Level 2: Feed Drill — Direction Control</strong>
-<p>Coach feeds to backhand. Player hits to specific target.</p>
-<p>Focus: Footwork (load onto back foot, transfer to front). Unit turn.</p>
-<strong>Common beginner error:</strong> Pushing with bottom hand instead of swinging.
-<strong>Fix:</strong> "Lead with your top hand. Bottom hand is for support."
-<strong>Level 3: Topspin Two-Hander</strong>
-<p>Steeper upward swing path. Both arms must swing together.</p>
-<strong>Cue:</strong> "Both elbows point down before contact, both elbows point up after contact."
-<strong>Level 4: Running Two-Hander</strong>
-<p>Open stance two-hander with aggressive hip rotation for wide balls.</p>
-<p>At extreme wide balls: One-hand finish allows extra reach.</p>
-<hr>
-<h3>One-Handed Backhand Progressions</h3>
-<strong>Level 1: Fence Drill</strong>
+<p><strong>Drill:</strong> Coach feeds alternately to forehand và backhand side. On backhand feed, player decides whether to run around it or hit backhand.</p>
+<hr/>
+<h3 id="common-forehand-errors">Common Forehand Errors</h3>
+<p><strong>Ball goes into net consistently:</strong>
+- Check contact point — is it too late?
+- Check swing path — is player swinging flat?
+- <strong>Fix:</strong> "Finish with your racket on your left shoulder" — teaches upward path.</p>
+<p><strong>Ball consistently goes wide:</strong>
+- Check racket face at contact — is it open?
+- <strong>Fix:</strong> "After contact, racket crosses your body to the left."</p>
+<p><strong>No power despite big swing:</strong>
+- Check body rotation — is player all arm?
+- <strong>Fix:</strong> "Grip loosely until contact — then firm up at impact."</p>
+<p><strong>Inconsistency:</strong>
+- Usually contact point varies — sometimes in front, sometimes late.
+- <strong>Fix:</strong> Ball toss drill to establish consistent contact height and timing.</p>
+<hr/>
+<h2 id="413-day-backhand">41.3 Dạy Backhand</h2>
+<h3 id="one-handed-vs-two-handed">One-Handed vs. Two-Handed</h3>
+<p><strong>Two-handed:</strong> Easier to learn, more stable for children, less reach, less slice versatility.
+<strong>One-handed:</strong> More reach, more versatility, higher ceiling, harder to develop.</p>
+<p><strong>General recommendation:</strong>
+- Children under 10: Two-handed almost always better.
+- Adults: Ask preference, observe what feels natural.
+- Once committed: Don't switch unless compelling reason.</p>
+<hr/>
+<h3 id="two-handed-backhand-progressions">Two-Handed Backhand Progressions</h3>
+<p><strong>Level 1: Wall Rally</strong></p>
+<p>Stand 2 meters from wall. Rally two-handed backhand.
+Focus: Unit turn to backhand side, contact in front, two hands firm through contact.</p>
+<p><strong>Level 2: Feed Drill — Direction Control</strong></p>
+<p>Coach feeds to backhand. Player hits to specific target.
+Focus: Footwork (load onto back foot, transfer to front). Unit turn.</p>
+<p><strong>Common beginner error:</strong> Pushing with bottom hand instead of swinging.
+<strong>Fix:</strong> "Lead with your top hand. Bottom hand is for support."</p>
+<p><strong>Level 3: Topspin Two-Hander</strong></p>
+<p>Steeper upward swing path. Both arms must swing together.
+<strong>Cue:</strong> "Both elbows point down before contact, both elbows point up after contact."</p>
+<p><strong>Level 4: Running Two-Hander</strong></p>
+<p>Open stance two-hander with aggressive hip rotation for wide balls.
+At extreme wide balls: One-hand finish allows extra reach.</p>
+<hr/>
+<h3 id="one-handed-backhand-progressions">One-Handed Backhand Progressions</h3>
+<p><strong>Level 1: Fence Drill</strong></p>
 <p>Stand with back close to fence. Swing backhand — if fence stops swing, backswing is too big. Teaches compact backswing.</p>
-<strong>Level 2: Chip Backhand</strong>
+<p><strong>Level 2: Chip Backhand</strong></p>
 <p>High-to-low slice motion first. Simpler, builds contact consistency before topspin.</p>
-<strong>Level 3: Full Topspin One-Hander</strong>
+<p><strong>Level 3: Full Topspin One-Hander</strong></p>
 <p>Key: Full shoulder rotation in backswing. Wrist laid back before contact. Explosive shoulder rotation through contact.</p>
-<strong>Common collapse:</strong> Wrist bends forward before contact → ball into net.
-<strong>Fix:</strong> "Keep your wrist firm and back until after you've hit the ball."
-<hr>
-<h3>Common Backhand Errors</h3>
-<strong>Two-hander into net:</strong> Bottom arm bent at contact → racket face closed.
-<strong>Fix:</strong> "Keep your bottom arm straighter through contact."
-<strong>One-hander lacks power:</strong> Shoulder not fully turned in backswing.
-<strong>Fix:</strong> "Turn until your back is almost facing the net before you swing."
-<strong>Inconsistent direction:</strong> Player changing swing path instead of contact timing for direction.
-<strong>Fix:</strong> Same swing path always. Earlier contact = crosscourt. Later contact = down the line.
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.4 Dạy Serve</h2><h3>Teaching Principles</h3>
+<p><strong>Common collapse:</strong> Wrist bends forward before contact → ball into net.
+<strong>Fix:</strong> "Keep your wrist firm and back until after you've hit the ball."</p>
+<hr/>
+<h3 id="common-backhand-errors">Common Backhand Errors</h3>
+<p><strong>Two-hander into net:</strong> Bottom arm bent at contact → racket face closed.
+<strong>Fix:</strong> "Keep your bottom arm straighter through contact."</p>
+<p><strong>One-hander lacks power:</strong> Shoulder not fully turned in backswing.
+<strong>Fix:</strong> "Turn until your back is almost facing the net before you swing."</p>
+<p><strong>Inconsistent direction:</strong> Player changing swing path instead of contact timing for direction.
+<strong>Fix:</strong> Same swing path always. Earlier contact = crosscourt. Later contact = down the line.</p>
+<hr/>
+<h2 id="414-day-serve">41.4 Dạy Serve</h2>
+<h3 id="teaching-principles">Teaching Principles</h3>
 <p>Serve is the most complex shot because of the full kinetic chain, self-initiated motion, multiple variables, và significant individual variation.</p>
-<strong>Coaching principle:</strong> More legitimate individual variation here than any other stroke. Find the student's natural rhythm and build on it — don't force cookie-cutter technique.
-<hr>
-<h3>The Trophy Position</h3>
-<p>"Trophy position" = top of backswing, just before forward swing. Key checkpoints:</p>
-<ul class="styled-list">
-<li>Tossing arm extended high toward ball</li>
-<li>Racket arm in "L" shape</li>
-<li>Knees bent (or extending from knee bend)</li>
-<li>Weight loaded and ready to transfer</li>
-</ul>
-<hr>
-<h3>Serve Progressions</h3>
-<strong>Level 1: The Helicopter (Complete Beginner)</strong>
+<p><strong>Coaching principle:</strong> More legitimate individual variation here than any other stroke. Find the student's natural rhythm and build on it — don't force cookie-cutter technique.</p>
+<hr/>
+<h3 id="the-trophy-position">The Trophy Position</h3>
+<p>"Trophy position" = top of backswing, just before forward swing. Key checkpoints:
+- Tossing arm extended high toward ball
+- Racket arm in "L" shape
+- Knees bent (or extending from knee bend)
+- Weight loaded and ready to transfer</p>
+<hr/>
+<h3 id="serve-progressions">Serve Progressions</h3>
+<p><strong>Level 1: The Helicopter (Complete Beginner)</strong></p>
 <p>Swing motion without toss. Arm swings in continuous circle: down, back, up to trophy, forward, follow-through. Understand shape before adding toss.</p>
-<strong>Level 2: Toss Placement (Beginner)</strong>
-<strong>Toss drill:</strong> Tossing arm only, no swing. Toss must land in specific target zone on court. Repeat 20 times.
-<strong>The toss catch test:</strong> Toss ball, don't swing, let it fall. Should land forward of front foot, slightly right of head for right-handers.
-<strong>Common toss errors:</strong> Too far left (player chases ball), too far back (falls back), too low (rushed swing), inconsistent height.
-<strong>Level 3: Flat Serve (Beginner-Intermediate)</strong>
+<p><strong>Level 2: Toss Placement (Beginner)</strong></p>
+<p><strong>Toss drill:</strong> Tossing arm only, no swing. Toss must land in specific target zone on court. Repeat 20 times.</p>
+<p><strong>The toss catch test:</strong> Toss ball, don't swing, let it fall. Should land forward of front foot, slightly right of head for right-handers.</p>
+<p><strong>Common toss errors:</strong> Too far left (player chases ball), too far back (falls back), too low (rushed swing), inconsistent height.</p>
+<p><strong>Level 3: Flat Serve (Beginner-Intermediate)</strong></p>
 <p>Eastern/continental grip. Contact at maximum height. Follow-through to opposite hip.</p>
-<strong>Common error:</strong> Bending elbow at contact.
-<strong>Fix:</strong> "Reach as high as you can — like trying to touch the sky with your racket."
-<strong>Level 4: Slice Serve (Intermediate)</strong>
-<p>Continental grip. Brush right side of ball (right-hander). Ball curves right and stays low.</p>
-<strong>Cue:</strong> "Cut the right side of the ball like you're slicing an apple."
-<strong>Level 5: Kick Serve (Intermediate-Advanced)</strong>
+<p><strong>Common error:</strong> Bending elbow at contact.
+<strong>Fix:</strong> "Reach as high as you can — like trying to touch the sky with your racket."</p>
+<p><strong>Level 4: Slice Serve (Intermediate)</strong></p>
+<p>Continental grip. Brush right side of ball (right-hander). Ball curves right and stays low.
+<strong>Cue:</strong> "Cut the right side of the ball like you're slicing an apple."</p>
+<p><strong>Level 5: Kick Serve (Intermediate-Advanced)</strong></p>
 <p>Toss slightly further left. Brush back of ball low-left to high-right. Heavy topspin → high kick to backhand.</p>
-<strong>Common error:</strong> Swinging too flat.
-<strong>Fix:</strong> "Swing up and to the left, not forward."
-<hr>
-<h3>Teaching Second Serve Confidence</h3>
+<p><strong>Common error:</strong> Swinging too flat.
+<strong>Fix:</strong> "Swing up and to the left, not forward."</p>
+<hr/>
+<h3 id="teaching-second-serve-confidence">Teaching Second Serve Confidence</h3>
 <p>Two-part coaching approach:</p>
-<p>1. <strong>Technical:</strong> Ensure kick serve is 80%+ reliable in isolation before using in matches.</p>
-<p>2. <strong>Mental:</strong> Introduce pressure gradually. Practice second serves with score. Verbalize stakes.</p>
-<strong>Key coaching message:</strong> "Your second serve should be an offensive weapon. Commit to the kick serve with full arm speed."
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.5 Dạy Volley</h2><h3>Key Differences From Groundstrokes</h3>
+<ol class="styled-list numbered">
+<li><strong>Technical:</strong> Ensure kick serve is 80%+ reliable in isolation before using in matches.</li>
+<li><strong>Mental:</strong> Introduce pressure gradually. Practice second serves with score. Verbalize stakes.</li>
+</ol>
+<p><strong>Key coaching message:</strong> "Your second serve should be an offensive weapon. Commit to the kick serve with full arm speed."</p>
+<hr/>
+<h2 id="415-day-volley">41.5 Dạy Volley</h2>
+<h3 id="key-differences-from-groundstrokes">Key Differences From Groundstrokes</h3>
 <ul class="styled-list">
 <li><strong>No backswing:</strong> Racket stays in front. Only forward punch motion.</li>
 <li><strong>Continental grip:</strong> For both forehand và backhand.</li>
 <li><strong>Firm wrist:</strong> Unlike groundstrokes where wrist is active.</li>
 <li><strong>Step into ball:</strong> Weight forward, not side to side.</li>
 </ul>
-<hr>
-<h3>Volley Progressions</h3>
-<strong>Level 1: Wall Volley</strong>
-<p>Stand 1-2 meters from wall. Volley continuously forehand then backhand.</p>
-<p>Focus: No backswing. Firm wrist. Push forward.</p>
-<p>Goal: 30 consecutive volleys without error.</p>
-<strong>Level 2: Coach Feed, Static Position</strong>
-<p>Coach feeds alternately to forehand và backhand volleys from baseline.</p>
-<p>Focus: Step into each volley. Punch motion. Ball placement (depth).</p>
-<strong>Level 3: Movement + Volley</strong>
-<p>Coach feeds wider balls requiring lateral movement.</p>
-<p>Focus: Split step before coach contacts. Lateral step + volley. Reset center.</p>
-<strong>Level 4: Approach + Volley Sequence</strong>
+<hr/>
+<h3 id="volley-progressions">Volley Progressions</h3>
+<p><strong>Level 1: Wall Volley</strong></p>
+<p>Stand 1-2 meters from wall. Volley continuously forehand then backhand.
+Focus: No backswing. Firm wrist. Push forward.
+Goal: 30 consecutive volleys without error.</p>
+<p><strong>Level 2: Coach Feed, Static Position</strong></p>
+<p>Coach feeds alternately to forehand và backhand volleys from baseline.
+Focus: Step into each volley. Punch motion. Ball placement (depth).</p>
+<p><strong>Level 3: Movement + Volley</strong></p>
+<p>Coach feeds wider balls requiring lateral movement.
+Focus: Split step before coach contacts. Lateral step + volley. Reset center.</p>
+<p><strong>Level 4: Approach + Volley Sequence</strong></p>
 <p>Full match-realistic sequence: Approach shot → move to net → split step → volley.</p>
-<strong>Level 5: Half Volley</strong>
-<p>Ball bouncing at feet — hit immediately after bounce.</p>
-<p>Focus: Racket below ball. Short, compact swing. Soft hands.</p>
-<hr>
-<h3>Common Volley Errors</h3>
-<strong>Volley goes long:</strong> Backswing too big.
-<strong>Fix:</strong> "Start with racket in front. Don't take it back — just punch forward."
-<strong>Volley goes in net:</strong> Wrist dropping at contact.
-<strong>Fix:</strong> "Squeeze your grip and lock your wrist when you contact the ball."
-<strong>Ball pops up:</strong> Contact point too late (beside or behind body).
-<strong>Fix:</strong> "Meet the ball early — in front of your front foot."
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.6 Dạy Overhead</h2><h3>Teaching Priority: Positioning First</h3>
+<p><strong>Level 5: Half Volley</strong></p>
+<p>Ball bouncing at feet — hit immediately after bounce.
+Focus: Racket below ball. Short, compact swing. Soft hands.</p>
+<hr/>
+<h3 id="common-volley-errors">Common Volley Errors</h3>
+<p><strong>Volley goes long:</strong> Backswing too big.
+<strong>Fix:</strong> "Start with racket in front. Don't take it back — just punch forward."</p>
+<p><strong>Volley goes in net:</strong> Wrist dropping at contact.
+<strong>Fix:</strong> "Squeeze your grip and lock your wrist when you contact the ball."</p>
+<p><strong>Ball pops up:</strong> Contact point too late (beside or behind body).
+<strong>Fix:</strong> "Meet the ball early — in front of your front foot."</p>
+<hr/>
+<h2 id="416-day-overhead">41.6 Dạy Overhead</h2>
+<h3 id="teaching-priority-positioning-first">Teaching Priority: Positioning First</h3>
 <p>Most overhead misses come from poor positioning, not poor swing mechanics.</p>
-<strong>Teaching priority:</strong> Position student correctly BEFORE working on swing.
-<hr>
-<h3>Overhead Progressions</h3>
-<strong>Level 1: Positioning Drill</strong>
+<p><strong>Teaching priority:</strong> Position student correctly BEFORE working on swing.</p>
+<hr/>
+<h3 id="overhead-progressions">Overhead Progressions</h3>
+<p><strong>Level 1: Positioning Drill</strong></p>
 <p>Coach lobs. Student positions so ball lands in front of hitting shoulder — no swing. Walk through, then jog. Establish correct body-to-ball relationship.</p>
-<strong>Level 2: Short Overhead</strong>
-<p>Coach feeds easy lobs from close distance.</p>
-<p>Focus: Turn sideways. Point non-dominant hand toward ball. Full extension at contact.</p>
-<strong>Level 3: Full Overhead</strong>
-<p>Coach feeds from baseline. Full lob height.</p>
-<p>Focus: Read lob early. Turn immediately. Move backward using crossover step.</p>
-<strong>Common error:</strong> Waiting too long before turning.
-<strong>Fix:</strong> "The moment you see it's a lob, turn your back to the net and run."
-<strong>Level 4: Jump Overhead (Advanced)</strong>
+<p><strong>Level 2: Short Overhead</strong></p>
+<p>Coach feeds easy lobs from close distance.
+Focus: Turn sideways. Point non-dominant hand toward ball. Full extension at contact.</p>
+<p><strong>Level 3: Full Overhead</strong></p>
+<p>Coach feeds from baseline. Full lob height.
+Focus: Read lob early. Turn immediately. Move backward using crossover step.</p>
+<p><strong>Common error:</strong> Waiting too long before turning.
+<strong>Fix:</strong> "The moment you see it's a lob, turn your back to the net and run."</p>
+<p><strong>Level 4: Jump Overhead (Advanced)</strong></p>
 <p>For deep lobs. Jump and scissors kick motion. Contact at peak of jump.</p>
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.7 Specialty Shots</h2><h3>Slice Backhand</h3>
+<hr/>
+<h2 id="417-specialty-shots">41.7 Specialty Shots</h2>
+<h3 id="slice-backhand">Slice Backhand</h3>
 <p>Often first specialty shot worth teaching systematically.</p>
 <p>Continental grip. High-to-low swing path. Open racket face at contact. Underspin.</p>
-<strong>Common error:</strong> Chopping too steeply → ball pops up.
-<strong>Fix:</strong> "Swing forward, not down. The racket goes slightly down but mostly forward."
-<strong>Drill:</strong> Both players rally crosscourt with slice backhand only.
-<hr>
-<h3>Drop Shot</h3>
-<strong>When to teach:</strong> Only after student has reliable groundstrokes.
+<p><strong>Common error:</strong> Chopping too steeply → ball pops up.
+<strong>Fix:</strong> "Swing forward, not down. The racket goes slightly down but mostly forward."</p>
+<p><strong>Drill:</strong> Both players rally crosscourt with slice backhand only.</p>
+<hr/>
+<h3 id="drop-shot">Drop Shot</h3>
+<p><strong>When to teach:</strong> Only after student has reliable groundstrokes.</p>
 <p>Setup identical to groundstroke. At last moment, racket slows dramatically. Open face generates underspin. Ball barely clears net.</p>
-<strong>Common error:</strong> Telegraphing — slowing down early, changing stance.
-<strong>Fix:</strong> Practice disguise as much as the shot itself.
-<hr>
-<h3>Defensive Lob</h3>
+<p><strong>Common error:</strong> Telegraphing — slowing down early, changing stance.
+<strong>Fix:</strong> Practice disguise as much as the shot itself.</p>
+<hr/>
+<h3 id="defensive-lob">Defensive Lob</h3>
 <p>High, deep ball over net player. Open racket face. Aim well above opponent's reach.</p>
-<strong>Teaching approach:</strong> Practice with actual net player present — realistic target, realistic pressure.
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">41.8 Return Of Serve</h2><h3>Return Coaching Framework</h3>
-<strong>Step 1: Positioning</strong>
+<p><strong>Teaching approach:</strong> Practice with actual net player present — realistic target, realistic pressure.</p>
+<hr/>
+<h2 id="418-return-of-serve">41.8 Return Of Serve</h2>
+<h3 id="return-coaching-framework">Return Coaching Framework</h3>
+<p><strong>Step 1: Positioning</strong></p>
 <p>General starting position: 1 meter behind baseline for first serve. 0.5 meter behind for second serve.</p>
-<strong>Step 2: Split Step Timing</strong>
+<p><strong>Step 2: Split Step Timing</strong></p>
 <p>Must time split step to server's contact.</p>
-<strong>Drill:</strong> Focus ONLY on split step timing — not return quality. Once timing consistent, add direction.
-<strong>Step 3: Return Shape</strong>
-<p>Against first serve: Compact backswing, redirect with timing. Power comes from server.</p>
-<p>Against second serve: Full swing, step in, attack.</p>
-<strong>Step 4: Direction Control</strong>
+<p><strong>Drill:</strong> Focus ONLY on split step timing — not return quality. Once timing consistent, add direction.</p>
+<p><strong>Step 3: Return Shape</strong></p>
+<p>Against first serve: Compact backswing, redirect with timing. Power comes from server.
+Against second serve: Full swing, step in, attack.</p>
+<p><strong>Step 4: Direction Control</strong></p>
 <p>Return same serve location to same target 10 times. Directional control before varying.</p>
-<hr></div>
-<div class="chapter" id="chapter-41"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 41</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 41</h2><ul class="styled-list">
+<hr/>
+<h2 id="tom-tat-chuong-41">Tóm Tắt Chương 41</h2>
+<ul class="styled-list">
 <li><strong>Dạy từ ground up.</strong> Arm errors usually trace to feet và hips. Fix root cause.</li>
 <li><strong>Pattern trước detail.</strong> Overall shape → contact point → footwork → finish → refinements.</li>
 <li><strong>Forehand progression:</strong> Mini tennis → full court → topspin → open stance → inside-out.</li>
@@ -1186,10 +1167,17 @@ Chương này đi vào thực chiến: <strong>Làm thế nào để dạy từn
 <li><strong>Return:</strong> Positioning + split step timing first. Shape second. Direction third.</li>
 <li><strong>One error, one fix, one session.</strong></li>
 </ul>
-<hr></div>
-<div class="chapter" id="chapter-11"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 11</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 41 đã cover kỹ thuật teaching của từng stroke riêng lẻ.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 41 đã cover kỹ thuật teaching của từng stroke riêng lẻ.</p>
 <p>Chương 42 sẽ mở rộng ra: <strong>Coaching Tactics And Match Play</strong> — dạy cách students think và play the game under pressure. Đây là nơi coaching moves từ kỹ thuật sang intelligence của game.</p>
-<hr>
-<em>Chương 42: Coaching Tactics And Match Play — Dạy Cách Chơi Thật Sự →</em></div>
+<hr/>
+<p><em>Chương 42: Coaching Tactics And Match Play — Dạy Cách Chơi Thật Sự →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

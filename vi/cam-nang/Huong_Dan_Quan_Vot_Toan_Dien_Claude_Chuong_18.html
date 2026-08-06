@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 18 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 18</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,150 +896,131 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 18</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 18</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 18</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">Chương 18: Tâm Lý Thi Đấu Trong Tennis</h2><hr>
-> <em>"Tennis là 90% mental và 10% còn lại cũng là mental."</em>
-<p>> — Martina Navratilova</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 18 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#mental-game--nền-tảng-của-champion' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>MENTAL GAME — NỀN TẢNG CỦA CHAMPION</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-18-tâm-lý-thi-đấu-trong-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 18: Tâm Lý Thi Đấu Trong Tennis</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#181-tại-sao-mental-game-quan-trọng-hơn-bạn-nghĩ' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.1 Tại Sao Mental Game Quan Trọng Hơn Bạn Nghĩ</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#182-focus--the-art-of-being-present' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.2 Focus — The Art Of Being Present</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#183-emotional-regulation--làm-chủ-cảm-xúc-trên-sân' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.3 Emotional Regulation — Làm Chủ Cảm Xúc Trên Sân</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#184-confidence--xây-dựng-và-duy-trì' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.4 Confidence — Xây Dựng Và Duy Trì</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#185-resilience--bouncing-back' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.5 Resilience — Bouncing Back</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#186-pressure--tái-định-nghĩa-và-tái-sử-dụng' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.6 Pressure — Tái Định Nghĩa Và Tái Sử Dụng</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#187-self-talk--cuộc-hội-thoại-bên-trong' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.7 Self-Talk — Cuộc Hội Thoại Bên Trong</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#188-pre-match-mental-preparation' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.8 Pre-Match Mental Preparation</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#189-dealing-with-specific-mental-challenges' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.9 Dealing With Specific Mental Challenges</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1810-the-inner-game--timothy-gallweys-framework' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.10 The Inner Game — Timothy Gallwey's Framework</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1811-mental-skills-training-program' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.11 Mental Skills Training Program</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1812-năm-lỗi-mental-game-phổ-biến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>18.12 Năm Lỗi Mental Game Phổ Biến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-18' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 18</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="mental-game-nen-tang-cua-champion">MENTAL GAME — NỀN TẢNG CỦA CHAMPION</h1>
+<h2 id="chuong-18-tam-ly-thi-au-trong-tennis">Chương 18: Tâm Lý Thi Đấu Trong Tennis</h2>
+<hr/>
+<div class="pullquote"><p>*"Tennis là 90% mental và 10% còn lại cũng là mental."*
+&gt; — Martina Navratilova</p></div>
+<hr/>
 <p>Wimbledon 2008. Chung kết. Roger Federer vs. Rafael Nadal.</p>
 <p>Federer, 5 lần vô địch Wimbledon liên tiếp, đang đối mặt với Nadal — người đã đánh bại ông trên clay nhưng chưa bao giờ thắng trên grass.</p>
-<p>Set 1: Nadal thắng 6-4.</p>
-<p>Set 2: Nadal thắng 6-4.</p>
-<p>Set 3: Federer thắng 7-6 (tiebreak).</p>
-<p>Set 4: Federer thắng 7-6 (tiebreak).</p>
-<p>Set 5: Phải ngừng vì trời tối. Tiếp tục hôm sau.</p>
+<p>Set 1: Nadal thắng 6-4.
+Set 2: Nadal thắng 6-4.
+Set 3: Federer thắng 7-6 (tiebreak).
+Set 4: Federer thắng 7-6 (tiebreak).
+Set 5: Phải ngừng vì trời tối. Tiếp tục hôm sau.</p>
 <p>Sáng hôm sau, Federer bước ra sân với một câu hỏi mental không thể tránh: "Tôi vừa thua hai set đầu. Tôi đã fight back. Nhưng qua một đêm ngủ, liệu momentum có giữ được không?"</p>
 <p>Nadal thắng 9-7 ở set cuối sau trận đấu dài nhất trong lịch sử Wimbledon finals.</p>
 <p>Nhưng điều đáng chú ý nhất không phải là kết quả. Mà là cả hai players đều demonstrate mental game đẳng cấp cao nhất — kiên trì, không bỏ cuộc, không crack dưới áp lực khổng lồ.</p>
 <p>Đây là những gì mental game thực sự trông như thế nào.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.1 Tại Sao Mental Game Quan Trọng Hơn Bạn Nghĩ</h2><p>Hỏi bất kỳ coach nào: "Điều gì phân biệt players có kỹ thuật tương đương nhau?"</p>
-Câu trả lời luôn là: <strong>Mental game.</strong>
-
+<hr/>
+<h2 id="181-tai-sao-mental-game-quan-trong-hon-ban-nghi">18.1 Tại Sao Mental Game Quan Trọng Hơn Bạn Nghĩ</h2>
+<p>Hỏi bất kỳ coach nào: "Điều gì phân biệt players có kỹ thuật tương đương nhau?"</p>
+<p>Câu trả lời luôn là: <strong>Mental game.</strong></p>
 <p>Nhưng "mental game" không phải là khái niệm mơ hồ hay mystical. Đây là tập hợp những kỹ năng cụ thể, có thể học và có thể luyện tập. Giống như forehand hay serve.</p>
-<h3>Mental Game Ảnh Hưởng Performance Như Thế Nào</h3>
-<strong>Scenario 1 — Technical player, poor mental game:</strong>
-<p>Player A có forehand đẹp trong practice. Nhưng trong match, khi score 30-40, forehand tightens up. Swing ngắn lại. Ball drops in net. Error. Thua game. "Kỹ thuật kém" — nhưng thực ra là mental pressure ảnh hưởng execution.</p>
-<strong>Scenario 2 — Average technique, strong mental game:</strong>
-<p>Player B có forehand bình thường. Nhưng trong match, under pressure, vẫn swing full. Balls go in. Win points at 30-40, 40-AD. Vượt qua opponents có technique tốt hơn.</p>
-<strong>Research says:</strong>
-<p>Studies trong sport psychology cho thấy ở competitive amateur level, mental factors account for 40-60% của match outcome — sau khi technical skills tương đương.</p>
-<h3>Ba Pillars Của Tennis Mental Game</h3>
-<strong>Pillar 1 — Focus:</strong> Khả năng giữ attention vào đúng thứ, đúng lúc.
-<strong>Pillar 2 — Emotional Regulation:</strong> Khả năng manage cảm xúc (frustration, anxiety, excitement) để không ảnh hưởng performance.
-<strong>Pillar 3 — Competitive Mindset:</strong> Cách tiếp cận competition — attitudes về winning, losing, pressure, và adversity.
+<h3 id="mental-game-anh-huong-performance-nhu-the-nao">Mental Game Ảnh Hưởng Performance Như Thế Nào</h3>
+<p><strong>Scenario 1 — Technical player, poor mental game:</strong>
+Player A có forehand đẹp trong practice. Nhưng trong match, khi score 30-40, forehand tightens up. Swing ngắn lại. Ball drops in net. Error. Thua game. "Kỹ thuật kém" — nhưng thực ra là mental pressure ảnh hưởng execution.</p>
+<p><strong>Scenario 2 — Average technique, strong mental game:</strong>
+Player B có forehand bình thường. Nhưng trong match, under pressure, vẫn swing full. Balls go in. Win points at 30-40, 40-AD. Vượt qua opponents có technique tốt hơn.</p>
+<p><strong>Research says:</strong>
+Studies trong sport psychology cho thấy ở competitive amateur level, mental factors account for 40-60% của match outcome — sau khi technical skills tương đương.</p>
+<h3 id="ba-pillars-cua-tennis-mental-game">Ba Pillars Của Tennis Mental Game</h3>
+<p><strong>Pillar 1 — Focus:</strong> Khả năng giữ attention vào đúng thứ, đúng lúc.</p>
+<p><strong>Pillar 2 — Emotional Regulation:</strong> Khả năng manage cảm xúc (frustration, anxiety, excitement) để không ảnh hưởng performance.</p>
+<p><strong>Pillar 3 — Competitive Mindset:</strong> Cách tiếp cận competition — attitudes về winning, losing, pressure, và adversity.</p>
 <p>Ba pillars này liên kết chặt chẽ. Nhưng mỗi pillar có thể được phát triển riêng biệt.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.2 Focus — The Art Of Being Present</h2><h3>Vấn Đề Với Focus Trong Tennis</h3>
+<hr/>
+<h2 id="182-focus-the-art-of-being-present">18.2 Focus — The Art Of Being Present</h2>
+<h3 id="van-e-voi-focus-trong-tennis">Vấn Đề Với Focus Trong Tennis</h3>
 <p>Tennis là sport của interruptions. Mỗi điểm kết thúc, có 20-25 giây break. Mỗi 2 games, có 90 giây. Giữa sets, có 120 giây.</p>
 <p>Trong những khoảng pause này, mind tự nhiên muốn đi về quá khứ ("Tại sao tôi đánh miss forehand đó?") hoặc tương lai ("Nếu tôi thua set này thì...").</p>
 <p>Cả hai đều là focus killers.</p>
-<strong>Present moment focus</strong> — khả năng bring attention về current point, current moment — là core skill của tennis mental game.
-<h3>"The Point Bubble" — Kỹ Thuật Focus</h3>
+<p><strong>Present moment focus</strong> — khả năng bring attention về current point, current moment — là core skill của tennis mental game.</p>
+<h3 id="the-point-bubble-ky-thuat-focus">"The Point Bubble" — Kỹ Thuật Focus</h3>
 <p>Imagine mỗi điểm là một "bubble" riêng biệt. Khi bounce serve đầu tiên, bạn enter bubble. Khi điểm kết thúc, bubble vỡ. Những gì xảy ra bên ngoài bubble — điểm trước, score, đối thủ's last winner — không tồn tại trong bubble này.</p>
-<strong>Làm thế nào:</strong>
-<p>1. <strong>Trigger word:</strong> Khi bước vào ready position, nói thầm một trigger word ("now," "here," hay bất kỳ word nào có meaning với bạn).</p>
-<p>2. <strong>Physical anchor:</strong> Bounce bóng nhất quán số lần trước serve (e.g., 3 bounces). Đây là physical trigger vào present moment.</p>
-<p>3. <strong>Ball focus:</strong> Trong điểm, chỉ nhìn bóng. Không nhìn đối thủ's face, không nhìn score, không nghĩ về last point.</p>
-<h3>Distraction Management</h3>
+<p><strong>Làm thế nào:</strong>
+1. <strong>Trigger word:</strong> Khi bước vào ready position, nói thầm một trigger word ("now," "here," hay bất kỳ word nào có meaning với bạn).
+2. <strong>Physical anchor:</strong> Bounce bóng nhất quán số lần trước serve (e.g., 3 bounces). Đây là physical trigger vào present moment.
+3. <strong>Ball focus:</strong> Trong điểm, chỉ nhìn bóng. Không nhìn đối thủ's face, không nhìn score, không nghĩ về last point.</p>
+<h3 id="distraction-management">Distraction Management</h3>
 <p>Điều gì typically distract players:</p>
-<strong>External distractions:</strong>
-<ul class="styled-list">
-<li>Noise từ crowd hay courts lân cận</li>
-<li>Weather (gió, mặt trời)</li>
-<li>Line calls</li>
-<li>Đối thủ's behavior (grunting, slow play, celebration)</li>
-</ul>
-<strong>Internal distractions:</strong>
-<ul class="styled-list">
-<li>"Tôi phải win cái này"</li>
-<li>"Tôi đang thua 1-4, tệ quá"</li>
-<li>"Forehand của tôi không work hôm nay"</li>
-<li>"Tôi mệt rồi"</li>
-</ul>
-<strong>Protocol for each distraction type:</strong>
-<em>External distraction:</em> Acknowledge nó ("OK, gió thay đổi") → adjust technically nếu cần → return focus to game.
-<em>Internal distraction:</em> Notice nó như một thought ("Có cái suy nghĩ 'tôi đang thua' vừa xuất hiện") → label nó → return focus to "What do I need to do in this point?"
-<h3>The "One Point At A Time" Mindset</h3>
+<p><strong>External distractions:</strong>
+- Noise từ crowd hay courts lân cận
+- Weather (gió, mặt trời)
+- Line calls
+- Đối thủ's behavior (grunting, slow play, celebration)</p>
+<p><strong>Internal distractions:</strong>
+- "Tôi phải win cái này"
+- "Tôi đang thua 1-4, tệ quá"
+- "Forehand của tôi không work hôm nay"
+- "Tôi mệt rồi"</p>
+<p><strong>Protocol for each distraction type:</strong></p>
+<p><em>External distraction:</em> Acknowledge nó ("OK, gió thay đổi") → adjust technically nếu cần → return focus to game.</p>
+<p><em>Internal distraction:</em> Notice nó như một thought ("Có cái suy nghĩ 'tôi đang thua' vừa xuất hiện") → label nó → return focus to "What do I need to do in this point?"</p>
+<h3 id="the-one-point-at-a-time-mindset">The "One Point At A Time" Mindset</h3>
 <p>Cụm từ này bị overused đến mức nhiều người không còn take it seriously. Nhưng đây là một trong những mental strategies có evidence base mạnh nhất trong sport psychology.</p>
-<strong>Tại sao nó works:</strong>
-<p>Tennis là sport trong đó future outcomes are uncertain. Nhưng execution trong one point hiện tại là completely within your control. Shift focus từ uncertain future về controllable present → giảm anxiety → better execution.</p>
-<strong>Practical implementation:</strong>
-<p>Sau mỗi điểm, nói (thầm hoặc thực sự): "Điểm đó xong. Điểm tiếp theo là 0-0 cho tôi."</p>
+<p><strong>Tại sao nó works:</strong>
+Tennis là sport trong đó future outcomes are uncertain. Nhưng execution trong one point hiện tại là completely within your control. Shift focus từ uncertain future về controllable present → giảm anxiety → better execution.</p>
+<p><strong>Practical implementation:</strong>
+Sau mỗi điểm, nói (thầm hoặc thực sự): "Điểm đó xong. Điểm tiếp theo là 0-0 cho tôi."</p>
 <p>Không dramatic. Không forced positivity. Chỉ là factual reset.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.3 Emotional Regulation — Làm Chủ Cảm Xúc Trên Sân</h2><h3>Cảm Xúc Trong Tennis Là Bình Thường</h3>
+<hr/>
+<h2 id="183-emotional-regulation-lam-chu-cam-xuc-tren-san">18.3 Emotional Regulation — Làm Chủ Cảm Xúc Trên Sân</h2>
+<h3 id="cam-xuc-trong-tennis-la-binh-thuong">Cảm Xúc Trong Tennis Là Bình Thường</h3>
 <p>Frustration sau unforced error. Excitement sau clean winner. Anxiety trước big match. Anger sau bad line call.</p>
-Tất cả bình thường. Tất cả human. Vấn đề không phải là cảm xúc — mà là <strong>cảm xúc có ảnh hưởng tiêu cực đến performance không?</strong>
-
-<h3>Frustration Cycle — Kẻ Thù Phổ Biến Nhất</h3>
+<p>Tất cả bình thường. Tất cả human. Vấn đề không phải là cảm xúc — mà là <strong>cảm xúc có ảnh hưởng tiêu cực đến performance không?</strong></p>
+<h3 id="frustration-cycle-ke-thu-pho-bien-nhat">Frustration Cycle — Kẻ Thù Phổ Biến Nhất</h3>
 <p>Cycle kinh điển:</p>
-<p>1. Miss forehand → Frustrated</p>
-<p>2. Frustration → Swing tighter next forehand (overcompensate hay tighten)</p>
-<p>3. Tighter swing → Another miss</p>
-<p>4. Another miss → More frustrated</p>
-<p>5. More frustrated → Performance deteriorates</p>
-<p>6. Performance deteriorates → May lose set/match</p>
+<ol class="styled-list numbered">
+<li>Miss forehand → Frustrated</li>
+<li>Frustration → Swing tighter next forehand (overcompensate hay tighten)</li>
+<li>Tighter swing → Another miss</li>
+<li>Another miss → More frustrated</li>
+<li>More frustrated → Performance deteriorates</li>
+<li>Performance deteriorates → May lose set/match</li>
+</ol>
 <p>Bạn nhận ra cycle này không? Đây là pattern phổ biến nhất ở amateur players.</p>
-<strong>Breaking the cycle:</strong>
-<em>Step 1 — Notice:</em> "Tôi đang frustrated." Chỉ awareness đã giúp.
-<em>Step 2 — Physical release:</em> Exhale fully (không scream). Walk a few steps. Shake arms loose. Physical movement dissipates emotional tension.
-<em>Step 3 — Technical thought:</em> "Forehand vừa rồi tôi contact sớm quá. Điểm tiếp theo: watch the ball longer."
-<em>Step 4 — Let go:</em> Điểm đó đã xong. Technical note đã được noted. Move on.
-<strong>Key insight:</strong> Step 3 là thay thế frustration bằng information. Thay vì "Tệ quá!" → "Contact early — adjust." Functional thought thay thế emotional thought.
-<h3>Anxiety Management — Choking Vs. Clutch</h3>
-<strong>Choking</strong> là khi performance drops significantly under pressure. Xảy ra khi anxiety high, focus shifts inward ("Tôi phải win này"), và muscles tighten.
-<strong>Clutch</strong> là khi performance maintains hay even improves under pressure. Xảy ra khi pressure được interpreted as excitement thay vì threat.
-<strong>Research finding (Alison Wood Brooks, Harvard):</strong>
-<p>Khi anxious, nhiều people cố calm down. Nhưng reinterpreting anxiety as excitement works better. "Tôi đang nervous" → "Tôi đang excited." Same physiological state, different cognitive label, significantly better performance outcomes.</p>
-<strong>Tennis application:</strong>
-<p>Trước big match, thay vì "Calm down, calm down" → try "I'm excited. This is a great match." Counterintuitive nhưng evidence-based.</p>
-<h3>The 15-Second Rule</h3>
+<p><strong>Breaking the cycle:</strong></p>
+<p><em>Step 1 — Notice:</em> "Tôi đang frustrated." Chỉ awareness đã giúp.</p>
+<p><em>Step 2 — Physical release:</em> Exhale fully (không scream). Walk a few steps. Shake arms loose. Physical movement dissipates emotional tension.</p>
+<p><em>Step 3 — Technical thought:</em> "Forehand vừa rồi tôi contact sớm quá. Điểm tiếp theo: watch the ball longer."</p>
+<p><em>Step 4 — Let go:</em> Điểm đó đã xong. Technical note đã được noted. Move on.</p>
+<p><strong>Key insight:</strong> Step 3 là thay thế frustration bằng information. Thay vì "Tệ quá!" → "Contact early — adjust." Functional thought thay thế emotional thought.</p>
+<h3 id="anxiety-management-choking-vs-clutch">Anxiety Management — Choking Vs. Clutch</h3>
+<p><strong>Choking</strong> là khi performance drops significantly under pressure. Xảy ra khi anxiety high, focus shifts inward ("Tôi phải win này"), và muscles tighten.</p>
+<p><strong>Clutch</strong> là khi performance maintains hay even improves under pressure. Xảy ra khi pressure được interpreted as excitement thay vì threat.</p>
+<p><strong>Research finding (Alison Wood Brooks, Harvard):</strong>
+Khi anxious, nhiều people cố calm down. Nhưng reinterpreting anxiety as excitement works better. "Tôi đang nervous" → "Tôi đang excited." Same physiological state, different cognitive label, significantly better performance outcomes.</p>
+<p><strong>Tennis application:</strong>
+Trước big match, thay vì "Calm down, calm down" → try "I'm excited. This is a great match." Counterintuitive nhưng evidence-based.</p>
+<h3 id="the-15-second-rule">The 15-Second Rule</h3>
 <p>After a bad point, give yourself <strong>exactly 15 seconds</strong> để feel whatever you feel.</p>
 <ul class="styled-list">
 <li>Frustrated? Cho phép 15 giây frustration.</li>
@@ -1046,315 +1028,300 @@ Tất cả bình thường. Tất cả human. Vấn đề không phải là cả
 <li>Disappointed? 15 giây.</li>
 </ul>
 <p>Sau 15 giây: Done. Routine bắt đầu. Point bubble begins.</p>
-<strong>Tại sao 15 giây:</strong>
-<p>Suppress cảm xúc hoàn toàn thường không work — nó surfaces later. Nhưng prolonged emotional dwelling destroys focus và energy. 15 giây là compromise: Acknowledge và feel, then move on.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.4 Confidence — Xây Dựng Và Duy Trì</h2><h3>Confidence Là Gì Trong Tennis</h3>
+<p><strong>Tại sao 15 giây:</strong>
+Suppress cảm xúc hoàn toàn thường không work — nó surfaces later. Nhưng prolonged emotional dwelling destroys focus và energy. 15 giây là compromise: Acknowledge và feel, then move on.</p>
+<hr/>
+<h2 id="184-confidence-xay-dung-va-duy-tri">18.4 Confidence — Xây Dựng Và Duy Trì</h2>
+<h3 id="confidence-la-gi-trong-tennis">Confidence Là Gì Trong Tennis</h3>
 <p>Confidence không phải là cảm giác "tôi sẽ win chắc." Đây là:</p>
-<strong>"Tôi có kỹ năng cần thiết để execute cú đánh này trong situation này."</strong>
+<p><strong>"Tôi có kỹ năng cần thiết để execute cú đánh này trong situation này."</strong></p>
 <p>Distinction quan trọng. Confidence về outcome (win/lose) không nằm trong control của bạn. Confidence về execution nằm trong control của bạn.</p>
-<h3>Confidence Đến Từ Đâu?</h3>
-<strong>Source 1 — Past performance:</strong>
-<p>Nhớ lại những lần bạn đã execute well. Specific memories. "Tôi đã đánh forehand inside-out clutch tương tự ở trận X." Mental library của successful executions builds confidence.</p>
-<strong>Source 2 — Preparation:</strong>
-<p>Bạn đã practice extensively. Bạn biết serve technique của mình. Bạn đã drill patterns. Preparation = entitlement to confidence.</p>
-<strong>Source 3 — Process focus:</strong>
-<p>Confident players focus vào process ("Tôi sẽ execute kỹ thuật đúng") thay vì outcome ("Tôi phải win điểm này"). Process focus reduces performance anxiety.</p>
-<strong>Source 4 — Physical state:</strong>
-<p>Body language affects confidence. Đứng thẳng, di chuyển purposefully, head up → creates và signals confidence. Science của "power posing" (Amy Cuddy) có debate, nhưng tennis practitioners broadly agree: How you carry yourself affects how you feel.</p>
-<h3>Confidence "Bank Account" Concept</h3>
+<h3 id="confidence-en-tu-au">Confidence Đến Từ Đâu?</h3>
+<p><strong>Source 1 — Past performance:</strong>
+Nhớ lại những lần bạn đã execute well. Specific memories. "Tôi đã đánh forehand inside-out clutch tương tự ở trận X." Mental library của successful executions builds confidence.</p>
+<p><strong>Source 2 — Preparation:</strong>
+Bạn đã practice extensively. Bạn biết serve technique của mình. Bạn đã drill patterns. Preparation = entitlement to confidence.</p>
+<p><strong>Source 3 — Process focus:</strong>
+Confident players focus vào process ("Tôi sẽ execute kỹ thuật đúng") thay vì outcome ("Tôi phải win điểm này"). Process focus reduces performance anxiety.</p>
+<p><strong>Source 4 — Physical state:</strong>
+Body language affects confidence. Đứng thẳng, di chuyển purposefully, head up → creates và signals confidence. Science của "power posing" (Amy Cuddy) có debate, nhưng tennis practitioners broadly agree: How you carry yourself affects how you feel.</p>
+<h3 id="confidence-bank-account-concept">Confidence "Bank Account" Concept</h3>
 <p>Imagine confidence là một bank account. Deposits và withdrawals.</p>
-<strong>Deposits:</strong>
-<ul class="styled-list">
-<li>Successful execution (win hay lose)</li>
-<li>Good practice sessions</li>
-<li>Learning something new and mastering it</li>
-<li>Remembering past wins</li>
-</ul>
-<strong>Withdrawals:</strong>
-<ul class="styled-list">
-<li>Focusing on mistakes</li>
-<li>Comparing yourself unfavorably to others</li>
-<li>Catastrophizing ("Tôi tệ quá, tôi không thể cải thiện được")</li>
-<li>Outcome focus after losses</li>
-</ul>
-<strong>Good players manage their confidence account:</strong> Họ make deposits regularly và minimize unnecessary withdrawals.
-<h3>When Confidence Is Low — The "Fake It" Question</h3>
+<p><strong>Deposits:</strong>
+- Successful execution (win hay lose)
+- Good practice sessions
+- Learning something new and mastering it
+- Remembering past wins</p>
+<p><strong>Withdrawals:</strong>
+- Focusing on mistakes
+- Comparing yourself unfavorably to others
+- Catastrophizing ("Tôi tệ quá, tôi không thể cải thiện được")
+- Outcome focus after losses</p>
+<p><strong>Good players manage their confidence account:</strong> Họ make deposits regularly và minimize unnecessary withdrawals.</p>
+<h3 id="when-confidence-is-low-the-fake-it-question">When Confidence Is Low — The "Fake It" Question</h3>
 <p>Câu hỏi nhiều players hỏi: "Khi tôi không confident, tôi có nên fake it?"</p>
-<strong>Better framing:</strong> Không phải "fake it" mà là "act as if."
+<p><strong>Better framing:</strong> Không phải "fake it" mà là "act as if."</p>
 <p>"Act as if" nghĩa là behave the way a confident player would behave — full swing, decisive movement, controlled routine — even when internally uncertain.</p>
 <p>Tại sao này works: Behavior affects internal state. Full swing creates feedback loop: Full swing → ball goes in → actual confidence. Tight swing → ball errors → less confidence.</p>
-<strong>Practical:</strong> Khi một phần của bạn muốn defensive, tentative shots → commit to full execution anyway. "Act as if" bạn confident → performance better → actual confidence increases.
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.5 Resilience — Bouncing Back</h2><h3>Định Nghĩa Resilience Trong Tennis</h3>
+<p><strong>Practical:</strong> Khi một phần của bạn muốn defensive, tentative shots → commit to full execution anyway. "Act as if" bạn confident → performance better → actual confidence increases.</p>
+<hr/>
+<h2 id="185-resilience-bouncing-back">18.5 Resilience — Bouncing Back</h2>
+<h3 id="inh-nghia-resilience-trong-tennis">Định Nghĩa Resilience Trong Tennis</h3>
 <p>Resilience là khả năng recover từ adversity — bad calls, missed shots, losing sets, losing streaks — và continue performing.</p>
 <p>Resilience không phải là không feel bad. Resilience là feeling bad AND continuing to compete effectively.</p>
-<h3>The Comeback Mindset</h3>
+<h3 id="the-comeback-mindset">The Comeback Mindset</h3>
 <p>Nhiều great tennis matches là come-from-behind victories. Agassi won French Open 1999 từ 2 sets down. Federer won Australian Open 2017 từ 1 set 3-1 down. Đây không phải coincidence — great champions đặc biệt giỏi ở one thing:</p>
-<strong>Họ không xem adversity là signal để give up. Họ xem nó là information.</strong>
+<p><strong>Họ không xem adversity là signal để give up. Họ xem nó là information.</strong></p>
 <p>"Tôi đang thua 1-5. Điều này có nghĩa là gì? Điều gì cần thay đổi?"</p>
 <p>Không: "Tôi đang thua 1-5. Đây sẽ là một ngày tồi."</p>
-<h3>Breaking Down "The Mountain"</h3>
+<h3 id="breaking-down-the-mountain">Breaking Down "The Mountain"</h3>
 <p>Khi đang thua nhiều, perspective shifts là critical.</p>
-<strong>Overwhelming thought:</strong> "Tôi cần win 5 games để tie this set. Quá nhiều."
-<strong>Broken down:</strong> "Tôi chỉ cần win game tiếp theo. Đó thôi."
+<p><strong>Overwhelming thought:</strong> "Tôi cần win 5 games để tie this set. Quá nhiều."</p>
+<p><strong>Broken down:</strong> "Tôi chỉ cần win game tiếp theo. Đó thôi."</p>
 <p>Và sau khi win game đó: "Tôi chỉ cần win game tiếp theo."</p>
-<strong>Psychology behind này:</strong> Distant goals tạo ra overwhelm. Proximate goals tạo ra focus và action.
-<h3>"Playing Your Best Losing Tennis"</h3>
+<p><strong>Psychology behind này:</strong> Distant goals tạo ra overwhelm. Proximate goals tạo ra focus và action.</p>
+<h3 id="playing-your-best-losing-tennis">"Playing Your Best Losing Tennis"</h3>
 <p>Đây là concept từ Timothy Gallwey (The Inner Game of Tennis) mà nhiều coaches adopt:</p>
 <p>Đôi khi bạn sẽ play your best tennis và vẫn thua — vì đối thủ đang play even better. Đây là <strong>acceptable loss</strong>. Bạn executed well, competed hard, applied skills fully — và vẫn thua vì đối thủ tốt hơn hôm đó.</p>
-<p>Điều không chấp nhận được là:</p>
-<ul class="styled-list">
-<li>Thua vì mental game collapse (not because of technical/tactical inferiority)</li>
-<li>Thua vì bạn không compete (give up mentally)</li>
-<li>Thua và không learn gì</li>
-</ul>
-<strong>Good competition standard:</strong> Mỗi trận, regardless of outcome, ask: "Tôi có compete fully không? Tôi có execute theo khả năng của mình không?"
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.6 Pressure — Tái Định Nghĩa Và Tái Sử Dụng</h2><h3>Pressure Là Gì?</h3>
+<p>Điều không chấp nhận được là:
+- Thua vì mental game collapse (not because of technical/tactical inferiority)
+- Thua vì bạn không compete (give up mentally)
+- Thua và không learn gì</p>
+<p><strong>Good competition standard:</strong> Mỗi trận, regardless of outcome, ask: "Tôi có compete fully không? Tôi có execute theo khả năng của mình không?"</p>
+<hr/>
+<h2 id="186-pressure-tai-inh-nghia-va-tai-su-dung">18.6 Pressure — Tái Định Nghĩa Và Tái Sử Dụng</h2>
+<h3 id="pressure-la-gi">Pressure Là Gì?</h3>
 <p>Pressure là cảm giác khi outcomes matter và chúng ta không chắc mình có thể deliver.</p>
 <p>Trong tennis: Break point against bạn. Set point. Match point.</p>
-<h3>Hai Cách Interpret Pressure</h3>
-<strong>Interpretation 1 (Threat):</strong>
-<p>"Điểm này quan trọng. Nếu tôi thua, game sẽ thua. Tôi phải không error. Tôi cần play safe."</p>
+<h3 id="hai-cach-interpret-pressure">Hai Cách Interpret Pressure</h3>
+<p><strong>Interpretation 1 (Threat):</strong>
+"Điểm này quan trọng. Nếu tôi thua, game sẽ thua. Tôi phải không error. Tôi cần play safe."</p>
 <p>→ Tight muscles → short swings → unforced errors → confirm worst fear.</p>
-<strong>Interpretation 2 (Challenge/Opportunity):</strong>
-<p>"Điểm này quan trọng. Đây là lý do tôi luyện tập. Tôi muốn những moments như này. Execute."</p>
+<p><strong>Interpretation 2 (Challenge/Opportunity):</strong>
+"Điểm này quan trọng. Đây là lý do tôi luyện tập. Tôi muốn những moments như này. Execute."</p>
 <p>→ Full swing → better execution → win point → confidence increases.</p>
-<strong>The flip:</strong> Reinterpreting pressure từ threat → challenge là learnable skill. Không phải positive thinking. Là cognitive reframing dựa trên một truth: Pressure moments là why we play competitive tennis. They are the point.
-<h3>Big Point Protocol</h3>
+<p><strong>The flip:</strong> Reinterpreting pressure từ threat → challenge là learnable skill. Không phải positive thinking. Là cognitive reframing dựa trên một truth: Pressure moments là why we play competitive tennis. They are the point.</p>
+<h3 id="big-point-protocol">Big Point Protocol</h3>
 <p>Khi approaching a big point (break point, set point, match point):</p>
-<strong>Step 1 — Acknowledge:</strong> "Đây là big point. OK."
-<strong>Step 2 — Ground:</strong> Take one full breath. Feel feet on ground.
-<strong>Step 3 — Simplify:</strong> Choose one tactical thing. "Serve T + forehand inside-out." Không complex plan.
-<strong>Step 4 — Commit:</strong> Execute với full conviction. Half-committed shots are worse than wrong shots committed fully.
-<strong>Research basis:</strong> Pre-performance routines under pressure have been shown to significantly reduce choking (Beilock & Carr, 2001; Mesagno et al., 2008).
-<h3>Learning From Pressure Moments</h3>
+<p><strong>Step 1 — Acknowledge:</strong> "Đây là big point. OK."</p>
+<p><strong>Step 2 — Ground:</strong> Take one full breath. Feel feet on ground.</p>
+<p><strong>Step 3 — Simplify:</strong> Choose one tactical thing. "Serve T + forehand inside-out." Không complex plan.</p>
+<p><strong>Step 4 — Commit:</strong> Execute với full conviction. Half-committed shots are worse than wrong shots committed fully.</p>
+<p><strong>Research basis:</strong> Pre-performance routines under pressure have been shown to significantly reduce choking (Beilock &amp; Carr, 2001; Mesagno et al., 2008).</p>
+<h3 id="learning-from-pressure-moments">Learning From Pressure Moments</h3>
 <p>Mỗi pressure moment — win hay lose — là learning opportunity:</p>
 <p>"Tôi serve double fault ở match point. Tại sao? Nervous? Wrong serve choice? Technical breakdown?"</p>
 <p>"Tôi win break point với clutch forehand. Tại sao nó worked? Committed fully? Right tactical choice?"</p>
-<strong>Pattern emerges:</strong> Sau 10-20 pressure moments analyzed, bạn sẽ thấy personal patterns — cả weaknesses và strengths. Đây là invaluable self-knowledge.
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.7 Self-Talk — Cuộc Hội Thoại Bên Trong</h2><h3>Internal Monologue Trong Tennis</h3>
+<p><strong>Pattern emerges:</strong> Sau 10-20 pressure moments analyzed, bạn sẽ thấy personal patterns — cả weaknesses và strengths. Đây là invaluable self-knowledge.</p>
+<hr/>
+<h2 id="187-self-talk-cuoc-hoi-thoai-ben-trong">18.7 Self-Talk — Cuộc Hội Thoại Bên Trong</h2>
+<h3 id="internal-monologue-trong-tennis">Internal Monologue Trong Tennis</h3>
 <p>Trong một match 2 tiếng, bạn có khoảng 60-70 phút không đang actively playing (between-point time, changeovers, etc.). Trong thời gian đó, inner voice chạy liên tục.</p>
 <p>Nó nói gì?</p>
-<strong>Negative self-talk examples:</strong>
-<ul class="styled-list">
-<li>"Không thể tin được tôi lại miss cái đó."</li>
-<li>"Forehand của tôi tệ quá hôm nay."</li>
-<li>"Tôi chơi như đứa trẻ."</li>
-<li>"Đối thủ này tốt hơn tôi nhiều."</li>
-</ul>
-<strong>Effect:</strong> Negative self-talk → distraction → performance decline → more to talk negatively about → cycle.
-<strong>Positive self-talk examples:</strong>
-<ul class="styled-list">
-<li>"Good shot" (sau winner — nhưng không exaggerate)</li>
-<li>"Next point" (sau error — move on signal)</li>
-<li>"Stay in" (trong long rally — stay focused signal)</li>
-<li>"Trust it" (khi nervous — trust technique signal)</li>
-</ul>
-<h3>Functional Self-Talk vs. Happy Talk</h3>
+<p><strong>Negative self-talk examples:</strong>
+- "Không thể tin được tôi lại miss cái đó."
+- "Forehand của tôi tệ quá hôm nay."
+- "Tôi chơi như đứa trẻ."
+- "Đối thủ này tốt hơn tôi nhiều."</p>
+<p><strong>Effect:</strong> Negative self-talk → distraction → performance decline → more to talk negatively about → cycle.</p>
+<p><strong>Positive self-talk examples:</strong>
+- "Good shot" (sau winner — nhưng không exaggerate)
+- "Next point" (sau error — move on signal)
+- "Stay in" (trong long rally — stay focused signal)
+- "Trust it" (khi nervous — trust technique signal)</p>
+<h3 id="functional-self-talk-vs-happy-talk">Functional Self-Talk vs. Happy Talk</h3>
 <p>Distinction quan trọng:</p>
-<strong>"Happy talk"</strong> (unhelpful): "Tôi tuyệt vời! Tôi sẽ win!" khi bạn không actually believe it → rings hollow → actually less effective.
-<strong>Functional self-talk</strong> (helpful): Instructions, reminders, refocusing cues.
-<ul class="styled-list">
-<li>"Watch the ball" = focus cue</li>
-<li>"Full swing" = technical reminder</li>
-<li>"One point" = refocusing cue</li>
-</ul>
-<strong>Research:</strong> Instructional self-talk ("Watch ball closely") outperforms motivational self-talk ("Come on, you can do it!") for skill execution under pressure (Hatzigeorgiadis et al., 2009).
-<h3>Develop Your Personal Self-Talk Toolkit</h3>
-<strong>Identifying your cues:</strong>
+<p><strong>"Happy talk"</strong> (unhelpful): "Tôi tuyệt vời! Tôi sẽ win!" khi bạn không actually believe it → rings hollow → actually less effective.</p>
+<p><strong>Functional self-talk</strong> (helpful): Instructions, reminders, refocusing cues.
+- "Watch the ball" = focus cue
+- "Full swing" = technical reminder
+- "One point" = refocusing cue</p>
+<p><strong>Research:</strong> Instructional self-talk ("Watch ball closely") outperforms motivational self-talk ("Come on, you can do it!") for skill execution under pressure (Hatzigeorgiadis et al., 2009).</p>
+<h3 id="develop-your-personal-self-talk-toolkit">Develop Your Personal Self-Talk Toolkit</h3>
+<p><strong>Identifying your cues:</strong></p>
 <p>Think về best performances. What did you say to yourself that worked?</p>
-<p>Common effective cues for tennis players:</p>
-<ul class="styled-list">
-<li>"See it, hit it" (focus on ball)</li>
-<li>"Low to high" (topspin reminder)</li>
-<li>"Bend" (footwork reminder)</li>
-<li>"Breathe" (relaxation cue)</li>
-<li>"Next" (reset cue)</li>
-<li>"Trust" (confidence cue)</li>
-</ul>
-<strong>Your toolkit:</strong> Choose 3-5 cues that personally resonate. Write them down. Practice using them in training trước khi cần trong match.
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.8 Pre-Match Mental Preparation</h2><h3>Warm-Up Không Chỉ Là Physical</h3>
+<p>Common effective cues for tennis players:
+- "See it, hit it" (focus on ball)
+- "Low to high" (topspin reminder)
+- "Bend" (footwork reminder)
+- "Breathe" (relaxation cue)
+- "Next" (reset cue)
+- "Trust" (confidence cue)</p>
+<p><strong>Your toolkit:</strong> Choose 3-5 cues that personally resonate. Write them down. Practice using them in training trước khi cần trong match.</p>
+<hr/>
+<h2 id="188-pre-match-mental-preparation">18.8 Pre-Match Mental Preparation</h2>
+<h3 id="warm-up-khong-chi-la-physical">Warm-Up Không Chỉ Là Physical</h3>
 <p>Physical warm-up: Serve, groundstrokes, volleys.</p>
-<p>Mental warm-up (often overlooked):</p>
-<ul class="styled-list">
-<li>Get into competitive mindset</li>
-<li>Review game plan (không elaborate — one page max)</li>
-<li>Set intention cho match</li>
-</ul>
-<h3>Pre-Match Routine Structure</h3>
-<strong>Night before:</strong>
-<ul class="styled-list">
-<li>Review what you want to work on tactically (10 phút)</li>
-<li>Review past successes against similar opponents</li>
-<li>Sleep routine — consistent bedtime</li>
-</ul>
-<strong>Match morning:</strong>
-<ul class="styled-list">
-<li>Normal breakfast (không experiment với new foods)</li>
-<li>Light movement (walk, jog) to wake up</li>
-<li>Review game plan briefly — then put it away</li>
-</ul>
-<strong>Arriving at venue:</strong>
-<ul class="styled-list">
-<li>Arrive with enough time — không rush</li>
-<li>Physical warm-up</li>
-<li>5 phút quiet time trước stepping on court</li>
-</ul>
-<strong>On court warm-up:</strong>
-<ul class="styled-list">
-<li>Warm up strokes with intention, không automatic</li>
-<li>Note feel của court, conditions</li>
-<li>Get comfortable — không show off, không nervous hits</li>
-</ul>
-<h3>Setting Match Intention</h3>
+<p>Mental warm-up (often overlooked):
+- Get into competitive mindset
+- Review game plan (không elaborate — one page max)
+- Set intention cho match</p>
+<h3 id="pre-match-routine-structure">Pre-Match Routine Structure</h3>
+<p><strong>Night before:</strong>
+- Review what you want to work on tactically (10 phút)
+- Review past successes against similar opponents
+- Sleep routine — consistent bedtime</p>
+<p><strong>Match morning:</strong>
+- Normal breakfast (không experiment với new foods)
+- Light movement (walk, jog) to wake up
+- Review game plan briefly — then put it away</p>
+<p><strong>Arriving at venue:</strong>
+- Arrive with enough time — không rush
+- Physical warm-up
+- 5 phút quiet time trước stepping on court</p>
+<p><strong>On court warm-up:</strong>
+- Warm up strokes with intention, không automatic
+- Note feel của court, conditions
+- Get comfortable — không show off, không nervous hits</p>
+<h3 id="setting-match-intention">Setting Match Intention</h3>
 <p>Trước mỗi match, set một <strong>process intention</strong> — không outcome intention.</p>
-<strong>Outcome intention (avoid):</strong> "Tôi sẽ win 6-2, 6-3."
-<strong>Process intention (use):</strong> "Hôm nay tôi sẽ focus vào serve + 1 patterns và stay disciplined between points."
-<p>Tại sao process intention tốt hơn:</p>
-<ul class="styled-list">
-<li>Outcome không hoàn toàn trong control của bạn</li>
-<li>Process hoàn toàn trong control của bạn</li>
-<li>Process focus → better execution → better outcomes anyway</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.9 Dealing With Specific Mental Challenges</h2><h3>Double Fault Anxiety</h3>
+<p><strong>Outcome intention (avoid):</strong> "Tôi sẽ win 6-2, 6-3."</p>
+<p><strong>Process intention (use):</strong> "Hôm nay tôi sẽ focus vào serve + 1 patterns và stay disciplined between points."</p>
+<p>Tại sao process intention tốt hơn:
+- Outcome không hoàn toàn trong control của bạn
+- Process hoàn toàn trong control của bạn
+- Process focus → better execution → better outcomes anyway</p>
+<hr/>
+<h2 id="189-dealing-with-specific-mental-challenges">18.9 Dealing With Specific Mental Challenges</h2>
+<h3 id="double-fault-anxiety">Double Fault Anxiety</h3>
 <p>Một trong những problems phổ biến nhất ở recreational players: Fear of double faulting → second serve too tentative → actually more double faults.</p>
-<strong>Technique:</strong> "Committed second serve"
-<p>Second serve phải được hit với conviction. Kick serve deep và in — không "baby" it in. Paradoxically, committed second serve goes in more reliably than tentative second serve.</p>
-<strong>Mental shift:</strong> "Second serve là một serve tôi hit với kỹ thuật tốt và conviction. Không phải serve tôi dribble vào với fear."
-<h3>Yips — Khi Basic Shots Suddenly Desert You</h3>
+<p><strong>Technique:</strong> "Committed second serve"
+Second serve phải được hit với conviction. Kick serve deep và in — không "baby" it in. Paradoxically, committed second serve goes in more reliably than tentative second serve.</p>
+<p><strong>Mental shift:</strong> "Second serve là một serve tôi hit với kỹ thuật tốt và conviction. Không phải serve tôi dribble vào với fear."</p>
+<h3 id="yips-khi-basic-shots-suddenly-desert-you">Yips — Khi Basic Shots Suddenly Desert You</h3>
 <p>Yips là hiện tượng khi một cú đánh familiar suddenly becomes impossible under pressure. Phổ biến nhất: overhead smash yips, volley yips.</p>
-<strong>Cause:</strong> Overthinking. The shot, previously automatic, becomes consciously controlled → breaks down.
-<strong>Solution:</strong> Return to automatic. Stop thinking about mechanics during execution. Trust muscle memory. Use trigger word and swing instinctively.
-<strong>Practice approach:</strong> Drill the problematic shot đến khi automatic again. Video self to ensure technique still there (thường là — yips là mental, không technical).
-<h3>Long Losing Streaks — When Everything Goes Wrong</h3>
+<p><strong>Cause:</strong> Overthinking. The shot, previously automatic, becomes consciously controlled → breaks down.</p>
+<p><strong>Solution:</strong> Return to automatic. Stop thinking about mechanics during execution. Trust muscle memory. Use trigger word and swing instinctively.</p>
+<p><strong>Practice approach:</strong> Drill the problematic shot đến khi automatic again. Video self to ensure technique still there (thường là — yips là mental, không technical).</p>
+<h3 id="long-losing-streaks-when-everything-goes-wrong">Long Losing Streaks — When Everything Goes Wrong</h3>
 <p>Khi losing nhiều matches liên tiếp, mental game challenges compound.</p>
-<strong>Framework:</strong>
-<p>1. Distinguish: Phải là kỹ thuật/chiến thuật vấn đề hay pure mental?</p>
-<p>2. Nếu kỹ thuật: Back to basics trong practice. Không compete until fixed.</p>
-<p>3. Nếu chiến thuật: Work với coach trên game plan.</p>
-<p>4. Nếu mental: Consider working với sport psychologist. Không weakness — đây là professional resource.</p>
-<strong>Short-term reset:</strong>
-<ul class="styled-list">
-<li>Play low-pressure matches (social, không competitive)</li>
-<li>Play formats you enjoy</li>
-<li>Focus on fun — reconnect với why you play</li>
-</ul>
-<h3>Playing Up vs. Playing Down</h3>
-<strong>Playing up</strong> (vs. better player): Common trap là play not-to-lose → tentative → exactly what worse player should avoid.
+<p><strong>Framework:</strong>
+1. Distinguish: Phải là kỹ thuật/chiến thuật vấn đề hay pure mental?
+2. Nếu kỹ thuật: Back to basics trong practice. Không compete until fixed.
+3. Nếu chiến thuật: Work với coach trên game plan.
+4. Nếu mental: Consider working với sport psychologist. Không weakness — đây là professional resource.</p>
+<p><strong>Short-term reset:</strong>
+- Play low-pressure matches (social, không competitive)
+- Play formats you enjoy
+- Focus on fun — reconnect với why you play</p>
+<h3 id="playing-up-vs-playing-down">Playing Up vs. Playing Down</h3>
+<p><strong>Playing up</strong> (vs. better player): Common trap là play not-to-lose → tentative → exactly what worse player should avoid.</p>
 <p>Better approach: "Đây là opportunity để learn. Tôi sẽ execute my game và see what happens." Upside khi win (great!), major learning khi lose. Nothing to lose.</p>
-<strong>Playing down</strong> (vs. weaker player): Different trap — underestimate và suddenly trailing.
+<p><strong>Playing down</strong> (vs. weaker player): Different trap — underestimate và suddenly trailing.</p>
 <p>Better approach: Respect every opponent. Play your game từ point 1. Không "cruise control" until ahead comfortably.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.10 The Inner Game — Timothy Gallwey's Framework</h2><p>Timothy Gallwey's "The Inner Game of Tennis" (1974) revolutionized sports psychology. Its core ideas remain among the most practically useful trong tennis mental game.</p>
-<h3>Self 1 vs. Self 2</h3>
+<hr/>
+<h2 id="1810-the-inner-game-timothy-gallweys-framework">18.10 The Inner Game — Timothy Gallwey's Framework</h2>
+<p>Timothy Gallwey's "The Inner Game of Tennis" (1974) revolutionized sports psychology. Its core ideas remain among the most practically useful trong tennis mental game.</p>
+<h3 id="self-1-vs-self-2">Self 1 vs. Self 2</h3>
 <p>Gallwey proposes two "selves":</p>
-<strong>Self 1</strong> = The conscious, critical, instructional mind. Voice trong đầu: "Bend your knees! Watch the ball! Don't hit out!"
-<strong>Self 2</strong> = The body's natural intelligence. Khi bạn catch an unexpected object, bạn không consciously compute trajectory — Self 2 does it automatically.
-<strong>Problem in tennis:</strong> Self 1 over-interferes với Self 2. Trying to consciously control automatic movements degrades them.
-<strong>Evidence:</strong> Watch a child learning to walk. Nobody instructs them. Self 2 figures it out through trial và error. Adults learning new movements do better with less conscious instruction và more trial, feel, và natural adjustment.
-<h3>"Letting It Happen" vs. "Making It Happen"</h3>
+<p><strong>Self 1</strong> = The conscious, critical, instructional mind. Voice trong đầu: "Bend your knees! Watch the ball! Don't hit out!"</p>
+<p><strong>Self 2</strong> = The body's natural intelligence. Khi bạn catch an unexpected object, bạn không consciously compute trajectory — Self 2 does it automatically.</p>
+<p><strong>Problem in tennis:</strong> Self 1 over-interferes với Self 2. Trying to consciously control automatic movements degrades them.</p>
+<p><strong>Evidence:</strong> Watch a child learning to walk. Nobody instructs them. Self 2 figures it out through trial và error. Adults learning new movements do better with less conscious instruction và more trial, feel, và natural adjustment.</p>
+<h3 id="letting-it-happen-vs-making-it-happen">"Letting It Happen" vs. "Making It Happen"</h3>
 <p>Gallwey's key distinction:</p>
-<strong>"Making it happen"</strong> = Self 1 controlling every movement, double-checking, interfering. Result: Stiff, mechanical, error-prone tennis.
-<strong>"Letting it happen"</strong> = Give Self 2 clear intention (watch the ball, swing through contact) and trust it to execute. Result: Fluid, natural, often better-than-expected tennis.
-<h3>Ball Watching As Meditation</h3>
+<p><strong>"Making it happen"</strong> = Self 1 controlling every movement, double-checking, interfering. Result: Stiff, mechanical, error-prone tennis.</p>
+<p><strong>"Letting it happen"</strong> = Give Self 2 clear intention (watch the ball, swing through contact) and trust it to execute. Result: Fluid, natural, often better-than-expected tennis.</p>
+<h3 id="ball-watching-as-meditation">Ball Watching As Meditation</h3>
 <p>Gallwey's most famous exercise: Watch the ball with complete attention. Not just "watch" but observe spin, speed, seams, exactly where it bounces.</p>
-<p>When truly watching ball this carefully:</p>
-<ul class="styled-list">
-<li>Self 1 quiets down (busy observing)</li>
-<li>Self 2 responds naturally to ball's movement</li>
-<li>Performance often improves dramatically</li>
-</ul>
-<strong>Try this:</strong> In next match, for one game, focus 100% on watching ball. Notice spin as it comes off opponent's strings. Seams rotation. Exact bounce spot. Nothing else.
+<p>When truly watching ball this carefully:
+- Self 1 quiets down (busy observing)
+- Self 2 responds naturally to ball's movement
+- Performance often improves dramatically</p>
+<p><strong>Try this:</strong> In next match, for one game, focus 100% on watching ball. Notice spin as it comes off opponent's strings. Seams rotation. Exact bounce spot. Nothing else.</p>
 <p>Many players report this as transformative first time they try it.</p>
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.11 Mental Skills Training Program</h2><h3>Tuần 1-2: Awareness Foundation</h3>
-<strong>Daily (5 phút):</strong>
-<p>Viết brief journal sau mỗi match hoặc practice:</p>
+<hr/>
+<h2 id="1811-mental-skills-training-program">18.11 Mental Skills Training Program</h2>
+<h3 id="tuan-1-2-awareness-foundation">Tuần 1-2: Awareness Foundation</h3>
+<p><strong>Daily (5 phút):</strong>
+Viết brief journal sau mỗi match hoặc practice:
+- Cảm xúc nào ảnh hưởng nhất hôm nay?
+- Moment nào focus tốt nhất? Tệ nhất?
+- Self-talk tích cực hay tiêu cực chiếm ưu thế?</p>
+<p><strong>Goal:</strong> Awareness của current patterns. Không judgment — chỉ observation.</p>
+<hr/>
+<h3 id="tuan-3-4-between-point-routine">Tuần 3-4: Between-Point Routine</h3>
+<p><strong>Develop personal routine:</strong>
+Choose: trigger word, physical anchor (bounces), brief tactical thought, execution.</p>
+<p><strong>Practice in non-match settings first:</strong> Use routine trong friendly hits và drills.</p>
+<p><strong>Goal:</strong> Routine becomes automatic. Không phải thinking about it — just doing it.</p>
+<hr/>
+<h3 id="tuan-5-6-self-talk-toolkit">Tuần 5-6: Self-Talk Toolkit</h3>
+<p><strong>Build toolkit:</strong>
+Identify 3-5 personal cues that work. Write them on card.</p>
+<p><strong>Practice:</strong> In matches, consciously use cues. After sessions, note which cues helped.</p>
+<p><strong>Goal:</strong> Automatic use of helpful self-talk cues under pressure.</p>
+<hr/>
+<h3 id="tuan-7-8-pressure-exposure">Tuần 7-8: Pressure Exposure</h3>
+<p><strong>Deliberate pressure practice:</strong>
+Set up high-pressure practice scenarios:
+- Play tiebreaks only (every point counts heavily)
+- Play "sudden death" games (next point wins game từ deuce)
+- Play with small bets hoặc challenges với training partners</p>
+<p><strong>Goal:</strong> Get comfortable with pressure in practice → transfers to match.</p>
+<hr/>
+<h2 id="1812-nam-loi-mental-game-pho-bien">18.12 Năm Lỗi Mental Game Phổ Biến</h2>
+<h3 id="loi-1-living-in-the-last-point">Lỗi 1: Living In The Last Point</h3>
+<p><strong>Mô tả:</strong> Miss forehand → dwell on it → miss next forehand → dwell more → miss another → game lost entirely due to one initial miss compounding.</p>
+<p><strong>Solution:</strong> 15-second rule. Technical note từ miss. Then: done. Next point is fresh.</p>
+<hr/>
+<h3 id="loi-2-future-catastrophizing">Lỗi 2: Future Catastrophizing</h3>
+<p><strong>Mô tả:</strong> "Nếu tôi thua game này, tôi sẽ thua set này, tôi sẽ thua match, tôi sẽ fail hoàn toàn."</p>
+<p><strong>Reality:</strong> Chưa. Bạn đang play game này, không losing hypothetical match yet.</p>
+<p><strong>Solution:</strong> "One game at a time" as literal instruction. Phạm vi chú ý: game này. Không phải set, không phải match.</p>
+<hr/>
+<h3 id="loi-3-comparing-yourself-to-others">Lỗi 3: Comparing Yourself To Others</h3>
+<p><strong>Mô tả:</strong> "Đối thủ này better backhand hơn tôi. Họ serve nhanh hơn. Tôi không thể win."</p>
+<p><strong>Problem:</strong> Comparing shots in isolation ignores your own strengths và overall game.</p>
+<p><strong>Solution:</strong> Focus on what YOU can do, not what they can do. Your strengths vs. their weaknesses. That's the game.</p>
+<hr/>
+<h3 id="loi-4-emotional-suppression">Lỗi 4: Emotional Suppression</h3>
+<p><strong>Mô tả:</strong> Cố không feel anything. "Tôi không được frustrated, tôi không được nervous." Suppress suppress suppress.</p>
+<p><strong>Problem:</strong> Suppression uses cognitive resources (makes you less sharp) và typically doesn't work long-term.</p>
+<p><strong>Solution:</strong> Acknowledge và allow (15-second rule), then redirect. Not suppress — redirect.</p>
+<hr/>
+<h3 id="loi-5-outcome-obsession">Lỗi 5: Outcome Obsession</h3>
+<p><strong>Mô tả:</strong> Mỗi point, mỗi game, mỗi set — obsessing về liệu mình sẽ win hay lose match.</p>
+<p><strong>Problem:</strong> Outcome largely not in your control. Obsessing about it → anxiety → worse execution → worse outcomes → more obsessing.</p>
+<p><strong>Solution:</strong> Process focus. "What do I need to DO in this point?" Not "What will happen?"</p>
+<hr/>
+<h2 id="tom-tat-chuong-18">Tóm Tắt Chương 18</h2>
 <ul class="styled-list">
-<li>Cảm xúc nào ảnh hưởng nhất hôm nay?</li>
-<li>Moment nào focus tốt nhất? Tệ nhất?</li>
-<li>Self-talk tích cực hay tiêu cực chiếm ưu thế?</li>
+<li>
+<p><strong>Mental game</strong> bao gồm ba pillars: Focus, Emotional Regulation, và Competitive Mindset — tất cả đều learnable</p>
+</li>
+<li>
+<p><strong>Present moment focus</strong> ("point bubble") và trigger routines giữ mind từ past/future distractions</p>
+</li>
+<li>
+<p><strong>Emotional regulation</strong> không phải là suppress cảm xúc mà là acknowledge, allow briefly (15-second rule), rồi redirect với technical/functional thought</p>
+</li>
+<li>
+<p><strong>Confidence</strong> không phải là "tôi sẽ win" mà là "tôi có kỹ năng để execute" — built từ preparation và past performance</p>
+</li>
+<li>
+<p><strong>Resilience</strong> là feel bad AND continue competing effectively — phân biệt champions khỏi những player tài năng không realized potential</p>
+</li>
+<li>
+<p><strong>Pressure reframing:</strong> Từ threat → challenge/opportunity. Same physiology, different interpretation, dramatically different performance.</p>
+</li>
+<li>
+<p><strong>Self-talk:</strong> Functional cues ("Watch ball," "Full swing") outperform happy talk. Develop personal toolkit.</p>
+</li>
+<li>
+<p><strong>Inner Game (Gallwey):</strong> Trust Self 2 (body's intelligence). Quiet Self 1 (over-critical mind). Watch ball completely.</p>
+</li>
 </ul>
-<strong>Goal:</strong> Awareness của current patterns. Không judgment — chỉ observation.
-<hr>
-<h3>Tuần 3-4: Between-Point Routine</h3>
-<strong>Develop personal routine:</strong>
-<p>Choose: trigger word, physical anchor (bounces), brief tactical thought, execution.</p>
-<strong>Practice in non-match settings first:</strong> Use routine trong friendly hits và drills.
-<strong>Goal:</strong> Routine becomes automatic. Không phải thinking about it — just doing it.
-<hr>
-<h3>Tuần 5-6: Self-Talk Toolkit</h3>
-<strong>Build toolkit:</strong>
-<p>Identify 3-5 personal cues that work. Write them on card.</p>
-<strong>Practice:</strong> In matches, consciously use cues. After sessions, note which cues helped.
-<strong>Goal:</strong> Automatic use of helpful self-talk cues under pressure.
-<hr>
-<h3>Tuần 7-8: Pressure Exposure</h3>
-<strong>Deliberate pressure practice:</strong>
-<p>Set up high-pressure practice scenarios:</p>
-<ul class="styled-list">
-<li>Play tiebreaks only (every point counts heavily)</li>
-<li>Play "sudden death" games (next point wins game từ deuce)</li>
-<li>Play with small bets hoặc challenges với training partners</li>
-</ul>
-<strong>Goal:</strong> Get comfortable with pressure in practice → transfers to match.
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">18.12 Năm Lỗi Mental Game Phổ Biến</h2><h3>Lỗi 1: Living In The Last Point</h3>
-<strong>Mô tả:</strong> Miss forehand → dwell on it → miss next forehand → dwell more → miss another → game lost entirely due to one initial miss compounding.
-<strong>Solution:</strong> 15-second rule. Technical note từ miss. Then: done. Next point is fresh.
-<hr>
-<h3>Lỗi 2: Future Catastrophizing</h3>
-<strong>Mô tả:</strong> "Nếu tôi thua game này, tôi sẽ thua set này, tôi sẽ thua match, tôi sẽ fail hoàn toàn."
-<strong>Reality:</strong> Chưa. Bạn đang play game này, không losing hypothetical match yet.
-<strong>Solution:</strong> "One game at a time" as literal instruction. Phạm vi chú ý: game này. Không phải set, không phải match.
-<hr>
-<h3>Lỗi 3: Comparing Yourself To Others</h3>
-<strong>Mô tả:</strong> "Đối thủ này better backhand hơn tôi. Họ serve nhanh hơn. Tôi không thể win."
-<strong>Problem:</strong> Comparing shots in isolation ignores your own strengths và overall game.
-<strong>Solution:</strong> Focus on what YOU can do, not what they can do. Your strengths vs. their weaknesses. That's the game.
-<hr>
-<h3>Lỗi 4: Emotional Suppression</h3>
-<strong>Mô tả:</strong> Cố không feel anything. "Tôi không được frustrated, tôi không được nervous." Suppress suppress suppress.
-<strong>Problem:</strong> Suppression uses cognitive resources (makes you less sharp) và typically doesn't work long-term.
-<strong>Solution:</strong> Acknowledge và allow (15-second rule), then redirect. Not suppress — redirect.
-<hr>
-<h3>Lỗi 5: Outcome Obsession</h3>
-<strong>Mô tả:</strong> Mỗi point, mỗi game, mỗi set — obsessing về liệu mình sẽ win hay lose match.
-<strong>Problem:</strong> Outcome largely not in your control. Obsessing about it → anxiety → worse execution → worse outcomes → more obsessing.
-<strong>Solution:</strong> Process focus. "What do I need to DO in this point?" Not "What will happen?"
-<hr></div>
-<div class="chapter" id="chapter-18"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 18</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 18</h2><ul class="styled-list">
-<li><strong>Mental game</strong> bao gồm ba pillars: Focus, Emotional Regulation, và Competitive Mindset — tất cả đều learnable</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Present moment focus</strong> ("point bubble") và trigger routines giữ mind từ past/future distractions</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Emotional regulation</strong> không phải là suppress cảm xúc mà là acknowledge, allow briefly (15-second rule), rồi redirect với technical/functional thought</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Confidence</strong> không phải là "tôi sẽ win" mà là "tôi có kỹ năng để execute" — built từ preparation và past performance</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Resilience</strong> là feel bad AND continue competing effectively — phân biệt champions khỏi những player tài năng không realized potential</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Pressure reframing:</strong> Từ threat → challenge/opportunity. Same physiology, different interpretation, dramatically different performance.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Self-talk:</strong> Functional cues ("Watch ball," "Full swing") outperform happy talk. Develop personal toolkit.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Inner Game (Gallwey):</strong> Trust Self 2 (body's intelligence). Quiet Self 1 (over-critical mind). Watch ball completely.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 18 mở đầu phần Mental Game. Chương 19 sẽ đi sâu hơn vào một khía cạnh đặc biệt quan trọng và ít được nói đến: <strong>Thi Đấu Thông Minh</strong> — cách leverage psychological edges trong competition, reading đối thủ's mental state, và sử dụng tactics không chỉ để win points mà còn để win the mental battle.</p>
-<hr>
-<em>Chương 19: Thi Đấu Thông Minh — Psychological Edge Trong Competition →</em></div>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 18 mở đầu phần Mental Game. Chương 19 sẽ đi sâu hơn vào một khía cạnh đặc biệt quan trọng và ít được nói đến: <strong>Thi Đấu Thông Minh</strong> — cách leverage psychological edges trong competition, reading đối thủ's mental state, và sử dụng tactics không chỉ để win points mà còn để win the mental battle.</p>
+<hr/>
+<p><em>Chương 19: Thi Đấu Thông Minh — Psychological Edge Trong Competition →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

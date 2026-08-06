@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 12 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 12</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,514 +896,462 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 12</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 12</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 12</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">Chương 12: Từ Backhand "Survive" Đến Backhand Vũ Khí</h2><hr>
-> <em>"Backhand của tôi không phải điểm yếu. Đó là điểm mà đối thủ nghĩ là điểm yếu — và đó là sai lầm của họ."</em>
-<p>> — Novak Djokovic</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 12 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#backhand-nâng-cao--two-handed-mastery-và-one-handed-elegance' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>BACKHAND NÂNG CAO — TWO-HANDED MASTERY VÀ ONE-HANDED ELEGANCE</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-12-từ-backhand-survive-đến-backhand-vũ-khí' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 12: Từ Backhand "Survive" Đến Backhand Vũ Khí</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#121-tại-sao-backhand-là-ranh-giới-giữa-các-cấp-độ' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.1 Tại Sao Backhand Là Ranh Giới Giữa Các Cấp Độ</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#122-two-handed-backhand-nâng-cao--phía-sau-kỹ-thuật-cơ-bản' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.2 Two-Handed Backhand Nâng Cao — Phía Sau Kỹ Thuật Cơ Bản</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#123-two-handed-backhand-down-the-line--cú-đánh-khó-nhất-trong-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.3 Two-Handed Backhand Down-The-Line — Cú Đánh Khó Nhất Trong Tennis</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#124-two-handed-backhand-high-ball--vấn-đề-của-amateur' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.4 Two-Handed Backhand High Ball — Vấn Đề Của Amateur</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#125-one-handed-backhand--nghệ-thuật-và-khoa-học' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.5 One-Handed Backhand — Nghệ Thuật Và Khoa Học</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#126-backhand-return-of-serve--aggressive-receiving' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.6 Backhand Return Of Serve — Aggressive Receiving</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#127-backhand-trong-các-tactical-situations' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.7 Backhand Trong Các Tactical Situations</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#128-backhand-như-passing-shot' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.8 Backhand Như Passing Shot</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#129-backhand-disguise' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.9 Backhand Disguise</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1210-mental-game-cho-backhand' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.10 Mental Game Cho Backhand</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1211-chọn-và-phát-triển-2hbh-hay-1hbh' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.11 Chọn Và Phát Triển: 2HBH Hay 1HBH?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1212-bài-tập-phát-triển-backhand-nâng-cao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.12 Bài Tập Phát Triển Backhand Nâng Cao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1213-chương-trình-8-tuần--backhand-nâng-cao' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.13 Chương Trình 8 Tuần — Backhand Nâng Cao</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#1214-năm-lỗi-backhand-nâng-cao-phổ-biến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>12.14 Năm Lỗi Backhand Nâng Cao Phổ Biến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-12' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 12</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="backhand-nang-cao-two-handed-mastery-va-one-handed-elegance">BACKHAND NÂNG CAO — TWO-HANDED MASTERY VÀ ONE-HANDED ELEGANCE</h1>
+<h2 id="chuong-12-tu-backhand-survive-en-backhand-vu-khi">Chương 12: Từ Backhand "Survive" Đến Backhand Vũ Khí</h2>
+<hr/>
+<div class="pullquote"><p>*"Backhand của tôi không phải điểm yếu. Đó là điểm mà đối thủ nghĩ là điểm yếu — và đó là sai lầm của họ."*
+&gt; — Novak Djokovic</p></div>
+<hr/>
 <p>Năm 2015. Australian Open. Bán kết. Djokovic vs. Andy Murray.</p>
 <p>Murray liên tục tấn công backhand của Djokovic — chiến lược hợp lý với hầu hết đối thủ. Nhưng Djokovic không chỉ "survive" với backhand — ông phản công. Mỗi heavy topspin vào backhand Djokovic nhận được một cross-court backhand sắc bén, thấp, và nhanh. Murray tấn công backhand Djokovic. Djokovic dùng chính những cú đó để tấn công lại.</p>
 <p>Djokovic thắng 6-7, 6-4, 6-3, 7-5.</p>
 <p>Đó là ví dụ hoàn hảo về backhand không phải là điểm yếu mà là vũ khí.</p>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.1 Tại Sao Backhand Là Ranh Giới Giữa Các Cấp Độ</h2><p>Quan sát bất kỳ nhóm người chơi tennis nào ở club level, và bạn sẽ thấy pattern rõ ràng:</p>
-<strong>Người chơi average:</strong> Forehand solid, backhand defensive. Khi bóng đến backhand, họ "trả bóng" — không có direction, không có depth, không có pressure. Đối thủ biết bóng sẽ về đâu từ backhand của họ — lên giữa sân, tầm trung bình, không áp lực.
-<strong>Người chơi tốt:</strong> Cả hai cú đều có intent. Backhand có thể defensive khi cần nhưng cũng có thể tấn công khi có setup. Đối thủ không thể chỉ tập trung tấn công backhand vì biết rằng backhand tốt có thể phản công.
-<strong>Người chơi xuất sắc:</strong> Backhand là vũ khí. Họ đôi khi chủ động muốn đối thủ đánh vào backhand — vì backhand của họ là cú đánh tốt nhất.
+<hr/>
+<h2 id="121-tai-sao-backhand-la-ranh-gioi-giua-cac-cap-o">12.1 Tại Sao Backhand Là Ranh Giới Giữa Các Cấp Độ</h2>
+<p>Quan sát bất kỳ nhóm người chơi tennis nào ở club level, và bạn sẽ thấy pattern rõ ràng:</p>
+<p><strong>Người chơi average:</strong> Forehand solid, backhand defensive. Khi bóng đến backhand, họ "trả bóng" — không có direction, không có depth, không có pressure. Đối thủ biết bóng sẽ về đâu từ backhand của họ — lên giữa sân, tầm trung bình, không áp lực.</p>
+<p><strong>Người chơi tốt:</strong> Cả hai cú đều có intent. Backhand có thể defensive khi cần nhưng cũng có thể tấn công khi có setup. Đối thủ không thể chỉ tập trung tấn công backhand vì biết rằng backhand tốt có thể phản công.</p>
+<p><strong>Người chơi xuất sắc:</strong> Backhand là vũ khí. Họ đôi khi chủ động muốn đối thủ đánh vào backhand — vì backhand của họ là cú đánh tốt nhất.</p>
 <p>Khoảng cách từ "average" đến "tốt" thường nằm ở backhand — không phải forehand.</p>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.2 Two-Handed Backhand Nâng Cao — Phía Sau Kỹ Thuật Cơ Bản</h2><p>Chương 5 đã cover cơ học hai tay: grip, setup, swing path, follow-through. Bây giờ đi sâu hơn vào những gì biến 2HBH cơ bản thành 2HBH nguy hiểm.</p>
-<h3>Bí Mật "Tay Trái Chủ Động" — Phần 2</h3>
+<hr/>
+<h2 id="122-two-handed-backhand-nang-cao-phia-sau-ky-thuat-co-ban">12.2 Two-Handed Backhand Nâng Cao — Phía Sau Kỹ Thuật Cơ Bản</h2>
+<p>Chương 5 đã cover cơ học hai tay: grip, setup, swing path, follow-through. Bây giờ đi sâu hơn vào những gì biến 2HBH cơ bản thành 2HBH nguy hiểm.</p>
+<h3 id="bi-mat-tay-trai-chu-ong-phan-2">Bí Mật "Tay Trái Chủ Động" — Phần 2</h3>
 <p>Chương 5 giới thiệu concept tay trái là "tay chủ lực" trong 2HBH. Đây là phần nâng cao của concept đó.</p>
 <p>Hầu hết người chơi 2HBH hiểu điều này ở mức trí tuệ nhưng không thực hiện được trong thực tế. Nguyên nhân: tay phải (dominant hand) có phản xạ mạnh hơn và tự nhiên "takeover" trong swing.</p>
-<strong>Drill để train tay trái dominance:</strong>
-<strong>Drill 1 — One-handed left forehand:</strong>
-<p>Tập forehand chỉ bằng tay trái (không có tay phải). Grip: Eastern hoặc Semi-Western với tay trái. Đánh 50-100 cú vào sân.</p>
+<p><strong>Drill để train tay trái dominance:</strong></p>
+<p><strong>Drill 1 — One-handed left forehand:</strong>
+Tập forehand chỉ bằng tay trái (không có tay phải). Grip: Eastern hoặc Semi-Western với tay trái. Đánh 50-100 cú vào sân.</p>
 <p>Mục đích: Buộc tay trái phải generate power và control độc lập. Khi trở lại 2HBH, tay trái đã "learned" cách initiate swing.</p>
-<strong>Drill 2 — Light right hand:</strong>
-<p>Tập 2HBH nhưng tay phải chỉ "resting" trên vợt — không grip chặt, chỉ guide. Tay trái làm 90% công việc.</p>
+<p><strong>Drill 2 — Light right hand:</strong>
+Tập 2HBH nhưng tay phải chỉ "resting" trên vợt — không grip chặt, chỉ guide. Tay trái làm 90% công việc.</p>
 <p>Cảm giác này là đúng trong 2HBH thực sự — tay phải là guide, tay trái là engine.</p>
-<h3>Contact Point Và Power Generation</h3>
-<strong>Contact point lý tưởng cho 2HBH:</strong>
-<ul class="styled-list">
-<li>Phía trước body — không để bóng vào quá gần hoặc đằng sau</li>
-<li>Tầm thắt lưng đến hơi trên — tầm "sweet spot" của 2HBH</li>
-<li>Khoảng cách cánh tay extended nhưng không fully straight</li>
-</ul>
-<strong>Power generation trong 2HBH:</strong>
-<p>1. <strong>Leg drive:</strong> Như mọi cú đánh — bắt đầu từ mặt đất</p>
-<p>2. <strong>Hip rotation:</strong> Hông xoay về phía trước — mở về phía lưới</p>
-<p>3. <strong>Shoulder rotation:</strong> Vai trái (với người tay phải) rotate về phía trước</p>
-<p>4. <strong>Tay trái push:</strong> Tay trái "drive" qua bóng</p>
-<p>5. <strong>Wrist:</strong> Cổ tay trái snap nhẹ tại tiếp xúc</p>
-<strong>Sequential timing:</strong> Mỗi bước này xảy ra theo sequence từ dưới lên — không phải đồng thời. Sai lầm phổ biến là dùng chỉ tay/cánh tay mà không có leg và hip rotation → 2HBH flat, thiếu power.
-<h3>Topspin Variation Trong 2HBH</h3>
+<h3 id="contact-point-va-power-generation">Contact Point Và Power Generation</h3>
+<p><strong>Contact point lý tưởng cho 2HBH:</strong>
+- Phía trước body — không để bóng vào quá gần hoặc đằng sau
+- Tầm thắt lưng đến hơi trên — tầm "sweet spot" của 2HBH
+- Khoảng cách cánh tay extended nhưng không fully straight</p>
+<p><strong>Power generation trong 2HBH:</strong>
+1. <strong>Leg drive:</strong> Như mọi cú đánh — bắt đầu từ mặt đất
+2. <strong>Hip rotation:</strong> Hông xoay về phía trước — mở về phía lưới
+3. <strong>Shoulder rotation:</strong> Vai trái (với người tay phải) rotate về phía trước
+4. <strong>Tay trái push:</strong> Tay trái "drive" qua bóng
+5. <strong>Wrist:</strong> Cổ tay trái snap nhẹ tại tiếp xúc</p>
+<p><strong>Sequential timing:</strong> Mỗi bước này xảy ra theo sequence từ dưới lên — không phải đồng thời. Sai lầm phổ biến là dùng chỉ tay/cánh tay mà không có leg và hip rotation → 2HBH flat, thiếu power.</p>
+<h3 id="topspin-variation-trong-2hbh">Topspin Variation Trong 2HBH</h3>
 <p>Giống như forehand, 2HBH cũng có nhiều versions:</p>
-<strong>Version 1 — Heavy topspin 2HBH:</strong>
-<ul class="styled-list">
-<li>Swing path dốc từ thấp lên cao</li>
-<li>Brush up the ball nhiều</li>
-<li>Trajectory cao, bounce cao</li>
-<li>Khi dùng: Defensive, cần margin cao, hoặc muốn force đối thủ đánh từ tầm cao</li>
-</ul>
-<strong>Version 2 — Flat 2HBH:</strong>
-<ul class="styled-list">
-<li>Swing path gần ngang</li>
-<li>"Drive through the ball"</li>
-<li>Trajectory thấp, pace cao</li>
-<li>Khi dùng: Short ball attack, finishing shot, khi có setup hoàn hảo</li>
-</ul>
-<strong>Version 3 — Cross-court angle 2HBH:</strong>
-<ul class="styled-list">
-<li>Swing path hướng sang cross-court nhiều hơn</li>
-<li>Tạo ra góc sharp cross-court</li>
-<li>Khi dùng: Down-the-line setup, kéo đối thủ wide</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.3 Two-Handed Backhand Down-The-Line — Cú Đánh Khó Nhất Trong Tennis</h2><p>Down-the-line 2HBH được coi là một trong những cú đánh khó nhất trong tennis — nhưng cũng là một trong những cú đánh tấn công hiệu quả nhất.</p>
-<h3>Tại Sao DTL 2HBH Khó</h3>
-<strong>Vật lý học:</strong>
-<ul class="styled-list">
-<li>Cross-court 2HBH natural — swing direction tự nhiên về phía cross-court</li>
-<li>DTL đòi hỏi swing direction ngược lại với "natural pull" của cơ thể</li>
-<li>Hai tay trên vợt → body rotation bị giới hạn hơn 1HBH → khó thay đổi direction</li>
-</ul>
-<strong>Timing:</strong>
-<ul class="styled-list">
-<li>DTL phải được tiếp xúc sớm hơn (phía trước hơn) so với cross-court</li>
-<li>Nếu tiếp xúc muộn → bóng pull sang cross-court tự nhiên</li>
-<li>Margin nhỏ hơn — đường ngắn hơn, net ở điểm cao nhất</li>
-</ul>
-<h3>Cơ Học DTL 2HBH</h3>
-<strong>Key differences từ cross-court:</strong>
-<p>1. <strong>Contact point sớm hơn:</strong> Tiếp xúc bóng khi bóng còn phía trước hơn — không để vào gần body.</p>
-<p>2. <strong>Hip rotation reduced:</strong> Hông không xoay về phía trước hoàn toàn — giữ lại một chút để "block" hướng sang cross-court.</p>
-<p>3. <strong>Tay trái direction:</strong> Tay trái push thẳng về phía trước (down-the-line) thay vì sang trái (cross-court).</p>
-<p>4. <strong>Follow-through:</strong> Kết thúc cao và thẳng về phía trước — không vắt qua vai phải như cross-court.</p>
-<strong>Drill:</strong>
-<p>Đứng 2 mét từ baseline. Partner feed vào backhand tầm thắt lưng. Chỉ đánh DTL — không có cross-court option. 50 lần mỗi buổi trong 2 tuần. Focus vào contact point sớm.</p>
-<h3>Khi Nào Dùng DTL 2HBH</h3>
-<strong>Tốt nhất khi:</strong>
-<ul class="styled-list">
-<li>Bóng đến tầm lý tưởng (thắt lưng) và phía trước</li>
-<li>Đối thủ đang anticipate cross-court (đang di chuyển sang phía đó)</li>
-<li>Sân trống ở backhand side của đối thủ (sau khi đã setup bằng cross-court)</li>
-<li>Muốn tiến vào lưới sau DTL (approach)</li>
-</ul>
-<strong>Tránh khi:</strong>
-<ul class="styled-list">
-<li>Đang defensive — bị ép ra ngoài sân</li>
-<li>Bóng đến tầm cao hoặc tầm thấp</li>
-<li>Đang chạy — không có thời gian setup contact point sớm</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.4 Two-Handed Backhand High Ball — Vấn Đề Của Amateur</h2><p>Nếu có một điểm yếu chung nhất của amateur 2HBH players, đó là high ball — bóng nảy cao lên trên vai hoặc trên đầu.</p>
+<p><strong>Version 1 — Heavy topspin 2HBH:</strong>
+- Swing path dốc từ thấp lên cao
+- Brush up the ball nhiều
+- Trajectory cao, bounce cao
+- Khi dùng: Defensive, cần margin cao, hoặc muốn force đối thủ đánh từ tầm cao</p>
+<p><strong>Version 2 — Flat 2HBH:</strong>
+- Swing path gần ngang
+- "Drive through the ball"
+- Trajectory thấp, pace cao
+- Khi dùng: Short ball attack, finishing shot, khi có setup hoàn hảo</p>
+<p><strong>Version 3 — Cross-court angle 2HBH:</strong>
+- Swing path hướng sang cross-court nhiều hơn
+- Tạo ra góc sharp cross-court
+- Khi dùng: Down-the-line setup, kéo đối thủ wide</p>
+<hr/>
+<h2 id="123-two-handed-backhand-down-the-line-cu-anh-kho-nhat-trong-tennis">12.3 Two-Handed Backhand Down-The-Line — Cú Đánh Khó Nhất Trong Tennis</h2>
+<p>Down-the-line 2HBH được coi là một trong những cú đánh khó nhất trong tennis — nhưng cũng là một trong những cú đánh tấn công hiệu quả nhất.</p>
+<h3 id="tai-sao-dtl-2hbh-kho">Tại Sao DTL 2HBH Khó</h3>
+<p><strong>Vật lý học:</strong>
+- Cross-court 2HBH natural — swing direction tự nhiên về phía cross-court
+- DTL đòi hỏi swing direction ngược lại với "natural pull" của cơ thể
+- Hai tay trên vợt → body rotation bị giới hạn hơn 1HBH → khó thay đổi direction</p>
+<p><strong>Timing:</strong>
+- DTL phải được tiếp xúc sớm hơn (phía trước hơn) so với cross-court
+- Nếu tiếp xúc muộn → bóng pull sang cross-court tự nhiên
+- Margin nhỏ hơn — đường ngắn hơn, net ở điểm cao nhất</p>
+<h3 id="co-hoc-dtl-2hbh">Cơ Học DTL 2HBH</h3>
+<p><strong>Key differences từ cross-court:</strong></p>
+<ol class="styled-list numbered">
+<li>
+<p><strong>Contact point sớm hơn:</strong> Tiếp xúc bóng khi bóng còn phía trước hơn — không để vào gần body.</p>
+</li>
+<li>
+<p><strong>Hip rotation reduced:</strong> Hông không xoay về phía trước hoàn toàn — giữ lại một chút để "block" hướng sang cross-court.</p>
+</li>
+<li>
+<p><strong>Tay trái direction:</strong> Tay trái push thẳng về phía trước (down-the-line) thay vì sang trái (cross-court).</p>
+</li>
+<li>
+<p><strong>Follow-through:</strong> Kết thúc cao và thẳng về phía trước — không vắt qua vai phải như cross-court.</p>
+</li>
+</ol>
+<p><strong>Drill:</strong>
+Đứng 2 mét từ baseline. Partner feed vào backhand tầm thắt lưng. Chỉ đánh DTL — không có cross-court option. 50 lần mỗi buổi trong 2 tuần. Focus vào contact point sớm.</p>
+<h3 id="khi-nao-dung-dtl-2hbh">Khi Nào Dùng DTL 2HBH</h3>
+<p><strong>Tốt nhất khi:</strong>
+- Bóng đến tầm lý tưởng (thắt lưng) và phía trước
+- Đối thủ đang anticipate cross-court (đang di chuyển sang phía đó)
+- Sân trống ở backhand side của đối thủ (sau khi đã setup bằng cross-court)
+- Muốn tiến vào lưới sau DTL (approach)</p>
+<p><strong>Tránh khi:</strong>
+- Đang defensive — bị ép ra ngoài sân
+- Bóng đến tầm cao hoặc tầm thấp
+- Đang chạy — không có thời gian setup contact point sớm</p>
+<hr/>
+<h2 id="124-two-handed-backhand-high-ball-van-e-cua-amateur">12.4 Two-Handed Backhand High Ball — Vấn Đề Của Amateur</h2>
+<p>Nếu có một điểm yếu chung nhất của amateur 2HBH players, đó là high ball — bóng nảy cao lên trên vai hoặc trên đầu.</p>
 <p>Heavy topspin forehand của đối thủ vào backhand → bounce cao → 2HBH từ tầm cao → breakdown.</p>
-<h3>Tại Sao High Ball 2HBH Khó</h3>
-<strong>Biomechanics:</strong>
-<p>Hai tay trên vợt giới hạn range of motion ở tầm cao. Khi bóng lên trên vai, cánh tay không thể duỗi đầy đủ → compact, powerless shot.</p>
+<h3 id="tai-sao-high-ball-2hbh-kho">Tại Sao High Ball 2HBH Khó</h3>
+<p><strong>Biomechanics:</strong>
+Hai tay trên vợt giới hạn range of motion ở tầm cao. Khi bóng lên trên vai, cánh tay không thể duỗi đầy đủ → compact, powerless shot.</p>
 <p>Với 1HBH, có thể reach lên cao với cánh tay duỗi đầy đủ. Với 2HBH, range bị giới hạn.</p>
-<h3>Options Cho 2HBH High Ball</h3>
-<strong>Option 1 — Move back và đợi:</strong>
-<p>Lùi ra sau (nhiều hơn bình thường) để bóng rơi xuống tầm comfortable trước khi đánh. Đây là option an toàn nhất về kỹ thuật.</p>
+<h3 id="options-cho-2hbh-high-ball">Options Cho 2HBH High Ball</h3>
+<p><strong>Option 1 — Move back và đợi:</strong>
+Lùi ra sau (nhiều hơn bình thường) để bóng rơi xuống tầm comfortable trước khi đánh. Đây là option an toàn nhất về kỹ thuật.</p>
 <p>Trade-off: Mất court position — đứng sâu sau baseline → đối thủ có thể drop shot.</p>
-<strong>Option 2 — Take early (on the rise):</strong>
-<p>Tiến vào, đánh bóng đang lên trước khi đạt đỉnh bounce. Aggressive nhưng khó về timing.</p>
+<p><strong>Option 2 — Take early (on the rise):</strong>
+Tiến vào, đánh bóng đang lên trước khi đạt đỉnh bounce. Aggressive nhưng khó về timing.</p>
 <p>Djokovic dùng option này extensively — đánh on-the-rise từ mọi position để không bao giờ phải đánh từ tầm vai.</p>
-<strong>Option 3 — Backhand slice:</strong>
-<p>Đổi từ 2HBH sang backhand slice khi bóng quá cao. Slice có range of motion tốt hơn từ tầm cao.</p>
+<p><strong>Option 3 — Backhand slice:</strong>
+Đổi từ 2HBH sang backhand slice khi bóng quá cao. Slice có range of motion tốt hơn từ tầm cao.</p>
 <p>Trade-off: Slice thay đổi tempo nhưng defensive — đối thủ biết bạn đang trong trạng thái không tấn công được.</p>
-<strong>Option 4 — Open stance 2HBH với extreme swing path:</strong>
-<p>Open stance, mở rộng cánh tay trái lên trên, swing path rất dốc. Khó nhất nhưng cho phép đánh topspin từ tầm cao.</p>
-<strong>Recommendation theo level:</strong>
-<ul class="styled-list">
-<li>Beginner-Intermediate: Option 1 (lùi ra sau) hoặc Option 3 (slice)</li>
-<li>Advanced: Option 2 (on the rise) hoặc Option 4</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.5 One-Handed Backhand — Nghệ Thuật Và Khoa Học</h2><p>1HBH đang dần ít phổ biến hơn ở tennis hiện đại — nhưng không phải vì nó kém hiệu quả. Đó là vì 2HBH dễ học hơn và consistent hơn ở cấp độ amateur và junior.</p>
+<p><strong>Option 4 — Open stance 2HBH với extreme swing path:</strong>
+Open stance, mở rộng cánh tay trái lên trên, swing path rất dốc. Khó nhất nhưng cho phép đánh topspin từ tầm cao.</p>
+<p><strong>Recommendation theo level:</strong>
+- Beginner-Intermediate: Option 1 (lùi ra sau) hoặc Option 3 (slice)
+- Advanced: Option 2 (on the rise) hoặc Option 4</p>
+<hr/>
+<h2 id="125-one-handed-backhand-nghe-thuat-va-khoa-hoc">12.5 One-Handed Backhand — Nghệ Thuật Và Khoa Học</h2>
+<p>1HBH đang dần ít phổ biến hơn ở tennis hiện đại — nhưng không phải vì nó kém hiệu quả. Đó là vì 2HBH dễ học hơn và consistent hơn ở cấp độ amateur và junior.</p>
 <p>Tuy nhiên, 1HBH vẫn được sử dụng bởi một số top players (Federer, Wawrinka, Thiem, Gasquet) và có những ưu điểm riêng biệt.</p>
-<h3>Ưu Và Nhược Điểm 1HBH</h3>
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li><strong>Reach:</strong> Với một tay, bạn có thể reach xa hơn → xử lý wide balls tốt hơn</li>
-<li><strong>High ball variation:</strong> Có thể slice high balls với range tốt hơn, và aggressive slice từ tầm cao</li>
-<li><strong>Disguise:</strong> Grip change cho phép disguise slice và topspin đến muộn hơn</li>
-<li><strong>Feel và touch:</strong> Nhiều player 1HBH report feel tốt hơn cho drop shots, slices, và net play</li>
-<li><strong>Elegance và variety:</strong> 1HBH slice có thể rất effective về mặt chiến thuật</li>
-</ul>
-<strong>Nhược điểm:</strong>
-<ul class="styled-list">
-<li><strong>High ball topspin:</strong> Khó tạo topspin từ tầm cao với một tay</li>
-<li><strong>Consistency:</strong> Khó maintain consistent contact point hơn 2HBH</li>
-<li><strong>Grip strength:</strong> Đòi hỏi grip strength và wrist stability cao hơn</li>
-<li><strong>Recovery time:</strong> Sau wide defensive shots, recovery về center có thể chậm hơn</li>
-</ul>
-<h3>Cơ Học 1HBH Topspin — Nâng Cao</h3>
-<strong>Scapular retraction:</strong>
-<p>Đây là yếu tố quan trọng nhất trong 1HBH power mà hầu hết không được dạy đúng.</p>
+<h3 id="uu-va-nhuoc-iem-1hbh">Ưu Và Nhược Điểm 1HBH</h3>
+<p><strong>Ưu điểm:</strong>
+- <strong>Reach:</strong> Với một tay, bạn có thể reach xa hơn → xử lý wide balls tốt hơn
+- <strong>High ball variation:</strong> Có thể slice high balls với range tốt hơn, và aggressive slice từ tầm cao
+- <strong>Disguise:</strong> Grip change cho phép disguise slice và topspin đến muộn hơn
+- <strong>Feel và touch:</strong> Nhiều player 1HBH report feel tốt hơn cho drop shots, slices, và net play
+- <strong>Elegance và variety:</strong> 1HBH slice có thể rất effective về mặt chiến thuật</p>
+<p><strong>Nhược điểm:</strong>
+- <strong>High ball topspin:</strong> Khó tạo topspin từ tầm cao với một tay
+- <strong>Consistency:</strong> Khó maintain consistent contact point hơn 2HBH
+- <strong>Grip strength:</strong> Đòi hỏi grip strength và wrist stability cao hơn
+- <strong>Recovery time:</strong> Sau wide defensive shots, recovery về center có thể chậm hơn</p>
+<h3 id="co-hoc-1hbh-topspin-nang-cao">Cơ Học 1HBH Topspin — Nâng Cao</h3>
+<p><strong>Scapular retraction:</strong>
+Đây là yếu tố quan trọng nhất trong 1HBH power mà hầu hết không được dạy đúng.</p>
 <p>Khi setup 1HBH, vai trái (với người tay phải) phải retract (kéo về phía cột sống) — tạo ra "coil" trong cơ lưng trên.</p>
 <p>Khi swing, vai trái release — scapular protraction — tạo ra rotational energy từ lưng và vai.</p>
 <p>Player không có scapular retraction đúng → toàn bộ power phải đến từ cánh tay → thiếu power và dễ injury (tennis elbow).</p>
-<strong>Drill scapular retraction:</strong>
-<p>Đứng, hai tay buông thẳng. Kéo vai trái về phía sau và xuống — như đang "squeeze" một quả trứng giữa vai và cột sống. Giữ 5 giây, thả ra. 20 lần. Sau đó integrate cảm giác này vào 1HBH setup.</p>
-<strong>Counterweight arm:</strong>
-<p>Tay phải (không cầm vợt) trong 1HBH phải active — không buông thõng mà extend ra sau như "counterweight" cho cân bằng.</p>
+<p><strong>Drill scapular retraction:</strong>
+Đứng, hai tay buông thẳng. Kéo vai trái về phía sau và xuống — như đang "squeeze" một quả trứng giữa vai và cột sống. Giữ 5 giây, thả ra. 20 lần. Sau đó integrate cảm giác này vào 1HBH setup.</p>
+<p><strong>Counterweight arm:</strong>
+Tay phải (không cầm vợt) trong 1HBH phải active — không buông thõng mà extend ra sau như "counterweight" cho cân bằng.</p>
 <p>Khi swing về phía trước, tay phải tự nhiên swing về phía sau → create counterbalance → better rotation và balance.</p>
-<h3>1HBH Slice — Vũ Khí Thực Sự</h3>
+<h3 id="1hbh-slice-vu-khi-thuc-su">1HBH Slice — Vũ Khí Thực Sự</h3>
 <p>Nếu có một lý do để học 1HBH, đó là 1HBH slice. Đây là một trong những cú đánh chiến thuật hiệu quả nhất trong tennis.</p>
-<strong>Cơ học 1HBH slice:</strong>
-<em>Grip:</em> Continental — tương tự serve và volley.
-<em>Setup:</em> Vai trái xoay về sau nhiều hơn topspin backhand. Vợt cao hơn bóng.
-<em>Swing:</em> Từ cao xuống và về phía trước — "carving" xuống phía sau bóng. Không phải chop (thẳng xuống) mà là carve (diagonal từ cao-trong ra thấp-ngoài).
-<em>Follow-through:</em> Vợt tiếp tục về phía trước và xuống — không dừng lại sau bóng.
-<strong>Hai loại slice:</strong>
-<strong>Carve slice (attacking):</strong>
-<ul class="styled-list">
-<li>Swing path ít dốc hơn — gần ngang hơn</li>
-<li>Bóng đi thấp và nhanh — skid qua sân</li>
-<li>Hiệu quả trên grass và fast hard — bóng skid thấp rất khó return</li>
-<li>Khi dùng: Approach shot, disrupting rally tempo, attacking short ball</li>
-</ul>
-<strong>Chop slice (defensive):</strong>
-<ul class="styled-list">
-<li>Swing path dốc hơn — từ cao xuống nhiều hơn</li>
-<li>Bóng đi cao hơn và chậm hơn, với nhiều backspin</li>
-<li>Bounce thấp — nhưng cao qua lưới</li>
-<li>Khi dùng: Khi bị ép, cần thêm thời gian, hoặc muốn thay đổi pace hoàn toàn</li>
-</ul>
-<strong>Chiến thuật slice:</strong>
-<ul class="styled-list">
-<li>Vào forehand (wide) của đối thủ để kéo họ ra ngoài sân</li>
-<li>Vào short angle — cross-court slice ngắn để kéo đối thủ vào mid-court</li>
-<li>Setup drop shot — slice deep vào backhand → drop shot khi đối thủ lùi xa</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.6 Backhand Return Of Serve — Aggressive Receiving</h2><p>Return of serve với backhand là situation mà hầu hết player struggle nhất. Đặc biệt với fast first serve vào backhand.</p>
-<h3>Compact Backswing Return</h3>
+<p><strong>Cơ học 1HBH slice:</strong></p>
+<p><em>Grip:</em> Continental — tương tự serve và volley.</p>
+<p><em>Setup:</em> Vai trái xoay về sau nhiều hơn topspin backhand. Vợt cao hơn bóng.</p>
+<p><em>Swing:</em> Từ cao xuống và về phía trước — "carving" xuống phía sau bóng. Không phải chop (thẳng xuống) mà là carve (diagonal từ cao-trong ra thấp-ngoài).</p>
+<p><em>Follow-through:</em> Vợt tiếp tục về phía trước và xuống — không dừng lại sau bóng.</p>
+<p><strong>Hai loại slice:</strong></p>
+<p><strong>Carve slice (attacking):</strong>
+- Swing path ít dốc hơn — gần ngang hơn
+- Bóng đi thấp và nhanh — skid qua sân
+- Hiệu quả trên grass và fast hard — bóng skid thấp rất khó return
+- Khi dùng: Approach shot, disrupting rally tempo, attacking short ball</p>
+<p><strong>Chop slice (defensive):</strong>
+- Swing path dốc hơn — từ cao xuống nhiều hơn
+- Bóng đi cao hơn và chậm hơn, với nhiều backspin
+- Bounce thấp — nhưng cao qua lưới
+- Khi dùng: Khi bị ép, cần thêm thời gian, hoặc muốn thay đổi pace hoàn toàn</p>
+<p><strong>Chiến thuật slice:</strong>
+- Vào forehand (wide) của đối thủ để kéo họ ra ngoài sân
+- Vào short angle — cross-court slice ngắn để kéo đối thủ vào mid-court
+- Setup drop shot — slice deep vào backhand → drop shot khi đối thủ lùi xa</p>
+<hr/>
+<h2 id="126-backhand-return-of-serve-aggressive-receiving">12.6 Backhand Return Of Serve — Aggressive Receiving</h2>
+<p>Return of serve với backhand là situation mà hầu hết player struggle nhất. Đặc biệt với fast first serve vào backhand.</p>
+<h3 id="compact-backswing-return">Compact Backswing Return</h3>
 <p>Điểm mấu chốt của backhand return: <strong>không có thời gian cho full backswing</strong>. Đặc biệt với first serve.</p>
-<strong>2HBH compact return:</strong>
-<ul class="styled-list">
-<li>Backswing chỉ bằng nửa bình thường — vợt không ra sau quá vai</li>
-<li>Tay trái initiate early unit turn</li>
-<li>Đánh mostly bằng forward swing và rotation, không phải backswing-to-forward swing</li>
-</ul>
-<strong>1HBH compact return:</strong>
-<ul class="styled-list">
-<li>Slice return dùng continental grip — grip đơn giản, không cần full setup</li>
-<li>Topspin return đòi hỏi grip change (continental → Eastern BH) → ít thời gian hơn → khó hơn</li>
-<li>Nhiều 1HBH players default sang slice return cho first serve</li>
-</ul>
-<h3>Return Aggression Theo Tốc Độ Serve</h3>
-<strong>Fast first serve (180+ km/h):</strong>
-<ul class="styled-list">
-<li>Block return — dùng pace của serve, redirect</li>
-<li>Aim cross-court deep</li>
-<li>Không cố thêm pace — borrow pace từ serve</li>
-</ul>
-<strong>Medium first serve (150-180 km/h):</strong>
-<ul class="styled-list">
-<li>Compact swing return</li>
-<li>Có thể add một chút pace hoặc direction</li>
-<li>Cross-court still safest</li>
-</ul>
-<strong>Slow second serve (dưới 140 km/h):</strong>
-<ul class="styled-list">
-<li>Full attack — đây là cơ hội</li>
-<li>Aim vào specific target với intent rõ ràng</li>
-<li>Có thể take early (on the rise) để lấy thời gian từ server</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.7 Backhand Trong Các Tactical Situations</h2><h3>Backhand vs. Heavy Topspin</h3>
+<p><strong>2HBH compact return:</strong>
+- Backswing chỉ bằng nửa bình thường — vợt không ra sau quá vai
+- Tay trái initiate early unit turn
+- Đánh mostly bằng forward swing và rotation, không phải backswing-to-forward swing</p>
+<p><strong>1HBH compact return:</strong>
+- Slice return dùng continental grip — grip đơn giản, không cần full setup
+- Topspin return đòi hỏi grip change (continental → Eastern BH) → ít thời gian hơn → khó hơn
+- Nhiều 1HBH players default sang slice return cho first serve</p>
+<h3 id="return-aggression-theo-toc-o-serve">Return Aggression Theo Tốc Độ Serve</h3>
+<p><strong>Fast first serve (180+ km/h):</strong>
+- Block return — dùng pace của serve, redirect
+- Aim cross-court deep
+- Không cố thêm pace — borrow pace từ serve</p>
+<p><strong>Medium first serve (150-180 km/h):</strong>
+- Compact swing return
+- Có thể add một chút pace hoặc direction
+- Cross-court still safest</p>
+<p><strong>Slow second serve (dưới 140 km/h):</strong>
+- Full attack — đây là cơ hội
+- Aim vào specific target với intent rõ ràng
+- Có thể take early (on the rise) để lấy thời gian từ server</p>
+<hr/>
+<h2 id="127-backhand-trong-cac-tactical-situations">12.7 Backhand Trong Các Tactical Situations</h2>
+<h3 id="backhand-vs-heavy-topspin">Backhand vs. Heavy Topspin</h3>
 <p>Khi đối thủ liên tục đánh heavy topspin forehand vào backhand (Nadal-style):</p>
-<strong>Challenge:</strong> Bounce cao, tầm vai hoặc trên → 2HBH từ tầm cao khó.
-<strong>Strategies:</strong>
-<strong>Strategy 1 — Counterattack cross-court:</strong>
-<p>Đánh aggressive cross-court backhand vào backhand của đối thủ. "Meet fire with fire" — không để defensive.</p>
-<strong>Strategy 2 — Move back + heavy topspin back:</strong>
-<p>Lùi ra sau, đợi bóng rơi xuống, đánh heavy topspin back vào backhand của đối thủ. Trao đổi topspin — ai kiên nhẫn hơn.</p>
-<strong>Strategy 3 — Inside-out forehand:</strong>
-<p>Dùng kỹ năng từ chương 11 — chạy vòng backhand, đánh inside-out forehand. Tránh hoàn toàn việc phải đánh 2HBH từ tầm cao.</p>
-<strong>Strategy 4 — Slice:</strong>
-<p>Đánh slice low vào feet của đối thủ. Thay đổi tempo, buộc đối thủ phải tạo power từ bóng thấp.</p>
-<strong>Strategy 5 — Approach và volley:</strong>
-<p>Khi có slice ngắn hoặc short ball, approach lưới. Đưa trận đấu vào net game — tránh baseline rally backhand hoàn toàn.</p>
-<h3>Backhand Down-The-Line Như Setup</h3>
+<p><strong>Challenge:</strong> Bounce cao, tầm vai hoặc trên → 2HBH từ tầm cao khó.</p>
+<p><strong>Strategies:</strong></p>
+<p><strong>Strategy 1 — Counterattack cross-court:</strong>
+Đánh aggressive cross-court backhand vào backhand của đối thủ. "Meet fire with fire" — không để defensive.</p>
+<p><strong>Strategy 2 — Move back + heavy topspin back:</strong>
+Lùi ra sau, đợi bóng rơi xuống, đánh heavy topspin back vào backhand của đối thủ. Trao đổi topspin — ai kiên nhẫn hơn.</p>
+<p><strong>Strategy 3 — Inside-out forehand:</strong>
+Dùng kỹ năng từ chương 11 — chạy vòng backhand, đánh inside-out forehand. Tránh hoàn toàn việc phải đánh 2HBH từ tầm cao.</p>
+<p><strong>Strategy 4 — Slice:</strong>
+Đánh slice low vào feet của đối thủ. Thay đổi tempo, buộc đối thủ phải tạo power từ bóng thấp.</p>
+<p><strong>Strategy 5 — Approach và volley:</strong>
+Khi có slice ngắn hoặc short ball, approach lưới. Đưa trận đấu vào net game — tránh baseline rally backhand hoàn toàn.</p>
+<h3 id="backhand-down-the-line-nhu-setup">Backhand Down-The-Line Như Setup</h3>
 <p>DTL backhand không chỉ là cú đánh tấn công — nó là công cụ <strong>setup</strong>.</p>
 <p>Sau nhiều cú backhand cross-court → đối thủ anticipate cross-court, đang di chuyển sang phía đó → <strong>DTL backhand surprise</strong> → họ bị caught moving wrong direction.</p>
 <p>Lần tiếp theo, họ sẽ không anticipate cross-court nữa → bạn có cả hai options lại một lần nữa.</p>
-<strong>Pattern:</strong>
-<ul class="styled-list">
-<li>Backhand cross-court × 2-3 lần</li>
-<li>Backhand DTL bất ngờ</li>
-<li>Lặp lại (nhưng không quá predictable)</li>
-</ul>
-<h3>Backhand Vào Body</h3>
+<p><strong>Pattern:</strong>
+- Backhand cross-court × 2-3 lần
+- Backhand DTL bất ngờ
+- Lặp lại (nhưng không quá predictable)</p>
+<h3 id="backhand-vao-body">Backhand Vào Body</h3>
 <p>Ít được nhắc đến nhưng cực hiệu quả: <strong>backhand vào body</strong> của đối thủ.</p>
-<p>Khi đối thủ đang ở mid-court hoặc đang di chuyển sang một phía, backhand vào thân người:</p>
-<ul class="styled-list">
-<li>Buộc họ phải "move out of the way" trước khi swing</li>
-<li>Không có góc để return</li>
-<li>Đặc biệt hiệu quả khi đối thủ đang ở T-zone hoặc tiến lên lưới</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.8 Backhand Như Passing Shot</h2><p>Khi đối thủ tiến vào lưới và bạn cần passing shot với backhand:</p>
-<h3>Options Cho Backhand Passing Shot</h3>
-<strong>Option 1 — Down-the-line passing:</strong>
-<p>Backhand DTL qua người net player. Rủi ro cao (đường ngắn, net cao ở đây) nhưng nếu vào là winner.</p>
-<strong>Option 2 — Cross-court passing:</strong>
-<p>Backhand cross-court qua người net player sang phía ngược lại. An toàn hơn DTL nhưng đòi hỏi angle tốt.</p>
-<strong>Option 3 — Lob:</strong>
-<p>Khi net player ở T-zone, lob qua đầu. Đặc biệt với 1HBH — topspin lob từ 1HBH rất khó đọc.</p>
-<strong>Option 4 — Body shot:</strong>
-<p>Đánh thẳng vào người net player. Không phải winner nhưng buộc họ phải move — có thể tạo ra volley yếu.</p>
-<h3>Timing Của Passing Shot</h3>
+<p>Khi đối thủ đang ở mid-court hoặc đang di chuyển sang một phía, backhand vào thân người:
+- Buộc họ phải "move out of the way" trước khi swing
+- Không có góc để return
+- Đặc biệt hiệu quả khi đối thủ đang ở T-zone hoặc tiến lên lưới</p>
+<hr/>
+<h2 id="128-backhand-nhu-passing-shot">12.8 Backhand Như Passing Shot</h2>
+<p>Khi đối thủ tiến vào lưới và bạn cần passing shot với backhand:</p>
+<h3 id="options-cho-backhand-passing-shot">Options Cho Backhand Passing Shot</h3>
+<p><strong>Option 1 — Down-the-line passing:</strong>
+Backhand DTL qua người net player. Rủi ro cao (đường ngắn, net cao ở đây) nhưng nếu vào là winner.</p>
+<p><strong>Option 2 — Cross-court passing:</strong>
+Backhand cross-court qua người net player sang phía ngược lại. An toàn hơn DTL nhưng đòi hỏi angle tốt.</p>
+<p><strong>Option 3 — Lob:</strong>
+Khi net player ở T-zone, lob qua đầu. Đặc biệt với 1HBH — topspin lob từ 1HBH rất khó đọc.</p>
+<p><strong>Option 4 — Body shot:</strong>
+Đánh thẳng vào người net player. Không phải winner nhưng buộc họ phải move — có thể tạo ra volley yếu.</p>
+<h3 id="timing-cua-passing-shot">Timing Của Passing Shot</h3>
 <p>Đừng đánh passing shot quá sớm — khi người net player vẫn đang di chuyển vào lưới.</p>
 <p>Đợi đến khi họ <strong>đã commit vào position</strong> → rồi passing. Khi đó họ không thể change direction nữa.</p>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.9 Backhand Disguise</h2><p>Tương tự forehand, backhand cũng cần disguise để effective ở level cao.</p>
-<h3>2HBH Disguise</h3>
-<strong>Challenge:</strong> Với hai tay, body mechanics giống nhau cho cross-court và DTL — khó disguise hơn 1HBH.
-<strong>Technique:</strong>
-<ul class="styled-list">
-<li>Unit turn giống nhau cho cross-court và DTL</li>
-<li>Contact point: contact sớm hơn (phía trước hơn) → DTL; contact hơi muộn hơn → cross-court</li>
-<li>Body rotation: ít rotate → DTL; rotate đầy đủ → cross-court</li>
-</ul>
-<strong>Drill disguise 2HBH:</strong>
-<p>Partner đứng tại T, quan sát và cố đoán hướng. Bạn tập 50/50 cross-court và DTL, cố gắng không telegraph. Nếu partner đoán đúng quá 65% → disguise chưa đủ.</p>
-<h3>1HBH Disguise</h3>
+<hr/>
+<h2 id="129-backhand-disguise">12.9 Backhand Disguise</h2>
+<p>Tương tự forehand, backhand cũng cần disguise để effective ở level cao.</p>
+<h3 id="2hbh-disguise">2HBH Disguise</h3>
+<p><strong>Challenge:</strong> Với hai tay, body mechanics giống nhau cho cross-court và DTL — khó disguise hơn 1HBH.</p>
+<p><strong>Technique:</strong>
+- Unit turn giống nhau cho cross-court và DTL
+- Contact point: contact sớm hơn (phía trước hơn) → DTL; contact hơi muộn hơn → cross-court
+- Body rotation: ít rotate → DTL; rotate đầy đủ → cross-court</p>
+<p><strong>Drill disguise 2HBH:</strong>
+Partner đứng tại T, quan sát và cố đoán hướng. Bạn tập 50/50 cross-court và DTL, cố gắng không telegraph. Nếu partner đoán đúng quá 65% → disguise chưa đủ.</p>
+<h3 id="1hbh-disguise">1HBH Disguise</h3>
 <p>1HBH có lợi thế lớn về disguise vì <strong>grip change</strong> — cùng position setup nhưng grip quyết định topspin hay slice, và được thực hiện muộn.</p>
-<strong>Continental grip:</strong> Mặc định — có thể hit topspin (unorthodox) hoặc slice
-<strong>Eastern backhand grip:</strong> Topspin tốt nhất
+<p><strong>Continental grip:</strong> Mặc định — có thể hit topspin (unorthodox) hoặc slice
+<strong>Eastern backhand grip:</strong> Topspin tốt nhất</p>
 <p>Khi setup với Eastern grip, grip change nhỏ về phía continental ngay trước tiếp xúc → slice bất ngờ. Và ngược lại.</p>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.10 Mental Game Cho Backhand</h2><h3>"Backhand Is My Weapon" Mindset</h3>
+<hr/>
+<h2 id="1210-mental-game-cho-backhand">12.10 Mental Game Cho Backhand</h2>
+<h3 id="backhand-is-my-weapon-mindset">"Backhand Is My Weapon" Mindset</h3>
 <p>Sự chuyển đổi từ "backhand defensive" sang "backhand weapon" bắt đầu từ tâm lý.</p>
 <p>Nhiều player có habit tránh backhand — chạy vòng để đánh forehand quá thường xuyên, luôn slice backhand thay vì topspin, defensive khi bóng đến backhand.</p>
-<strong>Chuyển đổi mindset:</strong>
-<ul class="styled-list">
-<li>Chào đón bóng vào backhand, không né tránh</li>
-<li>Mỗi backhand có intent — không chỉ "trả bóng"</li>
-<li>Sau khi đánh backhand tốt, acknowledge internally — reinforcing positive pattern</li>
-</ul>
-<h3>Backhand Dưới Áp Lực</h3>
-<p>Big points (break point, set point) — backhand thường breakdown trước forehand vì:</p>
-<ul class="styled-list">
-<li>Less confidence historically → tighten up → technical breakdown</li>
-<li>Body "remembers" past backhand errors</li>
-</ul>
-<strong>Solutions:</strong>
-<ul class="styled-list">
-<li>Đơn giản hóa target — cross-court deep là default an toàn</li>
-<li>Breathing protocol — thở ra tại tiếp xúc</li>
-<li>Process focus — "contact point phía trước" là một thought đơn giản dưới áp lực</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.11 Chọn Và Phát Triển: 2HBH Hay 1HBH?</h2><p>Câu hỏi phổ biến: nên học 2HBH hay 1HBH?</p>
-<h3>Nếu Bắt Đầu Từ Đầu</h3>
-<strong>2HBH được recommend cho hầu hết người mới bắt đầu vì:</strong>
-<ul class="styled-list">
-<li>Dễ học consistency hơn</li>
-<li>Ít đòi hỏi về grip strength</li>
-<li>Ít vulnerable với high balls (khi biết kỹ thuật đúng)</li>
-<li>Phù hợp với tennis hiện đại (baseline, topspin heavy)</li>
-</ul>
-<strong>1HBH phù hợp nếu:</strong>
-<ul class="styled-list">
-<li>Bạn có background trong các môn khác đòi hỏi one-handed swing (golf, cricket, squash)</li>
-<li>Bạn muốn chơi serve-and-volley, net-heavy game</li>
-<li>Coach của bạn đặc biệt giỏi dạy 1HBH</li>
-<li>Sân chủ yếu của bạn là grass hoặc fast surfaces</li>
-</ul>
-<h3>Nếu Đã Có Một Loại Và Muốn Improve</h3>
+<p><strong>Chuyển đổi mindset:</strong>
+- Chào đón bóng vào backhand, không né tránh
+- Mỗi backhand có intent — không chỉ "trả bóng"
+- Sau khi đánh backhand tốt, acknowledge internally — reinforcing positive pattern</p>
+<h3 id="backhand-duoi-ap-luc">Backhand Dưới Áp Lực</h3>
+<p>Big points (break point, set point) — backhand thường breakdown trước forehand vì:
+- Less confidence historically → tighten up → technical breakdown
+- Body "remembers" past backhand errors</p>
+<p><strong>Solutions:</strong>
+- Đơn giản hóa target — cross-court deep là default an toàn
+- Breathing protocol — thở ra tại tiếp xúc
+- Process focus — "contact point phía trước" là một thought đơn giản dưới áp lực</p>
+<hr/>
+<h2 id="1211-chon-va-phat-trien-2hbh-hay-1hbh">12.11 Chọn Và Phát Triển: 2HBH Hay 1HBH?</h2>
+<p>Câu hỏi phổ biến: nên học 2HBH hay 1HBH?</p>
+<h3 id="neu-bat-au-tu-au">Nếu Bắt Đầu Từ Đầu</h3>
+<p><strong>2HBH được recommend cho hầu hết người mới bắt đầu vì:</strong>
+- Dễ học consistency hơn
+- Ít đòi hỏi về grip strength
+- Ít vulnerable với high balls (khi biết kỹ thuật đúng)
+- Phù hợp với tennis hiện đại (baseline, topspin heavy)</p>
+<p><strong>1HBH phù hợp nếu:</strong>
+- Bạn có background trong các môn khác đòi hỏi one-handed swing (golf, cricket, squash)
+- Bạn muốn chơi serve-and-volley, net-heavy game
+- Coach của bạn đặc biệt giỏi dạy 1HBH
+- Sân chủ yếu của bạn là grass hoặc fast surfaces</p>
+<h3 id="neu-a-co-mot-loai-va-muon-improve">Nếu Đã Có Một Loại Và Muốn Improve</h3>
 <p>Không nên đổi từ 2HBH sang 1HBH hoặc ngược lại sau khi đã established — trừ khi có lý do rất mạnh. Thay vào đó, <strong>master cái đang có</strong>.</p>
-<p>Với 2HBH: focus vào high ball, DTL, và disguise.</p>
-<p>Với 1HBH: focus vào scapular retraction, slice mastery, và power generation.</p>
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.12 Bài Tập Phát Triển Backhand Nâng Cao</h2><h3>Bài Tập 1: DTL Backhand Consistency Drill</h3>
-<strong>Setup:</strong> Partner feed vào backhand tầm thắt lưng, từ baseline.
-<strong>Execution:</strong> Chỉ đánh DTL — không có cross-court option. 3 sets × 20 lần.
-<strong>Progression:</strong>
+<p>Với 2HBH: focus vào high ball, DTL, và disguise.
+Với 1HBH: focus vào scapular retraction, slice mastery, và power generation.</p>
+<hr/>
+<h2 id="1212-bai-tap-phat-trien-backhand-nang-cao">12.12 Bài Tập Phát Triển Backhand Nâng Cao</h2>
+<h3 id="bai-tap-1-dtl-backhand-consistency-drill">Bài Tập 1: DTL Backhand Consistency Drill</h3>
+<p><strong>Setup:</strong> Partner feed vào backhand tầm thắt lưng, từ baseline.</p>
+<p><strong>Execution:</strong> Chỉ đánh DTL — không có cross-court option. 3 sets × 20 lần.</p>
+<p><strong>Progression:</strong>
+- Set 1: Feed chậm, aim vào nửa DTL của sân
+- Set 2: Feed trung bình, aim vào 1 mét từ đường biên dọc
+- Set 3: Feed ngẫu nhiên pace, aim vào target 50cm từ đường biên dọc và baseline</p>
+<p><strong>Theo dõi:</strong> % vào sân vào đúng vùng target. Mục tiêu cuối 4 tuần: 70%+.</p>
+<hr/>
+<h3 id="bai-tap-2-high-ball-2hbh-drill">Bài Tập 2: High Ball 2HBH Drill</h3>
+<p><strong>Setup:</strong> Ball machine hoặc partner toss bóng cao — nảy lên trên vai.</p>
+<p><strong>Execution Round 1 — Move back:</strong> Lùi ra sau baseline, đợi bóng rơi xuống tầm thắt lưng, đánh cross-court. 20 lần.</p>
+<p><strong>Execution Round 2 — On the rise:</strong> Tiến vào, đánh bóng đang lên (trước khi đạt đỉnh bounce). 20 lần.</p>
+<p><strong>Mục tiêu:</strong> Comfortable với cả hai options. Có thể chọn đúng option theo tình huống.</p>
+<hr/>
+<h3 id="bai-tap-3-left-hand-only-drill">Bài Tập 3: Left Hand Only Drill</h3>
+<p><strong>Setup:</strong> Chỉ dùng tay trái, cầm vợt với Eastern hoặc Semi-Western grip trái tay.</p>
+<p><strong>Execution:</strong> Đánh forehand (từ góc nhìn tay trái) chéo sân — thực ra là backhand direction của 2HBH. 30 lần mỗi buổi.</p>
+<p><strong>Mục tiêu:</strong> Tay trái learn cách generate swing. Sau drill này, 2HBH sẽ cảm thấy khác — tay trái dominant hơn.</p>
+<hr/>
+<h3 id="bai-tap-4-slice-precision-drill">Bài Tập 4: Slice Precision Drill</h3>
+<p><strong>Setup:</strong> Đứng ở baseline, partner hoặc feed machine.</p>
+<p><strong>Execution:</strong>
+- 20 slice cross-court — aim vào vùng ngắn (service box half) → drop shot type
+- 20 slice deep cross-court — aim vào trong 1 mét từ baseline
+- 20 slice down-the-line — aim vào trong 1 mét từ đường biên dọc</p>
+<p><strong>Mục tiêu:</strong> Slice có direction và depth control — không chỉ "vào sân".</p>
+<hr/>
+<h3 id="bai-tap-5-pattern-drilling-backhand-cross-en-dtl">Bài Tập 5: Pattern Drilling — Backhand Cross Đến DTL</h3>
+<p><strong>Setup:</strong> Rally với partner từ baseline. Partner cố giữ bóng vào backhand của bạn.</p>
+<p><strong>Execution:</strong> Đánh 2-3 backhand cross-court, sau đó DTL. Partner cố anticipate và cover cả hai options.</p>
+<p><strong>Mục tiêu:</strong> DTL bất ngờ sau cross-court setup. Partner không biết khi nào bạn đổi sang DTL.</p>
+<hr/>
+<h3 id="bai-tap-6-backhand-passing-shot-drill">Bài Tập 6: Backhand Passing Shot Drill</h3>
+<p><strong>Setup:</strong> Partner đứng ở T-zone sau lưới. Feeder toss bóng vào backhand của bạn ở baseline.</p>
+<p><strong>Execution:</strong>
+- 15 backhand DTL passing
+- 15 backhand cross-court passing
+- 15 backhand lob</p>
+<p><strong>Sau đó:</strong> Mix — partner di chuyển sau khi bạn setup, bạn chọn option tốt nhất dựa trên position của họ.</p>
+<hr/>
+<h2 id="1213-chuong-trinh-8-tuan-backhand-nang-cao">12.13 Chương Trình 8 Tuần — Backhand Nâng Cao</h2>
+<h3 id="tuan-1-2-foundation-contact-point-va-left-hand">Tuần 1-2: Foundation — Contact Point Và Left Hand</h3>
+<p><strong>Mỗi buổi:</strong>
+- 10 phút: Left hand only drill
+- 15 phút: 2HBH với focus vào contact point — phía trước, tầm thắt lưng
+- 10 phút: DTL backhand drill (feed chậm)
+- 5 phút: High ball drill (move back option)</p>
+<p><strong>Weekly goal:</strong> "Contact point phía trước" trở thành habit — không cần nhắc nhở.</p>
+<hr/>
+<h3 id="tuan-3-4-dtl-development">Tuần 3-4: DTL Development</h3>
+<p><strong>Mỗi buổi:</strong>
+- 15 phút: DTL drill progression (từ feed chậm đến nhanh)
+- 10 phút: Cross-court vs DTL disguise drill
+- 10 phút: High ball — on the rise option
+- 5 phút: Slice precision</p>
+<hr/>
+<h3 id="tuan-5-6-tactical-integration">Tuần 5-6: Tactical Integration</h3>
+<p><strong>Mỗi buổi:</strong>
+- 10 phút: Pattern drill (cross × 2-3 → DTL)
+- 10 phút: Backhand passing shot drill
+- 15 phút: Points với constraint "tấn công ít nhất 1 backhand mỗi 4 cú"
+- 5 phút: Return với backhand (partner serve medium pace)</p>
+<p><strong>Focus:</strong> Backhand có intent — không passive.</p>
+<hr/>
+<h3 id="tuan-7-8-match-integration">Tuần 7-8: Match Integration</h3>
+<p><strong>Mỗi buổi:</strong>
+- 10 phút: Warm-up backhand — mix cross, DTL, slice
+- 25 phút: Sets với explicit game plan bao gồm backhand aggression
+- 5 phút: Analysis — backhand working? Any breakdowns?</p>
+<p><strong>Weekly goal:</strong> Trong sets, backhand không breakdown dưới pressure situations.</p>
+<hr/>
+<h2 id="1214-nam-loi-backhand-nang-cao-pho-bien">12.14 Năm Lỗi Backhand Nâng Cao Phổ Biến</h2>
+<h3 id="loi-1-tay-phai-dominant-trong-2hbh">Lỗi 1: Tay Phải Dominant Trong 2HBH</h3>
+<p><strong>Mô tả:</strong> Tay phải "takes over" swing — tay trái passive. Kết quả là 2HBH flat, thiếu topspin, và thiếu power từ rotation.</p>
+<p><strong>Nhận biết:</strong> Bóng 2HBH của bạn đi flat, thiếu dip, và dễ tấn công. Hoặc cổ tay phải sore sau khi tập nhiều.</p>
+<p><strong>Sửa:</strong> Left hand only drill + light right hand drill (tuần 1-2 liên tục).</p>
+<hr/>
+<h3 id="loi-2-dtl-backhand-voi-contact-point-muon">Lỗi 2: DTL Backhand Với Contact Point Muộn</h3>
+<p><strong>Mô tả:</strong> Tiếp xúc bóng khi bóng đã vào gần body → tự nhiên kéo cross-court → DTL miss.</p>
+<p><strong>Nhận biết:</strong> DTL backhand thường ra ngoài sang trái, hoặc vào lưới bên trái.</p>
+<p><strong>Sửa:</strong> Drill contact point — tập setup sớm hơn, tiếp xúc bóng khi còn phía trước.</p>
+<hr/>
+<h3 id="loi-3-khong-co-backhand-topspin-tu-tam-cao">Lỗi 3: Không Có Backhand Topspin Từ Tầm Cao</h3>
+<p><strong>Mô tả:</strong> Khi bóng nảy cao vào backhand, mặc định sang slice thay vì giải quyết vấn đề kỹ thuật.</p>
+<p><strong>Hậu quả:</strong> Đối thủ biết chiến lược: đánh topspin nặng vào backhand → bạn slice defensive → họ tấn công slice ngắn.</p>
+<p><strong>Sửa:</strong> High ball drill 2 tuần liên tục — cả move back lẫn on the rise options.</p>
+<hr/>
+<h3 id="loi-4-slice-backhand-khong-co-depth">Lỗi 4: Slice Backhand Không Có Depth</h3>
+<p><strong>Mô tả:</strong> Slice vào sân nhưng ngắn — landing trong service box area → dễ tấn công cho đối thủ.</p>
+<p><strong>Nhận biết:</strong> Sau slice của bạn, đối thủ hay tiến vào và tấn công.</p>
+<p><strong>Sửa:</strong> Slice precision drill — aim explicitly vào baseline area. "Short slice = weak slice" — ngoại trừ khi cố ý drop shot.</p>
+<hr/>
+<h3 id="loi-5-backhand-khong-uoc-dung-nhu-tan-cong">Lỗi 5: Backhand Không Được Dùng Như Tấn Công</h3>
+<p><strong>Mô tả:</strong> Backhand luôn defensive — chỉ "trả bóng" không có direction, pace, hay intent.</p>
+<p><strong>Hậu quả:</strong> Đối thủ tập trung tấn công backhand vì biết không có nguy hiểm.</p>
+<p><strong>Sửa:</strong> Set rule trong tập luyện: mỗi rally, ít nhất 1 trong 4 backhand phải có aggressive intent (deep direction, pace, hoặc DTL attempt). Dần dần tăng tỷ lệ này.</p>
+<hr/>
+<h2 id="tom-tat-chuong-12">Tóm Tắt Chương 12</h2>
 <ul class="styled-list">
-<li>Set 1: Feed chậm, aim vào nửa DTL của sân</li>
-<li>Set 2: Feed trung bình, aim vào 1 mét từ đường biên dọc</li>
-<li>Set 3: Feed ngẫu nhiên pace, aim vào target 50cm từ đường biên dọc và baseline</li>
+<li>
+<p><strong>Backhand là ranh giới</strong> phân biệt player average và player tốt — không phải forehand</p>
+</li>
+<li>
+<p><strong>2HBH power</strong> đến từ tay trái dominant, leg drive, hip rotation theo sequence — không phải chỉ cánh tay</p>
+</li>
+<li>
+<p><strong>DTL 2HBH</strong> là cú đánh khó nhất nhưng hiệu quả nhất — đòi hỏi contact point sớm hơn và hip rotation khác</p>
+</li>
+<li>
+<p><strong>High ball 2HBH</strong> — hai options: move back (an toàn) hoặc on the rise (aggressive); biết khi nào dùng cái nào</p>
+</li>
+<li>
+<p><strong>1HBH slice</strong> là vũ khí chiến thuật mạnh — carve slice (attacking) vs. chop slice (defensive)</p>
+</li>
+<li>
+<p><strong>Scapular retraction</strong> là foundation của 1HBH power — không phải chỉ cánh tay</p>
+</li>
+<li>
+<p><strong>Backhand disguise</strong> trong 2HBH đến từ contact timing và hip rotation, không phải unit turn</p>
+</li>
+<li>
+<p><strong>Mindset chuyển đổi</strong> từ "backhand defensive" sang "backhand weapon" phải bắt đầu từ tập luyện có intent</p>
+</li>
 </ul>
-<strong>Theo dõi:</strong> % vào sân vào đúng vùng target. Mục tiêu cuối 4 tuần: 70%+.
-<hr>
-<h3>Bài Tập 2: High Ball 2HBH Drill</h3>
-<strong>Setup:</strong> Ball machine hoặc partner toss bóng cao — nảy lên trên vai.
-<strong>Execution Round 1 — Move back:</strong> Lùi ra sau baseline, đợi bóng rơi xuống tầm thắt lưng, đánh cross-court. 20 lần.
-<strong>Execution Round 2 — On the rise:</strong> Tiến vào, đánh bóng đang lên (trước khi đạt đỉnh bounce). 20 lần.
-<strong>Mục tiêu:</strong> Comfortable với cả hai options. Có thể chọn đúng option theo tình huống.
-<hr>
-<h3>Bài Tập 3: Left Hand Only Drill</h3>
-<strong>Setup:</strong> Chỉ dùng tay trái, cầm vợt với Eastern hoặc Semi-Western grip trái tay.
-<strong>Execution:</strong> Đánh forehand (từ góc nhìn tay trái) chéo sân — thực ra là backhand direction của 2HBH. 30 lần mỗi buổi.
-<strong>Mục tiêu:</strong> Tay trái learn cách generate swing. Sau drill này, 2HBH sẽ cảm thấy khác — tay trái dominant hơn.
-<hr>
-<h3>Bài Tập 4: Slice Precision Drill</h3>
-<strong>Setup:</strong> Đứng ở baseline, partner hoặc feed machine.
-<strong>Execution:</strong>
-<ul class="styled-list">
-<li>20 slice cross-court — aim vào vùng ngắn (service box half) → drop shot type</li>
-<li>20 slice deep cross-court — aim vào trong 1 mét từ baseline</li>
-<li>20 slice down-the-line — aim vào trong 1 mét từ đường biên dọc</li>
-</ul>
-<strong>Mục tiêu:</strong> Slice có direction và depth control — không chỉ "vào sân".
-<hr>
-<h3>Bài Tập 5: Pattern Drilling — Backhand Cross Đến DTL</h3>
-<strong>Setup:</strong> Rally với partner từ baseline. Partner cố giữ bóng vào backhand của bạn.
-<strong>Execution:</strong> Đánh 2-3 backhand cross-court, sau đó DTL. Partner cố anticipate và cover cả hai options.
-<strong>Mục tiêu:</strong> DTL bất ngờ sau cross-court setup. Partner không biết khi nào bạn đổi sang DTL.
-<hr>
-<h3>Bài Tập 6: Backhand Passing Shot Drill</h3>
-<strong>Setup:</strong> Partner đứng ở T-zone sau lưới. Feeder toss bóng vào backhand của bạn ở baseline.
-<strong>Execution:</strong>
-<ul class="styled-list">
-<li>15 backhand DTL passing</li>
-<li>15 backhand cross-court passing</li>
-<li>15 backhand lob</li>
-</ul>
-<strong>Sau đó:</strong> Mix — partner di chuyển sau khi bạn setup, bạn chọn option tốt nhất dựa trên position của họ.
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.13 Chương Trình 8 Tuần — Backhand Nâng Cao</h2><h3>Tuần 1-2: Foundation — Contact Point Và Left Hand</h3>
-<strong>Mỗi buổi:</strong>
-<ul class="styled-list">
-<li>10 phút: Left hand only drill</li>
-<li>15 phút: 2HBH với focus vào contact point — phía trước, tầm thắt lưng</li>
-<li>10 phút: DTL backhand drill (feed chậm)</li>
-<li>5 phút: High ball drill (move back option)</li>
-</ul>
-<strong>Weekly goal:</strong> "Contact point phía trước" trở thành habit — không cần nhắc nhở.
-<hr>
-<h3>Tuần 3-4: DTL Development</h3>
-<strong>Mỗi buổi:</strong>
-<ul class="styled-list">
-<li>15 phút: DTL drill progression (từ feed chậm đến nhanh)</li>
-<li>10 phút: Cross-court vs DTL disguise drill</li>
-<li>10 phút: High ball — on the rise option</li>
-<li>5 phút: Slice precision</li>
-</ul>
-<hr>
-<h3>Tuần 5-6: Tactical Integration</h3>
-<strong>Mỗi buổi:</strong>
-<ul class="styled-list">
-<li>10 phút: Pattern drill (cross × 2-3 → DTL)</li>
-<li>10 phút: Backhand passing shot drill</li>
-<li>15 phút: Points với constraint "tấn công ít nhất 1 backhand mỗi 4 cú"</li>
-<li>5 phút: Return với backhand (partner serve medium pace)</li>
-</ul>
-<strong>Focus:</strong> Backhand có intent — không passive.
-<hr>
-<h3>Tuần 7-8: Match Integration</h3>
-<strong>Mỗi buổi:</strong>
-<ul class="styled-list">
-<li>10 phút: Warm-up backhand — mix cross, DTL, slice</li>
-<li>25 phút: Sets với explicit game plan bao gồm backhand aggression</li>
-<li>5 phút: Analysis — backhand working? Any breakdowns?</li>
-</ul>
-<strong>Weekly goal:</strong> Trong sets, backhand không breakdown dưới pressure situations.
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">12.14 Năm Lỗi Backhand Nâng Cao Phổ Biến</h2><h3>Lỗi 1: Tay Phải Dominant Trong 2HBH</h3>
-<strong>Mô tả:</strong> Tay phải "takes over" swing — tay trái passive. Kết quả là 2HBH flat, thiếu topspin, và thiếu power từ rotation.
-<strong>Nhận biết:</strong> Bóng 2HBH của bạn đi flat, thiếu dip, và dễ tấn công. Hoặc cổ tay phải sore sau khi tập nhiều.
-<strong>Sửa:</strong> Left hand only drill + light right hand drill (tuần 1-2 liên tục).
-<hr>
-<h3>Lỗi 2: DTL Backhand Với Contact Point Muộn</h3>
-<strong>Mô tả:</strong> Tiếp xúc bóng khi bóng đã vào gần body → tự nhiên kéo cross-court → DTL miss.
-<strong>Nhận biết:</strong> DTL backhand thường ra ngoài sang trái, hoặc vào lưới bên trái.
-<strong>Sửa:</strong> Drill contact point — tập setup sớm hơn, tiếp xúc bóng khi còn phía trước.
-<hr>
-<h3>Lỗi 3: Không Có Backhand Topspin Từ Tầm Cao</h3>
-<strong>Mô tả:</strong> Khi bóng nảy cao vào backhand, mặc định sang slice thay vì giải quyết vấn đề kỹ thuật.
-<strong>Hậu quả:</strong> Đối thủ biết chiến lược: đánh topspin nặng vào backhand → bạn slice defensive → họ tấn công slice ngắn.
-<strong>Sửa:</strong> High ball drill 2 tuần liên tục — cả move back lẫn on the rise options.
-<hr>
-<h3>Lỗi 4: Slice Backhand Không Có Depth</h3>
-<strong>Mô tả:</strong> Slice vào sân nhưng ngắn — landing trong service box area → dễ tấn công cho đối thủ.
-<strong>Nhận biết:</strong> Sau slice của bạn, đối thủ hay tiến vào và tấn công.
-<strong>Sửa:</strong> Slice precision drill — aim explicitly vào baseline area. "Short slice = weak slice" — ngoại trừ khi cố ý drop shot.
-<hr>
-<h3>Lỗi 5: Backhand Không Được Dùng Như Tấn Công</h3>
-<strong>Mô tả:</strong> Backhand luôn defensive — chỉ "trả bóng" không có direction, pace, hay intent.
-<strong>Hậu quả:</strong> Đối thủ tập trung tấn công backhand vì biết không có nguy hiểm.
-<strong>Sửa:</strong> Set rule trong tập luyện: mỗi rally, ít nhất 1 trong 4 backhand phải có aggressive intent (deep direction, pace, hoặc DTL attempt). Dần dần tăng tỷ lệ này.
-<hr></div>
-<div class="chapter" id="chapter-12"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 12</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 12</h2><ul class="styled-list">
-<li><strong>Backhand là ranh giới</strong> phân biệt player average và player tốt — không phải forehand</li>
-</ul>
-<ul class="styled-list">
-<li><strong>2HBH power</strong> đến từ tay trái dominant, leg drive, hip rotation theo sequence — không phải chỉ cánh tay</li>
-</ul>
-<ul class="styled-list">
-<li><strong>DTL 2HBH</strong> là cú đánh khó nhất nhưng hiệu quả nhất — đòi hỏi contact point sớm hơn và hip rotation khác</li>
-</ul>
-<ul class="styled-list">
-<li><strong>High ball 2HBH</strong> — hai options: move back (an toàn) hoặc on the rise (aggressive); biết khi nào dùng cái nào</li>
-</ul>
-<ul class="styled-list">
-<li><strong>1HBH slice</strong> là vũ khí chiến thuật mạnh — carve slice (attacking) vs. chop slice (defensive)</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Scapular retraction</strong> là foundation của 1HBH power — không phải chỉ cánh tay</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Backhand disguise</strong> trong 2HBH đến từ contact timing và hip rotation, không phải unit turn</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Mindset chuyển đổi</strong> từ "backhand defensive" sang "backhand weapon" phải bắt đầu từ tập luyện có intent</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-17"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 17</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 13 sẽ đi sâu vào <strong>Serve Nâng Cao</strong> — không chỉ kỹ thuật mà còn serve tactics, variation, và serve như vũ khí chiến lược. Spin serves, body serves, T serves ở cả deuce và ad court, và serve patterns ở cấp độ high performance.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 13 sẽ đi sâu vào <strong>Serve Nâng Cao</strong> — không chỉ kỹ thuật mà còn serve tactics, variation, và serve như vũ khí chiến lược. Spin serves, body serves, T serves ở cả deuce và ad court, và serve patterns ở cấp độ high performance.</p>
 <p>Sau 12 chương về kỹ thuật nâng cao từng cú đánh, chúng ta sẽ bắt đầu xây dựng picture toàn diện của một tennis player hoàn chỉnh — từ serve đến net, từ kỹ thuật đến chiến thuật đến tâm lý.</p>
-<hr>
-<em>Chương 13: Serve Nâng Cao — Spin Mastery, Placement, và Serve Tactics →</em></div>
+<hr/>
+<p><em>Chương 13: Serve Nâng Cao — Spin Mastery, Placement, và Serve Tactics →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

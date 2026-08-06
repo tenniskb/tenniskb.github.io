@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 06 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 06</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,63 +896,45 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 06</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 06</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 06</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">Chương 6: Kỹ Thuật, Sinh Cơ Học và Tâm Lý Của Cú Đánh Quyết Định</h2><hr>
-> <em>"Serve là cú đánh duy nhất trong tennis mà bạn kiểm soát mọi thứ — và cũng là cú đánh dễ mất kiểm soát nhất khi bạn bắt đầu suy nghĩ về nó."</em>
-
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 06 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#serve--vũ-khí-số-một-trong-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>SERVE — VŨ KHÍ SỐ MỘT TRONG TENNIS</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-6-kỹ-thuật-sinh-cơ-học-và-tâm-lý-của-cú-đánh-quyết-định' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 6: Kỹ Thuật, Sinh Cơ Học và Tâm Lý Của Cú Đánh Quyết Định</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#61-tại-sao-serve-là-cú-đánh-khác-biệt-hoàn-toàn' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.1 Tại Sao Serve Là Cú Đánh Khác Biệt Hoàn Toàn</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#62-giải-phẫu-của-một-cú-serve--8-giai-đoạn' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.2 Giải Phẫu Của Một Cú Serve — 8 Giai Đoạn</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#63-ba-loại-serve--flat-slice-và-kick' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.3 Ba Loại Serve — Flat, Slice và Kick</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#64-tốc-độ-serve--đến-từ-đâu-thực-sự' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.4 Tốc Độ Serve — Đến Từ Đâu Thực Sự?</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#65-t-serve-body-serve-và-wide-serve--chiến-thuật-serve' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.5 T Serve, Body Serve, và Wide Serve — Chiến Thuật Serve</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#66-double-fault--tâm-lý-học-và-cách-vượt-qua' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.6 Double Fault — Tâm Lý Học Và Cách Vượt Qua</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#67-second-serve--cú-đánh-bị-hy-sinh-oan' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.7 Second Serve — Cú Đánh Bị Hy Sinh Oan</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#68-serve-return--bên-kia-của-phương-trình' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.8 Serve Return — Bên Kia Của Phương Trình</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#69-serve-và-chiến-thuật-game-tổng-thể' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.9 Serve Và Chiến Thuật Game Tổng Thể</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#610-chương-trình-tập-serve--8-tuần' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.10 Chương Trình Tập Serve — 8 Tuần</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#611-các-lỗi-serve-phổ-biến-và-cách-sửa' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>6.11 Các Lỗi Serve Phổ Biến Và Cách Sửa</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-6' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 6</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#đọc-thêm-cho-chương-tiếp-theo' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Đọc Thêm Cho Chương Tiếp Theo</a></li></ul></div>
+    <h1 id="serve-vu-khi-so-mot-trong-tennis">SERVE — VŨ KHÍ SỐ MỘT TRONG TENNIS</h1>
+<h2 id="chuong-6-ky-thuat-sinh-co-hoc-va-tam-ly-cua-cu-anh-quyet-inh">Chương 6: Kỹ Thuật, Sinh Cơ Học và Tâm Lý Của Cú Đánh Quyết Định</h2>
+<hr/>
+<div class="pullquote"><p>*"Serve là cú đánh duy nhất trong tennis mà bạn kiểm soát mọi thứ — và cũng là cú đánh dễ mất kiểm soát nhất khi bạn bắt đầu suy nghĩ về nó."*</p></div>
+<hr/>
 <p>Ngày 9 tháng 7 năm 2008. Wimbledon. Trận chung kết giữa Federer và Nadal — trận đấu mà nhiều người gọi là "trận tennis hay nhất lịch sử".</p>
 <p>Set 5. Game 8, Nadal phục vụ, tỷ số 4-4. Federer đang phản công. Đây là khoảnh khắc quyết định.</p>
 <p>Nadal tung bóng lên. Đầu vợt quét theo vòng cung hoàn hảo. Bóng đập vào T-line với tốc độ 190 km/h.</p>
 <p>Federer không chạm được bóng. Ace.</p>
 <p>Khoảnh khắc đó không xảy ra vì Nadal "nghĩ về serve". Nó xảy ra vì hàng triệu lần tập luyện đã biến serve thành phản xạ tự nhiên sâu đến mức áp lực không thể với tới nó.</p>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.1 Tại Sao Serve Là Cú Đánh Khác Biệt Hoàn Toàn</h2><p>Trong tất cả các cú đánh tennis, serve là cú đánh <strong>duy nhất</strong> mà:</p>
+<hr/>
+<h2 id="61-tai-sao-serve-la-cu-anh-khac-biet-hoan-toan">6.1 Tại Sao Serve Là Cú Đánh Khác Biệt Hoàn Toàn</h2>
+<p>Trong tất cả các cú đánh tennis, serve là cú đánh <strong>duy nhất</strong> mà:</p>
 <ul class="styled-list">
 <li>Bạn bắt đầu từ trạng thái đứng yên</li>
 <li>Bạn tự quyết định timing, tốc độ và vị trí tung bóng</li>
@@ -960,377 +943,422 @@ footer .credit-label { color: var(--gold); }
 </ul>
 <p>Điều này có nghĩa gì? <strong>Serve là cú đánh bạn có thể kiểm soát hoàn toàn</strong> — không ai ép bạn phải serve khi chưa sẵn sàng (trong lý thuyết).</p>
 <p>Nhưng đây cũng là con dao hai lưỡi: vì bạn kiểm soát mọi thứ, bạn <strong>không thể đổ lỗi</strong> cho bất kỳ điều gì ngoài bản thân khi serve sai. Điều này làm cho serve trở thành mảnh đất màu mỡ cho lo lắng và tự hoài nghi.</p>
-<strong>Kết quả thống kê:</strong> Phần lớn double fault xảy ra không phải vì người chơi thiếu kỹ năng kỹ thuật — mà vì <strong>áp lực tâm lý làm thay đổi cơ học serve</strong> trong moment quan trọng.
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.2 Giải Phẫu Của Một Cú Serve — 8 Giai Đoạn</h2><p>Serve là cú đánh có chuỗi vận động dài và phức tạp nhất trong tennis. Nó bắt đầu từ tư thế đứng yên và kết thúc bằng một đầu vợt di chuyển với tốc độ 120-180 km/h trong chưa đầy nửa giây.</p>
+<p><strong>Kết quả thống kê:</strong> Phần lớn double fault xảy ra không phải vì người chơi thiếu kỹ năng kỹ thuật — mà vì <strong>áp lực tâm lý làm thay đổi cơ học serve</strong> trong moment quan trọng.</p>
+<hr/>
+<h2 id="62-giai-phau-cua-mot-cu-serve-8-giai-oan">6.2 Giải Phẫu Của Một Cú Serve — 8 Giai Đoạn</h2>
+<p>Serve là cú đánh có chuỗi vận động dài và phức tạp nhất trong tennis. Nó bắt đầu từ tư thế đứng yên và kết thúc bằng một đầu vợt di chuyển với tốc độ 120-180 km/h trong chưa đầy nửa giây.</p>
 <p>Để hiểu và cải thiện serve, chúng ta chia nhỏ thành 8 giai đoạn:</p>
-<hr>
-<h3>Giai Đoạn 1: Setup — Tư Thế Và Stance</h3>
-<strong>Đứng đâu:</strong>
-<ul class="styled-list">
-<li>First serve: thường đứng sát đường trung tâm (T)</li>
-<li>Second serve: có thể lùi ra xa hơn một chút để có góc đánh khác</li>
-</ul>
-<strong>Hai kiểu stance:</strong>
-<strong>Platform Stance (Tư Thế Nền):</strong>
-<p>Hai chân song song với baseline, cách nhau bằng vai. Cả hai chân đứng yên trong suốt toss và backswing.</p>
-<ul class="styled-list">
-<li>Ưu điểm: ổn định hơn, dễ học, nhất quán</li>
-<li>Dùng bởi: nhiều người chơi recreational và junior</li>
-</ul>
-<strong>Pinpoint Stance (Tư Thế Điểm):</strong>
-<p>Bắt đầu với một chân rộng hơn vai, sau đó kéo chân sau lên gần chân trước trước khi đẩy nhảy.</p>
-<ul class="styled-list">
-<li>Ưu điểm: tạo ra sức đẩy dọc mạnh hơn (leg drive mạnh hơn)</li>
-<li>Dùng bởi: phần lớn tay vợt chuyên nghiệp</li>
-</ul>
-<strong>Phần thân trên:</strong>
-<ul class="styled-list">
-<li>Trọng tâm hơi về phía trước (không ngả ra sau)</li>
-<li>Vai trái (với người thuận tay phải) hướng về phía lưới</li>
-<li>Vợt và bóng được giữ ở phía trước tự nhiên</li>
-</ul>
-<hr>
-<h3>Giai Đoạn 2: Toss — Tung Bóng</h3>
+<hr/>
+<h3 id="giai-oan-1-setup-tu-the-va-stance">Giai Đoạn 1: Setup — Tư Thế Và Stance</h3>
+<p><strong>Đứng đâu:</strong>
+- First serve: thường đứng sát đường trung tâm (T)
+- Second serve: có thể lùi ra xa hơn một chút để có góc đánh khác</p>
+<p><strong>Hai kiểu stance:</strong></p>
+<p><strong>Platform Stance (Tư Thế Nền):</strong>
+Hai chân song song với baseline, cách nhau bằng vai. Cả hai chân đứng yên trong suốt toss và backswing.
+- Ưu điểm: ổn định hơn, dễ học, nhất quán
+- Dùng bởi: nhiều người chơi recreational và junior</p>
+<p><strong>Pinpoint Stance (Tư Thế Điểm):</strong>
+Bắt đầu với một chân rộng hơn vai, sau đó kéo chân sau lên gần chân trước trước khi đẩy nhảy.
+- Ưu điểm: tạo ra sức đẩy dọc mạnh hơn (leg drive mạnh hơn)
+- Dùng bởi: phần lớn tay vợt chuyên nghiệp</p>
+<p><strong>Phần thân trên:</strong>
+- Trọng tâm hơi về phía trước (không ngả ra sau)
+- Vai trái (với người thuận tay phải) hướng về phía lưới
+- Vợt và bóng được giữ ở phía trước tự nhiên</p>
+<hr/>
+<h3 id="giai-oan-2-toss-tung-bong">Giai Đoạn 2: Toss — Tung Bóng</h3>
 <p>Đây là giai đoạn bị đánh giá thấp nhất nhưng quyết định nhất. Một cú toss xấu không thể được "sửa" bởi bất kỳ kỹ thuật swing nào.</p>
-<strong>Nguyên tắc cơ bản:</strong>
+<p><strong>Nguyên tắc cơ bản:</strong></p>
 <p>Toss phải được thực hiện bằng <strong>toàn bộ cánh tay</strong> — không phải chỉ cổ tay hay ngón tay. Cánh tay đưa bóng lên từ hông đến trên đầu theo một đường thẳng, sau đó <strong>nhẹ nhàng thả bóng</strong> ở điểm cao nhất mà cánh tay đạt được.</p>
-<strong>Không phải ném:</strong> Bạn không "ném" hay "tung" bóng theo nghĩa đen. Bạn <strong>đặt bóng lên không trung</strong> — cánh tay đưa bóng lên, tay mở ra khi bóng ở đỉnh, và trọng lực sẽ lo phần còn lại.
-<strong>Vị trí toss lý tưởng (flat/first serve):</strong>
-<ul class="styled-list">
-<li>Cao hơn đầu bạn khoảng 20-30 cm khi cánh tay duỗi thẳng</li>
-<li>Về phía trước khoảng 30-40 cm so với mũi chân</li>
-<li>Hơi sang phải so với đường thẳng vai (với người thuận tay phải)</li>
-</ul>
-<strong>Vị trí toss cho các loại serve khác nhau:</strong>
-| Loại Serve | Vị Trí Toss |
-|---|---|
-| Flat (First serve) | Trước mặt, hơi sang phải |
-| Slice | Sang phải nhiều hơn, hơi thấp hơn |
-| Kick/Topspin | Phía sau đầu, hơi sang trái |
-
-<strong>Toss consistency:</strong>
-<p>Toss phải nhất quán đến mức đối thủ <strong>không thể đọc loại serve</strong> từ vị trí toss. Điều này đòi hỏi tập toss cho từng loại serve riêng biệt cho đến khi mọi toss trông giống hệt nhau từ phía đối diện.</p>
-<hr>
-<h3>Giai Đoạn 3: Coil — Xoay Và Nén</h3>
+<p><strong>Không phải ném:</strong> Bạn không "ném" hay "tung" bóng theo nghĩa đen. Bạn <strong>đặt bóng lên không trung</strong> — cánh tay đưa bóng lên, tay mở ra khi bóng ở đỉnh, và trọng lực sẽ lo phần còn lại.</p>
+<p><strong>Vị trí toss lý tưởng (flat/first serve):</strong>
+- Cao hơn đầu bạn khoảng 20-30 cm khi cánh tay duỗi thẳng
+- Về phía trước khoảng 30-40 cm so với mũi chân
+- Hơi sang phải so với đường thẳng vai (với người thuận tay phải)</p>
+<p><strong>Vị trí toss cho các loại serve khác nhau:</strong></p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Loại Serve</th>
+<th>Vị Trí Toss</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flat (First serve)</td>
+<td>Trước mặt, hơi sang phải</td>
+</tr>
+<tr>
+<td>Slice</td>
+<td>Sang phải nhiều hơn, hơi thấp hơn</td>
+</tr>
+<tr>
+<td>Kick/Topspin</td>
+<td>Phía sau đầu, hơi sang trái</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Toss consistency:</strong>
+Toss phải nhất quán đến mức đối thủ <strong>không thể đọc loại serve</strong> từ vị trí toss. Điều này đòi hỏi tập toss cho từng loại serve riêng biệt cho đến khi mọi toss trông giống hệt nhau từ phía đối diện.</p>
+<hr/>
+<h3 id="giai-oan-3-coil-xoay-va-nen">Giai Đoạn 3: Coil — Xoay Và Nén</h3>
 <p>Đồng thời với toss, cơ thể bắt đầu "nén" — tích trữ năng lượng như lò xo.</p>
-<strong>Shoulder and Hip Coil:</strong>
-<ul class="styled-list">
-<li>Vai phải xoay ra sau</li>
-<li>Hông xoay theo nhưng ít hơn vai (tạo X-Factor)</li>
-<li>Đầu gối hơi cong — không sụp xuống sâu, chỉ nhẹ</li>
-</ul>
-<strong>Trophy Position:</strong>
-<p>Đây là vị trí mà nhiều huấn luyện viên gọi là "tư thế cúp" (trophy position) — vị trí mà vợt đang ở ngang đầu hoặc cao hơn, khuỷu tay cao, toàn thân đang ở trạng thái coil tối đa.</p>
-<strong>Backswing:</strong> Có nhiều phong cách backswing khác nhau:
-<ul class="styled-list">
-<li>"Abbreviated" (ngắn gọn): vợt đi trực tiếp từ vị trí serve lên trophy position theo đường ngắn. Ví dụ: Agassi.</li>
-<li>"Long loop": vợt đi theo một vòng cung dài trước khi lên trophy position. Ví dụ: Sampras.</li>
-<li>"Pendulum": vợt đong đưa xuống trước rồi lên. Rất phổ biến với người mới.</li>
-</ul>
-<strong>Không có backswing nào là "đúng duy nhất"</strong> — miễn là trophy position đạt được đúng.
-<hr>
-<h3>Giai Đoạn 4: The Drop — Vợt Rơi Xuống</h3>
+<p><strong>Shoulder and Hip Coil:</strong>
+- Vai phải xoay ra sau
+- Hông xoay theo nhưng ít hơn vai (tạo X-Factor)
+- Đầu gối hơi cong — không sụp xuống sâu, chỉ nhẹ</p>
+<p><strong>Trophy Position:</strong>
+Đây là vị trí mà nhiều huấn luyện viên gọi là "tư thế cúp" (trophy position) — vị trí mà vợt đang ở ngang đầu hoặc cao hơn, khuỷu tay cao, toàn thân đang ở trạng thái coil tối đa.</p>
+<p><strong>Backswing:</strong> Có nhiều phong cách backswing khác nhau:
+- "Abbreviated" (ngắn gọn): vợt đi trực tiếp từ vị trí serve lên trophy position theo đường ngắn. Ví dụ: Agassi.
+- "Long loop": vợt đi theo một vòng cung dài trước khi lên trophy position. Ví dụ: Sampras.
+- "Pendulum": vợt đong đưa xuống trước rồi lên. Rất phổ biến với người mới.</p>
+<p><strong>Không có backswing nào là "đúng duy nhất"</strong> — miễn là trophy position đạt được đúng.</p>
+<hr/>
+<h3 id="giai-oan-4-the-drop-vot-roi-xuong">Giai Đoạn 4: The Drop — Vợt Rơi Xuống</h3>
 <p>Từ trophy position, vợt <strong>rơi xuống</strong> sau lưng trước khi swing lên.</p>
 <p>Đây là giai đoạn nhìn kỳ lạ nhất từ bên ngoài. Khi quan sát slow-motion, bạn sẽ thấy đầu vợt của Federer hay Sinner "rơi" xuống đến tận ngang thắt lưng sau lưng trước khi bùng lên tiếp xúc bóng.</p>
-<strong>Tại sao vợt rơi xuống?</strong>
-<p>Vì cánh tay và vai đang ở maximum external rotation (xoay ngoài tối đa) — tạo ra căng tối đa ở ba nhóm cơ chính:</p>
-<ul class="styled-list">
-<li>Cơ ngực (pectoralis)</li>
-<li>Cơ delta trước</li>
-<li>Subscapularis</li>
-</ul>
+<p><strong>Tại sao vợt rơi xuống?</strong></p>
+<p>Vì cánh tay và vai đang ở maximum external rotation (xoay ngoài tối đa) — tạo ra căng tối đa ở ba nhóm cơ chính:
+- Cơ ngực (pectoralis)
+- Cơ delta trước
+- Subscapularis</p>
 <p>Khi "drop" đạt tối đa, internal rotation xảy ra như sóng thần — tốc độ 4000-6000 độ/giây — kéo đầu vợt lên với gia tốc khổng lồ.</p>
-<strong>Không cố tình "drop":</strong> Giống như slot của forehand, drop của serve không phải động tác chủ ý. Nó xảy ra tự nhiên khi cánh tay đủ thư giãn và trophy position đúng. Nếu bạn cố tình "đặt vợt ra sau lưng", bạn sẽ căng cơ và phá hủy nó.
-<hr>
-<h3>Giai Đoạn 5: Leg Drive — Sức Mạnh Từ Hai Chân</h3>
+<p><strong>Không cố tình "drop":</strong> Giống như slot của forehand, drop của serve không phải động tác chủ ý. Nó xảy ra tự nhiên khi cánh tay đủ thư giãn và trophy position đúng. Nếu bạn cố tình "đặt vợt ra sau lưng", bạn sẽ căng cơ và phá hủy nó.</p>
+<hr/>
+<h3 id="giai-oan-5-leg-drive-suc-manh-tu-hai-chan">Giai Đoạn 5: Leg Drive — Sức Mạnh Từ Hai Chân</h3>
 <p>Đây là bí mật lớn nhất của serve mà phần lớn người chơi không biết:</p>
-<strong>Tốc độ serve không đến từ tay. Nó đến từ hai chân.</strong>
+<p><strong>Tốc độ serve không đến từ tay. Nó đến từ hai chân.</strong></p>
 <p>Cụ thể hơn, nó đến từ <strong>Ground Reaction Force</strong> (lực phản của mặt đất) — khái niệm đã được giới thiệu ở Chương 1.</p>
-<strong>Sinh cơ học học:</strong>
+<p><strong>Sinh cơ học học:</strong></p>
 <p>Khi serve, cơ thể bạn đang rơi về phía trước (trọng tâm tiến về phía lưới) trong khi hai chân đẩy mạnh vào đất. Mặt đất phản lực ngược lại, đẩy cơ thể lên và về phía trước.</p>
 <p>Năng lượng từ leg drive này đi lên qua kinetic chain: chân → hông → thân → vai → cánh tay → cổ tay → vợt.</p>
-<strong>Bằng chứng:</strong> Các nghiên cứu biomechanics cho thấy leg drive đóng góp khoảng <strong>50-55% tổng tốc độ đầu vợt</strong> trong serve. Cánh tay chỉ đóng góp phần còn lại.
-<strong>Điều này có nghĩa gì với bạn:</strong> Nếu serve của bạn yếu và bạn cố đánh mạnh hơn bằng cách "vung tay mạnh hơn" — bạn đang cố sửa đúng 50% trong khi bỏ qua 50% còn lại. Hãy kiểm tra leg drive.
-<strong>Timing của leg drive:</strong>
-<p>Đây là phần subtle nhất. Leg drive không phải là "nhảy lên" chủ ý. Nó là hậu quả tự nhiên của việc:</p>
-<p>1. Hai chân cong đúng mức trong coil</p>
-<p>2. Hông xoay đúng thứ tự</p>
-<p>3. Cơ thể ngả về phía trước đúng mức</p>
+<p><strong>Bằng chứng:</strong> Các nghiên cứu biomechanics cho thấy leg drive đóng góp khoảng <strong>50-55% tổng tốc độ đầu vợt</strong> trong serve. Cánh tay chỉ đóng góp phần còn lại.</p>
+<p><strong>Điều này có nghĩa gì với bạn:</strong> Nếu serve của bạn yếu và bạn cố đánh mạnh hơn bằng cách "vung tay mạnh hơn" — bạn đang cố sửa đúng 50% trong khi bỏ qua 50% còn lại. Hãy kiểm tra leg drive.</p>
+<p><strong>Timing của leg drive:</strong>
+Đây là phần subtle nhất. Leg drive không phải là "nhảy lên" chủ ý. Nó là hậu quả tự nhiên của việc:
+1. Hai chân cong đúng mức trong coil
+2. Hông xoay đúng thứ tự
+3. Cơ thể ngả về phía trước đúng mức</p>
 <p>Khi ba điều này đúng, leg drive xảy ra tự nhiên và thường dẫn đến việc cả hai chân rời mặt đất tại điểm tiếp xúc.</p>
-<hr>
-<h3>Giai Đoạn 6: Contact — Tiếp Xúc</h3>
+<hr/>
+<h3 id="giai-oan-6-contact-tiep-xuc">Giai Đoạn 6: Contact — Tiếp Xúc</h3>
 <p>Tiếp xúc xảy ra ở điểm cao nhất mà cánh tay duỗi hoàn toàn có thể đạt được — khoảng 30-40 cm trên đầu.</p>
-<strong>Tư thế lý tưởng tại tiếp xúc:</strong>
-<ul class="styled-list">
-<li>Cánh tay duỗi hoàn toàn (không gập khuỷu)</li>
-<li>Cổ tay ở vị trí "stable" — không giật cổ tay để "snap"</li>
-<li>Đầu và mắt hướng lên bóng (không nhìn vào sân quá sớm)</li>
-<li>Cơ thể đang trong quá trình "rơi" về phía lưới</li>
-</ul>
-<strong>Điểm tiếp xúc trên dây vợt:</strong>
-<p>Với flat serve: phần trung tâm (sweet spot) của dây vợt tiếp xúc giữa bóng.</p>
-<p>Với slice: tiếp xúc phần bên phải của bóng (nhìn từ phía bạn đứng).</p>
-<p>Với kick/topspin: tiếp xúc phần dưới-trái của bóng, vợt quét lên và sang phải.</p>
-<strong>Pronation (Xoay Cẳng Tay):</strong>
-<p>Ngay sau tiếp xúc, cẳng tay pronation (xoay từ supination sang pronation — lòng bàn tay từ hướng sang bên sang hướng xuống đất). Đây là yếu tố tạo ra tốc độ cuối cùng và cũng là cơ chế phanh tự nhiên.</p>
-<hr>
-<h3>Giai Đoạn 7: Follow-Through — Theo Đà</h3>
+<p><strong>Tư thế lý tưởng tại tiếp xúc:</strong>
+- Cánh tay duỗi hoàn toàn (không gập khuỷu)
+- Cổ tay ở vị trí "stable" — không giật cổ tay để "snap"
+- Đầu và mắt hướng lên bóng (không nhìn vào sân quá sớm)
+- Cơ thể đang trong quá trình "rơi" về phía lưới</p>
+<p><strong>Điểm tiếp xúc trên dây vợt:</strong>
+Với flat serve: phần trung tâm (sweet spot) của dây vợt tiếp xúc giữa bóng.
+Với slice: tiếp xúc phần bên phải của bóng (nhìn từ phía bạn đứng).
+Với kick/topspin: tiếp xúc phần dưới-trái của bóng, vợt quét lên và sang phải.</p>
+<p><strong>Pronation (Xoay Cẳng Tay):</strong>
+Ngay sau tiếp xúc, cẳng tay pronation (xoay từ supination sang pronation — lòng bàn tay từ hướng sang bên sang hướng xuống đất). Đây là yếu tố tạo ra tốc độ cuối cùng và cũng là cơ chế phanh tự nhiên.</p>
+<hr/>
+<h3 id="giai-oan-7-follow-through-theo-a">Giai Đoạn 7: Follow-Through — Theo Đà</h3>
 <p>Follow-through của serve là cơ chế phanh an toàn — tương tự forehand.</p>
 <p>Sau tiếp xúc, vợt tiếp tục theo quỹ đạo tự nhiên: quét qua người và kết thúc ở phía đối diện — thường là bên trái cơ thể, ở khoảng ngang hông đến đùi (với người thuận tay phải).</p>
-<strong>Không được dừng vợt đột ngột</strong> — điều này sẽ gây chấn thương vai theo thời gian.
-<hr>
-<h3>Giai Đoạn 8: Recovery — Tái Định Vị</h3>
+<p><strong>Không được dừng vợt đột ngột</strong> — điều này sẽ gây chấn thương vai theo thời gian.</p>
+<hr/>
+<h3 id="giai-oan-8-recovery-tai-inh-vi">Giai Đoạn 8: Recovery — Tái Định Vị</h3>
 <p>Sau serve, cơ thể đang ở vị trí không lý tưởng — nghiêng về phía trước, trọng tâm gần lưới. Bạn cần recovery nhanh để sẵn sàng cho cú đánh tiếp theo.</p>
-<strong>Split step:</strong> Ngay khi đối thủ chuẩn bị đánh return, bạn phải thực hiện split step — bước nhỏ sang hai bên để đặt cơ thể trong trạng thái sẵn sàng.
-<strong>Serve and volley:</strong> Tùy chiến thuật, sau serve bạn có thể tiến thẳng vào lưới để volley.
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.3 Ba Loại Serve — Flat, Slice và Kick</h2><h3>Flat Serve (Serve Phẳng)</h3>
-<strong>Đặc điểm:</strong> Tốc độ nhanh nhất, spin ít nhất, quỹ đạo thẳng nhất.
-<strong>Cơ chế:</strong> Vợt đánh thẳng vào sau bóng (6 giờ đến 12 giờ), pronation tạo ra lực cuối cùng.
-<strong>Vị trí toss:</strong> Trực tiếp trên đầu hoặc hơi về phía trước.
-<strong>Ưu điểm:</strong> Tốc độ cao → ít thời gian cho đối thủ phản ứng. Nếu vào, rất khó return.
-<strong>Nhược điểm:</strong> Margin lỗi nhỏ nhất — bóng phải đi qua một "hành lang" hẹp. Thường chỉ dùng cho first serve.
-<strong>Tốc độ tham chiếu ATP 2026:</strong> Trung bình 200-220 km/h. Tốp đỉnh (Karlovic, Isner era) đạt 250+ km/h.
-<hr>
-<h3>Slice Serve (Serve Xoáy Ngang)</h3>
-<strong>Đặc điểm:</strong> Tốc độ trung bình, sidespin sang phải (với người thuận tay phải), bóng "trượt" ra ngoài hoặc vào thân đối thủ.
-<strong>Cơ chế:</strong> Vợt tiếp xúc phần bên phải của bóng (3 giờ đến 9 giờ, nghiêng về 3 giờ), tạo ra sidespin. Bóng bay theo đường cong sang phải.
-<strong>Vị trí toss:</strong> Sang phải nhiều hơn so với flat serve.
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li>Vào T-line: kéo đối thủ ra ngoài đường biên → mở sân rộng</li>
-<li>Vào body (center line): xoáy vào người đối thủ → khó return</li>
-<li>Safer hơn flat serve — spin giúp kéo bóng xuống</li>
-</ul>
-<strong>Chiến thuật điển hình:</strong> T slice ra ngoài → forehand open court; body slice vào thân → yếu return.
-<hr>
-<h3>Kick Serve / Topspin Serve (Serve Xoáy Lên)</h3>
-<strong>Đặc điểm:</strong> Tốc độ trung bình đến chậm, topspin + sidespin nặng, nảy cao và xoáy sang trái khi tiếp đất.
-<strong>Cơ chế:</strong> Vợt tiếp xúc phần dưới-trái của bóng (8 giờ đến 2 giờ), quét từ dưới lên và sang phải. Toss phía sau đầu hơn so với flat serve.
-<strong>Vị trí toss:</strong> Phía sau đầu hoặc trực tiếp trên đầu — toss này thường trông khác nhất so với flat/slice.
-<strong>Ưu điểm:</strong>
-<ul class="styled-list">
-<li>An toàn nhất — spin và arc cao cho phép bóng vào sân với margin lớn</li>
-<li>Nảy cao → buộc đối thủ phải đánh bóng ngang vai (khó hơn với nhiều người)</li>
-<li>Khó đọc hướng vì bóng xoáy sau khi nảy</li>
-<li>Lý tưởng cho second serve</li>
-</ul>
-<strong>Nhược điểm:</strong>
-<ul class="styled-list">
-<li>Chậm hơn → đối thủ có nhiều thời gian hơn</li>
-<li>Đòi hỏi kỹ thuật phức tạp nhất trong ba loại</li>
-</ul>
-<strong>Second serve standard:</strong> Trong tennis hiện đại đỉnh cao, kick serve là tiêu chuẩn cho second serve vì nó vừa an toàn (ít double fault) vừa tạo ra bóng nảy khó xử lý.
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.4 Tốc Độ Serve — Đến Từ Đâu Thực Sự?</h2><p>Đây là câu hỏi mà hầu hết người chơi amateur nghĩ sai.</p>
-<strong>Quan niệm sai phổ biến:</strong> "Tôi cần cánh tay mạnh hơn để serve nhanh hơn."
-<strong>Thực tế:</strong> Tốc độ đầu vợt trong serve phụ thuộc vào:
-<p>1. <strong>Leg drive (50-55%):</strong> Đã giải thích ở mục 6.2.</p>
-<p>2. <strong>Trunk rotation (15-20%):</strong> Thân xoay về phía trước, dẫn dắt kinetic chain.</p>
-<p>3. <strong>Shoulder internal rotation (20-25%):</strong> Xoay trong của humerus — đây là bộ phận tạo ra "crack" cuối cùng. Cơ này (subscapularis và cơ ngực) cực kỳ mạnh nhưng chỉ hoạt động đúng khi external rotation trước đó đủ sâu (tức là "drop" đúng).</p>
-<p>4. <strong>Forearm pronation (5-10%):</strong> Xoay cẳng tay cuối cùng.</p>
-<strong>Hàm ý thực tế:</strong>
-<p>Nếu bạn muốn serve nhanh hơn 20 km/h, đây là thứ tự ưu tiên:</p>
-<p>1. Cải thiện leg drive (tập squat jump, explosive leg exercises)</p>
-<p>2. Cải thiện trophy position và drop (để shoulder internal rotation xảy ra đúng)</p>
-<p>3. Trunk rotation timing (hông dẫn trước vai một chút)</p>
+<p><strong>Split step:</strong> Ngay khi đối thủ chuẩn bị đánh return, bạn phải thực hiện split step — bước nhỏ sang hai bên để đặt cơ thể trong trạng thái sẵn sàng.</p>
+<p><strong>Serve and volley:</strong> Tùy chiến thuật, sau serve bạn có thể tiến thẳng vào lưới để volley.</p>
+<hr/>
+<h2 id="63-ba-loai-serve-flat-slice-va-kick">6.3 Ba Loại Serve — Flat, Slice và Kick</h2>
+<h3 id="flat-serve-serve-phang">Flat Serve (Serve Phẳng)</h3>
+<p><strong>Đặc điểm:</strong> Tốc độ nhanh nhất, spin ít nhất, quỹ đạo thẳng nhất.</p>
+<p><strong>Cơ chế:</strong> Vợt đánh thẳng vào sau bóng (6 giờ đến 12 giờ), pronation tạo ra lực cuối cùng.</p>
+<p><strong>Vị trí toss:</strong> Trực tiếp trên đầu hoặc hơi về phía trước.</p>
+<p><strong>Ưu điểm:</strong> Tốc độ cao → ít thời gian cho đối thủ phản ứng. Nếu vào, rất khó return.</p>
+<p><strong>Nhược điểm:</strong> Margin lỗi nhỏ nhất — bóng phải đi qua một "hành lang" hẹp. Thường chỉ dùng cho first serve.</p>
+<p><strong>Tốc độ tham chiếu ATP 2026:</strong> Trung bình 200-220 km/h. Tốp đỉnh (Karlovic, Isner era) đạt 250+ km/h.</p>
+<hr/>
+<h3 id="slice-serve-serve-xoay-ngang">Slice Serve (Serve Xoáy Ngang)</h3>
+<p><strong>Đặc điểm:</strong> Tốc độ trung bình, sidespin sang phải (với người thuận tay phải), bóng "trượt" ra ngoài hoặc vào thân đối thủ.</p>
+<p><strong>Cơ chế:</strong> Vợt tiếp xúc phần bên phải của bóng (3 giờ đến 9 giờ, nghiêng về 3 giờ), tạo ra sidespin. Bóng bay theo đường cong sang phải.</p>
+<p><strong>Vị trí toss:</strong> Sang phải nhiều hơn so với flat serve.</p>
+<p><strong>Ưu điểm:</strong>
+- Vào T-line: kéo đối thủ ra ngoài đường biên → mở sân rộng
+- Vào body (center line): xoáy vào người đối thủ → khó return
+- Safer hơn flat serve — spin giúp kéo bóng xuống</p>
+<p><strong>Chiến thuật điển hình:</strong> T slice ra ngoài → forehand open court; body slice vào thân → yếu return.</p>
+<hr/>
+<h3 id="kick-serve-topspin-serve-serve-xoay-len">Kick Serve / Topspin Serve (Serve Xoáy Lên)</h3>
+<p><strong>Đặc điểm:</strong> Tốc độ trung bình đến chậm, topspin + sidespin nặng, nảy cao và xoáy sang trái khi tiếp đất.</p>
+<p><strong>Cơ chế:</strong> Vợt tiếp xúc phần dưới-trái của bóng (8 giờ đến 2 giờ), quét từ dưới lên và sang phải. Toss phía sau đầu hơn so với flat serve.</p>
+<p><strong>Vị trí toss:</strong> Phía sau đầu hoặc trực tiếp trên đầu — toss này thường trông khác nhất so với flat/slice.</p>
+<p><strong>Ưu điểm:</strong>
+- An toàn nhất — spin và arc cao cho phép bóng vào sân với margin lớn
+- Nảy cao → buộc đối thủ phải đánh bóng ngang vai (khó hơn với nhiều người)
+- Khó đọc hướng vì bóng xoáy sau khi nảy
+- Lý tưởng cho second serve</p>
+<p><strong>Nhược điểm:</strong>
+- Chậm hơn → đối thủ có nhiều thời gian hơn
+- Đòi hỏi kỹ thuật phức tạp nhất trong ba loại</p>
+<p><strong>Second serve standard:</strong> Trong tennis hiện đại đỉnh cao, kick serve là tiêu chuẩn cho second serve vì nó vừa an toàn (ít double fault) vừa tạo ra bóng nảy khó xử lý.</p>
+<hr/>
+<h2 id="64-toc-o-serve-en-tu-au-thuc-su">6.4 Tốc Độ Serve — Đến Từ Đâu Thực Sự?</h2>
+<p>Đây là câu hỏi mà hầu hết người chơi amateur nghĩ sai.</p>
+<p><strong>Quan niệm sai phổ biến:</strong> "Tôi cần cánh tay mạnh hơn để serve nhanh hơn."</p>
+<p><strong>Thực tế:</strong> Tốc độ đầu vợt trong serve phụ thuộc vào:</p>
+<ol class="styled-list numbered">
+<li>
+<p><strong>Leg drive (50-55%):</strong> Đã giải thích ở mục 6.2.</p>
+</li>
+<li>
+<p><strong>Trunk rotation (15-20%):</strong> Thân xoay về phía trước, dẫn dắt kinetic chain.</p>
+</li>
+<li>
+<p><strong>Shoulder internal rotation (20-25%):</strong> Xoay trong của humerus — đây là bộ phận tạo ra "crack" cuối cùng. Cơ này (subscapularis và cơ ngực) cực kỳ mạnh nhưng chỉ hoạt động đúng khi external rotation trước đó đủ sâu (tức là "drop" đúng).</p>
+</li>
+<li>
+<p><strong>Forearm pronation (5-10%):</strong> Xoay cẳng tay cuối cùng.</p>
+</li>
+</ol>
+<p><strong>Hàm ý thực tế:</strong></p>
+<p>Nếu bạn muốn serve nhanh hơn 20 km/h, đây là thứ tự ưu tiên:
+1. Cải thiện leg drive (tập squat jump, explosive leg exercises)
+2. Cải thiện trophy position và drop (để shoulder internal rotation xảy ra đúng)
+3. Trunk rotation timing (hông dẫn trước vai một chút)</p>
 <p>Tập cánh tay nên là <strong>bước cuối cùng</strong> — và thường không cần thiết nếu ba điều trên đã đúng.</p>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.5 T Serve, Body Serve, và Wide Serve — Chiến Thuật Serve</h2><p>Kỹ thuật tốt chỉ là nền tảng. Để serve thực sự là vũ khí, bạn cần hiểu <strong>khi nào dùng loại nào, vào đâu, và tại sao</strong>.</p>
-<h3>Ba Vùng Serve</h3>
-<strong>T Serve (Đánh vào T):</strong>
-<p>Bóng đánh vào đường T — giữa sân, gần đường trung tâm. Kéo đối thủ về phía giữa và mở góc bên ra.</p>
-<strong>Body Serve (Đánh vào người):</strong>
-<p>Bóng nhắm thẳng vào người đối thủ — thường vào hông hoặc khuỷu tay. Khó return vì không có chỗ vung tay.</p>
-<strong>Wide Serve (Đánh rộng):</strong>
-<p>Bóng đánh sang góc xa — kéo đối thủ ra khỏi sân.</p>
-<h3>Chiến Thuật Cơ Bản</h3>
-<strong>Deuce side (AD out):</strong>
-| Tình huống | Serve nên dùng |
-|---|---|
-| Đối thủ return backhand yếu | T slice hoặc flat sang trái (vào backhand) |
-| Đối thủ đứng xa về bên trái | Wide slice kéo ra ngoài |
-| Đối thủ return forehand mạnh | Body serve vào khuỷu |
-| 30-40, cần điểm | First serve flat nhanh vào T |
-
-<strong>Ad side (AD in):</strong>
-| Tình huống | Serve nên dùng |
-|---|---|
-| Đối thủ return forehand yếu | T wide sang phải (vào forehand) |
-| Đối thủ đứng gần giữa | Wide flat kéo ra xa |
-| Bảo vệ serve game | Body kick serve an toàn |
-
-<h3>Pattern — Serve + 1 (Cú Đánh Sau Serve)</h3>
+<hr/>
+<h2 id="65-t-serve-body-serve-va-wide-serve-chien-thuat-serve">6.5 T Serve, Body Serve, và Wide Serve — Chiến Thuật Serve</h2>
+<p>Kỹ thuật tốt chỉ là nền tảng. Để serve thực sự là vũ khí, bạn cần hiểu <strong>khi nào dùng loại nào, vào đâu, và tại sao</strong>.</p>
+<h3 id="ba-vung-serve">Ba Vùng Serve</h3>
+<p><strong>T Serve (Đánh vào T):</strong>
+Bóng đánh vào đường T — giữa sân, gần đường trung tâm. Kéo đối thủ về phía giữa và mở góc bên ra.</p>
+<p><strong>Body Serve (Đánh vào người):</strong>
+Bóng nhắm thẳng vào người đối thủ — thường vào hông hoặc khuỷu tay. Khó return vì không có chỗ vung tay.</p>
+<p><strong>Wide Serve (Đánh rộng):</strong>
+Bóng đánh sang góc xa — kéo đối thủ ra khỏi sân.</p>
+<h3 id="chien-thuat-co-ban">Chiến Thuật Cơ Bản</h3>
+<p><strong>Deuce side (AD out):</strong></p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Tình huống</th>
+<th>Serve nên dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Đối thủ return backhand yếu</td>
+<td>T slice hoặc flat sang trái (vào backhand)</td>
+</tr>
+<tr>
+<td>Đối thủ đứng xa về bên trái</td>
+<td>Wide slice kéo ra ngoài</td>
+</tr>
+<tr>
+<td>Đối thủ return forehand mạnh</td>
+<td>Body serve vào khuỷu</td>
+</tr>
+<tr>
+<td>30-40, cần điểm</td>
+<td>First serve flat nhanh vào T</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ad side (AD in):</strong></p>
+<table class="data-table">
+<thead>
+<tr>
+<th>Tình huống</th>
+<th>Serve nên dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Đối thủ return forehand yếu</td>
+<td>T wide sang phải (vào forehand)</td>
+</tr>
+<tr>
+<td>Đối thủ đứng gần giữa</td>
+<td>Wide flat kéo ra xa</td>
+</tr>
+<tr>
+<td>Bảo vệ serve game</td>
+<td>Body kick serve an toàn</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pattern-serve-1-cu-anh-sau-serve">Pattern — Serve + 1 (Cú Đánh Sau Serve)</h3>
 <p>Serve không tồn tại độc lập. "Serve + 1" là khái niệm quan trọng nhất trong chiến thuật serve:</p>
 <p>Serve được thiết kế để <strong>setup cú đánh tiếp theo</strong> — không phải để tự mình tạo ra điểm.</p>
-<strong>Ví dụ pattern:</strong>
-<ul class="styled-list">
-<li>T slice kéo đối thủ sang trái → sân bên phải mở → forehand inside-out sang phải (winner)</li>
-<li>Body serve vào khuỷu → đối thủ return yếu → approach shot ngắn vào lưới</li>
-</ul>
+<p><strong>Ví dụ pattern:</strong>
+- T slice kéo đối thủ sang trái → sân bên phải mở → forehand inside-out sang phải (winner)
+- Body serve vào khuỷu → đối thủ return yếu → approach shot ngắn vào lưới</p>
 <p>Người chơi giỏi không chỉ "serve và hy vọng" — họ đã biết <strong>trước</strong> mình sẽ đánh gì sau khi serve vào từng vị trí.</p>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.6 Double Fault — Tâm Lý Học Và Cách Vượt Qua</h2><p>Double fault là một trong những trải nghiệm tồi tệ nhất trong tennis. Không phải vì nó mất điểm — mà vì nó tạo ra cảm giác <strong>bạn đã đánh bại chính mình</strong> mà không cần đối thủ làm gì.</p>
-<h3>Tại Sao Double Fault Xảy Ra</h3>
-<strong>Nguyên nhân kỹ thuật (ít gặp hơn bạn nghĩ):</strong>
-<ul class="styled-list">
-<li>Toss inconsistent</li>
-<li>Thay đổi cơ học serve đột ngột</li>
-<li>Thiếu spin trên second serve</li>
-</ul>
-<strong>Nguyên nhân tâm lý (phổ biến hơn nhiều):</strong>
-<ul class="styled-list">
-<li>"Overcautious" syndrome: lo lắng về double fault → serve chậm và ngắn hơn → vào lưới hoặc ra ngoài khác chiều</li>
-<li>Overthinking: quá nhiều suy nghĩ về kỹ thuật trong khi đang serve</li>
-<li>Tension spiral: một double fault → lo lắng về double fault tiếp → cơ bắp căng → double fault lại</li>
-</ul>
-<h3>Sinh Lý Học Của "Yips" (Lỗi Do Lo Lắng)</h3>
+<hr/>
+<h2 id="66-double-fault-tam-ly-hoc-va-cach-vuot-qua">6.6 Double Fault — Tâm Lý Học Và Cách Vượt Qua</h2>
+<p>Double fault là một trong những trải nghiệm tồi tệ nhất trong tennis. Không phải vì nó mất điểm — mà vì nó tạo ra cảm giác <strong>bạn đã đánh bại chính mình</strong> mà không cần đối thủ làm gì.</p>
+<h3 id="tai-sao-double-fault-xay-ra">Tại Sao Double Fault Xảy Ra</h3>
+<p><strong>Nguyên nhân kỹ thuật (ít gặp hơn bạn nghĩ):</strong>
+- Toss inconsistent
+- Thay đổi cơ học serve đột ngột
+- Thiếu spin trên second serve</p>
+<p><strong>Nguyên nhân tâm lý (phổ biến hơn nhiều):</strong>
+- "Overcautious" syndrome: lo lắng về double fault → serve chậm và ngắn hơn → vào lưới hoặc ra ngoài khác chiều
+- Overthinking: quá nhiều suy nghĩ về kỹ thuật trong khi đang serve
+- Tension spiral: một double fault → lo lắng về double fault tiếp → cơ bắp căng → double fault lại</p>
+<h3 id="sinh-ly-hoc-cua-yips-loi-do-lo-lang">Sinh Lý Học Của "Yips" (Lỗi Do Lo Lắng)</h3>
 <p>"Yips" là hiện tượng khi các chuyển động đã được tự động hóa đột nhiên "bị hỏng" dưới áp lực cao.</p>
-<strong>Cơ chế thần kinh học:</strong>
-<p>Khi lo lắng tăng, amygdala kích hoạt cortex vận động (motor cortex) theo cách không bình thường. Thay vì để các pattern đã được tự động hóa chạy tự do, não bắt đầu "giám sát" từng vi chuyển động.</p>
+<p><strong>Cơ chế thần kinh học:</strong>
+Khi lo lắng tăng, amygdala kích hoạt cortex vận động (motor cortex) theo cách không bình thường. Thay vì để các pattern đã được tự động hóa chạy tự do, não bắt đầu "giám sát" từng vi chuyển động.</p>
 <p>Vấn đề: các chuyển động đã được tự động hóa như serve <strong>không được thiết kế để bị giám sát</strong> ở cấp độ ý thức. Chúng chạy quá nhanh và có quá nhiều biến số. Khi ý thức can thiệp, chúng vỡ ra.</p>
-<strong>Giải thích đơn giản hơn:</strong> Bạn không thể "nghĩ" về cách đi bộ trong khi đang đi bộ mà không vấp ngã. Tương tự với serve.
-<h3>Cách Chống Double Fault</h3>
-<strong>1. Breathing Protocol:</strong>
-<p>Trước second serve quan trọng, thực hiện: hít vào 4 giây, giữ 2 giây, thở ra 6 giây. Điều này kích hoạt parasympathetic nervous system — chống lại phản ứng stress của amygdala.</p>
-<strong>2. Single Thought Rule:</strong>
-<p>Được phép có ĐÚNG MỘT suy nghĩ kỹ thuật trước serve — không phải năm. Chọn cái nào cảm thấy quan trọng nhất với bạn ngày hôm đó (có thể là "tung bóng lên cao", hoặc "chân đẩy mạnh", hoặc "thả lỏng cánh tay"). Chỉ một.</p>
-<strong>3. Aggressive Second Serve Mindset:</strong>
-<p>Đây là ngược lại với bản năng khi lo lắng nhưng cực kỳ hiệu quả. Thay vì "chỉ cần vào là được" (mindset defensive), chuyển sang "tôi đang tấn công với second serve này" (mindset aggressive).</p>
-<strong>Lý do hoạt động:</strong> Mindset aggressive giữ cho swing motion đi hết đường. Mindset defensive thường làm bạn "pull up" — dừng swing sớm — dẫn đến vào lưới.
-<strong>4. "Same Routine Always":</strong>
-<p>Develop một pre-serve routine (quy trình trước serve) <strong>không thay đổi</strong> dù tình huống nào. Bounce bóng 3 lần, nhìn vào chỗ muốn đánh, thở ra, serve. Cùng một quy trình ở tiebreak 6-6 như ở game đầu tiên. Sự nhất quán của routine tạo ra "tunnel" đưa não vào trạng thái tự động.</p>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.7 Second Serve — Cú Đánh Bị Hy Sinh Oan</h2><p>Trong tennis amateur, second serve thường bị đối xử như "chỉ cần vào là được" — và vì vậy nó yếu, ngắn, và bị đối thủ tấn công.</p>
+<p><strong>Giải thích đơn giản hơn:</strong> Bạn không thể "nghĩ" về cách đi bộ trong khi đang đi bộ mà không vấp ngã. Tương tự với serve.</p>
+<h3 id="cach-chong-double-fault">Cách Chống Double Fault</h3>
+<p><strong>1. Breathing Protocol:</strong>
+Trước second serve quan trọng, thực hiện: hít vào 4 giây, giữ 2 giây, thở ra 6 giây. Điều này kích hoạt parasympathetic nervous system — chống lại phản ứng stress của amygdala.</p>
+<p><strong>2. Single Thought Rule:</strong>
+Được phép có ĐÚNG MỘT suy nghĩ kỹ thuật trước serve — không phải năm. Chọn cái nào cảm thấy quan trọng nhất với bạn ngày hôm đó (có thể là "tung bóng lên cao", hoặc "chân đẩy mạnh", hoặc "thả lỏng cánh tay"). Chỉ một.</p>
+<p><strong>3. Aggressive Second Serve Mindset:</strong>
+Đây là ngược lại với bản năng khi lo lắng nhưng cực kỳ hiệu quả. Thay vì "chỉ cần vào là được" (mindset defensive), chuyển sang "tôi đang tấn công với second serve này" (mindset aggressive).</p>
+<p><strong>Lý do hoạt động:</strong> Mindset aggressive giữ cho swing motion đi hết đường. Mindset defensive thường làm bạn "pull up" — dừng swing sớm — dẫn đến vào lưới.</p>
+<p><strong>4. "Same Routine Always":</strong>
+Develop một pre-serve routine (quy trình trước serve) <strong>không thay đổi</strong> dù tình huống nào. Bounce bóng 3 lần, nhìn vào chỗ muốn đánh, thở ra, serve. Cùng một quy trình ở tiebreak 6-6 như ở game đầu tiên. Sự nhất quán của routine tạo ra "tunnel" đưa não vào trạng thái tự động.</p>
+<hr/>
+<h2 id="67-second-serve-cu-anh-bi-hy-sinh-oan">6.7 Second Serve — Cú Đánh Bị Hy Sinh Oan</h2>
+<p>Trong tennis amateur, second serve thường bị đối xử như "chỉ cần vào là được" — và vì vậy nó yếu, ngắn, và bị đối thủ tấn công.</p>
 <p>Trong tennis chuyên nghiệp, <strong>second serve là vũ khí riêng</strong> — không phải là "first serve nhỏ hơn".</p>
-<h3>Tại Sao Second Serve Phải Mạnh</h3>
-<strong>Thống kê thực tế:</strong>
-<p>Khi second serve yếu (ngắn, không có spin), đối thủ tấn công return → bạn phải chơi defensive ngay từ cú đầu tiên → khó giữ serve game.</p>
+<h3 id="tai-sao-second-serve-phai-manh">Tại Sao Second Serve Phải Mạnh</h3>
+<p><strong>Thống kê thực tế:</strong>
+Khi second serve yếu (ngắn, không có spin), đối thủ tấn công return → bạn phải chơi defensive ngay từ cú đầu tiên → khó giữ serve game.</p>
 <p>Khi second serve mạnh (kick serve sâu với bounce cao), đối thủ phải chơi defensive → bạn đang tấn công dù đây là second serve.</p>
-<h3>Kick Serve — Tiêu Chuẩn Second Serve</h3>
+<h3 id="kick-serve-tieu-chuan-second-serve">Kick Serve — Tiêu Chuẩn Second Serve</h3>
 <p>Kick serve là lựa chọn lý tưởng cho second serve vì:</p>
-<strong>An toàn:</strong> Arc cao và topspin kéo bóng xuống sân — ít double fault hơn flat serve.
-<strong>Nguy hiểm:</strong> Bóng nảy cao và xoáy sang trái — buộc đối thủ phải đánh bóng ngang vai. Với Western/Semi-western backhand, đây là vị trí khó nhất.
-<strong>Khó đọc:</strong> Spin làm bóng xoáy sau khi nảy — khó đoán hướng trước khi tiếp đất.
-<h3>Xây Dựng Second Serve</h3>
-<strong>Sai lầm phổ biến nhất:</strong> Cố build second serve bằng cách "đánh nhẹ hơn" hoặc "cẩn thận hơn" với flat serve.
-<strong>Cách đúng:</strong> Second serve là <strong>loại serve khác hoàn toàn</strong> — kick/topspin serve — không phải flat serve chậm hơn.
-<p>Để build kick serve:</p>
-<p>1. Tập riêng toss phía sau đầu</p>
-<p>2. Tập swing path từ dưới-trái lên trên-phải (brush lên bóng)</p>
-<p>3. Tập ở 50% tốc độ cho đến khi bóng có spin rõ ràng</p>
-<p>4. Tăng dần tốc độ khi spin đã consistent</p>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.8 Serve Return — Bên Kia Của Phương Trình</h2><p>Serve không thể hiểu đầy đủ nếu không hiểu cả return. Mỗi loại serve được thiết kế để tạo ra khó khăn cụ thể cho người return — và biết điều đó giúp bạn serve thông minh hơn.</p>
-<h3>Cơ Học Return</h3>
-<strong>Split step timing:</strong> Return bắt đầu từ split step — phải đúng timing khi đối thủ chạm bóng (không phải khi toss, không phải khi bóng bay qua lưới).
-<strong>Compact backswing:</strong> Vì tốc độ serve nhanh, backswing của return phải rất compact. Không có thời gian cho big loop.
-<strong>Take it early:</strong> Tiến lên gặp bóng trước khi đạt đỉnh bounce (return sớm) tạo ra áp lực ngược lại cho server.
-<h3>Đọc Serve</h3>
-<p>Những người return giỏi đọc serve từ nhiều dấu hiệu trước cả khi bóng qua lưới:</p>
-<ul class="styled-list">
-<li><strong>Vị trí toss:</strong> Sang phải nhiều → slice. Phía sau → kick serve</li>
-<li><strong>Vai và thân:</strong> Góc nghiêng cho biết hướng serve</li>
-<li><strong>Chuyển động của khuỷu tay:</strong> Flat hay spin có sự khác biệt tinh tế</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.9 Serve Và Chiến Thuật Game Tổng Thể</h2><h3>Serve + Net Game</h3>
+<p><strong>An toàn:</strong> Arc cao và topspin kéo bóng xuống sân — ít double fault hơn flat serve.</p>
+<p><strong>Nguy hiểm:</strong> Bóng nảy cao và xoáy sang trái — buộc đối thủ phải đánh bóng ngang vai. Với Western/Semi-western backhand, đây là vị trí khó nhất.</p>
+<p><strong>Khó đọc:</strong> Spin làm bóng xoáy sau khi nảy — khó đoán hướng trước khi tiếp đất.</p>
+<h3 id="xay-dung-second-serve">Xây Dựng Second Serve</h3>
+<p><strong>Sai lầm phổ biến nhất:</strong> Cố build second serve bằng cách "đánh nhẹ hơn" hoặc "cẩn thận hơn" với flat serve.</p>
+<p><strong>Cách đúng:</strong> Second serve là <strong>loại serve khác hoàn toàn</strong> — kick/topspin serve — không phải flat serve chậm hơn.</p>
+<p>Để build kick serve:
+1. Tập riêng toss phía sau đầu
+2. Tập swing path từ dưới-trái lên trên-phải (brush lên bóng)
+3. Tập ở 50% tốc độ cho đến khi bóng có spin rõ ràng
+4. Tăng dần tốc độ khi spin đã consistent</p>
+<hr/>
+<h2 id="68-serve-return-ben-kia-cua-phuong-trinh">6.8 Serve Return — Bên Kia Của Phương Trình</h2>
+<p>Serve không thể hiểu đầy đủ nếu không hiểu cả return. Mỗi loại serve được thiết kế để tạo ra khó khăn cụ thể cho người return — và biết điều đó giúp bạn serve thông minh hơn.</p>
+<h3 id="co-hoc-return">Cơ Học Return</h3>
+<p><strong>Split step timing:</strong> Return bắt đầu từ split step — phải đúng timing khi đối thủ chạm bóng (không phải khi toss, không phải khi bóng bay qua lưới).</p>
+<p><strong>Compact backswing:</strong> Vì tốc độ serve nhanh, backswing của return phải rất compact. Không có thời gian cho big loop.</p>
+<p><strong>Take it early:</strong> Tiến lên gặp bóng trước khi đạt đỉnh bounce (return sớm) tạo ra áp lực ngược lại cho server.</p>
+<h3 id="oc-serve">Đọc Serve</h3>
+<p>Những người return giỏi đọc serve từ nhiều dấu hiệu trước cả khi bóng qua lưới:
+- <strong>Vị trí toss:</strong> Sang phải nhiều → slice. Phía sau → kick serve
+- <strong>Vai và thân:</strong> Góc nghiêng cho biết hướng serve
+- <strong>Chuyển động của khuỷu tay:</strong> Flat hay spin có sự khác biệt tinh tế</p>
+<hr/>
+<h2 id="69-serve-va-chien-thuat-game-tong-the">6.9 Serve Và Chiến Thuật Game Tổng Thể</h2>
+<h3 id="serve-net-game">Serve + Net Game</h3>
 <p>Serve mạnh tạo điều kiện cho <strong>serve and volley</strong> — một chiến thuật gần như tuyệt chủng ở clay nhưng vẫn hiệu quả cao trên grass và indoor hard.</p>
-<strong>Khi nào serve and volley hoạt động:</strong>
-<ul class="styled-list">
-<li>Flat serve nhanh vào T hoặc wide → đối thủ return vội → volley dễ</li>
-<li>Slice body serve → đối thủ return ngắn → approach và volley</li>
-</ul>
-<h3>Vary Serve — Đừng Bị Đọc Vị</h3>
+<p><strong>Khi nào serve and volley hoạt động:</strong>
+- Flat serve nhanh vào T hoặc wide → đối thủ return vội → volley dễ
+- Slice body serve → đối thủ return ngắn → approach và volley</p>
+<h3 id="vary-serve-ung-bi-oc-vi">Vary Serve — Đừng Bị Đọc Vị</h3>
 <p>Serve tốt kỹ thuật nhưng <strong>dễ đoán</strong> kém hơn serve trung bình nhưng <strong>khó đọc</strong>.</p>
-<strong>Nguyên tắc variation:</strong>
-<ul class="styled-list">
-<li>Đừng serve cùng một chỗ hai lần liên tiếp vào game quan trọng</li>
-<li>Trộn lẫn flat, kick, slice — dù bạn có "favorite"</li>
-<li>Thay đổi pace — đôi khi serve chậm hơn nhiều gây khó chịu hơn serve nhanh</li>
-</ul>
-<strong>Advanced:</strong> Deliberately mix vị trí, pace, và spin theo pattern 3-4 serve để "set up" serve tiếp theo. Ví dụ: 3 serve vào body → một serve wide → đối thủ đã quen với body serve và bị bất ngờ với wide.
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.10 Chương Trình Tập Serve — 8 Tuần</h2><h3>Tuần 1-2: Toss và Cơ Học Cơ Bản</h3>
+<p><strong>Nguyên tắc variation:</strong>
+- Đừng serve cùng một chỗ hai lần liên tiếp vào game quan trọng
+- Trộn lẫn flat, kick, slice — dù bạn có "favorite"
+- Thay đổi pace — đôi khi serve chậm hơn nhiều gây khó chịu hơn serve nhanh</p>
+<p><strong>Advanced:</strong> Deliberately mix vị trí, pace, và spin theo pattern 3-4 serve để "set up" serve tiếp theo. Ví dụ: 3 serve vào body → một serve wide → đối thủ đã quen với body serve và bị bất ngờ với wide.</p>
+<hr/>
+<h2 id="610-chuong-trinh-tap-serve-8-tuan">6.10 Chương Trình Tập Serve — 8 Tuần</h2>
+<h3 id="tuan-1-2-toss-va-co-hoc-co-ban">Tuần 1-2: Toss và Cơ Học Cơ Bản</h3>
 <ul class="styled-list">
 <li>10 phút tập toss KHÔNG có vợt: đứng ở baseline, chỉ tập toss lên và bắt lại. Mục tiêu: bóng rơi xuống cùng điểm mỗi lần, không lệch quá 15cm</li>
 <li>15 phút serve với tập trung DUY NHẤT vào toss — không quan tâm kết quả bóng đi đâu</li>
 <li>5 phút shadow serve (không có bóng) tập trophy position và drop</li>
 </ul>
-<hr>
-<h3>Tuần 3-4: Leg Drive và Kinetic Chain</h3>
+<hr/>
+<h3 id="tuan-3-4-leg-drive-va-kinetic-chain">Tuần 3-4: Leg Drive và Kinetic Chain</h3>
 <ul class="styled-list">
 <li>5 phút squat jump warm-up (2-3 hiệp 10 reps)</li>
 <li>15 phút serve với tập trung vào CẢM GIÁC chân đẩy vào đất: "chân lên trước, tay sau"</li>
 <li>10 phút serve vào cone (mục tiêu cụ thể) — flat serve vào T và wide</li>
 </ul>
-<hr>
-<h3>Tuần 5-6: Kick Serve và Second Serve</h3>
+<hr/>
+<h3 id="tuan-5-6-kick-serve-va-second-serve">Tuần 5-6: Kick Serve và Second Serve</h3>
 <ul class="styled-list">
 <li>10 phút tập kick serve RIÊNG ở 50% tốc độ — chỉ cần spin</li>
 <li>15 phút second serve scenarios: mỗi "điểm" bắt đầu bằng second serve, đánh đến khi có spin consistent và depth tốt</li>
 <li>5 phút flat serve tiếp tục duy trì</li>
 </ul>
-<hr>
-<h3>Tuần 7-8: Chiến Thuật Và Áp Lực</h3>
+<hr/>
+<h3 id="tuan-7-8-chien-thuat-va-ap-luc">Tuần 7-8: Chiến Thuật Và Áp Lực</h3>
 <ul class="styled-list">
 <li>10 phút pattern serve: T → wide → body, đánh có mục đích</li>
 <li>10 phút "game pressure" serve: đánh từ 30-40, 40-AD, deuce — tình huống áp lực cao</li>
 <li>10 phút serve + 1: serve theo sau bởi forehand hoặc backhand vào đích cụ thể</li>
 </ul>
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">6.11 Các Lỗi Serve Phổ Biến Và Cách Sửa</h2><h3>Lỗi 1: Toss Quá Thấp</h3>
-<strong>Mô tả:</strong> Toss không đủ cao → không có thời gian cho swing → phải "rush" cú đánh.
-<strong>Sửa:</strong> Đứng cạnh tường, duỗi thẳng cánh tay lên tường. Đó là độ cao toss tối thiểu. Tập toss đến đúng hoặc cao hơn vạch đó.
-<hr>
-<h3>Lỗi 2: Toss Quá Về Phía Sau (Cho Flat Serve)</h3>
-<strong>Mô tả:</strong> Toss rơi phía sau đầu → cú đánh đi xuống quá sớm → vào lưới.
-<strong>Nhận biết:</strong> Bóng liên tục vào lưới dù toss ổn định.
-<strong>Sửa:</strong> Đánh dấu điểm trên sân bằng vợt — đó là vị trí toss lý tưởng. Tập toss vào đúng điểm đó 20 lần.
-<hr>
-<h3>Lỗi 3: Không Có Drop (Cánh Tay Không Rơi)</h3>
-<strong>Mô tả:</strong> Cánh tay đi thẳng từ trophy position lên tiếp xúc — không có "drop" về phía sau lưng.
-<strong>Nhận biết:</strong> Serve thiếu power dù kỹ thuật nhìn qua có vẻ đúng. Âm thanh khi chạm bóng "mỏng".
-<strong>Nguyên nhân:</strong> Cánh tay quá căng — không đủ thư giãn để rơi tự nhiên.
-<strong>Sửa:</strong> Tập throwing drill — ném bóng tennis lên cao theo chuyển động serve. Cảm giác "ném" tự nhiên sẽ tạo ra drop. Sau đó chuyển sang vợt với cùng cảm giác.
-<hr>
-<h3>Lỗi 4: Không Leg Drive — "Flat-Footed Serve"</h3>
-<strong>Mô tả:</strong> Chân không đẩy lên, toàn thân serve từ chân đứng bằng phẳng.
-<strong>Nhận biết:</strong> Serve không có chiều cao tốt. Bạn không rời đất hoặc chỉ nhảy rất nhỏ. Serve thiếu penetration dù pace nghe có vẻ đủ.
-<strong>Sửa:</strong> Tập serve với mục tiêu cụ thể: cả hai chân phải rời đất tại tiếp xúc. Không cần nhảy cao — chỉ cần gót chân rời mặt đất.
-<hr>
-<h3>Lỗi 5: Pronation Quá Sớm (Scooping)</h3>
-<strong>Mô tả:</strong> Cẳng tay pronation (xoay) TRƯỚC khi tiếp xúc thay vì SAU — làm mặt vợt "mở ra" quá sớm.
-<strong>Nhận biết:</strong> Bóng thường bay lên cao và ra ngoài (long). Cảm giác "scoop" bóng lên thay vì đánh vào nó.
-<strong>Sửa:</strong> Tập "high-five drill" — tưởng tượng bạn đang high-five ai đó ở ngay trên đầu. Bàn tay phải hướng về phía trước-cao cho đến khi tiếp xúc xong, SAU ĐÓ mới pronation.
-<hr></div>
-<div class="chapter" id="chapter-06"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 06</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 6</h2><ul class="styled-list">
-<li><strong>Serve có 8 giai đoạn:</strong> Setup → Toss → Coil → Drop → Leg drive → Contact → Follow-through → Recovery</li>
-</ul>
+<hr/>
+<h2 id="611-cac-loi-serve-pho-bien-va-cach-sua">6.11 Các Lỗi Serve Phổ Biến Và Cách Sửa</h2>
+<h3 id="loi-1-toss-qua-thap">Lỗi 1: Toss Quá Thấp</h3>
+<p><strong>Mô tả:</strong> Toss không đủ cao → không có thời gian cho swing → phải "rush" cú đánh.</p>
+<p><strong>Sửa:</strong> Đứng cạnh tường, duỗi thẳng cánh tay lên tường. Đó là độ cao toss tối thiểu. Tập toss đến đúng hoặc cao hơn vạch đó.</p>
+<hr/>
+<h3 id="loi-2-toss-qua-ve-phia-sau-cho-flat-serve">Lỗi 2: Toss Quá Về Phía Sau (Cho Flat Serve)</h3>
+<p><strong>Mô tả:</strong> Toss rơi phía sau đầu → cú đánh đi xuống quá sớm → vào lưới.</p>
+<p><strong>Nhận biết:</strong> Bóng liên tục vào lưới dù toss ổn định.</p>
+<p><strong>Sửa:</strong> Đánh dấu điểm trên sân bằng vợt — đó là vị trí toss lý tưởng. Tập toss vào đúng điểm đó 20 lần.</p>
+<hr/>
+<h3 id="loi-3-khong-co-drop-canh-tay-khong-roi">Lỗi 3: Không Có Drop (Cánh Tay Không Rơi)</h3>
+<p><strong>Mô tả:</strong> Cánh tay đi thẳng từ trophy position lên tiếp xúc — không có "drop" về phía sau lưng.</p>
+<p><strong>Nhận biết:</strong> Serve thiếu power dù kỹ thuật nhìn qua có vẻ đúng. Âm thanh khi chạm bóng "mỏng".</p>
+<p><strong>Nguyên nhân:</strong> Cánh tay quá căng — không đủ thư giãn để rơi tự nhiên.</p>
+<p><strong>Sửa:</strong> Tập throwing drill — ném bóng tennis lên cao theo chuyển động serve. Cảm giác "ném" tự nhiên sẽ tạo ra drop. Sau đó chuyển sang vợt với cùng cảm giác.</p>
+<hr/>
+<h3 id="loi-4-khong-leg-drive-flat-footed-serve">Lỗi 4: Không Leg Drive — "Flat-Footed Serve"</h3>
+<p><strong>Mô tả:</strong> Chân không đẩy lên, toàn thân serve từ chân đứng bằng phẳng.</p>
+<p><strong>Nhận biết:</strong> Serve không có chiều cao tốt. Bạn không rời đất hoặc chỉ nhảy rất nhỏ. Serve thiếu penetration dù pace nghe có vẻ đủ.</p>
+<p><strong>Sửa:</strong> Tập serve với mục tiêu cụ thể: cả hai chân phải rời đất tại tiếp xúc. Không cần nhảy cao — chỉ cần gót chân rời mặt đất.</p>
+<hr/>
+<h3 id="loi-5-pronation-qua-som-scooping">Lỗi 5: Pronation Quá Sớm (Scooping)</h3>
+<p><strong>Mô tả:</strong> Cẳng tay pronation (xoay) TRƯỚC khi tiếp xúc thay vì SAU — làm mặt vợt "mở ra" quá sớm.</p>
+<p><strong>Nhận biết:</strong> Bóng thường bay lên cao và ra ngoài (long). Cảm giác "scoop" bóng lên thay vì đánh vào nó.</p>
+<p><strong>Sửa:</strong> Tập "high-five drill" — tưởng tượng bạn đang high-five ai đó ở ngay trên đầu. Bàn tay phải hướng về phía trước-cao cho đến khi tiếp xúc xong, SAU ĐÓ mới pronation.</p>
+<hr/>
+<h2 id="tom-tat-chuong-6">Tóm Tắt Chương 6</h2>
 <ul class="styled-list">
-<li><strong>Tốc độ serve đến từ hai chân</strong> (50-55%), không phải từ tay — leg drive là yếu tố đóng góp lớn nhất</li>
+<li>
+<p><strong>Serve có 8 giai đoạn:</strong> Setup → Toss → Coil → Drop → Leg drive → Contact → Follow-through → Recovery</p>
+</li>
+<li>
+<p><strong>Tốc độ serve đến từ hai chân</strong> (50-55%), không phải từ tay — leg drive là yếu tố đóng góp lớn nhất</p>
+</li>
+<li>
+<p><strong>Ba loại serve:</strong> Flat (nhanh, ít margin), slice (kéo rộng, an toàn hơn), kick/topspin (nảy cao, lý tưởng cho second serve)</p>
+</li>
+<li>
+<p><strong>Second serve là vũ khí riêng</strong> — kick serve, không phải flat serve chậm hơn</p>
+</li>
+<li>
+<p><strong>Double fault phần lớn là vấn đề tâm lý</strong> — overcautious syndrome, overthinking, tension spiral</p>
+</li>
+<li>
+<p><strong>Pre-serve routine nhất quán</strong> là công cụ tâm lý quan trọng nhất để chống double fault</p>
+</li>
+<li>
+<p><strong>Serve + 1 pattern</strong> — serve được thiết kế để setup cú đánh tiếp theo, không phải để tự tạo điểm</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Ba loại serve:</strong> Flat (nhanh, ít margin), slice (kéo rộng, an toàn hơn), kick/topspin (nảy cao, lý tưởng cho second serve)</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Second serve là vũ khí riêng</strong> — kick serve, không phải flat serve chậm hơn</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Double fault phần lớn là vấn đề tâm lý</strong> — overcautious syndrome, overthinking, tension spiral</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Pre-serve routine nhất quán</strong> là công cụ tâm lý quan trọng nhất để chống double fault</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Serve + 1 pattern</strong> — serve được thiết kế để setup cú đánh tiếp theo, không phải để tự tạo điểm</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-14"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 14</p><h2 style="margin-bottom: 40px;">Đọc Thêm Cho Chương Tiếp Theo</h2><p>Chương 7 sẽ bàn về <strong>Return of Serve</strong> — một kỹ năng thường bị bỏ qua trong tập luyện nhưng chiếm đúng 50% số lần bạn đánh bóng trong một trận đấu.</p>
+<hr/>
+<h2 id="oc-them-cho-chuong-tiep-theo">Đọc Thêm Cho Chương Tiếp Theo</h2>
+<p>Chương 7 sẽ bàn về <strong>Return of Serve</strong> — một kỹ năng thường bị bỏ qua trong tập luyện nhưng chiếm đúng 50% số lần bạn đánh bóng trong một trận đấu.</p>
 <p>Bạn có thể serve không được, nhưng bạn <strong>luôn luôn</strong> phải return. Và trong tennis hiện đại, return không chỉ là "đưa bóng vào sân" — nó là cú tấn công đầu tiên.</p>
 <p>Chương 7 sẽ giải thích cách đọc serve sớm, compact backswing dưới áp lực thời gian cực lớn, và cách biến return thành vũ khí tấn công ngay từ cú đầu tiên.</p>
-<hr>
-<em>Chương 7: Return of Serve — Biến Phòng Thủ Thành Tấn Công →</em></div>
+<hr/>
+<p><em>Chương 7: Return of Serve — Biến Phòng Thủ Thành Tấn Công →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>

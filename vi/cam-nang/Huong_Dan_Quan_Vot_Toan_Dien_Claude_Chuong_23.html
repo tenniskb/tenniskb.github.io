@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 23 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện - Chương 23</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,56 +896,38 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-</style></head><body>
-
+.toc ul li { margin-bottom: 8px; }
+.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.styled-list { padding-left: 24px; margin: 16px 0; }
+.styled-list li { margin-bottom: 8px; }
+.styled-list.numbered { list-style-type: decimal; }
+.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
+.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
+.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
+.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
+.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.warning strong { color: var(--accent); }
+.warning p { margin: 0; font-size: 15px; }
+@media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
-    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 23</h1>
-    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+    <span class="tag">Hướng Dẫn Quần Vợt Toàn Diện - Chương 23</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 23</h1>
+    <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
-
 <div class="content-wrap">
-<div class="lead"></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">Chương 23: Biến Return Thành Vũ Khí</h2><hr>
-> <em>"Tôi không đợi serve đến. Tôi đi đón nó."</em>
-<p>> — Andre Agassi</p>
-<hr>
+    <p class="lead">Hướng Dẫn Quần Vợt Toàn Diện - Chương 23 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+    <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style='font-weight: 600;'><a href='#return-of-serve-nâng-cao--reading-positioning-và-attacking' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>RETURN OF SERVE NÂNG CAO — READING, POSITIONING, VÀ ATTACKING</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#chương-23-biến-return-thành-vũ-khí' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Chương 23: Biến Return Thành Vũ Khí</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#231-return-là-cú-đánh-khó-nhất-trong-tennis' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.1 Return Là Cú Đánh Khó Nhất Trong Tennis</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#232-reading-the-serve--đọc-trước-khi-bóng-đến' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.2 Reading The Serve — Đọc Trước Khi Bóng Đến</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#233-positioning--đứng-đâu-để-return' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.3 Positioning — Đứng Đâu Để Return</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#234-return-mechanics--từ-defensive-chip-đến-aggressive-drive' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.4 Return Mechanics — Từ Defensive Chip Đến Aggressive Drive</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#235-return-targets--đánh-đâu-để-gây-áp-lực' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.5 Return Targets — Đánh Đâu Để Gây Áp Lực</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#236-return-strategies-vs-different-server-types' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.6 Return Strategies vs. Different Server Types</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#237-return-positioning-in-doubles' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.7 Return Positioning In Doubles</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#238-the-mental-game-of-return' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.8 The Mental Game Of Return</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#239-return-practice-drills' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.9 Return Practice Drills</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2310-return-stats--measuring-your-progress' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.10 Return Stats — Measuring Your Progress</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2311-advanced-return-as-tactical-setup' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.11 Advanced: Return As Tactical Setup</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#2312-năm-lỗi-return-phổ-biến-nhất' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>23.12 Năm Lỗi Return Phổ Biến Nhất</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#tóm-tắt-chương-23' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Tóm Tắt Chương 23</a></li><li style='margin-left: 20px; font-size: 14px;'><a href='#nhìn-về-phía-trước' style='color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);'>Nhìn Về Phía Trước</a></li></ul></div>
+    <h1 id="return-of-serve-nang-cao-reading-positioning-va-attacking">RETURN OF SERVE NÂNG CAO — READING, POSITIONING, VÀ ATTACKING</h1>
+<h2 id="chuong-23-bien-return-thanh-vu-khi">Chương 23: Biến Return Thành Vũ Khí</h2>
+<hr/>
+<div class="pullquote"><p>*"Tôi không đợi serve đến. Tôi đi đón nó."*
+&gt; — Andre Agassi</p></div>
+<hr/>
 <p>Australian Open 1995. Andre Agassi vs. Pete Sampras. Final.</p>
 <p>Sampras có serve được coi là vũ khí mạnh nhất trong lịch sử tennis lúc bấy giờ. Tốc độ trung bình first serve: 128 mph. Ace rate: cao nhất tour. Không ai return được Sampras tốt hơn mức trung bình.</p>
 <p>Ngoại trừ Agassi.</p>
@@ -952,526 +935,547 @@ footer .credit-label { color: var(--gold); }
 <p>Sau trận, Sampras nói: "Agassi return những cú serve mà đáng lẽ phải là ace. Anh ta đứng đúng chỗ, đúng lúc, và hit bóng trước khi tôi kịp react."</p>
 <p>Agassi không return tốt vì có phản xạ siêu nhân. Anh ta return tốt vì anh ta chuẩn bị tốt hơn bất kỳ ai — về position, về đọc serve, và về commitment tấn công.</p>
 <p>Đây là những gì chapter này sẽ dạy bạn.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.1 Return Là Cú Đánh Khó Nhất Trong Tennis</h2><h3>Tại Sao Return Khó Đến Vậy</h3>
+<hr/>
+<h2 id="231-return-la-cu-anh-kho-nhat-trong-tennis">23.1 Return Là Cú Đánh Khó Nhất Trong Tennis</h2>
+<h3 id="tai-sao-return-kho-en-vay">Tại Sao Return Khó Đến Vậy</h3>
 <p>Khi bạn serve, bạn kiểm soát hoàn toàn: timing, placement, loại serve, tốc độ.</p>
 <p>Khi bạn return, bạn nhường tất cả quyền kiểm soát đó cho đối thủ.</p>
-<strong>Returner phải:</strong>
-<ul class="styled-list">
-<li>Đọc toss placement trong fraction of second</li>
-<li>Đoán direction trước khi bóng được hit</li>
-<li>Split step đúng timing</li>
-<li>Di chuyển đến bóng trong điều kiện thời gian cực kỳ hạn chế</li>
-<li>Execute swing kỹ thuật dưới áp lực tốc độ</li>
-<li>Chọn target trong lúc đang swing</li>
-</ul>
-<strong>Timeline của một return (first serve 120 mph):</strong>
-<ul class="styled-list">
-<li>Bóng đến returner trong khoảng 0.45 giây</li>
-<li>Returner cần 0.20 giây để read + react</li>
-<li>Còn lại 0.25 giây để move và swing</li>
-</ul>
+<p><strong>Returner phải:</strong>
+- Đọc toss placement trong fraction of second
+- Đoán direction trước khi bóng được hit
+- Split step đúng timing
+- Di chuyển đến bóng trong điều kiện thời gian cực kỳ hạn chế
+- Execute swing kỹ thuật dưới áp lực tốc độ
+- Chọn target trong lúc đang swing</p>
+<p><strong>Timeline của một return (first serve 120 mph):</strong>
+- Bóng đến returner trong khoảng 0.45 giây
+- Returner cần 0.20 giây để read + react
+- Còn lại 0.25 giây để move và swing</p>
 <p>Đây là lý do tại sao returner phải <strong>pre-read</strong> — không phải react sau khi bóng đã hit. Đọc serve bắt đầu từ TRƯỚC khi server toss bóng.</p>
-<h3>Return Không Phải Là Defensive Shot</h3>
+<h3 id="return-khong-phai-la-defensive-shot">Return Không Phải Là Defensive Shot</h3>
 <p>Sai lầm phổ biến nhất của amateur: coi return là "sống sót qua cú serve." Chỉ cần bóng vào là đủ.</p>
-Tư duy đúng: <strong>Return là cơ hội tấn công đầu tiên của bạn trong rally.</strong>
-
+<p>Tư duy đúng: <strong>Return là cơ hội tấn công đầu tiên của bạn trong rally.</strong></p>
 <p>Agassi không return để lấy bóng vào. Agassi return để gây áp lực ngay lập tức cho server.</p>
-<p>Khi returner tư duy defensive, họ:</p>
-<ul class="styled-list">
-<li>Đứng xa để có thêm thời gian → server có thêm thời gian cho Serve+1</li>
-<li>Swing ngắn và an toàn → return ngắn, yếu → server tấn công dễ dàng</li>
-<li>Lo sợ error → tightening → accuracy giảm</li>
-</ul>
-<p>Khi returner tư duy offensive, họ:</p>
-<ul class="styled-list">
-<li>Position gần hơn → bóng đến nhanh hơn nhưng server cũng có ít thời gian hơn</li>
-<li>Full swing commitment → return sâu và mạnh</li>
-<li>Play the ball, not the score</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.2 Reading The Serve — Đọc Trước Khi Bóng Đến</h2><h3>Five Cues To Read</h3>
-<strong>Cue 1: Server's Stance And Body Alignment</strong>
-<p>Observe trong warm-up:</p>
-<ul class="styled-list">
-<li>Server đứng gần center mark hay gần sideline?</li>
-<li>Shoulders mở hay đóng?</li>
-<li>Server tend to điều chỉnh position theo serve type không?</li>
-</ul>
+<p>Khi returner tư duy defensive, họ:
+- Đứng xa để có thêm thời gian → server có thêm thời gian cho Serve+1
+- Swing ngắn và an toàn → return ngắn, yếu → server tấn công dễ dàng
+- Lo sợ error → tightening → accuracy giảm</p>
+<p>Khi returner tư duy offensive, họ:
+- Position gần hơn → bóng đến nhanh hơn nhưng server cũng có ít thời gian hơn
+- Full swing commitment → return sâu và mạnh
+- Play the ball, not the score</p>
+<hr/>
+<h2 id="232-reading-the-serve-oc-truoc-khi-bong-en">23.2 Reading The Serve — Đọc Trước Khi Bóng Đến</h2>
+<h3 id="five-cues-to-read">Five Cues To Read</h3>
+<p><strong>Cue 1: Server's Stance And Body Alignment</strong></p>
+<p>Observe trong warm-up:
+- Server đứng gần center mark hay gần sideline?
+- Shoulders mở hay đóng?
+- Server tend to điều chỉnh position theo serve type không?</p>
 <p>Nhiều server vô tình thay đổi stance khi serve wide vs. T. Document this.</p>
-<hr>
-<strong>Cue 2: Toss Placement</strong>
+<hr/>
+<p><strong>Cue 2: Toss Placement</strong></p>
 <p>Như đã học ở chương 22 — toss là readable cue nhất.</p>
-| Toss position | Khả năng cao |
-|---|---|
-| Forward và hơi phải | Flat serve |
-| Rõ ràng sang phải | Slice serve |
-| Sau đầu và sang trái | Kick serve |
-
-<em>Lưu ý:</em> Serve tốt sẽ minimize toss variation. Nhưng ngay cả professional cũng có micro-variations. Warm-up là lúc để map những variations đó.
-<strong>Drill quan sát toss:</strong> Trong warm-up, không cần return mọi serve. Đứng ở position return và CHỈ quan sát toss 10-15 lần đầu. Build mental map.
-<hr>
-<strong>Cue 3: Server's Elbow và Shoulder Drop</strong>
+<table class="data-table">
+<thead>
+<tr>
+<th>Toss position</th>
+<th>Khả năng cao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forward và hơi phải</td>
+<td>Flat serve</td>
+</tr>
+<tr>
+<td>Rõ ràng sang phải</td>
+<td>Slice serve</td>
+</tr>
+<tr>
+<td>Sau đầu và sang trái</td>
+<td>Kick serve</td>
+</tr>
+</tbody>
+</table>
+<p><em>Lưu ý:</em> Serve tốt sẽ minimize toss variation. Nhưng ngay cả professional cũng có micro-variations. Warm-up là lúc để map những variations đó.</p>
+<p><strong>Drill quan sát toss:</strong> Trong warm-up, không cần return mọi serve. Đứng ở position return và CHỈ quan sát toss 10-15 lần đầu. Build mental map.</p>
+<hr/>
+<p><strong>Cue 3: Server's Elbow và Shoulder Drop</strong></p>
 <p>Ở trophy position, hướng của elbow và shoulder drop gợi ý swing path sắp tới.</p>
 <ul class="styled-list">
 <li>Elbow cao, shoulder không drop mạnh → flat hoặc slice</li>
 <li>Shoulder drop mạnh, torso rotation aggressive → kick serve (cần aggressive upward swing)</li>
 </ul>
 <p>Cue này cần practice để nhận ra trong real-time. Nhưng với enough observation, nó trở thành subconscious.</p>
-<hr>
-<strong>Cue 4: Racket Face Angle At Contact</strong>
+<hr/>
+<p><strong>Cue 4: Racket Face Angle At Contact</strong></p>
 <p>Khó nhất để read vì xảy ra nhanh nhất. Nhưng useful khi serve chậm hơn (second serve, returner đứng gần).</p>
 <ul class="styled-list">
 <li>Racket face thẳng → flat</li>
 <li>Racket face hơi chéo → slice</li>
 <li>Swing path lên mạnh (thấy từ trajectory sau contact) → kick</li>
 </ul>
-<hr>
-<strong>Cue 5: Ball Behavior Off Bounce</strong>
+<hr/>
+<p><strong>Cue 5: Ball Behavior Off Bounce</strong></p>
 <p>Cue này đến sau khi bóng bounce — muộn để react hoàn toàn, nhưng useful để confirm read và adjust trong last millisecond.</p>
 <ul class="styled-list">
 <li>Bóng skids thấp và tiếp tục chạy → flat hoặc slice</li>
 <li>Bóng kicks lên cao → kick serve</li>
 <li>Bóng kicks sang phải (từ returner's perspective) → slice từ deuce court</li>
 </ul>
-<hr>
-<h3>Building A "Serve Profile" Của Đối Thủ</h3>
+<hr/>
+<h3 id="building-a-serve-profile-cua-oi-thu">Building A "Serve Profile" Của Đối Thủ</h3>
 <p>Trước match hoặc trong warm-up, mentally document:</p>
-<strong>Questions cần trả lời:</strong>
-<p>1. First serve vào đâu nhiều nhất từ deuce court? (T, body, hay wide)</p>
-<p>2. First serve vào đâu nhiều nhất từ ad court?</p>
-<p>3. Second serve type chủ yếu là gì? (kick? slice? slow flat?)</p>
-<p>4. Serve có readable toss không?</p>
-<p>5. Server có tell gì không? (lean, shoulder position, toss variation)</p>
+<p><strong>Questions cần trả lời:</strong>
+1. First serve vào đâu nhiều nhất từ deuce court? (T, body, hay wide)
+2. First serve vào đâu nhiều nhất từ ad court?
+3. Second serve type chủ yếu là gì? (kick? slice? slow flat?)
+4. Serve có readable toss không?
+5. Server có tell gì không? (lean, shoulder position, toss variation)</p>
 <p>Sau 2-3 service games đầu, profile này đủ để điều chỉnh return strategy.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.3 Positioning — Đứng Đâu Để Return</h2><h3>The Base Position</h3>
-<strong>Starting position mặc định (right-handed returner):</strong>
-<em>Deuce court:</em>
-<p>Khoảng 1 bước ra ngoài sideline, 1-2 bước sau baseline.</p>
-<em>Ad court:</em>
-<p>Khoảng 1 bước ra ngoài sideline (phía ad), 1-2 bước sau baseline.</p>
+<hr/>
+<h2 id="233-positioning-ung-au-e-return">23.3 Positioning — Đứng Đâu Để Return</h2>
+<h3 id="the-base-position">The Base Position</h3>
+<p><strong>Starting position mặc định (right-handed returner):</strong></p>
+<p><em>Deuce court:</em>
+Khoảng 1 bước ra ngoài sideline, 1-2 bước sau baseline.</p>
+<p><em>Ad court:</em>
+Khoảng 1 bước ra ngoài sideline (phía ad), 1-2 bước sau baseline.</p>
 <p>Đây là base. Mọi adjustment xuất phát từ đây.</p>
-<hr>
-<h3>Adjusting Based On Server</h3>
-<strong>Vs. serve chủ yếu vào T:</strong>
-<p>Move 1-2 bước vào trong (về phía center mark). Returner closer to center → T serve dễ cover hơn. Trade-off: Wide serve khó reach hơn.</p>
-<strong>Vs. serve chủ yếu wide:</strong>
-<p>Move 1-2 bước ra ngoài. Wide serve easier to cover. Trade-off: T serve có thêm angle.</p>
-<strong>Vs. heavy kick serve:</strong>
-<p>Stand back thêm 1-2 bước. High bounce cần more space để let ball drop xuống returner's strike zone.</p>
-<strong>Vs. hard flat first serve:</strong>
-<p>Có thể stand thêm 1-2 bước back để cho thêm reaction time. Hoặc — nếu muốn aggressive — stand IN baseline để take ball early on the rise (advanced).</p>
-<strong>Vs. weak second serve:</strong>
-<p>Move in 1-3 bước inside baseline. Pressure server. Reduce their Serve+1 time. Return on the rise.</p>
-<hr>
-<h3>The Agassi Position — Return Inside Baseline</h3>
+<hr/>
+<h3 id="adjusting-based-on-server">Adjusting Based On Server</h3>
+<p><strong>Vs. serve chủ yếu vào T:</strong>
+Move 1-2 bước vào trong (về phía center mark). Returner closer to center → T serve dễ cover hơn. Trade-off: Wide serve khó reach hơn.</p>
+<p><strong>Vs. serve chủ yếu wide:</strong>
+Move 1-2 bước ra ngoài. Wide serve easier to cover. Trade-off: T serve có thêm angle.</p>
+<p><strong>Vs. heavy kick serve:</strong>
+Stand back thêm 1-2 bước. High bounce cần more space để let ball drop xuống returner's strike zone.</p>
+<p><strong>Vs. hard flat first serve:</strong>
+Có thể stand thêm 1-2 bước back để cho thêm reaction time. Hoặc — nếu muốn aggressive — stand IN baseline để take ball early on the rise (advanced).</p>
+<p><strong>Vs. weak second serve:</strong>
+Move in 1-3 bước inside baseline. Pressure server. Reduce their Serve+1 time. Return on the rise.</p>
+<hr/>
+<h3 id="the-agassi-position-return-inside-baseline">The Agassi Position — Return Inside Baseline</h3>
 <p>Andre Agassi thường xuyên return first serve từ inside baseline hoặc right at baseline — gần hơn bất kỳ professional nào cùng thời.</p>
-<strong>Tại sao cực kỳ hiệu quả:</strong>
-<ul class="styled-list">
-<li>Bóng đến returner TRƯỚC khi reach full bounce height — còn trong "low zone" → easier to drive</li>
-<li>Server có ÍT THỜI GIAN HƠN để get into position cho Serve+1</li>
-<li>Return travels shorter distance → arrives at server faster</li>
-<li>Psychologically áp đảo server khi thấy returner đứng IN</li>
-</ul>
-<strong>Trade-off:</strong>
-<ul class="styled-list">
-<li>Less reaction time cho returner</li>
-<li>Kick serve kick lên above comfortable zone → difficulty</li>
-<li>Requires excellent reading và very early swing preparation</li>
-</ul>
+<p><strong>Tại sao cực kỳ hiệu quả:</strong>
+- Bóng đến returner TRƯỚC khi reach full bounce height — còn trong "low zone" → easier to drive
+- Server có ÍT THỜI GIAN HƠN để get into position cho Serve+1
+- Return travels shorter distance → arrives at server faster
+- Psychologically áp đảo server khi thấy returner đứng IN</p>
+<p><strong>Trade-off:</strong>
+- Less reaction time cho returner
+- Kick serve kick lên above comfortable zone → difficulty
+- Requires excellent reading và very early swing preparation</p>
 <p>Agassi bù đắp bằng khả năng đọc toss cực kỳ tốt và early backswing — anh ta start preparation TRƯỚC khi server even contacts ball.</p>
-<strong>Amateur application:</strong> Không cần đứng gần như Agassi. Nhưng khi bạn đang return second serve → step IN. Pressure the server.
-<hr>
-<h3>Dynamic Positioning — Moving During Serve Motion</h3>
+<p><strong>Amateur application:</strong> Không cần đứng gần như Agassi. Nhưng khi bạn đang return second serve → step IN. Pressure the server.</p>
+<hr/>
+<h3 id="dynamic-positioning-moving-during-serve-motion">Dynamic Positioning — Moving During Serve Motion</h3>
 <p>Một số returner lean hoặc move nhẹ trong khi server đang swing. Đây là advanced technique nhưng cần cẩn thận.</p>
-<strong>Split step timing:</strong>
-<p>Split step phải xảy ra khi server contacts ball — không sớm hơn, không muộn hơn.</p>
+<p><strong>Split step timing:</strong>
+Split step phải xảy ra khi server contacts ball — không sớm hơn, không muộn hơn.</p>
 <p>Sớm quá → bạn đã landing trước khi biết direction → không thể change direction effectively.</p>
 <p>Muộn quá → bạn không có momentum để move → late to ball.</p>
-<strong>Leaning (anticipation move):</strong>
-<p>Sau khi đọc serve direction (từ toss hoặc early motion), lean nhẹ về hướng đó TRONG split step. Cho phép explosive first step đúng hướng.</p>
+<p><strong>Leaning (anticipation move):</strong>
+Sau khi đọc serve direction (từ toss hoặc early motion), lean nhẹ về hướng đó TRONG split step. Cho phép explosive first step đúng hướng.</p>
 <p>Risk: Đọc sai → bị caught leaning wrong way.</p>
 <p>Use only when confident về read, và vs. predictable servers.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.4 Return Mechanics — Từ Defensive Chip Đến Aggressive Drive</h2><h3>Four Return Styles — Khi Dùng Loại Nào</h3>
-<strong>1. Aggressive Drive Return</strong>
+<hr/>
+<h2 id="234-return-mechanics-tu-defensive-chip-en-aggressive-drive">23.4 Return Mechanics — Từ Defensive Chip Đến Aggressive Drive</h2>
+<h3 id="four-return-styles-khi-dung-loai-nao">Four Return Styles — Khi Dùng Loại Nào</h3>
+<p><strong>1. Aggressive Drive Return</strong></p>
 <p>Full swing, attack the ball. Aim for deep penetrating return.</p>
-<em>Dùng khi:</em> Second serve yếu, position của returner tốt, serve vào "wheelhouse" (forehand hay backhand sở trường).
-<em>Target:</em> Deep to T (opposite direction of serve), cross-court deep, hoặc down the line nếu server cheats.
-<hr>
-<strong>2. Block Return</strong>
+<p><em>Dùng khi:</em> Second serve yếu, position của returner tốt, serve vào "wheelhouse" (forehand hay backhand sở trường).</p>
+<p><em>Target:</em> Deep to T (opposite direction of serve), cross-court deep, hoặc down the line nếu server cheats.</p>
+<hr/>
+<p><strong>2. Block Return</strong></p>
 <p>Short, compact swing. Return bằng cách "block" bóng — dùng pace của server's serve.</p>
-<em>Dùng khi:</em> Hard first serve, không đủ thời gian cho full swing, muốn redirect pace.
-<em>Mechanics:</em> Minimal backswing. Lean INTO ball. Contact in front of body. Follow-through short và controlled.
-<em>Target:</em> Deep cross-court (highest margin), hoặc down the line nếu server positioned sai.
-<hr>
-<strong>3. Chip Return</strong>
+<p><em>Dùng khi:</em> Hard first serve, không đủ thời gian cho full swing, muốn redirect pace.</p>
+<p><em>Mechanics:</em> Minimal backswing. Lean INTO ball. Contact in front of body. Follow-through short và controlled.</p>
+<p><em>Target:</em> Deep cross-court (highest margin), hoặc down the line nếu server positioned sai.</p>
+<hr/>
+<p><strong>3. Chip Return</strong></p>
 <p>Slice motion, underspin. Bóng đi thấp và fast.</p>
-<em>Dùng khi:</em> Hard serve jams bạn, muốn keep ball low, vs. serve-and-volley player (low ball → volley khó).
-<em>Mechanics:</em> High-to-low swing path. Racket face open. Contact slightly in front of body.
-<em>Target:</em> Thường cross-court low, hoặc down the feet của net approacher.
-<hr>
-<strong>4. Lob Return</strong>
+<p><em>Dùng khi:</em> Hard serve jams bạn, muốn keep ball low, vs. serve-and-volley player (low ball → volley khó).</p>
+<p><em>Mechanics:</em> High-to-low swing path. Racket face open. Contact slightly in front of body.</p>
+<p><em>Target:</em> Thường cross-court low, hoặc down the feet của net approacher.</p>
+<hr/>
+<p><strong>4. Lob Return</strong></p>
 <p>Defensive last resort.</p>
-<em>Dùng khi:</em> Hoàn toàn jammed, mất position, serve cực mạnh.
-<em>Target:</em> High over server's backhand side.
-<hr>
-<h3>The "Preparation Clock" — Early Backswing Is Everything</h3>
+<p><em>Dùng khi:</em> Hoàn toàn jammed, mất position, serve cực mạnh.</p>
+<p><em>Target:</em> High over server's backhand side.</p>
+<hr/>
+<h3 id="the-preparation-clock-early-backswing-is-everything">The "Preparation Clock" — Early Backswing Is Everything</h3>
 <p>Returner phổ biến nhất: bắt đầu backswing MUỘN.</p>
 <p>Bóng đã đến, bạn mới start turning shoulder. Kết quả: swing vội, contact không tốt, return yếu hoặc error.</p>
-<strong>Rule:</strong> Backswing phải bắt đầu ngay khi bạn identify direction — không phải khi bóng đến gần.
-<em>Timing cụ thể:</em>
-<ul class="styled-list">
-<li>Server tosses → bạn observation mode</li>
-<li>Server contacts ball → split step</li>
-<li>Ball direction clear (10-15 feet sau bounce) → shoulder turn + backswing begins IMMEDIATELY</li>
-<li>Ball arrives → you're already in hitting zone, ready</li>
-</ul>
+<p><strong>Rule:</strong> Backswing phải bắt đầu ngay khi bạn identify direction — không phải khi bóng đến gần.</p>
+<p><em>Timing cụ thể:</em>
+- Server tosses → bạn observation mode
+- Server contacts ball → split step
+- Ball direction clear (10-15 feet sau bounce) → shoulder turn + backswing begins IMMEDIATELY
+- Ball arrives → you're already in hitting zone, ready</p>
 <p>Agassi nổi tiếng với early preparation. Nhìn video slow-motion của anh ta return — shoulder đã turned và racket đã back trước khi ball crosses service line.</p>
-<hr>
-<h3>Forehand Return — Weaponize Your Best Shot</h3>
-<strong>Setup:</strong>
-<p>Từ split step, pivot foot (right foot cho right-hander hitting forehand) plants và rotates. Hip turn leads shoulder turn leads arm.</p>
+<hr/>
+<h3 id="forehand-return-weaponize-your-best-shot">Forehand Return — Weaponize Your Best Shot</h3>
+<p><strong>Setup:</strong>
+Từ split step, pivot foot (right foot cho right-hander hitting forehand) plants và rotates. Hip turn leads shoulder turn leads arm.</p>
 <p>Contact point: In front of body. Further in front than groundstroke vì ít thời gian hơn.</p>
-<strong>Aggressive forehand return:</strong>
-<ul class="styled-list">
-<li>Take ball early (on the rise hoặc at peak)</li>
-<li>Full hip và shoulder rotation</li>
-<li>Drive through ball — không wrap</li>
-<li>Target: Cross-court deep hoặc down the line winner</li>
-</ul>
-<strong>Block forehand return:</strong>
-<ul class="styled-list">
-<li>Minimal backswing</li>
-<li>Brace arm với firm wrist</li>
-<li>Use server's pace, redirect</li>
-<li>Target: Deep cross-court</li>
-</ul>
-<hr>
-<h3>Backhand Return — Making It A Weapon</h3>
-<strong>Two-handed backhand:</strong>
-<p>Compact swing. Both hands on racket provide control. Early shoulder turn critical.</p>
+<p><strong>Aggressive forehand return:</strong>
+- Take ball early (on the rise hoặc at peak)
+- Full hip và shoulder rotation
+- Drive through ball — không wrap
+- Target: Cross-court deep hoặc down the line winner</p>
+<p><strong>Block forehand return:</strong>
+- Minimal backswing
+- Brace arm với firm wrist
+- Use server's pace, redirect
+- Target: Deep cross-court</p>
+<hr/>
+<h3 id="backhand-return-making-it-a-weapon">Backhand Return — Making It A Weapon</h3>
+<p><strong>Two-handed backhand:</strong>
+Compact swing. Both hands on racket provide control. Early shoulder turn critical.</p>
 <p>Aggressive two-hander return: Same as forehand — early prep, full rotation, drive through.</p>
-<strong>One-handed backhand (slice):</strong>
-<p>Particularly effective for return because:</p>
-<ul class="styled-list">
-<li>Compact motion = easier against hard serves</li>
-<li>Chip/slice return stays low → server's Serve+1 groundstroke harder</li>
-</ul>
+<p><strong>One-handed backhand (slice):</strong>
+Particularly effective for return because:
+- Compact motion = easier against hard serves
+- Chip/slice return stays low → server's Serve+1 groundstroke harder</p>
 <p>If you have one-hander: chip first serve (slice), drive second serve (topspin) is solid strategy.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.5 Return Targets — Đánh Đâu Để Gây Áp Lực</h2><h3>The Golden Target: Deep Cross-Court</h3>
-<p>Lý do:</p>
-<ul class="styled-list">
-<li><strong>Highest net clearance</strong>: Bóng cross-court có thêm space trên net (net thấp nhất ở center, nhưng diagonal trajectory dài hơn → more room)</li>
-<li><strong>Furthest từ server</strong>: Server phải di chuyển xa nhất để reach cross-court return</li>
-<li><strong>Most forgiving target</strong>: Miss slightly early hay late → bóng vẫn có khả năng vào</li>
-<li><strong>Resets rally</strong>: Server không có easy attack setup từ deep cross-court</li>
-</ul>
-<strong>Khi nào dùng:</strong>
-<p>Default target cho block returns và most aggressive returns. An toàn nhất khi không chắc chắn.</p>
-<hr>
-<h3>Down The Line Return — High Risk, High Reward</h3>
-<strong>Khi nào effective:</strong>
-<ul class="styled-list">
-<li>Server cheats heavily toward cross-court after serve (anticipating cross-court return)</li>
-<li>Serve lands short → returner has time và better angle</li>
-<li>Returner has dominant shot và wants to take over rally immediately</li>
-<li>Surprise element — đối thủ chưa thấy down the line return từ bạn</li>
-</ul>
-<strong>Risk:</strong>
-<ul class="styled-list">
-<li>Tighter target (shorter court, net higher on sides)</li>
-<li>If server correctly positioned → easy approach</li>
-<li>If miss → unforced error from return</li>
-</ul>
+<hr/>
+<h2 id="235-return-targets-anh-au-e-gay-ap-luc">23.5 Return Targets — Đánh Đâu Để Gây Áp Lực</h2>
+<h3 id="the-golden-target-deep-cross-court">The Golden Target: Deep Cross-Court</h3>
+<p>Lý do:
+- <strong>Highest net clearance</strong>: Bóng cross-court có thêm space trên net (net thấp nhất ở center, nhưng diagonal trajectory dài hơn → more room)
+- <strong>Furthest từ server</strong>: Server phải di chuyển xa nhất để reach cross-court return
+- <strong>Most forgiving target</strong>: Miss slightly early hay late → bóng vẫn có khả năng vào
+- <strong>Resets rally</strong>: Server không có easy attack setup từ deep cross-court</p>
+<p><strong>Khi nào dùng:</strong>
+Default target cho block returns và most aggressive returns. An toàn nhất khi không chắc chắn.</p>
+<hr/>
+<h3 id="down-the-line-return-high-risk-high-reward">Down The Line Return — High Risk, High Reward</h3>
+<p><strong>Khi nào effective:</strong>
+- Server cheats heavily toward cross-court after serve (anticipating cross-court return)
+- Serve lands short → returner has time và better angle
+- Returner has dominant shot và wants to take over rally immediately
+- Surprise element — đối thủ chưa thấy down the line return từ bạn</p>
+<p><strong>Risk:</strong>
+- Tighter target (shorter court, net higher on sides)
+- If server correctly positioned → easy approach
+- If miss → unforced error from return</p>
 <p>Use sparingly và strategically. Once per 4-5 games đủ để keep server honest.</p>
-<hr>
-<h3>Return Down The Middle — The Underrated Option</h3>
+<hr/>
+<h3 id="return-down-the-middle-the-underrated-option">Return Down The Middle — The Underrated Option</h3>
 <p>Return thẳng giữa court — không wide, không T.</p>
-<strong>Tại sao hiệu quả:</strong>
-<ul class="styled-list">
-<li>Eliminates serve-and-volley angles (ball đến server's body)</li>
-<li>Reduces server's shot selection (no wide angle available for Serve+1)</li>
-<li>High margin (widest part of court from returner's angle)</li>
-<li>Server không biết backhand hay forehand → hesitation</li>
-</ul>
-<strong>Tốt nhất vs.:</strong> Serve and volley players (ball at feet), servers with weak middle-court shot.
-<hr>
-<h3>Return Wide — Opening The Court</h3>
+<p><strong>Tại sao hiệu quả:</strong>
+- Eliminates serve-and-volley angles (ball đến server's body)
+- Reduces server's shot selection (no wide angle available for Serve+1)
+- High margin (widest part of court from returner's angle)
+- Server không biết backhand hay forehand → hesitation</p>
+<p><strong>Tốt nhất vs.:</strong> Serve and volley players (ball at feet), servers with weak middle-court shot.</p>
+<hr/>
+<h3 id="return-wide-opening-the-court">Return Wide — Opening The Court</h3>
 <p>Return wide để kéo server ra ngoài, open middle.</p>
-<strong>Requires:</strong>
-<ul class="styled-list">
-<li>Returner ở good position (không bị jammed)</li>
-<li>Clear read on serve direction</li>
-<li>Good angle (serve wide gives better angle for cross-court return)</li>
-</ul>
-<strong>Risk:</strong> Wider target, net higher at corners.
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.6 Return Strategies vs. Different Server Types</h2><h3>Vs. Big Server (Hard, Heavy Serves)</h3>
-<strong>Mindset:</strong> You will not win the return game on returns alone. Survive first serves, attack second serves.
-<strong>First serve return:</strong>
-<ul class="styled-list">
-<li>Block return, deep cross-court</li>
-<li>Get bóng IN — không cần win the point từ return</li>
-<li>Reduce angle: Stay near center, minimize court you have to cover</li>
-<li>Cut off serve angle: Stand slightly in from baseline angles</li>
-</ul>
-<strong>Second serve return:</strong>
-<ul class="styled-list">
-<li>Step in</li>
-<li>Attack</li>
-<li>This is where you make up lost points from tough first serves</li>
-<li>Aim for big, aggressive forehand hoặc backhand</li>
-<li>Server with big first serve often has weaker second serve (psychological pattern)</li>
-</ul>
-<strong>Mental key:</strong> Don't be rattled by aces or service winners. One bad return doesn't define your strategy. Focus on second serve opportunities.
-<hr>
-<h3>Vs. Kick Serve Specialist</h3>
+<p><strong>Requires:</strong>
+- Returner ở good position (không bị jammed)
+- Clear read on serve direction
+- Good angle (serve wide gives better angle for cross-court return)</p>
+<p><strong>Risk:</strong> Wider target, net higher at corners.</p>
+<hr/>
+<h2 id="236-return-strategies-vs-different-server-types">23.6 Return Strategies vs. Different Server Types</h2>
+<h3 id="vs-big-server-hard-heavy-serves">Vs. Big Server (Hard, Heavy Serves)</h3>
+<p><strong>Mindset:</strong> You will not win the return game on returns alone. Survive first serves, attack second serves.</p>
+<p><strong>First serve return:</strong>
+- Block return, deep cross-court
+- Get bóng IN — không cần win the point từ return
+- Reduce angle: Stay near center, minimize court you have to cover
+- Cut off serve angle: Stand slightly in from baseline angles</p>
+<p><strong>Second serve return:</strong>
+- Step in
+- Attack
+- This is where you make up lost points from tough first serves
+- Aim for big, aggressive forehand hoặc backhand
+- Server with big first serve often has weaker second serve (psychological pattern)</p>
+<p><strong>Mental key:</strong> Don't be rattled by aces or service winners. One bad return doesn't define your strategy. Focus on second serve opportunities.</p>
+<hr/>
+<h3 id="vs-kick-serve-specialist">Vs. Kick Serve Specialist</h3>
 <p>Kick serve: High bounce, kicks away. Returner forced to hit bóng at uncomfortable height.</p>
-<strong>Solutions:</strong>
-<em>Take it early (on the rise):</em>
-<p>Step in, take ball before it kicks up too high. Requires reading early. Bóng vẫn manageable height.</p>
-<em>Let it kick up, hit at shoulder:</em>
-<p>Step back extra. Allow high bounce. Hit at shoulder height. Requires adjustment — most players uncomfortable here.</p>
-<em>Slice return (chip):</em>
-<p>Compact slice motion. Keep ball low. Doesn't require comfortable swing height. Good vs. heavy kick.</p>
-<em>Move around it (for forehand):</em>
-<p>If kick to backhand → move around to hit forehand (giống cách Federer xử lý Nadal's heavy kick). High risk (leaves court open) but takes away kick serve's best effect.</p>
-<hr>
-<h3>Vs. Slice Serve Specialist</h3>
+<p><strong>Solutions:</strong></p>
+<p><em>Take it early (on the rise):</em>
+Step in, take ball before it kicks up too high. Requires reading early. Bóng vẫn manageable height.</p>
+<p><em>Let it kick up, hit at shoulder:</em>
+Step back extra. Allow high bounce. Hit at shoulder height. Requires adjustment — most players uncomfortable here.</p>
+<p><em>Slice return (chip):</em>
+Compact slice motion. Keep ball low. Doesn't require comfortable swing height. Good vs. heavy kick.</p>
+<p><em>Move around it (for forehand):</em>
+If kick to backhand → move around to hit forehand (giống cách Federer xử lý Nadal's heavy kick). High risk (leaves court open) but takes away kick serve's best effect.</p>
+<hr/>
+<h3 id="vs-slice-serve-specialist">Vs. Slice Serve Specialist</h3>
 <p>Slice serve: Low, skidding bounce, kicks away sideways.</p>
-<strong>Problems:</strong>
-<p>Ball moves laterally → hard to track. Keeps low → hard to drive.</p>
-<strong>Solutions:</strong>
-<em>Crowd the ball:</em>
-<p>Move into ball early. Don't let it kick away too far. Catch it as it's still rising or at peak before lateral movement maximizes.</p>
-<em>Open stance:</em>
-<p>Wide slice to forehand → open stance forehand allows hitting across body without overreaching.</p>
-<em>Chip return:</em>
-<p>Match spin with spin. Chip back (underspin on underspin) → stays low, neutralizes effect.</p>
-<em>Target returner's strength:</em>
-<p>Slice wide pulls you off court. Return cross-court deep — giống direction bạn đang moved. Tận dụng momentum.</p>
-<hr>
-<h3>Vs. Serve And Volley Player</h3>
+<p><strong>Problems:</strong>
+Ball moves laterally → hard to track. Keeps low → hard to drive.</p>
+<p><strong>Solutions:</strong></p>
+<p><em>Crowd the ball:</em>
+Move into ball early. Don't let it kick away too far. Catch it as it's still rising or at peak before lateral movement maximizes.</p>
+<p><em>Open stance:</em>
+Wide slice to forehand → open stance forehand allows hitting across body without overreaching.</p>
+<p><em>Chip return:</em>
+Match spin with spin. Chip back (underspin on underspin) → stays low, neutralizes effect.</p>
+<p><em>Target returner's strength:</em>
+Slice wide pulls you off court. Return cross-court deep — giống direction bạn đang moved. Tận dụng momentum.</p>
+<hr/>
+<h3 id="vs-serve-and-volley-player">Vs. Serve And Volley Player</h3>
 <p>Server rushes net after every serve. Less common in modern game nhưng vẫn exists, đặc biệt ở grass và indoor.</p>
-<strong>Return rules vs. S&V:</strong>
-<em>Priority 1: Keep return LOW</em>
-<p>Low ball = difficult volley. Chip return at their feet. They must volley up → you get lob or weak volley.</p>
-<em>Priority 2: Return AT their body</em>
-<p>Down the middle return, directly at server moving toward net. They must volley with no angle. Difficult reaction volley.</p>
-<em>Priority 3: Return sharp cross-court angle</em>
-<p>Extreme angle → volleyer cannot cover. Winner if executed well.</p>
-<em>Priority 4: Lob return</em>
-<p>If all else fails → lob over their head. They've rushed net → you win point outright hoặc reset.</p>
-<strong>What NOT to do:</strong> Return high và deep cross-court → easy high volley setup for S&V player.
-<hr>
-<h3>Vs. Heavy Topspin Second Serve</h3>
+<p><strong>Return rules vs. S&amp;V:</strong></p>
+<p><em>Priority 1: Keep return LOW</em>
+Low ball = difficult volley. Chip return at their feet. They must volley up → you get lob or weak volley.</p>
+<p><em>Priority 2: Return AT their body</em>
+Down the middle return, directly at server moving toward net. They must volley with no angle. Difficult reaction volley.</p>
+<p><em>Priority 3: Return sharp cross-court angle</em>
+Extreme angle → volleyer cannot cover. Winner if executed well.</p>
+<p><em>Priority 4: Lob return</em>
+If all else fails → lob over their head. They've rushed net → you win point outright hoặc reset.</p>
+<p><strong>What NOT to do:</strong> Return high và deep cross-court → easy high volley setup for S&amp;V player.</p>
+<hr/>
+<h3 id="vs-heavy-topspin-second-serve">Vs. Heavy Topspin Second Serve</h3>
 <p>Second serve kick với heavy spin → high bounce + kicks away.</p>
-<strong>Counter:</strong> Take away their kick by <strong>stepping in aggressively</strong>.
+<p><strong>Counter:</strong> Take away their kick by <strong>stepping in aggressively</strong>.</p>
 <p>Before server even bounces ball for second serve, visibly step in. This is a psychological move AND tactical: you're forcing them to be more precise, they see you coming in, pressure increases.</p>
 <p>Return early on the rise → kick không reach maximum height → manageable contact.</p>
 <p>Target: Cross-court deep aggressive forehand. Win the point outright or set up rally on your terms.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.7 Return Positioning In Doubles</h2><h3>The Doubles Return Position</h3>
+<hr/>
+<h2 id="237-return-positioning-in-doubles">23.7 Return Positioning In Doubles</h2>
+<h3 id="the-doubles-return-position">The Doubles Return Position</h3>
 <p>Rộng hơn, closer in so với singles — vì court coverage shared với partner.</p>
-<em>Deuce court returner:</em>
-<p>Typically right-handed player. Stand inside singles sideline, just behind baseline. Angle covers T và body serves most.</p>
-<em>Ad court returner:</em>
-<p>Cover wide serves on their side, T serves more naturally with backhand (right-hander).</p>
-<h3>Return Teamwork</h3>
-<strong>Returner's partner (net):</strong>
-<ul class="styled-list">
-<li>Signal desired return target</li>
-<li>Poach if return is short/weak → attack at net</li>
-<li>Defend lob if return poor</li>
-</ul>
-<strong>Communication:</strong>
-<p>Before point: Partner signals where they'll move. Returner knows court coverage.</p>
-<h3>Return Strategies In Doubles</h3>
-<strong>Cross-court return:</strong>
-<p>Default. Safe. Keeps ball from server's partner at net.</p>
-<strong>Down the middle:</strong>
-<p>At server's partner's feet. Difficult low volley. Effective if partner anticipated cross-court.</p>
-<strong>Lob return:</strong>
-<p>Over net player (server's partner). Risky nhưng forces both opponents back. Effective surprise.</p>
-<strong>Return at net player:</strong>
-<p>Aggressive drive directly at net player. Reaction time impossible at close range. High risk (small target) nhưng devastating when it lands.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.8 The Mental Game Of Return</h2><h3>Mindset Reset After Ace Or Service Winner</h3>
+<p><em>Deuce court returner:</em>
+Typically right-handed player. Stand inside singles sideline, just behind baseline. Angle covers T và body serves most.</p>
+<p><em>Ad court returner:</em>
+Cover wide serves on their side, T serves more naturally with backhand (right-hander).</p>
+<h3 id="return-teamwork">Return Teamwork</h3>
+<p><strong>Returner's partner (net):</strong>
+- Signal desired return target
+- Poach if return is short/weak → attack at net
+- Defend lob if return poor</p>
+<p><strong>Communication:</strong>
+Before point: Partner signals where they'll move. Returner knows court coverage.</p>
+<h3 id="return-strategies-in-doubles">Return Strategies In Doubles</h3>
+<p><strong>Cross-court return:</strong>
+Default. Safe. Keeps ball from server's partner at net.</p>
+<p><strong>Down the middle:</strong>
+At server's partner's feet. Difficult low volley. Effective if partner anticipated cross-court.</p>
+<p><strong>Lob return:</strong>
+Over net player (server's partner). Risky nhưng forces both opponents back. Effective surprise.</p>
+<p><strong>Return at net player:</strong>
+Aggressive drive directly at net player. Reaction time impossible at close range. High risk (small target) nhưng devastating when it lands.</p>
+<hr/>
+<h2 id="238-the-mental-game-of-return">23.8 The Mental Game Of Return</h2>
+<h3 id="mindset-reset-after-ace-or-service-winner">Mindset Reset After Ace Or Service Winner</h3>
 <p>Server hits ace. Natural reaction: frustration, tighten up, stand further back.</p>
-<strong>Wrong response:</strong>
-<ul class="styled-list">
-<li>Moving far back (gives server even more time for Serve+1 from second serve)</li>
-<li>Shortening swing on next return (tentative)</li>
-<li>Focusing on "don't miss" rather than "where to hit"</li>
-</ul>
-<strong>Correct response:</strong>
-<ul class="styled-list">
-<li>Bounce on feet, reset physically</li>
-<li>"Next point" mindset — one ace doesn't change your return strategy</li>
-<li>If anything, step in MORE on second serve to assert dominance</li>
-<li>Remind yourself: Even professionals ace 10-15% of first serves at most — you will return the other 85-90%</li>
-</ul>
-<hr>
-<h3>Handling Pressure Returns</h3>
-<strong>Returning at 30-40 (break point chance):</strong>
+<p><strong>Wrong response:</strong>
+- Moving far back (gives server even more time for Serve+1 from second serve)
+- Shortening swing on next return (tentative)
+- Focusing on "don't miss" rather than "where to hit"</p>
+<p><strong>Correct response:</strong>
+- Bounce on feet, reset physically
+- "Next point" mindset — one ace doesn't change your return strategy
+- If anything, step in MORE on second serve to assert dominance
+- Remind yourself: Even professionals ace 10-15% of first serves at most — you will return the other 85-90%</p>
+<hr/>
+<h3 id="handling-pressure-returns">Handling Pressure Returns</h3>
+<p><strong>Returning at 30-40 (break point chance):</strong></p>
 <p>Common mistake: returner tries TOO hard → overshoots. Or returner goes too safe → weak return → server attacks.</p>
-<strong>Correct approach:</strong>
-<p>Same return as any other point. Trust the pattern you've built.</p>
-<em>If you've been returning cross-court all match:</em> Return cross-court. Don't suddenly try down the line hero shot.
-<em>If server has been serving to your backhand:</em> They'll probably do it again. Set up for it.
-<strong>Returning to break for set:</strong>
+<p><strong>Correct approach:</strong>
+Same return as any other point. Trust the pattern you've built.</p>
+<p><em>If you've been returning cross-court all match:</em> Return cross-court. Don't suddenly try down the line hero shot.</p>
+<p><em>If server has been serving to your backhand:</em> They'll probably do it again. Set up for it.</p>
+<p><strong>Returning to break for set:</strong></p>
 <p>Same principle. Process over outcome. The most dangerous thing is thinking "I must win this point" — it tightens everything.</p>
-<hr>
-<h3>Reading Tells Under Pressure</h3>
+<hr/>
+<h3 id="reading-tells-under-pressure">Reading Tells Under Pressure</h3>
 <p>Interesting phenomenon: Under pressure, servers often revert to their most comfortable serve. Their variations decrease.</p>
-<strong>Use this:</strong>
-<p>In crucial points (break point, tiebreak), servers tend to:</p>
-<ul class="styled-list">
-<li>Go to best first serve (often T on deuce court, wide kick on ad court)</li>
-<li>Hit body serve on second serve under extreme pressure</li>
-</ul>
+<p><strong>Use this:</strong>
+In crucial points (break point, tiebreak), servers tend to:
+- Go to best first serve (often T on deuce court, wide kick on ad court)
+- Hit body serve on second serve under extreme pressure</p>
 <p>Observe your opponent's patterns in early games when pressure lower. Apply in crucial moments.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.9 Return Practice Drills</h2><h3>Drill 1: The Observation Drill</h3>
-<strong>Goal:</strong> Build reading ability without pressure of returning.
-<strong>Execution:</strong>
-<p>Stand at return position. Partner serves full serves. Your ONLY job: call out "T / Body / Wide" AND "Flat / Slice / Kick" BEFORE ball bounces.</p>
+<hr/>
+<h2 id="239-return-practice-drills">23.9 Return Practice Drills</h2>
+<h3 id="drill-1-the-observation-drill">Drill 1: The Observation Drill</h3>
+<p><strong>Goal:</strong> Build reading ability without pressure of returning.</p>
+<p><strong>Execution:</strong>
+Stand at return position. Partner serves full serves. Your ONLY job: call out "T / Body / Wide" AND "Flat / Slice / Kick" BEFORE ball bounces.</p>
 <p>Score yourself: How many correct out of 20?</p>
-<strong>Progression:</strong>
-<p>Start at 50% accuracy. Aim for 70%+ before adding actual return.</p>
-<hr>
-<h3>Drill 2: Zone Return Drill</h3>
-<strong>Goal:</strong> Consistency trong hitting target zones.
-<strong>Execution:</strong>
-<p>Place targets (cones hoặc towels) in three zones: deep cross-court, deep T (down the middle), down the line.</p>
+<p><strong>Progression:</strong>
+Start at 50% accuracy. Aim for 70%+ before adding actual return.</p>
+<hr/>
+<h3 id="drill-2-zone-return-drill">Drill 2: Zone Return Drill</h3>
+<p><strong>Goal:</strong> Consistency trong hitting target zones.</p>
+<p><strong>Execution:</strong>
+Place targets (cones hoặc towels) in three zones: deep cross-court, deep T (down the middle), down the line.</p>
 <p>Partner serves full serves. Call target trước khi serve ("Cross!" or "T!" or "Line!"). Return to called target.</p>
-<strong>Score:</strong> Points for landing within 3 feet of target. 10 serves per set.
-<strong>Progression:</strong> Start with second serves only. Add first serves when cross-court consistency ≥ 70%.
-<hr>
-<h3>Drill 3: Second Serve Attack Drill</h3>
-<strong>Goal:</strong> Train aggressive mindset on second serve.
-<strong>Execution:</strong>
-<p>Partner serves only second serves. Returner MUST step in at least 1 foot inside baseline. Return must land deep (behind service line) to count.</p>
-<strong>Pressure version:</strong> 5 returns. 4 must land deep. Miss 2 → restart from 0.
-<strong>Mental focus:</strong> Full swing every return. No tentative "just get it in."
-<hr>
-<h3>Drill 4: The Read-And-Cheat Drill</h3>
-<strong>Goal:</strong> Practice leaning and pre-positioning.
-<strong>Execution:</strong>
-<p>Partner serves. Returner must call direction of serve (T/Wide/Body) AT TROPHY POSITION of server — before ball even leaves racket. Then return.</p>
+<p><strong>Score:</strong> Points for landing within 3 feet of target. 10 serves per set.</p>
+<p><strong>Progression:</strong> Start with second serves only. Add first serves when cross-court consistency ≥ 70%.</p>
+<hr/>
+<h3 id="drill-3-second-serve-attack-drill">Drill 3: Second Serve Attack Drill</h3>
+<p><strong>Goal:</strong> Train aggressive mindset on second serve.</p>
+<p><strong>Execution:</strong>
+Partner serves only second serves. Returner MUST step in at least 1 foot inside baseline. Return must land deep (behind service line) to count.</p>
+<p><strong>Pressure version:</strong> 5 returns. 4 must land deep. Miss 2 → restart from 0.</p>
+<p><strong>Mental focus:</strong> Full swing every return. No tentative "just get it in."</p>
+<hr/>
+<h3 id="drill-4-the-read-and-cheat-drill">Drill 4: The Read-And-Cheat Drill</h3>
+<p><strong>Goal:</strong> Practice leaning and pre-positioning.</p>
+<p><strong>Execution:</strong>
+Partner serves. Returner must call direction of serve (T/Wide/Body) AT TROPHY POSITION of server — before ball even leaves racket. Then return.</p>
 <p>Wrong call: Point to server. Correct call: Point to returner.</p>
 <p>Track accuracy. This forces observation of server's trophy position tells.</p>
-<hr>
-<h3>Drill 5: Block Return Consistency</h3>
-<strong>Goal:</strong> Reliable block return against hard first serves.
-<strong>Execution:</strong>
-<p>Partner hits hard first serves (90%+ pace). Returner uses ONLY block return — minimal backswing, redirect pace.</p>
+<hr/>
+<h3 id="drill-5-block-return-consistency">Drill 5: Block Return Consistency</h3>
+<p><strong>Goal:</strong> Reliable block return against hard first serves.</p>
+<p><strong>Execution:</strong>
+Partner hits hard first serves (90%+ pace). Returner uses ONLY block return — minimal backswing, redirect pace.</p>
 <p>Count how many land deep cross-court out of 20.</p>
-<strong>Target:</strong> 14/20 (70%). This is a solid block return percentage.
-<hr>
-<h3>Drill 6: Serve-And-Return Game (Competitive)</h3>
-<strong>Goal:</strong> Full match simulation, pressure returns.
-<strong>Execution:</strong>
-<p>Server serves. Returner returns. Point played out from there. BUT: Server scores double points for ace/service winner. Returner scores double points for return winner (ball not touched after return).</p>
+<p><strong>Target:</strong> 14/20 (70%). This is a solid block return percentage.</p>
+<hr/>
+<h3 id="drill-6-serve-and-return-game-competitive">Drill 6: Serve-And-Return Game (Competitive)</h3>
+<p><strong>Goal:</strong> Full match simulation, pressure returns.</p>
+<p><strong>Execution:</strong>
+Server serves. Returner returns. Point played out from there. BUT: Server scores double points for ace/service winner. Returner scores double points for return winner (ball not touched after return).</p>
 <p>This creates asymmetric pressure mimicking real match stakes.</p>
 <p>Play to 15 points. Rotate.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.10 Return Stats — Measuring Your Progress</h2><h3>Core Return Stats To Track</h3>
-| Stat | Amateur Target | Good Amateur Target |
-|---|---|---|
-| First serve return in play | 55%+ | 65%+ |
-| Second serve return in play | 75%+ | 85%+ |
-| Return winners (untouched) | 5%+ of returns | 10%+ |
-| Return errors (net/out) | Below 30% | Below 20% |
-| Break point conversion | 35%+ | 45%+ |
-
-<hr>
-<h3>What The Stats Tell You</h3>
-<strong>First serve return in play below 50%:</strong>
-<p>Either stands too far back và returning passively, hoặc swing too big on first serve. → Block return, simplify.</p>
-<strong>Second serve return in play below 70%:</strong>
-<p>Not stepping in. Swinging too hard without proper contact. → Step in, controlled drive.</p>
-<strong>Return winners below 3%:</strong>
-<p>Too defensive on second serve. → More aggression on second serves.</p>
-<strong>Break point conversion below 30%:</strong>
-<p>Mental game under pressure, OR return not good enough to start rally in control. → Work on drill 3 + mental reset routine.</p>
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.11 Advanced: Return As Tactical Setup</h2><h3>Return Sets Up Your Pattern</h3>
+<hr/>
+<h2 id="2310-return-stats-measuring-your-progress">23.10 Return Stats — Measuring Your Progress</h2>
+<h3 id="core-return-stats-to-track">Core Return Stats To Track</h3>
+<table class="data-table">
+<thead>
+<tr>
+<th>Stat</th>
+<th>Amateur Target</th>
+<th>Good Amateur Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First serve return in play</td>
+<td>55%+</td>
+<td>65%+</td>
+</tr>
+<tr>
+<td>Second serve return in play</td>
+<td>75%+</td>
+<td>85%+</td>
+</tr>
+<tr>
+<td>Return winners (untouched)</td>
+<td>5%+ of returns</td>
+<td>10%+</td>
+</tr>
+<tr>
+<td>Return errors (net/out)</td>
+<td>Below 30%</td>
+<td>Below 20%</td>
+</tr>
+<tr>
+<td>Break point conversion</td>
+<td>35%+</td>
+<td>45%+</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="what-the-stats-tell-you">What The Stats Tell You</h3>
+<p><strong>First serve return in play below 50%:</strong>
+Either stands too far back và returning passively, hoặc swing too big on first serve. → Block return, simplify.</p>
+<p><strong>Second serve return in play below 70%:</strong>
+Not stepping in. Swinging too hard without proper contact. → Step in, controlled drive.</p>
+<p><strong>Return winners below 3%:</strong>
+Too defensive on second serve. → More aggression on second serves.</p>
+<p><strong>Break point conversion below 30%:</strong>
+Mental game under pressure, OR return not good enough to start rally in control. → Work on drill 3 + mental reset routine.</p>
+<hr/>
+<h2 id="2311-advanced-return-as-tactical-setup">23.11 Advanced: Return As Tactical Setup</h2>
+<h3 id="return-sets-up-your-pattern">Return Sets Up Your Pattern</h3>
 <p>Return không chỉ là "lấy bóng vào." Return phải setup cú đánh tiếp theo của bạn.</p>
-<strong>Return cross-court wide → server runs wide → you attack middle</strong>
-<p>Vs. server who attacks cross-court after serve:</p>
-<p>→ Return cross-court wide → server moves far to that side → your next ball goes down the middle (open court)</p>
-<strong>Return down the middle → server replies down the middle → you attack wide</strong>
+<p><strong>Return cross-court wide → server runs wide → you attack middle</strong></p>
+<p>Vs. server who attacks cross-court after serve:
+→ Return cross-court wide → server moves far to that side → your next ball goes down the middle (open court)</p>
+<p><strong>Return down the middle → server replies down the middle → you attack wide</strong></p>
 <p>Force server into predictable position → exploit it.</p>
-<strong>Return short (drop shot return):</strong>
+<p><strong>Return short (drop shot return):</strong></p>
 <p>Ultra-advanced. Vs. server standing far back for Serve+1 → chip drop shot return. Server caught flat-footed, far back, has to sprint in.</p>
 <p>Works only vs. slow-reacting servers và when serve lands short enough for returner to step in comfortably.</p>
-<hr>
-<h3>Return Disrupts Server's Rhythm</h3>
+<hr/>
+<h3 id="return-disrupts-servers-rhythm">Return Disrupts Server's Rhythm</h3>
 <p>Smart returner doesn't just react to server's game plan — they actively disrupt it.</p>
-<strong>Tactics:</strong>
-<em>Vary return pace:</em> Mix block returns (slow) với hard drive returns (fast). Server can't time Serve+1 swing.
-<em>Vary return depth:</em> Mix deep returns với short angles. Server has to cover both directions.
-<em>Return at different parts of server's body:</em> Return occasionally at server's dominant side (backhand) to test that side under pressure.
-<em>Move position between points:</em> Stand slightly different each point. Server loses reference for aiming.
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.12 Năm Lỗi Return Phổ Biến Nhất</h2><h3>Lỗi 1: Standing Too Far Back On Every Serve</h3>
-<strong>Mô tả:</strong> Returner retreats further and further back throughout match. Return becomes purely defensive. Server has all the time in world for Serve+1.
-<strong>Fix:</strong> Establish base position và stay there for first serve. Step IN for second serve every time. Use the baseline as reference — return FROM there, không retreat behind it.
-<hr>
-<h3>Lỗi 2: Same Return Every Time — Cross-Court Only</h3>
-<strong>Mô tả:</strong> Server realizes returner always goes cross-court. Server cheats toward cross-court after serve every time. Serve+1 attack becomes easier because server is already in position.
-<strong>Fix:</strong> Once per 3-4 return games, return down the line. Keep server honest. Body serve return to middle. Mix it up even slightly.
-<hr>
-<h3>Lỗi 3: Tentative Swing On Second Serve</h3>
-<strong>Mô tả:</strong> Server hits weak second serve. Returner sees opportunity but tightens up, swings half-hearted, return lands short. Server attacks.
-<strong>Fix:</strong> Step in AND commit to full swing. Decide target BEFORE server begins second serve motion. Execute. This is the highest-leverage moment in return game — don't waste it.
-<hr>
-<h3>Lỗi 4: No Pre-Serve Observation</h3>
-<strong>Mô tả:</strong> Returner stands at baseline, bouncing, looking at strings or at score. Not observing server's setup, toss, stance.
-<strong>Fix:</strong> From moment server walks to service line, watch everything. Server's position, bounce routine, stance adjustment. Toss location when they practice swing. This information is free — use it.
-<hr>
-<h3>Lỗi 5: Letting Aces Affect Strategy</h3>
-<strong>Mô tả:</strong> Server hits 3 aces in a row. Returner moves far back, starts shortening swing, playing scared.
-<strong>Fix:</strong> Aces happen. They are part of tennis. Moving back GIVES server more room for Serve+1 on the aces that DO come in. Shortening swing gives weaker returns. Aces don't change your return position strategy. If anything, note WHICH serve was ace and look to counter next time. One game at a time.
-<hr></div>
-<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 23</h2><ul class="styled-list">
-<li><strong>Return là cú đánh tấn công</strong> — không phải chỉ "sống sót." Tư duy offensive tạo ra better returns.</li>
-</ul>
+<p><strong>Tactics:</strong></p>
+<p><em>Vary return pace:</em> Mix block returns (slow) với hard drive returns (fast). Server can't time Serve+1 swing.</p>
+<p><em>Vary return depth:</em> Mix deep returns với short angles. Server has to cover both directions.</p>
+<p><em>Return at different parts of server's body:</em> Return occasionally at server's dominant side (backhand) to test that side under pressure.</p>
+<p><em>Move position between points:</em> Stand slightly different each point. Server loses reference for aiming.</p>
+<hr/>
+<h2 id="2312-nam-loi-return-pho-bien-nhat">23.12 Năm Lỗi Return Phổ Biến Nhất</h2>
+<h3 id="loi-1-standing-too-far-back-on-every-serve">Lỗi 1: Standing Too Far Back On Every Serve</h3>
+<p><strong>Mô tả:</strong> Returner retreats further and further back throughout match. Return becomes purely defensive. Server has all the time in world for Serve+1.</p>
+<p><strong>Fix:</strong> Establish base position và stay there for first serve. Step IN for second serve every time. Use the baseline as reference — return FROM there, không retreat behind it.</p>
+<hr/>
+<h3 id="loi-2-same-return-every-time-cross-court-only">Lỗi 2: Same Return Every Time — Cross-Court Only</h3>
+<p><strong>Mô tả:</strong> Server realizes returner always goes cross-court. Server cheats toward cross-court after serve every time. Serve+1 attack becomes easier because server is already in position.</p>
+<p><strong>Fix:</strong> Once per 3-4 return games, return down the line. Keep server honest. Body serve return to middle. Mix it up even slightly.</p>
+<hr/>
+<h3 id="loi-3-tentative-swing-on-second-serve">Lỗi 3: Tentative Swing On Second Serve</h3>
+<p><strong>Mô tả:</strong> Server hits weak second serve. Returner sees opportunity but tightens up, swings half-hearted, return lands short. Server attacks.</p>
+<p><strong>Fix:</strong> Step in AND commit to full swing. Decide target BEFORE server begins second serve motion. Execute. This is the highest-leverage moment in return game — don't waste it.</p>
+<hr/>
+<h3 id="loi-4-no-pre-serve-observation">Lỗi 4: No Pre-Serve Observation</h3>
+<p><strong>Mô tả:</strong> Returner stands at baseline, bouncing, looking at strings or at score. Not observing server's setup, toss, stance.</p>
+<p><strong>Fix:</strong> From moment server walks to service line, watch everything. Server's position, bounce routine, stance adjustment. Toss location when they practice swing. This information is free — use it.</p>
+<hr/>
+<h3 id="loi-5-letting-aces-affect-strategy">Lỗi 5: Letting Aces Affect Strategy</h3>
+<p><strong>Mô tả:</strong> Server hits 3 aces in a row. Returner moves far back, starts shortening swing, playing scared.</p>
+<p><strong>Fix:</strong> Aces happen. They are part of tennis. Moving back GIVES server more room for Serve+1 on the aces that DO come in. Shortening swing gives weaker returns. Aces don't change your return position strategy. If anything, note WHICH serve was ace and look to counter next time. One game at a time.</p>
+<hr/>
+<h2 id="tom-tat-chuong-23">Tóm Tắt Chương 23</h2>
 <ul class="styled-list">
-<li><strong>Read serve từ sớm:</strong> Toss placement, body alignment, trophy position. Build mental profile trong warm-up.</li>
+<li>
+<p><strong>Return là cú đánh tấn công</strong> — không phải chỉ "sống sót." Tư duy offensive tạo ra better returns.</p>
+</li>
+<li>
+<p><strong>Read serve từ sớm:</strong> Toss placement, body alignment, trophy position. Build mental profile trong warm-up.</p>
+</li>
+<li>
+<p><strong>Position matters:</strong> Base position là starting point. Step in cho second serve. Adjust vs. kick server (back) vs. weak server (in).</p>
+</li>
+<li>
+<p><strong>Four return styles:</strong> Aggressive drive, block, chip, và lob — mỗi loại có context khác nhau. Block return là công cụ quan trọng nhất cho first serve.</p>
+</li>
+<li>
+<p><strong>Targets:</strong> Deep cross-court là default. Down the line là surprise. Middle is underrated. Use all three to keep server guessing.</p>
+</li>
+<li>
+<p><strong>Vs. different servers:</strong> Big server → survive first, attack second. Kick specialist → take early on the rise. Slice → crowd ball. Serve-and-volley → chip low.</p>
+</li>
+<li>
+<p><strong>Mental game:</strong> Reset sau ace. Same process on break points. Read server's pressure patterns.</p>
+</li>
+<li>
+<p><strong>Drills:</strong> Observation drill, zone drill, second serve attack drill, block return drill. Repetition builds automaticity.</p>
+</li>
+<li>
+<p><strong>Stats:</strong> First serve return in, second serve return in, break point conversion. Measure to improve.</p>
+</li>
+<li>
+<p><strong>Key insight:</strong> Agassi không return tốt hơn vì tốc độ phản xạ. Anh ta return tốt hơn vì anh ta <strong>chuẩn bị sớm hơn, đọc tốt hơn, và commit nhiều hơn.</strong> Đây là những điều bạn có thể train.</p>
+</li>
 </ul>
-<ul class="styled-list">
-<li><strong>Position matters:</strong> Base position là starting point. Step in cho second serve. Adjust vs. kick server (back) vs. weak server (in).</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Four return styles:</strong> Aggressive drive, block, chip, và lob — mỗi loại có context khác nhau. Block return là công cụ quan trọng nhất cho first serve.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Targets:</strong> Deep cross-court là default. Down the line là surprise. Middle is underrated. Use all three to keep server guessing.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Vs. different servers:</strong> Big server → survive first, attack second. Kick specialist → take early on the rise. Slice → crowd ball. Serve-and-volley → chip low.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Mental game:</strong> Reset sau ace. Same process on break points. Read server's pressure patterns.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Drills:</strong> Observation drill, zone drill, second serve attack drill, block return drill. Repetition builds automaticity.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Stats:</strong> First serve return in, second serve return in, break point conversion. Measure to improve.</li>
-</ul>
-<ul class="styled-list">
-<li><strong>Key insight:</strong> Agassi không return tốt hơn vì tốc độ phản xạ. Anh ta return tốt hơn vì anh ta <strong>chuẩn bị sớm hơn, đọc tốt hơn, và commit nhiều hơn.</strong> Đây là những điều bạn có thể train.</li>
-</ul>
-<hr></div>
-<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 23 đã weaponize return. Bạn đã hiểu server's game từ hai phía — cả khi serve lẫn khi return.</p>
+<hr/>
+<h2 id="nhin-ve-phia-truoc">Nhìn Về Phía Trước</h2>
+<p>Chương 23 đã weaponize return. Bạn đã hiểu server's game từ hai phía — cả khi serve lẫn khi return.</p>
 <p>Chương 24 sẽ đưa chúng ta ra <strong>net: Net Game Nâng Cao — Volley, Overhead, Và Net Approach Strategy</strong> — cách tiếp cận net đúng thời điểm, volley dứt điểm, và xử lý overhead như một professional.</p>
-<hr>
-<em>Chương 24: Net Game Nâng Cao →</em></div>
+<hr/>
+<p><em>Chương 24: Net Game Nâng Cao →</em></p>
 </div>
-<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>
