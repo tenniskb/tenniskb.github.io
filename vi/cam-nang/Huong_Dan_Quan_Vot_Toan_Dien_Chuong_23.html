@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Hướng Dẫn Quần Vợt Toàn Diện — Chương 23 — Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</title><style>
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+
+
+  :root {
+
+    --ink: #0d0d0d;
+
+    --paper: #f5f0e8;
+
+    --accent: #c8401a;
+
+    --green: #1a6b3c;
+
+    --gold: #c4952a;
+
+    --muted: #6b6255;
+
+    --divider: #d4cbbf;
+
+  }
+
+
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+  body {
+
+    background: var(--paper);
+
+    color: var(--ink);
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+  }
+
+
+
+  /* ─── MASTHEAD ─── */
+
+  .masthead {
+
+    background: var(--ink);
+
+    color: var(--paper);
+
+    padding: 64px 40px 48px;
+
+    position: relative;
+
+    overflow: hidden;
+
+  }
+
+  .masthead::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: -60px; right: -80px;
+
+    width: 420px; height: 420px;
+
+    border: 60px solid rgba(200,64,26,0.18);
+
+    border-radius: 50%;
+
+  }
+
+  .masthead::after {
+
+    content: '';
+
+    position: absolute;
+
+    bottom: -100px; left: -40px;
+
+    width: 280px; height: 280px;
+
+    border: 40px solid rgba(196,149,42,0.15);
+
+    border-radius: 50%;
+
+  }
+
+  .tag {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+  }
+
+  h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+
+    line-height: 1.1;
+
+    max-width: 700px;
+
+    margin-bottom: 24px;
+
+  }
+
+  .subtitle {
+
+    font-size: 18px;
+
+    color: rgba(245,240,232,0.7);
+
+    max-width: 560px;
+
+    font-weight: 300;
+
+  }
+
+
+
+  /* ─── LAYOUT ─── */
+
+  .content-wrap {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 0 24px;
+
+  }
+
+
+
+  /* ─── LEAD ─── */
+
+  .lead {
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 1.6;
+
+    color: var(--ink);
+
+    padding: 52px 0 20px;
+
+    border-bottom: 2px solid var(--ink);
+
+    margin-bottom: 52px;
+
+  }
+
+
+
+  /* ─── SECTION HEADER ─── */
+
+  .section-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+    margin-bottom: 10px;
+
+  }
+
+  h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+
+  }
+
+  h3 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.3rem;
+
+    margin: 32px 0 12px;
+
+    color: var(--accent);
+
+  }
+
+  p { margin-bottom: 18px; color: #2a2520; }
+
+
+
+  /* ─── PULL QUOTE ─── */
+
+  .pullquote {
+
+    border-left: 5px solid var(--accent);
+
+    padding: 20px 28px;
+
+    margin: 40px 0;
+
+    background: rgba(200,64,26,0.05);
+
+  }
+
+  .pullquote p {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.25rem;
+
+    font-style: italic;
+
+    margin: 0;
+
+    color: var(--ink);
+
+  }
+
+
+
+  /* ─── KINETIC CHAIN DIAGRAM ─── */
+
+  .chain-diagram {
+
+    margin: 48px 0;
+
+    background: var(--ink);
+
+    border-radius: 4px;
+
+    padding: 40px 32px;
+
+    color: var(--paper);
+
+  }
+
+  .chain-diagram h3 { color: var(--gold); margin-top: 0; }
+
+  .chain-nodes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+  }
+
+  .chain-node {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    position: relative;
+
+  }
+
+  .chain-node:not(:last-child)::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 19px;
+
+    top: 44px;
+
+    width: 2px;
+
+    height: 28px;
+
+    background: var(--accent);
+
+  }
+
+  .node-icon {
+
+    width: 40px; height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    flex-shrink: 0;
+
+    color: white;
+
+  }
+
+  .node-text strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    color: var(--paper);
+
+    margin-bottom: 2px;
+
+  }
+
+  .node-text span {
+
+    font-size: 13px;
+
+    color: rgba(245,240,232,0.55);
+
+  }
+
+
+
+  /* ─── PHOTO ANALYSIS CARD ─── */
+
+  .analysis-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    margin: 40px 0;
+
+  }
+
+  @media (max-width: 640px) { .analysis-grid { grid-template-columns: 1fr; } }
+
+
+
+  .analysis-card {
+
+    border: 1.5px solid var(--divider);
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    background: white;
+
+  }
+
+  .analysis-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    object-position: top;
+
+    display: block;
+
+  }
+
+  .card-body { padding: 20px; }
+
+  .card-body .player-tag {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+    margin-bottom: 6px;
+
+    display: block;
+
+  }
+
+  .card-body h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 10px;
+
+    color: var(--ink);
+
+  }
+
+  .card-body p { font-size: 14px; margin-bottom: 0; color: #3a342e; }
+
+  .phase-badge {
+
+    display: inline-block;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    background: var(--green);
+
+    color: white;
+
+    padding: 3px 10px;
+
+    border-radius: 2px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+
+  /* ─── KNEE ANATOMY VISUAL ─── */
+
+  .anatomy-block {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin: 40px 0;
+
+  }
+
+  @media (max-width: 600px) { .anatomy-block { grid-template-columns: 1fr; } }
+
+
+
+  .anatomy-card {
+
+    padding: 28px;
+
+    border-radius: 4px;
+
+  }
+
+  .anatomy-card.safe {
+
+    background: rgba(26,107,60,0.08);
+
+    border: 1.5px solid rgba(26,107,60,0.3);
+
+  }
+
+  .anatomy-card.danger {
+
+    background: rgba(200,64,26,0.07);
+
+    border: 1.5px solid rgba(200,64,26,0.3);
+
+  }
+
+  .anatomy-card h4 {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+
+  }
+
+  .safe h4 { color: var(--green); }
+
+  .danger h4 { color: var(--accent); }
+
+  .anatomy-card ul { list-style: none; padding: 0; }
+
+  .anatomy-card li {
+
+    font-size: 14px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+  }
+
+  .anatomy-card li:last-child { border-bottom: none; }
+
+  .safe li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+  .danger li::before { content: '✗'; color: var(--accent); font-weight: 700; }
+
+
+
+  /* ─── PLAYER COMPARISON ─── */
+
+  .comparison {
+
+    margin: 48px 0;
+
+  }
+
+  .comparison-header {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 0;
+
+  }
+
+  .player-header {
+
+    padding: 20px 24px;
+
+    color: white;
+
+  }
+
+  .player-header.nj { background: #1a1a2e; }
+
+  .player-header.rf { background: #2e1a1a; }
+
+  .player-header .name {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+
+  }
+
+  .player-header .descriptor {
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    opacity: 0.7;
+
+  }
+
+
+
+  .compare-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .compare-cell {
+
+    padding: 14px 24px;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid var(--divider);
+
+  }
+
+  .compare-cell:first-child { background: rgba(26,26,46,0.04); }
+
+  .compare-cell:last-child { background: rgba(46,26,26,0.04); }
+
+  .compare-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+    grid-column: 1/-1;
+
+    padding: 10px 24px 4px;
+
+    background: var(--paper);
+
+    border-bottom: 1px solid var(--divider);
+
+    font-weight: 700;
+
+  }
+
+
+
+  /* ─── DRILL CARDS ─── */
+
+  .drills {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    margin: 36px 0;
+
+  }
+
+  .drill-card {
+
+    background: white;
+
+    border: 1.5px solid var(--divider);
+
+    border-top: 4px solid var(--gold);
+
+    padding: 24px;
+
+    border-radius: 0 0 4px 4px;
+
+  }
+
+  .drill-number {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    color: var(--gold);
+
+    opacity: 0.4;
+
+    margin-bottom: 8px;
+
+    display: block;
+
+  }
+
+  .drill-card h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.05rem;
+
+    margin-bottom: 8px;
+
+  }
+
+  .drill-card p { font-size: 13px; margin: 0; color: var(--muted); }
+
+
+
+  /* ─── SECTION DIVIDER ─── */
+
+  .section {
+
+    padding: 60px 0 40px;
+
+    border-top: 1px solid var(--divider);
+
+  }
+
+  .section:first-of-type { border-top: none; }
+
+
+
+  /* ─── WARNING BOX ─── */
+
+  .warning {
+
+    background: rgba(200,64,26,0.08);
+
+    border: 1.5px solid rgba(200,64,26,0.25);
+
+    padding: 24px 28px;
+
+    margin: 36px 0;
+
+    border-radius: 4px;
+
+  }
+
+  .warning strong { color: var(--accent); }
+
+  .warning p { margin: 0; font-size: 15px; }
+
+
+
+  /* ─── PRINCIPLE STRIP ─── */
+
+  .principle {
+
+    background: var(--green);
+
+    color: white;
+
+    padding: 36px 40px;
+
+    margin: 48px 0;
+
+  }
+
+  .principle p {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 1.4rem;
+
+    font-style: italic;
+
+    color: white;
+
+    margin: 0;
+
+    max-width: 640px;
+
+  }
+
+
+
+  /* ─── SENSATION LIST ─── */
+
+  .sensation-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    margin: 32px 0;
+
+  }
+
+  @media (max-width: 560px) { .sensation-grid { grid-template-columns: 1fr; } }
+
+  .sensation-box { padding: 24px; border-radius: 4px; }
+
+  .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+
+  .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+
+  .sensation-box h4 {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+
+  }
+
+  .feel h4 { color: var(--gold); }
+
+  .avoid h4 { color: var(--accent); }
+
+  .sensation-box li {
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    padding-left: 20px;
+
+    position: relative;
+
+    list-style: none;
+
+  }
+
+  .feel li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 8px; top: 4px; }
+
+  .avoid li::before { content: '◆'; position: absolute; left: 0; color: var(--accent); font-size: 8px; top: 4px; }
+
+
+
+  /* ─── FOOTER ─── */
+
+  footer {
+
+    background: var(--ink);
+
+    color: rgba(245,240,232,0.5);
+
+    padding: 40px;
+
+    margin-top: 80px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    font-family: 'Space Mono', monospace;
+
+    letter-spacing: 1px;
+
+  }
+
+
+
+  /* ─── DIAGRAM SVG AREA ─── */
+
+  .svg-diagram {
+
+    margin: 40px 0;
+
+    text-align: center;
+
+  }
+
+  svg text { font-family: 'DM Sans', sans-serif; }
+
+
+
+  @media (max-width: 600px) {
+
+    .masthead { padding: 44px 24px 36px; }
+
+    .content-wrap { padding: 0 16px; }
+
+    .player-header .name { font-size: 1.1rem; }
+
+    .compare-cell { font-size: 13px; padding: 12px 16px; }
+
+    .compare-label { padding: 10px 16px 4px; }
+
+    .player-header { padding: 16px; }
+
+  }
+
+
+/* Additional styles for the handbook */
+.styled-list { margin: 16px 0; padding-left: 28px; }
+.styled-list li { margin-bottom: 8px; line-height: 1.7; }
+.subsection { margin-bottom: 40px; }
+.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
+.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
+.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
+.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
+.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
+.appendix-section { margin-bottom: 48px; }
+.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
+.appendix-section ul { list-style: none; padding: 0; }
+.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
+.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
+.appendix-section li:last-child { border-bottom: none; }
+.appendix-section ol { margin: 16px 0; padding-left: 28px; }
+.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
+.chapter > p > strong { display: block; margin-bottom: 8px; }
+
+/* FIXED FOOTER STYLES - Better readability */
+footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px;
+    margin-top: 80px;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    border-top: 1px solid rgba(245,240,232,0.2);
+}
+footer strong { color: var(--gold); }
+footer a { color: var(--gold); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer .credit-label { color: var(--gold); }
+
+</style></head><body>
+
+<div class="masthead">
+    <span class="tag">Effortless Power — Sức Mạnh Không Tốn Sức</span>
+    <h1>Hướng Dẫn Quần Vợt Toàn Diện — Chương 23</h1>
+    <p class="subtitle">Cẩm nang kỹ thuật, sinh cơ học, và chiến thuật</p>
+</div>
+
+<div class="content-wrap">
+<div class="lead"></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">Chương 23: Reading, Positioning, Và Attacking The Serve</h2><hr>
+> <em>"Người ta nói serve là cú đánh quan trọng nhất trong tennis. Tôi không đồng ý. Return of serve quan trọng hơn — vì nếu bạn không thể return, bạn không thể win."</em>
+<p>> — Andre Agassi</p>
+<hr>
+<p>US Open 2001. Andre Agassi vs. Pete Sampras. Final.</p>
+<p>Sampras có serve được coi là tốt nhất trong lịch sử tennis thời điểm đó. Anh ta đã win 7 Wimbledon titles một phần nhờ serve.</p>
+<p>Agassi biết điều này. Và anh ta đã chuẩn bị.</p>
+<p>Trong 4 sets, Agassi đã break Sampras 4 lần. Không phải vì Sampras serve kém — Sampras serve tốt như thường lệ. Mà vì Agassi đã đọc được serve, positioning hoàn hảo, và biến return thành tấn công.</p>
+<p>Agassi win 6-1, 6-1, 6-4.</p>
+<p>Đây là điều chapter này về: Return of serve không phải là phòng thủ. Đó là tấn công từ ngay điểm đầu tiên.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.1 Tư Duy Return — Từ Survive Đến Attack</h2><h3>The Passenger Mentality vs. The Driver Mentality</h3>
+<strong>Passenger mentality (hầu hết amateur players):</strong>
+<ul class="styled-list">
+<li>"Tôi chỉ cần lấy bóng vào sân."</li>
+<li>"Serve của anh ta quá mạnh, tôi chỉ cần block."</li>
+<li>"Tôi phòng thủ, chờ cơ hội."</li>
+</ul>
+<strong>Driver mentality (elite returners):</strong>
+<ul class="styled-list">
+<li>"Tôi sẽ attack ngay từ return."</li>
+<li>"Tôi sẽ neutralize serve advantage của anh ta."</li>
+<li>"Tôi sẽ tạo áp lực từ đầu point."</li>
+</ul>
+<h3>Thay Đổi Mục Tiêu</h3>
+<strong>Old objective:</strong> Return vào sân.
+<strong>New objective:</strong> Return deep crosscourt với pace → neutralize server's Serve+1 position.
+<strong>Even better objective:</strong> Return attack ngay → server phải defend.
+<p>Khi bạn thay đổi objective, footwork, positioning, và swing đều thay đổi theo.</p>
+<h3>Agassi Principle</h3>
+<p>Agassi return được coi là best in history. Bí quyết của anh ta:</p>
+<p>1. <strong>Stand close to baseline</strong> (không phải far behind)</p>
+<p>2. <strong>Take ball early, on the rise</strong> (không đợi ball đạt peak và fall)</p>
+<p>3. <strong>Use server's pace against them</strong> (block/redirect, không swing independently)</p>
+4. <strong>Attack second serve aggressively</strong>
+
+<p>Tất cả bốn điểm này đều có thể học được. Đây là những gì chapter này sẽ dạy bạn.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.2 Positioning — Đứng Đâu Là Đúng</h2><h3>The Return Position Equation</h3>
+<p>Không có một vị trí đúng tuyệt đối. Position phụ thuộc vào:</p>
+<p>1. Server's serve speed</p>
+<p>2. Server's primary serve patterns (T, wide, body)</p>
+<p>3. Surface speed</p>
+<p>4. Your own return strengths</p>
+<h3>Position Variables</h3>
+<strong>Depth (cách baseline bao nhiêu):</strong>
+<em>Standing on baseline:</em>
+<ul class="styled-list">
+<li>Advantages: Take ball early, reduce server's time after serve, easier to attack</li>
+<li>Disadvantages: Less time to react, harder on fast serves, must redirect pace</li>
+</ul>
+<em>Standing 1-2m behind baseline:</em>
+<ul class="styled-list">
+<li>Advantages: More reaction time, can take full swing, handles wide serves better</li>
+<li>Disadvantages: Server has more time for Serve+1, harder to attack return</li>
+</ul>
+<em>Standing 3-4m behind baseline:</em>
+<ul class="styled-list">
+<li>Usually defensive only — against very big serves</li>
+<li>Gives server all the time they need</li>
+</ul>
+<strong>General recommendation:</strong>
+<p>Start on or 1m behind baseline. Move back only if serve is genuinely too fast to handle from baseline.</p>
+<strong>Width (left-right positioning):</strong>
+<p>Deuce court:</p>
+<ul class="styled-list">
+<li>Default: 1-2 feet to the right of center mark</li>
+<li>If server hits T frequently: Move slightly right (protect T)</li>
+<li>If server hits wide frequently: Move slightly left (protect wide)</li>
+</ul>
+<p>Ad court:</p>
+<ul class="styled-list">
+<li>Default: 1-2 feet to the left of center mark</li>
+<li>Adjust similarly based on server's patterns</li>
+</ul>
+<h3>The Dynamic Return Position</h3>
+<p>Elite returners don't stand static waiting. They:</p>
+<p>1. <strong>Read toss</strong> during server's motion → begin leaning toward probable direction</p>
+<p>2. <strong>Split step</strong> as server contacts ball → load in probable direction</p>
+<p>3. <strong>React and move</strong> → first step based on pre-loading</p>
+<p>This dynamic process effectively gives 0.05-0.1 seconds head start over purely reactive returner.</p>
+<h3>Reading The Serve Toss</h3>
+<p>Most servers' toss reveals serve direction (as discussed in Chapter 22 — but from returner's perspective):</p>
+<strong>Typical tells to look for:</strong>
+<ul class="styled-list">
+<li>Toss far to the right → likely slice serve wide on deuce</li>
+<li>Toss slightly left, behind head → likely kick serve</li>
+<li>Toss straight up and forward → likely flat serve</li>
+</ul>
+<strong>Warning:</strong> Good servers work to disguise toss. But even good servers have slight tendencies.
+<strong>Practice:</strong> During warm-up, call the serve BEFORE it's hit — "T!" "Wide!" "Body!" — before ball leaves server's racket. Check accuracy. By end of warm-up, you should be 40-50%+ accurate on identifying patterns.
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.3 Reading The Serve — Anticipation Over Reaction</h2><h3>The Scientific Reality</h3>
+<p>Pure reaction time (time from seeing ball leave racket to beginning movement) = approximately 200-250 milliseconds.</p>
+<p>Time for 120mph serve to cross baseline = approximately 440 milliseconds.</p>
+<p>This leaves approximately 190-240 milliseconds for execution — barely enough.</p>
+<strong>If returner is purely reactive:</strong> Barely enough time. Any hesitation = late. Any misread = point lost.
+<strong>If returner uses anticipation (reads BEFORE ball is hit):</strong> Effectively gains 150-200ms → comfortable execution window.
+<p>Anticipation is not guessing. It's pattern recognition based on:</p>
+<ul class="styled-list">
+<li>Server's body language before serve</li>
+<li>Toss placement</li>
+<li>Previous patterns in the match</li>
+<li>Score and situation awareness (what serve makes sense here)</li>
+</ul>
+<h3>What To Watch — The Reading Checklist</h3>
+<strong>Watch server's shoulder alignment:</strong>
+<ul class="styled-list">
+<li>Shoulders more open (facing more toward court) → often indicates T serve</li>
+<li>Shoulders more sideways (more closed stance) → often slice or kick</li>
+</ul>
+<strong>Watch the ball toss:</strong>
+<ul class="styled-list">
+<li>Direction (left/right/forward/back)</li>
+<li>Height (lower toss often means faster, flatter serve)</li>
+</ul>
+<strong>Watch contact point:</strong>
+<ul class="styled-list">
+<li>Contact further in front → flat serve</li>
+<li>Contact slightly behind head → kick serve</li>
+<li>Contact to the side → slice serve</li>
+</ul>
+<strong>Remember server's patterns:</strong>
+<ul class="styled-list">
+<li>What have they served in similar score situations?</li>
+<li>What's their go-to on big points?</li>
+<li>What serve have they used to win the last 2-3 games?</li>
+</ul>
+<h3>Building Anticipation — Drills</h3>
+<strong>Drill 1 — Service recording analysis:</strong>
+<p>Record a server during match or practice. Watch on slow motion. At moment of toss release, pause and predict serve direction. Resume and check. Repeat 20-30 serves. Pattern recognition improves quickly.</p>
+<strong>Drill 2 — "Call it" drill:</strong>
+<p>During practice, returner calls "T!", "Wide!", or "Body!" BEFORE server hits. Server varies serves. Track accuracy. Target: 50%+ after 20 minutes.</p>
+<strong>Drill 3 — Delayed reaction drill:</strong>
+<p>Server delays any obvious motion cues. Returner practices committing to movement AFTER toss release but BEFORE contact. Forces anticipation window development.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.4 The Split Step On Return — Timing Nâng Cao</h2><h3>Standard vs. Advanced Split Step</h3>
+<strong>Standard split step:</strong>
+<p>Jump up as server tosses → land as server contacts → react.</p>
+<strong>Advanced split step (2026 standard):</strong>
+<p>Jump up → read direction during flight → land with 60% weight on foot in probable direction → first step already loaded.</p>
+<p>This 60% weight pre-load saves critical milliseconds. At 120mph serve, those milliseconds are the difference between defensive block and attacking return.</p>
+<h3>Timing Precision</h3>
+<strong>Too early (common mistake):</strong>
+<p>Land before server contacts → weight is settled → re-activating momentum takes time.</p>
+<strong>Too late (another common mistake):</strong>
+<p>Still in air or just landing when ball arrives → no reactive capacity.</p>
+<strong>Optimal:</strong>
+<p>Land simultaneously with server's contact OR slightly after (0.05-0.1 sec). This gives brief moment to read direction, then explosive first step.</p>
+<strong>Practice drill:</strong>
+<p>Partner stands at service line with hands out. As they drop a ball, you split step. Ball hits ground simultaneously with your landing. Drill timing until consistent.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.5 Return Mechanics — Technical Nâng Cao</h2><h3>The Compact Swing Vs. Full Swing Decision</h3>
+<strong>Full swing return (when available):</strong>
+<ul class="styled-list">
+<li>Server's pace is moderate or slow</li>
+<li>Return position gives enough time</li>
+<li>Second serve situation</li>
+<li>Opportunity to attack with full forehand/backhand</li>
+</ul>
+<strong>Compact (block) return:</strong>
+<ul class="styled-list">
+<li>Hard, fast first serves</li>
+<li>Body serves</li>
+<li>When late to ball</li>
+<li>Priority: quality over power</li>
+</ul>
+<strong>Rule:</strong> Default to compact on any serve that doesn't give you time for full swing. Use full swing only when GENUINELY have time.
+<p>Most amateurs make opposite mistake: try full swing on hard serves → late contact → errors.</p>
+<h3>The Block Return — Mechanics</h3>
+<p>Block return = use server's pace, redirect.</p>
+<strong>Key points:</strong>
+<ul class="styled-list">
+<li>Short backswing (racket barely goes behind shoulder)</li>
+<li>Meet ball in front of body</li>
+<li>Firm wrist at contact (not rigid arm — firm wrist)</li>
+<li>Steer with body rotation, not arm swing</li>
+<li>Follow-through abbreviated but present (don't stop at contact)</li>
+</ul>
+<strong>Think:</strong> You are a wall that angles the ball back with direction. Not a bat trying to add additional force.
+<h3>The Drive Return — Full Swing Mechanics</h3>
+<p>On weaker serves or second serves when you have time:</p>
+<ul class="styled-list">
+<li>Full unit turn as serve trajectory recognized</li>
+<li>Toss (toss-equivalent: unit turn) completed early</li>
+<li>Normal groundstroke mechanics apply</li>
+<li>Contact in front of body</li>
+<li>Full follow-through</li>
+<li>Attack crosscourt or down-the-line based on tactical decision</li>
+</ul>
+<strong>Key difference from rally groundstroke:</strong>
+<p>Time is compressed. Unit turn must be faster and earlier. No luxury of watching ball bounce and settling.</p>
+<h3>Return Contact Point</h3>
+<p>Ideal: Ball contacted in front of body, between knee and shoulder height.</p>
+<strong>If ball bouncing too high (kick serve):</strong>
+<ul class="styled-list">
+<li>Back up 1-2 steps from normal position</li>
+<li>Allow ball to drop to comfortable contact height</li>
+<li>OR step in and take on the rise (advanced technique)</li>
+</ul>
+<strong>Taking on the rise:</strong>
+<p>Contact ball as it's still bouncing upward. Requires:</p>
+<ul class="styled-list">
+<li>Stepping into ball (moving forward, not back)</li>
+<li>Earlier preparation (unit turn starts earlier)</li>
+<li>Higher wrist position at contact</li>
+<li>Confidence to commit</li>
+</ul>
+<p>Agassi's signature: took nearly every ball on the rise. This gave server almost no time for recovery.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.6 Return Targets — Where To Hit</h2><h3>The Default: Deep Crosscourt</h3>
+<p>75-80% of returns should be deep crosscourt. Why:</p>
+<p>1. <strong>Lowest net</strong> (net is lowest in center)</p>
+<p>2. <strong>Longest court distance</strong> (diagonal is longest)</p>
+<p>3. <strong>Recovers server's advantage</strong> (ball going away from Serve+1 position)</p>
+<p>4. <strong>Returner recovers to center</strong> (crosscourt return and recover is natural movement)</p>
+<h3>Return Down The Line</h3>
+<p>Use when:</p>
+<ul class="styled-list">
+<li>Server has moved to Serve+1 position on crosscourt side (anticipating crosscourt return)</li>
+<li>Ball quality allows it (not on hard, jamming first serve)</li>
+<li>You're in aggressive return mode (specifically targeting this)</li>
+</ul>
+<p>Risk: Higher net on sides, shorter court distance, less margin.</p>
+<strong>Tip:</strong> Set up down-the-line return by hitting 2-3 crosscourt returns first. Server begins anticipating crosscourt → then go down the line.
+<h3>Return At Body</h3>
+<p>When:</p>
+<ul class="styled-list">
+<li>Server rushed forward for Serve+1 and is near net</li>
+<li>Can aim directly at their hip/shoulder</li>
+<li>Producing difficult half-volley</li>
+</ul>
+<p>Very effective in doubles, increasingly common in singles.</p>
+<h3>Return Lob</h3>
+<p>The nuclear option. Use when:</p>
+<ul class="styled-list">
+<li>Server rushes net very aggressively</li>
+<li>You're completely jammed and have no other option</li>
+<li>Deception (have mostly returned low, now lob)</li>
+</ul>
+<p>Risk is high but can win points outright or change match dynamic.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.7 Returning The Second Serve — Attacking Philosophy</h2><h3>Second Serve Return Is Your Weapon</h3>
+<p>When server hits second serve, power dynamic shifts.</p>
+<p>Server:</p>
+<ul class="styled-list">
+<li>Must get it in (double fault pressure)</li>
+<li>Usually slower, shorter serve</li>
+<li>More vulnerable position after second serve</li>
+</ul>
+<p>Returner:</p>
+<ul class="styled-list">
+<li>Should be more aggressive</li>
+<li>Has more time</li>
+<li>Has opportunity to dictate from return</li>
+</ul>
+<strong>The principle:</strong> Second serve return should be attempted with 20-30% more aggression than first serve return.
+<h3>How To Attack Second Serve</h3>
+<strong>Step inside baseline:</strong>
+<p>Move 1-2 steps closer than your first serve position. This:</p>
+<ul class="styled-list">
+<li>Takes ball earlier (before kick can fully develop)</li>
+<li>Signals aggressive intent</li>
+<li>Gives server less time to reach Serve+1 position</li>
+</ul>
+<strong>Take full swing:</strong>
+<p>With slower serve, you have time for full unit turn and full swing. Use it.</p>
+<strong>Attack crosscourt with depth and pace:</strong>
+<p>Standard attack: deep, heavy crosscourt return → server has difficult first ball.</p>
+<strong>Attack short angle crosscourt:</strong>
+<p>More advanced: return to service box area, sharp angle → pulls server forward, opens court.</p>
+<strong>Return and rush net:</strong>
+<p>Against weak second serves: return low and short crosscourt → follow to net. Server forced to hit up → you have easy volley.</p>
+<h3>Reading Second Serve Position For Attack</h3>
+<p>Where does server serve from for second serve?</p>
+<p>Most players:</p>
+<ul class="styled-list">
+<li>Same position as first serve</li>
+<li>Slightly farther from center (wider) on deuce court</li>
+</ul>
+<p>Does server move after second serve?</p>
+<ul class="styled-list">
+<li>Do they rush forward for Serve+1?</li>
+<li>Do they stay back?</li>
+<li>Do they move to ad side after serving deuce?</li>
+</ul>
+<p>These answers tell you what to do on your return. Rush forward into net? Return to their feet. Stay back? Drive return deep crosscourt, build rally.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.8 Returning In Different Situations</h2><h3>Returning Against Big Servers</h3>
+<strong>Challenge:</strong> Not enough time for full swing. Power of serve is overwhelming.
+<strong>Solutions:</strong>
+<em>Compact block:</em> Mini swing, use pace, redirect deep. Consistency goal.
+<em>Stand further back:</em> Trade time for reaction room. Accept defensive position — make server earn Serve+1 winner.
+<em>Serve reading:</em> Even big servers have patterns. Learn them. Anticipation offsets raw pace.
+<em>Chip and charge:</em> On first serve, chip return short and rush net. Server must execute good passing shot under pressure.
+<em>Body and T focus:</em> Big servers are often less effective to body and T than wide. Take wide serves off your prediction — position for T and body.
+<h3>Returning Against Spin Servers</h3>
+<strong>Challenge:</strong> Kick serves bounce high and move. Slice serves stay low and move sideways.
+<strong>Against kick servers:</strong>
+<em>Move back:</em> Let ball drop to comfortable height, then attack.
+<em>Take on the rise:</em> Step in, take before peak. Requires confidence.
+<em>Attack down the line:</em> Kick to backhand kicks away from your backhand — drive down line toward open court.
+<strong>Against slice servers:</strong>
+<em>Move forward:</em> Slice stays low — get to ball before it drops too low.
+<em>Bend knees:</em> Get down to low ball.
+<em>Attack up the line:</em> Slice wide pulls you out — return up the line (where server came from).
+<h3>Returning Under Match Pressure</h3>
+<strong>At break point receiving:</strong>
+<p>Serve returner. Server under pressure too. This is YOUR opportunity.</p>
+<em>Common mistake:</em> Conservative, safe return → server has comfortable Serve+1 → loses break point advantage.
+<em>Better approach:</em> Same aggressive second serve return. This is when server is most likely to miss second serve — maximize pressure.
+<strong>When being broken repeatedly:</strong>
+<p>Assess: Is it serve quality or return quality failing?</p>
+<em>If serve too hard:</em> Move back, compact return, consistency goal.
+<em>If pattern being exploited:</em> Change return position.
+<em>If timing off:</em> Watch serve toss more carefully, earlier split step.
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.9 Return Patterns And Sequences</h2><h3>Building A Return Game Plan</h3>
+<p>Before match, decide:</p>
+<p>1. <strong>Default first serve return:</strong> Compact or drive? Crosscourt or test early?</p>
+<p>2. <strong>Default second serve return:</strong> Attack crosscourt? Attack body? Test server's Serve+1?</p>
+3. <strong>What positions will I test immediately?</strong>
+4. <strong>Against this server's strengths, what neutralizes them?</strong>
+
+<h3>Pattern Play From Return</h3>
+<p>Return isn't just one shot — it starts a pattern.</p>
+<strong>Pattern 1 — Crosscourt return + move to center:</strong>
+<p>Block return crosscourt → immediately recover to center → ready for Serve+1 from good position.</p>
+<strong>Pattern 2 — Deep return + rush net:</strong>
+<p>Drive deep return → follow to net → force server to produce excellent passing shot.</p>
+<strong>Pattern 3 — Return body + attack:</strong>
+<p>Heavy return at server's body → server produces weak reply → attack open court.</p>
+<strong>Pattern 4 — Return wide + recover:</strong>
+<p>Return to wide corner of server's court → server must run wide → their Serve+1 is weak → you attack.</p>
+<h3>Return Sequences Across Game</h3>
+<strong>Game 1:</strong> Test crosscourt returns. See quality. See Serve+1 patterns.
+<strong>Game 2:</strong> Test returns to body. Does server have difficulty?
+<strong>Game 3:</strong> Apply what you learned. If crosscourt returns win most points → establish as default. If body return produces errors → use more.
+<strong>Game 4+:</strong> Execute established patterns, mix in surprise to prevent server adjustment.
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.10 Tracking Your Return Stats</h2><h3>Return Statistics To Monitor</h3>
+| Stat | Target |
+|---|---|
+| Return in play (first serve) | 60-65%+ |
+| Return in play (second serve) | 75-80%+ |
+| Points won on return (first serve) | 30-35%+ |
+| Points won on return (second serve) | 50-55%+ |
+| Break percentage | 25-35% of break opportunities |
+
+<h3>What Stats Reveal</h3>
+<strong>Return in play (first serve) below 50%:</strong>
+<p>Too aggressive on first serve return OR positioning too close → compact return needed OR back up.</p>
+<strong>Points won on return (second serve) below 45%:</strong>
+<p>Second serve return too passive → attack second serve more aggressively.</p>
+<strong>Return in play (second serve) below 70%:</strong>
+<p>Going for too much on second serve return OR technical issue.</p>
+<strong>Break % below 15%:</strong>
+<p>Either server is genuinely excellent OR you're not creating enough pressure → return more aggressively overall.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.11 Eight-Week Return Improvement Program</h2><h3>Week 1-2: Foundation</h3>
+<strong>Session 1 — Read the serve:</strong>
+<p>Partner serves variety. You call direction BEFORE or at contact. Track accuracy. Measure baseline.</p>
+<strong>Session 2 — Split step timing:</strong>
+<p>Use drill from Section 23.4. Partner holds ball, drops it. Your landing synchronizes with ball landing. Repeat 30 times until consistent.</p>
+<strong>Session 3 — Compact return drilling:</strong>
+<p>Partner serves at 50-60% pace. You practice compact block returns — all crosscourt, all deep. 50 returns. Count errors. Target under 15% error rate.</p>
+<hr>
+<h3>Week 3-4: Second Serve Attack</h3>
+<strong>Session 1:</strong>
+<p>Partner serves second-serve-pace balls (slower, with spin). You step INSIDE baseline, take ball on rise, attack crosscourt. 40 balls. Count attacks (full swing, deep, pace) vs. blocks.</p>
+<strong>Session 2:</strong>
+<p>Return and rush net drill: Second serve speed → return low crosscourt → immediately move forward → partner tries to pass → you volley. 20 repetitions.</p>
+<strong>Session 3:</strong>
+<p>Live points with second serve only. Returner attacks every ball. Server tries to hold with only second serve. Competitive.</p>
+<hr>
+<h3>Week 5-6: Patterns And Sequences</h3>
+<strong>Session 1:</strong>
+<p>Pattern practice: Return crosscourt → play out point. Track: returner's win rate when forcing crosscourt exchange vs. random return.</p>
+<strong>Session 2:</strong>
+<p>Return to body drill: Server alternates placement. Returner specifically tries to return at server's body. Track accuracy.</p>
+<strong>Session 3:</strong>
+<p>Full return game simulation: Server serves both first and second serves. Returner executes return game plan (pre-decided strategy). Play full games.</p>
+<hr>
+<h3>Week 7-8: Pressure And Integration</h3>
+<strong>Session 1:</strong>
+<p>Big server simulation: Have partner serve as hard as possible. Practice compact block returns. Track: How many in? Quality?</p>
+<strong>Session 2:</strong>
+<p>Full match play with return focus. After match, review stats (quick phone notes). Compare to Week 1-2 baseline.</p>
+<strong>Session 3:</strong>
+<p>Pressure scenarios: 30-40 receiving, ad-out receiving, set point receiving. Practice these specific scenarios only. Build confidence under pressure.</p>
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">23.12 Năm Lỗi Return Phổ Biến</h2><h3>Lỗi 1: Standing Too Far Behind Baseline On All Serves</h3>
+<strong>Mô tả:</strong> Standing 3-4m behind baseline even against moderate serves. Gives server all the time in the world.
+<strong>Fix:</strong> Baseline or 1m behind as starting position. Move back only for genuinely overwhelming pace.
+<hr>
+<h3>Lỗi 2: Full Swing On Every Return</h3>
+<strong>Mô tả:</strong> Trying full groundstroke swing on hard first serves → constantly late → errors.
+<strong>Fix:</strong> Compact block on hard serves. Distinguish when to drive (time available) vs. block (time limited).
+<hr>
+<h3>Lỗi 3: Passive Second Serve Return</h3>
+<strong>Mô tả:</strong> Same conservative return on second serve as first serve. Server has comfortable Serve+1 every time.
+<strong>Fix:</strong> Step inside baseline on second serve. Attack. The second serve return is your biggest scoring opportunity — use it.
+<hr>
+<h3>Lỗi 4: No Anticipation — Pure Reaction</h3>
+<strong>Mô tả:</strong> Watching server's racket make contact then starting reaction. Always behind.
+<strong>Fix:</strong> Watch toss, body, shoulder alignment BEFORE contact. Build predictive model. Anticipate, don't just react.
+<hr>
+<h3>Lỗi 5: Same Return Position For All Servers</h3>
+<strong>Mô tả:</strong> Standing in exactly same spot regardless of server's patterns or pace. Not adapting.
+<strong>Fix:</strong> Read server during warm-up. Identify primary patterns. Adjust position accordingly. When server changes patterns → adjust position. Dynamic, not static.
+<hr></div>
+<div class="chapter" id="chapter-23"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 23</p><h2 style="margin-bottom: 40px;">Tóm Tắt Chương 23</h2><ul class="styled-list">
+<li><strong>Tư duy return:</strong> Từ "survive" sang "attack" — driver, không phải passenger</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Positioning:</strong> On or 1m behind baseline as default. Dynamic position based on server's patterns. Width adjustment based on T vs. wide tendency.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Anticipation > Reaction:</strong> Read toss, body, shoulders BEFORE contact. Pre-load split step in probable direction.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Split step timing:</strong> Land simultaneously with server's contact. 60% weight pre-load in anticipated direction.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Mechanics:</strong> Compact block (hard serves) vs. drive return (second serves/weak serves). Take ball in front of body always.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Second serve = attack opportunity:</strong> Step inside baseline, full swing, deep crosscourt. This is your biggest scoring chance in any game.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Return targets:</strong> 75-80% deep crosscourt (default). Down the line (surprise). Body (against net rushers). Lob (emergency/surprise).</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Patterns from return:</strong> Return → pattern play. Not just one shot — start of constructed point.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Stats tracking:</strong> Return in play %, points won on return. Measure to improve.</li>
+</ul>
+<ul class="styled-list">
+<li><strong>Key insight:</strong> Agassi win rate on return wasn't luck — it was systematic: stand close, take early, use pace, attack second serve. All learnable.</li>
+</ul>
+<hr></div>
+<div class="chapter" id="chapter-15"><p class="section-label" style="margin-bottom: 20px;">CHƯƠNG 15</p><h2 style="margin-bottom: 40px;">Nhìn Về Phía Trước</h2><p>Chương 23 đã biến return thành vũ khí. Chương 24 sẽ đi vào một trong những kỹ năng phân biệt player giỏi và player xuất sắc: <strong>Net Game Nâng Cao — Transition, Approach Shots, Và Finishing At The Net</strong> — không phải chỉ volley technique mà là cả thought process của khi nào đến lưới, đến như thế nào, và kết thúc point ra sao.</p>
+<hr>
+<em>Chương 24: Net Game Nâng Cao — Transition, Approach, Và Finishing →</em></div>
+</div>
+<footer><p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p></footer></body></html>
