@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Knowledge Hub — TFL Manuals</title><style>
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Cẩm Nang Tennis - Thư Viện Toàn Diện</title>
+<style>
 
 
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -895,293 +896,1078 @@
   }
 
 
-/* Additional styles for the handbook */
-.styled-list { margin: 16px 0; padding-left: 28px; }
-.styled-list li { margin-bottom: 8px; line-height: 1.7; }
-.subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin: 24px 0 12px; color: var(--accent); }
-.lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
-.appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
-.appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
-.appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 40px 0 20px; color: var(--accent); }
-.appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--accent); margin-bottom: 16px; }
-.appendix-section ul { list-style: none; padding: 0; }
-.appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
-.appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
-.appendix-section li:last-child { border-bottom: none; }
-.appendix-section ol { margin: 16px 0; padding-left: 28px; }
-.appendix-section ol li { margin-bottom: 8px; line-height: 1.7; }
-.chapter > p > strong { display: block; margin-bottom: 8px; }
-
-/* FIXED FOOTER STYLES - Better readability */
-footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 24px;
-    margin-top: 80px;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-footer .credit-label { color: var(--gold); }
-
-/* Book card styles */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    margin: 40px 0;
-}
-
-.book-card {
-    background: white;
-    border: 1.5px solid var(--divider);
-    border-radius: 4px;
-    padding: 28px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.book-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(13,13,13,0.1);
-}
-
-.book-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    color: var(--ink);
-}
-
-.book-card .book-meta {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 16px;
-    display: block;
-}
-
-.book-card p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #3a342e;
-    margin-bottom: 12px;
-}
-
-.book-card .btn {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 20px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background 0.2s;
-}
-
-.book-card .btn:hover {
-    background: var(--green);
-    text-decoration: none;
-    color: white;
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    text-align: center;
-    margin: 60px 0 24px;
-    color: var(--ink);
-}
-
-.section-subtitle {
-    text-align: center;
-    color: var(--muted);
-    font-size: 16px;
-    margin-bottom: 48px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Section divider */
-.section-divider {
-    border-top: 3px double var(--divider);
-    margin: 80px 0 40px;
-}
-
-</style></head><body>
-
+.book-card:hover { border-color: var(--accent); box-shadow: 0 4px 12px rgba(200,64,26,0.1); }
+.book-grid { display: grid; gap: 16px; }
+@media (min-width: 768px) { .book-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) { .book-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.section-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--divider); }
+.section-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--ink); margin: 0; }
+.section-header .count { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.language-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; padding: 4px 12px; border-radius: 2px; margin-bottom: 16px; }
+.language-badge.english { background: rgba(26,107,60,0.1); color: var(--green); border: 1px solid var(--green); }
+.language-badge.vietnamese { background: rgba(200,64,26,0.1); color: var(--accent); border: 1px solid var(--accent); }
+</style></head>
+<body>
 <div class="masthead">
-    <span class="tag">Tennis Future Lab · Cam Nang</span>
-    <h1>Cẩm Nang Quần Vợt</h1>
-    <p class="subtitle">Bộ sưu tập các hướng dẫn kỹ thuật, sinh học học, và chiến thuật quần vợt hàng đầu</p>
+    <span class="tag">Tennis Future Lab</span>
+    <h1>Cẩm Nang Tennis Thống Nhất</h1>
+    <p class="subtitle">Thư viện toàn diện hơn 170 cuốn sách/cẩm nang tennis tiếng Việt và tiếng Anh</p>
 </div>
-
 <div class="content-wrap">
+    <p class="lead">Tất cả tài liệu được chuyển đổi theo thiết kế thống nhất: masthead, lead, mục lục tự động, pullquote, warning box, data table, drill card, styled list, footer Creative Commons BY-NC-SA 4.0</p>
+    
+    <div class="section-header">
+        <span class="language-badge english">English Books</span>
+        <h2>Sách Tiếng Anh (83 cuốn)</h2>
+    </div>
+    <div class="book-grid">
+        
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Complete Reference Manual for Elite Players and Coaches — The definitive manual integrating Martial (body) and Agentic (mind) frameworks. Covers kinetic chain, core torque, movement, all strokes, tactics, conditioning, mental game, and future technology. 13 chapters + appendices.</p>
+        <a href="The_Art_of_Modern_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
 
-<div class="lead">
-    <p>Chào mừng đến với thư viện kiến thức quần vợt của Tennis Future Lab. Tại đây bạn sẽ tìm thấy các cẩm nang toàn diện về sinh học học, kỹ thuật, chiến thuật, thần kinh học và huấn luyện hiệu suất — tất cả được thiết kế theo tiêu chuẩn 2026 cho vận động viên và huấn luyện viên hàng đầu.</p>
-    <p>Mỗi cuốn sách dưới đây đại diện cho một lĩnh vực chuyên sâu, từ chuỗi động học nền tảng đến điều tiết thần kinh, từ kỹ thuật volley hiện đại đến nghệ thuật quần vợt. Tất cả đều được trình bày với giao diện thống nhất, dễ đọc và tối ưu cho mọi thiết bị.</p>
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Full.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis (Full Version)</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Complete reference manual — full version with all chapters integrated.</p>
+        <a href="The_Art_of_Modern_Tennis_Full.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Complete_12_Chapters.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Complete 12 Chapters</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Combined 12 chapters from the Claude co-authored version.</p>
+        <a href="The_Art_of_Modern_Tennis_Complete_12_Chapters.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_01.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 01</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 1: The Kinetic Chain and Biomechanical Foundations</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_01.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_02.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 02</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 2: Footwork, Agility and Court Positioning</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_02.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_03.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 03</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 3: Mastering Stances for Power and Control</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_03.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_04.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 04</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 4: Groundstroke Mechanics and Tactics</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_04.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_05.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 05</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 5: The Ultimate Weapon - The Serve</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_05.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_06.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 06</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 6: Taking the Net - Volleys and Smashes</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_06.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_07.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 07</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 7: The Physiology of Tennis and Energy Systems</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_07.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_08.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 08</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 8: Building the Athlete - Strength and Conditioning</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_08.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_09.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 09</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 9: The Science of Recovery and Regeneration</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_09.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_10.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 10</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 10: The Inner Game and Mental Mastery</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_10.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_11.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 11</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 11: Competitive Psychology and Tournament Preparation</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_11.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_12.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 12</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 12: Strategic Execution and Doubles Play</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_12.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_13.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 13</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 13: Tennis 2026 & Beyond - Technology and Future</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_13.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_14.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 14</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 14: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_14.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_15.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 15</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 15: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_15.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_16.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 16</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 16: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_16.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_17.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 17</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 17: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_17.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_18.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 18</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 18: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_18.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_19.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 19</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 19: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_19.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_20.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 20</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 20: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_20.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_21.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 21</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 21: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_21.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_22.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 22</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 22: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_22.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_23.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 23</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 23: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_23.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Art_of_Modern_Tennis_Chapter_24.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Art of Modern Tennis - Chapter 24</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 24: Deep dive content</p>
+        <a href="The_Art_of_Modern_Tennis_Chapter_24.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Neuro-Motor_Manual_of_Tennis_Mastery.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Neuro-Motor Manual of Tennis Mastery</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">New Era of Elite Tennis Technique — Neuro-Motor Sciences, Performance Biomechanics, Cognitive Athletics. Comprehensive manual on neural control of tennis movement.</p>
+        <a href="The_Neuro-Motor_Manual_of_Tennis_Mastery.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Neuro-Motor Manual of Tennis Mastery Professional</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Professional edition with expanded content.</p>
+        <a href="The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Modern_Tennis_Volley_Handbook_2026.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Modern Tennis Volley Handbook 2026</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Technical Blueprint for the Elite Net Player — Still-Wall concept, universal grip, ready position, contact mechanics, V-shape finish, approach tactics, sneak attack, transition zone hunting.</p>
+        <a href="Modern_Tennis_Volley_Handbook_2026.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Training_Manual.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Training Manual</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Biomechanical and Tactical Blueprint for Elite Performance — Kinetic chain, core rotation, movement, all strokes, tactics, conditioning, mental game.</p>
+        <a href="Tennis_Training_Manual.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Elite_Tennis_Training_Manual.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Elite Tennis Training Manual (Complete)</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Complete structured manual edition — 40+ chapters covering all aspects of elite tennis training.</p>
+        <a href="Elite_Tennis_Training_Manual.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Elite_Tennis_Training_Manual_Architecture.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Elite Tennis Training Manual Architecture</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Architecture framework for 300-page high-density technical manual synthesizing 50+ expert sources.</p>
+        <a href="Elite_Tennis_Training_Manual_Architecture.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Complete_11_Chapters.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Complete 11 Chapters</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Complete 11 chapters with 5 sections each (55 sections total) — kinetic chain, core, movement, serve, forehand, backhand, net play, return, tactics, conditioning, mental game.</p>
+        <a href="Advanced_Tennis_Manual_Complete_11_Chapters.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_01.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 01</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 1: The Kinetic Chain & Biomechanical Foundations (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_01.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_02.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 02</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 2: The Core, Torque & Rotational Power (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_02.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_03.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 03</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 3: Movement Science (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_03.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_04.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 04</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 4: The Serve - Architecture of the Most Powerful Stroke (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_04.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_05.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 05</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 5: The Forehand - Modern Mechanics and Tactical Application (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_05.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_06.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 06</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 6: The Backhand - One-Handed and Two-Handed Mechanics (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_06.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_07.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 07</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 7: The Volley, Overhead, and Net Game (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_07.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_08.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 08</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 8: Return of Serve and Service Game Tactics (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_08.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_09.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 09</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 9: Match Play Intelligence (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_09.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_10.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 10</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 10: The Mental Game - Competitive Psychology, Routines, Performance Under Pressure (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_10.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Tennis_Manual_Chapter_11.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Tennis Training Manual - Chapter 11</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 11: Training Design - Periodisation, Practice Structure, Long-Term Athletic Development (5 sections)</p>
+        <a href="Advanced_Tennis_Manual_Chapter_11.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Advanced_Neuro_Biomechanical_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Neuro-Biomechanical Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">The Next Frontier for Elite Performance — Physics-first paradigm, advanced kinematics, neuromechanical governance.</p>
+        <a href="Advanced_Neuro_Biomechanical_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Handbook_from_Tennis_Research_Project_Notebook.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Handbook from Tennis Research Project Notebook</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">12-chapter comprehensive technical handbook derived from Tennis Research Project Notebook.</p>
+        <a href="Handbook_from_Tennis_Research_Project_Notebook.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Handbook_on_Anatomy_of_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Handbook on Anatomy of Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Anatomy-focused tennis manual with detailed biomechanical analysis.</p>
+        <a href="Handbook_on_Anatomy_of_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Volley_Deep_Research.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Volley Deep Research</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Comprehensive research on volley — everything about volley and only volley.</p>
+        <a href="Tennis_Volley_Deep_Research.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Volley_Deep_Research_ChatGPT.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Volley Deep Research (ChatGPT)</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">ChatGPT version of volley deep research.</p>
+        <a href="Tennis_Volley_Deep_Research_ChatGPT.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Tension_Neural__Biomechanical_Analysis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Tension: Neural & Biomechanical Analysis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of tension in tennis from neural and biomechanical perspectives.</p>
+        <a href="Tennis_Tension_Neural__Biomechanical_Analysis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Analysis_of_Tennis_Techniques_from_Elite_Players.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis of Tennis Techniques from Elite Players</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Full analysis of tennis techniques from elite players based on uploaded files and internet research.</p>
+        <a href="Analysis_of_Tennis_Techniques_from_Elite_Players.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Neurological_Specialist_Deep_Research.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Neurological Specialist Deep Research</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Comprehensive analysis of clinical sports neurology and neuro-performance optimization.</p>
+        <a href="Tennis_Neurological_Specialist_Deep_Research.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Neurological_Specialist_Professional.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Neurological Specialist Professional</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Professional edition of neurological specialist manual.</p>
+        <a href="Tennis_Neurological_Specialist_Professional.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="The_Complete_Tennis_Manual.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Complete Tennis Manual</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">A Guide to Elite Performance — complete manual generated from 10 notebooks.</p>
+        <a href="The_Complete_Tennis_Manual.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Complete_Modern_Tennis_Handbook_2026.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Complete Modern Tennis Handbook 2026</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">With Explanation of Physics Formula and simplified concepts.</p>
+        <a href="Complete_Modern_Tennis_Handbook_2026.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Training_Manual_Sports_Psychology_Philosophy.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Training Manual: Sports Psychology Philosophy</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Based on manuscripts and NotebookLM notebooks — complete list of concepts in sports, psychology, philosophy.</p>
+        <a href="Tennis_Training_Manual_Sports_Psychology_Philosophy.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Training_Kinh_GRF_Taichi_24_Forms.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Training: Kình, GRF, Taichi-24 Forms</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Synthesis of Hidden Engine of Tennis and comprehensive notebooks on biomechanics and deliberate practice. 14M+ chars.</p>
+        <a href="Tennis_Training_Kinh_GRF_Taichi_24_Forms.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">ChatGPT Hướng Dẫn Kỹ Thuật Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">ChatGPT co-authored technical tennis guide.</p>
+        <a href="ChatGPT_Huong_Dan_Ky_Thuat_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Meta_AI_Notes_Analysis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Meta AI Notes Analysis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of Meta AI notes on tennis.</p>
+        <a href="Meta_AI_Notes_Analysis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_ATP_Forehand_Techniques.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis ATP Forehand Techniques</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Essential detailed report on ATP forehand techniques.</p>
+        <a href="Tennis_ATP_Forehand_Techniques.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Backhand_Techniques.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Backhand Techniques</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Essential detailed report on ATP backhand techniques.</p>
+        <a href="Tennis_Backhand_Techniques.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Book_Manuscript_ChatGPT.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Book Manuscript - Coauthor by ChatGPT</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Tennis book manuscript co-authored by ChatGPT.</p>
+        <a href="Tennis_Book_Manuscript_ChatGPT.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="ChatGPT_Tennis_Book_Manuscript.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">ChatGPT Tennis Book Manuscript</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Tennis book manuscript from ChatGPT.</p>
+        <a href="ChatGPT_Tennis_Book_Manuscript.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Gemini_Tennis_Ky_Thuat_Luyen.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Gemini Tennis Kỹ Thuật & Lộ Trình Huấn Luyện VĐV trong 5 năm</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Gemini technical guide and 5-year training roadmap for athletes.</p>
+        <a href="Gemini_Tennis_Ky_Thuat_Luyen.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Giao_Trinh_Tennis_5_Nam_ChatGPT.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Giáo Trình Tennis 5 Năm by ChatGPT</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">5-year tennis curriculum by ChatGPT.</p>
+        <a href="Giao_Trinh_Tennis_5_Nam_ChatGPT.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Dong_Luc_Hoc_Khong_Gian_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Động Lực Học Không Gian Trong Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Dynamics of spatial movement in tennis.</p>
+        <a href="Dong_Luc_Hoc_Khong_Gian_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Federer_Code_Book.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Federer Code Book</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of Federer's tennis code and patterns.</p>
+        <a href="Federer_Code_Book.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Federer_Tennis_Handbook.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Federer Tennis Handbook</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Comprehensive handbook on Federer's tennis.</p>
+        <a href="Federer_Tennis_Handbook.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Federer_Tennis_Handbook_Revised.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Federer Tennis Handbook Revised</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Revised edition of Federer handbook.</p>
+        <a href="Federer_Tennis_Handbook_Revised.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Nadal_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Nadal Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of Nadal's tennis technique and patterns.</p>
+        <a href="Nadal_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Novak_Djokovic_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Novak Djokovic Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of Djokovic's tennis technique and patterns.</p>
+        <a href="Novak_Djokovic_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Sampras_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Sampras Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis of Sampras's tennis technique.</p>
+        <a href="Sampras_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Ballet_20_Chuong.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Ballet 20 Chương</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">20-chapter Tennis Ballet manual.</p>
+        <a href="Tennis_Ballet_20_Chuong.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Coaching_Manual_3_0.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Coaching Manual 3.0</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Coaching manual version 3.0 for tennis.</p>
+        <a href="Tennis_Coaching_Manual_3_0.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Elite_Analysis_Framework.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Elite Analysis Framework</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Analysis framework for elite tennis performance.</p>
+        <a href="Tennis_Elite_Analysis_Framework.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Mastery_20_Chapters.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Mastery 20 Chapters</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">20-chapter mastery manual for tennis.</p>
+        <a href="Tennis_Mastery_20_Chapters.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Mastery_Complete.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Mastery Complete</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Complete tennis mastery manual.</p>
+        <a href="Tennis_Mastery_Complete.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_System_Elite_Manual.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis System Elite Manual</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Elite system manual for tennis.</p>
+        <a href="Tennis_System_Elite_Manual.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_System_Playbook.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis System Playbook</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Playbook for tennis system.</p>
+        <a href="Tennis_System_Playbook.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Unified_Power_Model_20_Chapters.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Unified Power Model 20 Chapters</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Unified power model across 20 chapters.</p>
+        <a href="Unified_Power_Model_20_Chapters.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Handbook_Tennis_Research_Notebook_v3.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Handbook Tennis Research Notebook v3</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Version 3 of handbook from research notebook (12 chapters).</p>
+        <a href="Handbook_Tennis_Research_Notebook_v3.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cross-Training_cho_Vận_Động_Viên_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cross-Training cho Vận Động Viên Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Cross-training for tennis athletes — 20 chapters, tích hợp giải phẫu, sinh lý, động học.</p>
+        <a href="Cross-Training_cho_Vận_Động_Viên_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    </div>
+    
+    <div class="section-header" style="margin-top: 60px;">
+        <span class="language-badge vietnamese">Sách Tiếng Việt</span>
+        <h2>Sách Tiếng Việt (89 cuốn)</h2>
+    </div>
+    <div class="book-grid">
+        
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">GOAT Tennis Giáo Trình Tiếng Việt</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">GOAT Tennis curriculum in Vietnamese.</p>
+        <a href="GOAT_Tennis_Giao_Trinh_Tieng_Viet.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Handbook_2026_Vietnamese.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Handbook 2026 Vietnamese</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">2026 tennis handbook in Vietnamese.</p>
+        <a href="Tennis_Handbook_2026_Vietnamese.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Suc_Ben_20_Chuong.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Sức Bền 20 Chương</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">20-chapter endurance/stamina manual.</p>
+        <a href="Tennis_Suc_Ben_20_Chuong.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tuyen_Tap_KyThuat_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tuyển Tập Kỹ Thuật Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Collected tennis techniques.</p>
+        <a href="Tuyen_Tap_KyThuat_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_2026.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis 2026</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">2026 tennis handbook.</p>
+        <a href="Cam_Nang_Tennis_2026.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_2026_CongThucDonGian.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis 2026 Công Thức Đơn Giản</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">2026 tennis handbook with simplified formulas.</p>
+        <a href="Cam_Nang_Tennis_2026_CongThucDonGian.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_Hien_Dai_2026.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis Hiện Đại 2026</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Modern tennis handbook 2026.</p>
+        <a href="Cam_Nang_Tennis_Hien_Dai_2026.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_Hien_Dai_Full_Formula_2026.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis Hiện Đại Full Formula 2026</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Modern tennis handbook with full formulas 2026.</p>
+        <a href="Cam_Nang_Tennis_Hien_Dai_Full_Formula_2026.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Dao_Tao_Tennis_50_Plus.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Đào Tạo Tennis 50+</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">5-year journey to rebuild biomechanics for 50+ players. Effortless Power — Sức Mạnh Không Tốn Sức.</p>
+        <a href="Cam_Nang_Dao_Tao_Tennis_50_Plus.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="CamNang_KyThuat_Tennis_HienDai.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Kỹ Thuật Tennis Hiện Đại</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Modern Tennis Technical Manual — 10 chapters, sinh học chuyển động, vật lý quả bóng, nhận thức thần kinh.</p>
+        <a href="CamNang_KyThuat_Tennis_HienDai.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Nghe_Thuat_Tennis_Dinh_Cao.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Nghệ Thuật Tennis Đỉnh Cao</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">The Art of Elite Tennis — Comprehensive guide from international coach for elite athletes.</p>
+        <a href="Nghe_Thuat_Tennis_Dinh_Cao.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Tennis_Biomechanics_5_0_Complete.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Biomechanics 5.0 Complete</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Biomechanics Tennis Toàn Diện — 20 chapters, 400+ pages, góc khớp, cân bằng động, hệ cơ-xương-mạc, fascia trains, muscle slings, neural motor control.</p>
+        <a href="Tennis_Biomechanics_5_0_Complete.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="TENNIS_DANG_CAP_CAO_20_Chuong.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Đẳng Cấp Cao 20 Chương</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">High-level tennis 20 chapters for coaches & pro athletes.</p>
+        <a href="TENNIS_DANG_CAP_CAO_20_Chuong.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="tennis_game_management.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Quản Lý Game Trong Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Game Management in Tennis — 20 chapters, comprehensive strategic system for level 5.0.</p>
+        <a href="tennis_game_management.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="tennis_mastery.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Mastery</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Hệ Thống Huấn Luyện Chuyên Sâu Cho Vận Động Viên 5.0 — 20 chapters, 400+ pages.</p>
+        <a href="tennis_mastery.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="THAN_KINH_HOC_TENNIS_FULL.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Thần Kinh Học Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Quản Lý Nhận Thức, Thị Giác Và Thần Kinh Trong Thi Đấu Tennis Đỉnh Cao — cho VĐV và HLV cấp 5.0.</p>
+        <a href="THAN_KINH_HOC_TENNIS_FULL.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_Cross-Training.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis Cross-Training</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Tennis cross-training với các môn khác — Thiền, Minh Triết, Aikido, Judo, Kendo, Fencing, Samurai. 20 chapters.</p>
+        <a href="Cam_Nang_Tennis_Cross-Training.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Khung_Huan_Luyen_Tennis_Dinh_Cao.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Khung Huấn Luyện Tennis Đỉnh Cao</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">High-performance tennis training framework for international elite players.</p>
+        <a href="Khung_Huan_Luyen_Tennis_Dinh_Cao.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="He_Truc_52_Van_Hanh_Khong_Tai.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hệ Trục 52: Vận Hành Không Tải & Tái Tạo Năng Lượng</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Framework for 52-year-old working tennis player — no-load operation & energy regeneration.</p>
+        <a href="He_Truc_52_Van_Hanh_Khong_Tai.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Thai_Cuc_Quyen_Vao_Tennis.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Thái Cực Quyền Vào Tennis</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Applying Tai Chi Chuan to Tennis — deep manuscript on kinetic chain, spiral engine, elastic power.</p>
+        <a href="Huong_Dan_Thai_Cuc_Quyen_Vao_Tennis.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Tennis_Hien_Dai_Phong_Cach_Dao_Gia.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cẩm Nang Tennis Hiện Đại Phong Cách Đạo Gia</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Modern tennis manual in Daoist style — Thuật Tu Tiên inspired.</p>
+        <a href="Cam_Nang_Tennis_Hien_Dai_Phong_Cach_Dao_Gia.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Vi Nhận Thức Cơ Thể Tennis 20 Chương</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Proprioception — Nền Tảng Ẩn Của Tennis Đỉnh Cao — 20 chapters, 400 pages.</p>
+        <a href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_01.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 01</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 01 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_01.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_02.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 02</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 02 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_02.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_03.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 03</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 03 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_03.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_04.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 04</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 04 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_04.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_05.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 05</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 05 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_05.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_06.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 06</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 06 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_06.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_07.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 07</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 07 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_07.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_08.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 08</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 08 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_08.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_09.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 09</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 09 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_09.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_10.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 10</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 10 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_10.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_11.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 11</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 11 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_11.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_12.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 12</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 12 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_12.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_13.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 13</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 13 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_13.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_14.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 14</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 14 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_14.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_15.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 15</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 15 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_15.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_16.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 16</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 16 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_16.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_17.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 17</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 17 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_17.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_18.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 18</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 18 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_18.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_19.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 19</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 19 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_19.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_20.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cảm Nhận Cơ Thể Tennis - Chương 20</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 20 of Proprioception in Tennis.</p>
+        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_20.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_01.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 01</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 01 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_01.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_02.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 02</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 02 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_02.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_03.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 03</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 03 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_03.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_04.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 04</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 04 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_04.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_05.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 05</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 05 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_05.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_06.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 06</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 06 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_06.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_07.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 07</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 07 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_07.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_08.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 08</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 08 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_08.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_09.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 09</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 09 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_09.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_10.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 10</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 10 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_10.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_11.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 11</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 11 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_11.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_12.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 12</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 12 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_12.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_13.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 13</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 13 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_13.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_14.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 14</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 14 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_14.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_15.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 15</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 15 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_15.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_16.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 16</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 16 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_16.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_17.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 17</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 17 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_17.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_18.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 18</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 18 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_18.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_19.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 19</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 19 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_19.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_20.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 20</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 20 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_20.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_21.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 21</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 21 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_21.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_22.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 22</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 22 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_22.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_23.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 23</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 23 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_23.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_24.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 24</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 24 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_24.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_25.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 25</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 25 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_25.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_26.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 26</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 26 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_26.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_27.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 27</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 27 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_27.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_28.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 28</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 28 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_28.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_29.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 29</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 29 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_29.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_30.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 30</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 30 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_30.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_31.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 31</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 31 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_31.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_32.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 32</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 32 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_32.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_33.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 33</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 33 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_33.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_34.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 34</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 34 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_34.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_35.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 35</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 35 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_35.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_36.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 36</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 36 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_36.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_37.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 37</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 37 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_37.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_38.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 38</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 38 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_38.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_39.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 39</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 39 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_39.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_40.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 40</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 40 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_40.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_41.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 41</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 41 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_41.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_42.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 42</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 42 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_42.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_43.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 43</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 43 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_43.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_44.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 44</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 44 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_44.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_45.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 45</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 45 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_45.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_46.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 46</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 46 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_46.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    <article class="book-card" style="background: white; border: 1.5px solid var(--divider); border-radius: 4px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s, box-shadow 0.2s;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 8px; color: var(--ink);"><a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_47.html" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hướng Dẫn Quần Vợt Toàn Diện - Chương 47</a></h2>
+        <p style="font-size: 14px; color: var(--muted); margin-bottom: 16px; line-height: 1.6;">Chapter 47 of Comprehensive Tennis Guide by Claude.</p>
+        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_47.html" class="read-link" style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent);">Đọc ngay →</a>
+    </article>
+
+    </div>
 </div>
-
-<h2 class="section-title">Các Cẩm Nang Có Sẵn</h2>
-<p class="section-subtitle">Nhấn vào từng thẻ để đọc chi tiết</p>
-<div class="book-grid">
-
-    <div class="book-card">
-        <span class="book-meta">12 Chương · Sinh học học & Chiến thuật</span>
-        <h3>Handbook from Tennis Research Project Notebook</h3>
-        <p>Cuốn cẩm nang này là tổng hợp 12 chương từ Dự án Nghiên cứu Quần Vợt, bao phủ toàn diện từ sinh học học nền tảng đến chiến thuật thi đấu. Các chương trình bày hệ thống về chuỗi động học, chân pháp, các stance, kỹ thuật đá phẳng, serve, volley, sinh lý học, điều kiện thể lực, phục hồi, trò chơi tinh thần, tâm lý thi đấu và chiến thuật đơn/đôi.</p>
-        <p>Điểm mạnh của cuốn sách là cách tiếp cận khoa học: mỗi kỹ thuật được giải thích qua vật lý và sinh học học — lực phản ứng mặt đất, truyền lực tuần tự, chuỗi động học mở/khép. Điều này giúp vận động viên hiểu "tại sao" đằng sau mỗi động tác thay vì chỉ học "như thế nào".</p>
-        <p>Phù hợp cho: huấn luyện viên muốn có tài liệu tham khảo hệ thống, vận động viên cấp cao muốn sâu hiểu sinh học học, và bất kỳ ai quan tâm đến khoa học phía sau quần vợt hiện đại.</p>
-        <a href="Handbook_from_Tennis_Research_Project_Notebook.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">12 Chương · Kế hoạch huấn luyện toàn diện</span>
-        <h3>TENNIS TRAINING MANUAL</h3>
-        <p>Cuốn hướng dẫn huấn luyện toàn diện này trình bày lộ trình hoàn chỉnh từ sinh học học cơ bản đến chiến thuật thi đấu cao cấp. 12 chương bao gồm: chuỗi động học, chân pháp, stance, đá phẳng, serve, chơi lưới, sinh lý học, điều kiện thể lực, phục hồi, trò chơi tinh thần, tâm lý thi đấu và chiến thuật.</p>
-        <p>Khác với các tài liệu chỉ tập trung vào kỹ thuật, cuốn này tích hợp sinh lý học (hệ ATP-PC, acid lactic, oxy hóa), kế hoạch điều kiện thể lực theo chu kỳ, và chiến lược phục hồi khoa học. Mỗi chương có checklist tóm tắt và bài tập thực hành.</p>
-        <p>Đây là tài liệu tham khảo lý tưởng cho huấn luyện viên xây dựng chương trình huấn luyện quanh năm và vận động viên tự huấn luyện muốn có lộ trình có hệ thống.</p>
-        <a href="TENNIS_TRAINING_MANUAL.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">12 Chương · Bản chuyên nghiệp mở rộng</span>
-        <h3>TENNIS TRAINING MANUAL Professional</h3>
-        <p>Phiên bản Professional mở rộng sâu hơn từng khía cạnh với phân tích chi tiết hơn, bao gồm các metric giám sát cho Giám đốc Kỹ thuật, so sánh cơ sở tri thức (ví dụ: "Chuyển trọng lực" vs "Tạo xung lực"), và rủi ro lâm sàng từ thất bại truyền lực.</p>
-        <p>Cuốn sách bổ sung các phân tích nâng cao: tương tác thần kinh-cơ, phản xạ tiền giác-kính, stability vestibule-ocular, và các chỉ số giám sát kỹ thuật (monitoring metrics) cho từng section. Điều này biến cuốn sách thành công cụ cho cả huấn luyện viên và nhà khoa học thể thao.</p>
-        <p>Phù hợp cho: chuyên gia hiệu suất, sinh học học viên, và huấn luyện viên cấp cao cần dữ liệu định lượng để ra quyết định huấn luyện.</p>
-        <a href="TENNIS_TRAINING_MANUAL_Professional.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">12 Chương · Kỹ thuật & Chiến thuật toàn diện</span>
-        <h3>The Art of Modern Tennis</h3>
-        <p>Cuốn tham khảo hoàn chỉnh này bao phủ 12 chương từ sinh học học chuỗi động học, lõi & xoay lực, chân pháp, serve, nhận serve, forehand, backhand, chơi lưới & volley, đến slice & đa dạng. Mỗi chương được cấu trúc theo hai track song song: Elite Player Track (dành cho vận động viên) và Coach Track (dành cho huấn luyện viên).</p>
-        <p>Đặc điểm nổi bật là cách trình bày song song: phần thân chương giải thích kỹ thuật, sau đó track vận động viên tập trung vào cảm giác và thực thi, track huấn luyện viên tập trung vào từ khóa huấn luyện, chuỗi tiến độ, và chẩn đoán lỗi thường gặp. Từ điển thuật ngữ chuyên ngành ở cuối sách.</p>
-        <p>Thiết kế cho: vận động viên muốn tự cải tiến qua cảm giác, và huấn luyện viên cần hệ thống từ khóa và chuỗi tiến độ chuẩn hóa.</p>
-        <a href="The_Art_of_Modern_Tennis_Complete_Chapter_01.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">66 Section · Thần kinh-hành động & Sinh học học</span>
-        <h3>The Neuro-Motor Manual of Tennis Mastery</h3>
-        <p>Cuốn sách chuyên sâu nhất về giao diện thần kinh-sinh học học trong quần vợt. 66 section chi tiết trình bày: chuỗi động học & nền tảng sinh học học, lõi & xoay lực, hiệu ứng dây chun (SSC), chuyển động giống roi, kiểm soát thần kinh-hành động, tích hợp hệ cảm giác, serve, forehand, backhand, volley, overhead, slice, chiến thuật, trò chơi tinh thần, và phụ lục thuật ngữ.</p>
-        <p>Đổi mới cốt lõi: phản bác "ký ức cơ bắp" — thay vào đó trình bày kiểm soát vận động qua phản hồi cảm giác, mô hình dự đoán thị giác, phản xạ tiền giác-kính (VOR), và độ ổn định đầu. Mỗi section có Technical Director's Monitoring Metrics — chỉ số định lượng cho giám sát kỹ thuật.</p>
-        <p>Tài liệu bắt buộc cho: chuyên gia thần kinh-thể thao, nhà nghiên cứu sinh học học, và huấn luyện viên muốn áp dụng khoa học thần kinh vào huấn luyện quần vợt.</p>
-        <a href="The_Neuro-Motor_Manual_of_Tennis_Mastery_Professional.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">10 Chương · Y khoa thể thao & Tối ưu hóa thần kinh</span>
-        <h3>Tennis Neurological Specialist: Deep Research</h3>
-        <p>Nghiên cứu sâu về chuyên gia Thần kinh Quần Vợt — một chuyên môn mới nối y khoa lâm sàng và huấn luyện hiệu suất thần kinh. Bao gồm: nền tảng y khoa thể thao thần kinh, bệnh lý & quản trị chấn thương não, các trung tâm phục hồi thần kinh chuyên biệt (NeuroPeak, Activate), coaching nơ-ron hiệu suất (mô hình Input-Integration-Output, Z-Health), nơ-ron thể thao (model Zverev), nơ-ron tennis & kiểm soát vận động nhận thức, công nghệ điều chỉnh thần kinh tiên tiến (MeRT, NeuroCatch), phát triển nhận thức thanh niên, môi trường quy định an toàn, và tương lai của ngành.</p>
-        <p>Cuốn sách định vị quần vợt như một công cụ phát triển nhận thức cho thanh niên (hàm thực thi, lợi ích thể thao mở), đồng thời trình bày các công nghệ tiên tiến như Magnetic e-Resonance Therapy (MeRT) và platform NeuroCatch cho brain vital signs. Góc nhìn y khoa + hiệu suất độc đáo.</p>
-        <p>Đối tượng: bác sĩ y khoa thể thao, chuyên gia thần kinh, huấn luyện viên hiệu suất, và nhà nghiên cứu quan tâm đến giao điểm y khoa - thể thao - thần kinh học.</p>
-        <a href="Tennis_Neurological_Specialist_Deep_Research.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">12 Chương · Bản chuyên nghiệp y khoa thể thao</span>
-        <h3>Tennis Neurological Specialist Professional</h3>
-        <p>Bản chuyên nghiệp của cuốn Tennis Neurological Specialist, tập trung vào thực hành lâm sàng và tối ưu hóa nơ-ron hiệu suất. 12 chương trình bày: nền tảng y khoa thể thao thần kinh, chấn thương não & commotion protocols, phục hồi từ 'cocooning' sang 'relative rest', các phòng khám chuyên biệt (NeuroPeak, Activate), coaching nơ-ron (Input-Integration-Output, Z-Health), nơ-ron thể thao (3 trụ cột, model Zverev), tennis nơ-ron (ngưỡng di truyền tinh túy, giảm độ trễ phản ứng), công nghệ nâng cao (MeRT, NeuroCatch), phát triển nhận thức thanh niên, an toàn & quy định 2025 (USTA Safe Play, ITF Healthcare), và tương lai: đồng bộ liên não.</p>
-        <p>Nhấn mạnh ứng dụng lâm sàng: protocols nhận diện & loại bỏ commotion, tiêu chuẩn chăm sóc y tế ITF, bảo vệ USTA. Kết hợp y khoa thực tế với khoa học hiệu suất tiên phong.</p>
-        <p>Phù hợp cho: bác sĩ đội, chuyên gia phục hồi, huấn luyện viên hiệu suất muốn tích hợp screening thần kinh vào chương trình.</p>
-        <a href="Tennis_Neurological_Specialist_Professional.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">50 Chương · Kỹ thuật volley hiện đại hoàn chỉnh</span>
-        <h3>Modern Tennis Volley Handbook 2026</h3>
-        <p>Cẩm nang volley toàn diện nhất tiêu chuẩn 2026: 50 chương bao phủ triết lý Modern Still-Wall, grip Continental, stance sẵn sàng, chân pháp (split-step, gravity step, step-hit-step, power step), thực thi kỹ thuật (pulse, L-shape, carve, power triangle), volley cao/phấp, backhand/forehand, overhead, chiến thuật (bisection, transit velocity, HTC, smother zone, behind-the-back, middle sabotage, switch, I-formation), chẩn đoán lỗi (swing leak, wrist-break, statue syndrome, peeking), và trò chơi tinh thần (quiet eye, điều tiết cảm xúc, visualization, selective memory).</p>
-        <p>Đổi mới cốt lõi: thay thế mô hình 'swing/punch' cũ bằng 'Still-Wall' (tường đứng yên) và 'Grip Pulse' (xúc tác nắm) — sử dụng lực đối thủ thay vì tự tạo lực. Mỗi section có Technical Source Reference trích dẫn nghiên cứu biomechanics, neurology, coaching.</p>
-        <p>Tài liệu bắt buộc cho: chuyên gia chơi lưới, huấn luyện viên đôi, và vận động viên muốn thống trị vùng lưới ở cấp độ cao nhất.</p>
-        <a href="Modern_Tennis_Volley_Handbook_2026.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">7 Chương · Giao cắt thần kinh - sinh học học nâng cao</span>
-        <h3>Advanced Neuro-Biomechanical Tennis</h3>
-        <p>Cuốn sách chuyên sâu tại giao điểm thần kinh học và sinh học học: coupling thị giác-hành động & saccades dự đoán, vật lý giảm tốc & forehand lasso, huấn luyện dựa trên vận tốc (VBT) & cơ học overspeed, khả năng thần kinh song phía & ổn định hai tay, nhận thức sân & sinh học học bề mặt, hình ảnh tinh thần & tâm lý đòn đánh.</p>
-        <p>Trình bày mô hình 'Elite Genetics Threshold' — ngưỡng di truyền tinh túy trong sinh học học, và cách huấn luyện nơ-ron nhận thức giảm độ trễ phản ứng. Kết hợp biomechanics truyền thống với neuroscience hiện đại.</p>
-        <p>Dành cho: nhà nghiên cứu, huấn luyện viên hiệu suất cao, và vận động viên muốn hiểu cơ chế thần kinh đằng sau kỹ thuật tinh túy.</p>
-        <a href="Advanced_Neuro_Biomechanical_Tennis.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">11 Chương · Sinh cơ học, Motor Learning & Neuro-Motor Science</span>
-        <h3>Advanced Tennis Training Manual (Claude Coauthored)</h3>
-        <p>Bộ sưu tập 11 chương chuyên sâu được đồng tác giả bởi Claude, tập trung vào sinh cơ học, khoa học vận động học, tiếp cận dẫn dắt bởi ràng buộc (Constraints-Led Approach), và thần kinh-hành động. Chương 1-6 trình bày nền tảng: chuỗi động học, GRF, SSC, truyền lực tuần tự, CLA coaching, và trí tuệ cảm nhận. Chương 7-11 đi sâu vào: serve, forehand, backhand, volley, và chiến thuật.</p>
-        <p>Điểm nhấn: tích hợp Constraints-Led Approach vào từng drill — thiết kế môi trường mà kỹ thuật đúng tự nổi lên như giải pháp tối ưu. Các bài tập nhận thức (proprioceptive) 8 tuần cho chân pháp, loading, và GRF. Phân tích theo bề mặt sân (clay, hard, grass) và khung chẩn đoán 4 loại lỗi GRF.</p>
-        <p>Phù hợp cho: huấn luyện viên hiện đại muốn áp dụng khoa học motor learning, nhà nghiên cứu biomechanics, và vận động viên cấp cao tìm hiểu khoa học đằng sau kỹ thuật.</p>
-        <a href="Advanced_Tennis_Training_Manual_Chapter_01.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">29 Chương · Cẩm nang tiếng Việt toàn diện</span>
-        <h3>Hướng Dẫn Quần Vợt Toàn Diện (29 Chương)</h3>
-        <p>Bộ cẩm nang 29 chương bằng tiếng Việt, tổng hợp từ 5 nguồn tài liệu chuyên sâu. Bao phủ: sinh cơ học nền tảng (chương 1-3), kỹ thuật các cú đánh (chương 4-9), net play & volley (chương 10-12), chiến thuật (chương 13-16), thể lực & phục hồi (chương 17-20), mental game (chương 21-24), và chuyên sâu serve/return/overhead (chương 25-29).</p>
-        <p>Viết theo phong cách huấn luyện thực tế, mỗi chương có bài tập cảm giác, lỗi phổ biến, và checklist tự kiểm tra. Ngôn ngữ tiếng Việt tự nhiên, dễ hiểu, phù hợp cho cộng đồng quần vợt Việt Nam từ cấp độ trung cấp đến chuyên nghiệp.</p>
-        <p>Đặc biệt: Chương 1 giải thích GRF và chuỗi động học bằng ngôn ngữ đời thường ("Sức mạnh đến từ mặt đất, không phải tay"), giúp người đọc không chuyên môn cũng nắm bắt được nguyên lý cốt lõi.</p>
-        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Chuong_01.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-</div>
-
-    <div class="book-card">
-        <span class="book-meta">20 Chương · Proprioception & Vi nhận thức cơ thể</span>
-        <h3>Vi Nhận Thức Cơ Thể Trong Tennis</h3>
-        <p>Cuốn nghiên cứu chuyên sâu 20 chương về Proprioception — nền tảng ẩn của tennis đỉnh cao. Bao phủ: khoa học vi nhận thức (muscle spindles, GTO, joint receptors), ba tầng xử lý thần kinh (tủy sống, tiểu não, vỏ não), footwork & balance, kỹ thuật forehand/backhand/serve/volley, hơi thở, fatigue & recovery, chấn thương (mắt cá, đầu gối, vai, lưng), mental imagery, decision-making, competition anxiety, công nghệ (wearable, AI, HRV), học tập theo độ tuổi (40+, 60+), case studies Federer/Nadal/Djokovic, và lộ trình 6 tháng phát triển hệ thống vi nhận thức cá nhân.</p>
-        <p>Được biên soạn bởi Huấn Luyện Viên Cấp Quốc Gia cho vận động viên Level 3.0, kết hợp khoa học thần kinh học hiện đại với thực hành tennis 400 trang. Mỗi chương có HLV ghi chú, bài tập thực hành, và tóm tắt khoa học nền tảng.</p>
-        <p>Đối tượng: vận động viên level 3.0+ muốn hiểu khoa học đằng sau kỹ thuật, huấn luyện viên muốn áp dụng proprioception vào training, và bất kỳ ai quan tâm đến thần kinh-hành động trong thể thao.</p>
-        <a href="Vi_Nhan_Thuc_Co_The_Tennis_20_Chuong.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-
-    <div class="book-card">
-        <span class="book-meta">20 Chương · Cảm nhận & Kỹ thuật tennis</span>
-        <h3>Cẩm Nang Cảm Nhận Cơ Thể Tennis (20 Chương)</h3>
-        <p>Bộ cẩm nang 20 chương bằng tiếng Việt tập trung vào vi nhận thức cơ thể (proprioception) trong tennis. Mỗi chương giải thích khoa học cảm nhận cơ thể và chuyển hóa thành bài tập thực hành trên sân: GRF & chuỗi động học, chân pháp & balance, forehand/backhand/serve/volley, hơi thở, phục hồi, chấn thương, mental imagery, quyết định, competition anxiety, công nghệ, học tập theo độ tuổi, case studies Federer/Nadal/Djokovic, và lộ trình cá nhân.</p>
-        <p>Viết theo phong cách huấn luyện thực tế với ngôn ngữ tiếng Việt tự nhiên, mỗi chương có bài tập cảm giác (Shadow swing, Blink drill, Barefoot grounding), checklist tự kiểm tra, và HLV ghi chú. Phù hợp cho vận động viên Việt Nam từ cấp độ trung cấp đến chuyên nghiệp muốn hiểu khoa học đằng sau kỹ thuật.</p>
-        <p>Đặc biệt: Chương 1 giải thích GRF bằng ngôn ngữ đời thường ("Sức mạnh đến từ mặt đất, không phải tay"), giúp người đọc không chuyên môn cũng nắm bắt được nguyên lý cốt lõi.</p>
-        <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_01.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-    <div class="book-card">
-        <span class="book-meta">47 Chương · Cẩm nang tiếng Việt toàn diện (Claude)</span>
-        <h3>Hướng Dẫn Quần Vợt Toàn Diện (47 Chương — Coauthored by Claude)</h3>
-        <p>Bộ cẩm nang 47 chương bằng tiếng Việt, đồng tác giả bởi Claude, tổng hợp từ 5 nguồn tài liệu chuyên sâu. Bao phủ toàn diện: sinh cơ học nền tảng (chương 1-10), kỹ thuật các cú đánh cơ bản (chương 11-20), net play, volley, overhead, slice, drop shot (chương 21-28), chiến thuật và patterns (chương 29-35), thể lực, phục hồi, dinh dưỡng (chương 36-42), mental game và tâm lý thi đấu (chương 43-47).</p>
-        <p>Mỗi chương viết theo phong cách huấn luyện thực tế: bài tập cảm giác, lỗi phổ biến, checklist tự kiểm tra. Ngôn ngữ tiếng Việt tự nhiên, dễ hiểu, phù hợp cho cộng đồng quần vợt Việt Nam từ cấp độ trung cấp đến chuyên nghiệp. Tích hợp Constraints-Led Approach (CLA) và neuroscience hiện đại vào từng drill.</p>
-        <p>Đặc biệt: Chương 1-10 xây dựng nền tảng sinh cơ học (kinetic chain, GRF, SSC, rotation, movement), chương 11-20 kỹ thuật cú đánh (serve, return, forehand, backhand), chương 21-28 net play, chương 29-35 chiến thuật, chương 36-42 thể lực/dinh dưỡng, chương 43-47 mental game.</p>
-        <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_01.html" class="btn">Đọc ngay →</a>
-    </div>
-    
-</div>
-
-<footer>
-    <p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+<footer style="background: var(--ink); color: rgba(245,240,232,0.5); padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
+    Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
+</footer>
+<footer class="cc-license" style="color: #6b7280; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+    <p style="margin: 4px 0;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 </body></html>
