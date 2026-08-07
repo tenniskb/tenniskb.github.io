@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 43</h1>
 <p>COACHING THE MENTAL GAME Chương 43: Dạy Tâm Lý Thi Đấu *"The most important shot in tennis is the next one."* &gt; — Ben Hogan (adapted for tennis) Có một khoảng cách kỳ lạ trong thế giới coaching.</p>
 <p>Gần như mọi coach đều đồng ý rằng mental game là yếu tố quyết định ở competitive level — có thể 50%, 60%, hoặc hơn.</p>
@@ -937,7 +949,7 @@
 <p>Coaching mental game không phải là therapy.</p>
 <p>Không phải là motivational speech.</p>
 <p>Nó là systematic teaching của specific mental skills — attention control, emotional regulation, confidence building, pressure management — với same rigor mà bạn dạy forehand hay serve.</p>
-<h3>43.1 Hiểu Vai Trò Của Coach</h3>
+<h3><strong>43.1 Hiểu Vai Trò Của Coach</strong></h3>
 <p>Trong Mental Development Coach Không Phải Là Therapist Ranh giới quan trọng đầu tiên: Coaching mental game trong tennis khác với tâm lý trị liệu.</p>
 <p>Coach's domain: - Performance anxiety và competitive pressure - Focus và attention management trong practice và match - Confidence building qua performance experiences - Between-point routines và emotional regulation on court - Growth mindset và response to failure - Pre-competition preparation Outside coach's domain: - Clinical anxiety disorders - Depression - Trauma - Eating disorders - Substance abuse - Serious mental health conditions Khi học viên shows signs của clinical issues — refer appropriately.</p>
 <p>Tennis coach không phải là qualified mental health professional.</p>
@@ -949,7 +961,7 @@
 <p>Trust Is The Foundation Không có trust, không có mental coaching.</p>
 <p>Học viên phải tin rằng coach: - Có their best interest in mind, không phải coach's ego - Sẽ không judge hay shame khi họ vulnerable về mental struggles - Sẽ giữ confidence — không share với người khác - Sẽ approach mental challenges với cùng professionalism như technical challenges Build trust trước khi attempt mental coaching. Đừng jump vào mental feedback với học viên mới.</p>
 <p>Establish relationship first.</p>
-<h3>43.2 OBserving Mental State On Court</h3>
+<h3><strong>43.2 Observing Mental State On Court</strong></h3>
 <p>What To Watch For Effective mental coaching bắt đầu với observation — nhìn thấy mental state của học viên trong practice và match.</p>
 <p>Body language indicators: Positive mental state: - Head up, shoulders back - Deliberate, controlled movement between points - Eye contact với opponent và ball - Relaxed grip during recovery Negative mental state: - Head down, shoulders forward - Rushed, frantic movement between points - Eyes looking down (thinking về past point) - Tight grip even during recovery - Racket shaking, racket abuse - Visible frustration expression extending beyond 3 seconds Behavioral indicators: Serve routine becomes inconsistent or disappears entirely (anxiety) Suddenly going for more (desperation) or going for less (fear) Slowing down drastically between points (may be positive — managing tempo — or negative — avoidance) Body language changes dramatically after one bad game The Practice-Match Gap One of the most reliable mental game indicators: How large is the gap between practice performance và match performance?</p>
 <p>Small gap: Mental skills are developed.</p>
@@ -959,10 +971,10 @@
 <p>Assessment question for students: "Rate your practice performance 1-10.</p>
 <p>Rate your typical match performance 1-10.</p>
 <p>What's the difference?" Large gap (3+ points) = mental game is the limiting factor, regardless of technical level.</p>
-<h3>43.3 TEaching Attention Control The Attention Problem In Tennis Tennis requires sustained attention for 1-3 hours — with 20-25 second breaks between points where attention must be managed carefully.</p></h3>
+<h3>43.3 Teaching Attention Control The Attention Problem In Tennis Tennis requires sustained attention for 1-3 hours — with 20-25 second breaks between points where attention must be managed carefully.</p></h3>
 <p>Most players don't have a technique problem.</p>
 <p>They have an attention problem.</p>
-<p>During a rally: Attention is usually fine — the ball demands it.</p>
+<p><strong>During a rally: Attention is usually fine — the ball demands it.</strong></p>
 <p>Between points: Attention drifts — to score, to the last error, to what might happen, to what opponent is thinking.</p>
 <p>This drift is where mental game is won or lost.</p>
 <p>Teaching The Attention Reset Between-point routine (introduced in chapter 34) is the primary attention control tool.</p>
@@ -971,7 +983,7 @@
 <p>The routine is a tool to bring it back." Step 2: Design the routine with the student — not for them. "What helps you reset?</p>
 <p>What do you naturally do between points that feels grounding?" Step 3: Practice the routine explicitly in drills — not just in matches.</p>
 <p>After every rally in practice, student executes their routine before next rally begins.</p>
-<p>Step 4: Observe adherence in matches.</p>
+<p><strong>Step 4: Observe adherence in matches.</strong></p>
 <p>Debrief: "I noticed your routine disappeared in the third set — what happened?" The 3-second rule: After a bad point: Student has 3 seconds to express negative emotion — then routine begins.</p>
 <p>Not 10 seconds.</p>
 <p>Not the whole changeover. 3 seconds.</p>
@@ -983,16 +995,16 @@
 <p>Practice: Student says cue word out loud in practice after every routine.</p>
 <p>Eventually becomes internal and automatic.</p>
 <p>Attention Drills Counting drill: During rally, student counts each shot silently: "one, two, three..." This occupies the analytical mind, prevents overthinking, và keeps attention in present.</p>
-<p>For players who overthink — this is immediately effective.</p>
+<p><strong>For players who overthink — this is immediately effective.</strong></p>
 <p>The counting fills the mental space where negative thoughts would otherwise go. "Ball, bounce, hit" drill: Classic tennis attention drill.</p>
 <p>Student says (internally or externally): "Ball" when they see ball leave opponent's racket. "Bounce" when ball hits court. "Hit" at moment of contact.</p>
 <p>Forces moment-to-moment attention.</p>
 <p>Cannot be saying "bounce" while thinking about the score.</p>
-<h3>43.4 TEaching Emotional Regulation Why Emotional Regulation Is Coachable Emotional regulation is not personality — it's a skill.</p></h3>
+<h3>43.4 Teaching Emotional Regulation Why Emotional Regulation Is Coachable Emotional regulation is not personality — it's a skill.</p></h3>
 <p>Some players naturally have more emotional volatility.</p>
 <p>But even highly emotional players can learn to manage emotional expression and recover faster.</p>
 <p>What emotional regulation means in tennis: Not: Don't feel frustrated or anxious.</p>
-<p>Yes: Feel the emotion — and recover from it quickly without letting it impair the next point.</p>
+<p><strong>Yes: Feel the emotion — and recover from it quickly without letting it impair the next point.</strong></p>
 <p>The goal is not emotional suppression.</p>
 <p>It's emotional recovery speed.</p>
 <p>Modeling Regulation As A Coach Before teaching emotional regulation, model it yourself.</p>
@@ -1009,7 +1021,7 @@
 <p>Acknowledge the emotion is valid and normal. "That's a frustrating error.</p>
 <p>You've been working on that shot." Don't rush past acknowledgment to correction.</p>
 <p>The student needs to feel heard before they can learn.</p>
-<p>Step 2: Physical regulation Emotion is physiological.</p>
+<p><strong>Step 2: Physical regulation Emotion is physiological.</strong></p>
 <p>Change the physiology to change the emotional state.</p>
 <p>Slow breath (4 count in, 6 count out).</p>
 <p>Walking slowly.</p>
@@ -1019,20 +1031,20 @@
 <p>Not because it's spiritual — because it literally changes what your nervous system is doing." Step 3: Redirect attention Once emotional intensity has reduced slightly: redirect to process.</p>
 <p>One tactical thought for next point.</p>
 <p>One technical cue.</p>
-<p>Not dwelling on the error — looking forward.</p>
+<p><strong>Not dwelling on the error — looking forward.</strong></p>
 <p>Working With The Angry Player Some students have volatile emotional responses — racket abuse, verbal outbursts, extended visible frustration.</p>
 <p>What not to do: Shame or punish emotional expression in ways that suppress it entirely.</p>
 <p>Suppression leads to internalization, which creates different problems.</p>
 <p>What to do: Set clear expectation: "I understand frustration.</p>
-<p>In our sessions, I need you to express it for 3 seconds — then we move on.</p>
+<p><strong>In our sessions, I need you to express it for 3 seconds — then we move on.</strong></p>
 <p>Not because the emotion is wrong, but because extended reaction takes away from your performance." Practice the 3-second rule explicitly.</p>
 <p>After bad shots in practice: coach times the reaction.</p>
-<p>After 3 seconds: "Okay — routine." Over many sessions, the 3-second window becomes automatic.</p>
+<p><strong>After 3 seconds: "Okay — routine." Over many sessions, the 3-second window becomes automatic.</strong></p>
 <p>When to refer: If emotional responses are extreme (racket throwing that endangers others, verbal abuse of opponents, crying that cannot be interrupted) — refer to sports psychologist or counselor.</p>
 <p>Beyond tennis coaching scope.</p>
-<h3>43.5 TEaching Confidence Confidence Is Built, Not Gifted Coaches who wait for students to "feel more confident" before attempting challenges have the causality backwards.</p></h3>
+<h3>43.5 Teaching Confidence Confidence Is Built, Not Gifted Coaches who wait for students to "feel more confident" before attempting challenges have the causality backwards.</p></h3>
 <p>Real sequence: Challenge attempted → partial success achieved → confidence grows slightly → more challenge attempted → more success → more confidence.</p>
-<p>Confidence is built from evidence of capability — not from encouragement alone.</p>
+<p><strong>Confidence is built from evidence of capability — not from encouragement alone.</strong></p>
 <p>Encouragement without performance experience is hollow.</p>
 <p>Implication: Design coaching experiences that create genuine performance successes.</p>
 <p>Then point to those successes explicitly.</p>
@@ -1056,48 +1068,45 @@
 <p>Coach helps student understand their own preparation variables.</p>
 <p>Coaching Confidence After Losses Losses — especially heavy losses or losses that "shouldn't" have happened — are the real test of confidence coaching.</p>
 <p>The post-loss conversation: Don't rush to technical analysis.</p>
-<p>Emotional processing first. "How are you feeling about today?" Listen.</p>
-<p>Validate.</p>
+<p>Emotional processing first. "How are you feeling about today?" Listen. Validate.</p>
 <p>Don't immediately problem-solve.</p>
 <p>Then, when student is ready: "What did you do well today, even in the loss?" (There is always something.) Then: "What's one thing we work on to be better prepared next time?" End on forward-looking note.</p>
 <p>Not toxic positivity ("great loss!") but genuine forward orientation.</p>
-<h3>43.6 TEaching Pressure Management</h3>
+<h3><strong>43.6 Teaching Pressure Management</strong></h3>
 <p>What Pressure Actually Is Remind students: Pressure is not in the situation.</p>
 <p>It's in their interpretation of the situation.</p>
 <p>Match point feels high-pressure because it matters AND outcome is uncertain.</p>
-<p>But "mattering" is a perception — and it's a choice.</p>
+<p><strong>But "mattering" is a perception — and it's a choice.</strong></p>
 <p>Reframe teaching: "This is a big point because you've decided it's a big point.</p>
 <p>The ball doesn't know the score." This isn't dismissing the importance of competition.</p>
 <p>It's helping students understand that their mental state is more within their control than they think.</p>
 <p>Teaching The Pressure Protocol When student faces high-pressure moment: Step 1: Recognize the pressure. "I notice I'm anxious.</p>
-<p>That's okay — this is a big moment." Labeling the emotion reduces its intensity.</p>
+<p><strong>That's okay — this is a big moment." Labeling the emotion reduces its intensity.</strong></p>
 <p>Neuroscience research shows that naming an emotion activates prefrontal cortex (rational thinking) and reduces amygdala (fear/anxiety) activation.</p>
-<p>Step 2: Physiological reset.</p>
+<p><strong>Step 2: Physiological reset.</strong></p>
 <p>One slow breath.</p>
 <p>Shoulders down.</p>
 <p>Grip loosen.</p>
-<p>Step 3: Tactical simplification.</p>
+<p><strong>Step 3: Tactical simplification.</strong></p>
 <p>Choose highest-percentage option.</p>
 <p>Under pressure, go conservative.</p>
-<p>Step 4: Commit fully.</p>
-<p>Once decided — execute without second-guessing.</p>
+<p><strong>Step 4: Commit fully.</strong></p>
+<p><strong>Once decided — execute without second-guessing.</strong></p>
 <p>Teaching method: Create pressure in practice.</p>
 <p>Score-keeping in drills.</p>
 <p>Tiebreak practice.</p>
-<p>Consequences for missing (minor — not punitive).</p>
+<p><strong>Consequences for missing (minor — not punitive).</strong></p>
 <p>Then coach the protocol in response to the manufactured pressure. "You just went 0-30.</p>
 <p>I see your shoulders tighten.</p>
-<p>Step 1: recognize it — what are you feeling?" Over time, student learns to self-coach through pressure protocol without prompting.</p>
+<p><strong>Step 1: recognize it — what are you feeling?" Over time, student learns to self-coach through pressure protocol without prompting.</strong></p>
 <p>The Choking Conversation When a student chokes — performs well below capability in important moment — it needs to be addressed directly, not avoided.</p>
 <p>How to open the conversation: "I noticed in the third set today, when you were up 5-3, something changed.</p>
-<p>Can we talk about what happened for you mentally?" Not accusatory.</p>
-<p>Curious.</p>
-<p>Inviting.</p>
+<p>Can we talk about what happened for you mentally?" Not accusatory. Curious. Inviting.</p>
 <p>What to explore: "What were you thinking when you went up 5-3?" "Did the score change how you played?" "What would 'playing your game' have looked like?" Students often reveal: "I started thinking about winning." Or "I didn't want to make errors." Or "I started worrying about what they'd think." This self-awareness is the beginning of change.</p>
 <p>The choking antidote: Process focus over outcome focus.</p>
 <p>Playing to win vs. playing not to lose (chapter 34).</p>
 <p>Teach student to identify their specific trigger (leading, losing, opponent's frustration, crowd presence) and design specific protocol for that trigger.</p>
-<h3>43.7 BUilding A Team Culture (for Group Programs) The Mental Environment Of A Group For coaches working with teams, squads, or groups — mental game isn't just individual.</p></h3>
+<h3>43.7 Building A Team Culture (for Group Programs) The Mental Environment Of A Group For coaches working with teams, squads, or groups — mental game isn't just individual.</p></h3>
 <p>It's cultural.</p>
 <p>What is team mental culture?</p>
 <p>The shared beliefs, norms, và behaviors around competition, failure, effort, and winning in a group.</p>
@@ -1109,7 +1118,7 @@
 <p>Mistakes are learning.</p>
 <p>Players encourage each other genuinely.</p>
 <p>Winning matters but isn't the only measure.</p>
-<p>Coaches create culture — intentionally or not.</p>
+<p><strong>Coaches create culture — intentionally or not.</strong></p>
 <p>Coaching Behaviors That Build Positive Culture Praise effort explicitly: "I loved how you kept fighting in that third set even when you were down." Normalize mistakes publicly: "Errors are part of competing.</p>
 <p>The question is what you do next." Celebrate improvement over winning: Acknowledge when a player plays better than before, even in a loss.</p>
 <p>Model vulnerability: "I was wrong about that tactical advice earlier — let's adjust." Create peer support norms: After matches, team gives feedback to each other — one thing they did well, one thing to improve.</p>
@@ -1123,16 +1132,16 @@
 <p>What is harmful (coaching from sideline, expressing disappointment about results, excessive post-match analysis).</p>
 <p>When pressure is extreme: Direct conversation with parents. "I've noticed X behavior.</p>
 <p>I want to help you understand how it's affecting your child's performance and enjoyment." This is difficult.</p>
-<p>Handle with diplomacy and genuine concern for the child — not defensiveness.</p>
-<h3>43.8 THe Coach's Own Mental Game Coaches Feel Pressure Too Coaches feel pressure when their student loses an important match.</p></h3>
+<p><strong>Handle with diplomacy and genuine concern for the child — not defensiveness.</strong></p>
+<h3>43.8 The Coach's Own Mental Game Coaches Feel Pressure Too Coaches feel pressure when their student loses an important match.</p></h3>
 <p>When a technique correction isn't working.</p>
 <p>When a student quits.</p>
 <p>When questioned by parents or club management.</p>
 <p>A coach who doesn't manage their own mental state well will: - Transfer anxiety to students - Make reactive coaching decisions under pressure - Model exactly the emotional dysregulation they're trying to teach against Coaching requires the same mental skills being taught: Process focus: "Am I doing good coaching work?" rather than "Is my student winning?" Emotional regulation: Managing frustration when student doesn't improve or follow advice.</p>
 <p>Resilience: Bouncing back from students who don't progress, who leave, or who fail publicly.</p>
 <p>Self-awareness practice: Periodically review your own coaching mental state: - Am I coaching with patience or frustration? - Am I attached to outcomes for my ego or my student's benefit? - How do I react when a student challenges my advice? - Do I model the mental skills I'm trying to teach?</p>
-<p>Honest answers lead to coach development — which leads to better student outcomes.</p>
-<h3>43.9 INtegrating Mental Game Into Every Session It's Not A Separate Module The most common mistake in mental game coaching: Treating it as a separate topic — "now we do mental game" — rather than integrating it throughout every session.</p></h3>
+<p><strong>Honest answers lead to coach development — which leads to better student outcomes.</strong></p>
+<h3>43.9 Integrating Mental Game Into Every Session It's Not A Separate Module The most common mistake in mental game coaching: Treating it as a separate topic — "now we do mental game" — rather than integrating it throughout every session.</p></h3>
 <p>Integration examples: Technical drill: "In this drill, we're going to practice the serve — AND practice your between-point routine between each serve." After a missed target: "What was your cue word?" Not just "try again." Before a practice match: "What's your mental focus for this set — one thing to manage mentally?" After a won point with poor mental management: "Great point technically.</p>
 <p>But I noticed you were tight — what was happening?" The message: Mental skills are as trainable and as important as technical skills.</p>
 <p>Both get coaching attention in every session.</p>
@@ -1146,7 +1155,7 @@
 <p>Attention control tools: Between-point routine, cue words, counting drill, "ball-bounce-hit." Emotional regulation: 3-second rule.</p>
 <p>Physical regulation tools.</p>
 <p>Model regulation yourself.</p>
-<p>Don't shame emotional expression — channel it.</p>
+<p><strong>Don't shame emotional expression — channel it.</strong></p>
 <p>Confidence is built through appropriate challenges, visible progress tracking, và specific evidence-based acknowledgment — not empty encouragement.</p>
 <p>Pressure management protocol: Recognize → physiological reset → tactical simplify → commit.</p>
 <p>Address choking directly with curiosity, not judgment.</p>
@@ -1166,12 +1175,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_44.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

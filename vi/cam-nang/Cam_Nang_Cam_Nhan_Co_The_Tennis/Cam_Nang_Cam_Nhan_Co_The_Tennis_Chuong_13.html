@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Cảm Nhận Cơ Thể Tennis - Chương 13</h1>
 <h2>CHƯƠNG 13: TRỤC CỘT SỐNG VÀ CHUỖI ĐỘNG LỰC</h2>
 <p>Nếu có dịp bước vào những công trình kiến trúc vĩ đại như Vương cung thánh đường Sagrada Familia, anh sẽ thấy một nguyên lý kết cấu kỳ diệu: các cột trụ khổng lồ vươn lên và xoắn nhẹ, phân tán hoàn hảo hàng ngàn tấn trọng lượng mà không cần đến sự chống đỡ chằng chịt nào.</p>
@@ -933,14 +945,14 @@
 <p>Nhưng xoay như thế nào?</p>
 <p>Xoay bao nhiêu là đủ?</p>
 <p>Sự hiểu lầm về vặn xoắn (Rotation) chính là nguyên nhân làm tiêu tán 50% sức mạnh và gây ra những cơn đau lưng dai dẳng ở tuổi trung niên.</p>
-<h3>13.1 Ảo Giác Của Việc "Xoay Cả Khối"</h3>
+<h3><strong>13.1 Ảo Giác Của Việc "xoay Cả Khối"</strong></h3>
 <p>Khi nghe từ "xoay người", bản năng mách bảo chúng ta xoay hông và vai cùng một lúc về phía trước, giống như một cánh cửa quay trên một bản lề.</p>
 <p>Về mặt cơ sinh học, điều này hoàn toàn vô dụng.</p>
 <p>Nếu hông và vai cùng quay song song, không có một chút thế năng đàn hồi nào được tạo ra.</p>
 <p>Khối lượng cơ thể chỉ đơn giản là đang dịch chuyển vị trí, cánh tay vẫn phải tự dùng sức mạnh cơ bắp của chính nó để quất quả bóng đi.</p>
-<p>Bí mật của chuỗi động lực nằmở sự "Tách biệt" (Separation).</p>
+<p>Bí mật của chuỗi động lực nằm ở sự "Tách biệt" (Separation).</p>
 <p>Sức mạnh không đến từ việc xoay, mà đến từ sự chênh lệch (độ trễ) giữa phần thân dưới và phần thân trên.</p>
-<h3>13.2 Yếu Tố X (The X-Factor): Lò Xo Sinh Học</h3>
+<h3><strong>13.2 Yếu Tố X (the X-Factor): Lò Xo Sinh Học</strong></h3>
 <p>Trong khoa học vận động (Kinesiology), góc chênh lệch giữa đường thẳng nối hai bả vai và đường thẳng nối hai xương chậu được gọi là "X-Factor". Đây chính là lò xo sinh học vĩ đại nhất của cơ thể con người.</p>
 <p>Khi chuẩn bị tung cú Forehand: 1.</p>
 <p>Hông mở trước: Chân trụ đạp xuống mặt sân (Rooting), đẩy khớp hông bắt đầu xoay về phía lưới. 2.</p>
@@ -949,7 +961,7 @@
 <p>Anh sẽ cảm thấy lồng ngực mình giống như một chiếc khăn mặt đang bị vắt khô.</p>
 <p>Ngay khi độ căng đạt đến điểm cực hạn, bả vai sẽ tự động bị "giật" văng về phía trước bởi lực đàn hồi của cơ lõi (core) với một tốc độ kinh hoàng mà không cần bất kỳ sự gồng gắng cốý nào.</p>
 <p>Năng lượng từ mặt đất đã chính thức được chuyển giao lên thân trên.</p>
-<h3>13.3 Nghệ Thuật Hãm Trục (Core Deceleration)</h3>
+<h3><strong>13.3 Nghệ Thuật Hãm Trục (core Deceleration)</strong></h3>
 <p>Anh đã có một cái lò xo nén hoàn hảo, vai đã bắt đầu văng tới trước.</p>
 <p>Nhưng nếu thân người cứ thế xoay mãi vòng tròn thì sao?</p>
 <p>Lực ly tâm sẽ cuốn anh mất thăng bằng, và đầu vợt sẽ văng lố qua điểm tiếp xúc. Đây là lúc khái niệm Hãm lực (Deceleration) được áp dụng vào vùng Đan Điền (Core): Để năng lượng được truyền ra ngọn roi (cánh tay), phần thân của chiếc roi (cơ thể) phải dừng lại đột ngột.</p>
@@ -957,30 +969,30 @@
 <p>Khóa Vai: Vai phải văng tới trước, nhưng khi thân người đã hướng gần đối diện lưới, ngực và vai cũng phải lập tức "phanh" lại.</p>
 <p>Chính sự dừng lại đột ngột của trục cột sống này mới là thứ quất cánh tay và mặt vợt vút qua quả bóng.</p>
 <p>Nếu anh nhìn các tay vợt hàng đầu, thân người của họ gần như tĩnh lặng ngay tại khoảnh khắc bóng chạm dây, chỉ có cánh tay là mờ đi vì tốc độ.</p>
-<h3>13.4 Bảo Vệ Cột Sống: Trục Xoay</h3>
+<h3><strong>13.4 Bảo Vệ Cột Sống: Trục Xoay</strong></h3>
 <p>Thẳng Đứng Ở độ tuổi ngoài 50, các đĩa đệm cột sống đã giảm bớt độ đàn hồi.</p>
 <p>Vặn xoắn cột sống trong khi cơ thể đang gập cong về phía trước là cách nhanh nhất dẫn đến thoát vị đĩa đệm.</p>
-<p>Sự tối giản cấu trúc yêu cầu một trục thẳng tắp:</p>
+<p><strong>Sự tối giản cấu trúc yêu cầu một trục thẳng tắp:</strong></p>
 <p>- Đỉnh đầu, đốt sống cổ, và xương cụt (coccyx) phải nằm trên một đường thẳng.</p>
 <p>- Anh chỉ được phép xoay (vặn lườn) quanh cái trục này.</p>
 <p>Tuyệt đối không được vừa xoay vừa bẻ gập thân trên nghiêng sang một bên.</p>
 <p>- Hơi thở (như đã phân tích ở Chương 5) đóng vai trò như một chiếc đai lưng tàng hình.</p>
 <p>Nhịp thở hắt ra lúc tiếp xúc bóng sẽ làm phồng cơ bụng áp suất cao (Intra-abdominal pressure), ôm chặt và bảo vệ các đốt sống thắt lưng khỏi những chấn thương vặn xoắn.</p>
-<h3>13.5 Bài Tập Thực Hành: Cảm Nhận Sự Vặn Xoắn Tĩnh</h3>
+<h3><strong>13.5 Bài Tập Thực Hành: Cảm Nhận Sự Vặn Xoắn Tĩnh</strong></h3>
 <p>Tại Để hệ thần kinh làm quen với Yếu tố X và khả năng phanh hãm của cơ lõi, hãy cô lập chuyển động bằng các bài tập sau: Bài Tập 1: Shadow Swing Trên Ghế (The Seated Twist) Cách làm: Ngồi trên một chiếc ghế không tựa (hoặc một chiếc ghế đẩu), giữ thẳng lưng, hai bàn chân đặt phẳng trên mặt đất.</p>
 <p>Cầm vợt và thực hiện cú đánh Forehand chậm rãi.</p>
 <p>Mục tiêu: Việc ngồi đã khóa chặt hoàn toàn phần hông và đôi chân của anh lại.</p>
 <p>Anh không thể xoay hông được nữa. Để vung vợt, anh buộc phải cảm nhận sự vặn xoắn của phần lồng ngực so với xương chậu đứng im.</p>
 <p>Bài tập này đánh thức độ linh hoạt của đốt sống ngực (Thoracic spine) và cảm giác kéo giãn cơ chéo bụng.</p>
-<p>Bài Tập 2: Xoay Khăn Phanh Gấp (The Towel Snap-Brake) Cách làm: Đứng tư thế chuẩn bị, cầm hai tay hai đầu một chiếc khăn tắm vắt ngang ngực.</p>
+<h3><strong>Bài Tập 2: Xoay Khăn Phanh Gấp (The Towel Snap-Brake) Cách làm: Đứng tư thế chuẩn bị, cầm hai tay hai đầu một chiếc khăn tắm vắt ngang ngực.</strong></h3>
 <p>Bắt đầu dùng chân và hông xoay mạnh thân người sang trái.</p>
 <p>Nhưng ngay khi lồng ngực vừa quay ra đối diện với lưới, hãy dùng sức gồng cứng vùng bụng (Đan Điền) để "phanh" đứng thân người lại lập tức.</p>
 <p>Không để đà xoay lôi người đi thêm.</p>
 <p>Mục tiêu: Tập cho hệ thống Proprioception nhận biết điểm dừng (Deceleration point).</p>
 <p>Khi cơ thể phanh gấp, anh sẽ cảm nhận rõ lực quán tính đang cố lao về phía trước mạnh mẽ như thế nào. Đó chính là lực sẽ được truyền vào quả bóng.</p>
-<p>TỔNG KẾT</p>
+<p><strong>TỔNG KẾT</strong></p>
 <h2>CHƯƠNG 13</h2>
-<h3>13.2 Yếu Tố X (the X-factor): Lò Xo Sinh Học Trong khoa học vận động (kinesiology), góc chênh lệch giữa đường thẳng nối hai bả vai và đường thẳng nối hai xương chậu được gọi là "x-factor".</h3>
+<h3><strong>13.2 Yếu Tố X (the X-factor): Lò Xo Sinh Học Trong khoa học vận động (kinesiology), góc chênh lệch giữa đường thẳng nối hai bả vai và đường thẳng nối hai xương chậu được gọi là "x-factor".</strong></h3>
 <p>Đây chính là lò xo sinh học vĩ đại nhất của cơ thể con người.</p>
 <p>Khi chuẩn bị tung cú Forehand: 1.</p>
 <p>Hông mở trước: Chân trụ đạp xuống mặt sân (Rooting), đẩy khớp hông bắt đầu xoay về phía lưới. 2.</p>
@@ -989,28 +1001,28 @@
 <p>Anh sẽ cảm thấy lồng ngực mình giống như một chiếc khăn mặt đang bị vắt khô.</p>
 <p>Ngay khi độ căng đạt đến điểm cực hạn, bả vai sẽ tự động bị "giật" văng về phía trước bởi lực đàn hồi của cơ lõi (core) với một tốc độ kinh hoàng mà không cần bất kỳ sự gồng gắng cốý nào.</p>
 <p>Năng lượng từ mặt đất đã chính thức được chuyển giao lên thân trên.</p>
-<h3>13.3 N ghệ Thuật Hãm Trục (core Deceleration) Anh đã có một cái lò xo nén hoàn hảo, vai đã bắt đầu văng tới trước.</h3>
+<h3><strong>13.3 N ghệ Thuật Hãm Trục (core Deceleration) Anh đã có một cái lò xo nén hoàn hảo, vai đã bắt đầu văng tới trước.</strong></h3>
 <p>Nhưng nếu thân người cứ thế xoay mãi vòng tròn thì sao?</p>
 <p>Lực ly tâm sẽ cuốn anh mất thăng bằng, và đầu vợt sẽ văng lố qua điểm tiếp xúc. Đây là lúc khái niệm Hãm lực (Deceleration) được áp dụng vào vùng Đan Điền (Core): Để năng lượng được truyền ra ngọn roi (cánh tay), phần thân của chiếc roi (cơ thể) phải dừng lại đột ngột.</p>
 <p>Khóa Hông: Khi hông xoay đến góc khoảng 45 độ so với lưới, các cơ mông và cơ đùi phải siết lại để "phanh" hông lại, không cho nó xoay tiếp.</p>
 <p>Khóa Vai: Vai phải văng tới trước, nhưng khi thân người đã hướng gần đối diện lưới, ngực và vai cũng phải lập tức "phanh" lại.</p>
 <p>Chính sự dừng lại đột ngột của trục cột sống này mới là thứ quất cánh tay và mặt vợt vút qua quả bóng.</p>
 <p>Nếu anh nhìn các tay vợt hàng đầu, thân người của họ gần như tĩnh lặng ngay tại khoảnh khắc bóng chạm dây, chỉ có cánh tay là mờ đi vì tốc độ.</p>
-<h3>13.4 Bảo Vệ Cột Sống: Trục Xoay Thẳng Đứng Ở độ tuổi ngoài 50, các đĩa đệm cột sống đã giảm bớt độ đàn hồi.</h3>
+<h3><strong>13.4 Bảo Vệ Cột Sống: Trục Xoay Thẳng Đứng Ở độ tuổi ngoài 50, các đĩa đệm cột sống đã giảm bớt độ đàn hồi.</strong></h3>
 <p>Vặn xoắn cột sống trong khi cơ thể đang gập cong về phía trước là cách nhanh nhất dẫn đến thoát vị đĩa đệm.</p>
-<p>Sự tối giản cấu trúc yêu cầu một trục thẳng tắp:</p>
+<p><strong>Sự tối giản cấu trúc yêu cầu một trục thẳng tắp:</strong></p>
 <p>- Đỉnh đầu, đốt sống cổ, và xương cụt (coccyx) phải nằm trên một đường thẳng.</p>
 <p>- Anh chỉ được phép xoay (vặn lườn) quanh cái trục này.</p>
 <p>Tuyệt đối không được vừa xoay vừa bẻ gập thân trên nghiêng sang một bên.</p>
 <p>- Hơi thở (như đã phân tích ở Chương 5) đóng vai trò như một chiếc đai lưng tàng hình.</p>
 <p>Nhịp thở hắt ra lúc tiếp xúc bóng sẽ làm phồng cơ bụng áp suất cao (Intra-abdominal pressure), ôm chặt và bảo vệ các đốt sống thắt lưng khỏi những chấn thương vặn xoắn.</p>
-<h3>13.5 Bài Tập Thực Hành: Cảm Nhận Sự Vặn Xoắn Tĩnh</h3>
+<h3><strong>13.5 Bài Tập Thực Hành: Cảm Nhận Sự Vặn Xoắn Tĩnh</strong></h3>
 <p>Tại Để hệ thần kinh làm quen với Yếu tố X và khả năng phanh hãm của cơ lõi, hãy cô lập chuyển động bằng các bài tập sau: Bài Tập 1: Shadow Swing Trên Ghế (The Seated Twist) Cách làm: Ngồi trên một chiếc ghế không tựa (hoặc một chiếc ghế đẩu), giữ thẳng lưng, hai bàn chân đặt phẳng trên mặt đất.</p>
 <p>Cầm vợt và thực hiện cú đánh Forehand chậm rãi.</p>
 <p>Mục tiêu: Việc ngồi đã khóa chặt hoàn toàn phần hông và đôi chân của anh lại.</p>
 <p>Anh không thể xoay hông được nữa. Để vung vợt, anh buộc phải cảm nhận sự vặn xoắn của phần lồng ngực so với xương chậu đứng im.</p>
 <p>Bài tập này đánh thức độ linh hoạt của đốt sống ngực (Thoracic spine) và cảm giác kéo giãn cơ chéo bụng.</p>
-<p>Bài Tập 2: Xoay Khăn Phanh Gấp (The Towel Snap-Brake) Cách làm: Đứng tư thế chuẩn bị, cầm hai tay hai đầu một chiếc khăn tắm vắt ngang ngực.</p>
+<h3><strong>Bài Tập 2: Xoay Khăn Phanh Gấp (The Towel Snap-Brake) Cách làm: Đứng tư thế chuẩn bị, cầm hai tay hai đầu một chiếc khăn tắm vắt ngang ngực.</strong></h3>
 <p>Bắt đầu dùng chân và hông xoay mạnh thân người sang trái.</p>
 <p>Nhưng ngay khi lồng ngực vừa quay ra đối diện với lưới, hãy dùng sức gồng cứng vùng bụng (Đan Điền) để "phanh" đứng thân người lại lập tức.</p>
 <p>Không để đà xoay lôi người đi thêm.</p>
@@ -1026,12 +1038,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_14.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

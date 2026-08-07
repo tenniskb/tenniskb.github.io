@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,16 +936,16 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Cảm Nhận Cơ Thể Tennis - Chương 20</h1>
-<p>PHẦN 5: TRÌNH ĐỘ CAO HƠN</p>
+<p><strong>PHẦN 5: TRÌNH ĐỘ CAO HƠN</strong></p>
 <h2>CHƯƠNG 20: FLOW STATE – TRẠNG THÁI DÒNG CHẢY VÀ SỰ TRỐNG RỖNG HOÀN HẢO</h2>
 <p>Xuyên suốt 19 chương vừa qua, chúng ta đã mổ xẻ quần vợt đến từng chi tiết vi mô nhất: từáp lực dưới lòng bàn chân, độ trễ của hông, cho đến góc khóa của bờ vai.</p>
 <p>Nhưng một nghịch lý vĩ đại của thể thao đỉnh cao là: Để đạt đến cảnh giới cao nhất, anh phải quên đi toàn bộ những chi tiết đó .</p>
 <p>Khi bước ra sân đấu thực sự, nếu đầuóc anh vẫn còn bận rộn lẩm nhẩm "phải trùng gối", "phải xoay hông", anh sẽ luôn chậm hơn quả bóng một nhịp.</p>
 <p>Chương cuối cùng này không dạy thêm một kỹ thuật cơ sinh học nào nữa.</p>
 <p>Nó là bước chuyển hóa cuối cùng: Đưa hệ thống Nhận thức cơ thể (Proprioception) vào trạng thái tự trị hoàn toàn, nơi anh chơi bóng bằng sự "trống rỗng" của tâm trí – trạng thái Flow (Dòng chảy).</p>
-<h3>20.1 Vượt Qua Kỹ Thuật: Hạt Giống Đã Nảy Mầm Quá trình rèn luyện Proprioception là quá trình gieo hạt.</h3>
+<h3><strong>20.1 Vượt Qua Kỹ Thuật: Hạt Giống Đã Nảy Mầm Quá trình rèn luyện Proprioception là quá trình gieo hạt.</strong></h3>
 <p>Những bài tập nhắm mắt, những cú đánh đi chậm như Thái Cực, những lần hãm lực phanh gấp... tất cả là để rèn dũa mạng lưới thần kinh tủy sống.</p>
 <p>Nhưng trong trận đấu, hạt giống đó phải tự lớn lên mà không cần anh "can thiệp" bằng ý thức.</p>
 <p>- Kỹ thuật là chiếc bè để qua sông.</p>
@@ -942,7 +954,7 @@
 <p>Anh không phán xét cú đánh trước đó.</p>
 <p>Anh không lo lắng về điểm số tiếp theo.</p>
 <p>Anh chỉ hiện diện trọn vẹnở khoảnh khắc quả bóng vừa rời mặt vợt đối thủ.</p>
-<h3>20.2 T rạng Thái "vô Niệm" (no-mind / Mushin) Trong võ thuật phương Đông, có một trạng thái gọi là "vô Niệm" (mushin) – tâm trí không bám víu vào bất cứ mộtý niệm nào, nhờ vậy mà nó có thể phản ứng ngay lập tức với mọi sự thay đổi của môi trường.</h3>
+<h3><strong>20.2 T rạng Thái "vô Niệm" (no-mind / Mushin) Trong võ thuật phương Đông, có một trạng thái gọi là "vô Niệm" (mushin) – tâm trí không bám víu vào bất cứ mộtý niệm nào, nhờ vậy mà nó có thể phản ứng ngay lập tức với mọi sự thay đổi của môi trường.</strong></h3>
 <p>Flow State trong quần vợt chính là Vô Niệm.</p>
 <p>Khi đạt được trạng thái này: 1.</p>
 <p>Thời gian chậm lại: Nhờ hệ thống Proprioception ước lượng không gian sắc bén, anh không còn thấy quả bóng bay nhanh như một viên đạn nữa.</p>
@@ -951,7 +963,7 @@
 <p>Cơ thể anh tự động thực hiện chuỗi động lực (kinetic chain) như một cơ chế phản xạ sinh tồn.</p>
 <p>Quả bóng bay đến, đôi chân tự động tách ra thả rơi (Split-step), hông tự động mở (C-step), và năng lượng tự động phóng thích (Fajin). 3. Âm thanh tĩnh lặng: Thế giới xung quanh dường như im bặt.</p>
 <p>Anh chỉ còn nghe thấy tiếng giày lướt trên mặt sân và tiếng "póp" chắc nịch khi bóng chạm vào điểm ngọt.</p>
-<h3>20.3 Sự Đồng Bộ Tối Thượng (ultimate Synchronization) Ở đẳng cấp phong trào, người chơi thường tách biệt bản thân khỏi môi trường.</h3>
+<h3><strong>20.3 Sự Đồng Bộ Tối Thượng (ultimate Synchronization) Ở đẳng cấp phong trào, người chơi thường tách biệt bản thân khỏi môi trường.</strong></h3>
 <p>Họ coi mặt sân là thứ để dẫm lên, cái vợt là vật để cầm, quả bóng là mục tiêu để tiêu diệt, và đối thủ là kẻ thù.</p>
 <p>Trong Flow State, ranh giới này bị xóa nhòa.</p>
 <p>- Anh nhận ra Lực phản lực từ mặt đất (Ground Reaction Forces) chính là nhịp đập của bản thân.</p>
@@ -960,7 +972,7 @@
 <p>Lúc này, anh mượn sức của mọi thứ xung quanh.</p>
 <p>Sự tĩnh tại của trục cột sống anh không phải là sự gồng mình chống lại sự hỗn loạn, mà là "con mắt bão" – nơi tĩnh lặng nhất ở ngay giữa tâm điểm của cơn bão tốc độ.</p>
 <p>Mọi luồng xoáy của đối thủ đều bị vô hiệu hóa khi chạm vào tâm bão này.</p>
-<h3>20.4 C hấp Nhận</h3>
+<h3><strong>20.4 C hấp Nhận</strong></h3>
 <p>Sự Bất Hoàn Hảo Để Đạt Đến Hoàn Hảo Một tay vợt mắc kẹt trong kỹ thuật sẽ dễ dàng nổi điên khi đánh hỏng một quả bóng.</p>
 <p>Họ tự dằn vặt và đánh mất nhịp điệu (rhythm).</p>
 <p>Nhưng khi chơi bằng cảm nhận không gian, anh hiểu rằng quả bóng có thể bật trúng một hạt cát và nảy lệch đi (bad bounce).</p>
@@ -986,12 +998,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="../index.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,17 +936,17 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Cảm Nhận Cơ Thể Tennis - Chương 03</h1>
 <h2>CHƯƠNG 3: CẢM NHẬN BÀN CHÂN VÀ LỰC PHẢN LỰC – NƠI MỌI CÚ ĐÁNH BẮT ĐẦU</h2>
-<p>Nếu anh xây một ngôi nhà, sự vững chắc không nằmở mái ngói hay những bức tường, mà nằmở móng.</p>
+<p>Nếu anh xây một ngôi nhà, sự vững chắc không nằm ở mái ngói hay những bức tường, mà nằm ở móng.</p>
 <p>Quần vợt cũng vậy.</p>
-<p>Sự khác biệt lớn nhất giữa một tay vợt phong trào và một tay vợt tinh hoa không nằmở cách họ cầm vợt vung tay, màở cách bàn chân họ tương tác với mặt đất. Ở chương này, chúng ta sẽ không nói về việc chạy nhanh hơn.</p>
+<p>Sự khác biệt lớn nhất giữa một tay vợt phong trào và một tay vợt tinh hoa không nằm ở cách họ cầm vợt vung tay, màở cách bàn chân họ tương tác với mặt đất. Ở chương này, chúng ta sẽ không nói về việc chạy nhanh hơn.</p>
 <p>Chúng ta sẽ nói về việc đứng vững hơn, cảm nhận sâu hơn, và cách biến mặt sân thành nguồn cung cấp năng lượng vô tận cho chuỗi động lực (Kinetic Chain).</p>
-<h3>3.1 Năng Lượng</h3>
+<h3><strong>3.1 Năng Lượng</strong></h3>
 <p>Từ Mặt Đất (Ground Reaction Forces - GRF) Cơ sinh học (Biomechanics) hiện đại của quần vợt dựa trên một nguyên lý vật lý cơ bản: Định luật III Newton.</p>
 <p>Khi anh đạp một lực xuống mặt sân, mặt sân sẽ trả lại một lực tương đương, đi ngược từ dưới lên. Đây được gọi là Lực Phản Lực Mặt Đất (Ground Reaction Forces - GRF).</p>
-<p>Phần lớn người chơi đánh mất nguồn năng lượng này vì họ có xu hướng nhón gót, kiễng chân, hoặc vươn người lên quá sớm khi đánh bóng.</p>
+<p><strong>Phần lớn người chơi đánh mất nguồn năng lượng này vì họ có xu hướng nhón gót, kiễng chân, hoặc vươn người lên quá sớm khi đánh bóng.</strong></p>
 <p>Khi đó, chuỗi động lực bị đứt gãy ngay từ điểm đầu tiên.</p>
 <p>Cơ chế truyền lực đúng: 1.</p>
 <p>Nén (Loading): Bàn chân bám chặt, đầu gối khuỵu xuống nhẹ, hấp thụ trọng lượng cơ thể. 2.</p>
@@ -942,46 +954,46 @@
 <p>Dẫn truyền (Transfer): Năng lượng từ đất đi qua bắp chân, đùi, kích hoạt hông, truyền lên cột sống và thoát raở cánh tay.</p>
 <p>Nếu anh cảm nhận tốt bàn chân, anh không cần phải gồng cánh tay.</p>
 <p>Mặt sân đã làm thay anh phần lớn công việc nặng nhọc.</p>
-<h3>3.2 Sự Tối Giản Cấu Trúc</h3>
+<h3><strong>3.2 Sự Tối Giản Cấu Trúc</strong></h3>
 <p>Trong Bộ Pháp (Structural Minimalism) Nhiều người nghĩ Footwork (bộ pháp) là những bước chạy lạch bạch liên tục.</p>
 <p>Thực tế, Footwork đỉnh cao là sự tối giản.</p>
 <p>Làmít bước hơn, nhưng mỗi bước đều mang tính quyết định.</p>
-<p>Sự tối giản cấu trúc trong di chuyển có nghĩa là:</p>
+<p><strong>Sự tối giản cấu trúc trong di chuyển có nghĩa là:</strong></p>
 <p>- Không có chuyển động thừa: Loại bỏ những bước nhảy nhót vô nghĩa không phục vụ cho việc định vị trọng tâm.</p>
 <p>- Tốiưu hóa năng lượng: Mỗi lần bàn chân chạm đất là một lần anh thiết lập lại thăng bằng.</p>
 <p>- Sử dụng bước điều chỉnh (Adjustment Steps): Thay vì chạy những sải dài lao về phía bóng, người chơi hệ nhận thức (Proprioception) sẽ tiếp cận khu vực có bóng, sau đó dùng 2-3 bước cực nhỏ và nhẹ để tinh chỉnh khoảng cách (spacing) sao cho điểm tiếp xúc (contact point) rơi vào vùng hoàn hảo nhất.</p>
-<h3>3.3 Khí Lực Nội</h3>
+<h3><strong>3.3 Khí Lực Nội</strong></h3>
 <p>Tại: Triết Lý Đứng Như Cây Cổ Thụ Có một sự tương đồng mãnh liệt giữa kỹ thuật quần vợt đỉnh cao và triết lý chuyển động của Thái Cực (Tai Chi) – đặc biệt là kỹ thuật Mã Bộ (horse stance). Để sinh ra uy lực mà không cần dùng sức càn lướt, cơ thể phải có một cái "gốc" (Rooting).</p>
-<p>- Khí trầm đan điền: Hãy tưởng tượng trọng tâm cơ thể anh không nằmở ngực hay vai, mà hạ thấp xuống vùng bụng dưới (đan điền).</p>
+<p>- Khí trầm đan điền: Hãy tưởng tượng trọng tâm cơ thể anh không nằm ở ngực hay vai, mà hạ thấp xuống vùng bụng dưới (đan điền).</p>
 <p>Khi trọng tâm hạ xuống, hai bàn chân tự nhiên sẽ bám chặt vào mặt sân như rễ cây cổ thụ.</p>
 <p>- Tĩnh trong Động: Khi di chuyển đến bóng, phần thân trên (vai, tay, cổ) phải hoàn toàn thả lỏng và tĩnh tại.</p>
 <p>Chỉ có phần thân dưới (chân, hông) là hoạt động để thiết lập bệ phóng.</p>
 <p>Sự thả lỏng này cho phép năng lượng nội tại lưu thông liền mạch từ dưới lòng bàn chân lên tới ngọn vợt mà không gặp bất kỳ sự căng cứng cản trở nào.</p>
 <p>Nếu anh gồng cứng cơ bắp ngay khi bóng vừa rời mặt vợt đối thủ, anh tự khóa chặt các khớp, làm mất đi sự nhạy bén của hệ thống cảm biến không gian (Proprioception).</p>
-<h3>3.4 Phân Phối Trọng Lượng</h3>
+<h3><strong>3.4 Phân Phối Trọng Lượng</strong></h3>
 <p>Trên Bàn Chân Không phải cứ dậm chân mạnh là đúng.</p>
 <p>Vị trí tiếp xúc lực trên lòng bàn chân quyết định trạng thái của cơ thể.</p>
 <p>Trọng lượng ở Gót chân: Khiến cơ thể bị ngửa ra sau (đổ trụ), anh sẽ bị trễ nhịp và đánh bóng vọt hàng rào.</p>
 <p>Trọng lượng ở Mũi chân (quá mức): Khiến cơ thể đổ chúi về trước, mất khả năng xoay hông (rotation), dễ dính bóng vào người. Điểm vàng (Balls of the feet - Ức bàn chân): Trọng lượng lý tưởng nhất nên đặt vào phần ức bàn chân (ngay dưới các ngón chân) và trải đều sang hai bên rìa bàn chân.</p>
 <p>Vị trí này khóa chặt mắt cá, giữ cho gối linh hoạt và sẵn sàng kích hoạt bất kỳ hướng di chuyển nào chỉ trong tích tắc.</p>
-<h3>3.5 Bài Tập Thực Hành: Gieo Rễ</h3>
+<h3><strong>3.5 Bài Tập Thực Hành: Gieo Rễ</strong></h3>
 <p>Xuống Mặt Sân Để kết nối lại với đôi bàn chân, hệ thần kinh cần những bài tập tĩnh và chậm để tái lập trình.</p>
-<p>Bài Tập 1: Chuyển Trọng Lượng Âm Dương (Weight Shift Awareness) Cách làm: Đứng rộng bằng vai.</p>
+<h3><strong>Bài Tập 1: Chuyển Trọng Lượng Âm Dương (Weight Shift Awareness) Cách làm: Đứng rộng bằng vai.</strong></h3>
 <p>Chậm rãi chuyển 100% trọng lượng sang chân phải, uốn cong gối phải một chút, cảm nhận sức nặng dồn xuống lòng bàn chân phải.</p>
 <p>Chân trái lúc này chạm đất nhưng hoàn toàn "trống rỗng" (không có trọng lượng).</p>
 <p>Giữ 3 giây.</p>
 <p>Sau đó từ từ đẩy lực từ mặt đất, chuyển trọng lượng sang chân trái.</p>
 <p>Mục tiêu: Cảm nhận sự thay đổiáp lực cực kỳ rõ ràng ở lòng bàn chân.</p>
 <p>Trạng thái "đầy" và "vơi" của trọng lượng chính là nhịp điệu của một cú đánh hoàn hảo.</p>
-<p>Bài Tập 2: Đánh Bóng Mở Trụ (Open Stance Grounding) Cách làm: Khi khởi động trên sân (rally nhẹ), hãy chủý đánh mọi cú Forehand ở tư thế Open Stance (mở rộng hai chân đối diện lưới).</p>
+<h3><strong>Bài Tập 2: Đánh Bóng Mở Trụ (Open Stance Grounding) Cách làm: Khi khởi động trên sân (rally nhẹ), hãy chủý đánh mọi cú Forehand ở tư thế Open Stance (mở rộng hai chân đối diện lưới).</strong></h3>
 <p>Trọng tâm cảm nhận: Đừng tập trung vào tay.</p>
 <p>Hãy tập trung vào việc nhấn cạnh trong của bàn chân trụ (chân phải với cú Forehand của người thuận tay phải) xuống mặt sân sát thời điểm vung vợt.</p>
 <p>Cảm nhận lực đẩy hông xoay lên như thế nào.</p>
-<p>TỔNG KẾT</p>
+<p><strong>TỔNG KẾT</strong></p>
 <h2>CHƯƠNG 3</h2>
-<h3>3.1 Năng Lượng Từ Mặt Đất (ground Reaction Forces - GRF) Cơ sinh học (biomechanics) hiện đại của quần vợt dựa trên một nguyên lý vật lý cơ bản: Định luật III Newton.</h3>
+<h3><strong>3.1 Năng Lượng Từ Mặt Đất (ground Reaction Forces - GRF) Cơ sinh học (biomechanics) hiện đại của quần vợt dựa trên một nguyên lý vật lý cơ bản: Định luật III Newton.</strong></h3>
 <p>Khi anh đạp một lực xuống mặt sân, mặt sân sẽ trả lại một lực tương đương, đi ngược từ dưới lên. Đây được gọi là Lực Phản Lực Mặt Đất (Ground Reaction Forces - GRF).</p>
-<p>Phần lớn người chơi đánh mất nguồn năng lượng này vì họ có xu hướng nhón gót, kiễng chân, hoặc vươn người lên quá sớm khi đánh bóng.</p>
+<p><strong>Phần lớn người chơi đánh mất nguồn năng lượng này vì họ có xu hướng nhón gót, kiễng chân, hoặc vươn người lên quá sớm khi đánh bóng.</strong></p>
 <p>Khi đó, chuỗi động lực bị đứt gãy ngay từ điểm đầu tiên.</p>
 <p>Cơ chế truyền lực đúng: 1.</p>
 <p>Nén (Loading): Bàn chân bám chặt, đầu gối khuỵu xuống nhẹ, hấp thụ trọng lượng cơ thể. 2.</p>
@@ -989,27 +1001,27 @@
 <p>Dẫn truyền (Transfer): Năng lượng từ đất đi qua bắp chân, đùi, kích hoạt hông, truyền lên cột sống và thoát raở cánh tay.</p>
 <p>Nếu anh cảm nhận tốt bàn chân, anh không cần phải gồng cánh tay.</p>
 <p>Mặt sân đã làm thay anh phần lớn công việc nặng nhọc.</p>
-<h3>3.2 Sự Tối Giản Cấu Trúc Trong Bộ Pháp (structural Minimalism) Nhiều người nghĩ Footwork (bộ pháp) là những bước chạy lạch bạch liên tục.</h3>
+<h3><strong>3.2 Sự Tối Giản Cấu Trúc Trong Bộ Pháp (structural Minimalism) Nhiều người nghĩ Footwork (bộ pháp) là những bước chạy lạch bạch liên tục.</strong></h3>
 <p>Thực tế, Footwork đỉnh cao là sự tối giản.</p>
 <p>Làmít bước hơn, nhưng mỗi bước đều mang tính quyết định.</p>
-<p>Sự tối giản cấu trúc trong di chuyển có nghĩa là:</p>
+<p><strong>Sự tối giản cấu trúc trong di chuyển có nghĩa là:</strong></p>
 <p>- Không có chuyển động thừa: Loại bỏ những bước nhảy nhót vô nghĩa không phục vụ cho việc định vị trọng tâm.</p>
 <p>- Tốiưu hóa năng lượng: Mỗi lần bàn chân chạm đất là một lần anh thiết lập lại thăng bằng.</p>
 <p>- Sử dụng bước điều chỉnh (Adjustment Steps): Thay vì chạy những sải dài lao về phía bóng, người chơi hệ nhận thức (Proprioception) sẽ tiếp cận khu vực có bóng, sau đó dùng 2-3 bước cực nhỏ và nhẹ để tinh chỉnh khoảng cách (spacing) sao cho điểm tiếp xúc (contact point) rơi vào vùng hoàn hảo nhất.</p>
-<h3>3.3 K hí Lực Nội Tại: Triết</h3>
+<h3><strong>3.3 K hí Lực Nội Tại: Triết</strong></h3>
 <p>Lý Đứng Như Cây Cổ Thụ Có một sự tương đồng mãnh liệt giữa kỹ thuật quần vợt đỉnh cao và triết lý chuyển động của Thái Cực (Tai Chi) – đặc biệt là kỹ thuật Mã Bộ (horse stance). Để sinh ra uy lực mà không cần dùng sức càn lướt, cơ thể phải có một cái "gốc" (Rooting).</p>
-<p>- Khí trầm đan điền: Hãy tưởng tượng trọng tâm cơ thể anh không nằmở ngực hay vai, mà hạ thấp xuống vùng bụng dưới (đan điền).</p>
+<p>- Khí trầm đan điền: Hãy tưởng tượng trọng tâm cơ thể anh không nằm ở ngực hay vai, mà hạ thấp xuống vùng bụng dưới (đan điền).</p>
 <p>Khi trọng tâm hạ xuống, hai bàn chân tự nhiên sẽ bám chặt vào mặt sân như rễ cây cổ thụ.</p>
 <p>- Tĩnh trong Động: Khi di chuyển đến bóng, phần thân trên (vai, tay, cổ) phải hoàn toàn thả lỏng và tĩnh tại.</p>
 <p>Chỉ có phần thân dưới (chân, hông) là hoạt động để thiết lập bệ phóng.</p>
 <p>Sự thả lỏng này cho phép năng lượng nội tại lưu thông liền mạch từ dưới lòng bàn chân lên tới ngọn vợt mà không gặp bất kỳ sự căng cứng cản trở nào.</p>
 <p>Nếu anh gồng cứng cơ bắp ngay khi bóng vừa rời mặt vợt đối thủ, anh tự khóa chặt các khớp, làm mất đi sự nhạy bén của hệ thống cảm biến không gian (Proprioception).</p>
-<h3>3.4 P hân Phối Trọng Lượng Trên Bàn Chân Không phải cứ dậm chân mạnh là đúng.</h3>
+<h3><strong>3.4 P hân Phối Trọng Lượng Trên Bàn Chân Không phải cứ dậm chân mạnh là đúng.</strong></h3>
 <p>Vị trí tiếp xúc lực trên lòng bàn chân quyết định trạng thái của cơ thể.</p>
 <p>Trọng lượng ở Gót chân: Khiến cơ thể bị ngửa ra sau (đổ trụ), anh sẽ bị trễ nhịp và đánh bóng vọt hàng rào.</p>
 <p>Trọng lượng ở Mũi chân (quá mức): Khiến cơ thể đổ chúi về trước, mất khả năng xoay hông (rotation), dễ dính bóng vào người. Điểm vàng (Balls of the feet - Ức bàn chân): Trọng lượng lý tưởng nhất nên đặt vào phần ức bàn chân (ngay dưới các ngón chân) và trải đều sang hai bên rìa bàn chân.</p>
 <p>Vị trí này khóa chặt mắt cá, giữ cho gối linh hoạt và sẵn sàng kích hoạt bất kỳ hướng di chuyển nào chỉ trong tích tắc.</p>
-<h3>3.5 Bài Tập Thực Hành: Gieo Rễ Xuống Mặt Sân Để kết nối lại với đôi bàn chân, hệ thần kinh cần những bài tập tĩnh và chậm để tái lập trình. Bài</h3>
+<h3><strong>3.5 Bài Tập Thực Hành: Gieo Rễ Xuống Mặt Sân Để kết nối lại với đôi bàn chân, hệ thần kinh cần những bài tập tĩnh và chậm để tái lập trình. Bài</strong></h3>
 <p>Tập 1: Chuyển Trọng Lượng Âm Dương (Weight Shift Awareness) Cách làm: Đứng rộng bằng vai.</p>
 <p>Chậm rãi chuyển 100% trọng lượng sang chân phải, uốn cong gối phải một chút, cảm nhận sức nặng dồn xuống lòng bàn chân phải.</p>
 <p>Chân trái lúc này chạm đất nhưng hoàn toàn "trống rỗng" (không có trọng lượng).</p>
@@ -1017,7 +1029,7 @@
 <p>Sau đó từ từ đẩy lực từ mặt đất, chuyển trọng lượng sang chân trái.</p>
 <p>Mục tiêu: Cảm nhận sự thay đổiáp lực cực kỳ rõ ràng ở lòng bàn chân.</p>
 <p>Trạng thái "đầy" và "vơi" của trọng lượng chính là nhịp điệu của một cú đánh hoàn hảo.</p>
-<p>Bài Tập 2: Đánh Bóng Mở Trụ (Open Stance Grounding) Cách làm: Khi khởi động trên sân (rally nhẹ), hãy chủý đánh mọi cú Forehand ở tư thế Open Stance (mở rộng hai chân đối diện lưới).</p>
+<h3><strong>Bài Tập 2: Đánh Bóng Mở Trụ (Open Stance Grounding) Cách làm: Khi khởi động trên sân (rally nhẹ), hãy chủý đánh mọi cú Forehand ở tư thế Open Stance (mở rộng hai chân đối diện lưới).</strong></h3>
 <p>Trọng tâm cảm nhận: Đừng tập trung vào tay.</p>
 <p>Hãy tập trung vào việc nhấn cạnh trong của bàn chân trụ (chân phải với cú Forehand của người thuận tay phải) xuống mặt sân sát thời điểm vung vợt.</p>
 <p>Cảm nhận lực đẩy hông xoay lên như thế nào.</p>
@@ -1030,12 +1042,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_04.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

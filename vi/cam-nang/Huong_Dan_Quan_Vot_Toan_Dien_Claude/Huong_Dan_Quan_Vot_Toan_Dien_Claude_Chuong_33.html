@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 33</h1>
 <p>SPEED, AGILITY, VÀ COURT MOVEMENT Chương 33: Làm Chủ Sân Đấu *"Không phải bóng tìm đến bạn.</p>
 <p>Bạn phải tìm đến bóng — và tìm đến đúng lúc, đúng tư thế, đủ bình tĩnh để đánh tốt."* &gt; — Huấn luyện viên tennis ẩn danh Strength training (chương 32) xây dựng engine.</p>
@@ -933,64 +945,58 @@
 <p>Nhưng một người cover court gần như không cần cố gắng — luôn ở đúng vị trí, luôn có đủ thời gian chuẩn bị.</p>
 <p>Người kia liên tục bị rushed, đánh trong tư thế xấu, và exhaust hơn nhiều dù chạy cùng khoảng cách.</p>
 <p>Sự khác biệt không phải là fitness.</p>
-<p>Là movement intelligence — cách di chuyển trên sân.</p>
+<p><strong>Là movement intelligence — cách di chuyển trên sân.</strong></p>
 <p>Chương này cover toàn bộ: footwork patterns, split step, recovery movement, agility drills, và cách integrate movement training vào tennis practice.</p>
-<h3>33.1 TEnnis Movement Không Phải Là "chạy" Hiểu Nhầm Căn Bản</h3>
+<h3><strong>33.1 Tennis Movement Không Phải Là "chạy" Hiểu Nhầm Căn Bản</strong></h3>
 <p>Khi nhiều players nghĩ đến "cải thiện court coverage," họ nghĩ đến cardio — chạy thêm, tăng endurance.</p>
-<p>Nhưng tennis movement là một skill — không phải chỉ là fitness.</p>
+<p><strong>Nhưng tennis movement là một skill — không phải chỉ là fitness.</strong></p>
 <p>Và như mọi skill, nó cần được practice đúng cách để improve.</p>
 <p>Một marathon runner với VO2 max xuất sắc có thể bị outmoved bởi một tennis player có footwork training tốt, dù fitness của runner cao hơn nhiều.</p>
-<p>Lý do: Tennis movement có những đặc thù riêng mà straight-line running không train: Multi-directional: Trái, phải, trước, sau, diagonal — và switch hướng trong</p>
-<h3>0.2 giây</h3>
+<p>Lý do: Tennis movement có những đặc thù riêng mà straight-line running không train: Multi-directional: Trái, phải, trước, sau, diagonal — và switch hướng trong 0.2 giây</p>
 <p>Non-linear acceleration: Không có warm-up period.</p>
 <p>Explosive từ đứng yên ngay lập tức.</p>
 <p>Deceleration demand: Stopping nhanh quan trọng không kém starting nhanh.</p>
 <p>Recovery movement: Sau mỗi shot, phải return về vị trí tốt cho shot tiếp theo.</p>
-<p>Position-dependent: Không phải chạy đến bóng — chạy đến vị trí tốt nhất để đánh bóng.</p>
+<p><strong>Position-dependent: Không phải chạy đến bóng — chạy đến vị trí tốt nhất để đánh bóng.</strong></p>
 <p>The Two Types of Court Speed Type 1: Reaction Speed Thời gian từ khi bóng rời racket của đối thủ đến khi bạn bắt đầu move. Đây là mental/perceptual speed — không phải muscle speed.</p>
 <p>Train bằng cách read opponent cues sớm hơn.</p>
 <p>Type 2: Movement Speed Thời gian từ khi bắt đầu move đến khi đến vị trí. Đây là physical speed — trainable qua footwork drills, strength training, và agility work.</p>
 <p>Tại sao reaction speed quan trọng hơn bạn nghĩ: Trên sân tennis, bóng di chuyển với tốc độ 100-200 km/h.</p>
 <p>Từ baseline đến baseline mất khoảng 0.5-1 giây.</p>
-<p>Nếu bạn react</p>
-<h3>0.1 giây chậm hơn so với optimal</h3>
-<p>— bạn mất khoảng 3-4 meters trong quá trình di chuyển đó.</p>
+<p>Nếu bạn react 0.1 giây chậm hơn so với optimal</p>
+<p><strong>— bạn mất khoảng 3-4 meters trong quá trình di chuyển đó.</strong></p>
 <p>Players như Djokovic không đặc biệt nhanh về raw sprint speed.</p>
-<p>Họ đặc biệt ở early ball recognition — họ bắt đầu di chuyển sớm hơn người khác 0.1-</p>
-<h3>0.2 giây. Đó là lợi thế khổng</h3>
-<p>lồ.</p>
-<h3>33.2 THe Split Step — Foundation Of Tennis Movement Tại Sao Split Step Là Quan Trọng Nhất</h3>
+<p>Họ đặc biệt ở early ball recognition — họ bắt đầu di chuyển sớm hơn người khác 0.1- 0.2 giây. Đó là lợi thế khổng lồ.</p>
+<h3><strong>33.2 The Split Step — Foundation Of Tennis Movement Tại Sao Split Step Là Quan Trọng Nhất</strong></h3>
 <p>Nếu bạn chỉ có thể cải thiện một điều trong tennis movement, hãy cải thiện split step.</p>
 <p>Split step không phải là fancy technique.</p>
 <p>Nó là prerequisite cho mọi chuyển động tiếp theo.</p>
 <p>Một split step tốt cho phép explosive movement trong bất kỳ hướng nào.</p>
-<p>Một split step xấu — hoặc không có split step — buộc bạn bắt đầu từ dead stop.</p>
+<p><strong>Một split step xấu — hoặc không có split step — buộc bạn bắt đầu từ dead stop.</strong></p>
 <p>Cơ Chế Sinh Lý Split step hoạt động dựa trên một hiện tượng gọi là stretch-shortening cycle (SSC).</p>
 <p>Khi bạn land từ split step, cơ bắp (đặc biệt là quads và calves) bị stretch nhanh.</p>
 <p>Ngay lập tức, cơ phản xạ co lại mạnh hơn bình thường — tạo ra power lớn hơn cho first explosive step. Đây là lý do players được huấn luyện tốt có first step nhanh hơn đáng kể dù không có raw speed hơn: họ dùng SSC hiệu quả hơn qua split step.</p>
 <p>Timing Của Split Step Đây là điểm nhiều players làm sai nhất.</p>
-<p>Split step phải xảy ra VÀO THỜI ĐIỂM đối thủ contact bóng — không trước, không sau.</p>
+<p><strong>Split step phải xảy ra VÀO THỜI ĐIỂM đối thủ contact bóng — không trước, không sau.</strong></p>
 <p>Quá sớm: Bạn đã land trước khi biết bóng đi đâu → không có directional information để push off đúng hướng.</p>
-<p>Quá trễ: Bạn đang airborne trong khi bóng đã qua → mất 0.2-</p>
-<h3>0.3 giây phản xạ</h3>
+<p>Quá trễ: Bạn đang airborne trong khi bóng đã qua → mất 0.2- 0.3 giây phản xạ</p>
 <p>Đúng thời điểm: Land ngay khi opponent contact → bạn nhìn thấy hướng bóng đang airborne → push off đúng hướng ngay khi land.</p>
 <p>Cách practice timing: Đứng ở baseline.</p>
 <p>Nhờ partner feed bóng từ net.</p>
 <p>Nhìn vào tay partner.</p>
-<p>Split step VÀO THÚC ĐIỂM partner release bóng. Đừng nhìn bóng — nhìn hand contact point.</p>
-<p>Kỹ Thuật Split Step Đúng: - Nhảy nhỏ, không cao — chỉ cần đủ để activate SSC - Land với feet slightly wider than hip-width - Land on balls of feet (không phải heel) - Knees slightly bent khi land - Weight forward (không ngả ra sau) - Sẵn sàng push ngay lập tức Sai thường gặp: - Nhảy quá cao → hang time lớn → lost time - Land trên heels → không thể push off nhanh - Feet too narrow → ít base để push - Too upright → phải extra bend trước khi push</p>
-<h3>33.3 MOvement Patterns — Footwork Cho Từng Tình Huống Pattern 1: Lateral Movement (forehand và Backhand Side)</h3>
-<p>Đây là movement pattern phổ biến nhất trong tennis — moving left or right to groundstrokes.</p>
+<p><strong>Split step VÀO THÚC ĐIỂM partner release bóng. Đừng nhìn bóng — nhìn hand contact point.</strong></p>
+<p>Kỹ Thuật Split Step Đúng: - Nhảy nhỏ, không cao — chỉ cần đủ để activate SSC - Land với feet slightly wider than hip-width - Land on balls of feet (không phải heel) - Knees slightly bent khi land - Weight forward (không ngả ra sau) - Sẵn sàng push ngay lập tức Sai thường gặp: - Nhảy quá cao → hang time lớn → lost time - Land trên heels → không thể push off nhanh - Feet too narrow → ít base để push - Too upright → phải extra bend trước khi push 33.3 Movement Patterns — Footwork Cho Từng Tình Huống Pattern 1: Lateral Movement (forehand và Backhand Side)</p>
+<p><strong>Đây là movement pattern phổ biến nhất trong tennis — moving left or right to groundstrokes.</strong></p>
 <p>Footwork options: Side shuffle (defensive/moderate distance): - Không cross feet - Maintain low base - Tốt cho controlled recovery - Used when: moderate distance, time is available Crossover step (offensive/long distance): - Bước chân gần cross over chân xa - Một bước dài hơn nhiều so với shuffle - Tốt cho covering ground quickly - Used when: wide ball, need to cover more distance Key principle: Cho groundstrokes từ baseline, hướng tới open stance hoặc semi-open stance khi bị rushed, closed/neutral stance khi có đủ thời gian để set up.</p>
-<p>Open stance cho phép đánh mà không cần fully recover footwork — useful defensively.</p>
+<p><strong>Open stance cho phép đánh mà không cần fully recover footwork — useful defensively.</strong></p>
 <p>Nhưng generate less power so với closed stance khi thời gian cho phép.</p>
 <p>Pattern 2: Forward Movement (Approach Shot, Volley) Moving forward qua net có hai patterns khác nhau tùy vào bóng: Running forehand/backhand: Khi bóng ngắn ở giữa sân — run through ball với momentum.</p>
 <p>Side-approach (bóng wide): Khi bóng ngắn và wide — điều chỉnh path để avoid trapping yourself at net.</p>
 <p>Serve and volley: Explosive push off sau serve → split step trước khi opponent contact → volley.</p>
 <p>Pattern 3: Backward Movement (Lob Defense) Moving backward là movement pattern khó nhất trong tennis.</p>
 <p>Nhiều players không train này đủ.</p>
-<p>Backpedal: Cho lobs không quá sâu — maintain court view.</p>
-<p>Turn và run: Khi lob sâu — turn sideways và sprint.</p>
+<p><strong>Backpedal: Cho lobs không quá sâu — maintain court view.</strong></p>
+<p><strong>Turn và run: Khi lob sâu — turn sideways và sprint.</strong></p>
 <p>Faster nhưng briefly mất sight of ball.</p>
 <p>Key: Quyết định sớm.</p>
 <p>Backpedaling khi lob quá sâu → không catch lob AND mất balance.</p>
@@ -1000,32 +1006,31 @@
 <p>Net recovery: Sau failed approach hay forced back → recover về baseline.</p>
 <p>Why recovery matters so much: Nếu bạn không recover tốt sau mỗi shot, đối thủ có thể systematically pull bạn ra ngoài court.</p>
 <p>Mỗi shot tiếp theo bạn phải cover thêm distance. Đây là cách clay court players như Nadal win — không phải bằng cách đánh winners, mà bằng cách khai thác poor recovery từng cm một.</p>
-<p>Recovery principle: Recover trên path của bóng bạn vừa hit — không về center blindly.</p>
+<p><strong>Recovery principle: Recover trên path của bóng bạn vừa hit — không về center blindly.</strong></p>
 <p>Example: Bạn hit wide forehand crosscourt → đối thủ có góc down the line và crosscourt.</p>
-<p>Recover về vị trí giữa hai possible returns đó — không phải về exact center of baseline.</p>
-<h3>33.4 FOotwork Cho Specific Situations Serve Return Footwork Return of serve là tình huống có least time trong tennis.</p></h3>
-<p>Ball speed từ strong server =</p>
-<h3>0.5 seconds or less to react</h3>
+<p><strong>Recover về vị trí giữa hai possible returns đó — không phải về exact center of baseline.</strong></p>
+<h3>33.4 Footwork Cho Specific Situations Serve Return Footwork Return of serve là tình huống có least time trong tennis.</p></h3>
+<p>Ball speed từ strong server = 0.5 seconds or less to react</p>
 <p>Split step timing cho return: Split step ngay khi server toss ball reaches peak và begins to drop (not when server hits).</p>
 <p>Lý do: bạn cần landing ngay khi server contacts ball.</p>
 <p>Stance for return: Đối với serve rộng — often open stance return, chỉ đơn giản là deflect bóng. Đối với serve vào body — neutral stance, block return. Đối với slow second serve — có thể step in và attack.</p>
 <p>Approach Shot Footwork Approach shot = khi bạn di chuyển forward qua short ball rồi tiến lên net.</p>
-<p>Key footwork principle: Hit approach shot ON THE RUN — không dừng lại để đánh.</p>
+<p><strong>Key footwork principle: Hit approach shot ON THE RUN — không dừng lại để đánh.</strong></p>
 <p>Maintain forward momentum để close net quickly.</p>
 <p>Footwork sequence: 1.</p>
 <p>Read short ball early (khi đối thủ contact) 2.</p>
 <p>Explosive split step → first step forward 3.</p>
-<p>Run to ball — hit on the move 4.</p>
+<p><strong>Run to ball — hit on the move 4.</strong></p>
 <p>Continue forward to net position 5.</p>
 <p>Split step as opponent contacts return Common mistake: Stopping to hit approach shot → good technique but too slow reaching net → opponent has time to pass.</p>
 <p>Net Play Footwork Volleying requires different footwork từ baseline.</p>
 <p>Positioning: T-junction của service box (approximately 3-4 meters from net) — không quench sát net (lob vulnerable), không quá sâu (angle vulnerable).</p>
-<p>Volley footwork: Step INTO the volley — không swing back.</p>
+<p><strong>Volley footwork: Step INTO the volley — không swing back.</strong></p>
 <p>One step forward and punch.</p>
 <p>Weight transfer forward creates power without backswing.</p>
-<p>Split step at net: Same principle as baseline — split step as opponent contacts.</p>
+<p><strong>Split step at net: Same principle as baseline — split step as opponent contacts.</strong></p>
 <p>At net, reaction distance is shorter → split step is even more critical.</p>
-<h3>33.5 AGility Drills — Training Court Movement Drill Category 1: Footwork Fundamentals Cone Drill: 5-Point Star Setup: 5 cones — center và 4 corners (2-3 meters from center each).</p></h3>
+<h3>33.5 Agility Drills — Training Court Movement Drill Category 1: Footwork Fundamentals Cone Drill: 5-Point Star Setup: 5 cones — center và 4 corners (2-3 meters from center each).</p></h3>
 <p>Drill: - Start at center cone - Sprint to corner cone, touch it - Sprint back to center, touch - Repeat to each corner - Go through all 4 corners = 1 set Measure time.</p>
 <p>Target: Under 12 seconds (recreational), under 10 seconds (competitive).</p>
 <p>Focus: Split step at center before each movement.</p>
@@ -1049,39 +1054,38 @@
 <p>One leads (moves laterally, forward, back).</p>
 <p>Other mirrors exactly. 30 seconds on, 30 seconds off.</p>
 <p>Switch leader.</p>
-<p>This trains reactive movement without verbal cues — same as reading opponent in match.</p>
+<p><strong>This trains reactive movement without verbal cues — same as reading opponent in match.</strong></p>
 <p>Ball Drop Reaction Partner holds ball at shoulder height.</p>
 <p>You stand 2-3 meters away in ready position.</p>
-<p>Partner drops ball — you must catch it before second bounce.</p>
+<p><strong>Partner drops ball — you must catch it before second bounce.</strong></p>
 <p>Start close, gradually increase distance as you improve.</p>
 <p>Trains: Reaction time, explosive first step, read-and-go movement.</p>
 <p>Drill Category 3: Tennis-Specific Agility Recovery Drill Coach or partner at net with basket of balls.</p>
 <p>You at baseline.</p>
-<p>Partner hits ball to your forehand side — you run, hit, recover to center.</p>
-<p>Partner immediately hits to backhand side — you run, hit, recover.</p>
+<p><strong>Partner hits ball to your forehand side — you run, hit, recover to center.</strong></p>
+<p><strong>Partner immediately hits to backhand side — you run, hit, recover.</strong></p>
 <p>Continue 8-10 shots continuous.</p>
 <p>Focus: Recovery speed between shots.</p>
 <p>Not shot quality.</p>
 <p>This drills the habit of recovery after every shot.</p>
 <p>Serve + Recovery Hit serve → immediately after contact, sprint to net as if serve-volley.</p>
 <p>Split step as imaginary opponent contacts.</p>
-<p>Backpedal to baseline.</p>
-<p>Repeat.</p>
+<p>Backpedal to baseline. Repeat.</p>
 <p>Trains: Explosive movement after serve, transition movement, backward movement. 3-Ball Drill Three balls placed: one at each corner of service box, one at T.</p>
 <p>You at baseline center.</p>
 <p>On signal, sprint to first ball, pick up, sprint to second, pick up, sprint to third, pick up.</p>
 <p>Return to start.</p>
 <p>Different variations of order train different movement patterns.</p>
-<h3>33.6 THe Ready Position — Being Prepared To Move Why Ready Position Matters You can have great footwork technique but if your ready position is wrong, your first step will be slower.</p></h3>
-<p>Ready position là starting configuration — từ đây mọi movement bắt đầu.</p>
+<h3>33.6 The Ready Position — Being Prepared To Move Why Ready Position Matters You can have great footwork technique but if your ready position is wrong, your first step will be slower.</p></h3>
+<p><strong>Ready position là starting configuration — từ đây mọi movement bắt đầu.</strong></p>
 <p>Optimal Ready Position Stance: Feet shoulder-width apart hoặc slightly wider.</p>
 <p>Weight on balls of feet.</p>
 <p>Knees: Slightly bent (khoảng 15-20 degrees) — không straight (slow to react), không quá bent (tiring and unstable).</p>
-<p>Hips: Low và forward — center of gravity thấp.</p>
+<p><strong>Hips: Low và forward — center of gravity thấp.</strong></p>
 <p>Upper body: Slight forward lean.</p>
 <p>Racket in front, butt cap slightly down.</p>
 <p>Eyes: Looking forward at opponent's contact zone.</p>
-<p>Mental state: Alert but relaxed. "Quiet eyes" — focused but not tense.</p>
+<p><strong>Mental state: Alert but relaxed. "Quiet eyes" — focused but not tense.</strong></p>
 <p>Common Mistakes In Ready Position Standing too upright: Có thể feel comfortable nhưng slow to move.</p>
 <p>Need to bend before moving → adds time.</p>
 <p>Weight on heels: Impossible to explosive step forward or sideways.</p>
@@ -1089,9 +1093,9 @@
 <p>Racket too low: Takes extra time to bring racket up for forehand or backhand.</p>
 <p>Too tense: Paradoxically, muscle tension slows movement.</p>
 <p>Relaxed muscles contract faster.</p>
-<h3>33.7 REading The Game — Movement Intelligence</h3>
+<h3><strong>33.7 Reading The Game — Movement Intelligence</strong></h3>
 <p>What To Watch Elite players don't react to the ball.</p>
-<p>They react to information that predicts where the ball will go — before it goes there.</p>
+<p><strong>They react to information that predicts where the ball will go — before it goes there.</strong></p>
 <p>Cues to read: Opponent's shoulder turn: Early shoulder turn to one side = likely hitting to opposite side (physics of body rotation).</p>
 <p>Opponent's grip: If you can see grip change early, you can predict forehand vs backhand.</p>
 <p>Opponent's contact point: Late contact = likely cross-court (physics).</p>
@@ -1104,7 +1108,7 @@
 <p>None of these cues are 100%.</p>
 <p>But collectively, they shift probability significantly.</p>
 <p>Reading these cues is what allows early movement — and early movement is the hidden advantage of experienced players.</p>
-<p>How To Develop Reading Skills Watch more tennis: Deliberate watching — not entertainment watching.</p>
+<p><strong>How To Develop Reading Skills Watch more tennis: Deliberate watching — not entertainment watching.</strong></p>
 <p>Focus on opponent movement, not ball.</p>
 <p>Where do players move BEFORE ball is hit?</p>
 <p>Practice with awareness: During rallies, consciously try to predict direction before partner contacts.</p>
@@ -1115,8 +1119,8 @@
 <p>Drill with signals: Partner gives clear visual signal before feeding.</p>
 <p>You practice moving to signal, not to ball.</p>
 <p>Gradually reduce time between signal and feed.</p>
-<h3>33.8 SPeed Training On Court Acceleration Drills Unlike track sprinting, tennis rarely requires sustained top speed.</p></h3>
-<p>Tennis speed is almost entirely acceleration — 2-5 explosive steps.</p>
+<h3>33.8 Speed Training On Court Acceleration Drills Unlike track sprinting, tennis rarely requires sustained top speed.</p></h3>
+<p><strong>Tennis speed is almost entirely acceleration — 2-5 explosive steps.</strong></p>
 <p>Resisted sprint: Use resistance band around waist, partner holds back end.</p>
 <p>Sprint forward against resistance. 5-8 meters, full effort, full rest. 8-10 reps.</p>
 <p>Builds explosive leg drive và acceleration mechanics.</p>
@@ -1133,7 +1137,7 @@
 <p>If weight forward or backward → adjust deceleration mechanics.</p>
 <p>Stop-and-go: Sprint 3 steps, stop, sprint different direction, stop, repeat.</p>
 <p>Trains change-of-direction mechanics.</p>
-<h3>33.9 PLyometrics For Court Speed Plyometrics = exercises that use stretch-shortening cycle to develop explosive power.</p></h3>
+<h3>33.9 Plyometrics For Court Speed Plyometrics = exercises that use stretch-shortening cycle to develop explosive power.</p></h3>
 <p>Same mechanism as split step.</p>
 <p>Reminder from chương 32: Build strength foundation before adding plyometrics.</p>
 <p>Basic Plyometrics For Tennis Lateral bound: Jump laterally from one foot, land on opposite foot.</p>
@@ -1144,12 +1148,12 @@
 <p>Reactive lateral drill: Rapid side-to-side steps over a line on the ground. 20 seconds maximum speed.</p>
 <p>Trains quick feet rate.</p>
 <p>Depth jump to sprint: Step off box (30-40cm), land, immediately sprint 5 meters.</p>
-<p>Trains reactive strength — transition from landing to explosive sprint.</p>
+<p><strong>Trains reactive strength — transition from landing to explosive sprint.</strong></p>
 <p>Most closely mimics split step mechanics. 6-8 reps, full rest between.</p>
-<h3>33.10 COmmon Movement Errors</h3>
+<h3><strong>33.10 Common Movement Errors</strong></h3>
 <p>Và Cách Fix Error 1: Watching The Ball, Not The Opponent Symptom: Always late to ball.</p>
 <p>Constantly rushed.</p>
-<p>Cause: Focusing on ball after it leaves opponent's racket — too late.</p>
+<p><strong>Cause: Focusing on ball after it leaves opponent's racket — too late.</strong></p>
 <p>Ball moves faster than you can react at that point.</p>
 <p>Fix: Eyes on opponent's contact zone.</p>
 <p>Move when opponent contacts, not when you see ball direction.</p>
@@ -1159,7 +1163,7 @@
 <p>Cause: Standing flat-footed as opponent hits.</p>
 <p>No SSC activation.</p>
 <p>Fix: Make split step a non-negotiable habit.</p>
-<p>Even if timing isn't perfect initially — any split step is better than none.</p>
+<p><strong>Even if timing isn't perfect initially — any split step is better than none.</strong></p>
 <p>Refine timing over time.</p>
 <p>Error 3: Not Recovering After Each Shot Symptom: Works hard early in rallies, but by shot 5-6 is completely out of position.</p>
 <p>Cause: Watching where shot lands instead of immediately recovering.</p>
@@ -1175,7 +1179,7 @@
 <p>Cause: Recovering to center blindly instead of recovering toward likely return.</p>
 <p>Fix: Think about where your shot went.</p>
 <p>Recover on bisector of opponent's possible angles from that shot.</p>
-<h3>33.11 SAmple Agility Training Week Integration With Tennis Schedule Movement training works best when: - Court-based (not gym treadmill) - Tennis-specific patterns - Included in or after tennis practice, not replacing it Sample agility-focused week: Day Tennis Practice Movement Focus Monday Baseline patterns Lateral movement drills (15 min after practice) Tuesday Rest Mobility work only Wednesday Match play Natural agility from competitive play Thursday Net game + volleys Agility drills: 5-point star, recovery drill Friday Serve + return Reaction drills (partner point, ball drop) Saturday Match / scrimmage Apply in competition Sunday Rest — Standalone Agility Session (30 Minutes) Khi bạn muốn dedicated movement training: Warm-up (5 min): Jog, dynamic hip stretches, leg swings, A-skips.</p></h3>
+<h3>33.11 Sample Agility Training Week Integration With Tennis Schedule Movement training works best when: - Court-based (not gym treadmill) - Tennis-specific patterns - Included in or after tennis practice, not replacing it Sample agility-focused week: Day Tennis Practice Movement Focus Monday Baseline patterns Lateral movement drills (15 min after practice) Tuesday Rest Mobility work only Wednesday Match play Natural agility from competitive play Thursday Net game + volleys Agility drills: 5-point star, recovery drill Friday Serve + return Reaction drills (partner point, ball drop) Saturday Match / scrimmage Apply in competition Sunday Rest — Standalone Agility Session (30 Minutes) Khi bạn muốn dedicated movement training: Warm-up (5 min): Jog, dynamic hip stretches, leg swings, A-skips.</p></h3>
 <p>Split step practice (5 min): Partner feeds, you practice timing split step to their contact.</p>
 <p>Footwork drills (10 min): - Lateral shuffle: 4 × 30 seconds - 5-point star: 4 reps, timed - Spider drill: 3 reps, timed Reaction drills (5 min): - Partner point drill: 2 × 10 - Ball drop: 2 × 8 Tennis-specific (5 min): - Recovery drill: 2 sets of 8 shots Cool down (5 min): Light jog, static stretches.</p>
 <p>Tóm Tắt Chương 33 Tennis movement là skill , không chỉ là fitness.</p>
@@ -1188,7 +1192,7 @@
 <p>Recovery sau mỗi shot là movement habit bị neglect nhất nhưng có impact lớn nhất trong rally play.</p>
 <p>Read opponent, không đọc bóng.</p>
 <p>Cues: shoulder turn, contact point, racket path, stance → predict direction trước khi bóng hit.</p>
-<p>Deceleration training quan trọng không kém acceleration — nhưng thường bị bỏ qua hoàn toàn.</p>
+<p><strong>Deceleration training quan trọng không kém acceleration — nhưng thường bị bỏ qua hoàn toàn.</strong></p>
 <p>Plyometrics (lateral bounds, depth jumps) train explosive reactive movement — nhưng chỉ sau khi có strength foundation. 2 key habits để improve immediately: (1) Split step mọi lúc. (2) Recover sau mọi shot.</p>
 <p>Nhìn Về Phía Trước Chương 33 đã hoàn thành bộ ba về physical preparation: energy systems (31), strength (32), và movement (33).</p>
 <p>Chương 34 sẽ chuyển sang một lĩnh vực khác hoàn toàn: Mental Toughness Và Psychology Trong Tennis — không phải về cơ thể, mà là về mind game — cách build resilience, manage pressure, và perform dưới stress.</p>
@@ -1200,12 +1204,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_34.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

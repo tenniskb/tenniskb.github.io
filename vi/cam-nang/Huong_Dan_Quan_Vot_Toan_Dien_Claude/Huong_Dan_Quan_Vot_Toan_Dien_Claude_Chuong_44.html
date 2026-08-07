@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Hướng Dẫn Quần Vợt Toàn Diện - Chương 44</h1>
 <p>DESIGNING A COACHING PROGRAM Chương 44: Xây Dựng Hệ Thống Đào Tạo *"Give a man a fish and you feed him for a day.</p>
 <p>Teach a man to fish and you feed him for a lifetime.</p>
@@ -933,7 +945,7 @@
 <p>Sự khác biệt giữa một coach tốt và một coaching program tốt rất đáng kể.</p>
 <p>Một coach tốt có thể dạy tốt trong từng session.</p>
 <p>Một coaching program tốt tạo ra consistent, measurable development qua nhiều tháng và nhiều năm — cho nhiều học viên cùng một lúc, theo một pathway có cấu trúc rõ ràng. Đây là thứ câu lạc bộ, academies, và national tennis development programs cần.</p>
-<p>Và đây là thứ bất kỳ coach nghiêm túc nào cũng nên hiểu — dù bạn đang dạy 5 học viên hay 500.</p>
+<p><strong>Và đây là thứ bất kỳ coach nghiêm túc nào cũng nên hiểu — dù bạn đang dạy 5 học viên hay 500.</strong></p>
 <h3>44.1 Triết Lý Của Một Coaching Program Bắt Đầu Với "why" Trước khi thiết kế curriculum, trả lời câu hỏi: Chương trình này tồn tại để làm gì?</p></h3>
 <p>Câu trả lời quyết định mọi thứ sau đó.</p>
 <p>Possible purposes: Participation: Grow the game.</p>
@@ -950,16 +962,15 @@
 <p>Example principles: Long-term development over short-term results.</p>
 <p>We measure success by player development over years, not match results in any single season.</p>
 <p>Every player deserves quality coaching.</p>
-<p>Our best coaching energy goes to every level — not just the most talented.</p>
+<p><strong>Our best coaching energy goes to every level — not just the most talented.</strong></p>
 <p>Process over outcome.</p>
 <p>We teach players to evaluate effort and execution, not just winning and losing.</p>
 <p>Enjoyment is not optional.</p>
 <p>Players who don't enjoy the process quit before reaching their potential.</p>
 <p>The whole player.</p>
-<p>We develop tennis skills AND life skills — resilience, discipline, sportsmanship.</p>
+<p><strong>We develop tennis skills AND life skills — resilience, discipline, sportsmanship.</strong></p>
 <p>These principles become decision-making filters.</p>
-<p>When facing a difficult program decision, run it through: "Is this consistent with our principles?"</p>
-<h3>44.2 PAthway Design — Levels</h3>
+<p>When facing a difficult program decision, run it through: "Is this consistent with our principles?" 44.2 Pathway Design — Levels</p>
 <p>Và Progressions The Player Pathway A coaching program needs clear levels — descriptions of where players are và where they're going.</p>
 <p>Sample six-level pathway: Level 1: Introduction First contact with tennis.</p>
 <p>Complete beginner.</p>
@@ -990,7 +1001,7 @@
 <p>For intermediate-advanced levels: Add competition performance as data point.</p>
 <p>UTR rating, tournament results.</p>
 <p>The advancement conversation: Always discuss advancement with student. "You're ready to move to Level 3 because..." AND "Here's what you'll be working on at Level 3 that's different from Level 2." Students who understand why they're advancing — and what comes next — are more motivated than students who are just "moved up."</p>
-<h3>44.3 CUrriculum Design What Is A Curriculum?</p></h3>
+<h3>44.3 Curriculum Design What Is A Curriculum?</p></h3>
 <p>Curriculum is the planned sequence of what gets taught, in what order, at each level.</p>
 <p>Without curriculum, coaching is random — whatever the coach feels like teaching that day, or whatever problem appears in the session.</p>
 <p>With curriculum, coaching is systematic — each session builds on the last, skills introduced in the right sequence, nothing important falls through the cracks.</p>
@@ -1007,10 +1018,10 @@
 <p>Competition: Regional tournaments, seeking national ranking.</p>
 <p>Year 6+ (High performance): Focus: Technical refinement, high-volume competition, professional pathway consideration.</p>
 <p>Competition: National tournaments, ITF juniors, college recruiting process.</p>
-<h3>44.4 SEssion Planning The Importance Of Planning Coaches who don't plan sessions deliver lower quality coaching — even if they're experienced and knowledgeable.</p></h3>
+<h3>44.4 Session Planning The Importance Of Planning Coaches who don't plan sessions deliver lower quality coaching — even if they're experienced and knowledgeable.</p></h3>
 <p>Planning forces: - Clear objective for the session - Appropriate drill sequence - Time management - Adaptation for different students - Consistency across multiple coaches Minimum session plan: - Session objective (one sentence) - Warm-up (10 min) - Main activity 1 (time, drill, coaching focus) - Main activity 2 (time, drill, coaching focus) - Applied practice/match play (time) - Cool-down/review (time) Linking Sessions Into Blocks Individual sessions should link into coherent blocks — typically 4-8 weeks with a theme.</p>
 <p>Block theme examples: - "Serve Improvement Block" — every session includes serve work, building toward kick serve - "Net Game Block" — introducing approach shots and volleys systematically - "Match Play Block" — structured competitive play with tactical debrief Block structure: Week 1: Introduce concept (why + basic technique) Week 2: Drill and build consistency Week 3: Apply in live ball context Week 4: Apply in match play with coaching Week 5-6: Refine and consolidate Week 7-8: Assess and advance</p>
-<h3>44.5 ASsessment và Progress Tracking Why Systematic Assessment Matters Without assessment, coaches don't know: - If teaching is working - When students are ready to advance - Which students need more support - Whether the curriculum is effective overall Assessment at individual level: Is this student progressing as expected?</p></h3>
+<h3>44.5 Assessment và Progress Tracking Why Systematic Assessment Matters Without assessment, coaches don't know: - If teaching is working - When students are ready to advance - Which students need more support - Whether the curriculum is effective overall Assessment at individual level: Is this student progressing as expected?</p></h3>
 <p>Assessment at program level: Are students overall progressing?</p>
 <p>Is the curriculum achieving its goals?</p>
 <p>Assessment Methods Skill tests: Standardized tests that can be repeated over time to measure progress.</p>
@@ -1019,7 +1030,7 @@
 <p>Administer at program start, midpoint, and end.</p>
 <p>Example rally test: How many consecutive crosscourt forehands can student complete?</p>
 <p>Match performance tracking: For competitive players: UTR rating, tournament win percentage, first serve percentage, unforced error rate.</p>
-<p>Track over time — not single data points.</p>
+<p><strong>Track over time — not single data points.</strong></p>
 <p>Coach evaluation: Structured coach assessment using level descriptors.</p>
 <p>More holistic but requires calibration across multiple coaches.</p>
 <p>Student self-assessment: Students rate themselves on key skills (1-10).</p>
@@ -1029,9 +1040,9 @@
 <p>Quarterly progress reports: Technical: Rating on each major stroke (1-5 scale, with specific comments) Tactical: Understanding and application of key concepts Physical: Movement quality, fitness level Mental: Emotional regulation, focus, confidence Overall: Current level, advancement readiness, recommended focus Not just rating — specific, actionable feedback: Not: "Forehand: 3/5" Yes: "Forehand: 3/5.</p>
 <p>Contact point has improved significantly.</p>
 <p>Next focus: Adding topspin consistently."</p>
-<h3>44.6 COach Management (multi-coach Programs) Ensuring Consistency When multiple coaches work in the same program, consistency becomes critical.</p></h3>
+<h3>44.6 Coach Management (multi-coach Programs) Ensuring Consistency When multiple coaches work in the same program, consistency becomes critical.</p></h3>
 <p>Problems without consistency: - Students get different technical instruction from different coaches (confusing và counterproductive) - Quality varies dramatically between coaches - Students "shop" for coaches who are easier (undermine accountability) - Program identity is incoherent Solutions: Unified technical model: Program adopts specific technical positions on contested points (e.g., "We teach semi-western forehand grip for all beginners").</p>
-<p>Coaches don't have to agree 100% — but within the program, they teach consistently.</p>
+<p><strong>Coaches don't have to agree 100% — but within the program, they teach consistently.</strong></p>
 <p>Regular coach meetings: Weekly or bi-weekly.</p>
 <p>Case discussions, curriculum alignment, sharing what's working.</p>
 <p>Co-coaching: Coaches observe each other and provide feedback.</p>
@@ -1042,13 +1053,12 @@
 <p>Investing in coach development is investing in student outcomes.</p>
 <p>Coach development activities: Internal workshops: Head coach or external expert leads training session for coaching team.</p>
 <p>Observation and feedback: Coaches observe each other, provide structured feedback.</p>
-<p>External education: ITF or national federation coaching courses.</p>
-<p>Conferences.</p>
+<p>External education: ITF or national federation coaching courses. Conferences.</p>
 <p>Online learning.</p>
 <p>Mentoring: Junior coaches paired with senior coaches for guided development.</p>
 <p>Performance reviews: Coaches should receive regular feedback on their coaching quality — just as students receive feedback on their tennis.</p>
 <p>Evaluation criteria: - Teaching effectiveness (are students improving?) - Session preparation and structure - Student retention (do students continue?) - Communication with students and parents - Professional conduct</p>
-<h3>44.7 PRogram Logistics và Operations Court Allocation và Scheduling Court time is the primary resource.</p></h3>
+<h3>44.7 Program Logistics và Operations Court Allocation và Scheduling Court time is the primary resource.</p></h3>
 <p>Program design must work within court availability constraints.</p>
 <p>Questions to resolve: How many courts available?</p>
 <p>At what times?</p>
@@ -1073,16 +1083,16 @@
 <p>Scholarship và accessibility: Strong programs find ways to include players who cannot afford full fees.</p>
 <p>Partial scholarships, work-study programs, community partnerships.</p>
 <p>This both serves community mission and often identifies talented players who would otherwise be excluded.</p>
-<h3>44.8 BUilding The Coaching Culture</h3>
+<h3><strong>44.8 Building The Coaching Culture</strong></h3>
 <p>What Makes A Program Feel Different Students and parents can't always articulate why one program feels better than another.</p>
 <p>But they know.</p>
 <p>The intangible difference is usually culture — the environment, energy, and values that pervade the program.</p>
-<p>Markers of strong coaching culture: Players encourage each other — even competitors.</p>
+<p><strong>Markers of strong coaching culture: Players encourage each other — even competitors.</strong></p>
 <p>Coaches are seen practicing what they preach (on time, prepared, energetic).</p>
 <p>Mistakes are treated as learning, not shame.</p>
 <p>Work ethic is celebrated more than natural talent.</p>
 <p>Long-term thinking prevails over short-term results.</p>
-<p>The program has stories — memorable moments, player journeys, traditions.</p>
+<p><strong>The program has stories — memorable moments, player journeys, traditions.</strong></p>
 <p>Building culture deliberately: Rituals: How does each session start and end?</p>
 <p>Consistent rituals build identity.</p>
 <p>Recognition: What gets celebrated publicly?</p>
@@ -1090,12 +1100,12 @@
 <p>Stories: Share player development stories. "Remember when X couldn't serve?</p>
 <p>Look at them now." Senior player responsibility: Older/more experienced players mentor younger ones.</p>
 <p>Builds responsibility and community.</p>
-<h3>44.9 MEasuring Program Success Beyond Win-Loss Records Programs that measure success only by competition results optimize for wrong things — and often end up with neither results nor development.</p></h3>
+<h3>44.9 Measuring Program Success Beyond Win-Loss Records Programs that measure success only by competition results optimize for wrong things — and often end up with neither results nor development.</p></h3>
 <p>Balanced scorecard for program success: Player development: - Percentage of students advancing through levels per year - UTR improvement across student body - Technical benchmark improvement (standardized tests) Participation and retention: - Student enrollment trends - Retention rate (percentage returning each term) - New student acquisition Competition performance: - Tournament results, but weighted by appropriate competition level - First serve percentage, unforced error rate trends Player satisfaction: - Annual survey: How much do students enjoy the program? - Net promoter score: Would they recommend to a friend?</p>
 <p>Coach quality: - Student improvement rates per coach - Student retention per coach - Coach development hours per year Community impact: - Scholarship students participating - Community reach (school programs, outreach) Tóm Tắt Chương 44 Program purpose first.</p>
 <p>Participation, development, elite pathway, recreation, or community — define clearly before designing anything.</p>
 <p>Pathway design: Six levels from Introduction to Elite.</p>
-<p>Each level has specific, observable descriptors — not vague descriptions.</p>
+<p><strong>Each level has specific, observable descriptors — not vague descriptions.</strong></p>
 <p>Curriculum: Scope, sequence, progression, assessment, resources. 12-week block example as practical template.</p>
 <p>Session planning: Objective → warm-up → main activities → applied practice → review.</p>
 <p>Link sessions into themed blocks.</p>
@@ -1108,7 +1118,7 @@
 <p>Coach development: Internal workshops, peer observation, external education, mentoring, performance reviews.</p>
 <p>Logistics: Court allocation, equipment management, sustainable fee structure, scholarship access.</p>
 <p>Culture: Rituals, recognition, stories, senior player mentorship.</p>
-<p>Culture is built deliberately — not accidentally.</p>
+<p><strong>Culture is built deliberately — not accidentally.</strong></p>
 <p>Success measurement: Beyond win-loss.</p>
 <p>Player development, retention, satisfaction, coach quality, community impact.</p>
 <p>Nhìn Về Phía Trước Chương 44 đã hoàn thành Phần IV về Coaching — từ individual coaching skills đến designing a complete program.</p>
@@ -1121,12 +1131,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Huong_Dan_Quan_Vot_Toan_Dien_Claude_Chuong_45.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

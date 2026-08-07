@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,21 +936,21 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>Cảm Nhận Cơ Thể Tennis - Chương 10</h1>
 <h2>CHƯƠNG 10: NGHỆ THUẬT TRỞ VỀ TÂM BÃO</h2>
 <p>Một cú đánh uy lực đến đâu cũng trở nên vô nghĩa nếu ngay sau đó anh bị bỏ lạiở một góc sân, chới với và phơi bày toàn bộ khoảng trống cho đối thủ.</p>
 <p>Tay vợt phong trào thường thở phào nhẹ nhõm sau khi đánh xong quả bóng, nán lại nhìn xem quỹ đạo bóng bay đẹp không, rồi mới lật đật chạy về giữa sân. Ở đẳng cấp cao, cú đánh không kết thúc khi bóng rời mặt vợt.</p>
 <p>Cú đánh chỉ thực sự kết thúc khi hệ thần kinh Proprioception đã đưa cơ thể anh trở về vị trí trung tâm, sẵn sàng cho chu kỳ tiếp theo.</p>
 <p>Chương này sẽ đưa nghệ thuật tối giản vào bước phục hồi (Recovery), biến nó từ một nỗ lực chạy chối chết thành một sự đàn hồi tự nhiên.</p>
-<h3>10.1 Ảo Giác Của "Sự Kết Thúc"</h3>
+<h3><strong>10.1 Ảo Giác Của "sự Kết Thúc"</strong></h3>
 <p>Và Thế Năng Đàn Hồi Lỗi tư duy lớn nhất là xem việc đánh bóng và việc chạy về (recovery) là hai hành động tách biệt.</p>
 <p>Trong cơ sinh học và chuỗi động lực (kinetic chain), chúng là một dòng chảy liên tục.</p>
 <p>Khi anh thực hiện một cú đánh với Thăng bằng động hoàn hảo (đã nóiở Chương 4), cấu trúc vặn xoắn của cơ thể (hông, vai, cơ core) tạo ra một lực ly tâm vung vợt ra phía trước.</p>
 <p>Khi động tác vung vợt kết thúc (follow-through), thay vì gồng cứng cơ bắp để dập tắt lực này, anh hãy sử dụng chính quán tính ly tâm đó để "kéo" cơ thể quay trở lại.</p>
 <p>Giống như một lò xo sau khi bung ra sẽ tự động thu về, cơ thể anh cũng sở hữu thế năng đàn hồi tương tự nếu anh duy trì được sự thả lỏng có cấu trúc.</p>
 <p>Lực phản lực từ mặt đất (Ground Reaction Force) của bước chân trụ không chỉ đẩy quả bóng đi, mà phần năng lượng dư thừa phải được hướng vào việc đạp cơ thể nảy ngược về trung tâm sân.</p>
-<h3>10.2 T rọng Tâm Dẫn Đường (center of Mass Leads the Way) Một lỗi sai kinh điển khi Recovery là cố gắng vươn cái đầu hoặc phần ngực về hướng giữa sân trước, trong khi đôi chân vẫn kẹt lạiở góc sân.</h3>
+<h3><strong>10.2 T rọng Tâm Dẫn Đường (center of Mass Leads the Way) Một lỗi sai kinh điển khi Recovery là cố gắng vươn cái đầu hoặc phần ngực về hướng giữa sân trước, trong khi đôi chân vẫn kẹt lạiở góc sân.</strong></h3>
 <p>Hành động này bẻ gãy hoàn toàn trục cột sống thẳng đứng, khiến anh dễ vấp ngã và không thể đổi hướng nếu đối thủ đánh lừa bóng đi ngược lại (wrong-footing).</p>
 <p>Triết lý "Trọng tâm kéo thân": Đừng nghĩ về việc vươn ngực hay chân.</p>
 <p>Hãy nghĩ về vùng Đan Điền (vùng bụng dưới, nơi đặt Center of Mass).</p>
@@ -946,7 +958,7 @@
 <p>Khi Đan Điền di chuyển, bộ rễ (đôi chân) bắt buộc phải rút theo một cách tự động để chống đỡ cho cơ thể khỏi ngã.</p>
 <p>Cột sống vẫn giữ nguyên trạng thái thẳng đứng. Đầu vẫn giữ tĩnh tại.</p>
 <p>Hệ thống Proprioception sẽ tự điều phối đôi chân sao cho mượt mà nhất.</p>
-<h3>10.3 Bước Chéo (the Crossover Step): Đơn Giản Hóa Quãng Đường</h3>
+<h3><strong>10.3 Bước Chéo (the Crossover Step): Đơn Giản Hóa Quãng Đường</strong></h3>
 <p>Nếu anh dùng các bước trượt ngang lắt nhắt (side shuffles) để quay về từ một góc sân quá xa, anh sẽ mất quá nhiều thời gian và tốn nhiều thể lực.</p>
 <p>Giải pháp tối giản và mang tính cơ sinh học cao nhất là Bước Chéo Lùi (Crossover Step) .</p>
 <p>Ngay sau khi kết thúc cú vung vợt (giả sử cú Forehand ở góc phải sân): 1.</p>
@@ -955,7 +967,7 @@
 <p>Hông hơi xoay nhẹ để tạo không gian cho sải chân chéo này, nhưng mắt và vai vẫn khóa chặt hướng về phía đối thủ. 4.</p>
 <p>Ngay sau khi chân trái chạm đất kết thúc bước chéo dài, anh tự động chuyển sang các bước trượt ngang (side shuffles) nhẹ nhàng để đưa cơ thể về trạng thái cân bằng đối xứng, chuẩn bị thả rơi vào cú Split-step tiếp theo.</p>
 <p>Chỉ với một bước chéo duy nhất, anh đã nuốt trọn được 2/3 quãng đường cần phục hồi, bảo toàn năng lượng tối đa.</p>
-<h3>10.4 Bản Đồ Không Gian Mù (blind Spatial Awareness) Khi phục hồi vị trí, mắt anh không được nhìn xuống vạch kẻ sân để xem mình đã đứng giữa chưa.</h3>
+<h3><strong>10.4 Bản Đồ Không Gian Mù (blind Spatial Awareness) Khi phục hồi vị trí, mắt anh không được nhìn xuống vạch kẻ sân để xem mình đã đứng giữa chưa.</strong></h3>
 <p>Ánh mắt phải dán chặt vào đối thủ để đo đạc thời điểm (timing) cho cú Split-step.</p>
 <p>Vậy làm sao để biết mình đã về đúng trung tâm? Đó là lúc khả năng định vị nội tại lên tiếng.</p>
 <p>Bộ não của anh, thông qua Proprioception, đã vẽ một "bản đồ không gian mù" từ khi anh bước ra sân.</p>
@@ -963,13 +975,13 @@
 <p>Hơn nữa, trung tâm sân (Center) không phải lúc nào cũng là vạch giữa (Hash mark) ở baseline.</p>
 <p>Trung tâm sân thay đổi liên tục dựa trên góc độ anh vừa đánh quả bóng (Geometry of the court).</p>
 <p>Hệ thần kinh sắc bén sẽ tự động điều chỉnh điểm Recovery lệch sang trái hoặc phải để bịt kín góc đánh khả thi nhất của đối thủ.</p>
-<h3>10.5 Bài Tập Thực Hành: Phục Hồi Đàn Hồi Để phá bỏ thói quen đứng nhìn bóng, anh cần biến Recovery thành một phản xạ tủy sống, xảy ra ngay lập tức mà không cần suy nghĩ. Bài</h3>
+<h3><strong>10.5 Bài Tập Thực Hành: Phục Hồi Đàn Hồi Để phá bỏ thói quen đứng nhìn bóng, anh cần biến Recovery thành một phản xạ tủy sống, xảy ra ngay lập tức mà không cần suy nghĩ. Bài</strong></h3>
 <p>Tập 1: Shadow Swing Với Dây Kháng Lực (The Bungee Recovery) Cách làm: Buộc một sợi dây kháng lực (resistance band) vào hàng rào phía sau lưng, đầu kia vòng qua thắt lưng (vùng Đan Điền).</p>
 <p>Bước lên phía trước và vung một cú đánh tưởng tượng ra góc sân.</p>
 <p>Mục tiêu: Sợi dây sẽ kéo hông anh ngược về phía sau ngay khi anh vừa dứt động tác.</p>
 <p>Cơ thể sẽ tự động học cách thả lỏng để dây kéo về (sử dụng bước chéo) thay vì gồng người chống lại.</p>
 <p>Cảm giác bị "hút" về tâm này chính xác là cảm giác thế năng đàn hồi anh cần có trên sân thực tế.</p>
-<p>Bài Tập 2: Đánh Và Biến Mất (The Hit-and-Vanish Drill) Cách làm: Đứng ở vạch baseline giữa sân.</p>
+<h3><strong>Bài Tập 2: Đánh Và Biến Mất (The Hit-and-Vanish Drill) Cách làm: Đứng ở vạch baseline giữa sân.</strong></h3>
 <p>Tung bóng tự đánh một cú chéo sân thật mạnh.</p>
 <p>Nhiệm vụ của anh là: Ngay khi nghe tiếng quả bóng nảy bên phần sân đối diện, hai bàn chân của anh ĐÃ PHẢI đứng yênở vị trí cân bằng giữa sân, sẵn sàng cho quả tiếp theo.</p>
 <p>Mục tiêu: Ép buộc bộ não phải liên kết điểm kết thúc của cú vung vợt với bước đạp Recovery đầu tiên ngay lập tức.</p>
@@ -985,12 +997,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="Cam_Nang_Cam_Nhan_Co_The_Tennis_Chuong_11.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size:</p>
-<h3>0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;"> <p style="margin: 4px 0; color: white;">Created by <strong>Henry</h3>
-<p>Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

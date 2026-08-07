@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>CHƯƠNG 10: Strategy, Tactics & Data-Driven Patterns</h1>
 <p>></p>
 <h2>CHƯƠNG 10</h2>
@@ -940,7 +952,7 @@
 <p>A player who knows exactly what their opponent's backhand success rate is from the wide deuce court has information.</p>
 <p>A player who knows what to do with that information — the sequence of shots that creates the backhand wide deuce opportunity — has a weapon.</p>
 <p>This chapter builds both layers.</p>
-<h3>10.1 The 75% Rule: Inducing the Error</h3>
+<h3><strong>10.1 The 75% Rule: Inducing the Error</strong></h3>
 <p>The most important statistical fact in tennis strategy is also the least glamorous one: approximately seventy-five percent of all points end in unforced or forced errors, not winners.</p>
 <p>At Elite level, on fast surfaces, this figure shifts — more winners are struck at professional pace.</p>
 <p>But even in the highest-quality matches, errors significantly outnumber outright winners as the primary point-ending mechanism.</p>
@@ -959,7 +971,7 @@
 <p>Heavy topspin creates high-bouncing balls that force contact above the opponent's optimal strike zone, degrading Tennis Knowledge/Glossary/kinetic chain efficiency.</p>
 <p>Depth pushes the opponent behind the Baseline, lengthening the court they must cover and reducing their angle-creation options.</p>
 <p>In combination, these three variables compound — a deep, heavy, fast ball to the backhand corner is not just difficult to return, it is specifically engineered to be difficult to return.</p>
-<h3>10.2 Data-Driven Patterns: The High-Percentage Revolution The</h3>
+<h3><strong>10.2 Data-Driven Patterns: The High-Percentage Revolution The</strong></h3>
 <p>availability of detailed shot-tracking and pattern-analysis data in the professional game has transformed how elite players approach tactical preparation.</p>
 <p>Before a significant match, the coaching team has access to the opponent's error-tendency heatmaps — the specific court zones and shot sequences that have historically produced errors — along with their success rates on specific patterns by score situation, surface, and fatigue level.</p>
 <p>This data does not replace tactical intelligence.</p>
@@ -977,7 +989,7 @@
 <p>The risk-reward matrix applies to all pattern selection: a pattern with a high success rate against the average player may have a low success rate against a specific opponent who covers that pattern exceptionally well.</p>
 <p>Against Djokovic, attacking the backhand cross-court is not the high-percentage play it is against most opponents — he is specifically equipped to turn that pattern into an offensive opportunity.</p>
 <p>Reading when the standard high-percentage pattern has become a low-percentage one against a particular opponent, and having an alternative ready, is one of the most important tactical adaptations at Elite level.</p>
-<h3>10.3 The Plus-One forehand and Match-Win Probability</h3>
+<h3><strong>10.3 The Plus-One forehand and Match-Win Probability</strong></h3>
 <p>The plus-one Concept — winning the third ball of the serve-plus-two exchange — is the most data-validated tactical principle in modern tennis.</p>
 <p>Analysis of professional match data shows consistently that players who win the plus-one shot win more than seventy percent of their service games and, by extension, a proportional majority of their matches.</p>
 <p>No other single tactical metric correlates with match outcomes as reliably.</p>
@@ -997,7 +1009,7 @@
 <p>The plus-one principle extends beyond the serve.</p>
 <p>From the return, the same logic applies in reverse: an aggressive return that forces a Defensive server reply creates the plus-one position for the returner — typically a forehand into the open court or a body shot at the recovering server.</p>
 <p>The player who thinks in plus-one terms from both sides of the Net is operating at a consistently higher tactical level than the player who treats each shot as an independent decision.</p>
-<h3>10.4 The T-Zone Attack and Ad-Court Kick-and-Drive</h3>
+<h3><strong>10.4 The T-Zone Attack and Ad-Court Kick-and-Drive</strong></h3>
 <p>The T-Zone attack targets the centre of the court — the area around the centre service line and its extension into the Baseline — to eliminate the opponent's angle-creation capacity.</p>
 <p>A ball driven into the T-Zone forces the opponent into a hitting position from which their court Geometry is maximally restricted.</p>
 <p>They cannot create a wide angle from the centre.</p>
@@ -1015,9 +1027,8 @@
 <p>An opponent who has been receiving primarily kick serves wide on the ad court will shade their position accordingly — moving a step wider to cover the kick.</p>
 <p>The T-Zone serve into the body on the ad court then catches them moving the wrong way.</p>
 <p>The alternation between the two patterns is itself a tactical weapon, independent of either pattern's individual effectiveness.</p>
-<h3>10.5 Strategic Evolution: 2000–2026 | Feature | 2000–2010 | 2020–2026 | | Primary Goal | Outlast the opponent through consistency | Dictate and displace through aggressive patterns | |</h3>
-<p>Shot Selection | Feel and intuition — based on what opens up | Probability-based — pre-designed sequences | | Error Philosophy | Wait for opponent to make mistakes | Induce errors through sub-optimal zone creation | | Plus-One Awareness | Implicit — known but not systematically trained | Explicit — central to all serve and return planning | | Data Usage | Post-match review — limited real-time application | Pre-match preparation and in-match tactical adjustment | | Court Positioning | Reactive — Baseline as primary position | Proactive — Baseline to net as designed sequence | | Pattern Complexity | 2-shot patterns dominant | 3-shot sequences standard — 5-shot sequences common | | Tactical Identity | Style-based — players known for one way of playing | Adaptive — strong base identity with multiple tactical layers |</p>
-<h3>10.6 Blitz-Chess: The Tactical Mind Every chapter in this</h3>
+<h3><strong>10.5 Strategic Evolution: 2000–2026 | Feature | 2000–2010 | 2020–2026 | | Primary Goal | Outlast the opponent through consistency | Dictate and displace through aggressive patterns | |</strong></h3>
+<p>Shot Selection | Feel and intuition — based on what opens up | Probability-based — pre-designed sequences | | Error Philosophy | Wait for opponent to make mistakes | Induce errors through sub-optimal zone creation | | Plus-One Awareness | Implicit — known but not systematically trained | Explicit — central to all serve and return planning | | Data Usage | Post-match review — limited real-time application | Pre-match preparation and in-match tactical adjustment | | Court Positioning | Reactive — Baseline as primary position | Proactive — Baseline to net as designed sequence | | Pattern Complexity | 2-shot patterns dominant | 3-shot sequences standard — 5-shot sequences common | | Tactical Identity | Style-based — players known for one way of playing | Adaptive — strong base identity with multiple tactical layers | 10.6 Blitz-Chess: The Tactical Mind Every chapter in this</p>
 <p>Manual has described what the body does in tennis.</p>
 <p>This section describes what the mind does — and specifically what separates the tactical thinking of Federer, Sinner, and Alcaraz from players of equal or superior physical capability.</p>
 <p>The Blitz-Chess Model is the cognitive framework for all tactical decision-making in tennis, derived from the observation that the mental qualities required for elite competitive performance in both disciplines are functionally identical.</p>
@@ -1027,10 +1038,10 @@
 <p>It is a probability-weighted intention — the most likely sequence given the current score, the opponent's position, the surface conditions, and the match momentum.</p>
 <p>It takes less than two seconds to complete and it frames every subsequent decision in the point around a coherent objective rather than a reactive improvisation.</p>
 <p>Read — During the point, the player continuously updates their read of the opponent's position, preparation, and likely response.</p>
-<p>The read is not conscious analysis — there is no time for conscious analysis at competitive speeds.</p>
+<p><strong>The read is not conscious analysis — there is no time for conscious analysis at competitive speeds.</strong></p>
 <p>It is pattern recognition operating through the trained neural pathways built through thousands of hours of match play and deliberate anticipation practice.</p>
 <p>The read generates predictions — "they will go cross-court from that position" — that position the player in advance of the ball rather than in reaction to it.</p>
-<p>Disguise — The player conceals their own intentions as long as possible.</p>
+<p><strong>Disguise — The player conceals their own intentions as long as possible.</strong></p>
 <p>The same preparation for multiple shot options.</p>
 <p>The same body position for cross-court and down-the-line.</p>
 <p>The same backswing for drive and Drop shot.</p>
@@ -1061,21 +1072,21 @@
 <p>Developing players typically operate only at the first — seeing without comprehending or projecting.</p>
 <p>The nine characteristics of the champion's brain — will power, focus, planning, risk-taking, situational awareness, decision-making, anticipation, Reflexes, and complete situation control — apply to tennis match play as directly as they applied to Schumacher's formula 1 dominance.</p>
 <p>The tactical mind of the Future champion combines all nine, with situational awareness, anticipation, and planning as the three that most directly underpin tactical excellence.</p>
-<h3>10.7 Pattern sequencing: Building 3-Shot Plans The</h3>
+<h3><strong>10.7 Pattern sequencing: Building 3-Shot Plans The</strong></h3>
 <p>three-shot pattern is the optimal tactical unit for the following reason: two shots are insufficient to create geometric pressure — the first shot establishes position, the second executes from it, but there is no third-ball finish programmed.</p>
 <p>Four or five shots create sophisticated patterns but require conditions of consistency that cannot always be guaranteed under competitive pressure.</p>
 <p>Three shots — setup, development, finish — provide enough Structure to be decisive without demanding conditions that break down when the match is tight.</p>
 <p>The six core patterns every elite player should own as automated sequences: Pattern 1 — serve T + forehand Inside-In: Flat or slice serve into the centre service line, neutralising the returner's angle.</p>
 <p>Short, central return anticipated. server attacks inside-in forehand to the open deuce-side court.</p>
-<p>Pattern 2 — Kick serve Wide + forehand Inside-Out: Kick serve to the ad-court backhand corner.</p>
+<p><strong>Pattern 2 — Kick serve Wide + forehand Inside-Out: Kick serve to the ad-court backhand corner.</strong></p>
 <p>Defensive cross-court return anticipated. server attacks inside-out forehand to the opponent's backhand corner.</p>
-<p>Pattern 3 — Body serve + Short Ball Put-Away: serve directly at the returner's body.</p>
+<p><strong>Pattern 3 — Body serve + Short Ball Put-Away: serve directly at the returner's body.</strong></p>
 <p>Jammed, short central return anticipated. server moves forward and attacks with a high-percentage cross-court forehand.</p>
 <p>Pattern 4 — Deep backhand Rally + Down-The-Line forehand: Three consecutive deep backhand cross-court balls to fix the opponent's position.</p>
 <p>On the fourth ball, server redirects to inside-out forehand to the open court as the pattern break.</p>
 <p>Pattern 5 —return Cross-Court + server Jammed + Net Approach: aggressive cross-court return to server's feet. server produces a Defensive, rising half-volley.returner closes the Net for the finishing volley.</p>
 <p>Pattern 6 — Heavy forehand Cross-Court + Drop Shot: Three heavy topspin forehands pushing the opponent deep behind the Baseline.</p>
-<p>Drop shot to the Net as the fourth ball — opponent caught too deep to run it down.</p>
+<p><strong>Drop shot to the Net as the fourth ball — opponent caught too deep to run it down.</strong></p>
 <p>Pattern variation is what makes these sequences tactically durable across a full match.</p>
 <p>Against an opponent who has begun to anticipate Pattern 1's inside-in finish, the server executes Pattern 1's serve and approach but redirects the third ball inside-out instead.</p>
 <p>Same setup, different conclusion.</p>
@@ -1086,7 +1097,7 @@
 <p>A pattern that has been anticipated — the opponent is pre-moving on the second ball — should be abandoned immediately and replaced with its mirror pattern.</p>
 <p>A player who continues executing a compromised pattern out of mechanical habit rather than tactical judgment is providing the opponent with a free positional advantage on every subsequent point.</p>
 <p>The ability to read pattern compromise mid-execution and switch is the mark of a mature tactical mind.</p>
-<h3>10.8 Tactical Troubleshooting Playing down to opponents — losing tactical discipline and reverting to passive, low-intensity patterns against weaker players — is one of the most costly tactical failures at</h3>
+<h3><strong>10.8 Tactical Troubleshooting Playing down to opponents — losing tactical discipline and reverting to passive, low-intensity patterns against weaker players — is one of the most costly tactical failures at</strong></h3>
 <p>Competitive level.</p>
 <p>The fix is pattern mapping: before the match, commit to three specific patterns that will be executed regardless of the score or the opponent's level.</p>
 <p>Tracking pattern execution — not point outcome — keeps tactical focus on the process rather than the result, which is the psychological condition most likely to produce consistent performance against opponents at all levels.</p>
@@ -1100,7 +1111,7 @@
 <p>Under pressure, the brain seeks certainty and defaults to familiar patterns regardless of their tactical appropriateness.</p>
 <p>The fix is pre-match pattern commitment: before the match, write down three specific patterns for three specific score situations — 30-40, 5-6 tiebreak, third set first game.</p>
 <p>Having made the commitment explicitly before the pressure arrives means the decision is already made when the moment comes.</p>
-<p>Elite Player Track |</p>
+<p><strong>Elite Player Track |</strong></p>
 <h2>Chapter 10</h2>
 <p>At your level, tactical sophistication is the primary performance differentiator.</p>
 <p>Physical capability and technical execution are roughly comparable across the elite tier.</p>
@@ -1117,7 +1128,7 @@
 <h2>Chapter 10</h2>
 <p>When coaching Tactics, pattern mapping is your most powerful intervention and the one most Coaches underuse. Before introducing any new pattern to a player, map the existing patterns: what three shots does this player default to in each of the four court positions? From that map, identify which defaults are high-percentage and which are habits — defaults that exist because they are familiar, not because they are tactically sound. For blitz-chess integration, make the case to your players through the anticipation data from</p>
 <h2>Chapter 5</h2>
-<h3>10.1 T he 75% Rule: Inducing the Error The most important statistical fact in tennis strategy is also the least glamorous one: approximately seventy-five percent of all points end in unforced or forced errors, not winners.</h3>
+<h3><strong>10.1 T he 75% Rule: Inducing the Error The most important statistical fact in tennis strategy is also the least glamorous one: approximately seventy-five percent of all points end in unforced or forced errors, not winners.</strong></h3>
 <p>At Elite level, on fast surfaces, this figure shifts — more winners are struck at professional pace.</p>
 <p>But even in the highest-quality matches, errors significantly outnumber outright winners as the primary point-ending mechanism.</p>
 <p>This fact reframes the tactical purpose of almost every shot in the game.</p>
@@ -1135,7 +1146,7 @@
 <p>Heavy topspin creates high-bouncing balls that force contact above the opponent's optimal strike zone, degrading Tennis Knowledge/Glossary/kinetic chain efficiency.</p>
 <p>Depth pushes the opponent behind the Baseline, lengthening the court they must cover and reducing their angle-creation options.</p>
 <p>In combination, these three variables compound — a deep, heavy, fast ball to the backhand corner is not just difficult to return, it is specifically engineered to be difficult to return.</p>
-<h3>10.2 D ata-Driven Patterns: The High-Percentage Revolution The availability of detailed shot-tracking and pattern-analysis data in the professional game has transformed how elite players approach tactical preparation.</h3>
+<h3><strong>10.2 D ata-Driven Patterns: The High-Percentage Revolution The availability of detailed shot-tracking and pattern-analysis data in the professional game has transformed how elite players approach tactical preparation.</strong></h3>
 <p>Before a significant match, the coaching team has access to the opponent's error-tendency heatmaps — the specific court zones and shot sequences that have historically produced errors — along with their success rates on specific patterns by score situation, surface, and fatigue level.</p>
 <p>This data does not replace tactical intelligence.</p>
 <p>It informs it.</p>
@@ -1152,7 +1163,7 @@
 <p>The risk-reward matrix applies to all pattern selection: a pattern with a high success rate against the average player may have a low success rate against a specific opponent who covers that pattern exceptionally well.</p>
 <p>Against Djokovic, attacking the backhand cross-court is not the high-percentage play it is against most opponents — he is specifically equipped to turn that pattern into an offensive opportunity.</p>
 <p>Reading when the standard high-percentage pattern has become a low-percentage one against a particular opponent, and having an alternative ready, is one of the most important tactical adaptations at Elite level.</p>
-<h3>10.3 T he Plus-One forehand and Match-Win Probability The plus-one Concept — winning the third ball of the serve-plus-two exchange — is the most data-validated tactical principle in modern tennis.</h3>
+<h3><strong>10.3 T he Plus-One forehand and Match-Win Probability The plus-one Concept — winning the third ball of the serve-plus-two exchange — is the most data-validated tactical principle in modern tennis.</strong></h3>
 <p>Analysis of professional match data shows consistently that players who win the plus-one shot win more than seventy percent of their service games and, by extension, a proportional majority of their matches.</p>
 <p>No other single tactical metric correlates with match outcomes as reliably.</p>
 <p>The reason is structural.</p>
@@ -1171,7 +1182,7 @@
 <p>The plus-one principle extends beyond the serve.</p>
 <p>From the return, the same logic applies in reverse: an aggressive return that forces a Defensive server reply creates the plus-one position for the returner — typically a forehand into the open court or a body shot at the recovering server.</p>
 <p>The player who thinks in plus-one terms from both sides of the Net is operating at a consistently higher tactical level than the player who treats each shot as an independent decision.</p>
-<h3>10.4 T he T-zone Attack and Ad-Court Kick-and-Drive The T-zone attack targets the centre of the court — the area around the centre service line and its extension into the Baseline — to eliminate the opponent's angle-creation capacity.</h3>
+<h3><strong>10.4 T he T-zone Attack and Ad-Court Kick-and-Drive The T-zone attack targets the centre of the court — the area around the centre service line and its extension into the Baseline — to eliminate the opponent's angle-creation capacity.</strong></h3>
 <p>A ball driven into the T-Zone forces the opponent into a hitting position from which their court Geometry is maximally restricted.</p>
 <p>They cannot create a wide angle from the centre.</p>
 <p>The cross-court ball goes to the server's forehand.</p>
@@ -1189,7 +1200,7 @@
 <p>The T-Zone serve into the body on the ad court then catches them moving the wrong way.</p>
 <p>The alternation between the two patterns is itself a tactical weapon, independent of either pattern's individual effectiveness.</p>
 <h3>10.5 S trategic Evolution: 2000–2026 | Feature | 2000–2010 | 2020–2026 | | Primary Goal | Outlast the opponent through consistency | Dictate and displace through aggressive patterns | | Shot Selection | Feel and intuition — based on what opens up | Probability-based — pre-designed sequences | | Error Philosophy | Wait for opponent to make mistakes | Induce errors through sub-optimal zone creation | | Plus-One Awareness | Implicit — known but not systematically trained | Explicit — central to all serve and return planning | | Data Usage | Post-match review — limited real-time application | Pre-match preparation and in-match tactical adjustment | | Court Positioning | Reactive — Baseline as primary position | Proactive — Baseline to net as designed sequence | | Pattern Complexity | 2-shot patterns dominant | 3-shot sequences standard — 5-shot sequences common | | Tactical Identity | Style-based — players known for one way of playing | Adaptive — strong base identity with multiple tactical layers |</h3>
-<h3>10.6 B litz-Chess: The Tactical Mind Every chapter in this Manual has described what the body does in tennis.</h3>
+<h3><strong>10.6 B litz-Chess: The Tactical Mind Every chapter in this Manual has described what the body does in tennis.</strong></h3>
 <p>This section describes what the mind does — and specifically what separates the tactical thinking of Federer, Sinner, and Alcaraz from players of equal or superior physical capability.</p>
 <p>The Blitz-Chess Model is the cognitive framework for all tactical decision-making in tennis, derived from the observation that the mental qualities required for elite competitive performance in both disciplines are functionally identical.</p>
 <p>The model operates through three sequential steps.</p>
@@ -1198,10 +1209,10 @@
 <p>It is a probability-weighted intention — the most likely sequence given the current score, the opponent's position, the surface conditions, and the match momentum.</p>
 <p>It takes less than two seconds to complete and it frames every subsequent decision in the point around a coherent objective rather than a reactive improvisation.</p>
 <p>Read — During the point, the player continuously updates their read of the opponent's position, preparation, and likely response.</p>
-<p>The read is not conscious analysis — there is no time for conscious analysis at competitive speeds.</p>
+<p><strong>The read is not conscious analysis — there is no time for conscious analysis at competitive speeds.</strong></p>
 <p>It is pattern recognition operating through the trained neural pathways built through thousands of hours of match play and deliberate anticipation practice.</p>
 <p>The read generates predictions — "they will go cross-court from that position" — that position the player in advance of the ball rather than in reaction to it.</p>
-<p>Disguise — The player conceals their own intentions as long as possible.</p>
+<p><strong>Disguise — The player conceals their own intentions as long as possible.</strong></p>
 <p>The same preparation for multiple shot options.</p>
 <p>The same body position for cross-court and down-the-line.</p>
 <p>The same backswing for drive and Drop shot.</p>
@@ -1232,20 +1243,20 @@
 <p>Developing players typically operate only at the first — seeing without comprehending or projecting.</p>
 <p>The nine characteristics of the champion's brain — will power, focus, planning, risk-taking, situational awareness, decision-making, anticipation, Reflexes, and complete situation control — apply to tennis match play as directly as they applied to Schumacher's formula 1 dominance.</p>
 <p>The tactical mind of the Future champion combines all nine, with situational awareness, anticipation, and planning as the three that most directly underpin tactical excellence.</p>
-<h3>10.7 P attern sequencing: Building 3-Shot Plans The three-shot pattern is the optimal tactical unit for the following reason: two shots are insufficient to create geometric pressure — the first shot establishes position, the second executes from it, but there is no third-ball finish programmed.</h3>
+<h3><strong>10.7 P attern sequencing: Building 3-Shot Plans The three-shot pattern is the optimal tactical unit for the following reason: two shots are insufficient to create geometric pressure — the first shot establishes position, the second executes from it, but there is no third-ball finish programmed.</strong></h3>
 <p>Four or five shots create sophisticated patterns but require conditions of consistency that cannot always be guaranteed under competitive pressure.</p>
 <p>Three shots — setup, development, finish — provide enough Structure to be decisive without demanding conditions that break down when the match is tight.</p>
 <p>The six core patterns every elite player should own as automated sequences: Pattern 1 — serve T + forehand Inside-In: Flat or slice serve into the centre service line, neutralising the returner's angle.</p>
 <p>Short, central return anticipated. server attacks inside-in forehand to the open deuce-side court.</p>
-<p>Pattern 2 — Kick serve Wide + forehand Inside-Out: Kick serve to the ad-court backhand corner.</p>
+<p><strong>Pattern 2 — Kick serve Wide + forehand Inside-Out: Kick serve to the ad-court backhand corner.</strong></p>
 <p>Defensive cross-court return anticipated. server attacks inside-out forehand to the opponent's backhand corner.</p>
-<p>Pattern 3 — Body serve + Short Ball Put-Away: serve directly at the returner's body.</p>
+<p><strong>Pattern 3 — Body serve + Short Ball Put-Away: serve directly at the returner's body.</strong></p>
 <p>Jammed, short central return anticipated. server moves forward and attacks with a high-percentage cross-court forehand.</p>
 <p>Pattern 4 — Deep backhand Rally + Down-The-Line forehand: Three consecutive deep backhand cross-court balls to fix the opponent's position.</p>
 <p>On the fourth ball, server redirects to inside-out forehand to the open court as the pattern break.</p>
 <p>Pattern 5 —return Cross-Court + server Jammed + Net Approach: aggressive cross-court return to server's feet. server produces a Defensive, rising half-volley.returner closes the Net for the finishing volley.</p>
 <p>Pattern 6 — Heavy forehand Cross-Court + Drop Shot: Three heavy topspin forehands pushing the opponent deep behind the Baseline.</p>
-<p>Drop shot to the Net as the fourth ball — opponent caught too deep to run it down.</p>
+<p><strong>Drop shot to the Net as the fourth ball — opponent caught too deep to run it down.</strong></p>
 <p>Pattern variation is what makes these sequences tactically durable across a full match.</p>
 <p>Against an opponent who has begun to anticipate Pattern 1's inside-in finish, the server executes Pattern 1's serve and approach but redirects the third ball inside-out instead.</p>
 <p>Same setup, different conclusion.</p>
@@ -1254,7 +1265,7 @@
 <p>A pattern that has been anticipated — the opponent is pre-moving on the second ball — should be abandoned immediately and replaced with its mirror pattern.</p>
 <p>A player who continues executing a compromised pattern out of mechanical habit rather than tactical judgment is providing the opponent with a free positional advantage on every subsequent point.</p>
 <p>The ability to read pattern compromise mid-execution and switch is the mark of a mature tactical mind.</p>
-<h3>10.8 T actical Troubleshooting Playing down to opponents — losing tactical discipline and reverting to passive, low-intensity patterns against weaker players — is one of the most costly tactical failures at Competitive level.</h3>
+<h3><strong>10.8 T actical Troubleshooting Playing down to opponents — losing tactical discipline and reverting to passive, low-intensity patterns against weaker players — is one of the most costly tactical failures at Competitive level.</strong></h3>
 <p>The fix is pattern mapping: before the match, commit to three specific patterns that will be executed regardless of the score or the opponent's level.</p>
 <p>Tracking pattern execution — not point outcome — keeps tactical focus on the process rather than the result, which is the psychological condition most likely to produce consistent performance against opponents at all levels.</p>
 <p>Over-aggression — attempting winners too early in the rally before the geometric conditions for a winner exist — is the error that most directly contradicts the 75% Rule.</p>
@@ -1267,7 +1278,7 @@
 <p>Under pressure, the brain seeks certainty and defaults to familiar patterns regardless of their tactical appropriateness.</p>
 <p>The fix is pre-match pattern commitment: before the match, write down three specific patterns for three specific score situations — 30-40, 5-6 tiebreak, third set first game.</p>
 <p>Having made the commitment explicitly before the pressure arrives means the decision is already made when the moment comes.</p>
-<h3>Elite Player Track |</h3>
+<h3><strong>Elite Player Track |</strong></h3>
 <p>Chapter 10 At your level, tactical sophistication is the primary performance differentiator.</p>
 <p>Physical capability and technical execution are roughly comparable across the elite tier.</p>
 <p>The players who consistently outperform their physical and technical peers are the ones whose tactical intelligence allows them to be in the right position, executing the right pattern, at the right moment in the match.</p>
@@ -1282,7 +1293,7 @@
 <p>Twenty minutes three times per week.</p>
 <p>Track your game-to-game improvement over a month and observe the parallel changes in your anticipation quality on court.</p>
 <p>The connection is real and measurable.</p>
-<h3>Coach Track |</h3>
+<h3><strong>Coach Track |</strong></h3>
 <p>Chapter 10 When coaching Tactics, pattern mapping is your most powerful intervention and the one most Coaches underuse.</p>
 <p>Before introducing any new pattern to a player, map the existing patterns: what three shots does this player default to in each of the four court positions?</p>
 <p>From that map, identify which defaults are high-percentage and which are habits — defaults that exist because they are familiar, not because they are tactically sound.</p>
@@ -1301,11 +1312,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="The_Art_of_Modern_Tennis_Complete_Chapter_11.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

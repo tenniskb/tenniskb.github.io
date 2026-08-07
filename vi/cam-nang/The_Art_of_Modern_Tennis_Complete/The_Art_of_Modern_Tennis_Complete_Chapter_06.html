@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang tennis chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Cẩm nang Quần Vợt Toàn Diện — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <h1>CHƯƠNG 06: The forehand</h1>
 <p>></p>
 <h2>CHƯƠNG 06</h2>
@@ -936,7 +948,7 @@
 <p>Understanding both — and the mechanical spectrum between them — is essential for any player or coach operating in the modern game.</p>
 <p>The unifying principle across all forehand models, regardless of grip, stance, or arm shape, remains the same: a whip-like delivery from a fully loaded Tennis Knowledge/Glossary/kinetic chain.</p>
 <p>Everything else is a variation on that theme.</p>
-<h3>6.1 The forehand's Evolutionary Arc: Federer to</h3>
+<h3><strong>6.1 The forehand's Evolutionary Arc: Federer to</strong></h3>
 <p>Alcaraz Three distinct mechanical models now coexist at the Elite level of the 2026 game.</p>
 <p>Each is Biomechanically valid.</p>
 <p>Each has specific advantages and specific vulnerabilities.</p>
@@ -948,7 +960,7 @@
 <p>It is the Fault-Tolerant model: designed not to maximise the ceiling but to raise the floor.</p>
 <p>The hybrid model — which describes many modern players who use a relatively straight arm on balls they have time for and a double-bend on balls they are rushed on — is less a deliberate choice than an adaptive response to the varying demands of match play.</p>
 <p>Teaching a player to switch deliberately between models based on available time and court position represents the most sophisticated forehand coaching available in 2026.</p>
-<h3>6.2 The Slot: loading the whip</h3>
+<h3><strong>6.2 The Slot: loading the whip</strong></h3>
 <p>To understand how elite forehand power is generated, it is necessary to discard the Concept of the swing entirely.</p>
 <p>The 2026 Blueprint Champion does not swing at the ball.</p>
 <p>They execute a multiphasic whip.</p>
@@ -970,7 +982,7 @@
 <p>The diagnostic marker for a correctly loaded slot is sound: a perfectly executed forehand whip produces a deep, resonant contact sound from the strings.</p>
 <p>A tight, pushed forehand produces a thinner, slapping sound.</p>
 <p>Coaches can diagnose slot quality with their ears before they can see it on video.</p>
-<h3>6.3 The Straight-Arm whip vs</h3>
+<h3><strong>6.3 The Straight-Arm whip vs</strong></h3>
 <p>The Double-Bend whip Both forehand models are governed by the same physical law: angular momentum equals the moment of inertia multiplied by angular velocity.</p>
 <p>The two models represent different solutions to the same equation.</p>
 <p>The straight-arm whip maximises the radius of the swing arc.</p>
@@ -992,7 +1004,7 @@
 <p>Despite their differences, both models share one mandatory requirement: the violent, instantaneous pronation of the forearm through the contact zone.</p>
 <p>This pronation is the final crack of the whip — the movement that seals the racket face over the ball and generates the Magnus effect responsible for topspin.</p>
 <p>Without pronation, neither model produces the heavy, high-RPM ball that defines elite forehand quality in 2026.</p>
-<h3>6.4 The lasso finish: Biomechanical Armour</h3>
+<h3><strong>6.4 The lasso finish: Biomechanical Armour</strong></h3>
 <p>For most of tennis history, the lasso finish — where the racket swings vertically up and over the hitting shoulder rather than across the chest — was treated as a technical anomaly.</p>
 <p>When a young Rafael Nadal first used it consistently, even Toni Nadal initially tried to correct it, viewing the unusual follow-through as inefficient.</p>
 <p>Biomechanical research has since established that the lasso finish is not a stylistic choice.</p>
@@ -1012,9 +1024,8 @@
 <p>The lasso is both Biomechanicalarmour for the shoulder and the natural consequence of a high-RPM swing path.</p>
 <p>Players who are hitting heavy topspin correctly will naturally tend toward a lasso finish.</p>
 <p>Players who are forcing an across-the-chest finish while trying to generate modern topspin rates are fighting their own Mechanics.</p>
-<h3>6.5 Grip, Stance and RPM Evolution: 2000–2026 |</h3>
-<p>Feature | 2000–2010 | 2020–2026 | | Dominant Grip | Eastern / Mild semi-western | Semi-western / Western | | Primaryarm Model | Straight-arm (Federer era standard) | Mixed — straight and double-bend coexist | | Dominant Stance | neutral / Semi-open | Extreme open | | Average contact Height | Hip to chest | chest to shoulder | | Average Elite RPM | 1,800–2,500 | 3,000–4,500+ | | follow-through | Across chest standard | lasso vertical dominant | | Primary power Source | linear weight transfer | angular momentum + Vertical GRF | | Fault Tolerance | Lower — straight arm demands precision | Higher — double-bend available as fallback |</p>
-<h3>6.6 velocity-Based Training: The Bruguera Influence The</h3>
+<h3><strong>6.5 Grip, Stance and RPM Evolution: 2000–2026 |</strong></h3>
+<p>Feature | 2000–2010 | 2020–2026 | | Dominant Grip | Eastern / Mild semi-western | Semi-western / Western | | Primaryarm Model | Straight-arm (Federer era standard) | Mixed — straight and double-bend coexist | | Dominant Stance | neutral / Semi-open | Extreme open | | Average contact Height | Hip to chest | chest to shoulder | | Average Elite RPM | 1,800–2,500 | 3,000–4,500+ | | follow-through | Across chest standard | lasso vertical dominant | | Primary power Source | linear weight transfer | angular momentum + Vertical GRF | | Fault Tolerance | Lower — straight arm demands precision | Higher — double-bend available as fallback | 6.6 velocity-Based Training: The Bruguera Influence The</p>
 <p>Training methodology that produced the modern topspin forehand traces directly to the pioneering work of Lluis Bruguera — decades ahead of his time in his implicit use of what is now called velocity-Based Training, or VBT.</p>
 <p>Traditional conditioning focused on heavy loads and slow movement — building strength through resistance.</p>
 <p>Bruguera recognised that the fast-twitch Type IIb muscle fibres responsible for the explosive whip of the modern forehand respond only to maximal velocity Training.</p>
@@ -1023,7 +1034,7 @@
 <p>The practical legacy of this methodology is the understanding that elite topspin is a product of velocity and friction, not physical mass.</p>
 <p>A lighter player executing a perfectly loaded slot with a fully relaxed arm and maximum rotational speed will produce a heavier ball than a stronger player muscling through contact with a tight grip and a partially loaded chain.</p>
 <p>Training the forehand means Training the CNS to fire faster, not the muscles to push harder.</p>
-<h3>6.7 Neurological Governors: Mushin, the VOR and the amygdala</h3>
+<h3><strong>6.7 Neurological Governors: Mushin, the VOR and the amygdala</strong></h3>
 <p>The physical Mechanics of the forehand whip are only accessible when the player is in the correct Neurological state.</p>
 <p>Three specific Neurological mechanisms can override a technically correct forehand and produce a failure at the moment of execution.</p>
 <p>The amygdala Override occurs when the brain registers an opportunity as a threat — the adrenaline spike that accompanies an easy put-away forehand that the player cannot afford to miss.</p>
@@ -1040,7 +1051,7 @@
 <p>The mind is empty of outcome-evaluation.</p>
 <p>The body executes the trained pattern without interference from the conscious mind's fear of the result.</p>
 <p>This is a trainable Neurological condition, developed through deliberate repetition of correct execution under graduated pressure — beginning with no pressure, building through practice pressure, and eventually maintaining through competitive pressure.</p>
-<h3>6.8 Mental Game: Flow State and the forehand</h3>
+<h3><strong>6.8 Mental Game: Flow State and the forehand</strong></h3>
 <p>Trigger The forehand under pressure reveals the player's relationship with Self 1 more nakedly than any other shot.</p>
 <p>The technical architecture described in the previous sections — the slot, the lasso, the pronation snap — cannot be consciously executed in real time.</p>
 <p>They must be automatic.</p>
@@ -1052,7 +1063,7 @@
 <p>High-pressure forehand execution follows a consistent pattern in players who have mastered this transition: they trust the whip.</p>
 <p>The player who trusts the whip hits through the ball with a relaxed arm, a full pronation, and a lasso finish that protects the shoulder.</p>
 <p>The player who guides the shot tightens the grip, abbreviates the follow-through, and produces exactly the weak, inconsistent forehand they were trying to avoid.</p>
-<h3>6.9 forehand Patterns of Play Inside-out forehand</h3>
+<h3><strong>6.9 forehand Patterns of Play Inside-out forehand</strong></h3>
 <p>is the primary offensive weapon in the modern game.</p>
 <p>Running around the backhand to hit a forehand into the opponent's backhand corner combines the player's most powerful shot with the opponent's typically weaker wing.</p>
 <p>The inside-out creates heavy cross-court pressure and forces a Defensive backhand that opens the court for the inside-in follow-up.</p>
@@ -1068,11 +1079,11 @@
 <p>Early recognition produces the composed, weight-forward finish that wins the point cleanly.</p>
 <p>T-Zone jamming drives the ball into the opponent's hip to prevent full rotation, forcing a jammed swing or a step-around that opens the opposite side of the court.</p>
 <p>Most effective as a pattern variation after establishing the wide cross-court — the opponent expects width and receives a body shot instead.</p>
-<h3>6.10 Technical Diagnostic Matrix</h3>
+<h3><strong>6.10 Technical Diagnostic Matrix</strong></h3>
 <p>When diagnosing a player's forehand, isolate these specific failure markers before making any technical intervention: The Arming Ratio: Does the racket head accelerate before the hips have cleared?</p>
 <p>If the hand passes the plane of the back hip before the navel faces the Net, the SSC has failed and the player is pulling with the shoulder rather than whipping from the core.</p>
 <p>This is the first fault to identify and correct. contact Point Compression: On the straight-arm forehand, is the elbow bending at contact?</p>
-<p>This indicates a late read or poor footwork — the player is getting jammed.</p>
+<p><strong>This indicates a late read or poor footwork — the player is getting jammed.</strong></p>
 <p>The correction is footwork before technique.</p>
 <p>The Sound of the strings: A correctly executed whip produces a deep, resonant contact sound.</p>
 <p>A tight, pushed forehand produces a thin, slapping sound.</p>
@@ -1080,7 +1091,7 @@
 <p>The lasso vs.</p>
 <p>Across Test: An across-the-chest finish at modern topspin rates indicates either insufficient swing speed or a habituated finish from an earlier technical phase.</p>
 <p>Neither serves the player well at elite pace.</p>
-<h3>6.11 Troubleshooting and drills Thearm-Hit Fault is</h3>
+<h3><strong>6.11 Troubleshooting and drills Thearm-Hit Fault is</strong></h3>
 <p>corrected through the progressive loading drill: hit at 50% focusing entirely on hip drive with the arm passive.</p>
 <p>At 70%, add the arm's contribution after core initiation.</p>
 <p>At 100%, the arm should feel like it is catching up to the rotation.</p>
@@ -1096,7 +1107,7 @@
 <p>The velocity-Based Speed drill , adapted from Bruguera's methodology, uses a light Training racket — approximately 250g — for three sets of eight maximum-speed swings with forty-five second rests.</p>
 <p>The reduced weight allows the CNS to experience racket head speeds beyond what is possible with a standard racket, recalibrating Neuromuscular recruitment upward.</p>
 <p>A measurable increase in relaxed swing speed typically follows within two to three sessions.</p>
-<p>Elite Player Track |</p>
+<p><strong>Elite Player Track |</strong></p>
 <h2>Chapter 6</h2>
 <p>At your level, the forehand Mechanics are established.</p>
 <p>The refinements available lie in three areas: fault tolerance, Neurological consistency, and pattern sophistication.</p>
@@ -1111,9 +1122,9 @@
 <p>On patterns: are you using the inside-in forehand as a genuine weapon or only the inside-out?</p>
 <p>Many elite players establish the inside-out successfully but leave the inside-in underdeveloped — the most obvious tactical follow-up shot unused.</p>
 <p>If inside-in percentage is low in your match data, dedicate a Training block specifically to it under pattern conditions.</p>
-<p>Coach Track |</p>
+<p><strong>Coach Track |</strong></p>
 <h2>Chapter 6</h2>
-<h3>6.1 T he forehand's Evolutionary Arc: Federer to Alcaraz Three distinct mechanical models now coexist at the Elite level of the 2026 game.</h3>
+<h3><strong>6.1 T he forehand's Evolutionary Arc: Federer to Alcaraz Three distinct mechanical models now coexist at the Elite level of the 2026 game.</strong></h3>
 <p>Each is Biomechanically valid.</p>
 <p>Each has specific advantages and specific vulnerabilities.</p>
 <p>And each is best suited to a particular physical profile, grip choice, and strategic identity.</p>
@@ -1124,7 +1135,7 @@
 <p>It is the Fault-Tolerant model: designed not to maximise the ceiling but to raise the floor.</p>
 <p>The hybrid model — which describes many modern players who use a relatively straight arm on balls they have time for and a double-bend on balls they are rushed on — is less a deliberate choice than an adaptive response to the varying demands of match play.</p>
 <p>Teaching a player to switch deliberately between models based on available time and court position represents the most sophisticated forehand coaching available in 2026.</p>
-<h3>6.2 T he Slot: loading the whip To understand how elite forehand power is generated, it is necessary to discard the Concept of the swing entirely.</h3>
+<h3><strong>6.2 T he Slot: loading the whip To understand how elite forehand power is generated, it is necessary to discard the Concept of the swing entirely.</strong></h3>
 <p>The 2026 Blueprint Champion does not swing at the ball.</p>
 <p>They execute a multiphasic whip.</p>
 <p>The critical loading point of this whip is the slot — the position of maximum external rotation from which the entire concentric explosion is launched.</p>
@@ -1143,7 +1154,7 @@
 <p>The diagnostic marker for a correctly loaded slot is sound: a perfectly executed forehand whip produces a deep, resonant contact sound from the strings.</p>
 <p>A tight, pushed forehand produces a thinner, slapping sound.</p>
 <p>Coaches can diagnose slot quality with their ears before they can see it on video.</p>
-<h3>6.3 T he Straight-Arm whip vs.</h3>
+<h3><strong>6.3 T he Straight-Arm whip vs.</strong></h3>
 <p>The Double-Bend whip Both forehand models are governed by the same physical law: angular momentum equals the moment of inertia multiplied by angular velocity.</p>
 <p>The two models represent different solutions to the same equation.</p>
 <p>The straight-arm whip maximises the radius of the swing arc.</p>
@@ -1165,7 +1176,7 @@
 <p>Despite their differences, both models share one mandatory requirement: the violent, instantaneous pronation of the forearm through the contact zone.</p>
 <p>This pronation is the final crack of the whip — the movement that seals the racket face over the ball and generates the Magnus effect responsible for topspin.</p>
 <p>Without pronation, neither model produces the heavy, high-RPM ball that defines elite forehand quality in 2026.</p>
-<h3>6.4 T he lasso finish: Biomechanical Armour For most of tennis history, the lasso finish — where the racket swings vertically up and over the hitting shoulder rather than across the chest — was treated as a technical anomaly.</h3>
+<h3><strong>6.4 T he lasso finish: Biomechanical Armour For most of tennis history, the lasso finish — where the racket swings vertically up and over the hitting shoulder rather than across the chest — was treated as a technical anomaly.</strong></h3>
 <p>When a young Rafael Nadal first used it consistently, even Toni Nadal initially tried to correct it, viewing the unusual follow-through as inefficient.</p>
 <p>Biomechanical research has since established that the lasso finish is not a stylistic choice.</p>
 <p>It is an evolutionary necessity.</p>
@@ -1185,8 +1196,7 @@
 <p>Players who are hitting heavy topspin correctly will naturally tend toward a lasso finish.</p>
 <p>Players who are forcing an across-the-chest finish while trying to generate modern topspin rates are fighting their own Mechanics.</p>
 <h3>6.5 G rip, Stance and RPM Evolution: 2000–2026 | Feature | 2000–2010 | 2020–2026 | | Dominant Grip | Eastern / Mild semi-western | Semi-western / Western | | Primaryarm Model | Straight-arm (federer era standard) | Mixed — straight and double-bend coexist | | Dominant Stance | neutral / Semi-open | Extreme open | | Average contact Height | Hip to chest | chest to shoulder | | Average Elite RPM | 1,800–2,500 | 3,000–4,500+ | | follow-through | Across chest standard | lasso vertical dominant | | Primary power Source | linear weight transfer | angular momentum + Vertical GRF | | Fault Tolerance |</h3>
-<p>Lower — straight arm demands precision | Higher — double-bend available as fallback |</p>
-<h3>6.6 velocity-Based Training: The Bruguera Influence The</h3>
+<p>Lower — straight arm demands precision | Higher — double-bend available as fallback | 6.6 velocity-Based Training: The Bruguera Influence The</p>
 <p>Training methodology that produced the modern topspin forehand traces directly to the pioneering work of Lluis Bruguera — decades ahead of his time in his implicit use of what is now called velocity-Based Training, or VBT.</p>
 <p>Traditional conditioning focused on heavy loads and slow movement — building strength through resistance.</p>
 <p>Bruguera recognised that the fast-twitch Type IIb muscle fibres responsible for the explosive whip of the modern forehand respond only to maximal velocity Training.</p>
@@ -1195,7 +1205,7 @@
 <p>The practical legacy of this methodology is the understanding that elite topspin is a product of velocity and friction, not physical mass.</p>
 <p>A lighter player executing a perfectly loaded slot with a fully relaxed arm and maximum rotational speed will produce a heavier ball than a stronger player muscling through contact with a tight grip and a partially loaded chain.</p>
 <p>Training the forehand means Training the CNS to fire faster, not the muscles to push harder.</p>
-<h3>6.7 N eurological Governors: Mushin, the VOR and the amygdala The physical Mechanics of the forehand whip are only accessible when the player is in the correct Neurological state.</h3>
+<h3><strong>6.7 N eurological Governors: Mushin, the VOR and the amygdala The physical Mechanics of the forehand whip are only accessible when the player is in the correct Neurological state.</strong></h3>
 <p>Three specific Neurological mechanisms can override a technically correct forehand and produce a failure at the moment of execution.</p>
 <p>The amygdala Override occurs when the brain registers an opportunity as a threat — the adrenaline spike that accompanies an easy put-away forehand that the player cannot afford to miss.</p>
 <p>This triggers a microscopic tightening of the grip that bypasses the elastic lag of the slot and converts the whip into a push.</p>
@@ -1211,7 +1221,7 @@
 <p>The mind is empty of outcome-evaluation.</p>
 <p>The body executes the trained pattern without interference from the conscious mind's fear of the result.</p>
 <p>This is a trainable Neurological condition, developed through deliberate repetition of correct execution under graduated pressure — beginning with no pressure, building through practice pressure, and eventually maintaining through competitive pressure.</p>
-<h3>6.8 M ental Game: Flow State and the forehand Trigger The forehand under pressure reveals the player's relationship with Self 1 more nakedly than any other shot.</h3>
+<h3><strong>6.8 M ental Game: Flow State and the forehand Trigger The forehand under pressure reveals the player's relationship with Self 1 more nakedly than any other shot.</strong></h3>
 <p>The technical architecture described in the previous sections — the slot, the lasso, the pronation snap — cannot be consciously executed in real time.</p>
 <p>They must be automatic.</p>
 <p>The moment Self 1 attempts to supervise the forehand mid-swing, the quality degrades regardless of how well the shot was trained.</p>
@@ -1222,7 +1232,7 @@
 <p>High-pressure forehand execution follows a consistent pattern in players who have mastered this transition: they trust the whip.</p>
 <p>The player who trusts the whip hits through the ball with a relaxed arm, a full pronation, and a lasso finish that protects the shoulder.</p>
 <p>The player who guides the shot tightens the grip, abbreviates the follow-through, and produces exactly the weak, inconsistent forehand they were trying to avoid.</p>
-<h3>6.9 forehand Patterns of Play Inside-out forehand</h3>
+<h3><strong>6.9 forehand Patterns of Play Inside-out forehand</strong></h3>
 <p>is the primary offensive weapon in the modern game.</p>
 <p>Running around the backhand to hit a forehand into the opponent's backhand corner combines the player's most powerful shot with the opponent's typically weaker wing.</p>
 <p>The inside-out creates heavy cross-court pressure and forces a Defensive backhand that opens the court for the inside-in follow-up.</p>
@@ -1238,10 +1248,10 @@
 <p>Early recognition produces the composed, weight-forward finish that wins the point cleanly.</p>
 <p>T-Zone jamming drives the ball into the opponent's hip to prevent full rotation, forcing a jammed swing or a step-around that opens the opposite side of the court.</p>
 <p>Most effective as a pattern variation after establishing the wide cross-court — the opponent expects width and receives a body shot instead.</p>
-<h3>6.10 T echnical Diagnostic Matrix When diagnosing a player's forehand, isolate these specific failure markers before making any technical intervention: The Arming Ratio: Does the racket head accelerate before the hips have cleared?</h3>
+<h3><strong>6.10 T echnical Diagnostic Matrix When diagnosing a player's forehand, isolate these specific failure markers before making any technical intervention: The Arming Ratio: Does the racket head accelerate before the hips have cleared?</strong></h3>
 <p>If the hand passes the plane of the back hip before the navel faces the Net, the SSC has failed and the player is pulling with the shoulder rather than whipping from the core.</p>
 <p>This is the first fault to identify and correct. contact Point Compression: On the straight-arm forehand, is the elbow bending at contact?</p>
-<p>This indicates a late read or poor footwork — the player is getting jammed.</p>
+<p><strong>This indicates a late read or poor footwork — the player is getting jammed.</strong></p>
 <p>The correction is footwork before technique.</p>
 <p>The Sound of the strings: A correctly executed whip produces a deep, resonant contact sound.</p>
 <p>A tight, pushed forehand produces a thin, slapping sound.</p>
@@ -1249,7 +1259,7 @@
 <p>The lasso vs.</p>
 <p>Across Test: An across-the-chest finish at modern topspin rates indicates either insufficient swing speed or a habituated finish from an earlier technical phase.</p>
 <p>Neither serves the player well at elite pace.</p>
-<h3>6.11 T roubleshooting and drills Thearm-Hit Fault is corrected through the progressive loading drill: hit at 50% focusing entirely on hip drive with the arm passive.</h3>
+<h3><strong>6.11 T roubleshooting and drills Thearm-Hit Fault is corrected through the progressive loading drill: hit at 50% focusing entirely on hip drive with the arm passive.</strong></h3>
 <p>At 70%, add the arm's contribution after core initiation.</p>
 <p>At 100%, the arm should feel like it is catching up to the rotation.</p>
 <p>This makes the chain sequence visceral rather than instructional.</p>
@@ -1264,7 +1274,7 @@
 <p>The velocity-Based Speed drill , adapted from Bruguera's methodology, uses a light Training racket — approximately 250g — for three sets of eight maximum-speed swings with forty-five second rests.</p>
 <p>The reduced weight allows the CNS to experience racket head speeds beyond what is possible with a standard racket, recalibrating Neuromuscular recruitment upward.</p>
 <p>A measurable increase in relaxed swing speed typically follows within two to three sessions.</p>
-<h3>Elite Player Track |</h3>
+<h3><strong>Elite Player Track |</strong></h3>
 <p>Chapter 6 At your level, the forehand Mechanics are established.</p>
 <p>The refinements available lie in three areas: fault tolerance, Neurological consistency, and pattern sophistication.</p>
 <p>On fault tolerance: examine what happens to your forehand when you are rushed.</p>
@@ -1278,9 +1288,8 @@
 <p>On patterns: are you using the inside-in forehand as a genuine weapon or only the inside-out?</p>
 <p>Many elite players establish the inside-out successfully but leave the inside-in underdeveloped — the most obvious tactical follow-up shot unused.</p>
 <p>If inside-in percentage is low in your match data, dedicate a Training block specifically to it under pattern conditions.</p>
-<h3>Coach Track |</h3>
-<p>Chapter 6 When coaching your player's forehand, use the Technical Diagnostic Matrix in section</p>
-<h3>6.10 as your first-pass analysis tool before</h3>
+<h3><strong>Coach Track |</strong></h3>
+<p>Chapter 6 When coaching your player's forehand, use the Technical Diagnostic Matrix in section 6.10 as your first-pass analysis tool before</p>
 <p>introducing any technical cue.</p>
 <p>A player showing contact compression needs footwork work, not arm instruction.</p>
 <p>A player showing Arming needs core sequencing work, not follow-through instruction.</p>
@@ -1298,11 +1307,10 @@
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="The_Art_of_Modern_Tennis_Complete_Chapter_07.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>
