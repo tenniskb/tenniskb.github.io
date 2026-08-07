@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Cẩm Nang Tennis 2026 Công Thức Đơn Giản</span>
@@ -932,7 +978,7 @@
 <p>Chuẩn bị: Cảm biến áp lực trong giày hoặc ứng dụng điện thoại đo rung động.</p>
 <p>Thực hiện: Đứng ở tư thế chuẩn bị đánh Forehand, đạp mạnh vào đất.</p>
 <p>Mục tiêu: Đạt áp lực nén 1.8 lần trọng lượng cơ thể cho cú Forehand.</p>
-<p>Kiểm chứng: Lực = Cân nặng × Gia tốc đạp. Ví dụ 75kg đạt 1.8× = 135kg lực.</p>
+<p>Kiểm chứng: Lực = Cân nặng × Gia tốc đạp. Ví dụ 75kg đạt 1.8 × = 135kg lực.</p>
 <p>Bài Tập 2: Tách Biệt Hông - Vai (Separation Drill)</p>
 <p>Chuẩn bị: Dùng camera quay chậm 240fps, đặt từ trên cao xuống.</p>
 <p>Thực hiện: Đánh 10 quả Forehand, đo góc lệch giữa trục hông và trục vai tại đỉnh backswing.</p>
@@ -1017,7 +1063,7 @@
 <p>4.3. Giai Đoạn Nạp Lò Xo</p>
 <p>4.3.1. Trình Tự Bùng Nổ — Ba Giai Đoạn</p>
 <p>Trophy Pose: Trạng thái nén lò xo tối đa. Gối gập 100–120°, trọng tâm thấp, vợt ở phía sau đầu (Max External Rotation).</p>
-<p>Drive Phase: Duỗi gối và mắt cá chân bùng nổ theo trục dọc. Đây là lúc GRF đạt 2.5× cân nặng.</p>
+<p>Drive Phase: Duỗi gối và mắt cá chân bùng nổ theo trục dọc. Đây là lúc GRF đạt 2.5 × cân nặng.</p>
 <p>Release Phase: Năng lượng dọc trục chuyển hoá thành xoay ngang (Hip-Shoulder Separation) và xoay trong của cánh tay.</p>
 <p>4.4. Gia Tốc Xoay Trong — Cú "Vút Roi" Cuối Cùng</p>
 <p>4.5. Bài Tập Thực Hành Vertical Explosion</p>
@@ -1035,7 +1081,7 @@
 <p>Cảm nhận độ căng tối đa ở hệ mạc ngực trước và vai.</p>
 <p>Bùng nổ đột ngột, vung tay như khi tiếp bóng.</p>
 <p>4.6. Phân Tích Case Study: Carlos Alcaraz</p>
-<p>Lực đạp đất đỉnh: 2.62× cân nặng cơ thể — vượt ngưỡng Elite tiêu chuẩn.</p>
+<p>Lực đạp đất đỉnh: 2.62 × cân nặng cơ thể — vượt ngưỡng Elite tiêu chuẩn.</p>
 <p>X-Factor tại Trophy Pose: 58° — tích luỹ tối đa năng lượng mạc chéo.</p>
 <p>Thời gian xoay trong: 22ms — nhanh hơn 12% so với trung bình tour.</p>
 <p>Đóng góp của Hông (Khối 1): 42% — gần gấp đôi người phong trào trung bình (25%).</p>
@@ -1049,7 +1095,7 @@
 <p>5.3. Điểm Chặn Tối Ưu</p>
 <p>5.4. Bài Tập Direct Load</p>
 <p>Bài Tập 1: Wall-Step Reflex</p>
-<p>Đứng cách tường 1.5m, nhờ người ném bóng mạnh vào tường từ phía bên.</p>
+<p>Đứng cách tường 1.5 m, nhờ người ném bóng mạnh vào tường từ phía bên.</p>
 <p>Thực hiện Split-step và "chặn" bóng không vung tay — chỉ xoay vai nhẹ.</p>
 <p>Mục tiêu: Bóng vẫn đi xa nhờ hệ trục truyền dẫn mà không cần backswing.</p>
 <p>Bài Tập 2: Short Ball Return Drill</p>
@@ -1220,7 +1266,7 @@ Nếu &lt; 0.50: Cổ tay bị lật → rò rỉ năng lượng + nguy cơ ch�
 <p>1–2</p>
 <p>Cảm nhận GRF</p>
 <p>Dậm chân, nhảy đơn chân</p>
-<p>Lực đạp ≥ 1.5× cân nặng</p>
+<p>Lực đạp ≥ 1.5 × cân nặng</p>
 <p>3–4</p>
 <p>X-Factor</p>
 <p>Hip-Hold Drill, Separation Drill</p>
@@ -1369,7 +1415,7 @@ Dây càng dài → tổng thể càng mềm. Dây càng dày → càng cứng. 
 <p>🔢 Phương Trình Lực Đẩy Dọc (Vertical GRF)
 Lực đẩy lên = Trọng lượng tĩnh của cơ thể + Lực bùng nổ từ đôi chân
 Ngưỡng Elite: Lực đẩy đỉnh = 2.3 đến 2.5 lần cân nặng cơ thể
-Ví dụ: Tay vợt 80kg đạt 2.5× → đạp xuống sân lực 200kg trong chưa đầy 0.1 giây!</p>
+Ví dụ: Tay vợt 80kg đạt 2.5 × → đạp xuống sân lực 200kg trong chưa đầy 0.1 giây!</p>
 <p>🔢 Phương Trình Tốc Độ Giao Bóng
 Tốc độ giao bóng = (Đà xoay hông + Đà xoay vai + Đà truyền từ cánh tay + vợt) ÷ Cân nặng người chơi
 Chia tốc độ thành 3 khối đóng góp. Thiếu một khối → không đạt tốc độ đỉnh. Cả ba phải cộng dồn hoàn hảo.</p>
@@ -1596,7 +1642,7 @@ Cả kỹ năng bản thân lẫn sự hỗ trợ của đều cần thiết. Th
 <p>5–6</p>
 <p>DIT &amp; GRF</p>
 <p>Lead tape + Sensor giày</p>
-<p>GRF ≥ 2.0× cân nặng, DIT ≥ 0.75</p>
+<p>GRF ≥ 2.0 × cân nặng, DIT ≥ 0.75</p>
 <p>7–8</p>
 <p>DSI &amp; Footwork</p>
 <p>Agility ladder + Video </p>
@@ -1643,7 +1689,7 @@ Cả kỹ năng bản thân lẫn sự hỗ trợ của đều cần thiết. Th
 <p>Độ cứng = (Vật liệu × Độ dày) ÷ Chiều dài biến dạng</p>
 <p>Ch.3</p>
 <p>Lực đạp đất (GRF)</p>
-<p>Lực đẩy lên = Trọng lượng tĩnh + Lực bùng nổ chân (mục tiêu 2.3–2.5×)</p>
+<p>Lực đẩy lên = Trọng lượng tĩnh + Lực bùng nổ chân (mục tiêu 2.3–2.5 ×)</p>
 <p>Ch.4</p>
 <p>Tốc độ giao bóng</p>
 <p>Tốc độ = (Đà hông + Đà vai + Đà tay+vợt) ÷ Cân nặng</p>
@@ -1655,7 +1701,7 @@ Cả kỹ năng bản thân lẫn sự hỗ trợ của đều cần thiết. Th
 <p>Năng lượng nạp = ½ × Độ cứng hệ mạc × (Biên độ khuỵu gối)²</p>
 <p>Ch.4</p>
 <p>Thời gian phản ứng (DL)</p>
-<p>Tổng thời gian = Nhận diện + Nạp lực + Tiếp bóng (mục tiêu ≤ 0.12s)</p>
+<p>Tổng thời gian = Nhận diện + Nạp lực + Tiếp bóng (mục tiêu ≤ 0.12 s)</p>
 <p>Ch.5</p>
 <p>Động lượng trả bóng</p>
 <p>Sức mạnh trả = Độ cứng vai × Tốc độ hông + Độ vững cổ tay × Tốc độ bóng đến</p>
@@ -1709,7 +1755,7 @@ Cả kỹ năng bản thân lẫn sự hỗ trợ của đều cần thiết. Th
 <p>Cổ tay không bị bẻ gập khi bóng dội vào</p>
 <p>Cảm giác chủ quan + video</p>
 <p>Lực đạp đất (GRF)</p>
-<p>2.3–2.5× cân nặng</p>
+<p>2.3–2.5 × cân nặng</p>
 <p>Bạn đạp xuống đất mạnh bao nhiêu khi giao bóng</p>
 <p>Cảm biến áp lực giày</p>
 <p>DIT — Quán tính động</p>
@@ -1749,9 +1795,14 @@ Cả kỹ năng bản thân lẫn sự hỗ trợ của đều cần thiết. Th
 <p>Cơ thể và thần kinh đã sẵn sàng thi đấu chưa</p>
 <p>Kết hợp HRV + chất lượng ngủ</p>
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="./Cam_Nang_Tennis_2026.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="index.html" class="nav-btn prev">← Trang Trước</a>
+  <a href="index.html" class="nav-btn toc">≡ Mục Lục</a>
+  <a href="index.html" class="nav-btn next">Trang Sau →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 </body></html>

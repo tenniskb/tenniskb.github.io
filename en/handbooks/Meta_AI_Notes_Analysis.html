@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Meta Notes Analysis</span>
@@ -1679,7 +1725,7 @@ Right column:</p>
 <p>Read the text in these pics and analyze</p>
 <p>May 30, 2026</p>
 <p>Here are your four pages transcribed, then what they're actually teaching — because these aren't random doodles, they're a full mini-system for modern, compact tennis.</p>
-<h3 id="page-1-connected-tension-tensegrity">Page 1 — "Connected &amp; Tension - Tensegrity"</h3>
+<h3 id="page-1-connected-tension-tensegrity">Page 1 — "connected &amp; Tension - Tensegrity"</h3>
 <p>Top:</p>
 <ul class="styled-list">
 <li>Connected &amp; Tension -</li>
@@ -1696,7 +1742,7 @@ Right column:</p>
 <li>Left Shoulder &amp; Right Shoulder move inside</li>
 <li>Cradle = Om Dong Dua Vot (blue ink)</li>
 </ul>
-<h3 id="page-2-how-to-create-big-shot-with-compact-stroke">Page 2 — "How to create big shot with compact stroke"</h3>
+<h3 id="page-2-how-to-create-big-shot-with-compact-stroke">Page 2 — "how to create big shot with compact stroke"</h3>
 <p>Header: To generate high speed:</p>
 <ul class="styled-list">
 <li>Very brief take back to create momentum &amp; counter force with the hop</li>
@@ -1727,7 +1773,7 @@ Right column:</p>
 <li>Forehand</li>
 <li>Racquet is far from the body</li>
 </ul>
-<h3 id="page-4-salsa-dance-instruction-applied-in-tennis">Page 4 — "Salsa Dance Instruction: applied in tennis"</h3>
+<h3 id="page-4-salsa-dance-instruction-applied-in-tennis">Page 4 — "salsa Dance Instruction: applied in tennis"</h3>
 <ul class="styled-list">
 <li>Upper Body Move</li>
 <li>Rotate in Figure 8 pattern in Rhythm</li>
@@ -2665,7 +2711,13 @@ Phần bổ sung: Forehand của Rublev – tại sao nó mạnh mà không cầ
 </ol>
 <p>Rublev đánh forehand rất gọn và bạo lực vì toàn bộ chuỗi lực đi từ dưới lên, cổ tay chỉ là bản lề bị động. Video đầu cảnh báo bạn đừng phá bản lề đó bằng cách thả sớm, video thứ hai chỉ cách nạp năng lượng đúng chỗ để bản lề tự bung.</p>
 <p>Bạn muốn mình phân tích sâu hơn đoạn nào — lúc uncoil của Rublev hay cách chuyển từ lỗi drop wrist sang cảm giác slot?</p>
-<p>Trong hệ nội công Đông Á, đặc biệt là Đạo gia và võ thuật nội gia, Mingmen (Mệnh Môn), Dantian (Đan Điền) và center of gravity (trọng tâm) thường bị nói lẫn với nhau — nhưng thực ra chúng là 3 lớp khác nhau:năng lượngcấu trúc sinh họccơ học chuyển độngKhi ba thứ này align với nhau, cơ thể bắt đầu tạo ra kiểu power “whole-body” rất khác: lực không còn đến từ tay/chân riêng lẻ mà từ toàn thân như một khối.---1. Dantian (Đan Điền) — “energy center / movement hub”Trong võ thuật, khi nói “lower dantian”, thường là vùng:dưới rốn khoảng 2–3 inchnằm sâu bên trong bụng dướigần center mass của cơ thểNó không phải một điểm giải phẫu chính xác như gan hay tim.Thực tế hơn:đó là vùng điều phối áp lực bụngdiaphragmpelvic floorcore spiralfascia tensionTrong chuyển động elite:dantian là “trung tâm điều hướng”nơi rotation bắt đầunơi cơ thể “gather &amp; release force”Trong tennis:mọi kinetic chain lớn đều nên “khởi động” từ đây:serveforehandrecoverysplit-step absorption---2. Mingmen (Mệnh Môn) — “back power gate”Mingmen thường được đặt:phía sau cơ thểđối diện lower dantianquanh vùng L2–L3 lumbar spineTrong nội gia quyền:Mingmen là “spring” phía saunguồn elastic expansionđiểm giúp spine có tính reboundNếu dantian là “compression center” thì mingmen là:expansion gateposterior engineKhi mingmen mở:lower back không collapsepelvis không deadspine có đàn hồilực truyền qua ground tốt hơnTrong tennis/rotation:mingmen giúp tạo:coilingstretch-shortening cyclehip-shoulder separationwhip mechanicsForehand elite thường có cảm giác:bụng mềmlưng dưới “nở”pelvis floatingspine elasticĐó rất gần concept “open mingmen”.---3. Center of Gravity (COG) — trọng tâm cơ họcĐây là phần vật lý thật sự.Center of gravity:điểm mà khối lượng cơ thể cân bằng quanh nóthay đổi liên tục theo postureTrong athletic movement:COG thấp → ổn định hơnCOG dynamic → di chuyển explosively hơnVí dụ:khi split-step → COG hạ xuốngkhi serve loading → COG compresskhi sprint → COG projected forwardTrong tennis elite: điều quan trọng không phải giữ COG thấp mọi lúc, mà là:điều khiển projection của COGDjokovic, Federer, Alcaraz đều cực mạnh ở việc:“rơi” trọng tâm đúng lúcrồi redirect ngay lập tức---4. Cách 3 thứ overlap với nhauMột cách hình dung rất chuẩn:Dantian= trung tâm điều phối lựcMingmen= mặt lưng đàn hồi của hệ lựcCenter of Gravity= biểu hiện vật lý của toàn hệ trong không gian---5. Trong chuyển động thực chiếnKhi bạn load forehand:COG hơi sink vào chân ngoàiDantian rotate &amp; gatherMingmen expand phía sauSau đó:ground force đi lênpelvis unwindtorso whiparm releaseNếu chỉ dùng:vaitayhip riêng lẻ→ lực sẽ “đứt đoạn”.Nhưng khi:dantian dẫnmingmen mởCOG projected đúng→ cơ thể đánh như một cây roi.---6. Dấu hiệu alignment đúngBạn sẽ cảm thấy:chân “ăn đất”bụng dưới alivelưng dưới không cứngchuyển hướng rất nhẹpower effortlesstay không cần dùng nhiều lựcTrong tennis: đây là cảm giác:effortless paceheavy balllate accelerationelastic movement---7. Sai lầm phổ biến“Use the core”nhiều người hiểu thành:siết abs cứngThực ra elite movement thường:core responsiveelasticpressure-changingkhông rigidNếu abs quá cứng:mingmen khóapelvis chếtCOG không flow đượcKết quả:rotation chậmmất whiprecover khó---8. Công thức ngắn gọnInternal layerDantian + Mingmen↓Structural layerSpine + pelvis + fascia elasticity↓Mechanical layerCenter of gravity projection↓Athletic outcomeBalance + power + fluidity + redirection---Trong nội gia quyền như Tai Chi, Baguazhang, hay Xingyiquan, mục tiêu cuối cùng không phải “mystical energy” mà là:tích hợp toàn thântruyền lực liên tụcđiều khiển trọng tâm cực tinh tếtạo elastic power bằng cấu trúc + thần kinh + hơi thở.</p>
+<p>Trong hệ nội công Đông Á, đặc biệt là Đạo gia và võ thuật nội gia, Mingmen (Mệnh Môn), Dantian (Đan Điền) và center of gravity (trọng tâm) thường bị nói lẫn với nhau — nhưng thực ra chúng là 3 lớp khác nhau:năng lượngcấu trúc sinh họccơ học chuyển độngKhi ba thứ này align với nhau, cơ thể bắt đầu tạo ra kiểu power “whole-body” rất khác: lực không còn đến từ tay/chân riêng lẻ mà từ toàn thân như một khối.---1.</p>
+<p>Dantian (Đan Điền) — “energy center / movement hub”Trong võ thuật, khi nói “lower dantian”, thường là vùng:dưới rốn khoảng 2–3 inchnằm sâu bên trong bụng dướigần center mass của cơ thểNó không phải một điểm giải phẫu chính xác như gan hay tim.Thực tế hơn:đó là vùng điều phối áp lực bụngdiaphragmpelvic floorcore spiralfascia tensionTrong chuyển động elite:dantian là “trung tâm điều hướng”nơi rotation bắt đầunơi cơ thể “gather &amp; release force”Trong tennis:mọi kinetic chain lớn đều nên “khởi động” từ đây:serveforehandrecoverysplit-step absorption---2.</p>
+<p>Mingmen (Mệnh Môn) — “back power gate”Mingmen thường được đặt:phía sau cơ thểđối diện lower dantianquanh vùng L2–L3 lumbar spineTrong nội gia quyền:Mingmen là “spring” phía saunguồn elastic expansionđiểm giúp spine có tính reboundNếu dantian là “compression center” thì mingmen là:expansion gateposterior engineKhi mingmen mở:lower back không collapsepelvis không deadspine có đàn hồilực truyền qua ground tốt hơnTrong tennis/rotation:mingmen giúp tạo:coilingstretch-shortening cyclehip-shoulder separationwhip mechanicsForehand elite thường có cảm giác:bụng mềmlưng dưới “nở”pelvis floatingspine elasticĐó rất gần concept “open mingmen”.---3.</p>
+<p>Center of Gravity (COG) — trọng tâm cơ họcĐây là phần vật lý thật sự.Center of gravity:điểm mà khối lượng cơ thể cân bằng quanh nóthay đổi liên tục theo postureTrong athletic movement:COG thấp → ổn định hơnCOG dynamic → di chuyển explosively hơnVí dụ:khi split-step → COG hạ xuốngkhi serve loading → COG compresskhi sprint → COG projected forwardTrong tennis elite: điều quan trọng không phải giữ COG thấp mọi lúc, mà là:điều khiển projection của COGDjokovic, Federer, Alcaraz đều cực mạnh ở việc:“rơi” trọng tâm đúng lúcrồi redirect ngay lập tức---4. Cách 3 thứ overlap với nhauMột cách hình dung rất chuẩn:Dantian= trung tâm điều phối lựcMingmen= mặt lưng đàn hồi của hệ lựcCenter of Gravity= biểu hiện vật lý của toàn hệ trong không gian---5.</p>
+<p>Trong chuyển động thực chiếnKhi bạn load forehand:COG hơi sink vào chân ngoàiDantian rotate &amp; gatherMingmen expand phía sauSau đó:ground force đi lênpelvis unwindtorso whiparm releaseNếu chỉ dùng:vaitayhip riêng lẻ→ lực sẽ “đứt đoạn”.Nhưng khi:dantian dẫnmingmen mởCOG projected đúng→ cơ thể đánh như một cây roi.---6. Dấu hiệu alignment đúngBạn sẽ cảm thấy:chân “ăn đất”bụng dưới alivelưng dưới không cứngchuyển hướng rất nhẹpower effortlesstay không cần dùng nhiều lựcTrong tennis: đây là cảm giác:effortless paceheavy balllate accelerationelastic movement---7.</p>
+<p>Sai lầm phổ biến“Use the core”nhiều người hiểu thành:siết abs cứngThực ra elite movement thường:core responsiveelasticpressure-changingkhông rigidNếu abs quá cứng:mingmen khóapelvis chếtCOG không flow đượcKết quả:rotation chậmmất whiprecover khó---8. Công thức ngắn gọnInternal layerDantian + Mingmen↓Structural layerSpine + pelvis + fascia elasticity↓Mechanical layerCenter of gravity projection↓Athletic outcomeBalance + power + fluidity + redirection---Trong nội gia quyền như Tai Chi, Baguazhang, hay Xingyiquan, mục tiêu cuối cùng không phải “mystical energy” mà là:tích hợp toàn thântruyền lực liên tụcđiều khiển trọng tâm cực tinh tếtạo elastic power bằng cấu trúc + thần kinh + hơi thở.</p>
+
 <p>May 15, 2026</p>
 <p>Bạn tách đúng 3 lớp mà hầu hết người tập tennis hay võ đều trộn lẫn. Cách bạn đặt nó — năng lượng, cấu trúc sinh học, cơ học — chính là cách khoa học thể thao hiện đại đang mô tả lại nội công, chỉ khác từ vựng.</p>
 <p>Mình nối thẳng nó vào forehand và chuyển động tennis để thấy vì sao khi 3 thứ align thì lực trở nên "whole-body".</p>
@@ -3054,7 +3106,7 @@ Lỗi giết recovery sau serve wide</p>
 <p><img alt="frames/01_unit_turn_alcaraz.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703083935_2178442772954974_5580951654112389708_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=5brDMwxVlXUQ7kNvwEuqoCp&amp;_nc_oc=AdqWTgYSkMvtxeB3ZWFxSMZj3iU8CsbaT6-kRZ52f08bYPjTYL9ifaJLI6_50jM0WVo&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_ojN3YUYo6h14kKAgLRsg0RF32NnA_Cag1T0B3ncDMQQ&amp;oe=6A2DF517"/></p>
 <p>frames/01_unit_turn_alcaraz.jpg</p>
 <div class="pullquote"><p>Sai lầm phổ biến: kéo vợt ra sau bằng cổ tay ngay lập tức → mất cấu trúc.</p></div>
-<h3 id="2-checkpoint-1-abduct-ua-khuyu-tay-ra-sau">2. Checkpoint 1: Abduct – Đưa khuỷu tay RA SAU</h3>
+<h3 id="2-checkpoint-1-abduct-ua-khuyu-tay-ra-sau">2. Checkpoint 1: Abduct – Đưa khuỷu tay Ra SAU</h3>
 <p>HLV nhấn mạnh: "abduct our elbow back". Không phải đưa cả cánh tay vòng ra sau, mà là đẩy khuỷu tay (cùi chỏ) ra phía sau lưng, tạo khoảng trống giữa thân và tay.</p>
 <p><img alt="frames/03_coach_abduct_elbow.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703054715_1302754564632231_8506874149902412281_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=p3Tmue11kXYQ7kNvwF0Kkzi&amp;_nc_oc=Adpgw7AO1TPq1tO9UuPu9EbVBYrIBLGk81dF3cU6mToaWmRAjMVywxkd2Oa9Zh5CKDY&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-m3O6MUo2IGx9k0pWNX356-9zaGn-Fw1LQralFbOaTQA&amp;oe=6A2DEB41"/></p>
 <p>frames/03_coach_abduct_elbow.jpg</p>
@@ -3111,7 +3163,7 @@ Lỗi giết recovery sau serve wide</p>
 <p>May 18, 2026</p>
 <p>Video này giải đúng cái lỗi mà 90% người chơi phong trào mắc: cố gắng tăng tốc bằng cách gồng tay. HLV nói thẳng – power không đến từ việc siết cẳng tay, mà đến từ chuỗi cơ lớn: chân → hông → core → ngực/vai.</p>
 <p>Đây là phân tích kỹ thuật theo đúng trình tự trong clip, kèm hình cắt từ video:</p>
-<h3 id="1-van-e-tightening-your-arm-mat-toc-o">1. Vấn đề: "Tightening your arm" = mất tốc độ</h3>
+<h3 id="1-van-e-tightening-your-arm-mat-toc-o">1. Vấn đề: "tightening your arm" = mất tốc độ</h3>
 <p>HLV mô tả động tác sai trước: cánh tay căng cứng, vai nhô lên, bạn cố "đẩy" vợt bằng bắp tay.</p>
 <p><img alt="frames2/02_wrong_tighten.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703084000_1634045414346919_6093491352000863084_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=VhU0oEFZj-4Q7kNvwHZYmPN&amp;_nc_oc=AdqYUsOETsj4iBcMhD_UKe0Hmh6yzvc5EhRFyUd0bMimz1M5T4srR0NitvHk3L4LyEA&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9Czc683K9-_l0b6RQf-PV5zxRsXtBIlt6McWW2IWItHg&amp;oe=6A2DD1C2"/></p>
 <p>frames2/02_wrong_tighten.jpg</p>
@@ -3179,7 +3231,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Có</p>
 <p>May 18, 2026</p>
 <p>Ok, làm luôn cho bạn — vừa sơ đồ mũi tên lực, vừa mổ chậm pha "lag" mà HLV nhắc tới.</p>
-<h3 id="1-so-o-chuoi-luc-kinetic-chain">1. Sơ đồ chuỗi lực (Kinetic Chain)</h3>
+<h3 id="1-so-o-chuoi-luc-kinetic-chain">1. Sơ đồ chuỗi lực (kinetic Chain)</h3>
 <p>Nhìn 4 khung này theo chiều kim đồng hồ, bạn sẽ thấy lực đi từ dưới lên, không phải từ tay:</p>
 <p><img alt="kinetic_chain_diagram.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703031262_1539918054409446_7610316589082291535_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=08puIw9PXkwQ7kNvwG0ozXN&amp;_nc_oc=Adp9iCBG5skaFg2uw63yS4yFBnc0LYYFWJkliXTucewf1tej0QVlCqfcuPXbyTf7EbM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-8ed5NrMbb10D_Xn0elruZJE05P4sFl2IrqK1Lsm-_qA&amp;oe=6A2DF679"/></p>
 <p>kinetic_chain_diagram.jpg</p>
@@ -3563,7 +3615,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>**</p>
 <p>Trong video:</p>
 <ul class="styled-list">
-<li>0:00-1.5s: mình đánh dấu "Backswing: khuỷu chưa ra sau" – bạn thấy tay vẫn sát người, chưa đạt vị trí 5:30 như Alcaraz</li>
+<li>0:00-1.5 s: mình đánh dấu "Backswing: khuỷu chưa ra sau" – bạn thấy tay vẫn sát người, chưa đạt vị trí 5:30 như Alcaraz</li>
 <li>1.5-3s: "Contact: tay gần người ∼30°" – so với góc 45° vàng, bạn đang đánh hơi muộn và gần</li>
 </ul>
 <p>Vì file gốc của Alcaraz đã hết hạn trong phiên làm việc, mình không ghép side-by-side được, nhưng mình đã dùng đúng khung hình Alcaraz từ phân tích trước để đối chiếu trong ảnh tĩnh:</p>
@@ -3582,7 +3634,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Xem video phân tích 3 lần, tập trung vào cảm giác "đẩy khuỷu ra sau"</li>
 <li>Quay lại 1 clip mới từ góc hông (điện thoại đặt ngang lưới, cao bằng hông), mình sẽ làm side-by-side thật với Alcaraz frame-by-frame</li>
 </ol>
-<p>Bạn muốn mình làm tiếp video slow-motion 0.25x để thấy rõ cổ tay không?</p>
+<p>Bạn muốn mình làm tiếp video slow-motion 0.25 x để thấy rõ cổ tay không?</p>
 <p>Conversation title</p>
 <p>Phân tích kỹ thuật</p>
 <p>May 16, 2026</p>
@@ -4054,38 +4106,38 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <h3 id="ban-thay-gi-trong-clip-nay">Bạn thấy gì trong clip này</h3>
 <ol class="styled-list numbered">
 <li>Semi open stance – có ngay từ bước đầu<br/>
- Ở 3.2s và 9.5s, chân trái mở chéo, chân phải làm trụ, hông đã xoay trước khi vợt ra sau. Không đứng vuông góc, không đứng quá mở – đúng kiểu Alcaraz dùng để vừa đẩy vừa xoay.</li>
+ Ở 3.2 s và 9.5 s, chân trái mở chéo, chân phải làm trụ, hông đã xoay trước khi vợt ra sau. Không đứng vuông góc, không đứng quá mở – đúng kiểu Alcaraz dùng để vừa đẩy vừa xoay.</li>
 </ol>
 <p><img alt="user_alcaraz_2.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702493909_908621235563842_8419811187510589281_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=qkjMHeYOVSsQ7kNvwFjubIp&amp;_nc_oc=Adprn66G35HKlY3APSoBSROvRKjD5eF041vT3opbVIVsHHatmKRV1QbU5Sd0UsexBcA&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af9TGqDoF1F_uQ6uZRY1N_FQ4jIZ1P55Ygql7bfSi__DIw&amp;oe=6A2DE934"/></p>
 <p>user_alcaraz_2.png</p>
 <ol class="styled-list numbered">
 <li>
 <p>Elbow up and away<br/>
- Ở 3.5s, khuỷu tay phải đưa cao ngang vai, tách xa thân. Bạn không thấy cậu ấy ép khuỷu vào sườn như người chơi phong trào hay làm.</p>
+ Ở 3.5 s, khuỷu tay phải đưa cao ngang vai, tách xa thân. Bạn không thấy cậu ấy ép khuỷu vào sườn như người chơi phong trào hay làm.</p>
 </li>
 <li>
 <p>Racket head hơi chúi trước<br/>
- Ở 6.8s, đầu vợt không dựng đứng mà nghiêng nhẹ về phía lưới. Chính góc này tạo ra độ "treo" để vợt rơi vào lag sau đó.</p>
+ Ở 6.8 s, đầu vợt không dựng đứng mà nghiêng nhẹ về phía lưới. Chính góc này tạo ra độ "treo" để vợt rơi vào lag sau đó.</p>
 </li>
 </ol>
 <p><img alt="user_alcaraz_3.png" src="https://cdn.fbsbx.com/v/t65.102178-21/701368262_2863482707318395_2689136246753273108_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=n5NFRusRGuUQ7kNvwEYI5GS&amp;_nc_oc=AdoGfo9WClyvR8opFmPYJKEJw_D_T5rq22VcGLeNywmnCQ4LCMx6VQh89gqCqPwJyXs&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af8DwjYldsIbJIeEqghQP98oeY44twcPS_bqBHmp9qHpEg&amp;oe=6A2DF055"/></p>
 <p>user_alcaraz_3.png</p>
 <ol class="styled-list numbered">
 <li>Kinetic chain trọn vẹn<br/>
- Từ 6.3s đến 7.4s: chân đẩy – hông xoay – thân bật – tay văng – cổ tay búng. Cậu ấy thậm chí nhấc cả hai chân khỏi mặt sân ở cú cuối (13.2s), dấu hiệu lực đi từ dưới lên chứ không phải kéo tay.</li>
+ Từ 6.3 s đến 7.4 s: chân đẩy – hông xoay – thân bật – tay văng – cổ tay búng. Cậu ấy thậm chí nhấc cả hai chân khỏi mặt sân ở cú cuối (13.2 s), dấu hiệu lực đi từ dưới lên chứ không phải kéo tay.</li>
 </ol>
 <p><img alt="user_alcaraz_5.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702529889_828418923664168_6620158487866510320_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=X90eaErMLR4Q7kNvwHQRmBS&amp;_nc_oc=AdodA-Pfm6z-ZQVeU_qHnlsBoBjoxwTzdI5HHsT7YO0JyYrknqLqrdDBPK_dX2oKFnM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af9SHZYp2dRw3KwPq72b4lHUlqRpvWFJBU87iKeq79Nmkw&amp;oe=6A2DD302"/></p>
 <p>user_alcaraz_5.png</p>
 <ol class="styled-list numbered">
 <li>Extended arm<br/>
- Ở 10.2s, ngay trước chạm bóng, cánh tay gần như duỗi thẳng hoàn toàn, vợt đi ra xa người chứ không kéo vào.</li>
+ Ở 10.2 s, ngay trước chạm bóng, cánh tay gần như duỗi thẳng hoàn toàn, vợt đi ra xa người chứ không kéo vào.</li>
 </ol>
 <p><img alt="user_alcaraz_4.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702323931_27349546227971005_5859954622238068178_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=qLTWdbDg3_kQ7kNvwE17UY6&amp;_nc_oc=Adro5pif_gJX5fufZxf49F5ap21vb7rHWG9vOeMsA4h8NwPVu-oWsAq05OUAXzC63jY&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af-K4IwXFPgRTxmZOr4OZOfXDiIOT407ZQyOfMVAxYZ6qA&amp;oe=6A2E07E5"/></p>
 <p>user_alcaraz_4.png</p>
 <ol class="styled-list numbered">
 <li>
 <p>Loose wrist – pre-stretch<br/>
- Bạn thấy rõ ở 0.5s và 7.4s: cổ tay gập ra sau, mặt vợt tụt dưới bóng rồi mới bật lên. Không có sự gồng cứng.</p>
+ Bạn thấy rõ ở 0.5 s và 7.4 s: cổ tay gập ra sau, mặt vợt tụt dưới bóng rồi mới bật lên. Không có sự gồng cứng.</p>
 </li>
 <li>
 <p>Contact trước người<br/>
@@ -4093,7 +4145,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </li>
 <li>
 <p>Follow through hoàn chỉnh<br/>
- Ở 0.9s, tay vung hết qua vai trái, vợt kết thúc cao, cơ thể tự xoay để hồi vị trí. Không dừng giữa chừng.</p>
+ Ở 0.9 s, tay vung hết qua vai trái, vợt kết thúc cao, cơ thể tự xoay để hồi vị trí. Không dừng giữa chừng.</p>
 </li>
 </ol>
 <p><img alt="user_alcaraz_1.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702409489_854299943769148_3002433753217936756_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=mF-kBtypINYQ7kNvwEkV2_b&amp;_nc_oc=AdqBG2cyXgWcmGQtvDTo-OxAbphIcWCnnBfoaiVhbRZTDv2TN4Y2k6bZ5E1aMKXumV8&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af8R3-UqFUe5hL7T3TPnYB3s6xxw9wT2DwJh8Ppb64FPEw&amp;oe=6A2DF58F"/></p>
@@ -4111,7 +4163,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Để đầu vợt hơi chúi, đừng dựng đứng</li>
 <li>Thả lỏng cổ tay và để chân đẩy trước, tay đi sau</li>
 </ol>
-<p>Làm chậm như trong clip 3.2s – 4.3s, bạn sẽ cảm nhận được cú "whip" mà không cần vung mạnh. Đó chính là bí mật khiến forehand Alcaraz nhìn nhẹ mà bóng bay 78 mph.</p>
+<p>Làm chậm như trong clip 3.2 s – 4.3 s, bạn sẽ cảm nhận được cú "whip" mà không cần vung mạnh. Đó chính là bí mật khiến forehand Alcaraz nhìn nhẹ mà bóng bay 78 mph.</p>
 <p>So sánh kỹ thuật với Federer</p>
 <p>May 17, 2026</p>
 <p>Video bạn gửi tóm gọn đúng "bí mật" của forehand Roger Federer: không phải vung mạnh, mà là cuộn cổ tay để tạo pre-stretch.</p>
@@ -4202,7 +4254,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <h3 id="3-iem-noi-bat-tu-clip">3 điểm nổi bật từ clip</h3>
 <ol class="styled-list numbered">
 <li>Chuẩn bị muộn và không có unit turn</li>
-<li>Ở 11.5s và 39.5s, khi bóng sang, bạn vẫn đứng gần như thẳng mặt lưới, vợt đưa ra sau bằng tay chứ không xoay vai. So với Rublev hay Alcaraz mình phân tích trước, họ xoay cả hông và vai trước khi bóng nảy.</li>
+<li>Ở 11.5 s và 39.5 s, khi bóng sang, bạn vẫn đứng gần như thẳng mặt lưới, vợt đưa ra sau bằng tay chứ không xoay vai. So với Rublev hay Alcaraz mình phân tích trước, họ xoay cả hông và vai trước khi bóng nảy.</li>
 </ol>
 <p><img alt="user_analysis_1.png" src="https://cdn.fbsbx.com/v/t65.102178-21/711115349_2231467844302271_2790979153959504836_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=7co2diMmK_kQ7kNvwEOdeWU&amp;_nc_oc=Adosw7lIWeI-kRyCX_yJN7ls9mOpqPvHNOAsJBPRh8d4GD5-12p9yffkVPBidRQ7zwg&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af8aeyshtp0txHMbZY5Rj9IDSOZyckoRNn5oCOw3g0MC3Q&amp;oe=6A2DF839"/></p>
 <p>user_analysis_1.png</p>
@@ -4211,7 +4263,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Kết quả: bạn phải với bóng ở ngang người hoặc sau người, bóng đi thiếu lực và hay bổng.</p>
 <ol class="styled-list numbered">
 <li>Kinetic chain bị ngắt ở hông</li>
-<li>Ở 23.5s và 62s, chân bạn gần như đứng yên, không có bước chỉnh nhỏ, không đạp từ chân ngoài. Lực đi thẳng từ vai ra tay.</li>
+<li>Ở 23.5 s và 62s, chân bạn gần như đứng yên, không có bước chỉnh nhỏ, không đạp từ chân ngoài. Lực đi thẳng từ vai ra tay.</li>
 </ol>
 <p><img alt="user_analysis_2.png" src="https://cdn.fbsbx.com/v/t65.102178-21/711543128_2139762956870081_7379725489681452776_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=jlMmtqqyy0AQ7kNvwHq3zWd&amp;_nc_oc=AdoY8gTWrkT9wfaeHLg5WNUg3q4s3s4CotGmlWoFWuvO-qmLrNTNvZdbDKzKYfCFtHU&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af87nxFDX55Eh4HZnztX3r6XN14erLhjdPkqO207aHN9bA&amp;oe=6A2E010D"/></p>
 <p>user_analysis_2.png</p>
@@ -4220,7 +4272,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Trong video kinetic chain mình gửi trước, lực phải đi ground → chân → hông → ngực → tay. Bạn đang bỏ qua 3 mắt xích đầu.</p>
 <ol class="styled-list numbered">
 <li>Điểm chạm và follow-through</li>
-<li>Bạn chạm bóng khá gần người và vợt dừng sớm sau khi chạm, không đi xuyên qua bóng như Federer hay Djokovic. Ở 70.5s, tay dừng ở giữa ngực thay vì vung qua vai.</li>
+<li>Bạn chạm bóng khá gần người và vợt dừng sớm sau khi chạm, không đi xuyên qua bóng như Federer hay Djokovic. Ở 70.5 s, tay dừng ở giữa ngực thay vì vung qua vai.</li>
 </ol>
 <p><img alt="user_analysis_5.png" src="https://cdn.fbsbx.com/v/t65.102178-21/712903074_2251204742378511_578611487711268125_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=O4QI8sJwdGoQ7kNvwH2k7GM&amp;_nc_oc=Adr2aQita_4simSKNrf_BCUMqNTO-lDPalx0Du9krhp1-qm1I2MJ7-cMZQk30XvFI8o&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af81qIvHxdf16B8KjOqFyjwJm0-DiJuILPwyypxd8_n9tg&amp;oe=6A2DD495"/></p>
 <p>user_analysis_5.png</p>
@@ -4305,7 +4357,12 @@ Why this matters</p>
 <p>If you side-bend backward instead, you maintain depth, keep the club on plane, and get that "staying behind the ball" feeling pros talk about.</p>
 <p>This page is basically a cheat sheet for: <em>turn in a barrel, don't squat over the ball.</em></p>
 <p>Want me to clean these sketches up into a clear diagram, or turn the "key" into a drill you can try?</p>
-<p>In track and field, the discus throw is a highly dynamic event where power is generated through a full 1.5-turn rotational sequence. Rather than a single "position," a thrower moves through a series of critical, high-precision body alignments to maximize centripetal force and kinetic transfer.Here is the sequential breakdown of a standard right-handed discus thrower's technical positions.---## The Kinetic Sequence1. <strong>The Starting Position (The Wind-Up):</strong> Back of the circle.The thrower stands at the back of the circle, facing completely away from the target area. Feet are spread slightly wider than shoulder-width. The thrower executes one or two preliminary swings (wind-ups) to establish a rhythm and shift their center of gravity over the left leg.2. <strong>The Entry Phase (The Turn):</strong> Shifting weight.As the rotation begins, weight shifts dynamically to the left foot. The left knee and toe pivot toward the direction of the throw. The right leg sweeps wide to generate maximum angular momentum, while the throwing arm stays trailed far behind the body to create a stretch-shortening cycle in the core.3. <strong>The Airborne / Drive Phase:</strong> Linear acceleration.The thrower pushes off the left foot, becoming briefly airborne as they drive across the center of the ring. The right foot targets the exact center of the throwing circle, landing on the ball of the foot with the knee bent to absorb and re-direct force.4. <strong>The Power Position:</strong> Maximum tension.This is the most critical structural alignment. The right foot is anchored in the center of the ring, while the left foot plants quickly near the front edge (creating a "block"). The hips are turned forward, but the upper torso and throwing arm are still twisted backward, creating immense torque across the torso.5. <strong>The Delivery &amp; Release:</strong> Kinetic singularity.The right hip snaps violently forward and upward, transferring energy up through the core. The left side of the body acts as a rigid brake (blocking), forcing all velocity into the releasing arm. The discus is released at roughly shoulder height at a mechanical launch angle of 34° to 40°.---## Biomechanical Mastery: Static vs. Dynamic RealityWhen people picture a "discus thrower position," they often think of Myron’s famous ancient Greek statue, the <em>Discobolus</em>. While artistically iconic, that classic coiled posture represents a static, historical variation rather than modern rotational mechanics.Modern biomechanics relies on an unbroken sequence of centripetal acceleration, moving from a low, stable base at the entry to a high, explosive extension at release.### Core Mechanical Checkpoints<em> </em><em>The Long Lever:</em><em> The throwing arm must remain completely relaxed and extended throughout the rotation. Tensing the bicep or pulling the discus inward shortens the radius, drastically reducing the linear velocity at the point of release.</em> <strong>Torque Generation (Hip-Shoulder Separation):</strong> The lower body must always lead the upper body. In the power position, the hips must face the target while the shoulders remain turned back. This stretches the large core muscles, allowing them to snap back like a massive rubber band.<em> </em><em>The Dynamic Block:</em>* The left leg must plant firmly and straighten completely right before delivery. This instantly halts the forward linear momentum of the lower body, transferring all accumulated kinetic energy directly up into the chest, shoulder, and arm.</p>
+<p>In track and field, the discus throw is a highly dynamic event where power is generated through a full 1.5-turn rotational sequence. Rather than a single "position," a thrower moves through a series of critical, high-precision body alignments to maximize centripetal force and kinetic transfer.Here is the sequential breakdown of a standard right-handed discus thrower's technical positions.---## The Kinetic Sequence1. <strong>The Starting Position (The Wind-Up):</strong> Back of the circle.The thrower stands at the back of the circle, facing completely away from the target area. Feet are spread slightly wider than shoulder-width. The thrower executes one or two preliminary swings (wind-ups) to establish a rhythm and shift their center of gravity over the left leg.2.</p>
+<p><strong>The Entry Phase (The Turn):</strong> Shifting weight.As the rotation begins, weight shifts dynamically to the left foot. The left knee and toe pivot toward the direction of the throw. The right leg sweeps wide to generate maximum angular momentum, while the throwing arm stays trailed far behind the body to create a stretch-shortening cycle in the core.3. <strong>The Airborne / Drive Phase:</strong> Linear acceleration.The thrower pushes off the left foot, becoming briefly airborne as they drive across the center of the ring. The right foot targets the exact center of the throwing circle, landing on the ball of the foot with the knee bent to absorb and re-direct force.4. <strong>The Power Position:</strong> Maximum tension.This is the most critical structural alignment.</p>
+<p>The right foot is anchored in the center of the ring, while the left foot plants quickly near the front edge (creating a "block"). The hips are turned forward, but the upper torso and throwing arm are still twisted backward, creating immense torque across the torso.5. <strong>The Delivery &amp; Release:</strong> Kinetic singularity.The right hip snaps violently forward and upward, transferring energy up through the core. The left side of the body acts as a rigid brake (blocking), forcing all velocity into the releasing arm. The discus is released at roughly shoulder height at a mechanical launch angle of 34° to 40°.---## Biomechanical Mastery: Static vs.</p>
+<p>Dynamic RealityWhen people picture a "discus thrower position," they often think of Myron’s famous ancient Greek statue, the <em>Discobolus</em>. While artistically iconic, that classic coiled posture represents a static, historical variation rather than modern rotational mechanics.Modern biomechanics relies on an unbroken sequence of centripetal acceleration, moving from a low, stable base at the entry to a high, explosive extension at release.### Core Mechanical Checkpoints<em> </em><em>The Long Lever:</em><em> The throwing arm must remain completely relaxed and extended throughout the rotation.</p>
+<p>Tensing the bicep or pulling the discus inward shortens the radius, drastically reducing the linear velocity at the point of release.</em> <strong>Torque Generation (Hip-Shoulder Separation):</strong> The lower body must always lead the upper body. In the power position, the hips must face the target while the shoulders remain turned back. This stretches the large core muscles, allowing them to snap back like a massive rubber band.<em> </em><em>The Dynamic Block:</em>* The left leg must plant firmly and straighten completely right before delivery. This instantly halts the forward linear momentum of the lower body, transferring all accumulated kinetic energy directly up into the chest, shoulder, and arm.</p>
+
 <p>Jun 1, 2026</p>
 <p>That is a really clean breakdown of the modern rotational throw. It lines up perfectly with what your notebook sketches are trying to cue.</p>
 <p>Your page isn't about a static pose like the <em>Discobolus</em>. It's about the dynamic checkpoints you just described, especially the transition into and out of the Power Position.</p>
@@ -4351,9 +4408,14 @@ Why this matters</p>
 <li>Bottom: Your four notebook cues mapped to simple stick figures, plus the key anti-forward-bend reminder</li>
 </ul>
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="../../vi/cam-nang/Khung_Huấn_Luyện_Tennis_Đỉnh_Cao.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="index.html" class="nav-btn prev">← Previous</a>
+  <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="index.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 </body></html>

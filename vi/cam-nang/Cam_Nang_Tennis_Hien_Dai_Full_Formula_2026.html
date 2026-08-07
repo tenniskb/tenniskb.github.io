@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Cẩm Nang Tennis Hiện Đại Full Formula 2026</span>
@@ -979,8 +1025,8 @@
 <p>Bài tập 1: Đo Lực Đạp Đất (GRF Drill)</p>
 <p>Chuẩn bị: Cảm biến áp lực trong giày hoặc ứng dụng điện thoại đo rung động.</p>
 <p>Thực hiện: Đứng ở tư thế chuẩn bị đánh Forehand, đạp mạnh vào đất và quan sát giá trị lực.</p>
-<p>Mục tiêu: Đạt áp lực nén 1.8x trọng lượng cơ thể cho cú Forehand.</p>
-<p>Kiểm chứng bằng phương trình: F = m × a. Nếu cân nặng 75kg và đạt gia tốc đạp 8.8 m/s², lực = 75 × 8.8 = 660N ≈ 1.8x BW.</p>
+<p>Mục tiêu: Đạt áp lực nén 1.8 x trọng lượng cơ thể cho cú Forehand.</p>
+<p>Kiểm chứng bằng phương trình: F = m × a. Nếu cân nặng 75kg và đạt gia tốc đạp 8.8 m/s², lực = 75 × 8.8 = 660N ≈ 1.8 x BW.</p>
 <p>Bài tập 2: Tách Biệt Hông - Vai (Separation Drill)</p>
 <p>Chuẩn bị: Dùng camera quay chậm 240fps, đặt từ trên cao xuống.</p>
 <p>Thực hiện: Đánh 10 quả Forehand và đo góc lệch giữa trục hông và trục vai tại đỉnh backswing.</p>
@@ -1191,15 +1237,15 @@
 <p>Mục tiêu chương: Tối ưu hoá cú giao bóng bằng cách khai thác lực phản chấn từ mặt đất (GRF) và cơ chế "lò xo" của hệ mạc để đạt vận tốc tối đa với ít chấn thương nhất.</p>
 <p>4.1. Lực Phản Chấn Từ Mặt Đất (Ground Reaction Force — GRF)</p>
 <p>Cú giao bóng mạnh nhất không bắt đầu từ vai hay cánh tay — nó bắt đầu từ khoảnh khắc bàn chân tương tác với mặt sân. GRF là "trạm phát điện" duy nhất. Mọi nguồn lực khác chỉ là bộ khuếch đại.</p>
-<p>Ví dụ thực tế: Một tay vợt 80kg đạt ngưỡng Elite 2.5x BW sẽ đạp xuống sân với lực 80 × 9.8 × 2.5 = 1,960N ≈ 200 kg lực trong chưa đầy 0.1 giây.</p>
+<p>Ví dụ thực tế: Một tay vợt 80kg đạt ngưỡng Elite 2.5 x BW sẽ đạp xuống sân với lực 80 × 9.8 × 2.5 = 1,960N ≈ 200 kg lực trong chưa đầy 0.1 giây.</p>
 <p>Công thức Phương Trình Lực Đẩy Dọc (Vertical GRF) từ tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
 <p>F_v(t) = m_player x g + m_player x a_z(t)</p>
 <p>Hoặc viết dạng ký hiệu văn bản tối giản:</p>
 <p>F_v(t) = m_player · g + m_player · a_z(t)</p>
 <p>Diễn giải chi tiết ý nghĩa trong cú Giao bóng (Serve) bùng nổ:</p>
 <p>Phương trình này định lượng Lực phản chấn từ mặt đất theo phương thẳng đứng (Vertical Ground Reaction Force). Trong một cú giao bóng hiện đại, lực không bắt đầu từ tay hay vai, mà nó được sinh ra ngay từ khoảnh khắc bàn chân tương tác và đạp mạnh xuống mặt sân. Mặt sân sẽ "trả lại" một lực tương đương đẩy ngược vào cơ thể bạn.</p>
-<div class="pullquote"><p>Ví dụ thực tế và Ngưỡng Elite (2.3x - 2.5x BW):</p></div>
-<p>Phép tính cơ học: Nếu một tay vợt nặng 80kg ($m_player = 80$) đạt đến Ngưỡng Elite (phát lực bằng 2.5 lần trọng lượng cơ thể - 2.5x Body Weight), lực đạp xuống sàn thực tế sẽ là:</p>
+<div class="pullquote"><p>Ví dụ thực tế và Ngưỡng Elite (2.3 x - 2.5 x BW):</p></div>
+<p>Phép tính cơ học: Nếu một tay vợt nặng 80kg ($m_player = 80$) đạt đến Ngưỡng Elite (phát lực bằng 2.5 lần trọng lượng cơ thể - 2.5 x Body Weight), lực đạp xuống sàn thực tế sẽ là:</p>
 <p>$$F_v = 80 \times 9.8 \times 2.5 = 1,960\text{ Newton}$$</p>
 <p>Con số này tương đương với một lực nặng gần 200 kg nén xuống mặt sân và dội ngược lên cơ thể bạn trong một khoảng thời gian cực ngắn (chưa đầy 0.1 giây).</p>
 <p>Ứng dụng thực tiễn (Cơ chế lò xo): Lực đẩy dọc khổng lồ này sau khi dội từ mặt đất lên sẽ chạy qua gối, hông, lõi cơ (core), rồi được khuếch đại qua vai và cẳng tay để chuyển hóa thành tốc độ bay của quả bóng (V_serve).</p>
@@ -1218,9 +1264,9 @@
 <p>Giải pháp tối ưu tốc độ đỉnh: Để đạt vận tốc giao bóng tối đa, bạn cần tập trung vào việc khuỵu chân chuẩn (Trophy Position), đạp đất mạnh để kích hoạt omega_hip, sau đó giữ độ trễ của vai để trục vai xoay bùng nổ tiếp theo, và cuối cùng mới giải phóng cánh tay như một chiếc roi da lỏng để DIT kết thúc hoàn hảo chuỗi truyền tải năng lượng.</p>
 <p>4.3. Giai Đoạn Nạp Lò Xo (Loading Phase)</p>
 <p>4.3.1. Cửa Sổ Thời Gian Nạp Lực (Delta_t_load)</p>
-<p>Để đạt ngưỡng 2.5x BW, Delta_t_load phải cực kỳ ngắn — như một chiếc lò xo bị nén và bung ra chớp nhoáng. Không được hạ trọng tâm quá chậm (mất tính đàn hồi của hệ mạc) hoặc gập gối quá sâu (&gt;120°, mất hiệu quả co cơ).</p>
+<p>Để đạt ngưỡng 2.5 x BW, Delta_t_load phải cực kỳ ngắn — như một chiếc lò xo bị nén và bung ra chớp nhoáng. Không được hạ trọng tâm quá chậm (mất tính đàn hồi của hệ mạc) hoặc gập gối quá sâu (&gt;120°, mất hiệu quả co cơ).</p>
 <p>Trophy Pose: Trạng thái nén lò xo tối đa. Gối gập 100-120°, trọng tâm thấp, cột sống thẳng, vợt ở phía sau đầu (Max External Rotation).</p>
-<p>Drive Phase: Duỗi gối và mắt cá chân bùng nổ theo trục dọc. Đây là lúc GRF đạt 2.5x BW.</p>
+<p>Drive Phase: Duỗi gối và mắt cá chân bùng nổ theo trục dọc. Đây là lúc GRF đạt 2.5 x BW.</p>
 <p>Release Phase: Năng lượng dọc trục chuyển hoá thành xoay ngang (Hip-Shoulder Separation) và Internal Rotation của cánh tay.</p>
 <p>Công thức Năng Lượng Đàn Hồi Tích Lũy (Loading Phase) trong tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
 <p>E_stored = (1/2) x k x (delta_x)²</p>
@@ -1232,7 +1278,7 @@
 <p>Vì biên độ khuỵu gối delta_x được bình phương ((delta_x)²), nên độ sâu của gối ảnh hưởng trực tiếp đến lượng năng lượng nạp vào. Tuy nhiên, sinh cơ học tennis đỉnh cao đòi hỏi bạn phải tuân thủ nghiêm ngặt các nguyên lý sau để không làm tiêu tán năng lượng:</p>
 <p>Ngưỡng gối tối ưu (Trophy Pose): Góc gập gối lý tưởng nhất là từ 100° đến 120°. Trọng tâm hạ thấp vừa phải, cột sống giữ thẳng tuyệt đối trên hệ trục trung tâm để chuẩn bị cho cú bật.</p>
 <p>Sai lầm hạ quá sâu (&gt;120°): Nếu gập gối quá sâu, bạn sẽ làm mất đi tính đàn hồi tự nhiên của hệ mạc, ép cơ đùi phải làm việc quá tải theo dạng co cơ tĩnh (isometric), khiến cú bật nhảy bị chậm và mất lực.</p>
-<p>Cửa sổ thời gian nạp lực ($\Delta t_{load}$): Khoảng thời gian nạp lò xo này phải cực kỳ ngắn. Bạn cần khuỵu xuống và ngay lập tức đạp đất bùng nổ hướng trục thẳng đứng (Drive Phase) để đạt ngưỡng lực phản chấn 2.5x BW (gấp 2.5 lần trọng lượng cơ thể). Nếu giữ tư thế khuỵu quá lâu, năng lượng đàn hồi E_stored sẽ bị biến thành nhiệt lượng và rò rỉ hoàn toàn.</p>
+<p>Cửa sổ thời gian nạp lực ($\Delta t_{load}$): Khoảng thời gian nạp lò xo này phải cực kỳ ngắn. Bạn cần khuỵu xuống và ngay lập tức đạp đất bùng nổ hướng trục thẳng đứng (Drive Phase) để đạt ngưỡng lực phản chấn 2.5 x BW (gấp 2.5 lần trọng lượng cơ thể). Nếu giữ tư thế khuỵu quá lâu, năng lượng đàn hồi E_stored sẽ bị biến thành nhiệt lượng và rò rỉ hoàn toàn.</p>
 <p>4.4. Gia Tốc Xoay Trong (Internal Rotation — IR)</p>
 <p>Xoay trong của xương cánh tay là chuyển động nhanh nhất của cơ thể người từng được ghi nhận trong thể thao. Đây là "cú vút roi" cuối cùng tạo ra tốc độ đầu vợt khủng khiếp.</p>
 <p>Công thức Gia Tốc Xoay Trong (Internal Rotation — IR) đang hiển thị trên màn hình tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -1276,9 +1322,9 @@
 <p>Cảm nhận độ căng tối đa ở hệ mạc ngực trước và vai.</p>
 <p>Bùng nổ đột ngột, vung tay như khi tiếp bóng.</p>
 <p>Mục tiêu: Xây dựng ký ức cơ (muscle memory) cho vị trí "nén lò xo" tối đa.</p>
-<p>4.6. Phân Tích Case Study: Carlos Alcaraz — GRF 2.6x BW</p>
+<p>4.6. Phân Tích Case Study: Carlos Alcaraz — GRF 2.6 x BW</p>
 <p>Carlos Alcaraz sở hữu một trong những cú giao bóng kỹ thuật hoàn hảo nhất hiện tại. Phân tích slow-motion từ Roland Garros 2024 cho thấy:</p>
-<p>GRF đỉnh: 2.62x BW — vượt ngưỡng Elite tiêu chuẩn.</p>
+<p>GRF đỉnh: 2.62 x BW — vượt ngưỡng Elite tiêu chuẩn.</p>
 <p>X-Factor tại Trophy Pose: 58° — tích luỹ tối đa năng lượng mạc chéo.</p>
 <p>Delta_t của IR: 22ms — nhanh hơn 12% so với trung bình tour.</p>
 <p>Đóng góp của Hông (Khối 1): 42% — gần như gấp đôi so với người phong trào trung bình (25%).</p>
@@ -1287,11 +1333,11 @@
 <p>5.1. Bản Chất Của Cửa Sổ Phản Ứng</p>
 <p>Khi đối thủ giao bóng 200km/h, quả bóng chỉ mất 0.4-0.5 giây để đi qua sân. Trong khoảng thời gian đó, bạn phải: nhận diện hướng bóng, di chuyển đến điểm chặn, chuẩn bị backswing, vung vợt và tiếp bóng. Không có chỗ cho bất kỳ chuyển động thừa nào.</p>
 <p>Công thức Phương Trình Thời Gian Phản Ứng Tổng (Total Return Time) từ chương Direct Load trong cẩm nang của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
-<p>t_total = t_nhan_dien + t_nap_luc_DL + t_tiep_xuc &lt;= 0.12s</p>
+<p>t_total = t_nhan_dien + t_nap_luc_DL + t_tiep_xuc &lt;= 0.12 s</p>
 <p>Hoặc viết theo ký hiệu văn bản tối giản để bạn dễ lưu trữ:</p>
 <p>Diễn giải chi tiết ý nghĩa trong Trả giao bóng (Return) tốc độ cao:</p>
 <p>Khi đối mặt với một cú giao bóng sấm sét có vận tốc lên tới 200 km/h, quả bóng chỉ mất khoảng 0.4 – 0.5 giây để bay từ bên kia sân sang vạch baseline của bạn. Trong khoảng thời gian chớp nhoáng đó, não bộ và cơ thể bạn phải hoàn thành một chuỗi xử lý nghiêm ngặt được định lượng bằng phương trình trên nhằm mục đích: Chuyển hóa từ thế thủ (Return) sang thế công (Counter-attack) ngay lập tức.</p>
-<div class="pullquote"><p>Ứng dụng thực tế: Hai yếu tố then chốt để đạt ngưỡng ≤ 0.12s</p></div>
+<div class="pullquote"><p>Ứng dụng thực tế: Hai yếu tố then chốt để đạt ngưỡng ≤ 0.12 s</p></div>
 <p>Để ép tổng thời gian chu trình rơi vào vùng tối ưu của các tay vợt Elite, cẩm nang của bạn chỉ ra 2 hành động bắt buộc:</p>
 <p>Split-Step Timing (Bật nhảy đón đầu): Nhẹ nhàng nhảy lên và tiếp đất đúng lúc đối thủ tung bóng lên (toss). Hành động này đưa cơ bắp chân vào trạng thái "nạp sẵn" (pre-stretching) ngay khi bóng vừa rời vợt đối phương, giúp triệt tiêu hoàn toàn độ trễ của $t_{nhan_dien}$.</p>
 <p>Unit Turn (Xoay khối đồng nhất): Loại bỏ hoàn toàn việc dùng tay kéo vợt ra sau. Ngay khi xác định được hướng bóng, bạn khóa cổ tay (K_wrist) và xoay toàn bộ khối hông + vai ra sau như một thể thống nhất. Biên độ cực ngắn này giúp $t_{nap_luc_DL}$ diễn ra gần như tức thì, sẵn sàng mượn chính lực của cú giao bóng để trả đòn.</p>
@@ -1329,7 +1375,7 @@
 <p>$\sigma_sync \ge 0.88$: Chỉ số đồng bộ hóa thần kinh - cơ phải đạt mức xuất sắc để chuỗi động lực nén ngắn (Direct Load) diễn ra chuẩn xác tuyệt đối mà không có động tác thừa.</p>
 <p>5.4. Bài Tập Direct Load Thực Tiễn</p>
 <p>Bài Tập 1: Wall-Step Reflex</p>
-<p>Đứng cách tường 1.5m, nhờ người ném bóng mạnh vào tường từ phía bên.</p>
+<p>Đứng cách tường 1.5 m, nhờ người ném bóng mạnh vào tường từ phía bên.</p>
 <p>Thực hiện Split-step và "chặn" bóng nảy ra không vung tay — chỉ xoay vai nhẹ.</p>
 <p>Mục tiêu: Bóng vẫn đi xa và có lực nhờ hệ trục truyền dẫn.</p>
 <p>Bài Tập 2: Short Ball Return Drill</p>
@@ -1812,7 +1858,7 @@ delta_F: biến thiên lực va chạm từ bóng (N). delta_theta: góc biến 
 <p>1-2</p>
 <p>Cảm nhận GRF</p>
 <p>Dậm chân, nhảy đơn chân</p>
-<p>GRF &gt;= 1.5x BW</p>
+<p>GRF &gt;= 1.5 x BW</p>
 <p>3-4</p>
 <p>X-Factor</p>
 <p>Hip-Hold Drill, Separation Drill</p>
@@ -2168,7 +2214,7 @@ k: độ cứng hệ mạc cẳng chân và đùi. delta_x: biên độ khuỵu 
 <p>Độ sâu khi bạn chùng chân xuống ở tư thế thế thủ (Trophy Pose).</p>
 <p>Gia Tốc Góc Xoay Trong:
 alpha_IR = Delta_omega_IR / Delta_t_IR
-Delta_omega_IR ≈ 2,800°/s (tốc độ đỉnh). Delta_t_IR ≈ 0.025s (25 mili-giây). alpha_IR ≈ 112,000°/s² — gia tốc cực đại.</p>
+Delta_omega_IR ≈ 2,800°/s (tốc độ đỉnh). Delta_t_IR ≈ 0.025 s (25 mili-giây). alpha_IR ≈ 112,000°/s² — gia tốc cực đại.</p>
 <p>Ký hiệu</p>
 <p>Tên gọi</p>
 <p>Giá trị thực tế (Elite)</p>
@@ -2201,8 +2247,8 @@ tau_L: mô-men xoắn tác động lên gân chóp xoay. I_humerus: quán tính 
 <p>Gia tốc góc xoay trong</p>
 <p>Tốc độ bùng nổ của cú vút cẳng tay (đạt tới ngưỡng tinh anh ~112,000°/s² ở cú giao bóng).</p>
 <p>Phương Trình Thời Gian Phản Ứng Tổng:
-t_total = t_nhan_dien + t_nap_luc_DL + t_tiep_xuc &lt;= 0.12s
-t_nhan_dien ~ 0.05s (EMD). t_nap_luc_DL: tối ưu hoá. t_tiep_xuc ~ 0.004s (dwell time). Mục tiêu: toàn bộ chu trình &lt; 0.12s.</p>
+t_total = t_nhan_dien + t_nap_luc_DL + t_tiep_xuc &lt;= 0.12 s
+t_nhan_dien ~ 0.05 s (EMD). t_nap_luc_DL: tối ưu hoá. t_tiep_xuc ~ 0.004 s (dwell time). Mục tiêu: toàn bộ chu trình &lt; 0.12 s.</p>
 <p>Ký hiệu</p>
 <p>Tên gọi</p>
 <p>Giá trị thực tế (Elite)</p>
@@ -2751,7 +2797,7 @@ Kỹ năng cơ bản nhân với chất lượng dữ liệu và khả năng th�
 <p>5 - 6</p>
 <p>DIT &amp; GRF</p>
 <p>Chì dán vợt (Lead tape) + Cảm biến giày</p>
-<p>Tối ưu hóa lực phản chấn đất: $\text{GRF} \ge 2.0x$ Trọng lượng cơ thể, độ trễ giao bóng $\text{DIT} \ge 0.75$.</p>
+<p>Tối ưu hóa lực phản chấn đất: $\text{GRF} \ge 2.0 x$ Trọng lượng cơ thể, độ trễ giao bóng $\text{DIT} \ge 0.75$.</p>
 <p>7 - 8</p>
 <p>DSI &amp; Footwork</p>
 <p>Thang dây bền bỉ (Agility ladder) + Video </p>
@@ -2775,7 +2821,7 @@ Kỹ năng cơ bản nhân với chất lượng dữ liệu và khả năng th�
 <p>5-6</p>
 <p>DIT &amp; GRF</p>
 <p>Lead tape + Sensor giày</p>
-<p>GRF &gt;= 2.0x BW, DIT &gt;= 0.75</p>
+<p>GRF &gt;= 2.0 x BW, DIT &gt;= 0.75</p>
 <p>7-8</p>
 <p>DSI &amp; Footwork</p>
 <p>Agility ladder + Video </p>
@@ -2837,7 +2883,7 @@ Kỹ năng cơ bản nhân với chất lượng dữ liệu và khả năng th�
 <p>Chương 4</p>
 <p>Thời Gian Phản Ứng</p>
 <p>t_total</p>
-<p>t_id + t_DL + t_contact &lt;= 0.12s</p>
+<p>t_id + t_DL + t_contact &lt;= 0.12 s</p>
 <p>Chương 5</p>
 <p>Góc Phản Xạ Volley</p>
 <p>theta_out</p>
@@ -2956,9 +3002,14 @@ Kỹ năng cơ bản nhân với chất lượng dữ liệu và khả năng th�
 <p>rev/phút</p>
 <p>2000-4000 (Forehand Elite)</p>
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="./Cam_Nang_Tennis_Hien_Dai_2026.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="index.html" class="nav-btn prev">← Trang Trước</a>
+  <a href="index.html" class="nav-btn toc">≡ Mục Lục</a>
+  <a href="index.html" class="nav-btn next">Trang Sau →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 </body></html>

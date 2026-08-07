@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Advanced Tennis Manual - Chương 07</span>
@@ -937,7 +983,7 @@
 <p>7.1.6 Contact Zone Geometry for the Volley</p>
 <p>The contact zone of the volley is more forward relative to the body than any groundstroke contact zone — approximately 60–80cm in front of the body centre, with the arm near full extension at contact. This forward contact position is the mechanical expression of the step-in and the forward punch: the arm extends through the ball rather than alongside it.</p>
 <p>Height and Angle at Contact</p>
-<p>The height of the volley contact determines the contact geometry required to keep the ball in the court. A high volley (contact above net height, approximately 1.2m+) can be directed downward — the face can be angled slightly closed and the ball directed toward the opponent's feet or the open court with a downward angle. A mid-height volley (contact approximately at net height, 0.9–1.2m) requires a neutral face angle — the ball must clear the net with minimal margin and land in a relatively flat trajectory. A low volley (contact below net height, under 0.9m) requires an open face angle to lift the ball over the net — the most technically demanding volley type because the combination of lifting the ball over the net while directing it toward a specific target with adequate pace is physically constrained.</p>
+<p>The height of the volley contact determines the contact geometry required to keep the ball in the court. A high volley (contact above net height, approximately 1.2 m+) can be directed downward — the face can be angled slightly closed and the ball directed toward the opponent's feet or the open court with a downward angle. A mid-height volley (contact approximately at net height, 0.9–1.2 m) requires a neutral face angle — the ball must clear the net with minimal margin and land in a relatively flat trajectory. A low volley (contact below net height, under 0.9 m) requires an open face angle to lift the ball over the net — the most technically demanding volley type because the combination of lifting the ball over the net while directing it toward a specific target with adequate pace is physically constrained.</p>
 <p>The Low Volley Challenge</p>
 <p>The low volley is the most technically demanding volley type and the most commonly executed poorly. When the contact is below net height, the geometry requires the ball to travel upward to clear the net, which means any forward-directed swing arc produces a ball with upward trajectory that may clear the net but will land at mid-court, giving the opponent an easy attacking ball. Resolving this requires a contact face angle that is significantly open (15–25 degrees open) to provide sufficient upward direction to clear the net, combined with a firm forward punch that provides enough pace to land the ball close to the baseline rather than sitting up short.</p>
 <p>The low volley requires the player to lower their body by bending the knees (getting the hips below the ball contact height rather than reaching down with the arm) — the "low body" technique that is universally cited but mechanically underexplained. Bending the knees keeps the arm in the correct contact geometry (extended forward, face open, body weight through the contact) rather than the cramped, reaching-down geometry that produces the ball-popping-up error.</p>
@@ -969,7 +1015,7 @@
 <p>— End of Section 7.1 —</p>
 <p>Next: Section 7.2 — Forehand and Backhand Volley: Configuration and Positioning</p>
 <p>PHYSICS: The Volley Energy Redirection Calculation
-Consider a ball arriving at the net at 110 km/h (30.6 m/s) with mass 0.058 kg — kinetic energy = 0.5 × 0.058 × 30.6² = 27.2 Joules. A stiffened volley contact with COR of 0.82 and effective mass of 0.95 kg (arm and racket well-stiffened) redirects approximately 82% of the ball's kinetic energy with a direction change of 45 degrees — the ball departs at approximately 86 km/h (24 m/s) in a new direction. Adding a modest 0.3m/s forward swing contribution from the arm push produces approximately 89 km/h outgoing ball speed. The stiffened arm-racket system has converted 82% of the incoming kinetic energy to outgoing ball energy — an efficiency that a groundstroke swing, which must generate all its ball energy from scratch through the kinetic chain, cannot achieve at the short time scales of net play.</p>
+Consider a ball arriving at the net at 110 km/h (30.6 m/s) with mass 0.058 kg — kinetic energy = 0.5 × 0.058 × 30.6² = 27.2 Joules. A stiffened volley contact with COR of 0.82 and effective mass of 0.95 kg (arm and racket well-stiffened) redirects approximately 82% of the ball's kinetic energy with a direction change of 45 degrees — the ball departs at approximately 86 km/h (24 m/s) in a new direction. Adding a modest 0.3 m/s forward swing contribution from the arm push produces approximately 89 km/h outgoing ball speed. The stiffened arm-racket system has converted 82% of the incoming kinetic energy to outgoing ball energy — an efficiency that a groundstroke swing, which must generate all its ball energy from scratch through the kinetic chain, cannot achieve at the short time scales of net play.</p>
 <p>◼ Pre-Activation and Effective Mass in Volleyball Studies
 Research on racket sport volley mechanics (Hatze, 1993; Cross, 2011) measured effective mass at contact across a range of forearm stiffness levels using instrumented rackets and force plates. Effective mass at contact increased from 0.38 kg (minimal pre-activation) to 1.12 kg (maximum pre-activation) across the range of tested conditions — a 195% increase. The corresponding increase in outgoing ball velocity at constant incoming ball speed was 38%. These measurements confirm that pre-activation is the dominant factor in volley power — contributing more than racket design, string type, or swing motion at the contact speeds typical of net play.</p>
 <p>Volley Type</p>
@@ -1108,24 +1154,24 @@ The drop volley cannot be taught through the standard stiffness instruction — 
 <p>Vulnerability</p>
 <p>Primary Shot</p>
 <p>Zone 1: First Volley Position</p>
-<p>5.5–6.0m (Service line)</p>
+<p>5.5–6.0 m (Service line)</p>
 <p>First volley after approach. Reading the passing shot.</p>
 <p>Player can be passed cleanly if not well-positioned on the bisector.</p>
 <p>Punch volley deep to extend the point. Step in to advance to Zone 2.</p>
 <p>Zone 2: Finishing Position</p>
-<p>3.0–4.0m (Mid service box)</p>
+<p>3.0–4.0 m (Mid service box)</p>
 <p>Finishing volleys. Second volley after approach.</p>
 <p>Well-placed lob can pass overhead. Must track ball flight quickly.</p>
 <p>High punch volley angled to open court. Drop volley on a slow ball.</p>
 <p>Zone 3: Danger Zone</p>
-<p>Under 1.5m (Near net tape)</p>
+<p>Under 1.5 m (Near net tape)</p>
 <p>Following very short ball directly to net.</p>
 <p>Almost any lob passes overhead. Low balls cannot be retrieved without cramped technique.</p>
 <p>Reflex volley. Drive volley on a high floating ball.</p>
 <p>DRILL: CLA Drill 1: The Zone Advancement Drill
 Purpose: Develop the automatic advance from Zone 1 to Zone 2 after the first volley, including the step-in timing and split-step at each zone.
 Setup: Player starts at Zone 1. Coach feeds from the opponent's baseline. Two rounds of feeds: first round targets Zone 1 (first volley), second round targets Zone 2 (second volley).
-Drill sequence: Coach feeds ball to Zone 1 position. Player executes first volley with step-in (advancing 1–1.5m forward toward Zone 2 during the contact). Coach immediately feeds a second ball to Zone 2 position. Player executes second volley as a finishing shot from Zone 2.
+Drill sequence: Coach feeds ball to Zone 1 position. Player executes first volley with step-in (advancing 1–1.5 m forward toward Zone 2 during the contact). Coach immediately feeds a second ball to Zone 2 position. Player executes second volley as a finishing shot from Zone 2.
 Quality criteria: (1) Step-in occurs during the first volley contact (player is closer to the net after the volley than before). (2) Player completes a split-step before the second feed arrives. (3) Second volley is directed at a designated target in the service box area (cone target).
 Level: Intermediate / Advanced.</p>
 <p>DRILL: CLA Drill 2: The Bisector Net Position Challenge
@@ -1136,7 +1182,7 @@ Constraint mechanism: The penalty for incorrect bisector positioning creates com
 Level: Intermediate / Advanced.</p>
 <p>DRILL: CLA Drill 3: The Reflex Volley Rapid Feed
 Purpose: Develop the pre-loaded ready position quality that makes reflex volleys executable.
-Setup: Player at Zone 2 (3.5m from the net). Coach/ball machine directly opposite at the other net, approximately 6m total distance. Machine set to maximum speed (120+ km/h).
+Setup: Player at Zone 2 (3.5 m from the net). Coach/ball machine directly opposite at the other net, approximately 6m total distance. Machine set to maximum speed (120+ km/h).
 Task: Player must redirect the ball from the pre-loaded ready position — no preparation, no swing initiation. The ball arrives in approximately 150ms. The player's only task: maintain maximum pre-activation stiffness in the ready position and allow the ball to redirect off the stiffened face.
 Quality signal: Ball departing cleanly with a crack from the stationary pre-loaded position = adequate reflex volley quality. Ball going into the net or wide = face angle in ready position is incorrect. Ball "dying" off the strings = insufficient pre-activation in ready position.
 Level: Advanced. Requires good ready position habits established before this drill is valuable.</p>
@@ -1245,7 +1291,7 @@ Level: Advanced. Requires good ready position habits established before this dri
 <p>Short lob = highest angle advantage. Hit the most aggressive target available.</p>
 <p>DRILL: Phase 1: Catch-the-Overhead Drill
 Purpose: Develop lob tracking and retreat footwork without arm mechanic complexity.
-Setup: Player at Zone 2 (3.5m from net). Coach/partner feeds lobs of varied height, depth, and direction from the opposite baseline.
+Setup: Player at Zone 2 (3.5 m from net). Coach/partner feeds lobs of varied height, depth, and direction from the opposite baseline.
 Task: Player retreats using the pivot-turn-and-run sequence and catches the ball with their non-dominant hand at the correct contact height (arm raised to the overhead contact zone, approximately arm extension above the head). No racket — pure tracking and positioning development.
 Quality criteria: (1) Ball caught at or above the head (correct positioning — player is under the ball). (2) Body weight slightly forward at the catch (final step was forward, not backward). (3) Eyes on the ball throughout the retreat (no ball-tracking loss).
 Tracking target: 80%+ of lobs caught correctly (at or above head, with forward weight) before progressing to Phase 2.
@@ -1365,7 +1411,7 @@ Level: Advanced.</p>
 <p>— End of Section 7.4 —</p>
 <p>Next: Section 7.5 — Volley and Net Game Diagnostics</p>
 <p>INSIGHT: The Net Coverage Calculation
-A useful mental model for net position coverage: from a Zone 2 position (3.5m from the net), the net player has approximately 2.5m of lateral coverage in either direction within 300ms of split-step initiation. This coverage range encompasses approximately 65 degrees of total angle from the bisector position. Any approach shot that reduces the opponent's available angle to below 65 degrees (by pushing them deep, wide, or into a body contact) creates a net position that can theoretically cover all their viable passing shots from the bisector. Any approach shot that leaves the opponent with more than 65 degrees of angle creates a passing shot opportunity that the net player cannot fully cover.</p>
+A useful mental model for net position coverage: from a Zone 2 position (3.5 m from the net), the net player has approximately 2.5 m of lateral coverage in either direction within 300ms of split-step initiation. This coverage range encompasses approximately 65 degrees of total angle from the bisector position. Any approach shot that reduces the opponent's available angle to below 65 degrees (by pushing them deep, wide, or into a body contact) creates a net position that can theoretically cover all their viable passing shots from the bisector. Any approach shot that leaves the opponent with more than 65 degrees of angle creates a passing shot opportunity that the net player cannot fully cover.</p>
 <p>◼ Net Approach Success Rates by Surface
 Gillet and colleagues (2009) compiled net approach success rates from 400 ATP matches across clay, hard court, and grass surfaces. Net approach success (point won after reaching Zone 1 or closer) was 79% on grass, 71% on indoor hard court, 68% on outdoor hard court, and 61% on clay. The clay-to-grass differential of 18 percentage points represents a significant tactical value difference that should explicitly influence the proportion of net approaches in a player's match strategy across surfaces. Players who approach the net at the same rate on clay as on grass are applying a grass-calibrated net game strategy to a surface where the success rates do not justify equivalent net approach frequency.</p>
 <p>DRILL: CLA Drill 1: The Three-Ball Pattern Drill
@@ -1491,17 +1537,25 @@ The arm continues its swing arc through and past the contact zone in a lateral d
 <p>DRILL: The 15-Minute Net Game Audit
 Equipment: Smartphone (side-on at net height), target cones, basket of 40 balls.
 Step 1 — Split-Step Quality (2 minutes): Player at Zone 1. Coach feeds 10 balls from the service line. Observe and record: split-step present on every ball (yes/no); split-step quality (forefoot bilateral = good; flat/single foot = poor). If split-step absent on more than 30% of balls: this is the only corrective priority. All other steps deferred.
-Step 2 — Contact Sound Quality (2 minutes): 10 punch volleys at 80% incoming pace. Coach listens for crack vs. thud. Record crack percentage. Below 60% cracks: pre-activation is the primary technique issue. Apply Rapid-Feed Stiffening Drill before any other technique work.
+Step 2 — Contact Sound Quality (2 minutes): 10 punch volleys at 80% incoming pace. Coach listens for crack vs. thud. Record crack percentage. Below 60% cracks: pre-activation is the primary technique issue.</p>
+<p>Apply Rapid-Feed Stiffening Drill before any other technique work.
 Step 3 — Contact Zone Position (2 minutes): 10 forehand and 10 backhand volleys. Coach observes whether contact occurs forward of the body (correct) or alongside or behind the body (too late). Record percentage in correct forward zone. Below 70%: contact zone positioning and step-in habit are the technique priority.
 Step 4 — Step-In Assessment (1 minute): 10 volleys at comfortable pace. Does the player step in (dominant foot moving forward before contact) on most volleys? Record step-in percentage. Below 60%: step-in habit training is required.
-Step 5 — Overhead Positioning (2 minutes): Coach feeds 10 lobs. Player retreats and executes overhead. Rating: under ball (correct) vs. not under ball (positioning failure). Record percentage under ball. Below 70%: Phase 1 catch drill is the only overhead corrective priority.
+Step 5 — Overhead Positioning (2 minutes): Coach feeds 10 lobs. Player retreats and executes overhead. Rating: under ball (correct) vs. not under ball (positioning failure).</p>
+<p>Record percentage under ball. Below 70%: Phase 1 catch drill is the only overhead corrective priority.
 Step 6 — Net Tactical Patterns (3 minutes): Competitive rally with one player designated net attacker. Coach observes: (a) approach decision quality (appropriate ball depth or premature?), (b) Zone 1 vs. Zone 2 positioning (advancing or stationary?), (c) bisector position (correct for approach direction or always T?). Record observations for each of the three tactical dimensions.
 Step 7 — Synthesis (1 minute): Using the findings from Steps 1–6, identify the single highest-priority corrective action: split-step (Step 1), pre-activation (Step 2), contact zone (Step 3), step-in (Step 4), overhead positioning (Step 5), or tactical pattern (Step 6). Address exclusively that element for the next 3–4 sessions.
 Level: All levels.</p>
+
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="Tennis_Training_Manual_Advanced_Chapter_06.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="Tennis_Training_Manual_Advanced_Chapter_06.html" class="nav-btn prev">← Previous</a>
+  <a href="../index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="Tennis_Training_Manual_Advanced_Chapter_08.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 

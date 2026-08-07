@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Tennis Elite Analysis Framework</span>
@@ -1053,7 +1099,7 @@ Biến 2: Điểm số (Set 1 vs Set 5; 30-all vs 30-40)
 Biến 3: Đối thủ cụ thể (Big server / Baseliner / Net rusher)
 </code></pre>
 <hr/>
-<h2 id="layer-5-identity-os">Layer 5 — IDENTITY OS</h2>
+<h2 id="layer-5-identity-os">Layer 5 — IDENTITY Os</h2>
 <p><em>"'Hệ điều hành' của player này là gì?"</em></p>
 <p>Đây là lớp tổng hợp — định nghĩa <strong>bản sắc chiến đấu</strong> của player. Mỗi elite player vận hành theo một "OS" — một triết lý thống nhất chi phối mọi quyết định từ Layer 1 đến Layer 4.</p>
 <h3 id="mental-architecture-3-truc-tam-ly">Mental Architecture — 3 trục tâm lý</h3>
@@ -1083,7 +1129,7 @@ Biến 3: Đối thủ cụ thể (Big server / Baseliner / Net rusher)
 </code></pre>
 <hr/>
 <h1 id="phan-tich-novak-djokovic">Phân Tích: Novak Djokovic</h1>
-<h2 id="the-elastic-efficiency-os"><em>"The Elastic Efficiency OS"</em></h2>
+<h2 id="the-elastic-efficiency-os"><em>"The Elastic Efficiency Os"</em></h2>
 <div class="pullquote"><p>Djokovic trông "bất khả chiến bại" không phải vì anh đánh bóng mạnh nhất, mà vì anh **triệt tiêu mọi cơ hội của đối thủ** bằng cách tối ưu hóa độ bao phủ sân + khả năng đàn hồi + độ sâu của bóng thuộc hàng xuất sắc nhất lịch sử.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_1">Layer 1 — Biomechanical Base</h2>
@@ -1143,8 +1189,8 @@ Return BH cross deep → tiến mid-court → FH inside-out dứt điểm</p>
 <p>Chiến lược cốt lõi: giữ bóng đủ sâu và đủ lâu cho đến khi đối thủ sụp đổ về thể chất và tinh thần. Điều chỉnh game plan giữa các set nhiều hơn bất kỳ player nào trong lịch sử.</p>
 <p><strong>Hình học thay vì sức mạnh:</strong> Djokovic không đánh bằng lực thuần túy. Anh đánh vào các "góc chết" và giữ bóng cực sâu, ép đối thủ đánh bóng ở vị trí bất lợi — lực của đối thủ tự giảm đi.</p>
 <hr/>
-<h2 id="layer-5-identity-os_1">Layer 5 — Identity OS</h2>
-<h3 id="elastic-efficiency-os"><em>Elastic Efficiency OS</em></h3>
+<h2 id="layer-5-identity-os_1">Layer 5 — Identity Os</h2>
+<h3 id="elastic-efficiency-os"><em>Elastic Efficiency Os</em></h3>
 <div class="pullquote"><p>**"Nhà toán học hình học"**: Không dùng lực — dùng góc, độ sâu và sự kiên nhẫn. Djokovic không chỉ chơi tennis; anh **giải mã** tennis của đối thủ.</p></div>
 <h3 id="mental-architecture">Mental Architecture</h3>
 <p><strong>Pressure Response — Wolf Mentality:</strong>
@@ -1189,7 +1235,7 @@ Djokovic là "nhà toán học" trên sân đấu. Phân tích điểm yếu đ�
 </table>
 <hr/>
 <h1 id="phan-tich-jannik-sinner">Phân Tích: Jannik Sinner</h1>
-<h2 id="the-linear-precision-os"><em>"The Linear Precision OS"</em></h2>
+<h2 id="the-linear-precision-os"><em>"The Linear Precision Os"</em></h2>
 <div class="pullquote"><p>Sinner không tạo ra sự hỗn loạn, không bao phủ sân bằng đàn hồi, không vẽ đường bóng bằng nghệ thuật. Anh **duy trì áp lực tuyến tính** — tốc độ cao, độ sâu nhất quán, không có điểm yếu rõ ràng để khai thác. Đối thủ không thua vì bị chói lóa — họ thua vì bị bào mòn bởi sự hoàn hảo không ngừng nghỉ.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_2">Layer 1 — Biomechanical Base</h2>
@@ -1284,8 +1330,8 @@ Return BH deep cross → Sinner tiến → FH mid-court tấn công</p>
 </tbody>
 </table>
 <hr/>
-<h2 id="layer-5-identity-os_2">Layer 5 — Identity OS</h2>
-<h3 id="linear-precision-os"><em>Linear Precision OS</em></h3>
+<h2 id="layer-5-identity-os_2">Layer 5 — Identity Os</h2>
+<h3 id="linear-precision-os"><em>Linear Precision Os</em></h3>
 <div class="pullquote"><p>Không điểm yếu, không cảm xúc, không nhượng bộ. Áp lực tuyến tính liên tục cho đến khi đối thủ sụp đổ.</p></div>
 <h3 id="mental-architecture-the-blank-wall">Mental Architecture: The Blank Wall</h3>
 <p><strong>Pressure Response:</strong> Chỉ những người vĩ đại mới thể hiện phong độ tốt nhất khi cần nhất. Sinner duy trì phong độ ngay cả trong bối cảnh scandal doping 2024 — minh chứng cho mental "bombproof".</p>
@@ -1325,7 +1371,7 @@ Return BH deep cross → Sinner tiến → FH mid-court tấn công</p>
 </table>
 <hr/>
 <h1 id="phan-tich-carlos-alcaraz">Phân Tích: Carlos Alcaraz</h1>
-<h2 id="the-chaos-os"><em>"The Chaos OS"</em></h2>
+<h2 id="the-chaos-os"><em>"The Chaos Os"</em></h2>
 <div class="pullquote"><p>Alcaraz không tối ưu hóa theo một chiều như Sinner, không kiểm soát hình học như Djokovic. Anh **phá vỡ cấu trúc dự đoán của đối thủ** — mỗi điểm là một trạng thái bất định cho đến tận cú đánh cuối. Drop shot giữa rally nhanh, lên lưới bất thình lình, serve-and-volley không báo trước — anh tạo ra sự hỗn loạn có kiểm soát và thống trị trong chính sự hỗn loạn đó.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_3">Layer 1 — Biomechanical Base</h2>
@@ -1396,8 +1442,8 @@ Serve + FH dứt điểm trong 2-3 cú — không để rally kéo dài</p>
 <h3 id="adaptation-matrix-all-surface-master">Adaptation Matrix: All-Surface Master</h3>
 <p>Alcaraz chứng minh sự thống trị trên tất cả mặt sân: Wimbledon (grass), Roland Garros (clay), US Open (hard). Hiếm có player nào dưới 25 tuổi làm được điều này.</p>
 <hr/>
-<h2 id="layer-5-identity-os_3">Layer 5 — Identity OS</h2>
-<h3 id="chaos-os"><em>Chaos OS</em></h3>
+<h2 id="layer-5-identity-os_3">Layer 5 — Identity Os</h2>
+<h3 id="chaos-os"><em>Chaos Os</em></h3>
 <div class="pullquote"><p>Phá cấu trúc dự đoán, Joy Under Fire, thống trị trong sự bất định.</p></div>
 <h3 id="mental-architecture_1">Mental Architecture</h3>
 <p><strong>Pressure Response — Joy Under Fire:</strong>
@@ -1440,7 +1486,7 @@ Trong các trận đấu trực tiếp với Sinner, Alcaraz chuyển đổi 66%
 </table>
 <hr/>
 <h1 id="phan-tich-learner-tien">Phân Tích: Learner Tien</h1>
-<h2 id="the-adaptive-efficiency-os"><em>"The Adaptive Efficiency OS"</em></h2>
+<h2 id="the-adaptive-efficiency-os"><em>"The Adaptive Efficiency Os"</em></h2>
 <div class="pullquote"><p>Tien là player hiếm gặp trong tennis hiện đại: không có vũ khí số một, nhưng không có điểm yếu rõ ràng nào để khai thác trên hard court. Anh không cố đánh bại đối thủ bằng một cú đánh — anh đánh bại họ bằng sự kiên nhẫn, fitness và khả năng thích nghi. Đây là OS của Michael Chang — người thầy của anh — được nâng cấp cho thế hệ 2026.</p></div>
 <p><strong>Bối cảnh:</strong> Learner Tien, sinh ngày 2/12/2005 tại Irvine, California. Gốc Việt — bố mẹ là người Hoa tị nạn từ miền Nam Việt Nam. Ranking No. 21 thế giới tính đến tháng 3/2026, ở tuổi 20. Coach: Michael Chang (huyền thoại người Mỹ gốc Hoa). Tên "Learner" lấy cảm hứng từ nghề giáo viên của mẹ.</p>
 <hr/>
@@ -1509,8 +1555,8 @@ Là tay vợt thuận tay trái, Tien có lợi thế tự nhiên trong cả deu
 </tbody>
 </table>
 <hr/>
-<h2 id="layer-5-identity-os_4">Layer 5 — Identity OS</h2>
-<h3 id="adaptive-efficiency-os"><em>Adaptive Efficiency OS</em></h3>
+<h2 id="layer-5-identity-os_4">Layer 5 — Identity Os</h2>
+<h3 id="adaptive-efficiency-os"><em>Adaptive Efficiency Os</em></h3>
 <div class="pullquote"><p>Không có vũ khí số một, không có điểm yếu số một. Thắng bằng hệ thống chứ không bằng thiên tài.</p></div>
 <h3 id="mental-architecture-bo-nao-xuat-sac-nhat-trong-the-he-moi">Mental Architecture — Bộ não xuất sắc nhất trong thế hệ mới</h3>
 <p><strong>Pressure Response — Process-Based Calm:</strong></p>
@@ -1562,7 +1608,7 @@ OS hiện tại không có câu trả lời cho clay. Cần thêm topspin FH và
 Hiện tại Tien phản ứng rất tốt nhưng chưa đủ chủ động tạo thế. Bước tiến tự nhiên: học dictate rally thay vì chỉ survive rally.</p>
 <hr/>
 <h1 id="bang-so-sanh-tong-hop">Bảng So Sánh Tổng Hợp</h1>
-<h2 id="bon-os-trong-mot-bang">Bốn OS trong một bảng</h2>
+<h2 id="bon-os-trong-mot-bang">Bốn Os trong một bảng</h2>
 <table class="data-table">
 <thead>
 <tr>
@@ -1641,7 +1687,7 @@ Tien (Adaptive) → bị phá bởi → Big serve + power baseline
 <p>Không có hệ thống nào tuyệt đối — chúng khai thác điểm yếu của nhau theo từng chu kỳ. Đây là lý do tennis ở đỉnh cao luôn hấp dẫn.</p>
 <hr/>
 <h1 id="ap-dung-cho-club-player-development">Áp Dụng Cho Club Player Development</h1>
-<h2 id="nguyen-tac-nen-tang-scaled-os">Nguyên tắc nền tảng: "Scaled OS"</h2>
+<h2 id="nguyen-tac-nen-tang-scaled-os">Nguyên tắc nền tảng: "scaled OS"</h2>
 <p>Sai lầm phổ biến nhất của club players và HLV là <strong>copy kỹ thuật elite mà không hiểu OS phía sau nó.</strong></p>
 <div class="pullquote"><p>**Nguyên tắc vàng:** Không copy *cú đánh* — copy *triết lý* đằng sau cú đánh, rồi scale xuống trình độ hiện tại.</p></div>
 <hr/>
@@ -1675,7 +1721,7 @@ L5 — IDENTITY
 □ Player này "là ai" trên sân?
 </code></pre>
 <hr/>
-<h2 id="buoc-2-xac-inh-natural-os">Bước 2 — Xác Định Natural OS</h2>
+<h2 id="buoc-2-xac-inh-natural-os">Bước 2 — Xác Định Natural Os</h2>
 <p>Mỗi người có một OS tự nhiên phù hợp với thể chất và tính cách. Ép player đi ngược Natural OS là lãng phí thời gian.</p>
 <table class="data-table">
 <thead>
@@ -1767,7 +1813,7 @@ GIAI ĐOẠN 3 (năm 2+)
 <p><em>Adaptive Efficiency OS:</em></p>
 <div class="pullquote"><p>Serve vào sân → giữ bóng deep + redirect pace → đợi đối thủ over-exert → BH DTL counter</p></div>
 <hr/>
-<h3 id="layer-5-xay-dung-identity-os">Layer 5 — Xây Dựng Identity OS</h3>
+<h3 id="layer-5-xay-dung-identity-os">Layer 5 — Xây Dựng Identity Os</h3>
 <p>Đây là layer thường bị bỏ qua hoàn toàn ở club level — nhưng quyết định 40% kết quả trận đấu.</p>
 <p><strong>3 việc cụ thể để xây Identity OS:</strong></p>
 <p><strong>1. Ritual giữa các điểm</strong>
@@ -1786,7 +1832,7 @@ Năm 2+ L5: Xác định Natural OS + mental ritual
 </code></pre>
 <div class="pullquote"><p>Hầu hết club players nhảy thẳng lên L3-L4 mà không có L1-L2. Kết quả: kỹ thuật cao nhưng không ổn định dưới áp lực — vì nền móng chưa vững.</p></div>
 <hr/>
-<h2 id="template-anh-gia-player-tom-tat-nhanh">Template Đánh Giá Player (Tóm Tắt Nhanh)</h2>
+<h2 id="template-anh-gia-player-tom-tat-nhanh">Template Đánh Giá Player (tóm Tắt Nhanh)</h2>
 <p>Dùng sau 1 buổi quan sát:</p>
 <pre class="code-block"><code>Tên player: _______________
 Ngày: _______________
@@ -1822,9 +1868,14 @@ PRIORITY ACTIONS (chọn 1-2 điều cần sửa trước):
 <p><em>Cuốn sách này là một phần trong hệ thống nghiên cứu tennis của Henry Pham.</em>
 <em>Surrey, British Columbia, Canada — 2026</em></p>
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="./Tennis_Coaching_Manual_3_0.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="index.html" class="nav-btn prev">← Previous</a>
+  <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="index.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 </body></html>

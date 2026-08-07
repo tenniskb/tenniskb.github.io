@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Advanced Tennis Manual - Chương 06</span>
@@ -978,7 +1024,7 @@
 <p>— End of Section 6.1 —</p>
 <p>Next: Section 6.2 — The One-Handed Backhand: The Kinetic Chain of the Single Arm</p>
 <p>◼ Two-Handed vs. One-Handed Backhand: Racket Head Speed and Contact Height Comparison
-Landlinger and colleagues (2010) compared racket head speed and contact height adaptability in 12 two-handed and 12 one-handed backhand players on the ATP Tour, matched for ranking. At standard contact heights (0.8–1.2m), mean racket head speeds were equivalent (98 km/h two-handed vs. 96 km/h one-handed). At high contact heights (above 1.3m), two-handed players showed 11% higher racket head speed than one-handed players. At low contact heights (below 0.5m), one-handed players showed 8% higher racket head speed, attributable to the one-armed swing arc being able to position lower without body obstruction. The study confirmed that configuration choice is primarily a contact height preference rather than a general velocity preference, with the two-hander performing better at high contact heights and the one-hander performing better at very low contact heights.</p>
+Landlinger and colleagues (2010) compared racket head speed and contact height adaptability in 12 two-handed and 12 one-handed backhand players on the ATP Tour, matched for ranking. At standard contact heights (0.8–1.2 m), mean racket head speeds were equivalent (98 km/h two-handed vs. 96 km/h one-handed). At high contact heights (above 1.3 m), two-handed players showed 11% higher racket head speed than one-handed players. At low contact heights (below 0.5 m), one-handed players showed 8% higher racket head speed, attributable to the one-armed swing arc being able to position lower without body obstruction. The study confirmed that configuration choice is primarily a contact height preference rather than a general velocity preference, with the two-hander performing better at high contact heights and the one-hander performing better at very low contact heights.</p>
 <p>DRILL: Non-Dominant Arm Isolation Drill
 Purpose: Develop the non-dominant arm's forehand-like rotation as the primary power contributor to the two-handed backhand.
 Setup: Player at the baseline. Coach feeds moderate-pace balls to the backhand side.
@@ -1133,7 +1179,7 @@ Level: Intermediate / Advanced.</p>
 <p>The two-handed backhand's topspin adjustment is primarily a swing arc adjustment — the player does not significantly change their contact position or grip, but steepens or flattens the overall arm system's arc through the contact zone. This makes the topspin adjustment more consistent (less variable than a wrist-based adjustment) but slightly less instantly adjustable within a single shot.</p>
 <p>One-Handed Topspin Range</p>
 <p>The one-handed backhand's topspin range is controlled through two mechanisms: swing arc angle (as for the two-hander) and wrist snap angle (the unique one-handed topspin mechanism of Section 6.2.7). The practical topspin range is somewhat narrower than the two-hander at the upper end — typically 1,000–3,500 RPM for most elite one-handed players — but the wrist snap mechanism allows rapid within-shot adjustment that the two-hander cannot access.</p>
-<p>The one-handed backhand topspin drive is most effective at mid-range contact heights (0.6–1.2m) where the shoulder rotation arc and the wrist snap combine efficiently. At contact heights above 1.2m, topspin production becomes more demanding and less consistent, as established in Section 6.2.6. Players who use the one-handed backhand as their primary topspin weapon must develop the laid-back loading quality to its maximum to compensate for the inherently lower topspin ceiling at high contact heights.</p>
+<p>The one-handed backhand topspin drive is most effective at mid-range contact heights (0.6–1.2 m) where the shoulder rotation arc and the wrist snap combine efficiently. At contact heights above 1.2 m, topspin production becomes more demanding and less consistent, as established in Section 6.2.6. Players who use the one-handed backhand as their primary topspin weapon must develop the laid-back loading quality to its maximum to compensate for the inherently lower topspin ceiling at high contact heights.</p>
 <p>6.3.3 The Flat Backhand Drive: Maximum Pace</p>
 <p>The flat backhand drive — hit with minimal spin to maximise pace and penetration — is the highest-impact attacking shot available from the backhand side. It sacrifices the trajectory safety margin of topspin (the ball does not have the Magnus force downward curve to rescue it if the flat trajectory is slightly too high over the net) for maximum ball speed and a low, fast, hard-to-read bounce. The flat drive is tactically appropriate on short balls, wide balls that open the court, and second balls on return of serve when a definitive attack is required.</p>
 <p>The mechanics of the flat drive differ from the topspin drive primarily in contact angle: the swing arc drives through the ball more horizontally than upward, reducing the upward brush component and directing more of the racket head velocity into forward ball speed rather than rotational impulse. The contact stiffening cascade is particularly important for the flat drive — the absence of topspin's Magnus force safety margin means that effective mass at contact is the primary quality variable, and any contact stiffening failure produces a flat ball that has neither pace nor spin and floats predictably out of court.</p>
@@ -1471,18 +1517,26 @@ To confirm pressure breakdown vs. a technique problem that was always present, o
 <p>DRILL: The 20-Minute Backhand Audit
 Equipment: Smartphone (side-on at net height, rear-view elevated if available), two cones (one at crosscourt target, one at down-the-line target), basket of 40 balls.
 Step 1 — Baseline Error Rate (4 minutes): Player hits 20 backhands at 80% effort crosscourt. Record: error rate, direction (net/long/wide), consistency (same direction every time vs. varied). Configuration identification confirmed.
-Step 2 — Contact Zone Assessment (2 minutes): Coach observes contact position on 10 backhands. Record: cramped (too close), optimal (35–55cm for two-handed; 75–90cm for one-handed), or overextended. Cramped/overextended = movement quality issue.
+Step 2 — Contact Zone Assessment (2 minutes): Coach observes contact position on 10 backhands. Record: cramped (too close), optimal (35–55cm for two-handed; 75–90cm for one-handed), or overextended.</p>
+<p>Cramped/overextended = movement quality issue.
 Step 3A (Two-Handed) — Non-Dominant Arm Assessment (3 minutes): Player hits 5 backhands intentionally leading with left arm. Compare power vs. standard 5 backhands. Power increase confirms non-dominant arm underutilisation. Also observe X-Factor angle at loaded position — is there hip-shoulder separation?
 Step 3B (One-Handed) — Laid-Back Assessment (3 minutes): Side-view video or coach observation of wrist position at loaded position. Is the wrist clearly behind the shoulder (full laid-back) or at neutral/forward? Also observe non-dominant arm counter-rotation — does it open backward through the contact?
-Step 4 — Contact Quality (2 minutes): 10 backhands at 90% effort. Listen for crack vs. thud. Observe post-bounce height (above knee = adequate spin; at ankle = flat contact). Configuration-specific power/spin deficit identified.
+Step 4 — Contact Quality (2 minutes): 10 backhands at 90% effort. Listen for crack vs. thud.</p>
+<p>Observe post-bounce height (above knee = adequate spin; at ankle = flat contact). Configuration-specific power/spin deficit identified.
 Step 5 — High-Ball Test (2 minutes): Feed 10 balls to bounce above shoulder height. Record quality: attacking topspin (correct), defensive slice (adequate), flat/sailing long error (insufficient high-ball technique), or net error (collapsed contact at high height). For one-handed players: this test is the most diagnostically valuable. For two-handed: should show standard topspin quality regardless of contact height.
 Step 6 — Pressure Test (3 minutes): Competitive scoring rally. Observe whether backhand quality under competitive scoring matches Steps 1–5 quality or degrades. Configuration-specific pressure breakdown pattern noted.
 Step 7 — Synthesis (1 minute): Primary error class, configuration-specific root cause, highest-priority corrective action.
 Level: All levels.</p>
+
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="Tennis_Training_Manual_Advanced_Chapter_05.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="Tennis_Training_Manual_Advanced_Chapter_05.html" class="nav-btn prev">← Previous</a>
+  <a href="../index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="Tennis_Training_Manual_Advanced_Chapter_07.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 

@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Advanced Tennis Manual - Chương 03</span>
@@ -917,7 +963,7 @@
 <p>Players who habitually land flat-footed on their split-step often describe their movement as feeling "heavy" or "slow to get going" — a precise phenomenological description of a landing that has failed to store elastic energy. The correction is not a more powerful jump or a faster reaction — it is a forefoot landing pattern that engages the Achilles elastic system. Once established, the same jump that previously felt heavy will feel spring-loaded, and the first step will depart with noticeably more explosive quality.</p>
 <p>Landing Width and Stability</p>
 <p>The width of the split-step landing position — the distance between the two feet — determines the stability of the loading platform and the range of directional bias available for the first step. Too narrow a landing (feet together or closer than hip width) creates an unstable base that forces a corrective weight shift before the first step can be executed. Too wide a landing (feet outside shoulder width) increases the time required to clear one foot for the first step and reduces the efficiency of the asymmetric landing redirection.</p>
-<p>The optimal landing width is approximately shoulder width or slightly wider — a position that provides a stable bilateral base while allowing rapid weight transfer to either side. Elite players show landing widths of 0.32–0.42 times their height, which for a 1.85m player corresponds to approximately 60–78cm between the insides of the feet. This range is wide enough for stability and narrow enough for rapid unilateral weight transfer.</p>
+<p>The optimal landing width is approximately shoulder width or slightly wider — a position that provides a stable bilateral base while allowing rapid weight transfer to either side. Elite players show landing widths of 0.32–0.42 times their height, which for a 1.85 m player corresponds to approximately 60–78cm between the insides of the feet. This range is wide enough for stability and narrow enough for rapid unilateral weight transfer.</p>
 <p>The Amortisation Phase: The Critical Window at the Ground</p>
 <p>As established in Section 1.3.2, the amortisation phase — the transition from eccentric loading to concentric drive — is the most critical and most commonly violated SSC variable. In the split-step context, the amortisation phase is the moment between the completion of the forefoot landing and the initiation of the first-step drive. The ground contact time for an optimal split-step landing is 80–130ms in elite players. Ground contact times above 200ms indicate excessive amortisation — the elastic energy stored in the Achilles tendon is dissipating as heat before the first step fires.</p>
 <p>Recreational players typically show split-step ground contact times of 150–250ms — significantly longer than elite values and correspondingly lower elastic energy return for the first step. Reducing ground contact times toward the elite range is the most direct training target for split-step quality improvement, and it responds specifically to the reactive loading drills described in the SSC section (Section 1.3.5) rather than to general fitness training.</p>
@@ -988,7 +1034,7 @@ Uzu and colleagues (2009) measured ground reaction forces during split-step land
 <p>NEUROSCIENCE: Anticipation and Split-Step Timing in Expert vs. Novice Players
 Research by Shim, Carlton, and colleagues (2005) used temporal occlusion methodology to identify the perceptual cues used by expert tennis players to time their split-steps. By hiding different portions of the opponent's motion from players at various time points and measuring split-step timing accuracy, the study found that expert players extracted the most useful split-step timing information from the opponent's shoulder orientation and racket preparation — cues available approximately 100–150ms before ball contact. Novice players relied primarily on ball flight after contact, which is perceptually available only after the optimal split-step jump window has already closed. The conclusion: expert split-step timing is a perceptual skill (reading pre-contact cues) rather than a reaction skill (responding to post-contact ball flight). Training this perceptual skill — not practicing jumping faster — is the correct development pathway.</p>
 <p>◼ Ground Contact Time and First-Step Reach in Tennis
-Damian Farrow and colleagues (2010) at the Australian Institute of Sport measured split-step ground contact times and subsequent first-step distances in junior elite, senior elite, and recreational tennis players. Senior elite players showed mean ground contact times of 98ms (range 82–118ms) and mean first-step distances of 0.97m. Junior elite players showed 124ms and 0.82m. Recreational players showed 189ms and 0.61m. The relationship between ground contact time and first-step distance was r = -0.71 — a strong inverse correlation confirming that shorter ground contact (better fast SSC quality) directly produces larger first-step reach. The study also found that targeted reactive loading training (drop jump series, Section 1.3.5) produced ground contact time reductions of 18–24% in junior elite players over 6 weeks — with corresponding improvements in first-step reach of 12–16 cm. These distances are the difference between reaching and not reaching a well-executed passing shot.</p>
+Damian Farrow and colleagues (2010) at the Australian Institute of Sport measured split-step ground contact times and subsequent first-step distances in junior elite, senior elite, and recreational tennis players. Senior elite players showed mean ground contact times of 98ms (range 82–118ms) and mean first-step distances of 0.97 m. Junior elite players showed 124ms and 0.82 m. Recreational players showed 189ms and 0.61 m. The relationship between ground contact time and first-step distance was r = -0.71 — a strong inverse correlation confirming that shorter ground contact (better fast SSC quality) directly produces larger first-step reach. The study also found that targeted reactive loading training (drop jump series, Section 1.3.5) produced ground contact time reductions of 18–24% in junior elite players over 6 weeks — with corresponding improvements in first-step reach of 12–16 cm. These distances are the difference between reaching and not reaching a well-executed passing shot.</p>
 <p>Step Type</p>
 <p>Optimal Distance</p>
 <p>Optimal Direction</p>
@@ -1120,12 +1166,12 @@ Level: Intermediate / Advanced.</p>
 <p>Sliding — allowing the foot to continue moving across the court surface after initial contact rather than planting and pushing against traction — is one of the most misunderstood movement techniques in tennis. It is commonly associated exclusively with clay courts and assumed to be a technique specific to clay-court specialists. In fact, sliding is applicable on all surfaces with appropriate technique modification, and it is — on clay specifically — a deliberate, mechanically sophisticated tool that allows significantly more efficient lateral movement than the stop-and-plant pattern used on hard courts.</p>
 <p>The Physics of Sliding</p>
 <p>On a clay court, the friction coefficient between the shoe sole and the court surface is sufficiently low that controlled lateral sliding is possible without injury risk — the shoe slides on the clay without the sudden stop that would occur on a higher-friction surface. This creates a mechanical opportunity: instead of decelerating and then shooting to convert lateral momentum into a stable contact position, the player can use the sliding momentum to glide into a wider contact position than a stop-and-plant would allow, dramatically increasing the range of balls that can be reached from the same starting position.</p>
-<p>The physics of why sliding extends reach are straightforward. A player decelerating to a stop before contact covers a fixed lateral distance determined by the deceleration path length. A player sliding into contact continues moving after the initial foot plant, extending the effective contact distance by the length of the slide — typically 0.5–1.5m on clay for elite players. This extended reach allows elite clay-court players to contact balls that a hard-court technique would require 1–2 additional steps to reach, preserving energy across long rallies and enabling contact from more advanced positions.</p>
+<p>The physics of why sliding extends reach are straightforward. A player decelerating to a stop before contact covers a fixed lateral distance determined by the deceleration path length. A player sliding into contact continues moving after the initial foot plant, extending the effective contact distance by the length of the slide — typically 0.5–1.5 m on clay for elite players. This extended reach allows elite clay-court players to contact balls that a hard-court technique would require 1–2 additional steps to reach, preserving energy across long rallies and enabling contact from more advanced positions.</p>
 <p>Controlled vs. Uncontrolled Sliding</p>
 <p>The crucial distinction in sliding technique is between controlled sliding — an intentional, mechanically planned deceleration-through-slide that positions the player correctly for the shot and the subsequent recovery — and uncontrolled sliding, which is an accidental loss of traction that disrupts balance, timing, and court position. Players who slide effectively on clay have built the strength and proprioceptive precision to control the slide trajectory and arrest it at exactly the correct contact position. Players who slide ineffectively are simply slipping — extending their ground contact time unpredictably and compromising both their shot and their recovery.</p>
 <p>Controlled sliding requires the outside foot (the foot furthest from the ball direction) to be the primary sliding surface — the inner edge of the shoe contacting the clay and sliding laterally while the player's body remains relatively stable over the foot. The inside knee drives slightly inward during the slide, maintaining the body's rotational position for the shot. The arms stay in the preparation position throughout the slide — the preparation occurs during the movement to the ball, and the slide arrives at the contact zone rather than disrupting the arm position.</p>
 <p>Hard-Court Sliding: The Modern Development</p>
-<p>Sliding on hard courts was historically dismissed as impossible and injurious. The modern professional game has revisited this assessment. Players like Djokovic, Alcaraz, and Sinner regularly employ controlled hard-court slides — particularly on modern acrylic hard courts which have slightly lower friction coefficients than older surfaces — to extend their lateral reach on wide balls. Hard-court sliding technique differs from clay-court technique in one critical respect: the slide is much shorter (0.2–0.5m vs. 0.5–1.5m on clay) and must be executed with greater eccentric control because the harder surface provides less elastic give on the sliding shoe.</p>
+<p>Sliding on hard courts was historically dismissed as impossible and injurious. The modern professional game has revisited this assessment. Players like Djokovic, Alcaraz, and Sinner regularly employ controlled hard-court slides — particularly on modern acrylic hard courts which have slightly lower friction coefficients than older surfaces — to extend their lateral reach on wide balls. Hard-court sliding technique differs from clay-court technique in one critical respect: the slide is much shorter (0.2–0.5 m vs. 0.5–1.5 m on clay) and must be executed with greater eccentric control because the harder surface provides less elastic give on the sliding shoe.</p>
 <p>Hard-court sliding injury risk is elevated compared to clay-court sliding, primarily because the harder surface makes uncontrolled slides more likely to produce ankle sprains and knee stress from sudden traction changes. Players developing hard-court sliding should begin on clay to build the technique and control, then transfer to hard courts with initially shorter, more controlled slides before progressing to the full-extension hard-court slide used by elite players.</p>
 <p>3.2.5 Court Geometry and Optimal Positioning</p>
 <p>Movement efficiency in tennis is not only about how fast the player moves but about where they position themselves between shots. Optimal court positioning minimises the distance to the widest range of potential opponent responses — covering the court with the least lateral movement required. This is the geometry of court coverage, and it is one of the most intellectually underestimated aspects of professional tennis performance.</p>
@@ -1168,7 +1214,7 @@ Level: Intermediate / Advanced.</p>
 <p>Lateral acceleration is a GRF quality. The outside foot's push direction (15–25 degrees above horizontal) and RFD in the first 50ms determine first-step velocity. Lower centre of mass positioning at the split-step landing is the postural key to achieving the correct push angle.</p>
 <p>Open and closed stance choice is a biomechanical decision, not a stylistic preference. Open stance for balls arrived at in lateral motion; closed or semi-open for balls arrived at with momentum arrested. Both must be trained to high quality; neither should be prescribed as universally superior.</p>
 <p>The penultimate step is the deceleration tool that prevents injury and improves contact quality simultaneously. Single-step deceleration produces 32% higher knee valgus stress than two-step deceleration. Teaching the penultimate step pattern is as important as teaching deceleration speed.</p>
-<p>Sliding is a controlled technique, not an accident. On clay, it extends reach by 0.5–1.5m. On modern hard courts, short controlled slides are increasingly viable. Both require eccentric control and slide trajectory precision that must be specifically developed.</p>
+<p>Sliding is a controlled technique, not an accident. On clay, it extends reach by 0.5–1.5 m. On modern hard courts, short controlled slides are increasingly viable. Both require eccentric control and slide trajectory precision that must be specifically developed.</p>
 <p>The bisector rule governs optimal recovery positioning. Recovery to the bisector of the opponent's most threatening angles — not to the geometric court centre — minimises the maximum lateral distance required for any subsequent shot. Every metre of positioning error adds 50–80ms of preparation time.</p>
 <p>Recovery steps must end with an arrival split-step. Arriving at the recovery position in a static stand is the most common and most costly recovery movement error. The arrival split-step maintains the dynamically loaded state that enables fast response when the opponent's ball arrives earlier than expected.</p>
 <p>Lateral movement injury prevention is systematic and evidence-based. Penultimate step deceleration, Copenhagen Adductor exercises, Nordic Hamstring Curls, and single-leg proprioceptive training together address the primary injury mechanisms in lateral tennis movement. They are not optional conditioning extras — they are injury prevention essentials for any player with a serious competitive schedule.</p>
@@ -1198,7 +1244,7 @@ Level: Phase 1–2 all levels with clay experience. Phase 3–4 Intermediate/Adv
 Every metre of sub-optimal recovery positioning adds approximately 50–80ms to the time required to reach the opponent's response — depending on the recovery distance and speed. Over a 12-shot rally, five positioning errors of 1 metre each accumulate approximately 250–400ms of additional preparation time compared to perfectly bisected positioning. This positioning tax is invisible on any individual shot but decisive across a rally: the player with poor bisector positioning arrives at each shot with slightly less preparation time, slightly more compressed mechanics, slightly less contact quality, and slightly less tactical variety available. The compounding effect of consistent sub-optimal positioning is one of the primary performance differentiators between the 3.0 club player and the 5.0 competitive player at similar movement speeds.</p>
 <p>DRILL: CLA Drill 1: The Width-and-Recovery Circuit
 Purpose: Develop the complete lateral movement sequence — split-step, directional acceleration, shot, recovery — as a continuous, automatic flow rather than a series of disconnected actions.
-Setup: Player at centre baseline. Coach at opposite baseline with basket. Cones at the wide forehand and wide backhand positions, 1.5m outside the singles sideline.
+Setup: Player at centre baseline. Coach at opposite baseline with basket. Cones at the wide forehand and wide backhand positions, 1.5 m outside the singles sideline.
 Drill: Coach feeds alternating wide balls — wide forehand, recovery, wide backhand, recovery, wide forehand, etc. Player must: (1) split-step on each feed, (2) reach the wide cone before contact, (3) contact the ball from the cone position, (4) recover to the bisector position (determined by shot direction) with an arrival split-step, (5) be ready for the next feed before it arrives.
 Constraint: The coach times the feeds so the player has exactly enough time to reach the cone and recover, but no margin. Feeds that are too comfortable make the constraint ineffective. The player should feel slightly rushed on every ball — this is the training stimulus.
 Quality criteria: (1) Contact occurs at or outside the cone (not before — indicates early contact from a non-wide position). (2) Recovery arrives with a visible split-step (not a slide into position and stop). (3) Contact quality (partner at the net rates heaviness 1–5) does not drop below 3 despite the movement demand.
@@ -1290,7 +1336,7 @@ ACL injuries in tennis occur almost exclusively during lateral deceleration even
 <p>The defensive lob response — sprinting backward from an attacking net position to retrieve a lob that passes over the head — is the most physically demanding movement-plus-stroke challenge in the entire game. It combines maximum backward sprint distance (typically 8–12 metres from the net position), severe time pressure (the lob's trajectory may reach the baseline in under 1.5 seconds), and the mechanical challenges of executing a stroke from behind the baseline after a maximum effort backward sprint.</p>
 <p>The lob defense is, for most players, a situational exercise in damage limitation rather than a winning shot opportunity. The physics are simply against the defending player: a well-executed offensive lob from an opponent who has been brought to the net by an effective approach shot produces a ball that is genuinely difficult or impossible to retrieve as a winning shot. The tactical question is whether to attempt the chase (potentially retrieving and keeping the point alive) or concede the point (recognising that the lob cannot be reached in time for a meaningful contact).</p>
 <p>The Chase Decision Criteria</p>
-<p>The chase decision — whether to sprint for a lob pass or concede the point — should be made within 200–300ms of the lob leaving the opponent's strings, based on the ball's initial trajectory and pace. The specific decision criteria are: trajectory height at the net crossing point (if the ball will cross the net above approximately 2.5m height, the lob will likely land deep enough to be out of reach from the net position); pace estimate (fast lobs with flat trajectories bounce deep and require longer retrieval distances than slow, high lobs that land shorter); and the player's own position at the moment of the lob (a player who is deeper in the court when the lob is played has a smaller retreat distance requirement).</p>
+<p>The chase decision — whether to sprint for a lob pass or concede the point — should be made within 200–300ms of the lob leaving the opponent's strings, based on the ball's initial trajectory and pace. The specific decision criteria are: trajectory height at the net crossing point (if the ball will cross the net above approximately 2.5 m height, the lob will likely land deep enough to be out of reach from the net position); pace estimate (fast lobs with flat trajectories bounce deep and require longer retrieval distances than slow, high lobs that land shorter); and the player's own position at the moment of the lob (a player who is deeper in the court when the lob is played has a smaller retreat distance requirement).</p>
 <p>Players who make good chase decisions preserve energy for situations where retrieval is genuinely possible and avoid the wasted effort of chasing balls that are definitively unreachable. Players who chase every lob regardless of trajectory eventually exhaust themselves pursuing balls that physics has already decided against them. Developing the perceptual skill to accurately assess lob trajectories in real time — making the chase decision correctly in 200–300ms — is a specific training target that responds to the kind of trajectory-reading practice described in Section 3.1.6 for anticipation training.</p>
 <p>The Moonball Response from Behind the Baseline</p>
 <p>When a lob is successfully chased and reached — even if the player arrives at the ball in a compromised position well behind the baseline — the optimal response in most situations is the high-topspin moonball: a heavily topspun ball driven high and deep into the opponent's court that buys the player time to recover their court position. The moonball response is optimal because it minimises the technical demands of the stroke (low directional precision required) while maximising the time for recovery (the high trajectory keeps the ball in the air longer) and limiting the opponent's attack options (a deep, high-bouncing ball at the baseline is difficult to attack aggressively from mid-court).</p>
@@ -1504,7 +1550,7 @@ Level: Intermediate / Advanced.</p>
 Purpose: Develop automatic bisector positioning through a competitive incentive that makes incorrect positioning immediately costly.
 Setup: The court is divided into four positional zones with coloured tape: Zone A (correct bisector for crosscourt shot), Zone B (correct bisector for down-the-line), Zone C (over-recovered to centre), Zone D (under-recovered, still wide). A second coach or partner calls the zone the player is in when the opponent contacts the ball.
 Scoring: Player earns a bonus point for being in the correct zone (A or B) at opponent contact. Loses a point for being in Zone D (too wide — most dangerous positioning error). Zone C is neutral.
-Progression: Begin with large zones (1.5m wide) and narrow over 4 weeks to 0.75m. The narrowing zones demand progressively more precise bisector calculation without any verbal instruction about where the bisector is.
+Progression: Begin with large zones (1.5 m wide) and narrow over 4 weeks to 0.75 m. The narrowing zones demand progressively more precise bisector calculation without any verbal instruction about where the bisector is.
 Level: Intermediate / Advanced.</p>
 <p>DRILL: CLA Drill 3: The Fatigue Recovery Ladder
 Purpose: Develop recovery quality under accumulated physical fatigue — the specific condition in which recovery degradation most compromises match performance.
@@ -1759,9 +1805,14 @@ Contact-to-Push Speed</p>
 <p>INSIGHT: Movement Intelligence as the Integration of Physical and Mental Performance
 The concept of "movement intelligence" — used informally by coaches to describe players who seem to move instinctively well — has a precise scientific basis in the integration of perceptual anticipation, automatic motor execution, and attentional management described across Chapters 1, 3, and 12. Movement intelligence is not a talent. It is the emergent property of a sufficiently trained and integrated system: perceptual skills that extract early information about ball and opponent direction; subcortically encoded movement programs that execute the correct response automatically; and attentional management that keeps conscious focus directed at the perceptual input rather than at the movement output. Each component is trainable. The integration of all three produces a player who appears to "just know" where to go and how to get there — the phenomological experience of movement intelligence from the inside.</p>
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="Tennis_Training_Manual_Advanced_Chapter_02.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="Tennis_Training_Manual_Advanced_Chapter_02.html" class="nav-btn prev">← Previous</a>
+  <a href="../index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="Tennis_Training_Manual_Advanced_Chapter_04.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 

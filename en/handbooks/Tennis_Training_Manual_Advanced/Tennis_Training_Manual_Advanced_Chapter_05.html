@@ -109,7 +109,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(2.2rem, 5vw, 3.6rem);
+ font-size: clamp(2.2 rem, 5vw, 3.6 rem);
 
  line-height: 1.1;
 
@@ -185,7 +185,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: clamp(1.6rem, 3vw, 2.4rem);
+ font-size: clamp(1.6 rem, 3vw, 2.4 rem);
 
  margin-bottom: 20px;
 
@@ -197,7 +197,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.3rem;
+ font-size: 1.3 rem;
 
  margin: 32px 0 12px;
 
@@ -225,7 +225,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.25rem;
+ font-size: 1.25 rem;
 
  font-style: italic;
 
@@ -359,7 +359,7 @@
 
  .analysis-card {
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-radius: 4px;
 
@@ -407,7 +407,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.1rem;
+ font-size: 1.1 rem;
 
  margin-bottom: 10px;
 
@@ -467,7 +467,7 @@
 
  background: rgba(26,107,60,0.08);
 
- border: 1.5px solid rgba(26,107,60,0.3);
+ border: 1.5 px solid rgba(26,107,60,0.3);
 
  }
 
@@ -475,7 +475,7 @@
 
  background: rgba(200,64,26,0.07);
 
- border: 1.5px solid rgba(200,64,26,0.3);
+ border: 1.5 px solid rgba(200,64,26,0.3);
 
  }
 
@@ -557,7 +557,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-weight: 700;
 
@@ -639,7 +639,7 @@
 
  background: white;
 
- border: 1.5px solid var(--divider);
+ border: 1.5 px solid var(--divider);
 
  border-top: 4px solid var(--gold);
 
@@ -671,7 +671,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.05rem;
+ font-size: 1.05 rem;
 
  margin-bottom: 8px;
 
@@ -697,7 +697,7 @@
 
  background: rgba(200,64,26,0.08);
 
- border: 1.5px solid rgba(200,64,26,0.25);
+ border: 1.5 px solid rgba(200,64,26,0.25);
 
  padding: 24px 28px;
 
@@ -729,7 +729,7 @@
 
  font-family: 'Playfair Display', serif;
 
- font-size: 1.4rem;
+ font-size: 1.4 rem;
 
  font-style: italic;
 
@@ -759,9 +759,9 @@
 
  .sensation-box { padding: 24px; border-radius: 4px; }
 
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
+ .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5 px solid rgba(196,149,42,0.3); }
 
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
+ .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5 px solid rgba(200,64,26,0.25); }
 
  .sensation-box h4 {
 
@@ -839,7 +839,7 @@
 
  .content-wrap { padding: 0 16px; }
 
- .player-header .name { font-size: 1.1rem; }
+ .player-header .name { font-size: 1.1 rem; }
 
  .compare-cell { font-size: 13px; padding: 12px 16px; }
 
@@ -860,12 +860,58 @@
 .code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
 .section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
 .pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
+.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25 rem; font-style: italic; margin: 0; color: var(--ink); }
+.warning { background: rgba(200,64,26,0.08); border: 1.5 px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
-</style></head>
+</style>
+<style>
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.page-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--accent, #c8401a);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: 1px solid var(--divider, #d4cbbf);
+    border-radius: 4px;
+    background: var(--paper, #f5f0e8);
+    transition: all 0.2 s ease;
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+}
+.page-nav a:hover {
+    background: var(--accent, #c8401a);
+    color: #ffffff;
+    border-color: var(--accent, #c8401a);
+}
+@media (max-width: 600px) {
+    .page-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .page-nav a {
+        max-width: 100%;
+    }
+}
+</style>
+</head>
 <body>
 <div class="masthead">
 <span class="tag">Advanced Tennis Manual - Chương 05</span>
@@ -932,7 +978,7 @@
 <p>The common instruction "hit out in front" is directionally correct but imprecise about the specific geometry required. The forward element (contact 45–70cm in front of the body) is correct. But the lateral element (contact 20–40cm to the side of the body centre, not in the direct forward plane of the body) is equally important and less commonly coached. Players who contact the ball directly in front of their body centre rather than in front and to the side are making contact from a position where the arm's swing arc has already peaked in velocity — slightly past the optimal contact point for the inside-out swing path of the open-stance forehand.</p>
 <p>Contact Height and Topspin Generation</p>
 <p>Contact height on the forehand has a direct relationship to the topspin available from the stroke. Lower contact points (below the waist) require a more upward swing arc to generate topspin — which can produce high-RPM topspin but reduces the horizontal velocity component. Higher contact points (at shoulder height or above) allow a more horizontal swing arc that generates less topspin naturally — but enables the lasso finish described in Section 5.4 to add the upward component that compensates.</p>
-<p>The optimal contact height for the standard open-stance forehand drive is between waist and chest height (0.8–1.3m above the court surface) — a range that allows a swing arc with approximately 30–45 degrees of upward angle through the contact zone, producing moderate to heavy topspin while maintaining meaningful horizontal velocity. Contact heights below 0.5m (very low balls) require extreme upward angle to produce topspin and substantially reduce ball velocity. Contact heights above 1.5m (high-bouncing balls) require the specific mechanical adaptations described in Section 5.4.</p>
+<p>The optimal contact height for the standard open-stance forehand drive is between waist and chest height (0.8–1.3 m above the court surface) — a range that allows a swing arc with approximately 30–45 degrees of upward angle through the contact zone, producing moderate to heavy topspin while maintaining meaningful horizontal velocity. Contact heights below 0.5 m (very low balls) require extreme upward angle to produce topspin and substantially reduce ball velocity. Contact heights above 1.5 m (high-bouncing balls) require the specific mechanical adaptations described in Section 5.4.</p>
 <p>The Contact Zone Error: Too Close vs. Too Far</p>
 <p>Two contact zone errors are particularly prevalent in open-stance forehand development. The "too close" error — contact inside the optimal zone, with the ball too close to the body — produces a cramped contact where the arm cannot extend effectively, the swing arc is incomplete, and the ball often skids off the strings with inconsistent direction and reduced power. The cramped contact has a characteristic sound (more of a brush than a crack) and a characteristic feel (the ball "sticking" to the strings rather than departing cleanly). The most common cause is positioning: the player arrives too close to the ball because they moved too aggressively toward the contact zone without leaving adequate space for the arm extension.</p>
 <p>The "too far" error — contact outside the optimal zone, with the ball too far from the body — produces an overextended contact where the arm is already past its velocity peak and beginning to decelerate. The overextended contact produces inconsistent direction (the arm is pulling across rather than through the ball) and reduced topspin (the upward brush component is reduced when the arm is past the optimal contact angle). The most common cause is a late split-step or late unit turn — the player has not completed their preparation before the ball arrives, and the swing is chasing the ball forward rather than driving through it.</p>
@@ -1019,7 +1065,7 @@ Players who have been taught the open-stance loaded position through visual cues
 <p>Clay primarily</p>
 <p>Flat contact nearly impossible; surface adaptability very limited</p>
 <p>DRILL: Phase 1: Outside Leg Loading Constraint Drill
-Equipment: Resistance band approximately 1m long. Attach one end to the player's right hip (for right-handers) and the other end to a fixed point 1–1.5m behind and to the left of the player's contact position.
+Equipment: Resistance band approximately 1m long. Attach one end to the player's right hip (for right-handers) and the other end to a fixed point 1–1.5 m behind and to the left of the player's contact position.
 Effect: The band's tension pulls the player backward and toward the inside leg if they fail to load the outside leg — making any contact without outside leg loading mechanically difficult (the band pulls the player away from the ball).
 Feed: Coach feeds from the service line at moderate pace. Player must resist the band's pull by loading the outside leg before the swing begins. The band is the constraint; no instruction about leg loading is given.
 Quality signal: If the player is being pulled backward or to the side by the band during or after contact, the outside leg loading was insufficient. If the player resists the band comfortably, the loading was adequate.
@@ -1153,7 +1199,7 @@ The coaching instruction "swing faster to generate more topspin" contradicts the
 Smekal and colleagues (2001) compared the return quality of recreational and competitive club players against "heavy" (high topspin, moderate pace) and "light" (low topspin, higher pace) balls at matched bounce depth, using EMG measurements of the returning arm's effort. Heavy balls produced significantly higher return effort (muscle activation levels 25–35% higher) despite lower incoming velocity, attributable to the post-bounce acceleration and high contact height forcing the returning player into a biomechanically compromised contact. The study also found that heavy balls produced significantly more return errors (31% error rate vs. 18% for light balls at matched depth and pace), confirming the tactical superiority of high-topspin moderate-pace balls over low-topspin high-pace balls in the return-of-serve equivalent context.</p>
 <p>DRILL: CLA Drill 1: The Bounce Height Target
 Purpose: Develop contact angle precision by using the post-bounce height as the primary feedback on spin generation quality.
-Setup: Player rallies crosscourt from the baseline. A suspended string or cord is stretched across the court at approximately 1.5m height — 1m inside the opponent's baseline, parallel to the baseline.
+Setup: Player rallies crosscourt from the baseline. A suspended string or cord is stretched across the court at approximately 1.5 m height — 1m inside the opponent's baseline, parallel to the baseline.
 Constraint: Each ball must pass under the string in flight (if it goes over, it was hit too high), land inside the opposite baseline (must have enough pace), AND bounce above the string after landing (must have enough topspin to kick high after the bounce).
 Why it works: The three-part constraint (under the string in flight, deep in the court, above the string after bounce) makes heavy topspin with deep placement the only viable solution. Flat shots go over the string. Short shots fall short. Low-spin shots bounce under the string. Only high-RPM topspin deep balls satisfy all three.
 Level: Intermediate / Advanced.</p>
@@ -1165,7 +1211,7 @@ Competition: First to 15 exchange points. The competition objective forces playe
 Level: Intermediate / Advanced.</p>
 <p>DRILL: CLA Drill 3: The High-Bounce Approach Target
 Purpose: Develop surface-specific topspin understanding by contrasting topspin effectiveness on different court areas.
-Setup: Player hits forehands from the mid-court. Target: balls must land in the opponent's service box AND bounce to at least 1.3m height (roughly shoulder height for most players). This requires meaningful topspin on a short-court ball where the natural instinct is to hit flat for speed.
+Setup: Player hits forehands from the mid-court. Target: balls must land in the opponent's service box AND bounce to at least 1.3 m height (roughly shoulder height for most players). This requires meaningful topspin on a short-court ball where the natural instinct is to hit flat for speed.
 Tactical relevance: Short balls attacked with topspin that kicks high are more difficult to attack than short balls hit flat, because the high bounce forces the opponent to contact the ball above their shoulder — the most mechanically compromised forehand contact height. This drill develops the capacity to use topspin as an attacking weapon from short balls, not only as a defensive rally tool.
 Level: Intermediate / Advanced.</p>
 
@@ -1251,7 +1297,7 @@ Level: Intermediate / Advanced.</p>
 <p>— End of Section 5.3 —</p>
 <p>Next: Section 5.4 — The Lasso Finish: Physics of the High-Ball Attack</p>
 <p>PHYSICS: Moment of Inertia at Contact: Straight-Arm vs. Double-Bend
-Consider a simplified model of the forearm-racket system rotating around the shoulder axis. In the straight-arm configuration, the effective length from shoulder to racket head contact point is approximately 0.85–0.90m. In the double-bend configuration, elbow flexion reduces this effective length to approximately 0.65–0.70m. Moment of inertia scales as I = m × r², where r is the distance from the rotation axis. The ratio of I_straight to I_double-bend is approximately (0.875)² / (0.675)² = 0.766 / 0.456 = 1.68. This means the straight-arm configuration has approximately 68% higher moment of inertia at contact than the double-bend. Under conservation of angular momentum, achieving the same final racket head speed requires 68% more initial angular momentum input in the straight-arm configuration — which means it requires a larger X-Factor loading, a more powerful shoulder rotation drive, or both.</p>
+Consider a simplified model of the forearm-racket system rotating around the shoulder axis. In the straight-arm configuration, the effective length from shoulder to racket head contact point is approximately 0.85–0.90 m. In the double-bend configuration, elbow flexion reduces this effective length to approximately 0.65–0.70 m. Moment of inertia scales as I = m × r², where r is the distance from the rotation axis. The ratio of I_straight to I_double-bend is approximately (0.875)² / (0.675)² = 0.766 / 0.456 = 1.68. This means the straight-arm configuration has approximately 68% higher moment of inertia at contact than the double-bend. Under conservation of angular momentum, achieving the same final racket head speed requires 68% more initial angular momentum input in the straight-arm configuration — which means it requires a larger X-Factor loading, a more powerful shoulder rotation drive, or both.</p>
 <p>◼ Straight-Arm vs. Double-Bend Velocity Profiles
 Reid, Elliott, and Alderson (2008) used 3D motion capture to compare 15 straight-arm and 15 double-bend forehand players on the ATP Tour, matched for ranking and height. Straight-arm players produced mean peak racket head speeds of 112 km/h vs. 101 km/h for double-bend players — an 11% advantage. However, the variance in racket head speed was also 23% higher in straight-arm players, confirming both the higher velocity ceiling and the lower consistency floor of the configuration. Double-bend players showed smaller variance in contact point position (both vertical and horizontal) across repeated forehands — confirming the higher fault tolerance of the configuration. Ball exit velocities were nearly equal (134 km/h straight-arm vs. 131 km/h double-bend) because the straight-arm's velocity advantage was partially offset by its larger moment of inertia's lower effective mass contribution at contact at the same ball speed.</p>
 <p>Dimension</p>
@@ -1358,8 +1404,8 @@ Level: Intermediate / Advanced.</p>
 <p>5.4.1 Why High Balls Are Hard: The Physics of the Problem</p>
 <p>Understanding the lasso finish requires first understanding what makes shoulder-height and above-shoulder forehands mechanically challenging — why they are tactically powerful weapons when hit with heavy topspin and poor-quality defensive pushes when hit without it.</p>
 <p>The Contact Height Problem</p>
-<p>At waist to chest height (0.8–1.3m above the court) — the standard forehand strike zone — the natural swing path from a semi-western or western grip produces a contact angle of approximately 30–40 degrees above horizontal, generating 2,500–4,000 RPM topspin while maintaining forward ball velocity. The swing arc exits the contact zone forward and upward, and the follow-through naturally crosses the body at shoulder height — the classic semi-western follow-through.</p>
-<p>At shoulder height (1.4–1.6m) and above, the geometry changes fundamentally. The incoming ball is at or above the level of the hitting shoulder. The natural swing path from the standard preparation position — forward and slightly upward from the loaded position — arrives at the contact zone on a trajectory that, at shoulder height, produces a racket face angled too flat relative to the ball for effective topspin generation. The swing that naturally generates 35-degree contact angles at chest height generates only 15–20 degree contact angles at shoulder height, producing a flatter, less controlled ball that lacks the spin needed for trajectory safety margin.</p>
+<p>At waist to chest height (0.8–1.3 m above the court) — the standard forehand strike zone — the natural swing path from a semi-western or western grip produces a contact angle of approximately 30–40 degrees above horizontal, generating 2,500–4,000 RPM topspin while maintaining forward ball velocity. The swing arc exits the contact zone forward and upward, and the follow-through naturally crosses the body at shoulder height — the classic semi-western follow-through.</p>
+<p>At shoulder height (1.4–1.6 m) and above, the geometry changes fundamentally. The incoming ball is at or above the level of the hitting shoulder. The natural swing path from the standard preparation position — forward and slightly upward from the loaded position — arrives at the contact zone on a trajectory that, at shoulder height, produces a racket face angled too flat relative to the ball for effective topspin generation. The swing that naturally generates 35-degree contact angles at chest height generates only 15–20 degree contact angles at shoulder height, producing a flatter, less controlled ball that lacks the spin needed for trajectory safety margin.</p>
 <p>The fundamental high-ball problem is this: maintaining the contact angle that generates adequate topspin at increasing ball heights requires an increasingly steep upward swing arc through the contact zone. But a steeper upward arc at higher contact heights means the forward velocity component of the contact is reduced (more energy into upward brush, less into forward drive), and the arm path after contact must curve dramatically upward to avoid the arm decelerating too early in the arc. The lasso finish is the solution to both problems simultaneously.</p>
 <p>The Arm Deceleration Problem</p>
 <p>The second mechanical challenge of high balls is arm deceleration. At standard contact heights, the forward-across follow-through naturally decelerates the arm through the contact zone after the maximum velocity point — the arm reaches peak velocity slightly before contact and is still at near-peak velocity at contact because the deceleration has not yet become significant. At high contact heights, the arm has already passed its natural maximum velocity point before the arm reaches shoulder height, meaning that a standard forward follow-through arrives at the high-ball contact zone during the deceleration phase of the swing arc. The racket head is slowing at the moment of contact — reducing ball exit velocity and contact quality simultaneously.</p>
@@ -1419,7 +1465,7 @@ Level: Intermediate / Advanced.</p>
 <p>5.4.8 Elite Lasso Analysis: Nadal, Alcaraz, and the High-Ball Attack Pioneers</p>
 <p>Rafael Nadal: The Architect</p>
 <p>Nadal's forehand is the historical template for the modern lasso finish, and his execution of it remains the clearest demonstration of the physics described in this section. His loading position on high balls is visibly lower than on standard forehands — the outside knee bends dramatically, the hip drops, and the body position is approximately 15–20cm lower than his standard forehand preparation. The subsequent rise through contact is powerful and continuous: by the time the racket contacts the ball, the outside leg is mid-extension and still driving upward, producing the rising body motion that steepens the swing arc.</p>
-<p>Nadal's lasso arc angle at contact has been measured in kinematic analyses at approximately 55–70 degrees above horizontal on his heaviest forehands — well into the extreme topspin zone of the contact angle spectrum from Section 5.2.3. The ball exit RPM from these contacts ranges from 4,000–6,000 RPM, and the post-bounce kick height on clay reaches 1.4–1.8m above the service line — the highest of any active professional player on clay. This extreme bounce height forces contact positions that are above the shoulder for most opponents, creating the "defensive death loop" that characterises Nadal's clay-court dominance: his lasso produces high balls, which the opponent lassos back (if capable) or pushes defensively, which Nadal lassos again at higher quality.</p>
+<p>Nadal's lasso arc angle at contact has been measured in kinematic analyses at approximately 55–70 degrees above horizontal on his heaviest forehands — well into the extreme topspin zone of the contact angle spectrum from Section 5.2.3. The ball exit RPM from these contacts ranges from 4,000–6,000 RPM, and the post-bounce kick height on clay reaches 1.4–1.8 m above the service line — the highest of any active professional player on clay. This extreme bounce height forces contact positions that are above the shoulder for most opponents, creating the "defensive death loop" that characterises Nadal's clay-court dominance: his lasso produces high balls, which the opponent lassos back (if capable) or pushes defensively, which Nadal lassos again at higher quality.</p>
 <p>Carlos Alcaraz: The Evolution</p>
 <p>Alcaraz has expanded the lasso finish's tactical range beyond Nadal's clay-court application to a year-round, all-surface weapon. His lasso is available from more positions and contact heights than Nadal's, because his dynamic X-Factor and motor adaptability (Section 2.2) allow him to generate the rising body motion from slightly higher loading positions than Nadal requires. This means Alcaraz can execute an effective lasso from a higher starting contact height (lower crouching requirement) than Nadal, making it deployable faster and from more varied positions.</p>
 <p>On hard courts and grass, where ball bounce is lower and the frequency of above-shoulder contacts is reduced, Alcaraz uses the lasso selectively — against kick serves, against heavy topspin opponents who generate above-shoulder balls even on faster surfaces, and as a tactical surprise against opponents who position deep in anticipation of flat drives. On clay, like Nadal, it is a dominant weapon deployed on a significant fraction of his forehands.</p>
@@ -1439,7 +1485,7 @@ Level: Intermediate / Advanced.</p>
 <p>— End of Section 5.4 —</p>
 <p>Next: Section 5.5 — Forehand Diagnostics: The Complete Error Analysis Framework</p>
 <p>PHYSICS: Contact Angle Geometry at Varied Ball Heights
-For a fixed preparation position (shoulder at 1.1m height, elbow at 90 degrees, wrist at 1.3m) and a fixed swing initiation trajectory (forward and upward at 40 degrees above horizontal from the elbow), the racket head's contact angle with a waist-height ball (0.9m) is approximately 38 degrees above horizontal — well within the heavy topspin zone. With a shoulder-height ball (1.5m), the same swing produces approximately 18 degrees of contact angle — barely into the moderate topspin zone. To maintain 38 degrees of contact angle at 1.5m ball height, the swing arc must be 22 degrees steeper in its upward component — requiring a fundamentally different swing path through the contact zone that the standard semi-western follow-through cannot complete without arm deceleration.</p>
+For a fixed preparation position (shoulder at 1.1 m height, elbow at 90 degrees, wrist at 1.3 m) and a fixed swing initiation trajectory (forward and upward at 40 degrees above horizontal from the elbow), the racket head's contact angle with a waist-height ball (0.9 m) is approximately 38 degrees above horizontal — well within the heavy topspin zone. With a shoulder-height ball (1.5 m), the same swing produces approximately 18 degrees of contact angle — barely into the moderate topspin zone. To maintain 38 degrees of contact angle at 1.5 m ball height, the swing arc must be 22 degrees steeper in its upward component — requiring a fundamentally different swing path through the contact zone that the standard semi-western follow-through cannot complete without arm deceleration.</p>
 <p>INSIGHT: The Rising Body as the Lasso's Engine
 The lasso finish is mechanically powered by the rising body motion, not by an arm decision. A player who crouches into the loading position and then rises through the contact — the outside leg extending from its deep loaded position to full extension as the arm swings through the contact zone — naturally produces the upward-steep contact arc that characterises the lasso. The rising body drives the arm upward; the arm simply follows. Players who try to produce the lasso by consciously lifting the arm during the swing are working against the natural chain mechanics: the arm should be passive relative to the body's rising motion, not independently lifting. The correct cue: "rise through the ball and let the arm follow your body upward."</p>
 <p>◼ Lower Body GRF in Lasso vs. Standard Forehand
@@ -1625,17 +1671,25 @@ Level: Intermediate / Advanced.</p>
 <p>DRILL: The 20-Minute Forehand Audit
 Equipment: Smartphone on tripod (side-on at net height and rear-view elevated if possible), two cones (one at T target, one at baseline corner), basket of 40 balls.
 Step 1 — Baseline Error Rate (4 minutes): Player hits 20 forehands at 80% effort crosscourt. Coach records: error rate, error direction (net/long/wide), error direction consistency (always same direction vs. varied). This establishes the primary error class.
-Step 2 — Contact Zone Observation (3 minutes): Player hits 10 forehands at 70% effort with coach watching contact position. Record: cramped (ball too close to body at contact), optimal (50–65cm in front, 20–40cm lateral), or overextended (ball too far forward). Cramped/overextended suggests movement quality issue; optimal suggests technique issue.
+Step 2 — Contact Zone Observation (3 minutes): Player hits 10 forehands at 70% effort with coach watching contact position. Record: cramped (ball too close to body at contact), optimal (50–65cm in front, 20–40cm lateral), or overextended (ball too far forward).</p>
+<p>Cramped/overextended suggests movement quality issue; optimal suggests technique issue.
 Step 3 — X-Factor Assessment (3 minutes): Player hits 10 forehands at 80% effort with overhead phone or coach observing hip-shoulder separation at the loaded position. Record: hip-shoulder angle estimate (poor &lt; 20 degrees; moderate 20–35 degrees; good &gt; 35 degrees); timing (simultaneous vs. hip leading). This directly identifies Collapsed Timing vs. SOD Separation.
-Step 4 — Contact Quality (2 minutes): Player hits 10 forehands at 90% effort. Coach listens for contact sound quality (crack vs. thud) and observes post-bounce spin (high bounce = adequate spin; low bounce = flat contact). Record: percentage cracks, estimated RPM class from post-bounce height.
+Step 4 — Contact Quality (2 minutes): Player hits 10 forehands at 90% effort. Coach listens for contact sound quality (crack vs. thud) and observes post-bounce spin (high bounce = adequate spin; low bounce = flat contact).</p>
+<p>Record: percentage cracks, estimated RPM class from post-bounce height.
 Step 5 — Power Test (2 minutes): Player hits 10 forehands at maximum effort to the target cone at the baseline corner. Record: percentage of balls landing in or near the target (cone knocked over or within 30cm), estimated ball speed (fast, moderate, slow), depth quality (all landing near the baseline vs. landing mid-court).
 Step 6 — Pressure Test (3 minutes): Introduce competitive scoring — player hits 10 crosscourt forehands to win points (partner trying to keep the ball in play). Coach observes whether forehand quality under competitive scoring matches quality in Steps 1–5 or degrades significantly. A degradation &gt; 20% in error rate or quality confirms pressure breakdown.
 Step 7 — Synthesis (3 minutes): Using the error class from Step 1, the contact zone observation from Step 2, the X-Factor assessment from Step 3, and the contact quality from Step 4, identify: (a) primary error class; (b) root cause (movement quality, X-Factor failure, contact angle issue, contact stiffening, or pressure); (c) single highest-priority corrective action.
 Level: All levels.</p>
+
 </div>
-<nav class="page-nav" style="display: flex; justify-content: space-between; padding: 24px 0; margin-top: 40px; border-top: 1px solid var(--divider); font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px;"><a href="Tennis_Training_Manual_Advanced_Chapter_04.html" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding: 8px 0;">← Mục Lục</a></nav>
+
 </div>
-<footer class="cc-license" style="color: white; font-size: 0.88em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
+<nav class="page-nav">
+  <a href="Tennis_Training_Manual_Advanced_Chapter_04.html" class="nav-btn prev">← Previous</a>
+  <a href="../index.html" class="nav-btn toc">≡ Table of Contents</a>
+  <a href="Tennis_Training_Manual_Advanced_Chapter_06.html" class="nav-btn next">Next →</a>
+</nav>
+<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
 <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
 </footer>
 
