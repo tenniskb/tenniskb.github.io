@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Hệ Trục 52 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#18-hệ-trục-52-vận-hành-không-tải--tái-tạo-năng-lượng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">18. Hệ Trục 52: Vận Hành Không Tải &amp; Tái Tạo Năng Lượng</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-4-thở-bụng-đan-điền--bí-quyết-để-không-hụt-hơi" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 4: THỞ BỤNG (ĐAN ĐIỀN) – BÍ QUYẾT ĐỂ KHÔNG HỤT HƠI</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-6-tennis-vận-hành-không-tải--dùng-ý-không-dùng-lực" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 6: TENNIS "VẬN HÀNH KHÔNG TẢI" – DÙNG Ý KHÔNG DÙNG LỰC</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bài-tập-10-phút-trước-trận-đấu" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">BÀI TẬP "10 PHÚT TRƯỚC TRẬN ĐẤU"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-11-ăn-để-tái-tạo--chiến-thuật-nhân-tố-enzyme" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 11: ĂN ĐỂ TÁI TẠO – CHIẾN THUẬT "NHÂN TỐ ENZYME"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-kết-thực-hành-ngày-mới" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">TỔNG KẾT THỰC HÀNH NGÀY MỚI:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-16-tư-duy-tối-giản--trừ-để-có-nhiều-hơn" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 16: TƯ DUY TỐI GIẢN – "TRỪ" ĐỂ CÓ NHIỀU HƠN</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-18-làm-chủ-bản-năng--vô-hình-trước-tiêu-cực" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 18: LÀM CHỦ BẢN NĂNG – "VÔ HÌNH" TRƯỚC TIÊU CỰC</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#lời-nhắn-cho-hệ-trục-52-của-phạm-đức-hải" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">LỜI NHẮN CHO "HỆ TRỤC 52" CỦA PHẠM ĐỨC HẢI:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-14-thận-khí--bảo-dưỡng-cội-nguồn-tuổi-trung-niên" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 14: THẬN KHÍ – BẢO DƯỠNG "CỘI NGUỒN" TUỔI TRUNG NIÊN</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-20-hành-trình-trở-về-không--hợp-nhất-thân-tâm-trí" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 20: HÀNH TRÌNH TRỞ VỀ "KHÔNG" – HỢP NHẤT THÂN TÂM TRÍ</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#thời-điểm-biểu-một-ngày-hệ-trục-52" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">THỜI ĐIỂM BIỂU: MỘT NGÀY "HỆ TRỤC 52"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-5-tam-tiêu--mạng-lưới-quản-lý-điện-nước-toàn-thân" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 5: TAM TIÊU – MẠNG LƯỚI QUẢN LÝ "ĐIỆN NƯỚC" TOÀN THÂN</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-7-cơ-psoas--cơ-của-linh-hồn-và-cú-xoay-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 7: CƠ PSOAS – "CƠ CỦA LINH HỒN" VÀ CÚ XOAY TENNIS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-8-phân-định-hư---thực--bảo-vệ-đầu-gối-tuổi-50" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 8: PHÂN ĐỊNH HƯ - THỰC – BẢO VỆ ĐẦU GỐI TUỔI 50</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-9-tùng-thả-lỏng--miên-lý-tàng-kim" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 9: TÙNG (THẢ LỎNG) – "MIÊN LÝ TÀNG KIM"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-10-nhịp-thở-quy-tức-trên-sân-đấu" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 10: NHỊP THỞ QUY TỨC TRÊN SÂN ĐẤU</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-12-dinh-dưỡng-âm---dương--môi-trường-nội-tại-terrain" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 12: DINH DƯỠNG ÂM - DƯƠNG &amp; MÔI TRƯỜNG NỘI TẠI (TERRAIN)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-13-thông-điệp-của-nước--tần-số-chữa-lành" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 13: THÔNG ĐIỆP CỦA NƯỚC – TẦN SỐ CHỮA LÀNH</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-15-thải-độc-nội-tạng-chủ-động" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 15: THẢI ĐỘC NỘI TẠNG CHỦ ĐỘNG</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-17-thiền-vô-hành--chánh-niệm-trong-công-việc" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 17: THIỀN "VÔ HÀNH" – CHÁNH NIỆM TRONG CÔNG VIỆC</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-19-luật-hấp-dẫn--tần-số-rung-động" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 19: LUẬT HẤP DẪN &amp; TẦN SỐ RUNG ĐỘNG</a></li><li style="font-weight: 600;"><a href="#chương-1-quy-luật-78-và-chiến-lược-cải-biến-sinh-mệnh-tuổi-52" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 1: QUY LUẬT 7/8 VÀ CHIẾN LƯỢC CẢI BIẾN SINH MỆNH TUỔI 52</a></li><li style="font-weight: 600;"><a href="#chương-2-tý-ngọ-lưu-chú--lập-trình-lại-hệ-thống-phục-hồi" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 2: TÝ NGỌ LƯU CHÚ – LẬP TRÌNH LẠI HỆ THỐNG PHỤC HỒI</a></li><li style="font-weight: 600;"><a href="#chương-3-hệ-trục-cột-sống-và-cơ-sinh-học-toàn-diện" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 3: HỆ TRỤC CỘT SỐNG VÀ CƠ SINH HỌC TOÀN DIỆN</a></li><li style="font-weight: 600;"><a href="#chương-6-tennis-thái-cực--nghệ-thuật-chiến-thắng-bằng-sự-thả-lỏng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 6: TENNIS THÁI CỰC – NGHỆ THUẬT CHIẾN THẮNG BẰNG SỰ THẢ LỎNG</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-1-triết-lý-nền-tảng--tại-sao-phải-cần-thái-cực-trang-1-15" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 1: TRIẾT LÝ NỀN TẢNG – TẠI SAO PHẢI CẦN THÁI CỰC? (Trang 1-15)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-2-hệ-trục-và-trọng-tâm-trong-tennis-trang-16-35" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 2: HỆ TRỤC VÀ TRỌNG TÂM TRONG TENNIS (Trang 16-35)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-3-bộ-pháp-hư-thực--đi-như-mèo-chạy-như-hổ-trang-36-55" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 3: BỘ PHÁP HƯ THỰC – ĐI NHƯ MÈO, CHẠY NHƯ HỔ (Trang 36-55)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-4-thủ-pháp--dùng-ý-dẫn-tay-tay-không-tự-động-trang-56-75" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 4: THỦ PHÁP – DÙNG Ý DẪN TAY, TAY KHÔNG TỰ ĐỘNG (Trang 56-75)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-5-các-chiêu-thức-chiến-thuật-trang-76-90" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 5: CÁC CHIÊU THỨC CHIẾN THUẬT (Trang 76-90)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#phần-6-phục-hồi-và-tái-tạo-năng-lượng-trang-91-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">PHẦN 6: PHỤC HỒI VÀ TÁI TẠO NĂNG LƯỢNG (Trang 91-100+)</a></li><li style="font-weight: 600;"><a href="#chương-6a-kỹ-thuật-tùng-kwa-thả-lỏng-háng--cỗ-máy-phát-lực-của-tennis-hiện-đại" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 6.A: KỸ THUẬT "TÙNG KWA" (THẢ LỎNG HÁNG) – CỖ MÁY PHÁT LỰC CỦA TENNIS HIỆN ĐẠI</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-giải-phẫu-học-và-cơ-sinh-học-của-kwa-trang-1-10" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. GIẢI PHẪU HỌC VÀ CƠ SINH HỌC CỦA "KWA" (TRANG 1-10)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-kỹ-thuật-sit-into-the-kwa-ngồi-vào-háng-trong-cú-forehand-trang-11-25" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. KỸ THUẬT "SIT INTO THE KWA" (NGỒI VÀO HÁNG) TRONG CÚ FOREHAND (TRANG 11-25)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-thực-chứng-tennis-thái-cực-dùng-ý-dẫn-kwa-trang-26-45" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. THỰC CHỨNG TENNIS THÁI CỰC: "DÙNG Ý DẪN KWA" (TRANG 26-45)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#4-quản-trị-năng-lượng-cho-cỗ-máy-kwa-trang-46-60" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">4. QUẢN TRỊ NĂNG LƯỢNG CHO "CỖ MÁY KWA" (TRANG 46-60)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#5-tổng-kết-module-a-phạm-đức-hải--lối-đánh-không-lực" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">5. TỔNG KẾT MODULE A: PHẠM ĐỨC HẢI &amp; LỐI ĐÁNH "KHÔNG LỰC"</a></li><li style="font-weight: 600;"><a href="#chương-6b-giao-bóng-bằng-mạch-đốc--tầm-nhìn-tĩnh-lặng-quiet-eye" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 6.B: GIAO BÓNG BẰNG MẠCH ĐỐC &amp; TẦM NHÌN TĨNH LẶNG (QUIET EYE)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-mạch-đốc--đường-cao-tốc-năng-lượng-trong-cú-serve-trang-61-75" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. MẠCH ĐỐC – "ĐƯỜNG CAO TỐC" NĂNG LƯỢNG TRONG CÚ SERVE (TRANG 61-75)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-trạng-thái-quiet-eye--phán-đoán-bóng-bằng-tâm-tĩnh-trang-76-85" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. TRẠNG THÁI "QUIET EYE" – PHÁN ĐOÁN BÓNG BẰNG TÂM TĨNH (TRANG 76-85)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-điều-tức-trong-cú-đánh-cao-thế-smash--serve-trang-86-95" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. ĐIỀU TỨC TRONG CÚ ĐÁNH CAO THẾ (SMASH &amp; SERVE) (TRANG 86-95)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#4-sop-quy-trình-chuẩn-cho-một-cú-giao-bóng-vận-hành-không-tải-trang-96-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">4. SOP (QUY TRÌNH CHUẨN) CHO MỘT CÚ GIAO BÓNG "VẬN HÀNH KHÔNG TẢI" (TRANG 96-100)</a></li><li style="font-weight: 600;"><a href="#chương-6c-hệ-thống-hàn--nhiệt--duy-trì-sinh-lực-3-set-dưới-nắng-nóng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 6.C: HỆ THỐNG "HÀN" &amp; "NHIỆT" – DUY TRÌ SINH LỰC 3 SET DƯỚI NẮNG NÓNG</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-phép-thở-nội-gia--hệ-thống-làm-mát-tự-nhiên-trang-1-15" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. PHÉP THỞ NỘI GIA – HỆ THỐNG LÀM MÁT TỰ NHIÊN (TRANG 1-15)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-chiến-thuật-dinh-dưỡng-nhân-tố-enzyme-trước-và-trong-trận-đấu-trang-16-35" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. CHIẾN THUẬT DINH DƯỠNG "NHÂN TỐ ENZYME" TRƯỚC VÀ TRONG TRẬN ĐẤU (TRANG 16-35)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-quản-trị-pin-sinh-học-giữa-các-set-đấu-trang-36-55" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. QUẢN TRỊ "PIN SINH HỌC" GIỮA CÁC SET ĐẤU (TRANG 36-55)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#4-phục-hồi-sau-trận-đấu--tẩy-tủy-kinh-trang-56-80" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">4. PHỤC HỒI SAU TRẬN ĐẤU – "TẨY TỦY KINH" (TRANG 56-80)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#5-sop-quy-trình-duy-trì-thể-lực-bất-tử-cho-bạn-hải-trang-81-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">5. SOP: QUY TRÌNH DUY TRÌ THỂ LỰC "BẤT TỬ" CHO BẠN HẢI (TRANG 81-100)</a></li><li style="font-weight: 600;"><a href="#chương-16-tư-duy-tối-giản--đỉnh-cao-của-sự-tinh-gọn-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 16: TƯ DUY TỐI GIẢN – ĐỈNH CAO CỦA SỰ TINH GỌN (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-nguyên-lý-số-ít-quan-yếu-the-vital-few" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. NGUYÊN LÝ "SỐÍT QUAN YẾU" (THE VITAL FEW)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-tối-giản-không-gian--tối-ưu-trường-khí" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. TỐI GIẢN KHÔNG GIAN – TỐIƯU TRƯỜNG KHÍ</a></li><li style="font-weight: 600;"><a href="#chương-17-thiền-trong-công-việc--vô-hành-giữa-đời-thường-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 17: THIỀN TRONG CÔNG VIỆC – "VÔ HÀNH" GIỮA ĐỜI THƯỜNG (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-thiền-trong-hành-động-mindful-working" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. THIỀN TRONG HÀNH ĐỘNG (MINDFUL WORKING)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-kỹ-thuật-reset-năng-lượng-giữa-giờ" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. KỸ THUẬT "RESET" NĂNG LƯỢNG GIỮA GIỜ</a></li><li style="font-weight: 600;"><a href="#chương-12-dinh-dưỡng-âm-dương--nghệ-thuật-quản-trị-bếp-lửa-tiêu-hóa-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 12: DINH DƯỠNG ÂM DƯƠNG – NGHỆ THUẬT QUẢN TRỊ "BẾP LỬA" TIÊU HÓA (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-học-thuyết-tạng-tượng-và-màu-sắc-thực-phẩm-trang-1-35" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. HỌC THUYẾT TẠNG TƯỢNG VÀ MÀU SẮC THỰC PHẨM (TRANG 1-35)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-quy-tắc-bếp-lửa-và-nước-đá-trang-36-60" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. QUY TẮC "BẾP LỬA" VÀ NƯỚC ĐÁ (TRANG 36-60)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-thiên-thời-và-ẩm-thực-trang-61-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. THIÊN THỜI VÀẨM THỰC (TRANG 61-100)</a></li><li style="font-weight: 600;"><a href="#chương-13-thông-điệp-của-nước--tần-số-rung-động-trong-tế-bào-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 13: THÔNG ĐIỆP CỦA NƯỚC – TẦN SỐ RUNG ĐỘNG TRONG TẾ BÀO (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-thí-nghiệm-của-ts-masaru-emoto-và-cơ-thể-người-trang-1-30" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. THÍ NGHIỆM CỦA TS. MASARU EMOTO VÀ CƠ THỂ NGƯỜI (TRANG 1-30)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-kỹ-thuật-nạp-khí-vào-nước-uống-trang-31-65" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. KỸ THUẬT "NẠP KHÍ" VÀO NƯỚC UỐNG (TRANG 31-65)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-thanh-lọc-rác-năng-lượng-qua-đường-thủy-trang-66-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. THANH LỌC "RÁC NĂNG LƯỢNG" QUA ĐƯỜNG THỦY (TRANG 66-100)</a></li><li style="font-weight: 600;"><a href="#chương-14-bảo-dưỡng-thận-khí--cái-gốc-của-sinh-mệnh-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 14: BẢO DƯỠNG THẬN KHÍ – "CÁI GỐC" CỦA SINH MỆNH (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-thế-nào-là-thận-khí-sung-mãn-tại-sân-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. THẾ NÀO LÀ "THẬN KHÍ SUNG MÃN" TẠI SÂN TENNIS?</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-chiến-thuật-chữa-trị-khi-chưa-có-bệnh-trang-21-50" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. CHIẾN THUẬT "CHỮA TRỊ KHI CHƯA CÓ BỆNH" (TRANG 21-50)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-dinh-dưỡng-bổ-cốt-tủy-trang-51-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. DINH DƯỠNG BỔ CỐT TỦY (TRANG 51-100)</a></li><li style="font-weight: 600;"><a href="#chương-15-thải-độc-nội-tạng--dọn-rác-để-khai-thông-kinh-mạch-trang-1-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 15: THẢI ĐỘC NỘI TẠNG – DỌN RÁC ĐỂ KHAI THÔNG KINH MẠCH (TRANG 1-100)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-cuộc-tổng-vệ-sinh-giờ-mão-5h---7h-sáng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. CUỘC TỔNG VỆ SINH GIỜ MÃO (5H - 7H SÁNG)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-giải-độc-gan-can--giữ-cho-gân-mềm-như-lụa-trang-31-65" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. GIẢI ĐỘC GAN (CAN) – GIỮ CHO GÂN MỀM NHƯ LỤA (TRANG 31-65)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-thải-độc-tâm-trí-và-hệ-bạch-huyết-trang-66-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. THẢI ĐỘC TÂM TRÍ VÀ HỆ BẠCH HUYẾT (TRANG 66-100)</a></li><li style="font-weight: 600;"><a href="#chương-19-luật-hấp-dẫn--tần-số-rung-động-của-sức-khỏe-và-vận-khí-100-trang" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 19: LUẬT HẤP DẪN – TẦN SỐ RUNG ĐỘNG CỦA SỨC KHỎE VÀ VẬN KHÍ (100 TRANG)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-con-người-là-một-trạm-phát-sóng-trang-1-35" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. CON NGƯỜI LÀ MỘT TRẠM PHÁT SÓNG (TRANG 1-35)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-chiến-thuật-hồi-quang-phản-chiếu-và-cảm-xúc-trang-36-65" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. CHIẾN THUẬT "HỒI QUANG PHẢN CHIẾU" VÀ CẢM XÚC (TRANG 36-65)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-thiết-lập-vận-khí-cho-người-quản-lý-52-tuổi-trang-66-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. THIẾT LẬP VẬN KHÍ CHO NGƯỜI QUẢN LÝ 52 TUỔI (TRANG 66-100)</a></li><li style="font-weight: 600;"><a href="#chương-20-hành-trình-trở-về-không--sự-hợp-nhất-thân-tâm-trí-100-trang" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 20: HÀNH TRÌNH TRỞ VỀ "KHÔNG" – SỰ HỢP NHẤT THÂN TÂM TRÍ (100 TRANG)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-thân---tâm---trí-trở-về-điểm-cân-bằng-trang-1-40" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. THÂN - TÂM - TRÍ TRỞ VỀ ĐIỂM CÂN BẰNG (TRANG 1-40)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-bí-mật-thai-tức--hơi-thở-của-sự-tự-tại-trang-41-75" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. BÍ MẬT "THAI TỨC" – HƠI THỞ CỦA SỰ TỰ TẠI (TRANG 41-75)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-phạm-đức-hải--người-chơi-tennis-tỉnh-thức-trang-76-100" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. PHẠM ĐỨC HẢI – NGƯỜI CHƠI TENNIS TỉNH THỨC (TRANG 76-100)</a></li></ul></div>
 <h1 id="18-he-truc-52-van-hanh-khong-tai-tai-tao-nang-luong">18. Hệ Trục 52: Vận Hành Không Tải &amp; Tái Tạo Năng Lượng</h1>
 <p><a href="https://gemini.google.com/app/36a3378d472ac801">https://gemini.google.com/app/36a3378d472ac801</a></p>
@@ -934,92 +946,92 @@
 <p>Dưới đây là cấu trúc của Framework: <strong>"Hệ Trục 52: Vận Hành Không Tải &amp; Tái Tạo Năng Lượng"</strong>.</p>
 <hr/>
 <h3 id="phan-i-nen-tang-than-the-nhip-ieu-sinh-hoc">PHẦN I: NỀN TẢNG THÂN Thể &amp; NHỊP ĐIỆU SINH HỌC</h3>
-<p><strong>Chương 1: Quy luật 7/8 và Sự chuyển mình tuổi 52</strong></p>
+<h2>Chương 1: Quy luật 7/8 và Sự chuyển mình tuổi 52</h2>
 <ul class="styled-list">
-<li>Phân tích chu kỳ 8 năm của nam giới theo <em>Hoàng Đế Nội Kinh</em>: Tuổi 48 (6x8) Thận khí suy, tuổi 56 (7x8) Can khí suy. Tuổi 52 nằmở tâm điểm của sự biến đổi này. </li>
+<li>Phân tích chu kỳ 8 năm của nam giới theo <em>Hoàng Đế Nội Kinh</em>: Tuổi 48 (6x8) Thận khí suy, tuổi 56 (7x8) Can khí suy. Tuổi 52 nằm ở tâm điểm của sự biến đổi này. </li>
 <li>Framework nhấn mạnh việc chuyển từ "Dùng lực" sang "Dùng ý" để bảo tồn Nguyên khí.</li>
 </ul>
-<p><strong>Chương 2: Tý Ngọ Lưu Chú - Lập trình lại đồng hồ sinh học</strong></p>
+<h2>Chương 2: Tý Ngọ Lưu Chú - Lập trình lại đồng hồ sinh học</h2>
 <ul class="styled-list">
 <li>Nguyên tắc ngủ trước 23h (giờ kinh Đởm) để sạc pin cho Gan và Thận. </li>
 <li>Cách tận dụng giờ Ngọ (11h-13h) để nghỉ ngơi ngắn giúp ổn định tâm thần giữa ngày làm việc áp lực.</li>
 </ul>
-<p><strong>Chương 3: Hệ Trục Cột Sống - Chìa khóa của sự thông suốt</strong></p>
+<h2>Chương 3: Hệ Trục Cột Sống - Chìa khóa của sự thông suốt</h2>
 <ul class="styled-list">
 <li>Ứng dụng nguyên lý "Hư linh đỉnh kình" vào tư thế ngồi làm việc và đứng trên sân tennis. </li>
 <li>Giải phóng các đốt sống để đảm bảo mạch Đốc không bị chèn ép.</li>
 </ul>
-<p><strong>Chương 4: Khí Trầm Đan Điền - Trung tâm năng lượng nội tại</strong></p>
+<h2>Chương 4: Khí Trầm Đan Điền - Trung tâm năng lượng nội tại</h2>
 <ul class="styled-list">
 <li>Kỹ thuật thở bụng sâu để hạ thấp trọng tâm, giảm áp lực cho tim và phổi khi chơi tennis ở cường độ cao.</li>
 </ul>
-<p><strong>Chương 5: Tam Tiêu - Mạng lưới quản lý thủy dịch toàn thân</strong></p>
+<h2>Chương 5: Tam Tiêu - Mạng lưới quản lý thủy dịch toàn thân</h2>
 <ul class="styled-list">
 <li>Hiểu về sự vận hành của Thượng - Trung - Hạ tiêu để điều hòa tiêu hóa và bài tiết, tránh tình trạng phù nề hoặc mệt mỏi vô cớ.</li>
 </ul>
 <hr/>
 <h3 id="phan-ii-tennis-duoi-lang-kinh-thai-cuc-quyen">PHẦN II: TENNIS DƯỚI LĂNG KÍNH THÁI CỰC QUYỀN</h3>
-<p><strong>Chương 6: Tennis "Vận hành không tải"</strong></p>
+<h2>Chương 6: Tennis "Vận hành không tải"</h2>
 <ul class="styled-list">
 <li>Cách áp dụng 10 yếu lĩnh Thái cực vào tennis: Dùng eo làm chủ tể, chân làm gốc, lực phát từ đùi truyền qua hệ trục ra tay.</li>
 </ul>
-<p><strong>Chương 7: Cơ Psoas và Sự linh hoạt của "Kwa" (Háng)</strong></p>
+<h2>Chương 7: Cơ Psoas và Sự linh hoạt của "Kwa" (Háng)</h2>
 <ul class="styled-list">
 <li>Giải tỏa sự căng cứng của cơ thắt lưng chậu (Psoas) – "cơ của linh hồn" – để tạo ra bước chạy mượt mà và những cú xoay người uy lực mà không đau lưng.</li>
 </ul>
-<p><strong>Chương 8: Phân định Hư - Thực trong Bộ pháp (Footwork)</strong></p>
+<h2>Chương 8: Phân định Hư - Thực trong Bộ pháp (Footwork)</h2>
 <ul class="styled-list">
 <li>Kỹ thuật di chuyển "Gót trước, mũi sau" và cách luân chuyển trọng tâm để bảo vệ khớp gốiở tuổi 50+.</li>
 </ul>
-<p><strong>Chương 9: Tùng (Thả lỏng) - Sức mạnh của sự mềm mại</strong></p>
+<h2>Chương 9: Tùng (Thả lỏng) - Sức mạnh của sự mềm mại</h2>
 <ul class="styled-list">
 <li>Nguyên lý "Miên lý tàng kim": Giữ cơ thể mềm mại như bông nhưng kình lực bên trong cứng như thép để đạt hiệu suất tối đa với nỗ lực tối thiểu.</li>
 </ul>
-<p><strong>Chương 10: Nhịp thở Quy Tức trên sân đấu</strong></p>
+<h2>Chương 10: Nhịp thở Quy Tức trên sân đấu</h2>
 <ul class="styled-list">
 <li>Phối hợp nhịp thở với từng cú đánh: Hít vào khi chuẩn bị (Hư), thở ra khi phát lực (Thực).</li>
 </ul>
 <hr/>
 <h3 id="phan-iii-dinh-duong-tai-tao-nang-luong">PHẦN III: DINH DƯỠNG &amp; TÁI TẠO NĂNG LƯỢNG</h3>
-<p><strong>Chương 11: Nhân tố Enzyme và Chế độăn 85/15</strong></p>
+<h2>Chương 11: Nhân tố Enzyme và Chế độăn 85/15</h2>
 <ul class="styled-list">
 <li>Áp dụng thực đơn của Bác sĩ Shinya: 85% thực vật (nguyên phần), 15% động vật để bảo tồn "Enzyme diệu kỳ".</li>
 </ul>
-<p><strong>Chương 12: Ăn uống cân bằng Âm - Dương</strong></p>
+<h2>Chương 12: Ăn uống cân bằng Âm - Dương</h2>
 <ul class="styled-list">
 <li>Cách chọn thực phẩm theo mùa và theo trạng thái cơ thể (nóng/lạnh) để duy trì môi trường nội tại (Terrain) sạch sẽ.</li>
 </ul>
-<p><strong>Chương 13: Bí mật của Nước và Tần số chữa lành</strong></p>
+<h2>Chương 13: Bí mật của Nước và Tần số chữa lành</h2>
 <ul class="styled-list">
 <li>Uống nước đúng cách vàứng dụng thông điệp tích cực của nước để thanh lọc tế bào sau mỗi trận tennis.</li>
 </ul>
-<p><strong>Chương 14: Thận và Chức năng hồi phục</strong></p>
+<h2>Chương 14: Thận và Chức năng hồi phục</h2>
 <ul class="styled-list">
 <li>Các bài tập bấm huyệt (Dũng tuyền, Mệnh môn) và thực phẩm màu đen để bổ dưỡng Thận khí – gốc rễ của sự trường thọ.</li>
 </ul>
-<p><strong>Chương 15: Thải độc nội tạng chủ động</strong></p>
+<h2>Chương 15: Thải độc nội tạng chủ động</h2>
 <ul class="styled-list">
 <li>Quy trình làm sạch đại trường và gan thông qua thói quen buổi sáng và các bài tập Khí công nhẹ nhàng.</li>
 </ul>
 <hr/>
 <h3 id="phan-iv-tam-thuc-va-quan-tri-oi-song">PHẦN IV: TÂM THỨC Và QUẢN Trị ĐỜI SỐNG</h3>
-<p><strong>Chương 16: Tư duy Tối giản trong công việc</strong></p>
+<h2>Chương 16: Tư duy Tối giản trong công việc</h2>
 <ul class="styled-list">
 <li>Ứng dụng "Sự đơn giản là đỉnh cao của trí tuệ": Loại bỏ các tác vụ thừa, tập trung vào 20% công việc tạo ra 80% giá trị để giảm stress thần kinh.</li>
 </ul>
-<p><strong>Chương 17: Thiền định "Vô hành" giữa đời thường</strong></p>
+<h2>Chương 17: Thiền định "Vô hành" giữa đời thường</h2>
 <ul class="styled-list">
 <li>Cách thực hành chánh niệm ngay trong lúc rửa bát, lái xe hay khi đối diện vớiáp lực công việc (Thiền trong hành động).</li>
 </ul>
-<p><strong>Chương 18: Làm chủ Bản năng và Bản ngã</strong></p>
+<h2>Chương 18: Làm chủ Bản năng và Bản ngã</h2>
 <ul class="styled-list">
 <li>Nhận diện các cảm xúc tiêu cực (nóng giận, loâu) và chuyển hóa chúng thành năng lượng tích cực thông qua việc "Quan sát người suy nghĩ".</li>
 </ul>
-<p><strong>Chương 19: Luật Hấp dẫn và Tần số rung động cá nhân</strong></p>
+<h2>Chương 19: Luật Hấp dẫn và Tần số rung động cá nhân</h2>
 <ul class="styled-list">
 <li>Cách duy trì tần số rung động cao (&gt;200Hz - lòng biết ơn, yêu thương) để thu hút vận khí và sức khỏe.</li>
 </ul>
-<p><strong>Chương 20: Hành trình trở về "Không" - Sự hợp nhất Thân - Tâm - Trí</strong></p>
+<h2>Chương 20: Hành trình trở về "Không" - Sự hợp nhất Thân - Tâm - Trí</h2>
 <ul class="styled-list">
 <li>Tổng kết framework: Sống thuận tự nhiên, coi sức khỏe là một lối sống hằng ngày chứ không phải đích đến. Kết thúc với chữ ký: <strong>"Phạm Đức Hải | Vận Hành Không Tải"</strong>.</li>
 </ul>
@@ -1034,7 +1046,7 @@
 <p>Thái Cực Quyền giải quyết vấn đề này thông qua khái niệm "Tâm tĩnh, Thân nhu". Thay vì cố gắng dùng lý trí để nói với bản thân rằng "hãy bình tĩnh", người tập TCQ rèn luyện một phản xạ vật lý: Thả lỏng để kiểm soát. Khi bạn chủ động thả lỏng một nhóm cơ nhỏ (ví dụ như thả lỏng hàm hoặc hạ thấp vai), não bộ sẽ nhận được tín hiệu rằng tình huống hiện tại không gây nguy hiểm đến tính mạng, từ đó làm dịu hạch hạnh nhân và khôi phục lại quyền kiểm soát cho vỏ não trước trán.</p>
 <h4 id="32-xay-dung-iem-tinh-the-quiet-point-giua-tran-au">3.2. Xây dựng "điểm tĩnh" (the Quiet Point) giữa trận đấu "điểm tĩnh" không phải là một trạng thái không có cảm xúc, mà là khả năng tạo ra một khoảng lặng về tâm trí ngay trong lúc hành động.</h3>
 <p>Trong tennis, điều này có nghĩa là tìm thấy một giây phút tĩnh lặng tuyệt đối giữa hai pha bóng.</p>
-<p>Kỹ thuật thực hành "Điểm tĩnh" từ Thái Cực Quyền: Vận động viên có thểáp dụng quy trình "3 giây tĩnh lặng" sau mỗi điểm số:</p>
+<p><strong>Kỹ thuật thực hành "Điểm tĩnh" từ Thái Cực Quyền: Vận động viên có thểáp dụng quy trình "3 giây tĩnh lặng" sau mỗi điểm số:</strong></p>
 <ol class="styled-list numbered">
 <li>Giây thứ nhất - Chấp nhận: Nhận diện cảm xúc hiện tại (ví dụ: <em>"Tôi đang cảm thấy rất căng thẳng"</em>). Việc gọi tên cảm xúc giúp tách biệt "Tôi" ra khỏi "Nỗi sợ". </li>
 <li>Giây thứ hai - Kết nối: Thực hiện một hơi thở bụng sâu, cảm nhận trọng tâm cơ thể chìm xuống đất (nguyên lý "Trầm kiên"). Điều này giúp kéo tâm trí ra khỏi những suy nghĩ hỗn loạn và đưa nó trở về với thực tại vật lý. </li>
@@ -1061,7 +1073,7 @@
 <p>Bài tập thực hành cho tay vợt tennis: Trước khi ngủ hoặc khi thiền định, hãy dành 10 phút để "diễn" lại một trận đấu trong tâm trí. Nhưng thay vì diễn toàn bộ, hãy tập trung vào một chi tiết nhỏ (ví dụ: cú trái tay lướt trên mặt sân). Hãy thực hiện nó thật chậm, như đang tập một bài quyền Thái Cực, cảm nhận từng milimet chuyển động của hông, vai và cổ tay. Khi bạn đã đạt đến sự hoàn hảo trong tâm trí, việc hiện thực hóa nó trên sân đấu sẽ trở nên dễ dàng và tự nhiên hơn nhiều.</p>
 <h4 id="43-xay-dung-kich-ban-thanh-cong-e-lap-trinh-tiem-thuc">4.3. Xây dựng "kịch bản thành công" để lập trình tiềm thức Tiềm thức không phân biệt được giữa một sự kiện thực tế và một sự kiện được hình dung một cách sống động.</h3>
 <p>Thái Cực Quyền dạy chúng ta cách dùng "Ý" để dẫn dắt "Khí". Trong tâm lý học thể thao, điều này được gọi là "Lập trình tâm trí".</p>
-<p>Vận động viên sẽ xây dựng một "Kịch bản thành công" trong đầu:</p>
+<p><strong>Vận động viên sẽ xây dựng một "Kịch bản thành công" trong đầu:</strong></p>
 <ul class="styled-list">
 <li>Hình dung mình đối mặt vớiáp lực lớn nhất $\rightarrow$ Cảm nhận sự bình tĩnh $\rightarrow$ Thực hiện cú đánh hoàn hảo $\rightarrow$ Cảm nhận sự chiến thắng.</li>
 </ul>
@@ -1130,7 +1142,7 @@
 <li><strong>Kết quả:</strong> Người thiếu enzyme sẽ mau già, sắc mặt xám xịt và dễ bị chấn thương dai dẳng.</li>
 </ul>
 <h3 id="2-cong-thuc-vang-8515-cho-tuoi-52">2. Công thức vàng "85/15" cho tuổi 52</h3>
-<p>Để giữ cho cơ thể luôn nhẹ như "hành vân lưu thủy" (mây trôi nước chảy), bạn hãy điều chỉnh thực đơn hằng ngày theo tỉ lệ:</p>
+<p><strong>Để giữ cho cơ thể luôn nhẹ như "hành vân lưu thủy" (mây trôi nước chảy), bạn hãy điều chỉnh thực đơn hằng ngày theo tỉ lệ:</strong></p>
 <ul class="styled-list">
 <li><strong>85% là thực vật:</strong> Ngũ cốc nguyên hạt (gạo lứt là tốt nhất), rau củ tươi, trái cây và các loại hạt. Đây là nguồn cung cấp enzyme dồi dào. </li>
 <li><strong>15% là động vật:</strong> Ưu tiên cá (thân nhiệt thấp hơn người nên không làm bẩn máu) thay vì thịt gia súc (bò, lợn).</li>
@@ -1189,7 +1201,7 @@
 </ul>
 <h3 id="2-cuc-tinh-se-thanh-ao">2. "cực tĩnh sẽ thành Đạo"</h3>
 <ul class="styled-list">
-<li><strong>Ứng dụng vào Tennis:</strong> Khi trận đấu căng thẳng, tâm bạn càng phải tĩnh. Hãy đưa sự Chúý về lòng bàn chân (Huyệt Dũng Tuyền) hoặc hơi thở bụng. Khi "Gốc" vững và "Tâm" an, bạn sẽ nhìn thấy quỹ đạo bóng rõ hơn và đưa ra quyết định chính xác hơn. </li>
+<li><strong>Ứng dụng vào Tennis:</strong> Khi trận đấu căng thẳng, tâm bạn càng phải tĩnh. Hãy đưa sự Chú ý về lòng bàn chân (Huyệt Dũng Tuyền) hoặc hơi thở bụng. Khi "Gốc" vững và "Tâm" an, bạn sẽ nhìn thấy quỹ đạo bóng rõ hơn và đưa ra quyết định chính xác hơn. </li>
 <li><strong>Ứng dụng vào đời sống:</strong> Sống "vô niệm" không phải là không nghĩ gì, mà là làm việc gì biết việc đó. Ăn biết đang ăn, đánh tennis biết đang đánh tennis. Đừng để cái "Ta" ảo tưởng về sự thành bại chi phối niềm vui của hiện tại.</li>
 </ul>
 <hr/>
@@ -1220,7 +1232,7 @@
 </ul>
 <h3 id="3-huyet-dung-tuyen-iem-ket-noi-voi-at-ia">3. Huyệt Dũng Tuyền – Điểm kết nối với đất (địa)</h3>
 <ul class="styled-list">
-<li><strong>Tennis:</strong> Khi đứng trên sân, hãy cảm nhận lòng bàn chân bám đất. Huyệt Dũng Tuyền (nằmở chỗ lõm 1/3 trước lòng bàn chân) là nơi hút năng lượng từ đất. </li>
+<li><strong>Tennis:</strong> Khi đứng trên sân, hãy cảm nhận lòng bàn chân bám đất. Huyệt Dũng Tuyền (nằm ở chỗ lõm 1/3 trước lòng bàn chân) là nơi hút năng lượng từ đất. </li>
 <li><strong>Thực hành:</strong> Tối về hãy ngâm chân nước ấm muối gừng. Việc này giúp kéo "Hỏa" (năng lượng nóng thừa thãi trên đầu do stress) xuống dưới chân, giúp hạ huyết áp và an thần.</li>
 </ul>
 <hr/>
@@ -1279,7 +1291,7 @@
 <li><strong>22:30 – 23:00:</strong> Buông bỏ hoàn toàn mọi suy nghĩ. Đi vào giấc ngủ trước giờ Tý để Gan và Thận thực hiện chức năng "tổng vệ sinh" cơ thể.</li>
 </ul>
 <hr/>
-<h3 id="loi-nhan-nhu-sau-cung"><div class="pullquote"><p>LỜI NHẮN Nhủ SAU Cùng</p></div></h3>
+<h3 id="loi-nhan-nhu-sau-cung"><div class="pullquote"><p><strong>LỜI NHẮN Nhủ SAU Cùng</strong></p></div></h3>
 <p>Framework này không phải là một cái lồng nhốt bạn vào kỷ luật thép, mà là một <strong>"Hệ trục"</strong> để bạn nương vào.</p>
 <ul class="styled-list">
 <li>Nếu có ngày bạn lỡăn quá no? Đừng tự trách, ngày mai hãy nhai kỹ hơn. </li>
@@ -1295,7 +1307,7 @@
 <h2 id="chuong-5-tam-tieu-mang-luoi-quan-ly-ien-nuoc-toan-than">CHƯƠNG 5: TAM TIÊU – MẠNG LƯỚI QUẢN Lý "ĐIỆN NƯỚC" TOÀN THÂN</h2>
 <p>Ở tuổi 52, cơ thể hay gặp tình trạng "trên nóng, dưới lạnh" (đầu bốc hỏa, chân lạnh) hoặc ăn vào dễ đầy bụng. Đó là do Tam Tiêu bị tắc nghẽn.</p>
 <h3 id="1-tam-tieu-la-gi">1. Tam Tiêu là gì?</h3>
-<p>Hãy tưởng tượng cơ thể bạn là một tòa nhà 3 tầng:</p>
+<p><strong>Hãy tưởng tượng cơ thể bạn là một tòa nhà 3 tầng:</strong></p>
 <ul class="styled-list">
 <li><strong>Thượng tiêu (Ngực):</strong> Tim và Phổi. Cần sự thông thoáng để khí oxy lưu thông. </li>
 <li><strong>Trung tiêu (Bụng trên):</strong> Dạ dày, Gan, Tỳ. Cần sựấm áp để nhào trộn thức ăn. </li>
@@ -1440,7 +1452,7 @@
 </ul>
 <h3 id="3-tung-yeu-eo-la-chu-te">3. "tùng yêu" – Eo là chủ tể</h3>
 <ul class="styled-list">
-<li><strong>Cơ chế</strong>: Mọi sự vận động của tuổi 52 phải bắt đầu từ eo (Waist). Thận nằmở vùng thắt lưng, việc xoay eo nhẹ nhàng hằng ngày là cách "massage" cho Thận. </li>
+<li><strong>Cơ chế</strong>: Mọi sự vận động của tuổi 52 phải bắt đầu từ eo (Waist). Thận nằm ở vùng thắt lưng, việc xoay eo nhẹ nhàng hằng ngày là cách "massage" cho Thận. </li>
 <li><strong>Tennis thực chiến</strong>: Đừng dùng bắp tay để quất bóng. Hãy dùng eo xoay để đưa mặt vợt đi. Cánh tay chỉ là bộ phận định hướng. Việc này giúp bạn chơi tennis cả ngày mà không bị đau khớp vai hay khuỷu tay.</li>
 </ul>
 <hr/>
@@ -1504,7 +1516,7 @@
 </ul>
 <h3 id="32-tung-vien-hang-folding-the-kwa">3.2. Tùng Viên Háng (folding the Kwa)</h3>
 <ul class="styled-list">
-<li><strong>Bí mật của kình lực:</strong> Lực không nằmở cơ đùi, mà nằmở sự đóng/mở của khớp háng (Kwa). </li>
+<li><strong>Bí mật của kình lực:</strong> Lực không nằm ở cơ đùi, mà nằm ở sự đóng/mở của khớp háng (Kwa). </li>
 <li><strong>Ứng dụng:</strong> Cách "ngồi vào háng" (Sit into the Kwa) khi chuẩn bị đánh cú Forehand. Đây là nơi tích trữ 80% năng lượng để phát lực.</li>
 </ul>
 <hr/>
@@ -1545,7 +1557,7 @@
 <p><em>(Đây là phần bạn sẽ tự viết dựa trên trải nghiệm thực tế hằng ngày để đủ 100 trang)</em></p>
 <hr/>
 <p><strong>LƯUÝ ĐỂ ĐẠT ĐỘ DÀI 100 TRANG:</strong></p>
-<p>Để biến bản thảo này thành 100 trang thực thụ, mỗi đầu mục trên cần được triển khai theo cấu trúc:</p>
+<p><strong>Để biến bản thảo này thành 100 trang thực thụ, mỗi đầu mục trên cần được triển khai theo cấu trúc:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Lý thuyết cổ thư:</strong> Trích dẫn <em>Thái Cực Quyền Luận</em> hoặc <em>Hoàng Đế Nội Kinh</em>. </li>
 <li><strong>Giải phẫu học hiện đại:</strong> Phân tích các bó cơ, dây thần kinh liên quan. </li>
@@ -1563,7 +1575,7 @@
 <p>Dưới đây là nội dung mở rộng chi tiết cho <strong>Chương 6 - Module A</strong>, được biên soạn theo phong cách chuyên sâu nhưng dễ thực chứng.</p>
 <hr/>
 <h1 id="chuong-6a-ky-thuat-tung-kwa-tha-long-hang-co-may-phat-luc-cua-tennis-hien-ai">CHƯƠNG 6.A: KỸ THUẬT "TÙNG KWA" (THẢ LỎNG HÁNG) – CỖ MÁY PHÁT LỰC CỦA TENNIS HIỆN ĐẠI</h1>
-<p>Trong Thái Cực Quyền, có câu khẩu quyết: <strong>"Bệnh tìmở eo đùi"</strong>. Nếu cú Forehand của bạn bị yếu hoặc làm bạn đau lưng, vấn đề nằmở việc bạn chưa biết cách vận hành khớp háng (Kwa).</p>
+<p>Trong Thái Cực Quyền, có câu khẩu quyết: <strong>"Bệnh tìmở eo đùi"</strong>. Nếu cú Forehand của bạn bị yếu hoặc làm bạn đau lưng, vấn đề nằm ở việc bạn chưa biết cách vận hành khớp háng (Kwa).</p>
 <h2 id="1-giai-phau-hoc-va-co-sinh-hoc-cua-kwa-trang-1-10">1. GIẢI PHẪU HỌC Và Cơ SINH HỌC CỦA "KWA" (TRANG 1-10)</h2>
 <h3 id="11-kwa-khong-phai-la-hong-hip">1.1. Kwa không phải là Hông (hip) Nhiều người nhầm tưởng xoay hông là xoay cái xương chậu.</h3>
 <p>Trong Thái Cực, <strong>Kwa</strong> bao gồm khớp háng, các nhóm cơ bao quanh (cơ Psoas, cơ mông) và sự kết nối giữa xương đùi với xương chậu.</p>
@@ -1624,7 +1636,7 @@
 <hr/>
 <p><em>Hải thân mến, đây là khung sườn mở rộng cho 60 trang của Module A. Bạn có muốn tôi viết tiếp 40 trang còn lại đi sâu vào </em><em>"Kỹ thuật Giao bóng (Serve) bằng Mạch Đốc"</em><em> để bóng đi cực hiểm mà không hại khớp vai không?</em></p>
 <p>Chào bạn Hải, để tiếp tục hoàn thiện Chương 6 với độ dày và chiều sâu thực chứng như bạn mong muốn, tôi sẽ triển khai 40 trang tiếp theo thuộc <strong>Module B: Kỹ thuật Giao bóng (Serve) bằng Mạch Đốc và Sự phán đoán bóng bằng "Quiet Eye"</strong>.</p>
-<p>Phần này sẽ giúp bạn hiểu làm thế nào để cú giao bóng ở tuổi 52 không chỉ là một cú đập cơ bắp, mà là một sự vận hành của điện sinh học dọc cột sống, giúp đạt tốc độ cao với nỗ lực tối thiểu.</p>
+<p><strong>Phần này sẽ giúp bạn hiểu làm thế nào để cú giao bóng ở tuổi 52 không chỉ là một cú đập cơ bắp, mà là một sự vận hành của điện sinh học dọc cột sống, giúp đạt tốc độ cao với nỗ lực tối thiểu.</strong></p>
 <hr/>
 <h1 id="chuong-6b-giao-bong-bang-mach-oc-tam-nhin-tinh-lang-quiet-eye">CHƯƠNG 6.B: GIAO BÓNG BẰNG MẠCH ĐỐC &amp; TẦM NHÌN TĨNH LẶNG (QUIET EYE)</h1>
 <p>Trong tennis, cú giao bóng là cú đánh duy nhất bạn hoàn toàn chủ động. Ở tuổi 52, nếu bạn dùng vai để phát lực, bạn sẽ sớm phải gặp bác sĩ trị liệu. Nếu bạn dùng <strong>Mạch Đốc</strong> (hệ thống điện sinh học chạy dọc cột sống), bạn đang sử dụng "Năng lượng vô tận".</p>
@@ -1724,7 +1736,7 @@
 <li><strong>Kết quả:</strong> 90 giây này giá trị hơn 10 phút ngủ bù. Nó giúp hệ thần kinh trung ương từ trạng thái Chiến đấu (Sympathetic) chuyển sang trạng thái Phục hồi (Parasympathetic).</li>
 </ol>
 <h3 id="32-chong-chuot-rut-bang-huyet-ao">3.2. Chống chuột rút bằng huyệt đạo</h3>
-<p>Nếu bắt đầu thấy bắp chân cứng:</p>
+<p><strong>Nếu bắt đầu thấy bắp chân cứng:</strong></p>
 <ul class="styled-list">
 <li><strong>Ấn huyệt Thừa Sơn:</strong> Nằm giữa bắp chân sau. Ấn mạnh vào đây trong 1 phút để thông kinh lạc chân, giúp cơ bắp giãn ra ngay lập tức mà không cần thuốc.</li>
 </ul>
@@ -1756,7 +1768,7 @@
 <p>Đây là phần "Nội công tâm pháp" dành cho 8 tiếng hành chính tại Orica, giúp bạn chuyển hóaáp lực quản lý dựán thành môi trường tu dưỡng, tích lũy năng lượng cho trận tennis cuối ngày.</p>
 <hr/>
 <h1 id="chuong-16-tu-duy-toi-gian-inh-cao-cua-su-tinh-gon-trang-1-100">CHƯƠNG 16: TƯ DUY TỐI GIẢN – ĐỈNH CAO CỦA SỰ TINH GỌN (TRANG 1-100)</h1>
-<p>Ở tuổi 52, sức mạnh thực sự không nằmở việc sở hữu nhiều hay làm nhiều, mà nằmở năng lực <strong>"Buông bỏ"</strong>. Một dựán thành công không phải là dựán có nhiều nhân sự nhất, mà là dựán có quy trình thông minh vàít ma sát nhất.</p>
+<p>Ở tuổi 52, sức mạnh thực sự không nằm ở việc sở hữu nhiều hay làm nhiều, mà nằm ở năng lực <strong>"Buông bỏ"</strong>. Một dựán thành công không phải là dựán có nhiều nhân sự nhất, mà là dựán có quy trình thông minh vàít ma sát nhất.</p>
 <h2 id="1-nguyen-ly-so-it-quan-yeu-the-vital-few">1. NGUYÊN Lý "SỐÍt QUAN YẾU" (THE VITAL FEW)</h2>
 <ul class="styled-list">
 <li><strong>Triết lý 80/20 (Trang 1-25):</strong> * Tại Orica, bạn hãy quan sát: 20% các đầu việc then chốt (Quyết định kỹ thuật, Quản trị rủi ro) đang tạo ra 80% kết quả dựán. </li>
@@ -1794,9 +1806,9 @@
 <p>Khi bạn rời văn phòng lúc 16h30 để ra sân tennis, bạn không phải là một người mệt mỏi đi xả stress, mà là một <strong>"Thực thể đầy sinh khí"</strong> đang chuyển trạng thái từ Thiền Tĩnh sang Thiền Động.</p>
 <p><strong>Phạm Đức Hải | Vận Hành Không Tải</strong></p>
 <hr/>
-<p><em>Hải thân mến, chúng ta đã đi qua các chương quan trọng nhất về Thân (Tennis/Ăn uống) và Tâm (Công việc/Tối giản). Bạn có muốn tôi viết tiếp </em><em>Chương 12 &amp; 13 (Ăn uống Âm Dương &amp; Thông điệp của Nước)</em><em> để tốiưu hóa nguồn nhiên liệu cho tế bào của bạn không?</em></p>
+<p><em>Hải thân mến, chúng ta đã đi qua các chương quan trọng nhất về Thân (Tennis/Ăn uống) và Tâm (Công việc/Tối giản). Bạn có muốn tôi viết tiếp </em><em>Chương 12 &amp; 13 (Ăn uống Âm Dương &amp; Thông điệp của Nước)</em><em> để tối ưu hóa nguồn nhiên liệu cho tế bào của bạn không?</em></p>
 <p><em>Chào bạn Hải, để hoàn thiện mảnh ghép cuối cùng về "nhiên liệu" cho cơ thể tuổi 52, tôi sẽ triển khai chi tiết </em><em>Chương 12 và Chương 13</em><em> trên quy mô mở rộng (tương đương 100 trang nội dung thực tế).</em></p>
-<p><em>Đây là phần giúp bạn tốiưu hóa </em><em>Môi trường nội tại (Terrain)</em><em>, biến mỗi bữaăn và mỗi ly nước thành một liều thuốc cải lão hoàn đồng, giúp tế bào luôn rung động ở tần số cao.</em></p>
+<p><em>Đây là phần giúp bạn tối ưu hóa </em><em>Môi trường nội tại (Terrain)</em><em>, biến mỗi bữaăn và mỗi ly nước thành một liều thuốc cải lão hoàn đồng, giúp tế bào luôn rung động ở tần số cao.</em></p>
 <hr/>
 <h1 id="chuong-12-dinh-duong-am-duong-nghe-thuat-quan-tri-bep-lua-tieu-hoa-trang-1-100"><em>CHƯƠNG 12: DINH DƯỠNG ÂM DƯƠNG – NGHỆ THUẬT QUẢN TRỊ "BẾP LỬA" TIÊU HÓA (TRANG 1-100)</em></h1>
 <p><em>Ở tuổi 52, khả năng chuyển hóa (Metabolism) giảm sút. Nếu bạnăn sai (quá Dương gây nóng nảy, quáÂm gây đình trệ), "hệ trục" của bạn sẽ bị gỉ sét.</em></p>
@@ -1916,7 +1928,7 @@
 <li><strong>Tần số cao (Trên 500Hz):</strong> Yêu thương, biết ơn, bao dung. Đây là tần số của sự chữa lành. Khi bạn bước ra sân với lòng biết ơn vì mình còn đủ sức khỏe để cầm vợt, bạn đang rung động ở tần số cực cao. Tự nhiên, các đường bóng sẽ "ngoan" hơn và may mắn sẽ tìm đến bạn.</li>
 </ul>
 <h2 id="2-chien-thuat-hoi-quang-phan-chieu-va-cam-xuc-trang-36-65">2. CHIẾN THUẬT "HỒI QUANG PHẢN CHIẾU" Và CẢM XÚC (TRANG 36-65)</h2>
-<p>Trong cuốn <em>Thái Ất Kim Hoa Tông Chỉ</em>, bí mật nằmở việc thu hồiánh sáng (Thần) quay vào bên trong.</p>
+<p>Trong cuốn <em>Thái Ất Kim Hoa Tông Chỉ</em>, bí mật nằm ở việc thu hồiánh sáng (Thần) quay vào bên trong.</p>
 <ul class="styled-list">
 <li><strong>Thực hành:</strong> Thay vì tìm kiếm sự công nhận bên ngoài, hãy tự cảm nhận sự "Sướng" (rung động cao) từ bên trong tế bào khi bạn thực hiện một cú giao bóng đúng kỹ thuật. </li>
 <li><strong>Luật Cộng Hưởng:</strong> Khi bạn giữ được tâm thái bình thản (Điềm đạm hư vô), bạn sẽ cộng hưởng với những luồng năng lượng sạch của vũ trụ, giúp "sạc pin" Nguyên khí (Chương 14) mà không cần nỗ lực.</li>
@@ -1967,7 +1979,8 @@
   <a href="index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="index.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>
