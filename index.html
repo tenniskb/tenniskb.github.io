@@ -1,200 +1,217 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Tennis Knowledge Base — Bilingual tennis resource for players and coaches">
+<meta name="author" content="Henry Pham Duc">
+<link rel="canonical" href="https://tenniskb.github.io/">
+<link rel="icon" href="assets/images/favicon.png">
 <title>Tennis Knowledge Base</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900&display=swap" rel="stylesheet">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-:root {
-    --ink: #0d0d0d;
-    --paper: #fafaf7;
-    --accent: #c8401a;
-    --green: #1a6b3c;
-    --gold: #c4952a;
-    --muted: #6b7280;
-    --divider: #e5e7eb;
-}
-body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.75;
-}
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 24px;
-}
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--ink);
-}
-h1 { font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 16px; }
-h2 { font-size: 1.5rem; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
-h3 { font-size: 1.2rem; margin: 24px 0 8px; }
-p { margin-bottom: 16px; }
-.lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 32px; }
-hr { border: none; border-top: 1px solid var(--divider); margin: 32px 0; }
-.lang-cards {
-    display: flex;
-    gap: 24px;
-    margin: 48px 0;
-    flex-wrap: wrap;
-}
-.lang-card {
-    flex: 1;
-    min-width: 280px;
-    padding: 32px;
-    background: white;
-    border: 1.5px solid var(--divider);
-    border-radius: 4px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.2s, transform 0.2s;
-}
-.lang-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-}
-.lang-card .flag { font-size: 32px; margin-bottom: 12px; display: block; }
-.lang-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
-.lang-card p { font-size: 14px; color: var(--muted); margin: 0; }
-.site-structure { margin-top: 48px; }
-.site-structure ul { list-style: none; padding: 0; }
-.site-structure li {
-    padding: 12px 16px;
-    margin-bottom: 8px;
-    background: white;
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-}
-.site-structure strong { color: var(--ink); }
-.site-structure a { color: var(--accent); text-decoration: none; }
-.site-structure a:hover { text-decoration: underline; }
-.about { margin-top: 48px; padding-top: 24px; border-top: 2px solid var(--ink); }
-footer {
-    margin-top: 80px;
-    padding: 32px;
-    background: var(--ink);
-    color: white;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-}
-</style>
+<link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+<link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=__md_scope,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body>
-<div class="container">
-    <h1>Welcome to Tennis Knowledge Base</h1>
-    <p class="lead">This is a bilingual tennis resource — English and Vietnamese — built from the ground up for players who want more than just tips and drills. Here you'll find the <strong>why</strong> behind the techniques, the <strong>neural control theory</strong> that explains how movement actually works, and the <strong>principles</strong> that transfer across strokes.</p>
-
-    <hr>
-
-    <h1>Chào Mừng Đến Cơ Sở Kiến Thức Tennis</h1>
-    <p class="lead">Đây là nguồn tài liệu tennis song ngữ — Tiếng Anh và Tiếng Việt — được xây dựng từ đầu dành cho những người chơi muốn tìm hiểu sâu hơn những mẹo nhỏ và bài tập rời rạc. Tại đây bạn sẽ tìm thấy <strong>lý do tại sao</strong> đằng sau các kỹ thuật, <strong>lý thuyết điều khiển thần kinh</strong> giải thích cách chuyển động thực sự hoạt động, và <strong>các nguyên lý</strong> có thể áp dụng xuyên suốt mọi cú đánh.</p>
-
-    <hr>
-
-    <h2>Choose Your Language / Chọn Ngôn Ngữ</h2>
-    <div class="lang-cards">
-        <a href="en/index.html" class="lang-card">
-            <span class="flag">🇬🇧</span>
-            <h3>English</h3>
-            <p>Start here for English content</p>
-        </a>
-        <a href="vi/index.html" class="lang-card">
-            <span class="flag">🇻🇳</span>
-            <h3>Tiếng Việt</h3>
-            <p>Bắt đầu ở đây cho nội dung tiếng Việt</p>
-        </a>
-    </div>
-
-    <hr>
-
-    <h2>How to Use This Site</h2>
-    <p><strong>Everything is reachable in 3 clicks or less:</strong></p>
-    <ol>
-        <li>Click your language → English or Vietnamese</li>
-        <li>Choose your section → Foundation, Advanced, Elite, Science Lab, Players, System, or Handbook</li>
-        <li>Pick a topic → Drills, deep dives, or specific techniques</li>
-    </ol>
-    <p>No dead ends. No mysterious folders. Just clear paths to what you need.</p>
-
-    <hr>
-
-    <h2>Cách Sử Dụng Trang Web</h2>
-    <p><strong>Mọi thứ đều trong tầm 3 nhấp chuột:</strong></p>
-    <ol>
-        <li>Chọn ngôn ngữ → Tiếng Anh hoặc Tiếng Việt</li>
-        <li>Chọn mục → Cơ Bản, Nâng Cao, Cao Cấp, Khoa Học, Cầu Thủ, Hệ Thống, hoặc Sổ Tay</li>
-        <li>Chọn chủ đề → Bài tập, phân tích sâu, hoặc kỹ thuật cụ thể</li>
-    </ol>
-    <p>Không có ngõ cụt. Không có thư mục bí ẩn. Chỉ có đường thẳng đến thứ bạn cần.</p>
-
-    <hr>
-
-    <h2>Site Structure</h2>
-    <div class="site-structure">
-        <ul>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">Foundation</a></strong> — strokes, grips, footwork, doubles patterns, and the core coaching guides.</li>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">Advanced</a></strong> — tactical patterns, scouting, in-match adaptation, and the neurological/biomechanical deep-dives underneath advanced play.</li>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">Elite</a></strong> — for players who've outgrown copying pro technique and are building a personalized system.</li>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">Science Lab</a></strong> — anatomy and joint-by-joint biomechanics, independent of playing level.</li>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">Players and System</a></strong> — supporting reference sections.</li>
-            <li><strong><a href="en/index.html" target="_blank" rel="noopener">The Q-V-ROOT-8-45-Impulse-Jin System</a></strong> — The complete biomechanical framework for consistent, powerful tennis.</li>
-            <li><strong><a href="en/handbooks/index.html" target="_blank" rel="noopener">United Tennis Handbook</a></strong> — a complete 30-chapter unified system (Q-V-ROOT-8-45-Impulse-Jin) connecting grip, footwork, vision, and biomechanics into one working model, from first principles to match play.</li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <h2>Cấu Trúc Trang Web</h2>
-    <div class="site-structure">
-        <ul>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Cơ Bản</a></strong> — cú đánh, tay cầm, di chuyển, mẫu hình đôi, và các hướng dẫn cốt lõi.</li>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Nâng Cao</a></strong> — mẫu hình chiến thuật, thám đối thủ, thích ứng trong trận, và các phân tích sâu về thần kinh/cơ học bên dưới trình độ cao.</li>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Cao Cấp</a></strong> — cho những cầu thủ đã vượt qua việc mô phỏng kỹ thuật pro và đang xây dựng hệ thống cá nhân hóa.</li>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Khoa Học</a></strong> — giải phẫu và cơ học khớp theo khớp, độc lập với trình độ chơi.</li>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Tay Vợt và Hệ Thống</a></strong> — các phần tham khảo hỗ trợ.</li>
-            <li><strong><a href="vi/index.html" target="_blank" rel="noopener">Hệ Thống Q-V-ROOT-8-45-Impulse-Kình</a></strong> — Khung sinh cơ học đầy đủ cho quần vợt nhất quán và mạnh mẽ.</li>
-            <li><strong><a href="vi/cam-nang/index.html" target="_blank" rel="noopener">Sổ Tay Tennis Thống Nhất</a></strong> — hệ thống 30 chương hoàn chỉnh (Q-V-ROOT-8-45-Impulse-Kình) kết nối tay cầm, di chuyển, tầm nhìn, và cơ học sinh học thành một mô hình thống nhất, từ nguyên lý đầu tiên đến thi đấu thực tế.</li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <div class="about">
-        <h2>About This Site</h2>
-        <p>This knowledge base grew out of my need for a systematic and in-depth knowledge instead of haphazard tennis tips. Most coaching tells you <em>what</em> to do — "get under the ball," "hit through it," "use your legs" — but never explains <em>why</em> or <em>how</em> your nervous system actually learns these patterns.</p>
-        <p>Everything here is grounded in:</p>
-        <ul>
-            <li><strong>Authoritative coaching materials</strong> — coming from text books and research.</li>
-            <li><strong>Bilingual by design</strong> — not translated, but written natively in both languages.</li>
-            <li><strong>Neural control theory</strong> — understanding movement as the brain learns it.</li>
-            <li><strong>Practical application</strong> — drills and progressions you can use today.</li>
-        </ul>
-        <p><em>For educational purposes only. Not a substitute for professional coaching.</em></p>
-
-        <hr>
-
-        <h2>Về Trang Web Này</h2>
-        <p>Kho tri thức này xuất phát từ nhu cầu học có hệ thống và chuyên sâu về tennis của tôi. Hầu hết huấn luyện chỉ nói <em>cái gì</em> cần làm — "đi dưới bóng," "đánh xuyên qua nó," "dùng chân" — nhưng không bao giờ giải thích <em>tại sao</em> hay <em>cách</em> hệ thần kinh của bạn thực sự học được các mẫu hình này.</p>
-        <p>Mọi thứ ở đây đều dựa trên:</p>
-        <ul>
-            <li><strong>Tài liệu huấn luyện uy tín</strong> — từ các sách giáo khoa và tài liệu nghiên cứu về tennis.</li>
-            <li><strong>Song ngữ theo thiết kế</strong> — không phải dịch máy, mà viết bằng ngôn ngữ của con người.</li>
-            <li><strong>Lý thuyết điều khiển thần kinh</strong> — hiểu chuyển động như cách não bộ làm việc.</li>
-            <li><strong>Ứng dụng thực tiễn</strong> — bài tập và lộ trình tiến bộ bạn có thể dùng ngay hôm nay.</li>
-        </ul>
-        <p><em>Chỉ dành cho mục đích giáo dục. Không thay thế cho huấn luyện chuyên nghiệp.</em></p>
-    </div>
-
-    <footer>
-        © 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.
-    </footer>
+<body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a href="#welcome-to-tennis-knowledge-base" class="md-skip">Skip to content</a>
 </div>
+<div data-md-component="announce"></div>
+<header class="md-header" data-md-component="header">
+<nav class="md-header__inner md-grid" aria-label="Header">
+<a href="." title="TennisKB" class="md-header__button md-logo" aria-label="TennisKB" data-md-component="logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">Tennis Knowledge Base</span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis"></span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input class="md-option" data-md-color-media data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+<label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+</label>
+<input class="md-option" data-md-color-media data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+<label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+<label class="md-search__icon md-icon" for="__search">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+</label>
+<nav class="md-search__options" aria-label="Search">
+<a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text data-md-component="search-share" tabindex="-1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+</a>
+<button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">Initializing search</div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+
+<h1 id="welcome-to-tennis-knowledge-base">Welcome to Tennis Knowledge Base</h1>
+<p>This is a bilingual tennis resource — English and Vietnamese — built from the ground up for players who want more than just tips and drills. Here you'll find the <strong>why</strong> behind the techniques, the <strong>neural control theory</strong> that explains how movement actually works, and the <strong>principles</strong> that transfer across strokes.</p>
+
+<hr>
+
+<h1 id="chao-mung-den-co-so-kien-thuc-tennis">Chào Mừng Đến Cơ Sở Kiến Thức Tennis</h1>
+<p>Đây là nguồn tài liệu tennis song ngữ — Tiếng Anh và Tiếng Việt — được xây dựng từ đầu dành cho những người chơi muốn tìm hiểu sâu hơn những mẹo nhỏ và bài tập rời rạc. Tại đây bạn sẽ tìm thấy <strong>lý do tại sao</strong> đằng sau các kỹ thuật, <strong>lý thuyết điều khiển thần kinh</strong> giải thích cách chuyển động thực sự hoạt động, và <strong>các nguyên lý</strong> có thể áp dụng xuyên suốt mọi cú đánh.</p>
+
+<hr>
+
+<h2 id="choose-your-language">Choose Your Language / Chọn Ngôn Ngữ</h2>
+<div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+<a href="https://tenniskb.github.io/tenniskb/en/" style="flex: 1; min-width: 250px; padding: 1.5rem; background: linear-gradient(135deg, #009688 0%, #3f51b5 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+🇬🇧 English<br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.9;">Start here for English content</span>
+</a>
+<a href="https://tenniskb.github.io/tenniskb/vi/" style="flex: 1; min-width: 250px; padding: 1.5rem; background: linear-gradient(135deg, #009688 0%, #3f51b5 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center; font-size: 1.2rem; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+🇻🇳 Tiếng Việt<br><span style="font-size: 0.9rem; font-weight: normal; opacity: 0.9;">Bắt đầu ở đây cho nội dung tiếng Việt</span>
+</a>
+</div>
+
+<hr>
+
+<h2 id="how-to-use-this-site">How to Use This Site</h2>
+<p><strong>Everything is reachable in 3 clicks or less:</strong></p>
+<ol>
+<li>Click your language → English or Vietnamese</li>
+<li>Choose your section → Foundation, Advanced, Elite, Science Lab, Players, System, or Handbook</li>
+<li>Pick a topic → Drills, deep dives, or specific techniques</li>
+</ol>
+<p>No dead ends. No mysterious folders. Just clear paths to what you need.</p>
+
+<hr>
+
+<h2 id="cach-su-dung-trang-web">Cách Sử Dụng Trang Web</h2>
+<p><strong>Mọi thứ đều trong tầm 3 nhấp chuột:</strong></p>
+<ol>
+<li>Chọn ngôn ngữ → Tiếng Anh hoặc Tiếng Việt</li>
+<li>Chọn mục → Cơ Bản, Nâng Cao, Cao Cấp, Khoa Học, Cầu Thủ, Hệ Thống, hoặc Sổ Tay</li>
+<li>Chọn chủ đề → Bài tập, phân tích sâu, hoặc kỹ thuật cụ thể</li>
+</ol>
+<p>Không có ngõ cụt. Không có thư mục bí ẩn. Chỉ có đường thẳng đến thứ bạn cần.</p>
+
+<hr>
+
+<h2 id="site-structure">Site Structure</h2>
+<ul>
+<li><strong><a href="https://tenniskb.github.io/tnkb/foundation/basics/">Foundation</a></strong> — strokes, grips, footwork, doubles patterns, and the core coaching guides.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/advanced/basics/">Advanced</a></strong> — tactical patterns, scouting, in-match adaptation, and the neurological/biomechanical deep-dives underneath advanced play.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/elite/basics/">Elite</a></strong> — for players who've outgrown copying pro technique and are building a personalized system.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/science-lab/">Science Lab</a></strong> — anatomy and joint-by-joint biomechanics, independent of playing level.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/players/">Players</a></strong> and <strong><a href="https://tenniskb.github.io/tnkb/system/">System</a></strong> — supporting reference sections.</li>
+<li><strong><a href="https://tenniskb.github.io/tenniskb/">The Q-V-ROOT-8-45-Impulse-Jin System</a></strong> — The complete biomechanical framework for consistent, powerful tennis.</li>
+<li><strong><a href="https://tenniskb.github.io/tenniskb/en/chapter">United Tennis Handbook</a></strong> — a complete 30-chapter unified system (Q-V-ROOT-8-45-Impulse-Jin) connecting grip, footwork, vision, and biomechanics into one working model, from first principles to match play.</li>
+</ul>
+
+<hr>
+
+<h2 id="cau-truc-trang-web">Cấu Trúc Trang Web</h2>
+<ul>
+<li><strong><a href="https://tenniskb.github.io/tnkb/vi/foundation/basics/">Cơ Bản</a></strong> — cú đánh, tay cầm, di chuyển, mẫu hình đôi, và các hướng dẫn cốt lõi.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/vi/advanced/basics/">Nâng Cao</a></strong> — mẫu hình chiến thuật, thám đối thủ, thích ứng trong trận, và các phân tích sâu về thần kinh/cơ học bên dưới trình độ cao.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/vi/elite/basics/">Cao Cấp</a></strong> — cho những cầu thủ đã vượt qua việc mô phỏng kỹ thuật pro và đang xây dựng hệ thống cá nhân hóa.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/vi/science-lab/">Khoa Học</a></strong> — giải phẫu và cơ học khớp theo khớp, độc lập với trình độ chơi.</li>
+<li><strong><a href="https://tenniskb.github.io/tnkb/vi/players/">Tay Vợt</a></strong> và <strong><a href="https://tenniskb.github.io/tnkb/vi/system/">Hệ Thống</a></strong> — các phần tham khảo hỗ trợ.</li>
+<li><strong><a href="https://tenniskb.github.io/tenniskb/vi/">Hệ Thống Q-V-ROOT-8-45-Impulse-Kình</a></strong>
+<p>Khung sinh cơ học đầy đủ cho quần vợt nhất quán và mạnh mẽ.</p></li>
+<li><strong><a href="https://tenniskb.github.io/tenniskb/vi/chuong/">Sổ Tay Tennis Thống Nhất</a></strong> — hệ thống 30 chương hoàn chỉnh (Q-V-ROOT-8-45-Impulse-Kình) kết nối tay cầm, di chuyển, tầm nhìn, và cơ học sinh học thành một mô hình thống nhất, từ nguyên lý đầu tiên đến thi đấu thực tế.</li>
+</ul>
+
+<hr>
+
+<h2 id="about-this-site">About This Site</h2>
+<p>This knowledge base grew out of my need for a systematic and in-depth knowledge instead of haphazard tennis tips. Most coaching tells you <em>what</em> to do — "get under the ball," "hit through it," "use your legs" — but never explains <em>why</em> or <em>how</em> your nervous system actually learns these patterns.</p>
+<p>Everything here is grounded in:</p>
+<ul>
+<li><strong>Authoritative coaching materials</strong> — coming from text books and research.</li>
+<li><strong>Bilingual by design</strong> — not translated, but written natively in both languages.</li>
+<li><strong>Neural control theory</strong> — understanding movement as the brain learns it.</li>
+<li><strong>Practical application</strong> — drills and progressions you can use today.</li>
+</ul>
+<p><em>For educational purposes only. Not a substitute for professional coaching.</em></p>
+
+<hr>
+
+<h2 id="ve-trang-web-nay">Về Trang Web Này</h2>
+<p>Kho tri thức này xuất phát từ nhu cầu học có hệ thống và chuyên sâu về tennis của tôi. Hầu hết huấn luyện chỉ nói <em>cái gì</em> cần làm — "đi dưới bóng," "đánh xuyên qua nó," "dùng chân" — nhưng không bao giờ giải thích <em>tại sao</em> hay <em>cách</em> hệ thần kinh của bạn thực sự học được các mẫu hình này.</p>
+<p>Mọi thứ ở đây đều dựa trên:</p>
+<ul>
+<li><strong>Tài liệu huấn luyện uy tín</strong> — từ các sách giáo khoa và tài liệu nghiên cứu về tennis.</li>
+<li><strong>Song ngữ theo thiết kế</strong> — không phải dịch máy, mà viết bằng ngôn ngữ của con người.</li>
+<li><strong>Lý thuyết điều khiển thần kinh</strong> — hiểu chuyển động như cách não bộ làm việc.</li>
+<li><strong>Ứng dụng thực tiễn</strong> — bài tập và lộ trình tiến bộ bạn có thể dùng ngay hôm nay.</li>
+</ul>
+<p><em>Chỉ dành cho mục đích giáo dục. Không thay thế cho huấn luyện chuyên nghiệp.</em></p>
+
+<hr>
+
+<p><em>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</em></p>
+
+</article>
+</div>
+</div>
+</main>
+</div>
+
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</div>
+</div>
+<div class="md-social">
+<a href="https://github.com/tenniskb/tenniskb" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-52.4 0 0-2.8-.6-9.2 3.5 0 0 24.4 9.7 38.9 31.3 14.5-6.1 30-9.7 45.6-9.7 15.6 0 31.1 3.6 45.6 9.7 14.5-21.6 38.9-31.3 38.9-31.3-6.4-4.1-9.2-3.5-9.2-3.5 16 11.1 23.6 25.8 23.6 52.4 0 24.4-56.4 32.5-112.3 110.5 7.2 6.6 13.7 17.7 16 33.7 14.3-6.6 51-17.7 72.9-20.9 13.7-23.8 38.6-25.8 38.6-25.8 24.5 0 2.9 15.7 1.6 15.4-16.4 7.5-27.8 36.6-84.7 29.8 0 21.1-.3 40.3-.3 61.4 0 6.5 4.5 14.4 17.3 12.1C433.1 457.8 512 362.9 512 252c0-138.7-106.1-244-259.2-244z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
 </body>
 </html>
