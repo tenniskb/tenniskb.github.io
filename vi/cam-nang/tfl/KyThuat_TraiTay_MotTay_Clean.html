@@ -54,16 +54,32 @@ th, td { border: 1px solid var(--divider); padding: 12px; text-align: left; }
 th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 12px; }
 tr:nth-child(even) { background: rgba(200,64,26,0.05); }
 .lead { font-size: 17px; color: var(--muted); max-width: 700px; margin-bottom: 2rem; }
-.footer { background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px; }
+.footer {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 .cc-license { font-size: 12px; color: white; padding: 16px; text-align: center; background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1); }
 .cc-license a { color: var(--gold); }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -71,6 +87,9 @@ tr:nth-child(even) { background: rgba(200,64,26,0.05); }
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -96,9 +115,20 @@ tr:nth-child(even) { background: rgba(200,64,26,0.05); }
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -236,9 +266,7 @@ By understanding and reinforcing these biomechanics, players can develop a more 
 References: Authoritative coaching analyses and biomechanics studies are cited throughout. These support the principles and examples discussed above.
     </div>
     <div class="footer">Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026</div>
-    <div class="cc-license">
-    <p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-    </div>
+    
 <nav class="page-nav">
   <a href="../index.html" class="nav-btn prev">← Trang Trước</a>
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>

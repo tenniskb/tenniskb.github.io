@@ -199,7 +199,7 @@
 
     margin: 32px 0 12px;
 
-    color: var(--accent);
+    color: var(--ink);
 
   }
 
@@ -800,24 +800,14 @@
   /* ─── FOOTER ─── */
 
   footer {
-
-    background: var(--ink);
-
-    color: white;
-
-    padding: 40px;
-
-    margin-top: 80px;
-
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
     text-align: center;
-
-    font-size: 13px;
-
-    font-family: 'Space Mono', monospace;
-
-    letter-spacing: 1px;
-
-  }
+    padding: 32px;
+    margin-top: 80px;
+}
 
   /* ─── DIAGRAM SVG AREA ─── */
 
@@ -851,13 +841,13 @@
 .styled-list { margin: 16px 0; padding-left: 28px; }
 .styled-list li { margin-bottom: 8px; line-height: 1.7; }
 .subsection { margin-bottom: 40px; }
-.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15 rem; margin: 24px 0 12px; color: var(--accent); }
+.subsection h3 { font-family: 'Playfair Display', serif; font-size: 1.15 rem; margin: 24px 0 12px; color: var(--ink); }
 .lead { border-bottom: 2px solid var(--ink); padding-bottom: 20px; margin-bottom: 52px; }
 .appendix { margin-top: 80px; padding-top: 40px; border-top: 3px double var(--divider); }
 .appendix h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); text-align: center; margin-bottom: 12px; color: var(--ink); }
 .appendix h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5 rem, 3vw, 2.2 rem); margin: 40px 0 20px; color: var(--accent); }
 .appendix-section { margin-bottom: 48px; }
-.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3 rem; color: var(--accent); margin-bottom: 16px; }
+.appendix-section h3 { font-family: 'Playfair Display', serif; font-size: 1.3 rem; color: var(--ink); margin-bottom: 16px; }
 .appendix-section ul { list-style: none; padding: 0; }
 .appendix-section li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--divider); }
 .appendix-section li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 10px; }
@@ -868,15 +858,13 @@
 
 /* FIXED FOOTER STYLES - Better readability */
 footer {
-    background: var(--ink);
-    color: white;
-    padding: 24px;
-    margin-top: 80px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
     text-align: center;
-    font-size: 13px;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 1px;
-    border-top: 1px solid rgba(245,240,232,0.2);
+    padding: 32px;
+    margin-top: 80px;
 }
 footer strong { color: var(--gold); }
 footer a { color: var(--gold); text-decoration: none; }
@@ -884,7 +872,7 @@ footer a:hover { text-decoration: underline; }
 footer .credit-label { color: white; font-family: "Space Mono", monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
 
 .toc { margin: 40px 0; padding: 24px; background: rgba(200,64,26,0.05); border: 1px solid var(--divider); border-radius: 4px; }
-.toc h3 { font-family: 'Playfair Display', serif; font-size: 1.3 rem; color: var(--accent); margin-bottom: 16px; }
+.toc h3 { font-family: 'Playfair Display', serif; font-size: 1.3 rem; color: var(--ink); margin-bottom: 16px; }
 .toc ul { list-style: none; padding: 0; }
 .toc li { padding: 6px 0; border-bottom: 1px solid var(--divider); }
 .toc li:last-child { border-bottom: none; }
@@ -907,6 +895,14 @@ footer .credit-label { color: white; font-family: "Space Mono", monospace; font-
 .node-text strong { display: block; font-size: 15px; color: var(--paper); margin-bottom: 2px; }
 .node-text span { font-size: 13px; color: rgba(245,240,232,0.55); }
 
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style></head><body>
 
 <div class="masthead">
@@ -919,7 +915,7 @@ footer .credit-label { color: white; font-family: "Space Mono", monospace; font-
 <div class="content-wrap">
 <div class="lead"><p>Tài liệu tham khảo cao cấp dành cho vận động viên và huấn luyện viên</p>
 <p><strong>Chào mừng bạn đến với Tennis Future Lab (TFL)</strong> — kho tài liệu kỹ thuật chuyên sâu dành cho vận động viên và huấn luyện viên muốn nâng tầm trò chơi của mình. Tại đây, bạn sẽ tìm thấy các cẩm nang chi tiết về kỹ thuật hiện đại, phân tích sinh cơ học, chiến thuật thi đấu, và hệ thống training được tổng hợp từ những nghiên cứu tiên tiến nhất trong làng quần vợt thế giới.</p>
-<p>Các tài liệu trong TFL được trình bày dưới định dạng HTML tĩnh, tốiưu cho việc tra cứu nhanh và inấn. Mỗi văn bản đều đã được định dạng lại với cấu trúc rõ ràng: tiêu đề phân cấp, thẻ card cho các khái niệm chính, bảng bước thực hiện được đánh số, và nghệ thuật ASCII minh họa các nguyên lý chuyển động. Nội dung bao gồm cả tiếng Việt và tiếng Anh, phản ánh tính chất quốc tế của môn thể thao này.</p>
+<p>Các tài liệu trong TFL được trình bày dưới định dạng HTML tĩnh, tối ưu cho việc tra cứu nhanh và inấn. Mỗi văn bản đều đã được định dạng lại với cấu trúc rõ ràng: tiêu đề phân cấp, thẻ card cho các khái niệm chính, bảng bước thực hiện được đánh số, và nghệ thuật ASCII minh họa các nguyên lý chuyển động. Nội dung bao gồm cả tiếng Việt và tiếng Anh, phản ánh tính chất quốc tế của môn thể thao này.</p>
 <p>Để sử dụng hiệu quả, hãy bắt đầu với các cẩm nang nền tảng như <em>Modern Tennis Handbook</em>, <em>GOAT Tennis Giáo Trình</em>, hoặc <em>Cơ Sinh Học Tennis Hiện Đại</em>. Sau đó, khám phá các chuyên đề sâu hơn về giao bóng, volley, forehand, backhand, và tâm lý thi đấu. Tất cả tài liệu đều miễn phí và được chia sẻ với tinh thần cộng đồng — <strong>xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam</strong> 🎾.</p></div>
 
     <div class="chapter" id="chapter-01">
@@ -1032,12 +1028,14 @@ footer .credit-label { color: white; font-family: "Space Mono", monospace; font-
             line-height: 1.5;
         }
         footer {
-            background: #1a1a2e;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            font-size: 0.95 em;
-        }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
         footer a {
             color: #667eea;
             text-decoration: none;
@@ -1062,7 +1060,7 @@ footer .credit-label { color: white; font-family: "Space Mono", monospace; font-
         <div class="intro">
             <p><strong>Chào mừng bạn đến với Tennis Future Lab (TFL)</strong> — kho tài liệu kỹ thuật chuyên sâu dành cho vận động viên và huấn luyện viên muốn nâng tầm trò chơi của mình. Tại đây, bạn sẽ tìm thấy các cẩm nang chi tiết về kỹ thuật hiện đại, phân tích sinh cơ học, chiến thuật thi đấu, và hệ thống training được tổng hợp từ những nghiên cứu tiên tiến nhất trong làng quần vợt thế giới.</p>
 
-            <p>Các tài liệu trong TFL được trình bày dưới định dạng HTML tĩnh, tốiưu cho việc tra cứu nhanh và inấn. Mỗi văn bản đều đã được định dạng lại với cấu trúc rõ ràng: tiêu đề phân cấp, thẻ card cho các khái niệm chính, bảng bước thực hiện được đánh số, và nghệ thuật ASCII minh họa các nguyên lý chuyển động. Nội dung bao gồm cả tiếng Việt và tiếng Anh, phản ánh tính chất quốc tế của môn thể thao này.</p>
+            <p>Các tài liệu trong TFL được trình bày dưới định dạng HTML tĩnh, tối ưu cho việc tra cứu nhanh và inấn. Mỗi văn bản đều đã được định dạng lại với cấu trúc rõ ràng: tiêu đề phân cấp, thẻ card cho các khái niệm chính, bảng bước thực hiện được đánh số, và nghệ thuật ASCII minh họa các nguyên lý chuyển động. Nội dung bao gồm cả tiếng Việt và tiếng Anh, phản ánh tính chất quốc tế của môn thể thao này.</p>
 
             <p>Để sử dụng hiệu quả, hãy bắt đầu với các cẩm nang nền tảng như <em>Modern Tennis Handbook</em>, <em>GOAT Tennis Giáo Trình</em>, hoặc <em>Cơ Sinh Học Tennis Hiện Đại</em>. Sau đó, khám phá các chuyên đề sâu hơn về giao bóng, volley, forehand, backhand, và tâm lý thi đấu. Tất cả tài liệu đều miễn phí và được chia sẻ với tinh thần cộng đồng — <strong>xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam</strong> 🎾.</p>
         </div>
@@ -1255,7 +1253,7 @@ footer .credit-label { color: white; font-family: "Space Mono", monospace; font-
 
 </div>
 
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center;">
-    <p style="margin: 4px 0; color: white;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

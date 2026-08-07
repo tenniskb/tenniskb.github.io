@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,19 +931,19 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Tuyển Tập Kỹ Thuật Tennis — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
-<p>Tuyển Tập Kỹ Thuật Tennis</p>
+
+<p><strong>Tuyển Tập Kỹ Thuật Tennis</strong></p>
 <p>Extract from https://viettennis.net/threads/tuyen-tap-ky-thuat-tennis.2487/ </p>
 <p>Bạn chơi đã lâu mà trình độ vẫn không thấy tiến bộ?</p>
 <p>Bạn từng lùng sục các tài liệu kỹ thuật tennis mà vẫn chưa hài lòng với những giải thích hay hướng dẫn về kỹ thuật chơi tennis?</p>
 <p>Giờ đây bạn có thể không cần tìm kiếm chi nữa cho mệt.</p>
-<p>Tài liệu này sẽ đúc kết tất cả những yếu tố giúp bạn:</p>
+<p><strong>Tài liệu này sẽ đúc kết tất cả những yếu tố giúp bạn:</strong></p>
 <ul class="styled-list">
 <li>Hiểu rõ các yếu tố tạo nên một cú đánh tốt</li>
 <li>Biết được những "miếng tập" để nhanh chóng nâng cao kết quả thi đấu</li>
 </ul>
 <p>Tất cả được trình bày với hình vẽ minh họa, ngắn gọn, súc tích và kết quả khác biệt thấy rõ trên sân tập.</p>
-<p>Dẫn Nhập</p>
+<p><strong>Dẫn Nhập</strong></p>
 <p>Bài viết này dựa trên các giả định sau đây về hai từ “kỹ thuật” tennis.</p>
 <p>Một là, các cao thủ quần vợt có cú đánh uy lực hơn ta, chỉ vì họ sở hữu được một số yếu tố kỹ thuật nào đó. Kỹ thuật điều khiển bóng chính là yếu tố nền tảng để người này đánh hay hơn, hay mau tiến bộ hơn người khác.</p>
 <p>Một khi các yếu tố này được khám phá, nó chỉ trở thành qui tắc cho mọi người nếu bất kỳ ai thực hiện được nó sẽ đạt được kết quả cú đánh tương tự (có thể đo đạc được bằng máy móc để kiểm chứng)</p>
@@ -940,7 +952,7 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Chỉ khi đó, các kỹ thuật này mới thực sự trở thành vũ khí, giúp người chơi ít hơn vẫn có thể giữ nguyên đẳng cấp, hoặc nhanh chóng nâng cao trình độ chơi của mình so với các đối thủ khác.</p>
 <p>Về bố cục, bạn có thể bỏ qua tất cả các phần mà bạn tự tin là mình đã nắm vững, tuy tôi vẫn khuyên bạn nên đọc một lượt từ trên xuống. Và như đã nói, mặc dù được giảng giải thành từng phần riêng biệt, trên thực tếáp dụng là một chuỗi các yếu tố được xâu kết lẫn nhau để tạo được kết quả cú đánh tốt.</p>
 <p>Thực chất môn quần vợt chỉ là đánh vào trái bóng sau cho bóng bay qua sân bên kia, với tốc độ và quĩ đạo mong muốn để rơi vào điểm (hay khu vực) mà ta mong đợi.</p>
-<p>Trước khi nghiên cứu đo đạc các cú đánh của các tay cao thủ, ta cần thiết lập một số điều kiện:</p>
+<p><strong>Trước khi nghiên cứu đo đạc các cú đánh của các tay cao thủ, ta cần thiết lập một số điều kiện:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Chấp nhận sai số do qui cách vợt, cấu trúc dây căng vợt, độ căng dây, loại bóng, cấu trúc mặt sân, hướng gió, và của máy bắn bóng trong thử nghiệm</p>
@@ -949,14 +961,14 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Xác định các yếu tố cần đo đạc cho yêu cầu kỹ thuật của mỗi cú đánh. Do điều kiện tài chính và thiết bị eo hẹp, tôi sẽ bỏ qua một số các yếu tố ví dụ như lực đạp vào đất của chân, tốc độ đạp, … cho đến khi có thiết bị phù hợp và khả năng tài chính cho phép.</p>
 </li>
 </ul>
-<p>Kết quả khảo sát các cú đánh của 100 cao thủ mà tôi có dịp sưu tập cho thấy các yếu tố sau xứng đáng được đưa vào kỹ thuật tennis:</p>
+<p><strong>Kết quả khảo sát các cú đánh của 100 cao thủ mà tôi có dịp sưu tập cho thấy các yếu tố sau xứng đáng được đưa vào kỹ thuật tennis:</strong></p>
 <p>Nguyên tắc một: Chuẩn bịở xa và đánh dài theo hướng bóng đi.</p>
 <p>Mặc dầu nguyên tắc nàyáp dụng cho mọi cú đánh, tôi tạm dùng cú thuận tay để mô tảý niệm này.</p>
 <p>Hình sau đây tóm lược cú đánh của các tay vợt mới tập chơi.</p>
 <p>Còn đây là của các tay vợt có trình độ trung bình</p>
 <p>Hoặc một dạng khác</p>
-<p>Việc cầm vợt đúng kiểu và quĩ đạo đánh như sau sẽ cho ra các cú đánh mạnh nhất:</p>
-<p>Nhận xét và Phân tích:</p>
+<p><strong>Việc cầm vợt đúng kiểu và quĩ đạo đánh như sau sẽ cho ra các cú đánh mạnh nhất:</strong></p>
+<p><strong>Nhận xét và Phân tích:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Lỗi hay gặpở các tay vợt mới tập chơi là họ có biên độ đánh quá ngắn như hình vẽ trên. Lý do là họ sợ đánh hụt bóng, hoặc cơ thể họ không thể thực hiện được các yếu tố mở vợt ra xa bóng hết mức, và tiến vào bóng đủ sâu để đánh dài theo bóng. (Trong phần kế tiếp khi phân tích kỹ thuật đánh thuận tay, tôi sẽ đi sâu vào phân tích điểm tiếp xúc bóng trong quĩ đạo này)</p>
@@ -978,7 +990,7 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Khi phân tích một cú đánh, yếu tố đầu tiên mà ta cần quan tâm rõ ràng chính là lực (chính xác hơn là nguồn lực) tác động vào bóng. Tôi thật sự lúng túng khi sử dụng từ lực (force) – rất dễ gây hiểu lầm - và nguồn lực (power) ở đây. Chính xác thì cái mà tôi muốn đề cập đến lúc này là power, hiểu như lượng năng lượng mà ta đem đến cho bóng, nhưng khi viết, tôi đành dùng lẫn lộn hai từ Force và Power này chung một từ là lực cho đến khi có bạn nào giỏi tiếng Việt hiệu chỉnh lại giúp tôi!</p>
 <p>Đây chính là yếu tố chính là thay đổi rõ rệt kết quả đánh bóng đi. Vấn đề nghiên cứu đặt raở đây là nguồn lực huy động của mỗi một bộ phận của cơ thể ta xảy ra như thế nào.</p>
 <p>Những ai bắt đầu chơi tennis đương nhiên khó lòng tạo ra nguồn lực nào khi đánh bóng. Họ chỉ cố gắng trả bóng lại an toàn và hài lòng với cú đánh đó.</p>
-<p>Vấn đề chỉ bắt đầu phát sinh khi trình độ nâng lên một tí, khi bạn bắt đầu cóý thức muốn tăng tốc cho bóng khi đánh đi. Tôi nhận thấy có đến 99,9999% người chơi tăng lực theo bản năng chỉ bảo, màít khi chịu suy nghĩ và phân tích thấu đáo, hoặc họ cho rằng chỉ cần đơn giản tăng tốc cho động tác đánh là quá đủ cho yêu cầu về lực đánh bóng. Suy nghĩ này thực sự sai lầm bởi lẽ lực tự nhiên tạo ra bởi một tay vợt mới chơi thực sự rất yếuớt. Sở dĩ như vậy là vì ai mà hiểu biết quờ quạng về nguồn gốc tạo ra lực, sẽ càng trở nên mơ hồ hơn khi nói tới phương pháp để tốiưu hóa việc tạo ra lực đánh bóng.</p>
+<p>Vấn đề chỉ bắt đầu phát sinh khi trình độ nâng lên một tí, khi bạn bắt đầu có ý thức muốn tăng tốc cho bóng khi đánh đi. Tôi nhận thấy có đến 99,9999% người chơi tăng lực theo bản năng chỉ bảo, màít khi chịu suy nghĩ và phân tích thấu đáo, hoặc họ cho rằng chỉ cần đơn giản tăng tốc cho động tác đánh là quá đủ cho yêu cầu về lực đánh bóng. Suy nghĩ này thực sự sai lầm bởi lẽ lực tự nhiên tạo ra bởi một tay vợt mới chơi thực sự rất yếuớt. Sở dĩ như vậy là vì ai mà hiểu biết quờ quạng về nguồn gốc tạo ra lực, sẽ càng trở nên mơ hồ hơn khi nói tới phương pháp để tối ưu hóa việc tạo ra lực đánh bóng.</p>
 <p>Vậy lựcở đâu mà ra?</p>
 <p>Nguồn gốc của lực – đương nhiên là các múi cơ (xem hình). Và phương pháp để tạo ra lực chính là co rút các múi cơ lại!</p>
 <p>Chuyện không đơn giản chỉ có vậy. Phân tích sâu hơn cho thấy còn nhiều điều phải bànở đây. Khi ta nói đến co cơ – điều này cần xảy ra mạnh nhất ở giai đoạn chuẩn bị cho cú đánh - nghĩa là bạn phải có đủ dự trữ năng lượng trước khi có cú đánh tốt. Ví dụ nhưở động tác chạy bộ, nếu bạn muốn xuất phát tốt, cơ thể bạn buộc phải co cơ hợp lý trước đó, nếu không các bước chạy ngay sau đó sẽ vô cùng yếuớt vì lấy đâu ra năng lượng để đẩy cơ thể đi ???</p>
@@ -990,34 +1002,34 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Nguyên lý 3. </p>
 <p>Chúng ta đều biết, theo định luật 3 Newton, khi chân ta đạp vào đất một lực (nhờ sự co cơ và dãn cơ), mặt đất sẽ tác động lại lên cơ thể ta một lực bằng với lực trên. Điều này cho thấy vai trò của cơ chân co duỗi khi tạo lực ban đầu. Lực này được truyền qua cơ thể ta, vốn là một bộ xương - với các liên kết gân và cơ - để cuối cùng đi đến vợt và bóng.</p>
 <p>Rõ ràng, nếu chỉ dừng lạiở khái niệm nguồn gốc của lực là co và dãn cơ là chưa đủ. Ta cần nhận thấy rằng, cấu trúc cơ thể phân bố các cơ mạnh yếu không đều nhau, và các nhóm cơ này cũng không phải tham gia bằng nhau trong lúc đánh bóng. Mỗi khi động tác của chúng ta đi đến một vùng giới hạn nào đó của cơ thể, thì nhóm lực mạnh ban đầu lại trở nên yếu đi, và sẽ có một nhóm cơ tiếp quản nguồn lực mạnh này (nếu ta biết cách sử dụng).</p>
-<p>Vậy ta bắt đầu tìm hiểu các cơ có sức mạnh nhất để tốiưu hóa việc sử dụng chúng khi đánh (tức khi ta chuyển động).</p>
+<p>Vậy ta bắt đầu tìm hiểu các cơ có sức mạnh nhất để tối ưu hóa việc sử dụng chúng khi đánh (tức khi ta chuyển động).</p>
 <p>Nếu để cử động cánh tay, các cơ sau đây là mạnh nhất xếp theo thứ tự: cơ vai, cơ liên sườn, và cơ bắp tay trên (chứ không phải là cơ cẳng tay từ cùi chỏ đến bàn tay). Cơ cẳng tay rất yếu và đóng góp rấtít trong chuyển động lăng tay, và cổ tay cũng tương tự: nó yếu và không đóng góp nhiều trong việc di chuyển cánh tay đánh bóng. Do đó, ta cần tập trung vận sứcở các nhóm cơ mạnh để tạo ra tốc độ nhanh của cánh tay khi đánh bóng.</p>
 <p>Tuy vậy, đối với cổ tay, ta cũng phải căng nó ra để chịu lại lực bóng. Bạn thử hình dung nếu chỉ cột cán vợt vào tayáo một cách lỏng lẻo, nó sẽ không thể chịu nổi cú va đập từ vợt vào bóng khi đánh. Thí nghiệm đo được, lực đánh vào bóng tương đương khoảng 30Kg cho một cú đánh của một tay vợt khá. Một cổ tay mềm mại khi tiếp xúc bóng rõ ràng sẽ làm hao hụt mất đáng kể một lượng sức mạnh truyền từ tay sang vợt.</p>
 <p>Tóm lại, khi đánh ta cần căng hầu như mọi loại cơ có tham gia vào tạo ra chuyển động. Tuy nhiên điểm khác biệt chính yếu là các cơ mạnh có vai trò chủ động để tạo lực, trong khi các nhóm cơ yếu lại có vai trò bị động, giúp chống lại lực quán tính (khi cánh tay trên đã bắt đầu lao đi, vợt theo quán tính không thể lao theo cùng một lúc được), chống lại lực va đập (lúc vợt đập vào bóng), hoặc chịu lại trọng lượng cơ thể (cơ mu bàn chân). Nói khác đi các nhóm cơ yếu chịu trách nhiệm làm cho lực sinh ra do các cơ mạnh không bị mất đi khi truyền từ bộ phận này sang bộ phận khác, kể cả việc không làm vợt bị bật lại khi chạm vào bóng.</p>
 <p>Bạn cũng cần nhận diện các hướng chuyển động nào cho phép các cơ mạnh có thể tạo ra lực tối đa về hướng đánh bóng. Ví dụ động tác xoay trên mặt phẳng ngang (song song mặt đất) không đem lại hiệu quả nhiều bằng xoay dọc (vuông góc với mặt đất). Bạn cũng phải đểý đến quãng đường cho phép di động của bộ xương chúng ta. Nếu để nó di chuyển đúng, ta sẽ có đoạn đường di chuyển cóích dài hơn. Đoạn đường càng dài, theo vật lý ta sẽ có vận tốcở đoạn cuối của nó mạnh hơn (cho đến khi cơ thể ta bắt đầu bị vướng, sẽ làm chậm lại động tác – tức là đoạn đường vôích mà tôi đã đề cậpở trên).</p>
 <p>Trên đây tôi đã phân tích về động tác tay. Bạn có thể tự suy luận về các cơ huy động trong chuyển động chân. Bạn sẽ thấy cơ bắp chân, rồi bắp vế có vai trò chủ yếu. Cơ háng hầu như không được sử dụng nhiều, trong khi cơ mu bàn chân lại rất yếu (tương tự như cơ cổ tay).</p>
-<p>NiHa nói:</p>
+<p><strong>NiHa nói:</strong></p>
 <p>Đọc bài của bác em vẫn chưa hình dung rõ một số điểm, ví dụ ' co rút các múi cơ lại' để tạo lực. Làm thế nào để tập trung co cơ tạo lực được mà có thể đánh bóng được một cách dễ dàng. Em tưởng tưởng là khi tay mà co hết cơ như hình vẽ thì sao đánh bóng được nhỉ</p>
 <p>Giả sử bạn không có cánh tay, và chỉ nối với cây vợt bằng một sợi dây thun. Khi đó muốn rút vợt đem về phía sau rồi đánh nó ra trước thì sợi thun ấy phải co và dãn, thậm chí vặn xung quanh trục. Giữa các lúc co, giãn, vặn, đó sẽ là những lúcở vị trí trung gian, lúc đó sợi thun trở lại trạng thái bình thường của nó.</p>
 <p>Bắp cơ của ta - hiểu một cách đơn giản - là gồm một đống sợi dây thun như vậy (ngoài ra nó thêm mạch máu để nuôi, dây thần kinh đủ thứ nữa).</p>
 <p>Hình 4 – Bắp cơ vận động như hệ thống dây thun co-dãn: tín hiệu thần kinh kích thích sợi cơ co lại, kéo hai đầu xương lại gần tạo lực, lực truyền qua gân tới xương → chuyển động khớp.</p>
 <hr/>
 <p>Như đã phân tích, lực đạp vào mặt đất được truyền đi từ chân, qua eo, lưng, vai, cánh tay rồi cổ tay, đến vợt và vào bóng. Cơ thể chúng ta vốn dĩ không phải là một khối cứng ngắc kết nối lại với nhau, do đó nếu không hiểu rõ cơ chế vận hành của bộ truyền động này, đa số lực tạo ra sẽ mất đi trong quá trình truyền lực này. Hậu quả là cú đánh của ta rất yếu dù tốn sức huy động khá nhiều. Ngược lại, nếu huy động đúng một phần nhỏ nhưng lực mất điít, ta vẫn có thể có những cú đánh mạnh tuy đang ở tình thế cứu bóng!</p>
-<p>Như vậy, yêu cầu cho mỗi nhóm cơ và vị trí tương đối giữa các bộ phận cơ thể khi đánh bóng nên như sau:</p>
+<p><strong>Như vậy, yêu cầu cho mỗi nhóm cơ và vị trí tương đối giữa các bộ phận cơ thể khi đánh bóng nên như sau:</strong></p>
 <p>với nhiệm vụ là chịu toàn bộ lực va đập của (vợt + bóng) vào cơ thể. Cổ tay khi tiếp xúc bóng buộc phải ở vị trí khóa chắc so với cánh tay. Như vậy, ở cú thuận tay, cổ tay phải được mở ra một góc khoảng 110 độ so với cánh tay, trong khiở cú rơ-ve một tay, cổ tay cần thẳng hàng với cánh tay. Đó là các vị trí cho phép cổ tay vững chắc nhất.</p>
 <p>Nhiệm vụ là chỏi lại với mặt đất, tạo đà tiến tới cho cơ thể. Từ vị trí đứng thẳng, nhiệm vụ của co cơ này là nhấc gót chân lên khỏi mặt đất, và chịu lại toàn bộ cơ thể, kể cả khi đó cơ thể đang ở trạng thái mất cân bằng (thực ra là đang cân bằng động)</p>
 <p>Cẳng tay với cánh tay trên: xét trên mặt phẳng thẳng đứng, 2 bộ phận này có thể được giữở gần nhau bằng cách co tay cũng chẳng ảnh hưởng gì đến lực đánh. Tuy nhiên, nếu so với mặt phẳng ngang (nhìn từ trên đầu xuống), cánh tay duỗi thẳng sẽ tạo ra được vận tốc dài lớn hơnở vợt, so với cùng vận tốc quay của thân hình so với chân. Phân tích hình ảnh cho thấy Agassi thường hay đánh với cánh tay hơi gập, trong khi Federer đánh với cánh tay duỗi thẳng và biên độ đánh rộng hơn. Ở đây có cái giá phải trả của nó. Đánh với cánh tay gập giúp bạn đánh bóng gần người, trong khi đánh với cánh tay thẳng buộc phải đánh bóng xa người. Tùy vào tình huống bóng đến mà có lúc kiểu đánh này lợi hơn kiểu đánh kia. Ví dụ khi né trái đánh phải, rõ ràng đánh kiểu tay thẳng yêu cầu bạn phải di chuyển nhanh hơn đánh kiểu cánh tay gập. Thế nhưng khi đánh bóng vớiở thuận tay chẳng hạn, tay vợt quen với lối đánh tay thẳng sẽ có lợi khi với tới bóng, và uy lực cũng mạnh hơn nhờ vận tốc dàiở đỉnh vợt lớn hơn so với cùng tốc độ quay của thân người khi vào bóng.</p>
 <p>Hình 1 – Chuỗi động lực (Kinetic Chain): lực từ chân truyền qua eo → vai → tay → vợt → bóng theo định luật 3 Newton.</p>
 <p>rõ ràng việc vặn cơ eo, cơ hông, (nói chung là các cơở phần dưới của lưng), có vai trò nạp năng lượng vô cùng to lớn, lớn hơn nhiều so với cơ tay, và chịu trách nhiệm chính trong việc truyền tải lực đi từ đất lên đến tay đánh bóng.</p>
 <p>Cánh tay với vai: Một khi thân người đã xoay để truyền lực từ chân lên (thậm chí khi không kịp đạp chân vào đất), cơ vai cần được huy động để giữ cho cánh tay không được lỏng lẻo so với thân người, nếu không, toàn bộ lực huy động được sẽ mất đi đáng kể.</p>
-<p>Tóm lại, toàn bộ cơ thể ta có thể chia thành từng khối, cái này chồng lên cái kia một cách liên hoàn. Bạn cần cóý niệm rõ ràng về sự kết nối này trong toàn bộ chuỗi chuyển động và truyền động, sao cho lực tạo ra được truyền từ mặt đất lên đến cánh tay và đầu vợt có độ tiêu haoít nhất, và huy động sai trong chuỗi truyền lực này sẽ làm tiêu hao một lượng lớn nguồn lực đã tạo ra trước đó!</p>
+<p>Tóm lại, toàn bộ cơ thể ta có thể chia thành từng khối, cái này chồng lên cái kia một cách liên hoàn. Bạn cần có ý niệm rõ ràng về sự kết nối này trong toàn bộ chuỗi chuyển động và truyền động, sao cho lực tạo ra được truyền từ mặt đất lên đến cánh tay và đầu vợt có độ tiêu haoít nhất, và huy động sai trong chuỗi truyền lực này sẽ làm tiêu hao một lượng lớn nguồn lực đã tạo ra trước đó!</p>
 <p>Nguyên lý 5. Xoay thân người và cách đạp chân vào đất đúng.</p>
 <p>Lực đánh của tay không phải là lực duy nhất để đánh bóng. Việc xoay thân người có thể nâng cao lực đánh của tay lên đến 5 lần, đo được khi dùng lực kế.</p>
 <p>Điều này dẫn đến vấn đề cần nghiên cứu: làm sao để xoay người?</p>
 <p>Đã nói đến xoay, tất nhiên phải có một phần nào đó của cơ thể phải đứng yên để các bộ phận khác xoay dựa trên nó. Phần đó là gì? Chính là chân, nơi tiếp xúc với mặt đất. Chính đây là nơi để trái đất tác động lên cơ thể bạn. Hình chụp chậm cho thấy hai chân có nhiệm vụ đẩy cho cơ thể xoay, và một phần của chân hoàn toàn bất động để cơ thể xoay trên đó.</p>
 <p>Cụ thể hơn, có hai cách để tạo ra chuyển động xoay thân. Bạn có thể dùng cả 2 chân, hoặc chỉ cần một chân cũng được. Mỗi cách cóưu khuyết điểm riêng.</p>
 <p>Bánh xe nào muốn quay cũng có trục quay đứng yên. Khi xoay thân, chính chân sau làm nhiệm vụ trục quay này. Khi bạn xoay thân bằng hai chân, thì mỗi chân phụ trách nữa phần việc, nhưng chân sau bao giờ cũng là chân khởi đầu cho động tác xoay này.</p>
-<p>Tới đây thì chúng ta lại cần phải phân tích: để tốc độ xoay được tốiưu, đâu là các vị trí phải có giữa bàn chân, bắp chân dưới, bắp đùi, và lưng? Đó chính là nội dung của phần sắp tới.</p>
+<p>Tới đây thì chúng ta lại cần phải phân tích: để tốc độ xoay được tối ưu, đâu là các vị trí phải có giữa bàn chân, bắp chân dưới, bắp đùi, và lưng? Đó chính là nội dung của phần sắp tới.</p>
 <p>Hình 7 – Giải phẫu hông &amp; vùng core: Hông là khớp ball-and-socket linh hoạt nhất cơ thể. Cơ core (abs + obliques + psoas + gluteus) đóng vai trò 'trục xoay' trung tâm — NẠP NĂNG LƯỢNG như lò xo xoắn. Sự khác biệt góc xoay giữa hông (~30°) và vai (~80°) tạo Δ = 30–50° xoắn core, giải phóng tới 80% năng lượng cú đánh.</p>
 <p>Hình 5 – Giải phẫu cánh tay cầm vợt: vai (cơ Delta ổn định) → biceps/triceps điều khiển khuỷu → cổ tay XOAY + GẬP tạo tốc độ (snapping) → ngón tay giữ chắc cán vợt.</p>
 <p>Như trên đã phân tích, lực đánh bóng sẽ mạnh nhất khi ta tạo ra được quĩ đạo đánh bóng nằm trong mặt phẳng trùng với hướng bóng đi. Giả sử lấy mặt phẳng lưới làm gốc, và ta muốn đánh một cú thuận tay từ bên phải, đi chéo sân để qua bên kia và cách đường biên dọc khoảng 50 cm (cho an toàn) thì:</p>
@@ -1026,17 +1038,17 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Khi kết thúc động tác, thân người sẽ phải hơi đổ ra phía trước, và vai phải sẽ đưa ra trước vai trái như hình chụp sau đây. Để giữ thăng bằng, chân sau buộc phải nhón nhẹ gót lên khỏi mặt đất (một số cao thủ còn đá chân sau lên, thậm chí nhảy lên khỏi mặt đất)</p>
 </li>
 <li>
-<p>Như vậy, muốn có lực đánh tốiưu, người đánh cần lấy đà bằng cách:</p>
+<p><strong>Như vậy, muốn có lực đánh tối ưu, người đánh cần lấy đà bằng cách:</strong></p>
 </li>
 </ul>
 <p>Thân người cần quay tối thiểu là song song với hướng đánh, thậm chí là quay được xa hơn thế một tí.</p>
 <p>Hai chân phải hỗ trợ tối đa cho tư thế đó của thân. Chân sau lúc đầu sẽ là chân trụ, và trong quá trình đánh sẽ chuyển dần vai trò đó cho chân trước!</p>
-<p>Chính vì vậy, bàn chân trước phải đặt như thế nào, sao cho nó hỗ trợ tối đa việc chuyển giao chân trụ này, kể cả bắp vế và bắp chân phải được huy động để xoay được thân người. Nghiên cứu cho thấy, tư thế tốt nhất là bàn chân trước tạo thành một góc rất nhọn so với hướng mà ta định đánh bóng đi, vì khi đó việc chuyển lực vào cú đánh là tốiưu. Khi đó cơ đùi dưới sẽ giúp xoay đoạn từ cổ chân lên đầu gối một góc khoảng 10 độ, còn cơ bắp đùi trên sẽ được huy động để xoay thêm thân người 20 độ nữa. Để động tác xoay được thoải mái, gót bàn chân buộc phải nhấc lên khỏi mặt đất.</p>
+<p>Chính vì vậy, bàn chân trước phải đặt như thế nào, sao cho nó hỗ trợ tối đa việc chuyển giao chân trụ này, kể cả bắp vế và bắp chân phải được huy động để xoay được thân người. Nghiên cứu cho thấy, tư thế tốt nhất là bàn chân trước tạo thành một góc rất nhọn so với hướng mà ta định đánh bóng đi, vì khi đó việc chuyển lực vào cú đánh là tối ưu. Khi đó cơ đùi dưới sẽ giúp xoay đoạn từ cổ chân lên đầu gối một góc khoảng 10 độ, còn cơ bắp đùi trên sẽ được huy động để xoay thêm thân người 20 độ nữa. Để động tác xoay được thoải mái, gót bàn chân buộc phải nhấc lên khỏi mặt đất.</p>
 <p>Khi bắt đầu lấy đà, trọng tâm được đặtở chân sau, do đó chân trước sẽ duỗi thẳng, và đầu gối sẽ gấp lại để cơ thể dễ dàng chuyển trọng tâm về trước sau đó.</p>
 <p>Chân sau có nhiệm vụ là tạo ra lực đẩy ban đầu để vừa xoay được thân trên, vừa đưa thân người chuyển động tịnh tiến ra trước. Muốn vậy, bàn chân sau có hai tư thế để thực hiện:</p>
-<p>▪▪Tư thế tốiưu: Nếu nhìn từ trên đầu xuống (xem hình), bàn chân sau song song với bàn chân trước, hoặc xoay ngang hơn bàn chân trước để tạo lực đạp tới. </p>
+<p>▪▪Tư thế tối ưu: Nếu nhìn từ trên đầu xuống (xem hình), bàn chân sau song song với bàn chân trước, hoặc xoay ngang hơn bàn chân trước để tạo lực đạp tới. </p>
 <p>Góc tạo ra giữa hai đường: từ cổ chân lên đầu gối, và từ đầu gối lên háng sẽ khoảng 20-40 độ. Góc tạo ra giữa bắp đùi và thân người sẽ là 50 đến 65 độ, tùy độ dẻo của mỗi người</p>
-<p>▪▪Tư thế kém tốiưu một chút: bắp đùi trên và bàn chân sau gần như song song (nhìn từ trên đỉnh đầu xuống), và bắp đùi tạo với thân hình một góc gần 90 độ.</p>
+<p>▪▪Tư thế kém tối ưu một chút: bắp đùi trên và bàn chân sau gần như song song (nhìn từ trên đỉnh đầu xuống), và bắp đùi tạo với thân hình một góc gần 90 độ.</p>
 <ul class="styled-list">
 <li>
 <p>Để tạo được động tác đẩy, gót bàn chân sau phải được nhấc lên, và góc tạo thành giữa bàn chân và đoạn ống quyển đo được là 50 độ (xem hình)</p>
@@ -1083,7 +1095,7 @@ Ba là, có thể có nhiều hơn một kỹ thuật để thực hiện một 
 <p>Ta đều biết năng lượng tạo ra bằng trọng lượng x vận tốc bình phương. Như vậy khi đánh vào bóng, trọng lượng khi đánh bao gồm vợt, và cả trọng lượng cơ thể. Vận tốc của cơ thể khi di chuyển vào bóng có thể đạt được khoảng 30 km/h khi sử dụng các kỹ thuật trên. Vợt tuy chỉ nặng khoảng 300 gr nhưng cộng với trọng lượng cơ thể khoảng 60 kg (tức 60,000 gram, gấp 200 lần trọng lượng bóng). Bạn dễ dàng tính ra năng lượng bạn có thể đưa vào bóng, và tốc độ của bóng mà bạn có thể tạo ra được khi rời vợt. Tôi nhường phần tính toán đơn giản này cho bạn, để bạn có thể kiểm chứng câu nói: đa số chúng ta có thể tung ra các cú đánh sấm sét lên đến trên 200 km/ giờ nếu chịu phân tích kỹ!</p>
 <p>Phần kế tiếp có lẽ là phần các bạn mong chờ nhất. Phân tích kỹ thuật đánh từng cú: thuận tay, trái tay (1 tay, trái 2 tay, giao bóng, vô lê, đánh cứu bóng ở hai đầu sân, líp thuận tay, cắt xoáy, lốp, smash, bỏ nhỏ trước khi đi đến phần ba cũng quan trọng không kém. Các bài tập cho từng cú quả và bài tập chiến lược thi đấu đơn, đôi.</p>
 <p>Kỹ thuật đánh cú thuận tay</p>
-<p>Nếu tôi hướng dẫn tennis cho một ai đó từ đầu, có lẽ tôi sẽ bắt đầu bằng cú giao bóng. Có 2 lý do:</p>
+<p><strong>Nếu tôi hướng dẫn tennis cho một ai đó từ đầu, có lẽ tôi sẽ bắt đầu bằng cú giao bóng. Có 2 lý do:</strong></p>
 <p>Thứ nhất là vì nó là cú khó tập nhất. Khi họ tập được các cú khác kha khá thì cú giao bóng của họ cũng đủ mạnh để có thể ra sân thi đấu, tránh tình trạng như đa số các tay vợt trung bình hiện nay, đánh các cú đều được, nhưng giao bóng quá yếu! Nếu có một cú giao bóng chuẩn, bạn đã có thể bước vào hàng ngũ các tay vợt trung bình khá (trong giới nghiệp dư)</p>
 <p>Thứ hai là vì nếu luyện được cú giao bóng, thì mọi cú quả còn lại rất dễ luyện và mau tiến bộ. Giao bóng đòi hỏi mắt nhìn bóng chuẩn xác nhiều hơn bất kỳ cú nào khác, và ngay từ đầu, não bạn đã được làm quen với khái niệm đánh mạnh, và sau này mọi cú khác của bạn đều mạnh tương tự, chứ không thể đánh phều phều như đa số hiện nay.
 Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và cải tiến ngay được kết quả lại là cú thuận tay. Thôi thì tôi đành chọn viết về đánh cú thuận tay trước vậy.</p>
@@ -1094,16 +1106,16 @@ Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và c�
 <p>Đây là điều mà theo tôi các tài liệu viết không rõ nên dễ gây tẩu hỏa nhập ma, hoặc giả họ không nhấn mạnh điều này, khiến bạn chủ quan mà bỏ qua một cách tai hại (làm cho trình độ cứ dậm chân tại chỗ).</p>
 <p>Mặc dầu đa số các nguyên lý nêu raở trên vàở đây đều đúng cho từng trường hợp trên. Tôi lưuý trước là sau đây tôi ghi lại những nguyên tắc để đánh một cú thuận tay cho 1) trái banh có độ cao trung bình (khoảng ngang eo), 2) xoáy ít và 3) kiểu cầm vợt đóng (mặt vợt hơi nghiêng so với mặt đất khi đánh). Đôi lúc nếu vì lý do tiện thể nói luôn, thì tôi sẽ ghi rõ để tránh nhầm lẫn.</p>
 <p>Tôi cũng lưuý là những kỹ thuật tôi nêu raở đây là nhằm có một cú đánh hoàn hảo. Thực tế là ta không cần phải đánh cú nào cũng như vậy vì nhiều lý do. Trong một trận đánh, rất nhiều cú đánh ta chỉ khẽ đạp chân vào đất, đưa thân người tiến lên trước chỉ một chút, …. Lý do là vì mỗi cú đánh mạnh hoàn hảo như vậy luôn kèm theo cái giá phải trả là rủi ro cao: chỉ cần làm sai một tí nào đó, cái mạnh của các động tác còn lại sẽ phóng đại cái sai của bạn lên nhiều lần, hậu quả là bạn sẽ … đánh hư nhiều hơn trước!</p>
-<p>Có baý nữa tôi muốn chia sẻ với các bạn:</p>
+<p><strong>Có baý nữa tôi muốn chia sẻ với các bạn:</strong></p>
 <p>Một là các cú đánh này đã được nghiên cứu khá công phu. Từ việc phân tích kỹ lưỡng các yếu tố từ các tay vợt top ATP, đem ra đánh rất chậm để nhận xét có cái gì hay, cái gì dở (nhờ suy luận từ các môn khoa học khác), rồi thực hiện thử để xem các động tác đó khi đi từ rất chậm sang nhanh thì nó có vướng víu gì không (rất nhiều động tác khi làm chậm ta làm được, nhưng khi nhanh thì không đã được tôi lược bỏở đây). Chỉ cần làm chậm theo những gì tôi ghi lạiở đây, và tăng dần tốc độ thực hiện, bạn sẽ thấy kết quả cú đánh khác xa trước.</p>
 <p>Hai là bạn nên tham khảo lại những gì tôi viết raở đây, dù đã đọc nó nhiều lần. Cứ mỗi lần thấy trình độ mình dừng lại, cú đánh của mình không cải tiến hơn được, hãy vào đây đọc lại. Sở dĩ như vậy vì sau khi "ngâm cứu" ở đây, bạn sẽ thấy khi ra sân đánh với tốc độ cao, những gì bạn đọc được ở đây hầu như tan biến rất nhanh trong khi đánh. Từ chuyên môn gọi cái này là cảm giác bóng. Cái cảm giác này có cái tai hại là lâu ngày, bạn quên mất một vài yếu tố nào đó, và vô tình hài lòng với kết quả hiện đang đạt được cho đến khi bạn gặp một đối thủ có khả năng tạo đường bóng khó chịu với cảm giác hiện có của bạn. Chính lúc đó bạn cần tham khảo lại tài liệu này, và bạn sẽ thấy rõ mình đã quên làm một phần nhỏ trong các hướng dẫnở đây, hoặc quá máy móc mà không biến đổi chút đỉnh các yếu tốở đây để phù hợp với loại bóng đó do đối thủ đánh sang!</p>
 <p>Ba là đánh cú nào cũng vậy, có hai yếu tố phải cân nhắc. Đánh có độ kiểm soát cao, hay đánh có độ mạnh cao. Khi đánh với có độ kiểm soát (control) cao (bóng đi đúng như quĩ đạo ta dự kiến), ta thường phải hy sinh bớt sức mạnh (power) và ngược lại, đánh với sức mạnh cao, ta chấp nhận quĩ đạo (hay điểm rơi) không cần đi chính xác như ta mong muốn. Lẽ dĩ nhiên ai cũng mong muốn có cú đánh vừa mạnh nhất, vừa control nhất nhưng theo tôi thì nênưu tiên chọn control nhiều hơn power, và chỉ đánh mạnh khi điểm số đang áp đảo đối thủ hoặc thỉnh thoảng cần mạo hiểm để thủ thắng.</p>
 <p>Dài dòng như vậy đủ rồi. Giờ ta vào phần chính.</p>
 <p>Thuận tay là cú đánh tốt nhất để bạnáp dụng mọi yếu tố tôi đã trình bàyở các nguyên tắc cơ bản trên đây. Đọc xong phần đó, tôi tin rằng các bạn đã có thể hình dung rất rõ kỹ thuật chuẩn để đánh một cú đánh thuận tay tốt là như thế nào rồi. Mặc dầu vậy, có một số chi tiết cần phải mô tả chi tiết hơn, vì nó cần được điều chỉnh cho từng cú đánh.</p>
-<p>Trước hết xét trường hợp bóng bay đến phía bạn với lực trung bình (không phải rơi gần như dựng đứng trước bạn). Cái bạn cần làm là:</p>
+<p><strong>Trước hết xét trường hợp bóng bay đến phía bạn với lực trung bình (không phải rơi gần như dựng đứng trước bạn). Cái bạn cần làm là:</strong></p>
 <p>Bảo đảm khi bóng vừa rời khỏi vợt bên kia, trễ nhất là khi bóng chuẩn bị chạm đất, người bạn đã di chuyển sau cho nếu bóng tiếp tục quĩ đạo của nó, bóng sẽ vào trong khu vực đánh bóng của bạn, và lưng bạn đã tối thiểu là thẳng góc với lưới.</p>
 <p>Tôi đề nghị bạn cần xoay người thật nhanh, và xoay đến mức nghe cơ eo / hông / vai bị cứng lại vì đã hết mức xoay của nó nếu có thể được! </p>
-<p>Lúc này hai chân bạn cần vừa chạy chỗ, vừa phải hỗ trợ tối đa cho động tác chuẩn bị đánh bao gồm:</p>
+<p><strong>Lúc này hai chân bạn cần vừa chạy chỗ, vừa phải hỗ trợ tối đa cho động tác chuẩn bị đánh bao gồm:</strong></p>
 <p>-Vặn thân người tối đa (thậm chí đưa lưng cho đối thủ xem)
 -Để hỗ trợ cho động tác vặn, hai tay cần co vào gần người khi bắt đầu vặn
 -Khi gần kết thúc động tác vặn, tay cầm vợt cố gắng kéo vợt ra phía sau càng nhiều càng tốt
@@ -1117,15 +1129,15 @@ Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và c�
 <p>Động tác quay thân của bạn cũng không phải cứ quay tròn như bông vụ. Hãy quay sao cho lực quay (vật lý gọi là moment quay) quay vào điểm đánh bóng.</p>
 <p>Tư thế cánh tay.</p>
 <p>Từ tư thế ban đầu, vợt đang ở trước thân bạn, cách tay sẽ thực hiện 2 chuyển động: chuyển động xoay quanh trục cánh tay trên, và chuyển động tịnh tiến để lùi vợt ra sau (xem hình)</p>
-<p>Nếu nhìn từ trên cao xuống, vị trí của cánh tay so với vai như sau:</p>
-<p>Hoặc nó như là đường nối dài của vai:</p>
-<p>Thậm chí nếu cơ thể bạn đủ dẻo, hãy "bẻ" nó ra thêm một tí như sau:</p>
-<p>Phương án đánh với cánh tay gập lại như sau cũng được ghi nhận (tuy có làm giảm quãng đường di chuyển của tay sau này mộtít):</p>
+<p><strong>Nếu nhìn từ trên cao xuống, vị trí của cánh tay so với vai như sau:</strong></p>
+<p><strong>Hoặc nó như là đường nối dài của vai:</strong></p>
+<p><strong>Thậm chí nếu cơ thể bạn đủ dẻo, hãy "bẻ" nó ra thêm một tí như sau:</strong></p>
+<p><strong>Phương án đánh với cánh tay gập lại như sau cũng được ghi nhận (tuy có làm giảm quãng đường di chuyển của tay sau này mộtít):</strong></p>
 <p>Tôi ghi nhận được có hai phương án cho chuyển động của cánh tay trước và cánh tay trên: Một là cánh tay trước "vặn" (pronation) với cánh tay trên, để tạo lực đánh úp dần khi chuyển động tịnh tiến sau này ra trước, hoặc cánh tay trước gần như không "vặn". Điều này tùy thuộc vàoý đồ đánh bóng của từng người.</p>
-<p>Vị trí của cổ tay:</p>
-<p>Cổ tay cần được để tự nhiên, và phải ở vị trí "khóa" so với cánh tay như hình sau đây:</p>
-<p>(ở trên là nhìn từ ngang hông, cònở dưới là nhìn từ trên xuống):</p>
-<p>Các yếu tố khác cần đểý:</p>
+<p><strong>Vị trí của cổ tay:</strong></p>
+<p><strong>Cổ tay cần được để tự nhiên, và phải ở vị trí "khóa" so với cánh tay như hình sau đây:</strong></p>
+<p><strong>(ở trên là nhìn từ ngang hông, cònở dưới là nhìn từ trên xuống):</strong></p>
+<p><strong>Các yếu tố khác cần đểý:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Sau khi đưa được các bộ phận của cơ thể về các vị trí trên, các cơ cần được huy động đúng mức. Bạn không cần gồng cứng để lấy sức, nhưng cũng không để nó thả lỏng. Biên giới giữa các bắp cơ được huy động sẳn sàng xung kích, và các cơ được thả lỏng để sau đó chẳng tạo được năng lượng gì là rất gần nhau.</p>
@@ -1134,10 +1146,10 @@ Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và c�
 <p>Vai trò của cặp mắt rất quan trọng. Khi bóng bay sang chéo sân chẳng hạn, nếu bạn lo vặn người mà không giữ cho đường thẳng nối cặp mắt luôn gần như thẳng góc hướng bóng bay, bạn sẽ rất dễ bị mắt đánh lừa về vị trí bóng. Hậu quả là bạn sẽ đánh trúng cạp vợt! Do đó, người cứ vặn, tay cứ kéo ra sau nhưng cặp mắt (tôi lập lại là cả cặp) và từ cổ trở lên phải luôn ở vị trí để quan sát bóng tốt nhất!</p>
 </li>
 </ul>
-<p>Hình sau đây cho thấy lý do tại sao phải điều chỉnh cổ và cặp mắt để nhìn bóng đúng kỹ thuật:</p>
+<p><strong>Hình sau đây cho thấy lý do tại sao phải điều chỉnh cổ và cặp mắt để nhìn bóng đúng kỹ thuật:</strong></p>
 <p>Hình 8 – Giải phẫu cổ &amp; trục thị giác: Cổ gồm 7 đốt sống (C1–C7) — phần LINH HOẠT NHẤT cột sống (xoay ~80°/bên). Cơ SCM và cơ trap giữ đầuổn định. Khi đánh: thân xoay rất mạnh nhưng cổ chỉ xoay THEO tới vùng bóng — sau đó MẮT PHẢI NEO cố định vào bóng trong suốt cú đánh. Nếu cổ xoay quá nhiều theo thân → mắt nhìn lệch → đánh bóng không chuẩn (đây là lỗiít người đểý!).</p>
 <p>Đường vạch ngang tượng trưng cho đôi mắt. Bạn sẽ thấy nếu cổ không xoay để giữ tầm nhìn đúng, bạn sẽ nhìn lệch và hậu quả là đánh bóng không chuẩn. Đây là điểm ít người đểý!</p>
-<p>Hình sau đây của Hingis cho bạn thấy cách cô ta giữ được cái đầu và cặp mắt trong khi vẫn đang vặn người:</p>
+<p><strong>Hình sau đây của Hingis cho bạn thấy cách cô ta giữ được cái đầu và cặp mắt trong khi vẫn đang vặn người:</strong></p>
 <ul class="styled-list">
 <li>Nếu lấy đường nối hai vai là một đường thẳng, và đường ngang hông là đường thẳng thứ hai, bạn sẽ thấy hai đường này không song song với nhau vì cơ thể ta lúc đó đang "vặn" để nạp năng lượng (xem hình Hingis ở trên). Khi xoay người lại để đánh bóng, hai đường này sẽ từ từ song song với nhau, và khi đến đó, cơ thể cần "chốt" lại, để cho cánh tay lao nhanh về phía trước. Nó hoạt động giống như bạn thắng gấp cái xe hơi, thì nguyên cái xe mới bị văng lên mạnh mẽ vậy.</li>
 </ul>
@@ -1154,7 +1166,7 @@ Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và c�
 <p>Nói về điểm tiếp xúc bóng trên vợt. Hãy cố gắng đánh bóng trúng vào 1/3 vợt phía trên, đo từ đỉnh đầu vợt xuống. Bạn nào có vợt Wilson có sơn chữ W, đó chính là vùng mà tôi muốn nói tới. Lý do là các nhà cơ học lý thuyết (dạyở Đại học Bách Khoa) đã tính toán giùm bạn, đây là khu vực tạo ra lực mạnh nhất, và các nhà sản xuất vợt đặt tên cho nó là sweet spot, tức là điểm ngọt, ý nói là đánh banh nghe nó đi rất "ngọt". Một số thầy dạy banh yêu cầu học viên đánh trên đầu vợt, mà không nói rõ đó là điểm này, báo hại một số học viên cứ ráng đánh gần sát cạnh trên hình cong của vợt! Đsung là tam sao thất bổn!</p>
 </li>
 <li>
-<p>Chúý lấy dây căng lưới ở giữa sân làm cột mốc, cho dù bạn đang đứng ở đâu trong sân, mọi cú đánh đều cố gắng kết thúc với hướng vợt (và mặt vợt lúc đánh) hướng về đó, bạn sẽ thấy bóng ít khi ra ngoài biên của sân một cách đáng kinh ngạc!</p>
+<p>Chú ý lấy dây căng lưới ở giữa sân làm cột mốc, cho dù bạn đang đứng ở đâu trong sân, mọi cú đánh đều cố gắng kết thúc với hướng vợt (và mặt vợt lúc đánh) hướng về đó, bạn sẽ thấy bóng ít khi ra ngoài biên của sân một cách đáng kinh ngạc!</p>
 </li>
 <li>
 <p>Nếu đánh đúng, bóng phải đi với tốc độ đủ nhanh, tối thiểu cũng phải 70 km/h. Tùy theo chất lượng cú đánh của đối thủ, bóng có thể bay đến bạn với tốc độ trung bình khoảng 30 km/h. Nếu bạn đánh vợt lại cũng cỡ tốc độ đó, thì theo vật lý, tốc độ mà bóng chịu khi va đạp với vợt lên tới 60 km/h, cộng với vận tốc tịnh tiến của cơ thể khoảng 15km/h, bạn sẽ có</p>
@@ -1164,10 +1176,10 @@ Tuy vậy, để viết một tài liệu, thì có lẽ cái dễ hiểu và c�
 M = Trọng lượng cơ thể bạn + (Vợt + Lưới = không đáng kể)
 V = Tốc dộ tuyệt đối = 75 km/h</p>
 <p>Động năng này sẽ bị mất đi do bóng bị biến dạng khi va đập, do đó sẽ bị mất điước khoảng X% (tôi chưa đo được thông số này vì chưa có thiết bị phù hợp)</p>
-<p>Các bạn giỏi vật lý có thể tính năng lượng lúc va đập theo cách khác, với kết quả tương đương theo công thức:</p>
+<p><strong>Các bạn giỏi vật lý có thể tính năng lượng lúc va đập theo cách khác, với kết quả tương đương theo công thức:</strong></p>
 <p>Năng lượng (power) = Trọng lượng M x 1/2 x Vận tốc bình phương.</p>
 <p>Bạn sẽ thấy với một người nhỏ con, nặng 50 Kg nhưng nếu lực co cơ và duỗi cơ có thể đưa cơ thể đạt vận tốc lúc va đập với bóng cao hơn người nặng 75 Kg (gấp rưỡi anh ta), sẽ tạo ra một năng lượng lớn hơn nhiều như thế nào. Nên nhớ là cơ thể càng to con, lực quán tính sẽ càng lớn, do đó cùng đạp chân vào đất một lực như nhau, anh nào to con sẽ có vận tốc đạt được chậm hơn. Thực tế là người càng to con, vận tốc đạt được trong vài phần trăm giây ngắn ngủi không thể bằng anh nhỏ con được!</p>
-<p>Sau đây là các yếu tố (hay tiêu chuẩn kiểm tra kỹ thuật) - chính trong lúc này:</p>
+<p><strong>Sau đây là các yếu tố (hay tiêu chuẩn kiểm tra kỹ thuật) - chính trong lúc này:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Lăng vợt từ sau ra trước bằng cách xoay người (nhớ là xoay từ chân lên tới trên vai). Vai và cánh tay đi liền với nhau thành một khối. Lực tạo ra chuyển động quay này - như bạn đã biết - là do chân sau đạp vào đất và duỗi ra. Lúc này cùi chỏ nên tiến đến gần người, để tốc độ "bung" được tối đa trong khi bóng đang lao tới, và đầu vợt phải giữ cao hơn điểm định đánh.</p>
@@ -1195,7 +1207,7 @@ V = Tốc dộ tuyệt đối = 75 km/h</p>
 <p>Tôi sẽ dành một phần để nói về điểm rơi phong độ, chuyên dành cho các vận động viên chuyên nghiệp nếu các bạn yêu cầu. Điều này giúp lý giải vì sao có những hôm ta đánh "xuất thần", và có những hôm chẳng ra làm sao dù mới hôm qua, ta đánh như "lên đồng".</p>
 </li>
 <li>
-<p>Điều tối quan trọng nữa là vị trí chạm bóng. Đa số các huấn luyện viên đều nói đánh bóng trước người. Thế nhưng thế nào là trước người? Hình sau đây giúp làm sáng tỏ điều này. Nếu nhìn ở một phương nào đó (xem hình), bạn sẽ thấy đúng là bóng ở trước người. Thực tế là, mặt phẳng phát huy lực nằmở phần giao nhau của hai mũi chân và hướng bay của bóng. Bạn cần chạm trễ nhất làở đường chấm phía sau, và chạm sớm nhất làở đoạn chấm phía trước như trong hình.</p>
+<p>Điều tối quan trọng nữa là vị trí chạm bóng. Đa số các huấn luyện viên đều nói đánh bóng trước người. Thế nhưng thế nào là trước người? Hình sau đây giúp làm sáng tỏ điều này. Nếu nhìn ở một phương nào đó (xem hình), bạn sẽ thấy đúng là bóng ở trước người. Thực tế là, mặt phẳng phát huy lực nằm ở phần giao nhau của hai mũi chân và hướng bay của bóng. Bạn cần chạm trễ nhất làở đường chấm phía sau, và chạm sớm nhất làở đoạn chấm phía trước như trong hình.</p>
 </li>
 </ul>
 <p>Mặt khác, tùy theo bạn chọn lối đánh có vòng cung đánh bóng của bạn là xa người hay gần người, điểm chạm bóng sẽ thay đổi như hình dưới đây.</p>
@@ -1223,7 +1235,7 @@ V = Tốc dộ tuyệt đối = 75 km/h</p>
 </ul>
 <p>Với lực đánh rất mạnh ở trên, cánh tay bạn không thể dừng đột ngột trên không, vì vậy vợt sẽ phải đi thêm một đoạn gọi là follow through. Từ này do cácông dạy tennis bên Mỹ chế ra, mà tôi tin chắc là cácông cũng chẳng hiểu rõ nó, nhưng họ cảm nhận được nó mà thôi. Thực chất của vấn đề này có hàng ngàn cách giải thích, nhưng tôi chỉ lưuý điểm sau đây:</p>
 <p>Hình 6 – Vị trí tiếp xúc bóng lý tưởng: cách trục thân ~30–50 cm về phía trước, ngang tầm eo (rốn → hông). Đánh bóng sát người (bên hông/sau lưng) là sai lầm thường gặp, làm mất lực và không kiểm soát hướng bóng.</p>
-<p>Có nhiều cách follow through (Nadal một kiểu, Federer nữa mới chỉ là hai ví dụ), nhưng chỉ có vài điểm chung trong vô số cách đó:</p>
+<p><strong>Có nhiều cách follow through (Nadal một kiểu, Federer nữa mới chỉ là hai ví dụ), nhưng chỉ có vài điểm chung trong vô số cách đó:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Đầu vợt phải kết thúc cao hơn bàn tay (cầm cán vợt), nếu không, cú đánh sẽ giảm lực và độ xoáy!</p>
@@ -1233,10 +1245,10 @@ V = Tốc dộ tuyệt đối = 75 km/h</p>
 </li>
 </ul>
 <p>Khi đánh mạnh xuyên qua bóng (dính banh), tay bạn sẽ tự động làm hai chuyện: nó vòng lại ra tới sau lưng bạn, và mặt vợt sẽ tự động úp xuống mặt đất một chút, chứ không dựng đứng với cạnh vợt thẳng góc với mặt đất!</p>
-<p>Hình sau đây mô tả cú kết thúc "tệ hại" mà tôi thường hay gặp trên sân của các tay vợt nghiệp dư:</p>
+<p><strong>Hình sau đây mô tả cú kết thúc "tệ hại" mà tôi thường hay gặp trên sân của các tay vợt nghiệp dư:</strong></p>
 <p>Giờ đây, bạn dễ dàng thấy được các sai lầm của anh ta, từ việc để cánh tay trái xuôi theo người chứ không hỗ trợ cho động tác xoay thân, đến việc follow through không đúng nên cú đánh chắc chắn không thể mạnh như hình sau đây (dù chưa phải là hoàn hảo):</p>
 <p>Tuy còn nhiều yếu tố khác nữa phải bàn tới, tôi nghĩ bao nhiêu đây cũng đủ để bạn cải tiến cú thuận tay. Bảng sau đây tổng kết một số điểm tôi cho là mới đối với bạn:</p>
-<p>Trước đây ....................................... Nay thì:</p>
+<p><strong>Trước đây ....................................... Nay thì:</strong></p>
 <ul class="styled-list">
 <li>Đánh quá ngắn ................................ Biết phải đánh dài hơn</li>
 <li>Đánh theo quĩ đạo tùy hứng ............... Đánh theo hình con thuyền, với vị trí đầu và cuối rõ ràng</li>
@@ -1262,21 +1274,20 @@ Hai là, lực đánh lúc này còn nhẹ, cần mượn lực mạnh từ bón
 Ba là, cách tập này giúp bạn luyện phản xạ "vặn" hông rất nhanh. Đánh 500- 1000 lần như vậy mỗi buổi tập.</p>
 <p>5- Lùi dần xuống cuối sân. Vẫn đánh như trên.</p>
 <p>6- Lúc nào lùi dần xuống mà bóng đưa không tới hoặc đi quá ra sau bạn, bạn bắt đầu tập phần chân di chuyển mà tôi sắp sửa viết ra sau đây.</p>
-<p>7- Bắt đầu đánh bóng đều với HLV. Bạn cần đánh được ở mọi vị trí trên sân của bạn, sang mọi vị trí trên sân của HLV. Cụ thể:</p>
+<p><strong>7- Bắt đầu đánh bóng đều với HLV. Bạn cần đánh được ở mọi vị trí trên sân của bạn, sang mọi vị trí trên sân của HLV. Cụ thể:</strong></p>
 <p>a- Gócô giao bóng bên này qua các gócô giao bóng kia
 b- Giữa ô giao bóng này qua các góc củaô giao bóng bên kia.
 c- Đứng cuối sân, lần lượt ở góc thuận tay, giữa sân, và đứng chéo sân (đánh inside out) qua các
 điểm góc cuối, giữa sân bên kia
 d- Đánh như trên (a,b,c) nhưng độ cao bóng bay qua lưới với độ cao khác nhau
-e- Đứng cách vạch cuối sân</p>
-<h3>1.5 mét đánh như trên (a,b,c,d) f- Nâng cao: HLV đưa bóng sang, kêu đánh ở đâu, bạn đánh ở đó!</h3>
+e- Đứng cách vạch cuối sân 1.5 mét đánh như trên (a,b,c,d) f- Nâng cao: HLV đưa bóng sang, kêu đánh ở đâu, bạn đánh ở đó!</p>
 <p>Đánh chậm từng trái một.</p>
 <p>8- Nâng cao: vừa đánh vừa di chuyển khắp mặt sân của bạn. Bắt đầu dùng đồng hồ bấm giờ để đánh giá tốc độ di chuyển. Chỉ được nghĩ 1 phút sau khi đánh được 30 cú liên tiếp! (giống như khi thi đấu với tay vợt dai như đĩa sau này vậy)</p>
 <p>(Sẽ viết tiếp nếu các bạn còn thấy hứng thú đọc - thú thật là tôi không ngờ việc viết ra lại tiêu hao năng lượng đến thế này)</p>
-<p>Tôi trả lời từng ý của bạn:</p>
+<p><strong>Tôi trả lời từng ý của bạn:</strong></p>
 <p>1- Nếu cơ bàn chân của bạn không đủ dẻo, bạn vẫn có thể đánh với chân trụ sau song song với lưới, tức vuông góc với thân người như phương án 2 mà tôi có vẽở trên. Ý niẹm là vậy,còn trên thực tế gia giảm chút ít sao cho cơ thể nó cảm thấy tự nhiên nhất là đúng, đừng gòép quá vì không ai giống ai hết.</p>
 <p>2- Việc khụy gối được các HLV hay nói là động tác "ngồi ghế" trước khi đánh. Bạn lấy cái ghế (loại ghế cao chứ không phải ghế ngồi vĩa hè) ra ngồi theo hướng đánh bóng. Rút cái ghế ra rồi đứng ở tầm đó mà đánh, gia giảm chút đỉnh.</p>
-<p>3- Nếu bạn đứng giữa sân, bóng đang bay giữa sân, thì tầm mắt đó là tốt nhất. Vật thì, khi bóng bay sang chéo sân, có 2 việc bạn cần làm (nếu kịp):</p>
+<p><strong>3- Nếu bạn đứng giữa sân, bóng đang bay giữa sân, thì tầm mắt đó là tốt nhất. Vật thì, khi bóng bay sang chéo sân, có 2 việc bạn cần làm (nếu kịp):</strong></p>
 <ul class="styled-list">
 <li>
 <p>Điều chỉnh bằng bước chân sao cho 2 chân đưa thân người xoay vuông góc với hướng bóng đến như hình vẽ.</p>
@@ -1288,11 +1299,11 @@ e- Đứng cách vạch cuối sân</p>
 <p>Cổ có quay theo thân người một chút cũng không sao, nhưng giới hạn tối đa cho phép quay theo là đến vùng đánh bóng, và khi đánh bóng, mắt nhìn "chằm chằm" vào đó để bảo đảm không đánh sai trên mặt vợt cũng như trên bóng!</p>
 </li>
 </ul>
-<p>Vì không có điều kiện quan sát bạn trên sân nên tôi cũng không hiểu thực tế là bạn sai chỗ nào đó. Hình sau đây cho bạn cóý niệm của một cú đánh đúng mà động tác từ lúc di chuyển đến lúc đánh đâu có khó khăn gì ??? (bao gồm xoay người, hạ thấp trọng tâm, chân sau hỗ trợ đưa về trước, vợt được canh thẳng và dài theo hướng đánh)</p>
+<p>Vì không có điều kiện quan sát bạn trên sân nên tôi cũng không hiểu thực tế là bạn sai chỗ nào đó. Hình sau đây cho bạn có ý niệm của một cú đánh đúng mà động tác từ lúc di chuyển đến lúc đánh đâu có khó khăn gì ??? (bao gồm xoay người, hạ thấp trọng tâm, chân sau hỗ trợ đưa về trước, vợt được canh thẳng và dài theo hướng đánh)</p>
 <p>Cuối cùng, như tôi đã có đề cập, một số kỹ thuật đúng sẽ không thể thực hiện được lúc ban đầu vì cơ thể nó chưa quen. Do đó cần có thời gian mới ra được một tay vợt khá, không thể hôm nay đọc tài liệu, ngày mai ra sân làm y như đứa nó tập như vậy cả năm được!</p>
 <p>Cách chạy tới bóng</p>
 <p>Nếu bạn đã thực tập các cú đánh ở trên, và đánh hỏng, thì 80% là do bước di chuyển không đúng. Từ đây cho đến ngày bạn chạy liêu xiêu thế nào nhưng từ phần hông trở lên vẫn thực hiện được các động tác trên để vẫn có thể đánh "ác" vẫn còn rất xa. Do đó hôm nay tôi nói sơ vài điểm về bước chạy.</p>
-<p>Phần này giải quyết các vấn đề sau:</p>
+<p><strong>Phần này giải quyết các vấn đề sau:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Trước hết vì sao phải chạy? Đứng tại chỗ đánh có được không?</p>
@@ -1309,7 +1320,7 @@ e- Đứng cách vạch cuối sân</p>
 <p>Giờ ta bàn đến chuyện chân nào chạy trước? Cái này phải lý luận nghịch như sau. Thực tiễn chứng minh rằng, khi ta bước chân trên vào bóng thì cú đánh mạnh hơn. Đồng ý? Nhưng muốn chân trên bước vào bóng, chân dưới phải "nhúc nhích" trước. Từ đó, ta đưa ra nguyên lý, muốn chạy thì chân cùng bên với bóng phải di chuyển trước, ngắn hay dài hãy để cho bộ não quyết định, và chân trên (chân gần bóng) sẽ bước vào bóng để đánh đi.</p>
 <p>Nếu gọi một bộ bước như vậy là 1-2, thì nếu bóng xa người quá, bạn cứ vậy mà làm tiếp 3-4. Những bước đầu tiên dĩ nhiên là bước dài, các bước sau đương nhiên là ngắn dần. Bộ não sẽ tính toán dùm điều đó cho bạn. Điều tôi muốn nói là tránh tối đa lối bước 1-2-3 đánh. Nó luôn là số chẵn!</p>
 <p>Một điểm nữa là khi chạy, cố gắng chạy tới (chạy chéo sân), hạn chế chạy ngang. Ngoài lý do là chạy thẳng góc là phương ngắn nhất, bạn phải thấy là cơ thể ta chạy tới nhanh hơn chạy ngang (người Mỹ gọi là shuffle step), và chắc chắn là nhanh hơn chạy lùi!</p>
-<p>Chạy shuffle step là lối chạy mà chân này kéo ngang gần chạm chân kia rồi mới bung ra ngang tiếp. Lối chạy này có hai trường hợp nên sử dụng:</p>
+<p><strong>Chạy shuffle step là lối chạy mà chân này kéo ngang gần chạm chân kia rồi mới bung ra ngang tiếp. Lối chạy này có hai trường hợp nên sử dụng:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Khi bị đối thủ đánh ra góc. Hãy dùng ngay shuffle step rồi mới chạy chéo lên. Chỉ cần vẽ hình trên giấy, bạn sẽ thấy đó là cách chạy tốt nhất vì quãng đường di chuyển ngắn nhất khi bị đánh dạt ra góc, và vẫn bảo đảm đưa được vận tốc tuyến tính của thân hình phụ vào lực đánh bóng!</p>
@@ -1320,7 +1331,7 @@ e- Đứng cách vạch cuối sân</p>
 </ul>
 <p>Chạy tới kịp, đánh bóng đi rồi thì còn một chuyện nữa phải bàn đó là đà chạy sẽ làm người bạn còn trớn rất mạnh, khiến chân sau sẽ bước chồm thêm một bước nữa. Trong trường hợp đó, hãy cố gắng giữ cho chân sau luôn ở sau chân trước, nếu không bạn sẽ bị mất lực đánh đáng kể!</p>
 <p>Hình sau đây mô tả tình trạng đó. Hãy lưuý hình dưới, đó là cách dừng lại sau một cú chạy và đánh!</p>
-<p>Để tạm thời kết lại phần này, tôi lưuý các bạn 2 điều rất quan trọng:</p>
+<p><strong>Để tạm thời kết lại phần này, tôi lưuý các bạn 2 điều rất quan trọng:</strong></p>
 <p>1- Chỉ vì chúng ta thuận tay phải chân phải, mà khi đánh bên phải chúng ta bước chân sau (là chân phải) thoải mái nên cú đánh rất dễ dàng. Bạn nào muốn cải thiện cú trái tay, hãy tập chân bên tay nghich sao cho nó linh hoạt như chân bên thuận vậy. </p>
 <p>Đa số các tay Pro đều đánh được hai tay, lý do là các huấn luyện viên yêu cầu họ tập đánh như vậy để cải thiện cái chân bên không thuận của họ!</p>
 <p>2- Trừ phi bạn đang di chuyển, kể cả khi đang di chuyển lố đà, bạn có thể dễ dàng di chuyển tiếp. Nếu đang đứng yên, trước mỗi bước chạy bắt buộc phải có split step. Có nghĩa là lúc đối thủ chuẩn bị đánh bên kia, bên này bạn phải "nhún" một bước nhẹ, để giúp cơ thể có đà chạy kịp tới bóng. </p>
@@ -1328,8 +1339,8 @@ e- Đứng cách vạch cuối sân</p>
 <p>Kỹ thuật đánh cú líp (thuận tay)</p>
 <p>Nếu bạn có thực tập qua những bài đánh tôi đã nêuở trên, bạn sẽ thấy có rất nhiều cú đánh với lối đánh như trên (từ nay tôi gọi là đánh flat - tức đánh ngang theo nghĩa tiếng Anh) rất khó vô sân. </p>
 <p>Vài chục năm về trước, khi công nghệ vợt chưa được như bây giờ, các cao thủ cũng chịu cùng số phận như bạn thôi. May thay, thời nay chúng ta được thừa hưởng nhiều cải tiến mà các tay vợt hàng đầu thế giới hồi đó chưa có được. Một trong những phát minh cải tiến kỹ thuật đánh là cú đánh thuận tay líp (tiếng Anh: lift - nhấc lên). </p>
-<p>Trước tiên hãy cùng nhau thống nhất nghĩa của cú líp, trước khi bàn đến cách tốiưu để tạo ra nó. Sau đây là cách định nghĩa líp mà theo tôi là đầy đủ nhất:</p>
-<p>Đánh líp có nghĩa là bạn đánh trái banh sao cho:</p>
+<p>Trước tiên hãy cùng nhau thống nhất nghĩa của cú líp, trước khi bàn đến cách tối ưu để tạo ra nó. Sau đây là cách định nghĩa líp mà theo tôi là đầy đủ nhất:</p>
+<p><strong>Đánh líp có nghĩa là bạn đánh trái banh sao cho:</strong></p>
 <ul class="styled-list">
 <li>Nó xoáy vòng so với chính bản thân nó, VÀ chiều xoáy cùng chiều chuyển động tịnh tiến của nó.</li>
 </ul>
@@ -1348,13 +1359,13 @@ e- Đứng cách vạch cuối sân</p>
 </ul>
 <p>Đa số người chơi đều nghĩ rằng, do ta đánh líp, bóng đi cao nên nó sẽ bật cao hơn sau khi tiếp xúc sân bên kia. Thực nghiệm đã cho thấy suy nghĩ này hoàn toàn sai. Quĩ đạo bóng được líp lúc rời vợt có cao hơn bóng plat, nhưng sau đó nhanh chóng bay thấp hơn, rồi chạm đất với độ cao thấp hơn hẳn! Đây là khám phá thú vị, phải không bạn?</p>
 <p>Cũng cần phải lưuý các bạn ngay ở đây một điều nữa: để tạp xoáy, không nhất thiết vợt phải đánh từ thấp lên cao, thậm chí dựng đứng như đa số các tay vợt mà tôi thấy. Quĩ đạo vợt có thể là dựng đứng, hoặc dốc lên, hoặc nằm ngang và đi tới trước, từ cao đi xuống thấp, và cả đi ra phía sau nữa!</p>
-<p>Hình sau đây cho thấy điều đó rõ ràng hơn:</p>
-<p>Quan sát này dẫn đến hai kết luận quan trọng:</p>
+<p><strong>Hình sau đây cho thấy điều đó rõ ràng hơn:</strong></p>
+<p><strong>Quan sát này dẫn đến hai kết luận quan trọng:</strong></p>
 <p>Thứ nhất, có thể tạo xoáy bằng cách đánh líp với bất cứ quĩ đạo nào của vợt, và bóng sẽ luôn xoáy về phía trước. Nếu vậy, ta sẽ đánh xoáy với quĩ đạo vợt đi ngang để tăng thêm tốc độ tịnh tiến cho bóng. Đa số các tay Top ATP đều đánh như vậy, trong khi anh chàng bình luận viên thản nhiên phán: quả bạt cực mạnh!!! Không có đâu bạn, họ đánh líp với quĩ đạo vợt đi ngang đó!</p>
 <p>Thứ hai, vậy thì yếu tố nào là yếu tố quyết định để tạo nên xoáy cho bóng? Phân tích trên cho thấy, chính độ nghiêng của vợt so với quĩ đạo mới là yếu tố quyết định! Điều này cũng cho thấy nếu bạn đánh với mặt vợt thẳng góc với sân, và quĩ đạo đánh cũng thẳng góc với sân sẽ chẳng tạo ra xoáy như mong muốn (thậm chí nó chỉ "gãi" vào bóng chứ chẳng đưa được bóng đi đâu như hình dưới đây:</p>
 <p>Đa số người chơi thường hay nghĩ đến mặt vợt so với mặt đất hơn là so với quĩ đạo của vợt! Do đó, một cách vôý thức họ phạm phải lỗi kỹ thuật căn bản để đánh bóng xoáy. Cuối cùng thì cú đánh của họ flat chẳng ra flat, xoáy chẳng ra xoáy mà ta sẽ phân tích sau (để tránh).</p>
 <p>Chuyện không dừng ở đó. Như trên tôi có nói mặt lưới và bóng bị biến dạng, do đó yếu tố thứ hai để tạo nên cú líp là vợt phải đánh với tốc độ rất nhanh! Chỉ có như vậy, mặt lưới và bóng mới phối hợp với nhau để tạo được xoáy như ta mong đợi! Thực tế phân tích phim chiếu chậm cho thấy khi đánh líp, mặt vợt (lưới vợt) ít bị biến dạng hơn khi đánh flat.</p>
-<p>Tóm lại. Phần dài dòng trên đây chỉ để chốt lại 2 điều khi ta muốn tạo xoáy:</p>
+<p><strong>Tóm lại. Phần dài dòng trên đây chỉ để chốt lại 2 điều khi ta muốn tạo xoáy:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Mặt vợt phải nghiêng một góc a với quĩ đạo của nó.</p>
@@ -1363,7 +1374,7 @@ e- Đứng cách vạch cuối sân</p>
 <p>Tốc độ đánh phải cao, cao hơn nhiều khi đánh cú flat.</p>
 </li>
 </ul>
-<p>Hai điều này dẫn đến vàiứng dụng sau đây khi đánh:</p>
+<p><strong>Hai điều này dẫn đến vàiứng dụng sau đây khi đánh:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Nếu bạn không có sức khỏe, đừng nghĩ đến tập rồi sử dụng cú này cho ra hồn để đánh ăn người ta. Đây là một trong các lý do chính tại sao các tay vợt Việt Nam và Châu Á nói chung (đặc biệt là nam giới), khó lòng cạnh tranh nổi với tụi châu Âu. Nó khỏe như voi so với chúng ta cao lắm chỉ là cọp.</p>
@@ -1376,7 +1387,7 @@ e- Đứng cách vạch cuối sân</p>
 <ul class="styled-list">
 <li>Tương tự như vậy cho khi bóng thấp ngang đầu gối. Ở tư thế này, vùng power cũng tương tự như khi bóng caoở trên. Do đó, hãy đánh líp thật mạnh với cùng nguyên tắc đó. Bóng sẽ vòng sang sân và lao tới chằng khác cú đánh ngang hông là mấy, tất cả chỉ là nhờ kỹ thuật líp! </li>
 </ul>
-<p>Đến đây bạn nhận thấy cú líp cóưu thế vượt trội so với cú flat khi đánh banh cao và banh thấp:</p>
+<p><strong>Đến đây bạn nhận thấy cú líp cóưu thế vượt trội so với cú flat khi đánh banh cao và banh thấp:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Khi bóng cao (ngang vai), nếu đánh flat, với lực mạnh, dĩ nhiên là bóng dễ ra ngoài. Nếu đánh líp, bạn có thể tung ra hết sức của mình thoải mái hơn</p>
@@ -1398,11 +1409,11 @@ e- Đứng cách vạch cuối sân</p>
 <p>Ba là, do đánh dốc lên ngắn như vậy, thì hầu như không có lực chuyển động ngang tịnh tiến được tạo ra, bóng vừa yếu vừa không xoáy như vậy biến bạn chỉ là mồi ngon, là trò chơi cho đối thủ biết đánh họ vờn bạn!</p>
 </li>
 </ul>
-<p>Bây giờ xét đến các tay vợt trung bình. Họ - tuy có khá hơn - nhưng lại cũng phạm phải một số lỗi sau đây:</p>
-<p>Họ đánh dốc lên rất nhanh, với quĩ đạo gần như thẳng như hình sau đây:</p>
-<p>Hoặc họ đánh ngang, rồi giật dốc lên đột ngột trước khi chạm bóng như hình sau:</p>
+<p><strong>Bây giờ xét đến các tay vợt trung bình. Họ - tuy có khá hơn - nhưng lại cũng phạm phải một số lỗi sau đây:</strong></p>
+<p><strong>Họ đánh dốc lên rất nhanh, với quĩ đạo gần như thẳng như hình sau đây:</strong></p>
+<p><strong>Hoặc họ đánh ngang, rồi giật dốc lên đột ngột trước khi chạm bóng như hình sau:</strong></p>
 <p>Tại sao đánh như vậy là sai? Các bạn cho tôi giải lao rồi mai tôi hầu chuyện tiếp!</p>
-<p>Khi đánh với đường thẳng dốc lên như hình trên, bạn có 2 khuyết điểm:</p>
+<p><strong>Khi đánh với đường thẳng dốc lên như hình trên, bạn có 2 khuyết điểm:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Với bóng thấp, đoạn đường vợt đi chưa được bao nhiêu đã chạm bóng. Do đó tốc độ vợt khi tiếp xúc bóng không lớn, và kết quả là bóng không đủ xoáy. Mặt khác, kể cả xét theo phương ngang, chuyển động tịnh tiến cũng chưa tăng tốc đủ để tạo lực đánh ngang, nên bóng cũng không đi nhanh về trước được.</p>
@@ -1429,10 +1440,9 @@ e- Đứng cách vạch cuối sân</p>
 <p>Giờ ta xét đến trường hợp đánh thẳng phía dưới rồi dốc gấp lên (như hình dưới ở trên đây). Cú đánh này nhờ có đoạn vợt đi ngang trước đó nên đã có vận tốc khá cao, nhưng khi bạn "bẻ lái" nó lên, bạn vô tình phạm phải lỗi mà tôi có nói đếnở đoạn đầu: bạn bắt chiếc xe đua chạy nhanh trong một đoạn cua quá gắt! Hậu quả là nỗ lực tăng tốc trước đó lại bị mất đi do đoạn cua này quá gắt!</p>
 <p>Điều đáng nóiở đây là các bạn đã gần đi đến giải pháp để đánh cú líp. Thế nhưng do nghĩ không ra, đa số các tay vợt trung bình đều mày mò tìm cách cải tiến vấn đề khi bóng líp của họ cứ không nhưý. Thế rồi họ cứ thấy trình độ của mình tuy có khá hơn bạn nhập môn, nhưng cứìạch, hoặc có bữa - thậm chí có trái - đánh rất ngon (do vô tình đánh đúng kỹ thuật), còn bữa khác - hay trái khác - lại dở như cũ!</p>
 <p>Đến đây, hẳn bạn sẽ muốn biết: vậy cú đánh líp phải đánh thế nào cho đúng? Sau đây là phần hướng dẫn.</p>
-<p>Động tác chính (cơ bản) khi đánh líp có quĩ đạo như sau:</p>
-<p>Nhận xét:</p>
-<p>1- Bạn cần lùi đầu vợt ra phía sau thân người, thậm chí nếu lùi được thân người ra sau điểm tiếp xúc bóng càng xa càng tốt. Như vậy bạn sẽ có quãng đường để vận tốc của vợtở đoạn ngang trên đây lớn nhất (tôi đo được đoạn đường đi ngang này tối thiểu là</p>
-<h3>1.5 mét!)</h3>
+<p><strong>Động tác chính (cơ bản) khi đánh líp có quĩ đạo như sau:</strong></p>
+<p><strong>Nhận xét:</strong></p>
+<p>1- Bạn cần lùi đầu vợt ra phía sau thân người, thậm chí nếu lùi được thân người ra sau điểm tiếp xúc bóng càng xa càng tốt. Như vậy bạn sẽ có quãng đường để vận tốc của vợtở đoạn ngang trên đây lớn nhất (tôi đo được đoạn đường đi ngang này tối thiểu là 1.5 mét!)</p>
 <p>2- Mặt vợt cần được điều chỉnh để nó gần như song song với mặt đất trong quá trình chuyển động ngang này.</p>
 <p>3- Trong suốt quá trình di chuyển này, ngoài chuyển động tịnh tiến ngang của tay, cần kết hợp xoay (pronate) cả cánh tay (bao gồm cánh tay trên + cánh tay trước) để tăng tốc tối đa!</p>
 <p>4- Khi đến "điểm quẹo", phải lướt vợt sao cho khúc cua này không quá gắt. Muốn vậy bạn phải canh đoạn đường nằm ngang trên đây chỉ được thấp hơn bóng một chút. Nếu thấp hơn bóng quá, bạn bị rơi vào cái lỗi "bẻ cua gắt" như đã nóiở trên!</p>
@@ -1445,7 +1455,7 @@ e- Đứng cách vạch cuối sân</p>
 <li>Lực xoay vai theo mặt phẳng dọc (ở đoạn dốc lênở trên - ngang thời điểm tiếp xúc bóng)</li>
 <li>Lực cổ tay đẩy mũi vợt ra trước, kết hợp xoay mũi vợt thành một vòng tròn "chà xát" lên mép bóng</li>
 </ul>
-<p>Lưuý:</p>
+<p><strong>Lưuý:</strong></p>
 <ul class="styled-list">
 <li>Tùy theo độ cao thấp của bóng, bạn phải điều chỉnh:</li>
 </ul>
@@ -1456,7 +1466,7 @@ e- Đứng cách vạch cuối sân</p>
 <li>Mặt vợt so với quĩ đạo có thể có 2 dạng cho phép như sau:</li>
 </ul>
 <p>Lối đánh xoáy của Nadal</p>
-<p>Lối đánh xoáy của Federer, đặc biệt là Djokovik:</p>
+<p><strong>Lối đánh xoáy của Federer, đặc biệt là Djokovik:</strong></p>
 <p>Để bạn dễ hình dung tư thế lúc đánh, tôi đưa lên đây hình của Federer - trong vô số đoạn clip chiếu chậm mà bạn có thể tìm thấy để minh họa cho những gì đã đề cậpở trên.</p>
 <p>(chưa hết đâu bạn, đi vào chi tiết còn vài yếu tố quan trọng nữa)</p>
 <p>Sau lần viết này, có lẽ tôi sẽ ngưng viết một thời gian khá lâu vì phải đi chơi xa (Nha Trang + Côn Đảo + Campuchia) với mấy đứa cháu bên ngoại quốc về!</p>
@@ -1489,7 +1499,7 @@ e- Đứng cách vạch cuối sân</p>
 <p>Độ xoáy của bóng vào thời điểm tiếp xúc</p>
 </li>
 </ol>
-<p>2- Còn để kiểm tra kết quả đầu ra của cú đánh có được sau khi tổ chức huy động các yếu tố trên, ta có các yếu tố sau:</p>
+<p><strong>2- Còn để kiểm tra kết quả đầu ra của cú đánh có được sau khi tổ chức huy động các yếu tố trên, ta có các yếu tố sau:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Lực trái bóng mang đi lúc rời vợt (đo bằng khối lượng bóng x gia tốc lúc rời vợt)</p>
@@ -1504,14 +1514,14 @@ e- Đứng cách vạch cuối sân</p>
 <p>Một phần nữa là nhìn vào đoạn follow through cũng sẽ cho thấy được lúc tiếp xúc bóng đã xảy ra như thế nào. Lúc này tuy bóng đã rời vợt, nhưng nếu tốc độ bạn đánh lúc tiếp xúc bóng cao, lực quán tính chắc chắn sẽ tạo ra kết quả follow through khác hẳn. Bạn nào có đoạn follow through yếuớt, thì một điều chắc chắn là lực và tốc độ lúc vợt / bóng tiếp xúc hãy còn rất yếu, xa với khả năng và yêu cầu bạn có thể và cần tạo ra, còn mấtở đâu đó thì lại có khá nhiều giai đoạn phải xem xét.</p>
 </li>
 </ul>
-<p>Phần bài viết của tôi cho đến nay chỉ mới đụng chạm đến một vài yếu tố cơ bản trong các yếu tố trên, chứ thực ra chưa đi sâu hơn vào các yếu tố khác để tránh làm các bạn loạn óc!</p>
+<p><strong>Phần bài viết của tôi cho đến nay chỉ mới đụng chạm đến một vài yếu tố cơ bản trong các yếu tố trên, chứ thực ra chưa đi sâu hơn vào các yếu tố khác để tránh làm các bạn loạn óc!</strong></p>
 <p>Tuy vậy, tôi cũng đã lưuý ngay từ phần mở đầu là ta cần tổ chức sao cho huy động được lực tối đa, và khắc phục được các trở ngại do hệ cơ, gân, xương nó cản trở. Do đó, nếu có điểm gì còn mù mờ, bạn cứ cầm cây vợt ra múa chậm chậm, và quan sát xem động tác nào giúp:</p>
 <p>Hoặc tốc độ vợt đi nhanh hơn, cơ thể thấy dễ chịu hơn
 Hoặc lực truyền dẫn sang bóng mạnh hơn (chính xác hơn là rơi rớt hay xài đúng chuyện hơn, và liên tục được bổ sung nhờ các bộ phận khác đưa tới)</p>
 <p>mà bạn
 Hoặc làít tốn sức huy động
 Hoặc là huy động được lớn nhất với thời gian chuẩn bịít nhất (dùng trong các trường hợp cứu bóng khó)</p>
-<p>Và trong mọi trường hợp, lực rơi rớt trên quá trình di chuyển phải làít nhất. Muốn vậy đừng để cơ thểở trong các tình trạng sau đây:</p>
+<p><strong>Và trong mọi trường hợp, lực rơi rớt trên quá trình di chuyển phải làít nhất. Muốn vậy đừng để cơ thểở trong các tình trạng sau đây:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Mất lực do tư thế cơ thể bị kẹt, gây ra ma sát cản các động tác của bạn</p>
@@ -1534,7 +1544,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Hy vọng phần này làm rõ được câu hỏi 1 của bạn.</p>
 <p>Trả lời câu hỏi 2 hơi khó vì nó đụng đến một số yếu tố mà tôi chưa kịp nói đến vì nhiều cân nhắc như bạn đã biết. </p>
 <p>Trước hết lại cần làm rõ thế nào là double bend? Đó là cùi chỏ luôn nằm sau đường thẳng nối cổ tay và chóp vai. Thực tế là tay ta chỉ mạnh khi cùi chỏ luôn nằm sau đường này. Tuy nhiên với lối đánh có double bend, hình tam giác này lớn đáng kể để bàn tới. </p>
-<p>Tuy vậy, tạm thời nếu bạn cứ để cánh tay cong kiểu double bend và đánh thử không bóng, bạn sẽ thấy:</p>
+<p><strong>Tuy vậy, tạm thời nếu bạn cứ để cánh tay cong kiểu double bend và đánh thử không bóng, bạn sẽ thấy:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Vùng phát lực sẽở trước người nhiều hơn đánh với cánh tay thẳng như tôi đã vẽ trong hình mô tả vị trí tiếp xúc bóng</p>
@@ -1552,7 +1562,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </ul>
 <p>mà mỗi động tác cần được biến hóa gia giảm một tí. </p>
 <p>Do tôi có mày mò trước các bạn, do đó tôi có khá nhiều kinh nghiệm xử lý mà tạm thời không thể viết hết ra đây được. Nhân đây cũng xin trả lời bạn nàoở trên có hỏi về một loạt tình huống bóng đến là khoan hãy tìm hiểu về các phần đó. Hãy hiểu rõ những yếu tố trên đây đã. Sau đó thực tế + thí nghiệm sẽ giúp bạn vỡ ra, cũng như sau khi đọc xong hết một lượt các động tác backhand, giao bóng, lốp, bỏ nhỏ, vô lê ....bạn sẽ hình dung lại được dựa trên loanh quanh cũng các yếu tố này mà thôi.</p>
-<p>Trên tinh thần chung thì:</p>
+<p><strong>Trên tinh thần chung thì:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Cú đánh flat tập trung vào dẫn lực đánh đi qua trọng tâm của bóng, và đánh với lực mạnh nhưng tốc độ chuyển động của mặt lưới so với bóng không cao</p>
@@ -1561,7 +1571,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cú đánh líp tập trung vào dẫn lực đánh lệch trọng tâm của bóng tối đa, và đánh với lực đi tới đa số trường hợp không thể mạnh như flat nhưng tốc độ chuyển động của mặt lưới so với bóng cao hơn rất nhiều</p>
 </li>
 </ul>
-<p>Dĩ nhiên nguồn lực bạn tạo ra là có hạn, và tổng nguồn lực tạo ra chỉ để cung cấp năng lượng cho:</p>
+<p><strong>Dĩ nhiên nguồn lực bạn tạo ra là có hạn, và tổng nguồn lực tạo ra chỉ để cung cấp năng lượng cho:</strong></p>
 <ul class="styled-list">
 <li>chuyển động tịnh tiến của bóng</li>
 <li>chuyển động quay của bóng</li>
@@ -1574,7 +1584,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Nhân cái hình trên đây, tôi lại muốn mượn nó để nêu lên mộtý / một vấn đề khác khi đánh.</p>
 <p>Bạn đã biết là có 2 mặt phẳng cần hiểu thấu đáo khi đánh: nhìn từ trên đầu xuống và nhìn ngang người. Câu hỏi tôi đặt ra trước đây (và vẫn chưa có cao thủ nào chịu xuất hiện chỉ giáo) là xét trên mặt phẳng ngang (ngó từ trên đầu xuống). Hình chụp chậm cho thấy chuyện xảy ra khi xét trên mặt phẳng dọc (nhìn từ bên ngang hông qua). </p>
 <p>Mời bạn xem hình dưới đây.</p>
-<p>Lúc đánh bóng, bóng chịu 2 lực tác dụng:</p>
+<p><strong>Lúc đánh bóng, bóng chịu 2 lực tác dụng:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Trọng lượng (khoảng 50-57 gr), rất nhỏ nhưng không thể coi thường vì độ dài bay đi khá lớn. </p>
@@ -1586,7 +1596,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi bóng bay, nó chịu thêm tác động ma sát của không khí. Lực này nặng hơn các bạn tưởng nhiều. Sức cản của không khí nặng đến mức, khi bóng đươc đánh ra với vận tốc 100 km/giờ, chỉ còn ... 70 km/giờ mà thôi, tức khoảng 30%. Khi bạn đánh với topspin (mà thực tế là ta luôn phải đánh với topspin, sau khi đọc xong phần này bạn sẽ thấy), thì không khíép trái bóng xuống sân lẹ hơn nữa.</p>
 <p>Không đi sâu vào tính toán mấy chuyện đó cho nhức đầu. Bạn chỉ cần xem hình vẽ trên đã thấy, nếu bạn đánh ngang khi chạm bóng, lực tổng hợp (lực ngang + trọng lực tác động lên bóng) sẽ làm cho bóng chạm lưới, thậm chí chạm sân ... bên phần sân của bạn.</p>
 <p>Do đó, bạn buộc phải đánh lên như mũi tên màu đỏ dưới đây là tối thiểu. </p>
-<p>Từ đây có vài hệ quả:</p>
+<p><strong>Từ đây có vài hệ quả:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Bạn "bị buộc" phải đánh có xoáy, vì nếu bạn để ngửa mặt vợt để nó vuông góc với hướng đánh lên này, thì góc mở lớn hơn 2 độ, mà tôi đã nói là tính toán cho thấy chỉ cần mở vợtở 92 độ thôi mà đánh thẳng lên như vậy, thì bóng ra ngoài là cái chắc.</p>
@@ -1607,7 +1617,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Nhân vụăn uống, tôi lại nảy raý nghĩ viết phần này, cóích hay không tùy bạn cảm nhận, nhưng tốt là cái chắc.</p>
 <p>Có lần tôi ra sân, nhìn thấy các bạn trẻ đánh màốm nhom tội nghiệp. Hỏi ra thìăn uống không đến nỗi nào, nhưng ... đã hơn 20 năm rồi chưa bao giờ uống thuốc sổ lãi! Nền giáo dục của ta tệ đến mức không tạo được cho công dâný thức và kiến thức tối thiểu về sức khỏe (cái mà tôi cam đoan chỉ có ai bị thiệt hại rồi mới hiểu nó quí như thế nào. Bạn thử nghĩ có tiền mà ...ăn không ngon, ngủ không yên, suốt ngày đau nhức. Liệu có đáng đánh đổi không?)</p>
 <p>Khi tôi đề nghị uống thuốc sổ lãi đi. Các bạn đó lập tức nói: uống Fugacare hả? Nói thật là thứ thuốc này trị được ít giun lãi bậc nhất trong các thứ thuốc trị lãi, nhưng do quảng cáo tràn lan nên đa số mọi người nhớ. Một trong những loại đáng để uống là ZENTEL. Mỗi năm tối thiểu một lần (trước Tết chẳng hạn), hãy mua và bắt mọi người trong gia đình uống! Thật là hoang phí nếu cứăn rồi để cả đống con lãi trong ruột ... ăn ké 365 ngày x 10 năm! Bạn nào từng nuôi cá đá sẽ thấy một ngày nóăn bao nhiêu là đồăn, thế mà bạn nuôi cả ... trăm con lớn nhỏ như vậy làít trong bụng!</p>
-<p>Mặt khác. Tôi thấy cũng không ít bạn bụng bự, người đầy mỡ đi đánh tennis. Cái này hại kiểu khác:</p>
+<p><strong>Mặt khác. Tôi thấy cũng không ít bạn bụng bự, người đầy mỡ đi đánh tennis. Cái này hại kiểu khác:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Người mập mạp luôn đánh chậm, dẫn đến đánh dở (cũng không sao, nếu mục tiêu là giảm béo)</p>
@@ -1620,10 +1630,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cái đáng nói nhất là đa số coi thường và thiếu kiến thức cơ bản về chế độăn uống hợp lý. Do đó tôi ghi lại tóm tắtở đây vàiý chính.</p>
 <ul class="styled-list">
 <li>
-<p>Tennis có thể giúp giảm cân, và chữa trị bệnh GIẢM THIỂU Chúý ở trẻ nhỏ và người lớn tuổi. Con số nàyở Hoa Kỳ lên tới 15 triệu người/năm. Ở VN tôi chưa có số liệu nhưng tin chắc không nhỏ!</p>
+<p>Tennis có thể giúp giảm cân, và chữa trị bệnh GIẢM THIỂU Chú ý ở trẻ nhỏ và người lớn tuổi. Con số nàyở Hoa Kỳ lên tới 15 triệu người/năm. Ở VN tôi chưa có số liệu nhưng tin chắc không nhỏ!</p>
 </li>
 <li>
-<p>Muốn ăn uống đạt mục tiêu luyện tập để đánh hay hoặc giảm béo, cần:</p>
+<p><strong>Muốn ăn uống đạt mục tiêu luyện tập để đánh hay hoặc giảm béo, cần:</strong></p>
 </li>
 <li>
 <p>Trước khi chơi, cân ký. Sau khi chơi. Cân ký. Nếu số ký không giảm, bạn đã uống đủ nước bổ sung. Nếu giảm, lần sau trước khi chơi uống bằng số giảm này nhân với 1.5</p>
@@ -1653,7 +1663,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Ngay sau khi tập xong (thậm chí trong lúc tập), nạp nhẹ chất bổ (chuối chẳng hạn) để bổ sung, không để cơ thể kiệt quệ. Khiăn sau đó, cơ thể sẽ tự động "dự trữ chất béo" để đối phó với tình huống này.</p>
 </li>
 <li>
-<p>Buổi tốiăn càng ít càng tốt. Cơ thể sẽ tự động trữ mọi thứ thừa thành mỡ vào ban đêm.</p>
+<p><strong>Buổi tốiăn càng ít càng tốt. Cơ thể sẽ tự động trữ mọi thứ thừa thành mỡ vào ban đêm.</strong></p>
 </li>
 <li>
 <p>Một điểm quan trọng nữa là uống nước. 70% cơ thể ta là nước. Nước không đủ thì cơ không thể hoạt động đúng mức được, đánh hư là chuyện tất yếu. Không bao giờ để cơ thể phát đi tín hiệu khát nước, không bao giờ để nước tiểu có màu vàng (nó phải luôn trong).</p>
@@ -1667,7 +1677,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi bóng chạm lưới, lưới và bóng đều bị biến dạng (lưới thì cong về bên bị bóng đánh tới, còn bóng thì lõm vào). Đến một lúc nào đó thì sự biến dạng này ngừng lại, và cuối cùng cả hai cái đều lấy lại hình dạng ban đầu (thậm chí còn tạo ra dao động) và bay ra. Với cấu trúc mỏng manh của lưới, nó đàn hồi tốt hơn bóng, vì vậy nó hấp thu năng lượng của bóng mang tới, và trả lại đến 90% lượng này. </p>
 <p>Đến đây bắt đầu có vài chuyện hay ho để nói.</p>
 <p>1- Nếu bạn biết cách đan dây, bạn có thể tạo thêm xoáy cho bóng. Lý do là khi đánh, dây dọc thường hayở vị trí chịu trách nhiệm ma sát với bóng để tạo topspin hơn là xoáy ngang. Dây dọc bị bóng giữ lại, võng xuống rồi đàn hồi lại sẽ giúp đánh bật bóng theo chiều tạo xoáy khi bóng rời vợt. </p>
-<p>Sau khi làm hàng loạt các thí nghiệm, các nhà vật lý xác nhận chỉ có 3 yếu tố sau đây là có đóng góp đáng kể cho việc tạo xoáy:</p>
+<p><strong>Sau khi làm hàng loạt các thí nghiệm, các nhà vật lý xác nhận chỉ có 3 yếu tố sau đây là có đóng góp đáng kể cho việc tạo xoáy:</strong></p>
 <p>a- Dây đan cứng hay đan mềm</p>
 <p>b- Dây có độ đàn hồi cao hay thấp (và khả năng duy trì độ đàn hồi này bao lâu sau khi căng vợt)</p>
 <p>c- Cách đan giữa dây dọc và dây ngang.</p>
@@ -1682,14 +1692,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi vợt bị bóng đập vào, nó dao động đại khái như các búi sóng hình sin đối xứng nhau. Nó làm bạn nghe cảm giác run tay bần bật, và truyền đến các khớp tay + cùi chỏ làm đau elbow. Đã là sóng thì sẽ có điểm màở đó đường hình sin cắt ngang trục hoành, nói dễ hiểu làở đó không có dao động. Tức là đánh đúng vào đó thì cán vợt không bị rung nên nghe êm tay vàít bị đau elbow nhất.</p>
 </li>
 <li>
-<p>Ngoài ra, vợt còn có điểm đặc biệt nữa là điểm không làm bật cán vợt. Nguyên lý như sau:</p>
+<p><strong>Ngoài ra, vợt còn có điểm đặc biệt nữa là điểm không làm bật cán vợt. Nguyên lý như sau:</strong></p>
 </li>
 </ul>
 <p>Khi đánh bóng, ta tác động lên vợt một lực quay về phía trước, có nghĩa là cán lùi về phía sau. </p>
 <p>Mặt khác, khi bóng đập vào vợt, thì ngoài chuyển động tịnh tiến theo chiều ngược lại làm triệt tiêu mất phần nào tốc độ tịnh tiến đi tới của vợt, nó còn tạo ra một lực quay (do bóng đập vào mặt lưới không bao giờở đúng trọng tâm vợt) làm cho cán vợt đi về phía trước. </p>
 <p>Tổng hợp haiý trên rốt cuộc dẫn đến kết quả là vợt sẽ quay quanh một điểm nào đó không phải là cán vợt. Do đó nếu đánh không đúng điểm này thì cán vợt có xu hướng bật ra khỏi tay, hoặc ép mạnh vào lòng bàn tay. Điều này làm cú đánh không chính xác vì nó xảy ra cùng lúc với thời điểm bóng ăn vào lưới mạnh nhất mà vẫn chưa kịp bay đi (không có thời gian trễở đây). Chưa kể nó có thể gây chấn thương cho cổ tay hoặc cho partner vìăn phải cây vợt của bạn!</p>
 <ul class="styled-list">
-<li>Cuối cùng, bạn nên biết là muốn đánh mà bóng bật lại khỏi vợt mạnh / nhanh nhất thì điểm đánh đó càng ở gần trọng tâm càng tốt. Nó nằmở cuối vợt chứ không ở đầu vợt.</li>
+<li>Cuối cùng, bạn nên biết là muốn đánh mà bóng bật lại khỏi vợt mạnh / nhanh nhất thì điểm đánh đó càng ở gần trọng tâm càng tốt. Nó nằm ở cuối vợt chứ không ở đầu vợt.</li>
 </ul>
 <p>Những yếu tố này đều phải được cân nhắc khi bàn tới kỹ thuật đánh cú thuận tay, và đều có cách hóa giải rất hợp lý, giải quyết đề huề các yếu tố trên!</p>
 <p>Tới đây tôi tin rằng các bạn bắt đầu có một bức tranh lớn toàn diện về những vấn đề xảy ra khi đánh cú thuận tay, chỉ có chăng là chút lăng tăng về cách giải quyết nó mà thôi. Hiểu được cách hóa giải, bạn chỉ còn phá bỏ các thói quen đánh sai trước đây, luyện lại phương pháp mới là xong việc, hết phim!</p>
@@ -1697,7 +1707,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Thể thao dùng tay nói chung là dùng lực tác động vào bóng (hay vào đối tượng như nâng tạ, vào người đối thủ nếu là đấu võ). Tuy nhiên có 2 (và chỉ 2) nguyên tắc dùng lựcở đây:</p>
 <p>Dùng lực đẩy (pushing force). Loại lực này đòi hỏi phải sử dụng lực co hay dãn các bó cơ một cách có sức mạnh nhưng tương đối chậm chạp để truyền lực sang đối tượng chịu tác động. Vận động viên nâng tạ, đá banh thuộc loại cần tập để sử dụng lực này. Tennis mà sử dụng lực này thì lúc mới tập thì thấy ngon hơn người khác có cơ thể yếu hơn, nhưng về sau không nâng cao uy lực cú quả được! Càng về sau, người nhỏ con biết xài loại lực snap dưới đây sẽ qua mặt xa về lực đánh!</p>
 <p>Dùng lực đánh (snapping force). Đối với các loại thể thao có kích thước bóng quá nhỏ so với kích thước cơ thể, người ta phát hiện dùng lực đẩy không truyền được lực sang cho bóng nhiều bằng cách snap: Lái xe tải nặng 10 tấn chạy 50km/h để đụng vào trái bóng bàn hay tennis chẳng hạn, nó chẳng cóép phê gì so với lối đánh sử dụng lực snap với cây vợt nhỏ hơn cái xe tải nhiều. Vận động viên bóng bàn, tennis, võ thuật cần hiểu rõ và tập làm chủ các kỹ thuật này.</p>
-<p>Đánh snap lại có vài cách đánh:</p>
+<p><strong>Đánh snap lại có vài cách đánh:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Đánh khi chân đứng yênở đúng tư thế. Ngày xưa Lý Tiểu Long đã dùng cách đánh này, đấm một cú đấm có chiều dài rất ngắn (1 inch punch), đủ sức đánh bể cả tấm ván dày 5 cm, hoặc văng cả đối thủ nặng 80 kg cả 2 thước.</p>
@@ -1732,15 +1742,15 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Tôi dở văn chương nên chỉ có thể nói nôm na như vậy, hy vọng bạn nào đọc được hiểu thì dịch ra giùm cho các bạn khác sao cho dễ hiểu hơn vậy.</p>
 <p>TVinh77 nói </p>
 <p>hic hic, cái này hiện giờ em đang bị mắc phải, bị stress trầm trọng luôn. Bác có lời khuyên gì để có thể vượt qua dễ 1 tí không? Giờ giống như đang "tẩu hỏa nhập ma" vậy!</p>
-<p>tuan_tuan nói:</p>
-<p>Bây giờ ngồi nghĩ lại, tôi cho rằng có các lý do sau khiến tôi chậm tiến bộ:</p>
-<p>1- Đa số các huấn luyện viên (thuộc loại top Việt Nam) chỉ đưa ra những nguyên tắc chung chung mà không có con số cụ thể. Ví dụ: góc độ của cùi chỏ lúc tiếp xúc bóng, độ cao của cơ thể, độ nghiêng của vai ... Sự mù mờ này khiến cho bạn không thể có một chuẩn mực tương đối cho cú quả. Sau này tôi phát hiện chỉ cần một sai lệch nhỏ cũng làm cho động tác không đẹp và không hiệu quả (trong khi tình thế lúc đó hoàn toàn cho phép một cú đánh tốiưu)</p>
+<p><strong>tuan_tuan nói:</strong></p>
+<p><strong>Bây giờ ngồi nghĩ lại, tôi cho rằng có các lý do sau khiến tôi chậm tiến bộ:</strong></p>
+<p>1- Đa số các huấn luyện viên (thuộc loại top Việt Nam) chỉ đưa ra những nguyên tắc chung chung mà không có con số cụ thể. Ví dụ: góc độ của cùi chỏ lúc tiếp xúc bóng, độ cao của cơ thể, độ nghiêng của vai ... Sự mù mờ này khiến cho bạn không thể có một chuẩn mực tương đối cho cú quả. Sau này tôi phát hiện chỉ cần một sai lệch nhỏ cũng làm cho động tác không đẹp và không hiệu quả (trong khi tình thế lúc đó hoàn toàn cho phép một cú đánh tối ưu)</p>
 <p>2- Thiếu dụng cụ huấn luyện. Mắt ta chỉ ghi nhận được 10-15 hình/giây. Nếu có các camera quay chậm từ 100-500 hình/giây hỗ trợ lúc tập, tôi tin chắc bạn sẽ nhanh chóng sửa được các lỗi kỹ thuật. Mắt huấn luyện viên có tốt mấy cũng không làm nổi việc này (chưa nói họ có toàn tâm làm công việc đó hay chỉ qua loa)</p>
 <p>3- Thiếu hiểu biết về nguyên nhân của mỗi yếu tố kỹ thuật. Bạn không cần là chuyên gia vật lý, nhưng nếu có ngoại ngữ và có kiến thức cơ bản về 2 chuyên ngành vật lý cơ học (mechanics) và cơ học chuyển động của cơ thể (biomechanics), bạn có thể tìm thấy hàng trăm trang tài liệu của các giáo sư hàng đầu thế giới phân tích chi tiết toàn bộ kỹ thuật tennis. Trước đây các tài liệu này thuộc loại tối mật, vì các hãng sản xuất vợt tài trợ cho các nghiên cứu này để cải tiến cây vợt, cũng như tìm chọn các cây vợt có tiềm năng để liên hệ đầu tư sớm (có lợi cho sự nghiệp kinh doanh trăm năm của họ). May mắn là giờ đây, một số các kiến thức loại này có trên mạng, nếu bạn biết tìm và có một chút kiên nhẫn.</p>
 <p>4- Năng khiếu. Một số người có gien đặc biệt giúp họ thực hiện động tác dễ hơn ta. Tuy vậy khổ luyện có thể bù đắp phần lớn. Người khổ luyện tiến xa hơn người có năng khiếu mà không xài!</p>
 <p>5- Phương pháp truyền đạt. Bản chất của giáo dục là chuyển giao cái mà người thầy đã biết sang cho người chưa biết trong thời gian ngắn nhất. Lối dạy và họcở xứ ta quá lạc hậu so với tri thức con người đã biết hiện nay.</p>
 <p>Ví dụ: Hiện nay trên thế giới đã thay thế lối dạy truyền thống (hiện nay vẫn rất phổ biến ở ta): tập đánh cú quả với sự hướng dẫn của huấn luyện viên về động tác của từng cú. Phương pháp mới của họ gọi là GBa (game based approach). Nguyên tắc của nó là mô phỏng tối đa các tình huống thực tế khi tập, và huấn luyện viên sẽ làm cho cú đánh đó tốt hơn.</p>
-<p>Ví dụ. Trong tennis có 3 loại di chuyển chính để đánh:</p>
+<p><strong>Ví dụ. Trong tennis có 3 loại di chuyển chính để đánh:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Di chuyển ngắn trong vòng 4 m (tức đánh một bên sân)</p>
@@ -1754,11 +1764,11 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </ul>
 <p>Mỗi một kiểu chạy và vị trí đứng của đối thủ sẽ yêu cầu các cú đánh trả có kỹ thuật được điều chỉnh khác nhau (trên cơ sở một số nguyên tắc chính). Chương trình huấn luyện của họ đưa ra từ 4-6 tuổi cho đến 16 tuổi là một hệ thống gần như hoàn chỉnh (và vẫn đang không ngừng tìm cách cải tiến).</p>
 <p>Thực tế đúc kết cho thấy, thời gian hoàn chỉnh kỹ thuật cho một vận động viên theo phương pháp này rút ngắn 1/3 so với trước đây. Đó là lý do vì sao bạn luôn thấy xuất hiện các tay vợt vô địch Grand Slam khi chỉ mới 16-18 tuổi!</p>
-<p>Trở lại trường hợp của bạn, tôi nghĩ:</p>
+<p><strong>Trở lại trường hợp của bạn, tôi nghĩ:</strong></p>
 <ul class="styled-list">
 <li>Hãy đọc thêm vài phần quan trọng nữa (mà tôi chưa kịp viết ra đây). Phần trên đây chỉ mới có 50% bí quyết thôi, nhưng nếu nói ngay từ đầu mà không hiểu phần trên đây thì tin chắc là chỉ làm rối cho người đọc, vì nó quá tinh tế!</li>
 </ul>
-<p>Ví dụ. Trên đây tôi đã nói là khi lấy đà phải "vặn" sao cho hai đường vai phải lệch so với hai đường hông. Đúng nhưng chưa đủ. Lý thuyết Cơ sinh học chỉ ra rằng, nếu bạn giữ tư thế vặn đó lâu hơn 1 giây, lực tạo ra sẽ mất đi hơn phân nửa. Do đó, người đánh cần vặn và trả lại với thời gian dừng ngắn nhất. Lúc này lực tạo ra do cái cú vặn này mới đúng là tốiưu! Điều đáng nói là nếu chỉ nhìn trên video clip, dám cá là bạn không thể phát hiện ra yếu tố này của các tay top ATP!</p>
+<p>Ví dụ. Trên đây tôi đã nói là khi lấy đà phải "vặn" sao cho hai đường vai phải lệch so với hai đường hông. Đúng nhưng chưa đủ. Lý thuyết Cơ sinh học chỉ ra rằng, nếu bạn giữ tư thế vặn đó lâu hơn 1 giây, lực tạo ra sẽ mất đi hơn phân nửa. Do đó, người đánh cần vặn và trả lại với thời gian dừng ngắn nhất. Lúc này lực tạo ra do cái cú vặn này mới đúng là tối ưu! Điều đáng nói là nếu chỉ nhìn trên video clip, dám cá là bạn không thể phát hiện ra yếu tố này của các tay top ATP!</p>
 <ul class="styled-list">
 <li>
 <p>Bạn cần có giáo án hợp lý. Mục đích tập từng cú đánh phải rõ ràng, phương pháp tập (giờ tập, dụng cụ, huấn luyện viên phải có khả năng lý thuyết + thị phạm, kể cả chế độ dinh dưỡng ...) thì mới mau tiến</p>
@@ -1771,18 +1781,18 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Bắt đầu từ phần này, tôi sẽ thay đổi cách viết nhằm khơi dậy sự chủ động suy nghĩ từ các bạn hơn.</p>
 <p>Trước hết tôi muốn nêu lên một vấn đề cơ bản.</p>
 <p>Theo vật lý, một vật bị tác động bởi một lực đi qua trọng tâm sẽ làm cho vật đó chuyển động tịnh tiến (mọi điểm trên vật chuyển động giống nhau) theo phương đó theo phương trình véctơ : F= M.a</p>
-<p>Một vật bị tác động bởi một lực KHÔNG ĐI QUA TRỌNG TÂM sẽ làm cho vật đó có 2 chuyển động:</p>
+<p><strong>Một vật bị tác động bởi một lực KHÔNG ĐI QUA TRỌNG TÂM sẽ làm cho vật đó có 2 chuyển động:</strong></p>
 <p>Một chuyển động tịnh tiến như trên</p>
 <p>Một chuyển động quay quanh trọng tâm với sức quay (torque) bằng F.r , trong đó r là khoảng cách giữa trọng tâm và phương của lực F.</p>
 <p>Vấn đề là, khi đánh mạnh, đa số chúng ta đều tác động lực thông qua tay cầmở cán vợt. Do đó nếu bạn càng tác động mạnh, thì một mặt, vợt có chuyển động tịnh tiến theo phương lực tác động, nhưng mặt khác lại xoay quanh trọng tâm dưới tác động của moment lực. Chuyển động xoay này làm đầu vợt đi lùi ra sau trong khi cán đi ra trước. Tóm lại đánh càng mạnh thì ... đầu vợt lại yếu xìu, thậm chí mặt vợt song song với hàng rào bên hông sân bóng!</p>
 <p>Làm sao để giải quyết vấn đề này? Phải đánh như thế nào để lực từ tay cầm vợt có thể chuyển thành tốc độ mặt vợt cao nhất?</p>
 <p>Mời các bạn choý kiến.</p>
-<p>PhucIT nói:</p>
+<p><strong>PhucIT nói:</strong></p>
 <p>em chưa hiểu hoàn toàn câu hỏi của bác. Nhưng em xin phép trả lời câu hỏi:trước tiên tay cầm vợt phải vừa đủ cứng ở cổ tay, không quá chặt hoặc quả lỏng. Khi đánh mạnh với tác động của phản lực khi tiếp xúc banh đầu vợt sẽ chuyển động theo hướng ngược lại. Mặt khác khi đánh banh mặt vợt hơiúp xuống , gần như song song với mặt đất để tạo thêm spin. có gì sai bác chỉnh lại giúp ạ.</p>
-<p>tuan_tuan nói:</p>
+<p><strong>tuan_tuan nói:</strong></p>
 <p>Bạn thử cầm vợt và đánh về trước. Lập tức bạn sẽ thấy đầu vợt bị kéo lùi ra sau. Đó là do moment làm quay vợt theo chiều kim đồng hồ (nếu bạn thuận tay phải).</p>
 <p>Để khắc phục điều này, bạn sẽ dùng cổ tay chịu lại, để cho mặt vợt đi theo ngang với cổ tay. Tư thế này sẽ làm chậm tốc độ đầu vợt hơn vài phương án khác, và chắc chắn là không thể tạo được một cú đánh forehand uy lực được.</p>
-<p>Nếu bạn đổi cách đánh bằng đường vòng cung, tốc độ đầu vợt có thể cao hơn phương án trên một chút, nhưng cũng không tốiưu vì nhiều lý do mà tôi muốn các bạn nêu ra để thấy được các vấn đề trước khi nói đến cách đánh tốiưu.</p>
+<p>Nếu bạn đổi cách đánh bằng đường vòng cung, tốc độ đầu vợt có thể cao hơn phương án trên một chút, nhưng cũng không tối ưu vì nhiều lý do mà tôi muốn các bạn nêu ra để thấy được các vấn đề trước khi nói đến cách đánh tối ưu.</p>
 <p>Theo yêu cầu của một số bạn, tôi vẽ thêm hình để các bạn rõ hơn vấn đề đặt ra.</p>
 <p>Có lẽ sau phần này tôi sẽ phải cân nhắc cách truyền đạt.</p>
 <p>Theo tôi đây là phần "cao cấp" nhất trong kỹ thuật đánh tennis. Bạn nào chỉ cần đánh tàm tạm thì phần trên cũng OK rồi, nhưng muốn đánh hay hơn thì buộc phải hiểu các phần dưới đây. Tuy nhiên truyền đạt bằng cách viết ra như thế này theo tôi là không hiệu quả cho lắm. Gặp mặt trực tiếp và vẽ nguệch ngoạc ra giấy nhanh hơn nhiều!</p>
@@ -1791,7 +1801,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Nói chi tiết hơn thì ta tác động lực bằng 3 vùng trên tay (bỏ qua không nói chi tiết ở đây, sau này nâng cao hơn nữa tôi sẽ nói).</p>
 <p>Lực tác động vào cán có hình như một trong 2 mũi tên đã vẽ.</p>
 <p>Lý do có hai mũi tên tôi cũng bỏ qua luôn cho đỡ rắc rối.</p>
-<p>Điều bạn cần khám phá lúc này là cho dù theo mũi tên nào đi nữa, thì theo qui tắc vật lý từ thời năm 1700 các nhà vật lý đã phát hiện ra, vợt sẽ:</p>
+<p><strong>Điều bạn cần khám phá lúc này là cho dù theo mũi tên nào đi nữa, thì theo qui tắc vật lý từ thời năm 1700 các nhà vật lý đã phát hiện ra, vợt sẽ:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Vừa tịnh tiến theo phương của lực (vẽ bằng mũi tên đứt đi qua trọng tâm)</p>
@@ -1809,11 +1819,11 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Lưuý là hình vẽ trên tôi vẽ chỉ để minh họa, các kích thước không chuẩn lắm, và đi từ trái qua phải, vợt đã đi qua vạch đứt tưởng tượng cho không gian vợt đã di chuyển).</p>
 <p>Sửa lần cuối bởi điều hành viên: 27/8/12</p>
 <hr/>
-<p>phpcanban nói:</p>
+<p><strong>phpcanban nói:</strong></p>
 <p>Đây chính là vấn đề của em... cổ tay hay chịu vợt lại nên tốc độ bị giảm, đôi khi trong thoáng chốc còn bị khựng vợt lại. Hiện nay em đang sửa bằng cách chuyển sang cách đánh vòng cung (chờ banh thấp) với vận tốc nhanh hơn nhưng chưa kiểm soát được nên banh đi không đều.</p>
 <p>Mong bác Tuấn chỉ điểm thêm cho.</p>
-<p>tuan_tuan nói:</p>
-<p>Nói đến chuyển động vòng, bạn cần nêu ra được cácý sau:</p>
+<p><strong>tuan_tuan nói:</strong></p>
+<p><strong>Nói đến chuyển động vòng, bạn cần nêu ra được cácý sau:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Tâm quay ở đâu?</p>
@@ -1834,43 +1844,42 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Ít tốn hao năng lượng nhất.</p>
 </li>
 <li>
-<p>Dễ thực hiện nhất. Trung bình bóng bay từ lúc đối thủ chạm vợt đến ta chỉ có 1 giây đến</p>
-<h3>1.3 giây. Mọi động tác rườm rà</h3>
+<p>Dễ thực hiện nhất. Trung bình bóng bay từ lúc đối thủ chạm vợt đến ta chỉ có 1 giây đến 1.3 giây. Mọi động tác rườm rà</p>
 <p>cần được lược bỏ nếu nó tốn thời gian mà không thật sự tăng thêm được độ khó cho đối thủ.</p>
 </li>
 </ul>
-<p>Đa số chúng ta đọc tài liệu hướng dẫn đánh tennis chỉ có một chiều, thiếu phần phân tích vấn đề, và suy xét kỹ các giải pháp để rồi chọn lại phương pháp tốiưu, do đó không đưa ra được giải pháp hay.</p>
-<p>HEAD_POWER nói:</p>
+<p>Đa số chúng ta đọc tài liệu hướng dẫn đánh tennis chỉ có một chiều, thiếu phần phân tích vấn đề, và suy xét kỹ các giải pháp để rồi chọn lại phương pháp tối ưu, do đó không đưa ra được giải pháp hay.</p>
+<p><strong>HEAD_POWER nói:</strong></p>
 <p>Theo nguý của em thì bác đang muốn mọi người tư duy 1 chút về cách tận dụng lực cánh tay tạo ra lực ly tâm lớn nhất đẩy tốc độ mặt vợt lên cao nhất. Lực ly tâm này là tổng hợp của 2 moment lực có phương ban đầu lệch nhau:</p>
 <p>1- Là moment lực do cánh tay xoay với tâm xoay là bả vai.</p>
 <p>2- Là moment lực do vợt xoay với tâm xoay là cổ tay.</p>
 <p>Vậy ta chỉ cần biết cách thay đổi quỹ đạo di chuyển của mặt vợt hợp lý ( từ tịnh tiến sang xoay tròn với tâm quay là đuôi cán vợt) thông qua cổ tay thì sẽ có được lực ly tâm tối đa giúp vận tốc mặt vợt tăng cao nhất.</p>
 <p>Vậy thì ai siết chặt cán vợt sẽ rất khó làm điều này vì cổ tay đã bị gồng cứng :D</p>
 <p>Bác Tuấn nhận xét giúp cái nguý của eạ :)</p>
-<p>tuan_tuan nói:</p>
-<p>Nhận xét:</p>
+<p><strong>tuan_tuan nói:</strong></p>
+<p><strong>Nhận xét:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Trong chuyển động quay, lực ly tâm sẽ có phương trùng với bán kính quay, vì nó đẩy vật thể quay ra theo hướng xuyên tâm quay. Do đó hoặc là bạn dùng sai từ, hoặc là lập luận của bạn không được thuyết phục vì lực ly tâm đã bị cân bằng bởi lực đàn hồi của cả bàn tay (nếu tâm quay là cổ tay), hoặc thêm luôn cánh tay (nếu tâm quay là chóp vai).</p>
 </li>
 <li>
-<p>Vớiý:</p>
+<p><strong>Vớiý:</strong></p>
 </li>
 </ul>
 <p>" .... thay đổi quỹ đạo di chuyển của mặt vợt hợp lý ( từ tịnh tiến sang xoay tròn với tâm quay là đuôi cán vợt) thông qua cổ tay thì sẽ có được lực ly tâm tối đa giúp vận tốc mặt vợt tăng cao nhất." ...</p>
 <p>Nếu bạn đổi chuyển động từ tịnh tiến sang xoay tròn như trên, tức là bạn chọn giải pháp dùng lực từ cổ tay để tạo ra sức quay (torque) cho vợt. Lực này có được do sử dụng các búi cơ từ bắp tay trước, có đầu gânăn vào mu bàn tay để kéo bàn tay quay quanh khớp xương cổ tay. Lực này yếu, và bạn chưa thuyết phục mọi người lắm vềý ... cách này sẽ tạo ra lực ly tâm (???) tối đa.</p>
 <p>Tôi đề nghị bạn diễn đạt lại chính xácý của mình, để mọi người có thể hiểu chính xácý tưởng giải pháp của bạn.</p>
 <p>Tôi bắt đầu thấy hơi vui vì có nhiều ý kiến tham gia, như vậy mới gọi là trao đổi!</p>
-<p>HEAD_POWER nói:</p>
-<p>Em không hề cóý định dùng lực cổ tay để chuyển từ chuyển động tịnh tiến sang chuyển động quay của mặt vợt. Chuyển động này hoàn toàn mượn trọng lượng của cây vợt đang có vật tốc cùng với vận tốc cánh tay khi bị thay đổi quĩ đạo tại điểm "gãy" là cổ tay, nên lúc này cổ tay phải thả lỏng để thuận lợi cho việc chuyển hướng đột ngột.</p>
+<p><strong>HEAD_POWER nói:</strong></p>
+<p>Em không hề có ý định dùng lực cổ tay để chuyển từ chuyển động tịnh tiến sang chuyển động quay của mặt vợt. Chuyển động này hoàn toàn mượn trọng lượng của cây vợt đang có vật tốc cùng với vận tốc cánh tay khi bị thay đổi quĩ đạo tại điểm "gãy" là cổ tay, nên lúc này cổ tay phải thả lỏng để thuận lợi cho việc chuyển hướng đột ngột.</p>
 <p>Lực lớn nhất có được là moment lực tổng hợp của nhiều moment, các moment lực này phụ thuộc vào trọng lượng cơ thể, chiều cao cũng như chiều dài cánh tay và quan trọng nhất là độ dẻo của cơ thể để tạo ra vận tốc xoay lớn nhất.</p>
 <p>Cách diễn giải của bác dân kỹ thuật tụi em sẽ hiểu ngay vấn đề, nhưng 1 số anh em khác lại có chuyên ngành khác nên sẽ gặp khó khăn :D</p>
 <p>Em cũng đang cố gắng chuyển tải từ các hình vẽ công thức sang lời văn để các bạn khác cùng hiểu nhưng thấy khó quá :(</p>
 <p>Hay là bác giúp luôn phần này cho ACE diễn đàn ... chứ e thấy mọi người dạo này lười tư duy lắmạ :D</p>
-<p>tuan_tuan nói:</p>
-<p>Phản hồiý kiến trên của bạn:</p>
+<p><strong>tuan_tuan nói:</strong></p>
+<p><strong>Phản hồiý kiến trên của bạn:</strong></p>
 <p>1- Trọng lực vợt (P=m.g) xét theo phương nằm ngang như trên không ảnh hưởng gì đến lực đánh vào bóng. Yếu tố có đóng góp chỉ là khối lượng m mà thôi.</p>
-<p>2- Dầu cho bạn để cổ tay lỏng lẻo, khi bạn muốn chuyển từ chuyển động tịnh tiến của vợt thành chuyển động quay nhưý bạn, bạn buộc phải:</p>
+<p><strong>2- Dầu cho bạn để cổ tay lỏng lẻo, khi bạn muốn chuyển từ chuyển động tịnh tiến của vợt thành chuyển động quay nhưý bạn, bạn buộc phải:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Kéo ngang cán vợt (giả sử vợt trước đó đã bị bạn kéo đến mức lực kéo từ cán nằm cùng phương với thân vợt)</p>
@@ -1889,8 +1898,8 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Cuối cùng, thú thật với bạn là tôi không thích những ai lười tư duy. Nếu đúng như vậy, tôi mạn phép dừng cuộc trao đổi tại đây vì nó mất đi phần thú vị. Hy vọng diễn đàn có cách nào để các bạn, đặc biệt là các bạn trẻ có thể siêng năng trong việc tư duy hơn, nếu không thì tương lai của dân tộc sẽ thật sự là thảm họa.</p>
-<p>by Tomcatvn</p>
-<p>Anh tuan_tuan nêu ra một vấn đề phân tích rất hay, ít người Chúý đến. Ngay từ khi mới tập chơi, em đã "vướng" những vấn đề như thế này nhưng không có ai, không có sách vở nào phân tích thấu đáo.</p>
+<p><strong>by Tomcatvn</strong></p>
+<p>Anh tuan_tuan nêu ra một vấn đề phân tích rất hay, ít người Chú ý đến. Ngay từ khi mới tập chơi, em đã "vướng" những vấn đề như thế này nhưng không có ai, không có sách vở nào phân tích thấu đáo.</p>
 <p>Xưa nay, ai cũng nói về balance của cây vợi, vợt nhẹ đầu, vợt nặng đầu...tính cm hay tính theo pts nhưng không ai phân tích tại sao lại như vậy, dẫn tới những quan điểm nửa sự thật như vợt nặng đầu là vợt trợ lực, vợt nhẹ đầu là vợt không trợ lực...Theo em, việc sử dụng vợt nặng đầu hay nhẹ đầu hoàn toàn phụ thuộc vào cách người dùng vợt "xử lý" bài toán anh nêu ra.</p>
 <p>Không thể loại bỏ hoàn toàn hiện tượng trên (trừ khi có một cổ tay cứng như thép khiến vợt và tay như một hệ kín), mỗi người có một cách khống chế (giảm thiểu đến mức tin cậy hoặc phối hợp đúng thời điểm). Nhưng như thế là là đúng, là hiệu quả thì mong anh tuan_tuan phân tích rõ hơn.</p>
 <ul class="styled-list">
@@ -1904,7 +1913,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Mở hết cổ tay khi lấy đà, để vợt tạo góc 90 độ với cẳng tay. Cái này phải nói rõ hơn là mặt phẳng mu bàn tay (tương đương với mặt phẳng lưới vợt) vuông góc với trục cẳng tay.</p>
 </li>
 </ul>
-<p>Cách trên có thể control được hiện tượng xoay vợt nhưng đem lại những "hậu quả" khó xử lý không kém khác :</p>
+<p><strong>Cách trên có thể control được hiện tượng xoay vợt nhưng đem lại những "hậu quả" khó xử lý không kém khác :</strong></p>
 <ul class="styled-list">
 <li>
 <p>Mặt vợt quá ngửa khó thực hiện quỹ đạo chạm banh dài</p>
@@ -1925,7 +1934,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <li>Khi sử dụng vợt có trọng tâm gần với tâm quay là cán vợt (tạm cho là như vậy đi đã), bạn đang giảm moment quán tính quay (lại vật lý - nhức đầu).</li>
 </ul>
 <p>Nói nôm na thì như thế này. Định luật 1 của bác học Newton nói rằng một vật đang đứng yên hay chuyển động, sẽ luôn giữ nguyên tình trạng đứng yên hay tình trạng chuyển động đó cho đến khi nó bị tác động bởi một lực nào đó. Hiểu theo một nghĩa khác, ta gọi đó là quán tính, tức là tính ì, không muốn thay đổi tình trạng đang có của vật thể. Vì có 2 loại chuyển động cơ bản: chuyển động tịnh tiến và chuyển động quay tròn quanh một trục, nên ta lại có 2 loại quán tính: Quán tính cho chuyển động thẳng (chính là khối lượng m của một vật) và quán tính cho chuyển động quay (gọi là moment quán tính chứ không gọi là khối lượng quán tính khi quay). Vật có trọng tâm gần trục quay sẽ có moment quán tính nhỏ hơn, nghĩa là muốn làm cho nó chuyển động dễ hơn vật có trọng tâmở xa trục quay.</p>
-<p>Như vậy khi chọn vợt nhẹ đầu, bạn chọn vợt giúp bạn quay bằng cổ tay (nơi trùng lấp với cán vợt khi ta cầm vợt) dễ hơn, tức là gia tốc góc đạt được nhanh hơn, cũng tức là vận tốc góc cao hơn vợt nặng đầu. Vận tốc góc này sẽ tạo ra vận tốc dài nơi mặt vợt tiếp xúc bóng cao hơn khi mặt vợt lao vào bóng. Tới đây bạn thấy cái cóích của chuyện chọn vợt nhẹ đầu. Để dễ hiểu hơn, bạn cầm cây búa có cái đầu to, và cầm đầu búa mà đập sẽ thấy dễ hơn là cầm cán (tuy vẫn là cây búa có trọng lượng đó). Từ đó mới có câu: khi nào cầm vợt nặng 320 gr mà đánh vẫn thấy nhẹ như vợt 280 gr? Đó chính là lúc đánh khi ... vung cái vợt đó mà biết rõ trọng tâm nó nằmở đâu vậy).</p>
+<p>Như vậy khi chọn vợt nhẹ đầu, bạn chọn vợt giúp bạn quay bằng cổ tay (nơi trùng lấp với cán vợt khi ta cầm vợt) dễ hơn, tức là gia tốc góc đạt được nhanh hơn, cũng tức là vận tốc góc cao hơn vợt nặng đầu. Vận tốc góc này sẽ tạo ra vận tốc dài nơi mặt vợt tiếp xúc bóng cao hơn khi mặt vợt lao vào bóng. Tới đây bạn thấy cái cóích của chuyện chọn vợt nhẹ đầu. Để dễ hiểu hơn, bạn cầm cây búa có cái đầu to, và cầm đầu búa mà đập sẽ thấy dễ hơn là cầm cán (tuy vẫn là cây búa có trọng lượng đó). Từ đó mới có câu: khi nào cầm vợt nặng 320 gr mà đánh vẫn thấy nhẹ như vợt 280 gr? Đó chính là lúc đánh khi ... vung cái vợt đó mà biết rõ trọng tâm nó nằm ở đâu vậy).</p>
 <p>Chuyện không dừng ở đó. Khi bóng đập vào vợt, nó tác động lên vợt nhẹ đầu mà bạn đã chọn. Lúc này cái lợi trên lại thành cái hại: vợt lúc vung dễ tăng tốc bao nhiêu thì lúc này lại cũng dễ ... giảm tốc bấy nhiêu vì moment quán tính nhỏ, tức tính trụ lại chuyển động đang có của nó nhỏ! Đã vậy, trên chiều dài vợt, trọng tâm càng gần tay cầm vợt thì thường lại xa điểm tiếp xúc bóng. Điều này lại làm cho lực do bóng đập vào tạo nên sức quay lớn xung quanh trọng tâm, nó gần như phủ định lại cái vận tốc nhanh mà bạn có lúc chưa chạm bóng, và còn góp phần vào việc làm rung vợt (nếu bạn không đánh đúng điểm chống rung trên vợt mà tôi sẽ nói sau khi phân tích những điểm quan trọng cần biết trên vợt) hoặc làm bật cán vợt ra khỏi tay cầm (do vợt xoay quanh trọng tâm của nó dưới tác động của bóng). Đây cũng là lý do mà bạn cần cầm vợt chặt khi tiếp xúc bóng.</p>
 <ul class="styled-list">
 <li>
@@ -1954,8 +1963,8 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Các bạn chịu khó chờ khi có tương đối nhiều ý kiến một chút, mỗiý kiến sẽ được tôi chọn nói rõ thêm vài yếu tố lợi hại quanh đó, như vậy đọc đỡ ngán và cũng thú vị hơn. Sau cùng tôi sẽ tổng kết giúp các bạn và đưa ra các giải pháp cuối cùng!</p>
-<p>tuong-idsc nói:</p>
-<p>Em mới đánh banh khoảng 3 năm, cũng đang băn khoăn cách đánh banh thuận tay sao cho mạnh nhất. Hôm bữa em mua cây vợt cho nhóc tì của em 3 tuổi ở nhà đánh chơi. Thì em có phát hiện một điều: em bé cầm vợt theo phản xạ tự nhiên (em Chúý thấy cầm 3.5-4) sau đó đánh vào trái banh ôi thôi mạnh khủng kiếp, em cũng ko hiểu một đứa trẻ làm sao có thể đánh mạnh như vậy được. Bé mở vợt rất nhẹ nhàng sau đó đánh mạnh vào trái banh rất thoải mái với nắm tay hướng vào vợt và mặt vợt như vỗ vào trái banh vậy. Khi em nhìn cách đánh này em liên tưởng tới cách đánh của Tomic (người Ức) và mấy video federer khi tập có thấy sử dụng cách đánh này (còn khi thi đấu Anh đánh nhanh quá nhìn ko ra được). mấy hôm nay em có đánh thử thì đúng là rất thoải mái, ko tốn nhiều lực nhưng có điều chưa điều khiển được quả bóng theo ý muốn (vì lúc đó thả lỏng tay và đánh như một cú tạo đà cho đầu vợt tán mạnh vào bóng vây). Em biết nhưng ko biết diễn tả thế nào, mong Anh Tuấn chỉ giáo giúp em. Cảmơn Anh Chúc Anh sức khỏe.</p>
+<p><strong>tuong-idsc nói:</strong></p>
+<p>Em mới đánh banh khoảng 3 năm, cũng đang băn khoăn cách đánh banh thuận tay sao cho mạnh nhất. Hôm bữa em mua cây vợt cho nhóc tì của em 3 tuổi ở nhà đánh chơi. Thì em có phát hiện một điều: em bé cầm vợt theo phản xạ tự nhiên (em Chú ý thấy cầm 3.5-4) sau đó đánh vào trái banh ôi thôi mạnh khủng kiếp, em cũng ko hiểu một đứa trẻ làm sao có thể đánh mạnh như vậy được. Bé mở vợt rất nhẹ nhàng sau đó đánh mạnh vào trái banh rất thoải mái với nắm tay hướng vào vợt và mặt vợt như vỗ vào trái banh vậy. Khi em nhìn cách đánh này em liên tưởng tới cách đánh của Tomic (người Ức) và mấy video federer khi tập có thấy sử dụng cách đánh này (còn khi thi đấu Anh đánh nhanh quá nhìn ko ra được). mấy hôm nay em có đánh thử thì đúng là rất thoải mái, ko tốn nhiều lực nhưng có điều chưa điều khiển được quả bóng theo ý muốn (vì lúc đó thả lỏng tay và đánh như một cú tạo đà cho đầu vợt tán mạnh vào bóng vây). Em biết nhưng ko biết diễn tả thế nào, mong Anh Tuấn chỉ giáo giúp em. Cảmơn Anh Chúc Anh sức khỏe.</p>
 <p>Trả lời bởi Tuan_tuan </p>
 <p>Trước hết chúc mừng bạn có cậu con rất có năng khiếu đánh tennis. Huấn luyện viên nào dạy nó sẽ đỡ mệt. Nếuở nước ngoài, chắc chắn tụi nó sẽ đề nghị tập riêng cho thằng bé và biết đâu đó, tới lớn nó nổi tiếng như Federer chứ chẳng chơi.</p>
 <p>Như tôi đã nói ngay ở phần đầu, đánh đúng kỹ thuật giúp bạn đánh nhẹ nhàng mà vẫn ghê gớm lắm. Dĩ nhiên chiều cao và tầm với vẫn là một lợi thế khi đánh tennis. Tôi liệt kê vài cái mà thằng bé có mà bạn lại không có:</p>
@@ -1974,7 +1983,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Nhân cái hình trên đây, tôi lại muốn mượn nó để nêu lên mộtý / một vấn đề khác khi đánh.</p>
 <p>Bạn đã biết là có 2 mặt phẳng cần hiểu thấu đáo khi đánh: nhìn từ trên đầu xuống và nhìn ngang người. Câu hỏi tôi đặt ra trước đây (và vẫn chưa có cao thủ nào chịu xuất hiện chỉ giáo) là xét trên mặt phẳng ngang (ngó từ trên đầu xuống). Hình chụp chậm cho thấy chuyện xảy ra khi xét trên mặt phẳng dọc (nhìn từ bên ngang hông qua).</p>
 <p>Mời bạn xem hình dưới đây.</p>
-<p>Lúc đánh bóng, bóng chịu 2 lực tác dụng:</p>
+<p><strong>Lúc đánh bóng, bóng chịu 2 lực tác dụng:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Trọng lượng (khoảng 50-57 gr), rất nhỏ nhưng không thể coi thường vì độ dài bay đi khá lớn.</p>
@@ -1986,7 +1995,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi bóng bay, nó chịu thêm tác động ma sát của không khí. Lực này nặng hơn các bạn tưởng nhiều. Sức cản của không khí nặng đến mức, khi bóng đươc đánh ra với vận tốc 100 km/giờ, chỉ còn ... 70 km/giờ mà thôi, tức khoảng 30%. Khi bạn đánh với topspin (mà thực tế là ta luôn phải đánh với topspin, sau khi đọc xong phần này bạn sẽ thấy), thì không khíép trái bóng xuống sân lẹ hơn nữa.</p>
 <p>Không đi sâu vào tính toán mấy chuyện đó cho nhức đầu. Bạn chỉ cần xem hình vẽ trên đã thấy, nếu bạn đánh ngang khi chạm bóng, lực tổng hợp (lực ngang + trọng lực tác động lên bóng) sẽ làm cho bóng chạm lưới, thậm chí chạm sân ... bên phần sân của bạn.</p>
 <p>Do đó, bạn buộc phải đánh lên như mũi tên màu đỏ dưới đây là tối thiểu.</p>
-<p>Từ đây có vài hệ quả:</p>
+<p><strong>Từ đây có vài hệ quả:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Bạn "bị buộc" phải đánh có xoáy, vì nếu bạn để ngửa mặt vợt để nó vuông góc với hướng đánh lên này, thì góc mở lớn hơn 2 độ, mà tôi đã nói là tính toán cho thấy chỉ cần mở vợtở 92 độ thôi mà đánh thẳng lên như vậy, thì bóng ra ngoài là cái chắc.</p>
@@ -2007,7 +2016,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Nhân vụăn uống, tôi lại nảy raý nghĩ viết phần này, cóích hay không tùy bạn cảm nhận, nhưng tốt là cái chắc.</p>
 <p>Có lần tôi ra sân, nhìn thấy các bạn trẻ đánh màốm nhom tội nghiệp. Hỏi ra thìăn uống không đến nỗi nào, nhưng ... đã hơn 20 năm rồi chưa bao giờ uống thuốc sổ lãi! Nền giáo dục của ta tệ đến mức không tạo được cho công dâný thức và kiến thức tối thiểu về sức khỏe (cái mà tôi cam đoan chỉ có ai bị thiệt hại rồi mới hiểu nó quí như thế nào. Bạn thử nghĩ có tiền mà ...ăn không ngon, ngũ không yên, suốt ngày đau nhức. Liệu có đáng đánh đổi không?)</p>
 <p>Khi tôi đề nghị uống thuốc sổ lãi đi. Các bạn đó lập tức nói: uống Fugacare hả? Nói thật là thứ thuốc này trị được ít giun lãi bậc nhất trong các thứ thuốc trị lãi, nhưng do quảng cáo tràn lan nên đa số mọi người nhớ. Một trong những loại đáng để uống là ZENTEL. Mỗi năm tối thiểu một lần (trước Tết chẳng hạn), hãy mua và bắt mọi người trong gia đình uống! Thật là hoang phí nếu cứăn rồi để cả đống con lãi trong ruột ... ăn ké 365 ngày x 10 năm! Bạn nào từng nuôi cá đá sẽ thấy một ngày nóăn bao nhiêu là đồăn, thế mà bạn nuôi cả ... trăm con lớn nhỏ như vậy làít trong bụng!</p>
-<p>Mặt khác. Tôi thấy cũng không ít bạn bụng bự, người đầy mở đi đánh tennis. Cái này hại kiểu khác:</p>
+<p><strong>Mặt khác. Tôi thấy cũng không ít bạn bụng bự, người đầy mở đi đánh tennis. Cái này hại kiểu khác:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Người mập mạp luôn đánh chậm, dẫn đến đánh dở (cũng không sao, nếu mục tiêu là giảm béo)</p>
@@ -2020,10 +2029,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cái đáng nói nhất là đa số coi thường và thiếu kiến thức cơ bản về chế độăn uống hợp lý. Do đó tôi ghi lại tóm tắtở đây vàiý chính.</p>
 <ul class="styled-list">
 <li>
-<p>Tennis có thể giúp giảm cân, và chữa trị bệnh GIẢM THIỂU Chúý ở trẻ nhỏ và người lớn tuổi. Con số nàyở Hoa Kỳ lên tới 15 triệu ngừoi/năm. Ở VN tôi chưa có số liệu nhưng tin chắc không nhỏ!</p>
+<p>Tennis có thể giúp giảm cân, và chữa trị bệnh GIẢM THIỂU Chú ý ở trẻ nhỏ và người lớn tuổi. Con số nàyở Hoa Kỳ lên tới 15 triệu ngừoi/năm. Ở VN tôi chưa có số liệu nhưng tin chắc không nhỏ!</p>
 </li>
 <li>
-<p>Muốn ăn uống đạt mục tiêu luyện tập để đánh hay hoặc giảm béo, cần:</p>
+<p><strong>Muốn ăn uống đạt mục tiêu luyện tập để đánh hay hoặc giảm béo, cần:</strong></p>
 </li>
 <li>
 <p>Trước khi chơi, cân ký. Sau khi chơi. Cân ký. Nếu số ký không giảm, bạn đã uống đủ nước bổ sung. Nếu giảm, lần sau trước khi chơi uống bằng số giảm này nhân với 1.5</p>
@@ -2053,7 +2062,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Ngay sau khi tập xong (thậm chí trong lúc tập), nạp nhẹ chất bổ (chuối chẳng hạn) để bổ sung, không để cơ thể kiệt quệ. Khiăn sau đó, cơ thể sẽ tự động "dự trữ chất béo" để đối phó với tình huống này.</p>
 </li>
 <li>
-<p>Buổi tốiăn càng ít càng tốt. Cơ thể sẽ tự động trữ mọi thứ thừa thành mỡ vào ban đêm.</p>
+<p><strong>Buổi tốiăn càng ít càng tốt. Cơ thể sẽ tự động trữ mọi thứ thừa thành mỡ vào ban đêm.</strong></p>
 </li>
 <li>
 <p>Một điểm quan trọng nữa là uống nước. 70% cơ thể ta là nước. Nước không đủ thì cơ không thể hoạt động đúng mức được, đánh hư là chuyện tất yếu. Không bao giờ để cơ thể phát đi tín hiệu khát nước, không bao giờ để nước tiểu có màu vàng (nó phải luôn trong).</p>
@@ -2061,8 +2070,8 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </ul>
 <p>Thay đổi thói quen là chuyện dễ nói hơn làm. Chúc bạn đủ can đảm để thay đổi ngay từ ngày hôm nay.</p>
 <p>Trên đây là cách giảm béo và bổ sung sức mạnh cơ bắp (ăn uống đủ và đúng + luyện tập cơ bắp sẽ phát triển) mà không cần tốn tiền. Ai thừa tiền thì đi bác sĩ chuyên khoa họ có máy móc phương tiện để đo và hiệu chỉnh từng chút!</p>
-<p>By Tomcatvn</p>
-<p>Về việc tạo topspin, rất nhiều người trong đó có em đều bịảnh hưởng bởi tài liệu "Tennis hiện đại" vẫn giữ một niềm tin cách tạo topspin tốt nhất là:</p>
+<p><strong>By Tomcatvn</strong></p>
+<p><strong>Về việc tạo topspin, rất nhiều người trong đó có em đều bịảnh hưởng bởi tài liệu "Tennis hiện đại" vẫn giữ một niềm tin cách tạo topspin tốt nhất là:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Tiếp xúc bóng với mặt vợt thẳng đứng, vuông góc với mặt đất</p>
@@ -2071,7 +2080,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đánh từ dưới điểm tiếp xúc banh tối thiểu 30cm đánh lên + giữ cố định vị trí cổ tay trong suốt đà đi của vợt ==&gt; mặt vợt chuyển từúp xuống đến vuông góc và sau đó hướng lên?</p>
 </li>
 <li>
-<p>Spin được tạo ra do sức nâng của đùi sau, cú đánh chỉ còn lại 3 yếu tố:</p>
+<p><strong>Spin được tạo ra do sức nâng của đùi sau, cú đánh chỉ còn lại 3 yếu tố:</strong></p>
 </li>
 <li>
 <p>Tốc độ, góc độ banh đi tới</p>
@@ -2087,7 +2096,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>*. Lý do vợt vuông góc với mặt đất chứ không được úp xuống khi tiếp xúc banh là "làm thế nào để bóng có thể nâng lên qua lưới khi mặt vợt hướng xuống, đi xuyên qua mặt vợt chăng? - định luật phản xạ góc tới bằng góc phản xạ"</p>
-<p>Áp dụng theo cách trên, ta vẫn tạo được topspin nhưng vẫn có một số vấn đề:</p>
+<p><strong>Áp dụng theo cách trên, ta vẫn tạo được topspin nhưng vẫn có một số vấn đề:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Dễ dàng tạo ra topspin nhưng không thể tạo được topspin cực mạnh, khi đánh mạnh bóng sẽ quá vồng lên chứ không tăng tốc nhiều</p>
@@ -2114,14 +2123,13 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Topspin được tạo ra từ sức nâng của đùi dẫn đến sai lầm khi đạp chân đứng lên là chính chứ không đạp chân đẩy cơ thể về trước do đó mất đi nguồn lực chính tạo ra tốc độ cú đánh, khó đánh mạnh. Tốc độ nâng người không thể đủ nhanh trong khi năng lượng lại quá mạnh cho việc tạo ra tốc độ xoáy &gt;2000rpm. Ta làm 1 phép toán như sau:</p>
 </li>
 <li>
-<p>Chu vi quả bóng đo được khoảng 21cm, xoáy 2000rpm =&gt; 42000cm/m =&gt;2520000cm/h =&gt; 25,2km/h hoặc 700cm/s. Do đó gia tốc phải đat được là 7m/s=0,7g =&gt; Lực nâng cơ đùi phải là F = m.(a + g) = 17.m . Giả sử đùi bạn đủ mạnh bạn chỉ có tối đa</p>
-<h3>0.29 s để nâng người lên 30cm trước khi tiếp xúc banh</h3>
+<p>Chu vi quả bóng đo được khoảng 21cm, xoáy 2000rpm =&gt; 42000cm/m =&gt;2520000cm/h =&gt; 25,2km/h hoặc 700cm/s. Do đó gia tốc phải đat được là 7m/s=0,7g =&gt; Lực nâng cơ đùi phải là F = m.(a + g) = 17.m . Giả sử đùi bạn đủ mạnh bạn chỉ có tối đa 0.29 s để nâng người lên 30cm trước khi tiếp xúc banh</p>
 <p>(S = 1/2 at2 do đó t = căn 2 của (2.s/a) ). Rất khó phải không các bạn.</p>
 </li>
 </ol>
 <p>Năng lượng nâng người khá lớn nhưng hữu dụng cho việc tạo spin là khá thấp, phần lớn là tiêu hao. Do đó nếu chuyển năng lượng này thành năng lượng đẩy tới để bắt đầu chuỗi chuyển động, va đập trực diện vào trái bóng sẽ hiệu quả hơn.</p>
 <p>Tạo xoáy cách này, đường banh không nhanh nhưng lồng bồng xoáy, an toàn vô sân. Nếu chỉ đánh đều đặn chờăn unforce của đối thủ thì rất tốt nhưng khi gặp đối thủ trình độ cao hơn, tấn công ngay khi bóng nảy lên thì ....</p>
-<p>Với cách đánh theo hướng dẫn của anh tuan_tuan, lúc này ta cần phải quan tâm đến 4 yếu tố:</p>
+<p><strong>Với cách đánh theo hướng dẫn của anh tuan_tuan, lúc này ta cần phải quan tâm đến 4 yếu tố:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Tốc độ, góc độ bóng tới</p>
@@ -2139,12 +2147,11 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Do tách được yếu tố 90 độ so với mặt đất, toàn bộ quá trình vung vợt sẽ duy nhất và tốc độ nhất cho các loại bóng, nhưng việc thay đổi góc giữ vợt với đà vợt cho phù hợp với tốc độ, góc độ bóng tới làm sao cho đáng tin cậy??? Không lẽ sử dụng điều chỉnh cổ tay ??? hay canh vị trí chạm banh, thời gian chạm banh ??? Cái này xin anh tuan_tuan phân tích giúp.</p>
 <p>Trả lời bởi Tuan_tuan </p>
 <p>Trở lại câu hỏi của anh, thế thì góc nâng (x) của đà vợt là bao nhiêu và góc giữa vợt và đà (a) là bao nhiêu ?</p>
-<p>Góc nâng của đà x không thể quá gắt để có thể đạt tốc độ tốiưu và phải đủ lớn để có thể nâng banh qua lưới. Tùy theo tốc độ banh của từng người mà góc này thay đổi. Ví dụ nếu bạn có thể đánh ra 1 cú 150km/h = 41m/s. Để bóng đi hết phần sân của bạn đến lưới khoảng 12m là 0,3s, thì bóng rơi theo trọng lực là s=1/2 gt2 = 0,45m. Tùy theo độ cao bóng lúc đó, so với lưới mà ta có thể tính góc tối thiểu đánh flat qua lưới. ví dụ bóng cao 30cm, lưới cao 1m. Góc bóng sẽ là arctang của (1+0,45-0,3)/12 =arctan(0,09583) = không có máy tính science :(</p>
-<p>Tính là tính cho vui, chứ thực tế không cóý nghĩa vì mỗi vị trí đánh khác nhau, tốc độ đánh khác nhau và độ cao bóng khác nhau. Con người không thể tính toán hết khi đánh. Do đó góc x nên tính theo từng cơ hệ, cấu trúc sinh học của mỗi người. Chuyện này thì em chịu, không phân tích được vì bản thân hiện giờ đánh có đúng đâu. Chắc có liên quan đến góc nâng, xoay người hiệu quả nhất của chân...</p>
+<p>Góc nâng của đà x không thể quá gắt để có thể đạt tốc độ tối ưu và phải đủ lớn để có thể nâng banh qua lưới. Tùy theo tốc độ banh của từng người mà góc này thay đổi. Ví dụ nếu bạn có thể đánh ra 1 cú 150km/h = 41m/s. Để bóng đi hết phần sân của bạn đến lưới khoảng 12m là 0,3s, thì bóng rơi theo trọng lực là s=1/2 gt2 = 0,45m. Tùy theo độ cao bóng lúc đó, so với lưới mà ta có thể tính góc tối thiểu đánh flat qua lưới. ví dụ bóng cao 30cm, lưới cao 1m. Góc bóng sẽ là arctang của (1+0,45-0,3)/12 =arctan(0,09583) = không có máy tính science :(</p>
+<p>Tính là tính cho vui, chứ thực tế không có ý nghĩa vì mỗi vị trí đánh khác nhau, tốc độ đánh khác nhau và độ cao bóng khác nhau. Con người không thể tính toán hết khi đánh. Do đó góc x nên tính theo từng cơ hệ, cấu trúc sinh học của mỗi người. Chuyện này thì em chịu, không phân tích được vì bản thân hiện giờ đánh có đúng đâu. Chắc có liên quan đến góc nâng, xoay người hiệu quả nhất của chân...</p>
 <p>Còn góc a, thì hoàn toàn phụ thuộc vào mong muốn tạo xoáy như thế nào, bù trừ cho góc đà vung vợt sao cho có thể kìm banh trong sân và tạo xoáy đểép banh. Góc a + x không được lớn hơn 90 độ.</p>
-<p>Chi tiết như thế nào thì mong anh hướng dẫn. Suy nghĩ đã mệt, tính toán còn mệt hơn, viết trả lời không mà cả buổi chưa xong. Thế mới thấy công sức suy nghĩ viết hướng dẫn của anh tuan_tuan đáng quý chừng nào.</p>
-<p>Thân.</p>
-<p>By Tomcatvn</p>
+<p>Chi tiết như thế nào thì mong anh hướng dẫn. Suy nghĩ đã mệt, tính toán còn mệt hơn, viết trả lời không mà cả buổi chưa xong. Thế mới thấy công sức suy nghĩ viết hướng dẫn của anh tuan_tuan đáng quý chừng nào. Thân.</p>
+<p><strong>By Tomcatvn</strong></p>
 <p>Thêm một vấn đề nữa trong chủ đề xoáy, xưa nay mọi lý thuyết đều nói xoáy topspin tạo ra bóng đi cắm xuống sớm và NẢY CAO và nhanh hơn bóng flat. Trong khi đó theo anh hướng dẫn thì nảy THẤP và nhanh hơn bóng flat. Chuyện này em nghĩ cũng rất nhiều người thắc mắc mong anh giải thích.</p>
 <p>Thực tế cú đánh của Nadal, bóng vồng cao, cắm sân và nảy rất cao.</p>
 <p>Hayý anh là cùng 1 điểm chạm banh, quỹ đạo banh xuống thì bóng topspin sẽ nảy thấp hơn bóng flat nếu vậy thì vẫn hợp lý. Các ví dụ so sánh hiện nay đang là cùng một điểm đánh, lực đánh thì :</p>
@@ -2186,7 +2193,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>(Nếu bóng bị đánh xoáy ngang nữa, nó sẽ "lượn" vòng trong không khí do lực đẩy ngang của không khí - tương tự lực nén từ trên xuống đã biết)</p>
-<p>Như vậy, giả sử ta đánh bóng ở cùng một điểm, và:</p>
+<p><strong>Như vậy, giả sử ta đánh bóng ở cùng một điểm, và:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Cú flat được thống nhất với nhau như là cú đánh chỉ có lực đánh ngang xuyên qua tâm bóng.</p>
@@ -2195,7 +2202,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cú topspin được coi như cú đánh có phương của lực dốc lên như hình vẽ.</p>
 </li>
 </ul>
-<p>Khi đó:</p>
+<p><strong>Khi đó:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Bóng topspin rớt xuống sân trước điểm chạm sân của bóng flat. Khoảng cách này tùy thuộc vectơ lực (độ lớn + phương) của lực đánh.</p>
@@ -2207,7 +2214,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>++ Lực ma sát trượt (ngược chiều chuyển động)</p>
 <p>++ Phản lực từ mặt đất (bằng X % của trọng lực)</p>
 <p>Kết quả là bóng sẽ chuyển động theo phương tổng hợp như hình vẽ.</p>
-<p>Trong khi đó, với bóng topspin thì:</p>
+<p><strong>Trong khi đó, với bóng topspin thì:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Theo phương ngang, do bóng có xoáy cao, nên nó tạo ra thêm ma sát trượt thuận chiều với vận tốc ngang. Ở độ xoáy cao 3000 vòng/phút khi đánh, lực này làm cho bóng có xoáy nhận thêm được vận tốc đi tới trước.</p>
@@ -2218,7 +2225,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </ul>
 <p>Lực tổng hợp sẽ làm cho bóng có phương chuyển động như hình vẽ.</p>
 <p>Như vậy, nếu so sánh bóng flat và topspin, theo tôi nó hơi khiên cưỡng vì lực tác động lên bóng khác nhau về độ lớn và phương vị (thậm chí tổng năng lượng truyền cho bóng khi đánh và khi di chuyển, chạm đất). Mặt khác, tùy theo vị trí người quan sát mà ta có thể có nhận định khác nhau: bóng topspin khi đến ta có vẻ cao hơn flat, nhưng nếu dời 2 trái bóng lại một chỗ thì rõ ràng topspin nãy thấp hơn. Đó là chưa nói một số "ngoại lệ" khác (nói nữa sợ làm rối các bạn).</p>
-<p>Tuy nhiên, phải công nhận với nhau vàiưu điểm tuyệt đối sau đây của topspin:</p>
+<p><strong>Tuy nhiên, phải công nhận với nhau vàiưu điểm tuyệt đối sau đây của topspin:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Nếu đánh flat, tốc độ lúc bóng rời vợt và lúc đến đối thủ sau khi chạm sâm bị suy giảm đáng kể. Topspin sẽ giúp bạn giữ được vận tốc, tức làm khó đối thủ!</p>
@@ -2237,10 +2244,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Trong hình trên, tôi đã dời vị trí bóng flat về cùng vị trí rơi của topspin. Vì sự so sánh hơi có tính khập khiễng, tôi có vẽ luôn trong trường hợp bóng có xoáy mà lực đánh chỉ có đánh ngang (khi đó phản lực của bóng flat và topspin là như nhau, trong khi thực tế là phản lực của topspin cao hơn). Cuối cùng nên nhớ là sau khi chạm đất, bóng topspin lại bay lên và tiếp tục bị không khí "nhận" xuống nên có thêm mũi tên xanh và đường cong để bạn hình dung thực tế.</p>
 <p>Tóm lại, không đánh được topspin, cánh cửa tennis tương lai của bạn coi như ... bị đóng. Điều kỳ lạ là tôi thấy ít có ai chịu luyện, huấn luyện viên cũng chẳng mấy ai luyện cho học viên cú topspin cho tới nơi tới chốn!</p>
 <p>Các phần khác tôi khất lại lúc nào rảnh sẽ viết tiếp vậy. Thú thật tôi cũng ngại khi viết chậm quá, nhưng thật sự viết rất là ... hao năng lượng và thời gian!</p>
-<p>PhucIT nói:</p>
+<p><strong>PhucIT nói:</strong></p>
 <p>Tennis hiện đại, ai cũng biết đánh topspin có lợi thế hơn đánh Flat, bác tuan_tuan có nói tới việc luyện topspin đến nơi đến chốn, vậy cho em hỏi là theo bác đến nơi đến chốn là như thế nào, vì theo em lúc tập cũng như lúc đánh game đều đánh topspin.</p>
 <p>Trả lời bởi Tuan_tuan</p>
-<p>Trừ phi xác định chơi hay làm cái gì đó chỉ mang tính cách "giải trí", còn thì nguyên tắc chung khi làm bất cứ cái gì mà muốn có kết quả tốiưu là phải có mục tiêu, lên kế hoạch thực hiện, rồi đánh giá kết quả để rút kinh nghiệm. Thiết lập một mục tiêu đạt yêu cầu ngày nay không có nói chung chung, mà phải:</p>
+<p>Trừ phi xác định chơi hay làm cái gì đó chỉ mang tính cách "giải trí", còn thì nguyên tắc chung khi làm bất cứ cái gì mà muốn có kết quả tối ưu là phải có mục tiêu, lên kế hoạch thực hiện, rồi đánh giá kết quả để rút kinh nghiệm. Thiết lập một mục tiêu đạt yêu cầu ngày nay không có nói chung chung, mà phải:</p>
 <ul class="styled-list">
 <li>Cụ thể.</li>
 </ul>
@@ -2250,7 +2257,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <ul class="styled-list">
 <li>Phải chuyển đổi các câu nói chung chung thành các câu nói có thể kiểm đếm được.</li>
 </ul>
-<p>Ví dụ:</p>
+<p><strong>Ví dụ:</strong></p>
 <p>Tôi phải đánh xoáy được từ 1000 lên đến 2000 vòng/phút, chứ không nói, tôi sẽ tập để đánh xoáy nhiều hơn.</p>
 <ul class="styled-list">
 <li>
@@ -2267,9 +2274,9 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Vì vậy, tùy theo nhu cầu chơi tennis của bạn là gì, bạn sẽ quy đổi nó thành các mục tiêu cho từng chặng đường tập luyện.</p>
 <p>Người chỉ muốn chơi cho khỏe sẽ đặt mục tiêu khác. Còn muốn chơi tennis để kiếm sống đặt mục tiêu khác. Còn làng nhàng ba mứa (cái này đa số) thì khỏi bàn, người đó chắc chắn chuyên nghiệp kiếm tiền cũng không xong, mà tài tử thìì ạch tại chỗ vậy.</p>
 <p>Tùy theo tình hình tài chính và thời gian, huấn luyện viên cần thảo luận điều này với học viên, tránh để tình trạng mất tiền học mà trình độ đánh và hiểu biết chẳng tới đâu, gây ra lãng phí không đáng có cho người học!</p>
-<p>Tomcatvn nói:</p>
-<p>Tính là tính cho vui, chứ thực tế không cóý nghĩa vì mỗi vị trí đánh khác nhau, tốc độ đánh khác nhau và độ cao bóng khác nhau. Con người không thể tính toán hết khi đánh. Do đó góc x nên tính theo từng cơ hệ, cấu trúc sinh học của mỗi người. Chuyện này thì em chịu, không phân tích được vì bản thân hiện giờ đánh có đúng đâu. Chắc có liên quan đến góc nâng, xoay người hiệu quả nhất của chân...</p>
-<p>tuan_tuan nói:</p>
+<p><strong>Tomcatvn nói:</strong></p>
+<p>Tính là tính cho vui, chứ thực tế không có ý nghĩa vì mỗi vị trí đánh khác nhau, tốc độ đánh khác nhau và độ cao bóng khác nhau. Con người không thể tính toán hết khi đánh. Do đó góc x nên tính theo từng cơ hệ, cấu trúc sinh học của mỗi người. Chuyện này thì em chịu, không phân tích được vì bản thân hiện giờ đánh có đúng đâu. Chắc có liên quan đến góc nâng, xoay người hiệu quả nhất của chân...</p>
+<p><strong>tuan_tuan nói:</strong></p>
 <p>Nhân đọcý kiến của bạn về "tính là tính cho vui", tôi có vài cảm nghĩ như thế này:-</p>
 <p>Ở góc độ người chơi tennis của chúng ta, việc tính toán (hay tìm hiểu cách tính toán và kết quả) không hẳn là chỉ cho vui. Ví dụ như bạn vừa tính ở trên, sơ khởi cũng đã cho thấy là dùng lực đạp của chân để tạo topspin là không hiệu quả!</p>
 <ul class="styled-list">
@@ -2280,10 +2287,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Hiểu rõ lý thuyết và kết quả tính toán không thể bảo đảm giúp chúng ta đánh đúng với góc độ và độ lớn của lực trong mọi tình huống, nhưng nó giúp chúng ta ngày càng đi xa khỏi cái sai, và gần hơn với cái đúng. Chỉ cần gần với cái đúng nhiều hơn người khác, bạn đã có lợi thế!</p>
 </li>
 </ul>
-<p>Tomcatvn nói:</p>
+<p><strong>Tomcatvn nói:</strong></p>
 <p>Lợi thế đâu không thấy, trước mắt em thấy em bị kẹt trong những lý thuyết nửa vời như vậy. Trong khi những người khác chơi cùng lúc, chẳng cần quan tâm nhiều lý thuyết, tự điều chỉnh theo kiểu "thử và sai" thì tiến bộ rõ rệt hơn. Cùng chơi với nhau, mình thì cứ nhón người tạo spin, đánh với mặt 90 độ...lúc đầu cũng tiến bộ nhanh hơn họ, nhưng sau đó thì hoàn toàn kẹt lại. Trong khi đó, họ phang ầmầm, từ từ điều chỉnh mặt vợt hơiúp xuống spin vẫnầm ầm...</p>
 <p>Cơ thể con người có khả năng thật kỳ lạ anh nhỉ, tự rút kinh nghiệm, tự thích ứng mà không cần phải phân tích. Trí não con người càng kỳ lạ hơn, khi đã tin một điều gì là chân lý, thì khó mà tự thoát ra khỏi nó…</p>
-<p>tuan_tuan nói:</p>
+<p><strong>tuan_tuan nói:</strong></p>
 <p>Bạn đang đi từ thái cực này sang thái cực kia.</p>
 <ul class="styled-list">
 <li>
@@ -2293,17 +2300,17 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Bạn học được lý thuyết nửa vời, thì tiến bộ nửa vời cũng là điều tự nhiên. Vì sao kỹ thuật đánh tennis của tụi nước ngoài nó siêu? Bạn lên mạng mà coi nó có cả rừng lý thuyết (tuy thật giả lẫn lộn). Mấy đứa nước ngoài mà được học đàng hoàng từ nhỏ đánh ăn dân châu Á xa lắc là vì nền tảng lý thuyết + thực hành + đào tạo (không chỉ lý thuyết đánh mà còn đủ thứ lý thuyết khác)</p>
 </li>
 <li>
-<p>Nói gì thì nói, việc họ đánh và có để "ý tứ" trong từng trái cũng đã là điều họ học hỏi. Có điều cách học đó không phải là duy nhất và càng không phải là cách học tốiưu (nhất là với thời buổi hiện nay)</p>
+<p>Nói gì thì nói, việc họ đánh và có để "ý tứ" trong từng trái cũng đã là điều họ học hỏi. Có điều cách học đó không phải là duy nhất và càng không phải là cách học tối ưu (nhất là với thời buổi hiện nay)</p>
 </li>
 <li>
 <p>Con người ta khi đã tin vào cái gì, mà không còn tỉnh táo để suy xét tiếp tục thì đó là sự dừng lại. Khuyết điểm lớn nhất của người Việt là không bao giờ đẩy suy nghĩ của mình đến cùng, học cái gì cũng hời hợt cho qua, rồi ra thực tế nó đập vô mặt thì lại lúng túng!</p>
 </li>
 </ul>
 <p>Suy cho cùng, cái đó không chỉ mình bạn gặp phải. Mà lỗi thì hoàn toàn bao giờ cũng là do mình và thời thế mà thôi!</p>
-<p>Leftyguy nói:</p>
+<p><strong>Leftyguy nói:</strong></p>
 <p>Cảmơn Bác tuan_tuan vì đã chia xẻ thông tin hữu ích! Như trên Bác đề cập đến góc 90 độ, tôi chưa rõ 90 độ là góc tạo giữa vợt với cái gì ạ (mặt phẳng sân hay góc bóng lao đến vợt hay ...?)</p>
-<p>Tomcatvn nói:</p>
-<p>Bối cảnh câu chuyện này là:</p>
+<p><strong>Tomcatvn nói:</strong></p>
+<p><strong>Bối cảnh câu chuyện này là:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Bác tomcatvn nêu lại hướng dẫn đánh topspin, được ghi trong quyển Tennis hiện đại. Trong đó yêu cầu mặt vợt phải vuông góc (90 độ) với sân.</p>
@@ -2316,9 +2323,9 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Chắc bác không đểý đoạn trao đổi giữa tôi với bác tomcatvn nên đặt ra câu hỏi này, nhưng chuyện chỉ có vậy.</p>
-<p>A-Crap nói:</p>
+<p><strong>A-Crap nói:</strong></p>
 <p>Ngày xưa em cũng đọc sách xem video và tự học tennis, cũng rất hay và ok.</p>
-<p>Tomcatvn nói:</p>
+<p><strong>Tomcatvn nói:</strong></p>
 <p>Cái này chắc không riêng gì bác. Đa số anh em trên diễn đàn này đều như vậy hết. Cá nhân tôi cũng tưng lùng sục đi đọc không biết bao nhiêu tài liệu, nhưng thực sự chẳng có tài liệu nào giúp giải tỏa được vài điều tôi muốn biết nhất:</p>
 <ul class="styled-list">
 <li>
@@ -2336,7 +2343,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi bóng chạm lưới, lưới và bóng đều bị biến dạng (lưới thì cong về bên bị bóng đánh tới, còn bóng thì lõm vào). Đến một lúc nào đó thì sự biến dạng này ngừng lại, và cuối cùng cả hai cái đều lấy lại hình dạng ban đầu (thậm chí còn tạo ra dao động) và bay ra. Với cấu trúc mỏng manh của lưới, nó đàn hồi tốt hơn bóng, vì vậy nó hấp thu năng lượng của bóng mang tới, và trả lại đến 90% lượng này.</p>
 <p>Đến đây bắt đầu có vài chuyện hay ho để nói.</p>
 <p>1- Nếu bạn biết cách đan dây, bạn có thể tạo thêm xoáy cho bóng. Lý do là khi đánh, dây dọc thường hayở vị trí chịu trách nhiệm ma sát với bóng để tạo topspin hơn là xoáy ngang. Dây dọc bị bóng giữ lại, võng xuống rồi đàn hồi lại sẽ giúp đánh bật bóng theo chiều tạo xoáy khi bóng rời vợt.</p>
-<p>Sau khi làm hàng loạt các thí nghiệm, các nhà vật lý xác nhận chỉ có 3 yếu tố sau đây là có đóng góp đáng kể cho việc tạo xoáy:</p>
+<p><strong>Sau khi làm hàng loạt các thí nghiệm, các nhà vật lý xác nhận chỉ có 3 yếu tố sau đây là có đóng góp đáng kể cho việc tạo xoáy:</strong></p>
 <p>a- Dây đan cứng hay đan mềm</p>
 <p>b- Dây có độ đàn hồi cao hay thấp (và khả năng duy trì độ đàn hồi này bao lâu sau khi căng vợt)</p>
 <p>c- Cách đan giữa dây dọc và dây ngang.</p>
@@ -2351,14 +2358,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Khi vợt bị bóng đập vào, nó dao động đại khái như các búi sóng hình sin đối xứng nhau. Nó làm bạn nghe cảm giác run tay bần bật, và truyền đến các khớp tay + cùi chỏ làm đau elbow. Đã là sóng thì sẽ có điểm màở đó đường hình sin cắt ngang trục hoành, nói dễ hiểu làở đó không có dao động. Tức là đánh đúng vào đó thì cán vợt không rung nên nghe êm tay vàít bị đau elbow nhất.</p>
 </li>
 <li>
-<p>Ngoài ra, vợt còn có điểm đặc biệt nữa là điểm không làm bật cán vợt. Nguyên lý như sau:</p>
+<p><strong>Ngoài ra, vợt còn có điểm đặc biệt nữa là điểm không làm bật cán vợt. Nguyên lý như sau:</strong></p>
 </li>
 </ul>
 <p>Khi đánh bóng, ta tác động lên vợt một lực quay về phía trước, có nghĩa là cán lùi về phía sau.</p>
 <p>Mặt khác, khi bóng đập vào vợt, thì ngoài chuyển động tịnh tiến theo chiều ngược lại làm triệt tiêu mất phần nào tốc độ tịnh tiến đi tới của vợt, nó còn tạo ra một lực quay (do bóng đập vào mặt lưới không bao giờở đúng trọng tâm vợt) làm cho cán vợt đi về phía trước.</p>
 <p>Tổng hợp haiý trên rốt cuộc dẫn đến kết quả là vợt sẽ quay quanh một điểm nào đó không phải là cán vợt. Do đó nếu đánh không đúng điểm này thì cán vợt có xu hướng bật ra khỏi tay, hoặc ép mạnh vào lòng bàn tay. Điều này làm cú đánh không chính xác vì nó xảy ra cùng lúc với thời điểm bóng ăn vào lưới mạnh nhất mà vẫn chưa kịp bay đi (không có thời gian trễở đây). Chưa kể nó có thể gây chấn thương cho cổ tay hoặc cho partner vìăn phải cây vợt của bạn!</p>
 <ul class="styled-list">
-<li>Cuối cùng, bạn nên biết là muốn đánh mà bóng bật lại khỏi vợt mạnh / nhanh nhất thì điểm đánh đó càng ở gần trọng tâm càng tốt. Nó nằmở cuối vợt chứ không ở đầu vợt.</li>
+<li>Cuối cùng, bạn nên biết là muốn đánh mà bóng bật lại khỏi vợt mạnh / nhanh nhất thì điểm đánh đó càng ở gần trọng tâm càng tốt. Nó nằm ở cuối vợt chứ không ở đầu vợt.</li>
 </ul>
 <p>Những yếu tố này đều phải được cân nhắc khi bàn tới kỹ thuật đánh cú thuận tay, và đều có cách hóa giải rất hợp lý, giải quyết đề huề các yếu tố trên!</p>
 <p>Tới đây tôi tin rằng các bạn bắt đầu có một bức tranh lớn toàn diện về những vấn đề xảy ra khi đánh cú thuận tay, chỉ có chăng là chút lăng tăng về cách giải quyết nó mà thôi. Hiểu được cách hóa giải, bạn chỉ còn phá bỏ các thói quen đánh sai trước đây, luyện lại phương pháp mới là xong việc, hết phim!</p>
@@ -2366,7 +2373,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đa tạ bác đã chia sẻ!</p>
 <p>Tôi mạnh dạn chia sẻ quan điểm cá nhân của tôi về tennis, mong bác gópý.</p>
 <p>Việc căn góc vợt theo một yếu tố bất biến - là (mặt phẳng sân) e là không chuẩn xác, mà vợt nên được điều chỉnh theo đường bay của bóng - yếu tố khả biến.</p>
-<p>Tôi luôn nghĩ:</p>
+<p><strong>Tôi luôn nghĩ:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>Bóng tennis xoáy được do nhiều yếu tố, nhưng chủ yếu là do hướng phát lực khác so với hướng bay của quả bóng &gt;&gt;&gt; Mô men xoắn &gt;&gt;&gt; xoáy.</p>
@@ -2382,29 +2389,29 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Văn phong tôi hơi lủng củng, mong bác thông cảm và choý kiến.</p>
 <p>Mai có thời gian tôi sẽ mô tả bằng hình vẽ.</p>
 <p>Tuan-Tuan nói</p>
-<p>Có vài suy nghĩ ở đây:</p>
+<p><strong>Có vài suy nghĩ ở đây:</strong></p>
 <p>Với tôi, sweet spot là một thuật ngữ không hề tồn tại nếu đem vật lý ra nói chuyện về các hiện tượng ở đây. Sweet spot là một thuật ngữ mang đầy tính marketing của mấy hãng bán vợt, dựa trên tâm lý người đánh.</p>
 <p>Theo vật lý, chỉ có 3 điểm tạm dịch là điểm không rung động, điểm không bật cán vợt, và điểm bóng bật ra nhiều nhất sau khi chạm vợt mà thôi.</p>
 <p>Tuy nhiên, 3 điểm này cũng là để ... phân tích, phục vụ cho việc làm đẹp môn vật lý mà thôi (phóng đại một tí thì nó giống như cái bổ đề Langlands của Giáo Sư Châu).</p>
 <p>Các nhà vật lý phân tích xong, thì các nhà sản xuất vợt cố gắng sử dụng các kiến thức đó để cải tiến vợt và hỗ trợ cho các tay marketing (có thể dốt đặc vật lý) ba hoa chích chòe để bán vợt kiếm tiền!</p>
-<p>Là người chơi tennis, bạn chỉ cần hiểu các khái niệm đó để làm đúng được phần nào hay phần đó. Thực tế là chả ai đánh được đúng mấy điểm đó hết vì:</p>
+<p><strong>Là người chơi tennis, bạn chỉ cần hiểu các khái niệm đó để làm đúng được phần nào hay phần đó. Thực tế là chả ai đánh được đúng mấy điểm đó hết vì:</strong></p>
 <p>1- Ngoại trừ trọng tâm vợt có thể cố định, rất tiếc là nó nằm ngoài vùng có lưới vợt. Giả sử có đánh vào đây, bóng nẩy đi cũng chỉ có 55% như khi đụng mặt phẳng cứng! (và khi đó bạn nên chuyển qua chơi gậy bóng chày, hay chuyển qua chơi bóng chày luôn vì bóng nó thiết kế khác)</p>
-<p>2- Hai điểm còn lại thay đổi tùy theo ... tâm quay của vợt làở đâu? Các hãng sản xuất công bố các con số này dựa trên tâm quay là 10 cm từ cuối cán vợt (tức nguyên cái bàn tay của bạn nắm vợtở đó). Chỉ riêng cái chuyện tâm quay nằmở đâu đó trong 10 cm chết tiệt này cũng đủ sức làm lệch mọi kết quả về vị trí của 2 điểm còn lại. Chưa hết, đa số chúng ta đánh vợt với tâm quay không phải ở ngay cán! Nó nằmở đâu đó ... vô hình trong không trung (ngoài cán vợt), tùy theo kiểu đánh mỗi người, và vị trí bóng!</p>
+<p>2- Hai điểm còn lại thay đổi tùy theo ... tâm quay của vợt làở đâu? Các hãng sản xuất công bố các con số này dựa trên tâm quay là 10 cm từ cuối cán vợt (tức nguyên cái bàn tay của bạn nắm vợtở đó). Chỉ riêng cái chuyện tâm quay nằm ở đâu đó trong 10 cm chết tiệt này cũng đủ sức làm lệch mọi kết quả về vị trí của 2 điểm còn lại. Chưa hết, đa số chúng ta đánh vợt với tâm quay không phải ở ngay cán! Nó nằm ở đâu đó ... vô hình trong không trung (ngoài cán vợt), tùy theo kiểu đánh mỗi người, và vị trí bóng!</p>
 <p>Tóm lại, tôi nêu ra cácý đó, chỉ để chuẩn bị nói đến các kỹ thuật đánh (cách uốnéo các động tác) chứ hoàn toàn không muốn đem mấy cái thông số đó ra nói các bạn đánh cho chính xác.</p>
-<p>Phần nào đó tôi đồng ý với nhận định về vùng hữu dụng của bạn, nhưng nếu bạn hiểu phần tôi vừa nói thì phần hữu dụng đó trở thành ... vô dụng!</p>
+<p><strong>Phần nào đó tôi đồng ý với nhận định về vùng hữu dụng của bạn, nhưng nếu bạn hiểu phần tôi vừa nói thì phần hữu dụng đó trở thành ... vô dụng!</strong></p>
 <p>Like.ten nói</p>
 <p>@Leftyguy &amp; all!</p>
 <p>Em rất đồng quan điểm với bác : Trong một số Sách dạy tennis,và trong thực tế huấn luyện vẫn tồn tại khái niệm truyền đạt cho học sinh : Giữ cho mặt phẳng vợt luôn vuông góc với mặt phẳng sân (???)</p>
 <p>Thực ra điều này dẫn đến hệ quả mà các học viên thường gặp phải : Tại sao tôi giữ MP vợt vuông góc MP sân chính xác ~ 100% ( Qua clip) mà banh lúc thì rúc lưới,lúc ra ngoài - mặc dù tôi ra lực như nhau?</p>
 <p>Vấn đề mấu chốt làở chỗ : Thời điểm mặt vợt tiếp bóng ,và sự linh hoạt trong điều chỉnh góc MP vợt với hướng bay của banh! (Việc này đòi hỏi kinh nghiệm và sự khổ luyện của từng người)</p>
-<p>Em cũng muốn bổ xung thêm một khía cạnh khác nữa ( Nhờ bác Leftyguy vẽ luôn thể ):</p>
+<p><strong>Em cũng muốn bổ xung thêm một khía cạnh khác nữa ( Nhờ bác Leftyguy vẽ luôn thể ):</strong></p>
 <ul class="styled-list">
 <li>Nguyên tắc để đánh được cú chéo sân ( Phải,Trái) và cú dọc dây ( Chữ I)</li>
 </ul>
-<p>Nếu nhìn từ trên cao xuống :</p>
+<p><strong>Nếu nhìn từ trên cao xuống :</strong></p>
 <p>-Đông là bên phải</p>
 <p>-Tây là bên trái</p>
-<p>Ta có quy tắc sau :</p>
+<p><strong>Ta có quy tắc sau :</strong></p>
 <p>Với cú phải </p>
 <p>*Nếu muốn đánh chéo về bên trái mình - tiếp bóng ở đâu đó trong phần tư - Đông Bắc</p>
 <p>*Nếu muốn đánh chéo về bên phải mình - tiếp bóng ở đâu đó trong phần tư - Đông nam</p>
@@ -2413,14 +2420,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>*Nếu muốn đánh chéo về bên trái mình - tiếp bóng ở đâu đó trong phần tư -Tây Nam</p>
 <p>*Nếu muốn đánh chéo về bên phải mình - tiếp bóng ở đâu đó trong phần tư - Tây Bắc</p>
 <p>*Nếu muốn đánh thẳng dọc dây -chữ I Tiếp bóng ngang người -Tây</p>
-<p>tuan_tuan nói:</p>
+<p><strong>tuan_tuan nói:</strong></p>
 <p>2- Thời gian của bóng lún vào dây cho đến khi rời vợt đủ để cho vợt đi được khoảng đường lên tới 8 cm!</p>
 <p>Điều nàyảnh hưởng đến góc độ đánh. Nếu trái banh banh đến theo đường thẳng giữa sân, và nếu bạn muốn đánh trả bóng thẳng trở lại thì phải đánh ... bên hông trái bóng một tí (tức mặt vợt hướng ... ra ngoài biên!), nếu không, bóng sẽ bay sang bên trái của bạn (nếu bạn đánh tay phải)</p>
 <p>Đây cũng là lý do bác tuan2009 có nói lúc giao bóng, bạn phải đánh ... dưới đường xích đạo một chút. Dĩ nhiên đây là nói nếu bạn đánh mạnh đúng tiêu chuẩn, còn nếu đánh khèo khèo thì không nói làm gì.</p>
 <p>Ngoài ra, khi bị đối thủ đánh chéo sân ra góc chữ A, nếu bạn muốn trả chữ I, thì như trên đã phân tích, bạn không được đánh vào bên hông như đã nói, mà cũng không nên để mặt vợt song song với đường cuối sân, vì góc phản xạ sẽ khiến bóng bay ra ngoài, mà an toàn nhất vẫn là mũi vợt hơi chếch vào trong sân. Đó là lý do nhiều khi các bạn thấy các tay vợt đấu nhau chí chết ở góc sân, mà không thèm thủ phần sân trống lốc bên kia. Tay vợt nào liều mạng sửa chữ I mà hên thìăn, chứ nếu đánh được bóng với tốc độ cao, làm chuyện đó quáư mạo hiểm!</p>
 <p>TomcatVN nói</p>
 <p>Việc bóng dính trên vợt trong suốt quãng đường 8cm làm em rất ngạc nhiên. Vì trước nay em vẫn tưởng rằng thời gian bóng nằm trên lưới chỉ vài phần nghìn giây, không thể cảm nhận được. Liệu anh có thể chứng minh thông số này ???</p>
-<p>Việc đánh bóng với 1 góc bù vào là tất nhiên cần thiết khi muốn bẻ hướng. Tuy nhiên nếu đánh trả bóng thẳng góc mà vẫn phải bù thì nghe hơi vô lý:</p>
+<p><strong>Việc đánh bóng với 1 góc bù vào là tất nhiên cần thiết khi muốn bẻ hướng. Tuy nhiên nếu đánh trả bóng thẳng góc mà vẫn phải bù thì nghe hơi vô lý:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>Trong khoảng chạm bóng, vợt tịnh tiến thẳng, có dính bóng 8cm thì cũng không lệch để phải bù và anh cũng chưa nói bù bên hông là bên nào.</p>
@@ -2430,7 +2437,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ol>
 <p>Tuan_tuan nói</p>
-<p>a- Tôi có thể chứng minh cho bạn con số 8 cm đó. Vấn đề:</p>
+<p><strong>a- Tôi có thể chứng minh cho bạn con số 8 cm đó. Vấn đề:</strong></p>
 <p>1- Bạn có còn nhớ vật lý đủ để "tiêu hóa" các lý luận và phép tính viết trong 2 trang A4?</p>
 <p>2- Viết các phép tính đó dễ bị các bạn khác cho tôi là khoe mẽ kiến thức!</p>
 <p>b- Trong khoảng chạm bóng, vợt không thể chuyển động tịnh tiến mà không có chuyển động quay (trừ phi bạn cầm vợt đúng ở trọng tâm của vợt)</p>
@@ -2450,7 +2457,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <ul class="styled-list">
 <li>Tôi luôn tâm niệm tennis là môn thể thao "dấu" đường thẳng trong đường cong. Vợt swing tròn, bóng bay xoáy nhưng tác động lực vợt lên bóng nếu muốn điều khiển điểm rơi chính xác thì phải là lực tác động thẳng, mà thực tế nếu tích phân ra thì mọi đường cong đều là tập hợp của rất nhiều đoạn thẳng nhỏ kết nối với nhau. Ai học vật lý và toán học khá đều hiểu điều này.</li>
 </ul>
-<p>Tomcatvn nói:</p>
+<p><strong>Tomcatvn nói:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>Việc kiến thức vật lý có thể bổ sung, tra cứu mà anh. Quan trọng là biết phương pháp tìm hiểu và tra cứu. Thật ra em cũng không đòi hỏi phải chứng minh học thuật gì, quan trọng làáp dụng kết quả vào thực tế. Con số 8cm làm em hoàn toàn bất ngờ mà thôi.</p>
@@ -2466,14 +2473,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>1- Chính tôi trong quá trình nghiên cứu trước đây cũng hết sức bất ngờ với vụ 8 cm này (dĩ nhiên là với điều kiện bạn đánh đúng được kìa mới có con số đó, chứ đa số dân nghiệp dư đánh như gãi ngứa vào trái banh).</p>
 <p>2- Tôi không hiểu ý bạn muốn nói gìởý 2. Bạn có thể cho biết có cách nào làm cho vợt chuyển động hoàn toàn tịnh tiến mà không có chuyển động quay quanh bất cứ tâm quay nào (mà mặt vợt vẫn đạt tốc độ cao cỡ 15 mét/giây chẳng hạn)?</p>
 <p>3- Ý thứ 3 của bạn sai hơi bị nhiều. Cú giao bóng có thể coi là cú forehand ngược trên không, và theo chiều ngang chứ không phải theo chiều dọc. Khoảng dịch chuyển trọng tâm toàn thân người lớn không thua gì cú forehand. Quỹ đạo là một hình parabol hoàn toàn không nhọn như bạn nghĩ (và đây là lý do rất nhiều bạn giao bóng không mạnh).</p>
-<p>Bạn xem hình sau đây:</p>
+<p><strong>Bạn xem hình sau đây:</strong></p>
 <p>Hãy nhìn khoảng cách di chuyển thân người trên của Roddick và đường parabol mô tả lại chuyển động đầu vợt. Bạn thấy không thể nào bạn đánh thành một hình parabol dốc và ngắn như sau đây mà có cú giao bóng mạnh được!</p>
 <p>Leftyguy nói</p>
 <p>Điểm banh tiếp bóng và bóng bay ra mới là "bản chất"</p>
-<p>tuan_tuan nói:</p>
+<p><strong>tuan_tuan nói:</strong></p>
 <p>2- Tôi không hiểu ý bạn muốn nói gìởý 2. Bạn có thể cho biết có cách nào làm cho vợt chuyển động hoàn toàn tịnh tiến mà không có chuyển động quay quanh bất cứ tâm quay nào (mà mặt vợt vẫn đạt tốc độ cao cỡ 15 mét/giây chẳng hạn)?</p>
 <p>Tomcatvn nói</p>
-<p>Trong mọi cuộc trao đổi đều phải có mục đích. Với các "đầu vào" như sau:</p>
+<p><strong>Trong mọi cuộc trao đổi đều phải có mục đích. Với các "đầu vào" như sau:</strong></p>
 <p>a. Câu hỏi làm sao để xử lý quán tính quay khi vung vợt nhanh. Đầu vợt sẽ tự nhiên bị trễ hơn tay cầm. Tự nhiên vợt sẽ tiếp banh không chính diện mà là bên trái 1 chút tại điểm chính diện.</p>
 <p>b. Khi muốn trả banh chữ I, phải đánh vào hông trái bóng chứ không chính diện được. Bác không nói rõ hông là hông nào. Nhưng trong ví dụ về giao banh, bác nói đánh dưới quỹ đạo (hướng về người đánh) nên có thể suy ra là đánh bù vào hông trái. Tức là nếu đánh chính diện, vợt sẽ tự nhiên tiếp xúc (hoặc tương đương do dính banh) vào hông phải, do đó phải bù một chút bên trái để banh có thể đi thẳng. Vậy hướng quay đầu vợt sẽ là từ phải sang trái (đầu vợt nhanh hơn cán).</p>
 <p>c. Hệ quả b là hệ quả của việc đánh đúng kỹ thuật.</p>
@@ -2490,12 +2497,12 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </ul>
 <p>Lẽ ra tôi vẽ thêm cái hình thì bác dễ hiểu hơn, nhưng thú thực là gần đây tôi ngán viết tiếp loạt bài này đến tận cổ vì nhiều lý do!</p>
 <p>Từ đây đến bức tranh rõ ràng về kỹ thuật nâng cao còn không xa, nhưng nó đòi hỏi các bác phải hiểu rõ các hiện tượng mà tôi đã nêu ra này, nếu không sẽ bị tẩu hỏa nhập ma. Thôi, tôi thấy các bác cứ chơi tàm tạm với những gì tôi đã viết là được rồi. Thực ra mấy cái kỹ thuật nâng cao này chỉ nên cung cấp cho mấy đứa trẻ, nó còn thời gian để uốn nắn, chứ lớn tuổi rồi khó sửa lắm!</p>
-<p>Leftyguy nói:</p>
+<p><strong>Leftyguy nói:</strong></p>
 <p>Điểm banh tiếp bóng và bóng bay ra mới là "bản chất"</p>
 <p>Tuan_tuan nói</p>
 <p>Bác đánh đầu vợt vào bóng với tốc độ phải lớn, thì bóng mới rời vợt đi với tốc độ cao được. Mà tốc độ đã lớn thì không tài nào bác đột ngột bẻ quẹo cái đầu parabol đang đi ngang ngang cắm xuống đất được, trừ phi trên trời rơi xuống đúng ngay lúc đó một lực "giộng" từ đầu vợt đi xuống. Kết quả: hình parabol lài lài về phía sau là không tránh khỏi.</p>
 <p>Chính vì bóng lưu lại trên vợt rất ngắn (không tới vài phần trăm giây như bác nói đâu, sai số của bác là tới gấp 3 đến 5 lần thực tế đo được đấy), cho nên mới có cái khó là làm sao để cái hệ (vợt+người) tạo ra lực trung bình lớn nhất trong suốt thời gian đó. Và cái parabol "lài lài" đó là một trong những kết quả của công trình nghiên cứu đó chứ không phải là không có liên quan gì đâu bácơi.</p>
-<p>Be_xu nói:</p>
+<p><strong>Be_xu nói:</strong></p>
 <p>Đúng là sau 1 tuần "luyện tập lý thuyết + thực hành" cú forehand giờ phát lực khác xưa.... nhưng mà không chính xác hehe. Chắc lại phải tập luyện tiếp vậy. Nhân đây cũng chia sẽ tí nhận xét về việc "đánh bù bên hông". Quả thật nếu đểý điều này, nhìn kịp banh và có chủ đích xác định điểm bù cụ thể (điểm đánh và cự ly) đường banh sẽ chính xác không ngờ (có thể canh luôn cả dây, hoặc điểm cách dây vài tất). Vấn đề là khi banh nhanh quá thì em lại nhìn không kịp, có bác nào giúp sức không :( . Không lẽ về luyện mắt !?</p>
 <p>HEAD_POWER nói</p>
 <p>Tập phán đoán hướng bóng và mở vợt sớm hơn nữa sẽ thấy banh chậm lại, lúc đó sẽổn hơn!</p>
@@ -2511,7 +2518,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <hr/>
 <p>Bạn Duy Anh thân mến,</p>
 <p>Trước hết là tôi phải hết lời khen ngợi kỹ năng dịch vụ khách hàng của Thế Giới Tennis Trần Minh Quyền, đặc biệt là em Linh (người đan dây cây vợt này). Đây là cây vợt đầu tiên được đan như vậyở thời điểm hiện tại, và có lẽ sẽ không có cây thứ hai vì tính công phu của nó. Có thể nói ngoài trừ Thế giới Tennis, sẽ không có nơi nào chịu bỏ công làm thí nghiệm như vậy! (thực tế là để đan cây này, mấy anh em đã tốn đến gần 2 giờ đồng hồ chứ không phải một giờ, vì trước đó đã phải bỏ công làm rộng các lỗ đan dây để có thể xỏ dây đôi). Chỉ cần một thao tác không cẩn thận trong lúc đan, thì sợi dây sẽ bị đứt. Tuy vậy, đây xứng đáng là kỹ lục của cách đan này, vì trên thế giới, các tay vợt đan kiểu này mất đến 3 giờ đồng hồ (kể cả công đoạn rịt các sợi dọc lại với nhau).</p>
-<p>Riêng về phần giải thích tác dụng của kiểu đan này thì bạn Duy Anh vẫn chưa hiểu thấu đáo. Thứ nhất là kiểu đan này không làm cho cú đánh không có lực mà hoàn toàn ngược lại, Vì cấu trúc đan cóít dây ngang hơn, nên mặt lưới bị biến dạng nhiều hơn khi bị bóng đập vào. Khi lưới càng bị biến dạng, nó sẽ hoạt động giống như dàn ná được kéo căng, và bật lại bóng để tăng thêm lực cho cú đánh. Thực tế thử nghiệm sau khi đan cây này đã chứng tỏ lập luận trên chính xác! (Thả quả bóng có cùng độ cao xuống 2 cây vợt y như trên, một cây đan theo kiểu bình thường và một cây đan theo kiểu spaghetti, cây đan spaghetti có độ nẩy của bóng cao hơn hẳnở cùng một điểm thả trên mặt vợt.</p>
+<p>Riêng về phần giải thích tác dụng của kiểu đan này thì bạn Duy Anh vẫn chưa hiểu thấu đáo. Thứ nhất là kiểu đan này không làm cho cú đánh không có lực mà hoàn toàn ngược lại, Vì cấu trúc đan có ít dây ngang hơn, nên mặt lưới bị biến dạng nhiều hơn khi bị bóng đập vào. Khi lưới càng bị biến dạng, nó sẽ hoạt động giống như dàn ná được kéo căng, và bật lại bóng để tăng thêm lực cho cú đánh. Thực tế thử nghiệm sau khi đan cây này đã chứng tỏ lập luận trên chính xác! (Thả quả bóng có cùng độ cao xuống 2 cây vợt y như trên, một cây đan theo kiểu bình thường và một cây đan theo kiểu spaghetti, cây đan spaghetti có độ nẩy của bóng cao hơn hẳnở cùng một điểm thả trên mặt vợt.</p>
 <p>Nhưng đây vẫn không phải là tác dụng chính của kiểu đan này. Cái mà kiểu đan này làm tôi mê mẫn theo đuổi là vì tay vợt huyền thoại Villas mà bạn có nhắc đếnở trên, vào thời điểm năm 1977 nổi tiếng y như Nadal bây giờ. Anh ta có chuỗi 46 trận thắng trên sân đất nện liên tiếp, và chỉ đến khi xuất hiện tay vợt chơi kiểu đan Spaghetti, chuỗi trận thắng đó mới bị bẻ gãy (6-1, 7-5, sau đó ... bỏ cuộc vì tức giận). Lý do là kiểu đan này không phải tạo ra kiểu xoáy quái đản, mà nó tạo ra độ xoáy cở như Nadal bây giờ vớiít sức lực hơn rất nhiều. Sau đây là lý do:</p>
 <ul class="styled-list">
 <li>
@@ -2525,7 +2532,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>" .... In 1977 a patent was submitted for a 'spaghetti' stringing system which allowed the tennis player to impart considerably more spin on the ball than was possible with a conventionally strung racket. This racket was subsequently banned by the International Tennis Federation. In this paper the difference in the magnitude of spin Laboratory tests were conducted which showed that the 'spaghetti' strung racket imparts almost twice as much spin on the ball compared to a conventionally strung racket, for a typical oblique impact ...."</p>
-<p>Tạm dịch:</p>
+<p><strong>Tạm dịch:</strong></p>
 <p>" Vào năm 1977, một bằng phát minh sáng chế đã được cấp cho một kiểu đan "spaghetti", kiểu đan có thể tạo ra xoáy đáng kể cho bóng hơn các kiểu đan truyền thống khác. Kiểu đan này sau đó đã bị Liên Đoàn Quần vợt Thế Giới cấm sử dụng. Trong tài liệu này sự khác biệt về mức độ xoáy của kiểu đan "spaghetti" đã được kiểm chứng định lượng. Thí nghiệm trong phòng thí nghiệm đã cho thấy, cây vợt có kiểu đan "spaghetti" tạo ra gần gấp đôi độ xoáy so với cây vợt có kiểu đan truyền thống, khi được đánh với quĩ đạo dốc đứng ..."</p>
 <p>(Lưuý là họ thử nghiệm kiểu Spaghetti với 4 loại kiểu đan truyền thống khác nhau, thay đổi độ căng, phối dây, ...)</p>
 <ul class="styled-list">
@@ -2553,7 +2560,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Kết luận: muốn đánh mạnh, cần tạo vận tốc hợp lý và lực hợp lý.</p>
 <p>Làm sao để tạo lực mạnh hợp lý mà không tiêu tốn nhiều năng lượng của cơ thể?</p>
 <p>Giờ thì bạn đã thấy có hai cách để tăng lực. Cách thứ nhất là xài năng lượng nhiều hơn, nghĩa là hít thở sâu hơn, sử dụng toàn bộ các chất ATP đã nóiở trên để đánh. Cách này OK nhưng có hiệu quả không? KHÔNG.</p>
-<p>Có một cách khác (và chỉ có cách đó thôi) để tăng năng lượng truyền vào bóng:</p>
+<p><strong>Có một cách khác (và chỉ có cách đó thôi) để tăng năng lượng truyền vào bóng:</strong></p>
 <ul class="styled-list">
 <li>Khi bóng bay tới, bạn cũng ... "bay" tới ngược chiều để tăng vận tốc va đập! Bằng cách nào? Bước tới vào bóng, vỗ đầu vợt vào bóng, ...</li>
 </ul>
@@ -2567,7 +2574,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đó cũng là lý do thứ 3 khi tôi nói tập tạ có hại cho chơi tennis đỉnh cao.</p>
 <p>Lý do 3. Tập tạ không hề chỉ ra cho bạn cách thả lỏng (ngược lại thì có), thậm chí nó không giúp bạn thực hành cách chuyển động thả lỏng đó!</p>
 <p>Ta có thể nói: Thi đấu tennis là thi đấu cách truyền lực, chứ không phải thi đấu sức mạnh cơ bắp!</p>
-<p>Nói như vậy, tôi không cóý nói rằng bạn không thể tập tạ khi chơi tennis. Tôi chỉ nói, tập tạ sẽ KHÔNG LÀM TĂNG LỰC CHO CÚ ĐÁNH CỦA BẠN như tập những cái khác! (tập cái gì ... sẽ nói sau)</p>
+<p>Nói như vậy, tôi không có ý nói rằng bạn không thể tập tạ khi chơi tennis. Tôi chỉ nói, tập tạ sẽ KHÔNG LÀM TĂNG LỰC CHO CÚ ĐÁNH CỦA BẠN như tập những cái khác! (tập cái gì ... sẽ nói sau)</p>
 <p>Cuối cùng, tập tạ lại còn làm cho bạn có thói quen mới tệ hại khi chơi tennis là ... chậm chạp! Ai đi tập tạ sẽ thấy đa số đều nâng tạ chậm chạp, chẳng ma nào nâng tạ với tốc độ của cú đánh tennis hết. Nếu ráng nâng với tốc độ đó, bạn chuẩn bị đi nhập viện chấn thương chỉnh hình sớm để điều trị đủ thứ bệnh!</p>
 <p>Tuan_tuan nói</p>
 <p>Chiến thuật đánh đơn.</p>
@@ -2584,7 +2591,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Chiến thuật đánh đơn có thể chia thành nhiều phần nhỏ để luyện tập: đánh cuối sân, lob, cắt, serve, .... Tóm lại mỗi khi các bạn học một cú đánh mà không hiểu rõ các chiến thuật áp dụng khi đánh thì đó gọi là học chưa tới (hay dạy chưa tới). Đây cũng là nguyên nhân nhiều bạn học với thầy cả năm trời nhưng không luyện được bộóc chiến thuật đánh tuy cú quả có cải thiện.</p>
-<p>Nguyên tắc chung khi đánh đơn:</p>
+<p><strong>Nguyên tắc chung khi đánh đơn:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Nhắm đánh vào những khu vực không quá sát lằn biên, để tăng độ an toàn.</p>
@@ -2602,7 +2609,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Luôn đánh dứt khoát (quyết đoán) với 70% lực của bạn. và khi cơ hội đến, đánh với 100% để bảo đảm ghi điểm.</p>
 </li>
 </ul>
-<p>Chiến thuật giao bóng:</p>
+<p><strong>Chiến thuật giao bóng:</strong></p>
 <p>Trận đấu luôn bắt đầu bằng giao bóng, nên tôiưu tiên nói cái này trước.</p>
 <ul class="styled-list">
 <li>
@@ -2682,7 +2689,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đánh ngược hướng chạy của đối thủ mỗi khi có thể.</p>
 </li>
 <li>
-<p>Thay đổi liên tục:</p>
+<p><strong>Thay đổi liên tục:</strong></p>
 </li>
 <li>
 <p>Độ xoáy</p>
@@ -2727,7 +2734,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Với những quả vô lê dứt điểm, ưu tiên bắt vô lê chéo sân trong khu vựcô giao bóng.</p>
 </li>
 </ul>
-<p>Chiến thuật đánh smash:</p>
+<p><strong>Chiến thuật đánh smash:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Dùng cú smash flat càng nhiều càng tốt, và cú smash slice khi đang ở vị trí không thuận lợi.</p>
@@ -2748,7 +2755,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Với những cú smash gần lưới, đập sao cho bóng bay vồng qua đầu đối phương, cho dù họ có lùi ra tới hàng rào.</p>
 </li>
 </ul>
-<p>Chiến thuật lob:</p>
+<p><strong>Chiến thuật lob:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Khi phòng thủ, lốp chéo sân và sâu (cao).</p>
@@ -2779,7 +2786,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Tuan_tuan nói</p>
-<p>Cuối năm sắp đến, chắc có nhiều giải lớn nhỏ. Tôi viết loạt bài này để giúp các bác phần nào về:</p>
+<p><strong>Cuối năm sắp đến, chắc có nhiều giải lớn nhỏ. Tôi viết loạt bài này để giúp các bác phần nào về:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Xây dựng tâm lý tự tin khi thi đấu</p>
@@ -2791,10 +2798,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Chuẩn bị bộ chân di chuyển cho ngon một chút. Đừng coi thường yếu tố này. Thống kê cho thấy, 80% cú đánh tennis là dưới áp lực chạy gần chết. Đây cũng là lý do vì sao các bác đi tập thì ngon, mà ra sân đánh không giống ai hết, kể cả giống mình trong lúc tập!</p>
 </li>
 </ul>
-<p>1- Tạo dựng sức bền:</p>
+<p><strong>1- Tạo dựng sức bền:</strong></p>
 <p>Bơi lội. Không gì tốt bằng tập dưới hồ bơi. Mỗi ngày bơi cho tôi 1000 m. Không bơi được thì có vài cách tập cơ dưới nước rất tốt, nhưng phải ở hồ bơi tôi mới nói được. . Các bác từ 40 tuổi ngoài nên tập thể lựcở hồi bơi với các động tác này để tránh đau khớp gối (vì cơ thể nặng do bụng bự)! Nhớ một tuần bơi 5 ngày thôi, 2 ngày cho cơ thể nó nghĩ ngơi hồi phục</p>
 <p>Nhảy dây. Nhảy bằng một chân, đặc biệt nhảy chân không thuận nhiều vô cho tôi. Nhảy tới khi thấy vẫn giữ được thăng bằng với chân thuận co lên là đạt yêu cầu.</p>
-<p>Hít đất. Dân thể thao chuyên sẽ hít 5 kiểu. Các bác hít 2 kiểu cho tôi là được:</p>
+<p><strong>Hít đất. Dân thể thao chuyên sẽ hít 5 kiểu. Các bác hít 2 kiểu cho tôi là được:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Vừa hít vừa đẩy người lên vỗ tay kêu cái đét, rồi chống tay lại.</p>
@@ -2807,11 +2814,11 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Chạy bộ. Bác nào có đủ dũng khí chạy 7 km một ngày cho tôi. Một tuần chạy từ 3-5 ngày là tối thiểu.</p>
 <p>Khi đánh bóng, dành 30 giây đánh thật nhanh vào tường hay nhờ thầy bắn bóng thật nhanh cho tôi. Đánh hết sức nhanh, nhưng thả lỏng tay.</p>
 <ul class="styled-list">
-<li>Chúý hơi thở. Thở bằng mũi và thở liên tục. Động tác càng nhanh càng thở nhanh để kịp cung cấp oxy cho máu đốt chất Aerobic để cung cấp năng lượng.</li>
+<li>Chú ý hơi thở. Thở bằng mũi và thở liên tục. Động tác càng nhanh càng thở nhanh để kịp cung cấp oxy cho máu đốt chất Aerobic để cung cấp năng lượng.</li>
 </ul>
 <p>Tập kéo dãn các cơ ngực, vai, đùi. Y như các võ sĩ taekwondo tập vậy. Sau này lực đàn hồi của các cơ rất mạnh. Đánh bể 8 viên gạch chứ nói gì đến trái bóng mà phang!</p>
 <p>Tập với dây thun chuyên dụng. Cái này nữ hay nam tập đều ngon. Cái này gặp chỉ dễ hơn viết ở đây. Tập đúng giúp các bác chạy nhanh như sóc, cú đánh uy lực chỉ với cú lắc nhẹ của người.</p>
-<p>Chúý:</p>
+<p><strong>Chú ý:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Ngoài trừ bơi và tập dây thun, các bài tập khác nữ giới tuyệt đối không nên tập vì hệ cơ gân cân của nữ được thượng đế thiết kế cho chuyện sinh đẻ! Tập không đúng nó phá hết mấy cái đó thì sau này có hối cũng không kịp! Các bác có thấy tụi nữ thế giới về hưu sớm hơn tụi nam không? Đây là nguyên nhân! Vì tiền, tụi nó cắn răng làm, sau đó có được chút vốn liếng là nghĩ sớm!</p>
@@ -2839,8 +2846,8 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Tuan_tuan nói</p>
 <p>Sắp tới theo yêu cầu một số bạn, có thể tôi sẽ mở vài lớp tennis ngắn hạn để các bạn hiểu rõ hơn phần lý thuyết trên (nếu điều kiện cho phép). Để chuẩn bị cho ngày đó, tôi ghi ra đây vàiý để bảo đảm thành công cho khóa học.</p>
 <p>Nếu bạn gặp ai đó hay nói: "Đánh mạnh làm gì, bỏ đi, cái đó không xài được đâu", hoặc cú đánh họ cứ phều phều thì đừng nên chơi với họ. Những người đó có máu tiêu cực. Hãy chơi tennis với các tay vợt đánh mạnh, tự nhiên não bộ bạn sẽ yêu cầu bạn đánh mạnh.</p>
-<p>Tục ngữ có câu: "Gần mực thì đen, gần đèn thì sáng", dịch sang tennis là: "Gần rùa thì chậm, gần thỏ thì nhanh" là cóý này.</p>
-<p>Để giúp bạn phát hiện rõ hơn dạng người này, tôi liệt kê sau đây vài yếu tố:</p>
+<p>Tục ngữ có câu: "Gần mực thì đen, gần đèn thì sáng", dịch sang tennis là: "Gần rùa thì chậm, gần thỏ thì nhanh" là có ý này.</p>
+<p><strong>Để giúp bạn phát hiện rõ hơn dạng người này, tôi liệt kê sau đây vài yếu tố:</strong></p>
 <p>Không giúp đỡ ai hết.</p>
 <p>Loại người này có thể nói là chuyên gia giết chết giấc mơ của người khác. Họ không tin vào chuyện gì hơi thách thức một chút. Đụng tí họ nói: chuyện đó khó lắm. Và do đó họ chẳng bao giờ tìm cách khắc phục khó khăn để làm chuyện gì. Nói thật là tôi thấy có rất nhiều người tài năng nhưng chẳng bao giờ làm được chuyện gì vì họ luôn để suy nghĩ này ngự trị trong đầu của họ.</p>
 <p>Ganh tị.</p>
@@ -2857,7 +2864,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Gia đình tiêu cực.</p>
 <p>Nếu bạn gặp phải tình cảnh này thì số bạn xui hết sức. Gia đình lẽ ra nên là điểm tựa anủi, và hun đúc cho bạn những giấc mơ chứ không vùi dập nó. Những bạn nào có gia đình như thế này khó lòng có những thành công trong cuộc đời!</p>
 <p>Vậy thì cách nào để chiến thắng tiêu cực?</p>
-<p>Tránh xa môi trường / con người và luôn cóý thức lựa chọn rỏ ràng về chuyện này là phương thức đúng nhưng chưa đủ. Hãy tìm mọi cách gắn kết với những con người tích cực và sống chung với họ.</p>
+<p>Tránh xa môi trường / con người và luôn có ý thức lựa chọn rỏ ràng về chuyện này là phương thức đúng nhưng chưa đủ. Hãy tìm mọi cách gắn kết với những con người tích cực và sống chung với họ.</p>
 <p>Hãy cứ chấp nhận là trên đời này đôi khi bạn có thể phải sống chung với họ, nhưng hãy cố gắng đừng để họảnh hưởng đến cuộc đời của bạn.</p>
 <p>Cuối cùng: Tin tôi đi, với HLV tích cực và bạn học tích cực, bạn sẽ tiến bộ không ngờ sau khóa học.</p>
 <p>Tuan_tuan nói</p>
@@ -2876,7 +2883,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Một khi mà bạn đã tập luyện chăm chỉ, thì thi đấu chính là phần thưởng của bạn. Bạn “khoe” được với nhiều người bạn đã tập luyện chăm chỉ như thế nào và bạn giỏi ra làm sao. Bạn MUỐN đấu, và bạn MUỐN có cảm giác đấu.</p>
 <p>Tôi kể cho bạn câu chuyện cậu bé 9 tuổi mà tôi tập. Đến ngày đánh giải, vì lý do khách quan nên trận đấu hoãn lại. Khi tôi nói cho nó nghe tin đó, thằng bé buồn tới nỗi giống như ngày Tết nó không được lì xì vậy! Tôi cố chọc cười nó và anủi là rồi sẽ còn nhiều giải mà con, nhưng nó chẳng quan tâm! Dạy con nít đến là khổ!</p>
 <p>May mắn thay, vài ngày sau đó tôi được biết giải đấu được tiếp tục. Từ lúc đó đến ngày thi đấu, tôi chưa từng thấy vận động viên nào hạnh phúc hơn nó. Nó cười hích hích cứ như là nó đoạt giải vô địch vậy. Nó tập luyện chăm chỉ và chỉ mong chờ tới ngày đó. Tôi hyọng khi tới ngày bạn thi đấu, bạn cũng có ham muốn y như thằng bé đó. Và nếu bạn không có ham muốn đó, tôi cầu trời cho bạn đừng có gặp đối thủ đang có “hứng” thi đấu như thằng bé đó.</p>
-<p>CHIẾN LƯỢC THI ĐẤU CỦA BẠN!</p>
+<p><strong>CHIẾN LƯỢC THI ĐẤU CỦA BẠN!</strong></p>
 <p>Set đầu tiên – Đánh!</p>
 <p>Mục đích: kiểm soát cú đánh, kỹ thuật, tôn trọng đối thủ (không coi thường họ)</p>
 <p>Đánh với 70% sức và coi chừng cú mạnh (thường là thuận tay và serve) của đối thủ. Tin tôi đi, đối thủ cũng đang làm na ná như bạn. Đánh sâu vào một trong hai góc sân (chấp nhận banh đi cao và có thể ra ngoài). Thường thì cao thủ cũng sẽ đánh thăm dò như bạn. Bạn có thể lâu lâu quất mạnh một trái, hoặc đánh đều đôi công với hắn. Tuy nhiên điểm mấu chốt ở đây là đừng có tính chuyện hạ đối thủ trong vòng vài nốt nhạc. TIẾT KIỆM SỨC của bạn và phá sức đối thủ. Cố gắng đánh làm sao bạn luôn có bóng ở giữa sân còn hắn thì chạy qua chạy lại. Cố gắng kiểm soát trận đấu, tự tin và đưa tình hình trận đấu có vẽ ngang tài ngang sức là OK.</p>
@@ -2942,7 +2949,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cá nhân tôi mê tennis như điên dại. Tôi từng ước ao giá như tôi có thể không đi học mà chơi cái này hồi nhỏ! Khi tay mỏi, tôi tập chân, khi chân mỏi, tôi tập lưng. Khi về nhà, tôi leo lên mạng tìm lục tài liệu khắp nơi, mua về nghiên cứu. Tủ sách nhà tôi gần 50 cuốn đủ các thứ về tennis. Không ai có thể ngăn tôi được vì tối đến còn nằm mơ mai ra sân chơi tennis!</p>
 <p>Làm cho học viên luôn tự động viên họ …</p>
 <p>Một HLV biết cách động viên người khác sẽ không nói: “Vinh, ráng lên, làm thêm 12 cái nữa, đừng xìu xuống như vậy, chỉ 12 cái nữa thôi mà, em làm được mà”</p>
-<p>Họ nên nói:</p>
+<p><strong>Họ nên nói:</strong></p>
 <p>“Vinh, em biết không, với cú forehand đó, em có thể trở thành nhà vô địch trong tương lai. Tập nó nhiều vào nhé”</p>
 <p>HLV chỉ cần nhỏ nhẹ nói như thế, rồi lẳng lặng quay đi làm chuyện khác sau khi vỗ vai thân mật.</p>
 <p>Người HLV tốt không hề bắt bạn làm thật nhiều các bài tập (thể lực, kỹ thuật, …), thế nhưng bạn lại lao vào tập như điên. Vì sao vậy? Họ gieo vào đầu bạn một giấc mơ rất thực tế. Bạn cứ giữ cho họ nuôi dưỡng ước mơ, chỉ dẫn cho học viên cách đi trên con đường, và xem họ làm sai đúng thế nào sau đó để uốn nắn kịp lúc.</p>
@@ -2962,14 +2969,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Tôi không nói bạn nâng cao cái tôi của học viên. Tôi muốn nói là bạn hoàn toàn tự tin vào bạn và chính học viên của bạn. Bí quyết là bạn phải hiểu được KHẢ NĂNG CỦA BẠN và sự TỰ TIN CỦA BẠN khi biết rõ những gì bạn phải động viên học viên thực hiện để đưa họ đến chiến thắng trong giải sắp tới. Nếu bạn là một HLV đúng nghĩa, bạn phải biết rõ cách để học viên thể hiện ra được những điểm mạnh sở trường của họ.</p>
 <p>Chơi tennis không chỉ là đánh cho mạnh hay đẹp,mà là trình diễn được những gì tốt nhất của bạn</p>
 <p>Ai đi học tennis cũng muốn đạt được điều gì đó lớn lao sau khi học. Hãy luôn làm cho học viên cảm thấy họ là người giỏi nhất (bằng cách cho đánh với người ngang trình độ với họ hay hơn họ chút xíu), và họ sẽ thấy bạn là HLV tốt nhất mà họ từng có!</p>
-<p>Trích Tuyển Tập Kỹ Thuật Tennis</p>
+<p><strong>Trích Tuyển Tập Kỹ Thuật Tennis</strong></p>
 <p>Cách đánh bại đối thủ có trình độ cao hơn</p>
 <p>Liệu có thể nào đánh bại một tay vợt có trình độ cao hơn bạn? Tôi nhiều lần thấy chuyện kèo dưới ăn kèo trên ngoạn mục! (nhất là khi đánh đôi). Ngay cả đánh đơn, chuyện này cũng xảy ra liên tục!</p>
 <p>Sau đây là vài bí quyết giúp bạn điều đó.</p>
-<p>Thỉnh thoảng, tôi nhận được vài pm như sau:</p>
+<p><strong>Thỉnh thoảng, tôi nhận được vài pm như sau:</strong></p>
 <p>"..... Có một tên nơi sân tôi đánh. Hắn nhanh hơn, mạnh hơn, cao hơn, di chuyển tốt hơn, đỡ được mọi cú giao bóng của tôi, và đánh banh nói chung là khó chịu. Nói chung là hắn giỏi hơn tôi nhiều mặt! Bác có thể giúp tôi cách để đánh thắng hắn?"</p>
 <p>Tất nhiên chuyện này dễợt !</p>
-<p>Đùa chơi thôi, chứ hơi bị khó! Nhưng mà trong đùa cũng có thật một chút:</p>
+<p><strong>Đùa chơi thôi, chứ hơi bị khó! Nhưng mà trong đùa cũng có thật một chút:</strong></p>
 <p>Đa số đều nghĩ rằng đánh tennis hay là do kết hợp giữa tập luyện và tài năng. Người không có tài phải tập luyện chăm chỉ hơn. Chuyện này đúng trong mọi trường hợp, và trong tennis cũng vậy. Tuy nhiên trong tennis có phức tạp hơn một chút.</p>
 <p>Kỹ năng và tài năng có thể bảo đảm cho bạn chiến thắng trên giấy tờ chứ không thể bảo đảm khi thi đấu thực tế. Có quá nhiều yếu tố vô hình và cả đống thông số khác ảnh hưởng tới kết quả trận chiến. Bản thân tôi từng đánh "thắng tới tấp" nhiều tay cao thủ hơn tôi, và cũng không ít lần "thua thê thảm" cả lô người dỡ hơn tôi nhiều! Do đó có thể nói: chiến thắng tay vợt trên cơ là hoàn toàn có thể, và thực tế là nó luôn xảy ra. Bởi vậy mới có câu:</p>
 <p>Thi đấu thể thao không ai nói được kiểu toán học: A thắng B, B thắng C, vậy A thắng C. Còn lâu! Anh bạn trên sân tôi chơi chuyên thua một đứa, đứa này chuyên thua đứa khác, vậy mà đứa khác thứ 3 ở chuỗi này lại thua te tua tên đầu tiên mới khó hiểu, dù là đánh độ cả 6 tháng trời cũng vậy thôi! Chúng tôi hay nhái bài hát Kem Wall nói là: Thua riết ghiền, Thua riết ghiền, … Ôi trời ơi sao cứ thua …” hay bài hát Giải phóng Miền Nam: “Trời ơi, hôm nay lại thua nữa rồi, …”</p>
@@ -2993,15 +3000,15 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Động tác giả thường được bắt đầu từ ... chân. Một số cao thủ hay nhìn chân đã bắt đầu đoán bạn sắp đánh như thế nào. Hãy làm sao cho họ tưởng là họ đã đọc đúng, bằng cách đánh đúng những yếu tố then chốt của cú đánh A, nhưng rồi đột ngột biến cú đánh đó thành cú B một cách khéo léo. Đa số các kỹ thuật đánh đều có thể hoán chuyển cho nhau, hãy đểý điều tôi nói và tự khám phá. Khám phá không ra? Đến gặp HLV cỡ Lâm Quang Trí chẳng hạn!</p>
 <p>Bạn cũng có thể lừa đối thủ bằng hơi thở hay tiếng hét. Nếu sân không ồn, bạn hoàn toàn nghe được tiếng thở của đối thủ. Đánh ở nước taồn quá nên khó nghe. Khi đó bạn chỉ có nước dùng thần công sư tử hống như Azarenka: hét sau khi đánh. Hét thì ghê, nhưng thỉnh thoảng hét to mà đánh ... nhẹ khiến đối thủ choáng váng. Đây là công phu phải tập mới có được, chứ không phải nói là có để xài!</p>
 <p>(Tôi nhiều lầnăn độ trên sân nhờ chơi "ăn gian" kiểu này lúc tình thế đang nguy cấp)</p>
-<p>Tóm lại, phần này chỉ nói lên một điều cốt yếu khi chơi chiêu động tác giả:</p>
+<p><strong>Tóm lại, phần này chỉ nói lên một điều cốt yếu khi chơi chiêu động tác giả:</strong></p>
 <p>LÀM CHO ĐỐI THỦ "GẮN KẾT " VỚI CÚ ĐÁNH ĐÓ HƠN LÀ BẠN!</p>
 <p>Kỹ thuật giao bóng tennis</p>
 <p>Giao bóng là cú có kỹ thuật khó nhất trong các cú đánh tennis, vì nó yêu cầu rất nhiều sự phối hợp các bộ phận trong cơ thể, và hầu như các động tác đó đều chỉ là động tác đặc thù của tennis, do đó cơ thể cần phải có thời gian lâu mới thích nghi với các chuyển động phối hợp đó.</p>
 <p>Trong trận đấu, giao bóng tốt có thể kiếm điểm ngay từ đầu trận và có thể kiểm soát trận đấu theo hướng có lợi, trong khi nếu giao bóng kém, bạn chưa gì hết đã mang tâm lý hoang mang, thêm vào đó là dễ bị đối thủ đưa vào thế bị động nếu họ trả giao bóng hiểm với cú giao bóng hiền của bạn!</p>
 <p>Tuy vậy, đây lại là cú mà bạn có thể làm chủ hoàn toàn chứ không bị động như các cú thuận, trái tay, vô lê khác được đối thủ đánh sang rất mạnh.</p>
 <p>Trước hết hãy xem qua video quay chậm động tác giao bóng của Federer (sau này sẽ là của Lâm Quang Trí)</p>
-<p>Roger Federer Serve Slow Motion - ATP Tennis Serve Technique</p>
-<p>Trong thực tế, các tay vợt giỏi:</p>
+<p><strong>Roger Federer Serve Slow Motion - ATP Tennis Serve Technique</strong></p>
+<p><strong>Trong thực tế, các tay vợt giỏi:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Giao bóng trung bình với vận tốc trên 200 km/giờ, thậm chí 250 km/giờ,</p>
@@ -3019,7 +3026,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Thoát khỏi tình thế khó khăn nhờ chất lượng cú giao bóng của họ,</p>
 </li>
 </ul>
-<p>Tất cả những điều đó khiến việc sở hữu cú giao bóng trở nên cực kỳ quan trọng. Điều nghịch lý là biết vậy nhưng trên thực tế:</p>
+<p><strong>Tất cả những điều đó khiến việc sở hữu cú giao bóng trở nên cực kỳ quan trọng. Điều nghịch lý là biết vậy nhưng trên thực tế:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Ít ai chịu tập cú giao bóng nhiều như các cú khác, đặc biệt là các tay vợt phong trào</p>
@@ -3034,7 +3041,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Bảo đảm là mỗi chuyển động đều có tạo ra năng lượng. Nói phét theo “võ học di thư” là khí hùng kiêm lực túc, vận đủ 10 thành công lực</p>
 <p>Năng lượng tạo ra khi huy động các cơ bắp, gân, cân của các bộ phận trên phải được tích lũy lại tạo thành một chuỗi chuyển động hợp lý gọi là Kinetic Chain. Nói phét theo “võ học di thư” là Tam hoa tụ đỉnh, ngũ khí triều nguyên, nội ngoại tương hợp, thượng hạ tương tùy, ý đến kình đếnào ào như sóng vỗ ngoài biển vậy,</p>
 <p>Để có thể tích lũy nguồn năng lượng này có được từ các bộ phận khác nhau, cần phải có sự phối hợpăn rơ giữa các bộ phận cơ thể với nhau, và các động tác phải được thả lỏng và liên tục! Nói phét theo “võ học di thư” là dụng ý bất dụng lực, toàn thân liên hoán (liên miên hoán đổi), trọng tất trệ, trệ tất tắc, tắc bất đắc vậy,</p>
-<p>Để cho vợt đạt được vận tốc tối đa, động tác giao bóng phải là được thực hiện theo thứ tự, liên tục và thả lỏng như sau:</p>
+<p><strong>Để cho vợt đạt được vận tốc tối đa, động tác giao bóng phải là được thực hiện theo thứ tự, liên tục và thả lỏng như sau:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Đẩy chân</p>
@@ -3053,7 +3060,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ul>
 <p>Những nguyên tắc về lực</p>
-<p>Khi các cơ hoạt động, nó phải:</p>
+<p><strong>Khi các cơ hoạt động, nó phải:</strong></p>
 <ul class="styled-list">
 <li>
 <p>Trải qua một giai đoạn kéo dãn,</p>
@@ -3065,41 +3072,40 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Năng lượng đàn hồi được sản xuất ra bởi sự kéo dãn của các bó cơ + gân (nối bắp cơ với xương) + cân (nối xương với xương). Năng lượng này sẽ được lưu trữ trong khi kéo dãn, và sẽ được tạo ra + sử dụng khi các cơ co lại trong giai đoạn sau đó.</p>
 <p>Bạn cũng cần nên biết là năng lượng như trên tạo ra sẽ mất đi khá lớn nếu bạn dừng giai đoạn kéo dãn cơ quá lâu trước khi cho các cơ co lại: Đa số các bạn mất đến 50% năng lượng tạo ra do khoảng thời gian giữa động tác chuẩn bị và động tác bắt đầu đánh vào bóng kéo dài tới 1 giây! Ai làm được điều này nhanh hơn sẽ có gần như 100% uy lực để có cú giao bóng cỡ Lâm Quang Trí vậy!</p>
 <p>Ngũ Hình Quyền là 1 bộ quyền pháp cơ bản của Thiếu Lâm. Động tác dựa theo động tác di chuyển động vật.</p>
-<p>Các Thức</p>
-<p>Hổ Hình</p>
-<p>Mãnh Hổ Xuất Hiệp</p>
-<p>Ngạ Hổ Phác Thố</p>
-<p>Hắc Hổ Thâu Tâm</p>
-<p>Hạc Hình</p>
-<p>Phi Hạc Đằng Không</p>
-<p>Tiên Hạc Tầm Hà</p>
-<p>Hoàn Hồn Bão Hạc</p>
-<p>Xà Hình</p>
-<p>Bạch Xà Thổ Tín</p>
-<p>Linh Xà Toản Động</p>
-<p>Độc Xà Bãi Vĩ</p>
-<p>Long Hình</p>
-<p>Kim Long Hiến Trảo</p>
-<p>Thương Long Xung Thiên</p>
-<p>Thần Long Xuất Hải</p>
-<p>Báo Hình</p>
-<p>Song Xung Báo Chùy</p>
+<p><strong>Các Thức</strong></p>
+<p><strong>Hổ Hình</strong></p>
+<p><strong>Mãnh Hổ Xuất Hiệp</strong></p>
+<p><strong>Ngạ Hổ Phác Thố</strong></p>
+<p><strong>Hắc Hổ Thâu Tâm</strong></p>
+<p><strong>Hạc Hình</strong></p>
+<p><strong>Phi Hạc Đằng Không</strong></p>
+<p><strong>Tiên Hạc Tầm Hà</strong></p>
+<p><strong>Hoàn Hồn Bão Hạc</strong></p>
+<p><strong>Xà Hình</strong></p>
+<p><strong>Bạch Xà Thổ Tín</strong></p>
+<p><strong>Linh Xà Toản Động</strong></p>
+<p><strong>Độc Xà Bãi Vĩ</strong></p>
+<p><strong>Long Hình</strong></p>
+<p><strong>Kim Long Hiến Trảo</strong></p>
+<p><strong>Thương Long Xung Thiên</strong></p>
+<p><strong>Thần Long Xuất Hải</strong></p>
+<p><strong>Báo Hình</strong></p>
+<p><strong>Song Xung Báo Chùy</strong></p>
 <p>10 Bí quyết của Ngũ Hình Bộ Pháp</p>
 <p>Trước hết hãy để tôi nói thẳng: Tất cả các bạn chơi tennis có trình độ trung bình đều là do bộ chân di chuyển tệ hại. Tôi không nói đến các bạn mới biết chơi 2 tháng. Tôi đang nói tới một bộ phận khá đông bạn trẻ tràn đầy sinh lực nhưng có trình độ chơi trung bình. Thật không may nếu bạn là một trong số đó.</p>
 <p>Mà điều này cũng không hẳn là do bạn. Điều này là do bạn không tập nó mà thôi. Một lý do khác nữa là không ai chỉ cho bạn. Đó là lý do tôi viết loạt bài này, để cải thiện bộ chân của bạn.</p>
-<p>tuankontum nói:</p>
+<p><strong>tuankontum nói:</strong></p>
 <p>Tôi cũng đã hướng dẫn cho nhiều người liều lĩnh nhờ tôi. Tôi thấy cái chung của mọi học viên là khi tập bộ chân di chuyển là nhanh chán, lười biếng, lúc nào cũng thích được chạm bóng. Có thể mọi người có cái nhìn: để điều khiển quả bóng đi theo ý muốn là nhờ tay cầm vợt (điều này không sai), không liên quan gì đến chân cả. </p>
 <p>Các bạn chơi thân mến! Chân là bộ phận thô kệch nhất của cơ thể, là bộ phận vụng về và "khó bảo" nhất khi bộ não điều khiển. Khi quả bóng do đối phương đánh sang phần lớn người chơi đánh hỏng là do bộ chân chứ không phải tay (quan sát người tập và khi thi đấu), khi đối phương đánh bóng sang, người chơi di chuyển không hợp lý sẽ nhanh mất sức, set up bộ chân không đúng với tình huống bóng(điểm rơi của bóng) sẽ dẫn đến cú đánh không hiệu quả. Vì sao? vì phần lớn các cú đánh đều phải di chuyển rồi mới đánh bóng.</p>
 <p>Rất mong bác tuan_tuan chia sẻ về kỹ thuật bộ chân của các cú đánh khi: bóng dài, ngắn, bóng ra ngoài sân( ra ngoài dây dọc), lùi về sau, né trái đánh phải v.v.. Vì tình yêu với Tennis, trách nhiệm của bác với cộng đồng người chơi Tennis, rất mong bác chia sẽ để mọi người có cái nhìn đúng đắn để rèn luyện bộ chân.</p>
 <p>Tuan_tuan nói</p>
-<p>Trung bình bóng từ sân bên kia sang bạn khoảng 1 giây đến</p>
-<h3>1.3 giây Bộ chân của bạn chậm thì nó chiếm mất x giây, và như vậy bạn chỉ còn có (1-x) hay (1.3-x) giây để mở vợt và đánh!</h3>
+<p>Trung bình bóng từ sân bên kia sang bạn khoảng 1 giây đến 1.3 giây Bộ chân của bạn chậm thì nó chiếm mất x giây, và như vậy bạn chỉ còn có (1-x) hay (1.3-x) giây để mở vợt và đánh!</p>
 <p>Bây giờ bạn có thể thấy tầm quan trọng của bộ pháp di chuyển rồi đấy!</p>
 <p>Đó là lý do vì sao, bộ pháp đầu tiên trong ngũ hình bộ pháp là di chuyển như con mèo bắt chuột vậy!</p>
 <p>Bộ pháp này hoàn toàn là do chaông đánh tennis người Việt nghĩ ra khi giải lao trên đồng ruộng, nhìn thấy con mèo chạy bắt con chuột nên sáng chế ra, hoàn toàn không có đi chép và dịch lại của mấy thằng Tấy. Nếu có thằng Tây nào nó viết trước khi tôi in sách, đó là vì tôi ... bán cho nó viết rồi nó lấy tiền của quý vị vì quý vị muốn vậy!</p>
-<p>Tuan_tuan nói:</p>
+<p><strong>Tuan_tuan nói:</strong></p>
 <p>Hôm nay ra sân có quá nhiều bạn yêu cầu tôi hướng dẫn cách để có cú giao bóng hay, giúp các bạnấy có thể tự tin khi đi đánh giải sắp tới.Để đápứng nhu cầu đó, tôi viết tiếp loạt bài về giao bóng, nhưng lần này tôi viết khác với các cách truyền thống lâu nay. Là người chuyên tìm các tài liệu trên mạng, hẳn bạn đã đọc qua rất nhiều hướng dẫn cách giao bóng. Tôi hy vọng đây sẽ là lần cuối cùng các bạn đọc về nóở đây, để rồi sau đó yên tâm ra sân tập dượt.</p>
-<p>HÌNH Ý HỖN NGUYÊN CÔNG TRONG GIAO BÓNG</p>
+<p><strong>HÌNH Ý HỖN NGUYÊN CÔNG TRONG GIAO BÓNG</strong></p>
 <p>Người Việt học giao bóng và dạy giao bóng không giống với các tài liệu trên mạng dạy giao bóng hiện nay. Giao bóng là một động tác phức tạp vì nó đòi hỏi bạn phải kết hợp nhiều yếu tố khác nhau của cơ thể. Nhận thức rõ điều đó, người Việt dạy và học giao bóng đã sáng tạo ra cách dạy và học mới, gọi là HÌNH Ý HỖN NGUYÊN CÔNG</p>
 <p>Vì sao lại có tên này?</p>
 <p>CÔNG ở đây hàmý nói công phu, nghĩa là chuyên tâm mà tập, chứ lười biếng không thể đạt được kết quả. Người Việt không làm thì thôi, chứ đã làm thì làm rất công phu, và bỏ nhiều công sức khi làm để đạt kết quả cao nhất và hiệu quả nhất.</p>
@@ -3126,7 +3132,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đây là một câu hỏi mẹo! Có nghĩa là nó chẳng có câu trả lời chính xác!</p>
 <p>Ý nghĩa đằng sau mọi thế đứng chuẩn bị chỉ là làm sao cho nó phát huy thế mạnh của bạn, giảm bớt điểm yếu càng nhiều càng tốt mà thôi. Tư thế đứng chuẩn bị tốt nhất sẽ là tư thế phù hợp với kiểu chơi của bạn, trình độ kỹ thuật của bạn, và khả năng của bạn và nó có thể không phải là thế đứng của nhân vật mà bạn đang thần tượng!</p>
 <p>Thế đứng tốt giúp bạn điều gì?</p>
-<p>Một thế đứng tốt luôn tối thiểu là một thế đứng cân bằng giữa rất nhiều yếu tố để bạn có thể đánh bóng mạnh và chính xác. Đứng đúng thế sẽ giúp bạn:</p>
+<p><strong>Một thế đứng tốt luôn tối thiểu là một thế đứng cân bằng giữa rất nhiều yếu tố để bạn có thể đánh bóng mạnh và chính xác. Đứng đúng thế sẽ giúp bạn:</strong></p>
 <p>Có sức mạnh khi vung vợt</p>
 <p>Có tầm với cao</p>
 <p>Có độ linh hoạt cao (đánh được nhiều vị trí của bóng)</p>
@@ -3137,14 +3143,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cách đặt chân của bạn có lẽ là yếu tố quan trọng nhất khi nói về thế đứng. cách bạn đặt hai bàn chân cóảnh hưởng đến các cú đánh của bạn, vì thật ra tennis là môn chơi bắt đầu các động tác từ … chân chứ không phải từ tay như bạn thường bị đánh lừa. Vì vậy học được bộ chân đúng, bạn sẽ dễ dàng đánh mọi cú đánh, kể cả cú đánh khó như cú giao bóng.</p>
 <p>Sắp xếp Đầu ngón chân cái và Gót chân</p>
 <p>Điều đầu tiên bạn cần làm khi bước vào vạch giao bóng là đặt 2 bàn chân đúng tư thế, với mũi bàn chân bên này và gót bàn chân bene kia phải thành một đường thẳng (xem hình).</p>
-<p>Nguyên tắc vàng khi đứng giao bóng:</p>
+<p><strong>Nguyên tắc vàng khi đứng giao bóng:</strong></p>
 <p>Chân sau luôn luôn nhấc gót lên khỏi mặt đất một chút. </p>
 <p>Đứng vớiức bàn chân sau sẽ cho bạn một lực đạp mạnh nhất khi giao bóng. </p>
 <p>Hai chân của bạn phải được trải ra bằng khoảng vai hoặc vài cm rộng hơn để có thăng bằng tốt hơn. </p>
 <p>Bàn chân trước có thể đặt trên mặt đất nhưng cố gắng trọng lượng cơ thể gần với chân trước. </p>
-<p>Nếu chia khoảng cách giữa hai chân ra làm ba phần bằng nhau hãy đứng sao cho trọng tâm nằmở 1/3 gần chân trước (và cũng có lúc bạn cần đưa trọng tâm cơ thể về 1/3 gần chân sau).</p>
+<p>Nếu chia khoảng cách giữa hai chân ra làm ba phần bằng nhau hãy đứng sao cho trọng tâm nằm ở 1/3 gần chân trước (và cũng có lúc bạn cần đưa trọng tâm cơ thể về 1/3 gần chân sau).</p>
 <p>Đầu gối luôn hơi cong nhẹ. Không cần phải giải thích rườm rà về giải phẫu học làm bạn nhức đầu, bạn cứ chấp nhận là tư thế đó giúp bạn phát ra lực nhiều hơn là hai chân duỗi thẳng. </p>
-<p>Hông của bạn phải thả lỏng và luôn cóý thức hạ người xuống để chân như ghim nhẹ cơ thể bạn vào đất. </p>
+<p>Hông của bạn phải thả lỏng và luôn có ý thức hạ người xuống để chân như ghim nhẹ cơ thể bạn vào đất. </p>
 <p>Tay vợt nào gồng cứng người khi đứng sẽ đốt nhiều năng lượng hơn, mau mệt hơn mà lại dễ làm cơ thể mất thăng bằng do cái khối cơ thểở trên nó “lật” cái khối ở dưới, y như cái nhà cao tầng đè lên cái móng nhà vậy!</p>
 <p>Vai và tay phải thả lỏng. </p>
 <p>Cùi chỏ để thấp xuống để hạ trọng tâm phần trên cơ thể xuống (giống như trong nhà cao tầng kêu mọi người chạy xuống tầng dưới chứ đừng leo lên nóc đứng coi khi trời có bão vậy). </p>
@@ -3152,12 +3158,12 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Các tư thế đứng đúng và sai</p>
 <p>Tuy nguyên lý đứng đánh mà tôi nóiở trên là đúng cho mọi trường hợp, các tay vợt luôn có những biến tấu cho các tư thế của họ. Tất cả đều do vị trí tay của họ, cách họ di chuyển chân trước khi đánh, và góc độ thân hình của họ so với bóng khi đánh. </p>
 <p>Tuy nhiên, thế đứng của bạn quyết định toàn bộ tư thế của các bộ phận còn lại của cơ thể. Ví dụ, nếu bạn không đứng đúng tư thế để giúp bạn di chuyển nhanh về phía trước, thì bạn không thể giao bóng flat mạnh được. Tôi lập lại một lần nữa là bạn phải đứng phù hợp với tình huống và kiểu chơi của bạn trong từng cú đánh. </p>
-<p>Bởi vậy bí quyết “HÌNH Ý HỖN NGUYÊN CÔNG GIAO BÓNG KIẾM PHỔ” có ghi: Thượng hạ Tương Tùy, kình căn tại cước là cóý này (trên dưới phù hợp, lực phát từ chân).</p>
+<p>Bởi vậy bí quyết “HÌNH Ý HỖN NGUYÊN CÔNG GIAO BÓNG KIẾM PHỔ” có ghi: Thượng hạ Tương Tùy, kình căn tại cước là có ý này (trên dưới phù hợp, lực phát từ chân).</p>
 <p>Bất cứ cú đánh nào của tennis có "chất lượng" hay không đều được quyết định bởi thời điểm tiếp xúc bóng. Có rất nhiều yếu tốảnh hưởng đến quá trình này đến nổi, sau hàng trăm năm ra đời, vẫn còn rất nhiều đề tài nghiên cứu về nó chưa được làm sáng tỏ. Đây chính là điều làm cho tennis thú vị. Bởi lẽ không buổi ra sân nào bạn đánh giống với buổi ra sân trước đó.</p>
 <p>Tuy vậy, bản chất của tennis lại là sự lập đi lập lại, và có những nguyên tắc nhất định cho một số trường hợp nhất định. Sau đây là một số nguyên tắc khi bạn giao bóng.</p>
 <p>Yêu cầu của động tác này chỉ là đứng làm sao để lát nữa có thể phát lực đánh mạnh nhất để tạo ra cú giao bóng mà bạn mong muốn. Trên đây tôi đã liệt kê các kiểu đứng sai: vuông quá, rộng quá, hẹp quá, ...</p>
 <p>Sau khi đã có hiểu biết tạmổn về cách đứng, điều bạn cần làm là nhìn sơ một lượt về vị trí mà bạn muốn giao bóng vào đó, và vị trí của đối thủ đứng. Hãy cố gắng đánh lừa anh ta bằng nguyên lý của động tác giả mà tôi từng viết trước đây.</p>
-<p>Sau đây là một số gợiý về tư thế chuẩn bị cần có trước khi giao bóng:</p>
+<p><strong>Sau đây là một số gợiý về tư thế chuẩn bị cần có trước khi giao bóng:</strong></p>
 <p>Tư thế bắt đầu</p>
 <p>Chân trái ở khoảng 45° (hay hơn) so với đường biên cuối sân, tùyý đồ giao bóng,</p>
 <p>Chân phải (hơi) song song với đương biên cuối sân, tùyý đồ giao bóng,</p>
@@ -3168,14 +3174,14 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Banh được thả khỏi tayở ngang mắt hay mặt của bạn,</p>
 <p>Tay phải đưa lên cùng lúc với tay trái,</p>
 <p>Vaiở hơi quá đường thẳng góc với lưới</p>
-<p>Tư thế "sẵn sàng" để bắt đầu đường cong lăng vợt đánh bóng:</p>
+<p><strong>Tư thế "sẵn sàng" để bắt đầu đường cong lăng vợt đánh bóng:</strong></p>
 <p>Chân sau kéo lên để sát với chân trước, hoặc hai chân giữ nguyên như Federer / Sampras</p>
 <p>Vai hơi quá đường thẳng góc với lưới</p>
 <p>Vai phải thấp hơn vai trái (vai tạo thành một đường dốc lên cao, trong cùng một hướng với thân vợt)</p>
 <p>Vợt gần như thẳng đứng chỉ lên trời, hay đầu vợt chỉ vào bóng tùyý đồ</p>
 <p>Tay trái thả lỏng</p>
 <p>Chân cong lại</p>
-<p>Đường vòng cung (parabol) khi đánh bóng:</p>
+<p><strong>Đường vòng cung (parabol) khi đánh bóng:</strong></p>
 <p>Cùi chỏ tay phải gấp lại và được thả lỏng khi đi lên để đưa vợt hạ xuống sau lưng</p>
 <p>Chân duỗi thẳng , gần như đứng trên các ngón chân</p>
 <p>Mông và đầu hướng lên cao và về trái banh</p>
@@ -3195,10 +3201,10 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Vô hay không là do các gạch đầu dòng ở trên được làm tốt như thế nào. Xoáy đi đâu chưa bàn tớiở đây</p>
 <p>Vấn đề đặt raở đây là gì? Mỗi gạch đầu dòng ở trên chỉ là HÌNH thức, còn vì sao nó nên như vậy lại chính làÝ tứ đi kèm theo nó. Nếu không hiểu rõý tứ đó, cái hình thức ở trên vô dụng, hoặc có dụng được nhưng dụng không tới (có vốn không biết xài)!</p>
 <p>Cáiý tứ này hiện giờ đa số không biết, vì nhiều lý do, trong đó không biết thật chiếm đa số!</p>
-<p>Fed_Storm nói:</p>
+<p><strong>Fed_Storm nói:</strong></p>
 <p>Hihi...em không có tiền đề mua cái chung cư Hoàng Anh Gia Lai bácơi, nhưng lý thuyết về hai cú này em thuộc như thơ...có điều chờ bác mô tả chi tiết thôi...mấy bài tập 2 cú này em cũng áp dụng cả, nào là ngồi oánh, quỳ oánh, nằm oánh,...em oánh suốt. Bác có điều gì chỉ giáo đi...viết theo yêu cầu cũng là cách để câu Thanks đó bác...hhihi...</p>
 <p>Tuan_tuan nói</p>
-<p>Vậy thì chỉ có cách nói vắn tắt miễn phí thế này:</p>
+<p><strong>Vậy thì chỉ có cách nói vắn tắt miễn phí thế này:</strong></p>
 <p>-Tay phải mạnh</p>
 <ul class="styled-list">
 <li>Tiếp xúc bóng phải đúng và có khả năng điều chỉnh cho trái banh "dính" trong vợt rất lâu. </li>
@@ -3214,7 +3220,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Tư thế chờ đợi khi đánh vô lê quyết định đến chất lượng của cú vô lê của bạn.</p>
 <p>Như bạn đã biết, đứng ở gần lưới không cho bạn thời gian nhiều để chuẩn bị cho cú đánh.</p>
 <p>Tư thế sẵn sàng khi đánh vô lê không khác mấy so với tư thế chuẩn bị lúc đỡ giao bóng (và đỡ giao bóng mạnh cũng không khác mấy so với cú vô lê trên lưới).</p>
-<p>Sau đây là các yếu tố kỹ thuật đó:</p>
+<p><strong>Sau đây là các yếu tố kỹ thuật đó:</strong></p>
 <p>Chân phải hơi gấp lại. Động tác này có vai trò quan trọng hơn khi bạn đỡ giao bóng.</p>
 <p>Chân đạp vào đấtở phần bàn chân phía trước,</p>
 <p>Vợt được cầm bởi 2 tay, và đưa vợt ra phía trước với cánh tay hơi cong để có lực chịu vào bóng khi đánh. Bạn thử đưa tay gập 90 độ sẽ thấy tay rất yếuớt khi nóở vị trí đó vàở trước người, cùi chỏ phải ở gần người vàở vị trí phù hợp với bàn chân,</p>
@@ -3224,9 +3230,9 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Kỹ thuật vô lê cú thuận tay trong tennis.</p>
 <p>Cách cầm vợt</p>
 <p>Cầm theo kiểu cầm búa hoặc continental.</p>
-<p>Chuẩn bị</p>
+<p><strong>Chuẩn bị</strong></p>
 <p>Rất ngắn, tùy theo thời gian bạn có</p>
-<p>Đánh bóng: </p>
+<p><strong>Đánh bóng:</strong></p>
 <p>Cùng lúc đó, tay cầm vợt mở ra theo hướng bóng tới, cổ tay mở ra để mặt vợt hướng vào bóng. </p>
 <p>Sai lầm hay thấy là người chơi rút vợt ra sau kèm theo động tác xoay lưng. Thực ra tay không hề rút ra sau nhiều, hạn chế được chừng nào tốt chừng đó,</p>
 <p>Mặt vợt bắt buộc phải nằm trong vùng mà mắt bạn nhìn thấy được (vật lý học gọi là vùng thị trường của mắt, tức là vùng mà mắt người có thể thu nhận hình ảnh xung quanh được). Nếu nhìn ngang, vợt không bị che bởi thân người như khi bạn đỡ giao bóng ở cuối sân,</p>
@@ -3264,7 +3270,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Đánh theo bóng rất ngắn (có thể nói là dừng rất nhanh), từ cao xuống thấp, theo hướng bạn muốn đánh.</p>
 <p>Kỹ thuật đánh vô lê bên trái tay</p>
 <p>Cách cầm vợt</p>
-<p>Chuẩn bị</p>
+<p><strong>Chuẩn bị</strong></p>
 <p>Tay trái, đang cầm cổ vợt, kéo vợt ra sau,</p>
 <p>Vợt dược kéo ra sau theo chiều của banh bay tới, hoặc ở trên một chút, để đánh vớiép phê cắt bóng giúp tạo thêm độ an toàn,</p>
 <p>Đầu vợt cao hơn cổ tay, còn cổ tay thì cao ngang mép lưới,</p>
@@ -3301,7 +3307,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Ngược lại, một tình trạng tinh thần thoải mái, tự tin, sẽ tạo điều kiện cho các động tác thả lỏng tự nhiên, hiệu quả và sử dụng ít sức lực cơ bắp hơn.</p>
 <p>Hãy nhớ mỗi khi bạn để căng thẳng đầuóc thì kỹ thuật của bạn bịảnh hưởng ghê gớm.</p>
 <p>Những VĐV chơi với tâm trạng lo lắng, quá phấn khích, muốn thắng quá cỡ, quá hung hăng, thường hay căng cứng cơ và làm hại đến động tác thả lỏng. Đây là lý do vì sao tôi đưa môn Yoga vào trong chương trình tập luyện ở các buổi học. Lưuý các bạn không phải động tác Yoga nào cũng cóích cho tennis.</p>
-<p>Để tránh căng thẳng quá mức có thể gây căng cơ, bạn cần:</p>
+<p><strong>Để tránh căng thẳng quá mức có thể gây căng cơ, bạn cần:</strong></p>
 <p>Hạ thấp bớt tầm quan trọng của trận đấu,</p>
 <p>Đừng quá hoang mang sợ thua,</p>
 <p>Không quá chú tâm về kết quả sau cùng,</p>
@@ -3312,7 +3318,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Tinh thần thi đấu là một yếu tố cần thiết trong tennis. Tiếc thay nó đang chưa được là yếu tố được nhìn nhận đúng và tập luyện hiện nay tại đa số các lớp học tennis.</p>
 <p>Rất nhiều người chơi có thể tập rất tốt nhưng lại thi đấu tệ hại do yếu tố tinh thần này.</p>
 <p>TomcatVN nói</p>
-<p>Sau hơn 1 năm mới trả lời được câu hỏi của bác Tuấn:</p>
+<p><strong>Sau hơn 1 năm mới trả lời được câu hỏi của bác Tuấn:</strong></p>
 <p>Đừng chống lại nó</p>
 <ul class="styled-list">
 <li>
@@ -3325,7 +3331,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 <p>Cả hai kiểu đều 1 nguyên lý, không chống lại lực quán tính khi tăng tốc đột ngột, sau khi toàn bộ vợt bị kéo đi có cùng vận tốc mới xoay vợt vào bóng (phân thành 2 giai đoạn).</p>
 <ol class="styled-list numbered">
 <li>
-<p>Góc nghiêng của vợt, góc nghiêng đà vợt tốiưu khi tạo topspin:</p>
+<p><strong>Góc nghiêng của vợt, góc nghiêng đà vợt tối ưu khi tạo topspin:</strong></p>
 </li>
 <li>
 <p>Góc nghiêng của mặt vợt so với phương đánh: 30~32 độ. Trong đó</p>
@@ -3338,7 +3344,7 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
 </li>
 </ol>
 <p>Điều này chỉ đúng khi đánh đủ nhanh (&gt; 80km), và bề ngang của vợt (&gt;25,4 cm ~ 10 inch)</p>
-<p>Trong thực tế, khi đánh đủ bộ, góc nâng tự nhiên của đà vung vợt do hạn chế gốc cánh tay, chiều dài cánh tay đòn, khoảng cách giữa điểm tiếp xúc banh với vai... mà góc nghiêng đà vung tốiưu là khác nhau ở mỗi người, mỗi vị trí banh. thông thường từ 20 đến 25 độ cho banh trung bình, cao hơn nếu banh cao...do đó góc nghiêng vợt/đất dao động trong khoảng 5 độ đến 11 độ, chẳng hạn Fed (11độ) thường nghiêng hơn Nole khoảng 3,4 độ và hơn Murray khoảng 6, 7 độ, điều này do thói quen Fed đánh straight arm + bóng nửa nảy.</p>
+<p>Trong thực tế, khi đánh đủ bộ, góc nâng tự nhiên của đà vung vợt do hạn chế gốc cánh tay, chiều dài cánh tay đòn, khoảng cách giữa điểm tiếp xúc banh với vai... mà góc nghiêng đà vung tối ưu là khác nhau ở mỗi người, mỗi vị trí banh. thông thường từ 20 đến 25 độ cho banh trung bình, cao hơn nếu banh cao...do đó góc nghiêng vợt/đất dao động trong khoảng 5 độ đến 11 độ, chẳng hạn Fed (11độ) thường nghiêng hơn Nole khoảng 3,4 độ và hơn Murray khoảng 6, 7 độ, điều này do thói quen Fed đánh straight arm + bóng nửa nảy.</p>
 <p>Cách đánh wwf hiện đại giúp tăng góc nâng đà vợt mà không phải hy sinh tốc độ bằng cách thêm động tác giật khủy trước lúc tiếp xúc banh. Nhìn bên ngoài rất dễ hiểu lầm là xoa banh...</p>
 <p>Bác Tuấn làm tốn của em cả 1 năm trời :) đi trong bóng đêm.</p>
 <p>Tham khảo thêm: https://www.revolutionarytennis.com/steps.html </p>
@@ -3350,7 +3356,8 @@ Hình này chỉ tập trung để minh họa cho động tác lăng tay, nên c
   <a href="../index.html" class="nav-btn toc">≡ Mục Lục</a>
   <a href="../index.html" class="nav-btn next">Trang Sau →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>
