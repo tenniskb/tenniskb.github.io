@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,15 +931,15 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Tennis Backhand Techniques — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#one-handed-backhand-biomechanics-and-technique" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">One-handed backhand: biomechanics and Technique</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#biomechanical-core-principle" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Biomechanical core Principle</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tennis-knowledgeglossarykinetic-chain-sequencing" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Knowledge/Glossary/kinetic chain sequencing</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#grip-variations-and-effects" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Grip Variations and Effects</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#contact-point-and-body-alignment" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">contact Point and Body Alignment</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#shouldertorso-rotation-vsarm-drive" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">shoulder/torso rotation vsarm Drive</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#wrist-and-elbow-mechanics" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">wrist and elbow Mechanics</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#follow-through-and-recovery" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">follow-through and recovery</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#common-faults-and-fixes" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Common Faults and Fixes</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#injury-risks-and-prevention" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Injury Risks and Prevention</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#drills-and-progressions" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">drills and Progressions</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#elite-examples-and-player-comparison" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Elite Examples and Player Comparison</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#summary-and-coaching-tips" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Summary and coaching Tips</a></li></ul></div>
 <h1 id="one-handed-backhand-biomechanics-and-technique">One-handed backhand: biomechanics and Technique</h1>
 <p><strong>Executive Summary:</strong> The one-handed backhand (1HBH) relies on a synchronized Tennis Knowledge/Glossary/kinetic chain and stable body alignment. power and control come from transferring force from the ground through the legs, hips, torso and shoulders into a stiff racquet-arm lever. Key to success is maintaining a locked forearm–racquet angle (~90°) and contacting the ball well in front of the body. Top players (e.g. Federer, Wawrinka, Thiem, Rublev) exemplify this by using a large shoulder/torso turn driven by upper-back and core muscles, then extending the arm through impact while keeping the wrist stable. Technical details vary by grip (Eastern, Continental, semi-Western) and stance, but all emphasize anticipation, rotation, and balance. We examine the Biomechanical“core principle” of 1HBH, the leg→hip→torso→shoulder→arm→racquet sequence, grip effects, contact Geometry, wrist/elbow function, follow-through, common faults, injury risks, and Training drills. We compare elite one-handers (Federer, Wawrinka, Thiem, Rublev) across attributes (e.g. racquet speed, body rotation) and tabulate their profiles. </p>
 <h2 id="biomechanical-core-principle">Biomechanical core Principle</h2>
 <p>The single most essential principle of the one-handed backhand is <strong>efficient energy transfer through a Tennis Knowledge/Glossary/kinetic chain into a stable hitting frame</strong>. As with any groundstroke, power is In 1HBH the dominant muscles are the upper back and core (abs/spinal rotators) rather than the triceps or wrist extensors. The “Fundamental Theorem of Tennis” applies: the arm and racquet form a near-90° right-angle and must meet the ball out in front. This locked-arm posture ensures a consistent string plane into impact. In effect, the player performs a <em>unit turn</em>: Coiling the torso as one piece (with the arm passive) and then driving the whole system forward through the shot. Any break in this chain (e.g. “telegraphing” a swing by arm motion alone, or losing forearm angle) forces smaller muscles to compensate and reduces power/control. </p>
-<div class="pullquote"><p>**Key Point:** One-handed backhand power comes from a whip-like chain of motion (legs→hips→torso→shoulders→arm) with a rigid racquet-arm lever. As one instructor notes, an elite 1HBH “turns away from the ball, barely pulls the racket back, and then uses the strong upper back to drive the entire racket-arm system forward”. </p></div>
+<div class="pullquote"><p>Key Point: One-handed backhand power comes from a whip-like chain of motion (legs→hips→torso→shoulders→arm) with a rigid racquet-arm lever. As one instructor notes, an elite 1HBH “turns away from the ball, barely pulls the racket back, and then uses the strong upper back to drive the entire racket-arm system forward”. </p></div>
 <h2 id="tennis-knowledgeglossarykinetic-chain-sequencing">Tennis Knowledge/Glossary/kinetic chain sequencing</h2>
-<p>The 1HBH uses the classic groundstroke Tennis Knowledge/Glossary/kinetic chain: </p>
+<p><strong>The 1HBH uses the classic groundstroke Tennis Knowledge/Glossary/kinetic chain:</strong></p>
 <pre class="code-block"><code class="language-mermaid">flowchart LR
  Ground["Ground Force"] --&gt; Legs["Leg Drive"]
  Legs --&gt; Hips["Hip Rotation"]
@@ -950,7 +962,7 @@
 <p>At each stage, the segments summate: velocity from the legs adds to the hips, then to the torso, shoulders, and finally racquet. Disruption at any link forces other segments to compensate. As one coach explains, “If one body part is left out or the Tennis Knowledge/Glossary/kinetic chain is broken, subsequent parts must work harder” – often leading to errors.</p>
 
 <h2 id="grip-variations-and-effects">Grip Variations and Effects</h2>
-<p>Different backhand grips alter contact Geometry and spin: </p>
+<p><strong>Different backhand grips alter contact Geometry and spin:</strong></p>
 <ul class="styled-list">
 <li><strong>Eastern backhand Grip:</strong> (index knuckle on bevel 1.) This is the <em>classic</em> grip for a one-hander. It presents the racquet face slightly more closed (facing ground) at contact, facilitating both flat drives and moderate topspin. It allows the “edge of the hand” to lead the motion (karate-chop alignment) for stability. Eastern grip users (Federer, Wawrinka, Thiem) typically hit through the ball flat or with topspin, and can easily transition to a slice or volley. Strengths: balanced power and spin, easy net transitions, stability on high balls. Weaknesses: less natural topspin on very high bounces, may struggle on extremely low balls compared to a more extreme grip. </li>
 <li><strong>Continental Grip:</strong> (Knuckle at 12 o’clock on a vertically held racquet.) In modern tennis this is rarely used for <em>topspin</em> one-handed BH among top pros; it is mostly used for slice/underspin or Defensive chops. Continental keeps the racquet face very open. It makes hitting heavy topspin balls difficult because it forces the wrist into extension. As Daryl Fisher notes, Continental “is perfect for underspin” but “makes aggressive topspin difficult” and handling high balls hard. Historical greats (Laver, McEnroe, Lendl) used Continental one-handed, but they required extra strength or fluidity. Modern coaching faVORs Eastern or semi-western for topspin BH; Continental is a “fallback” for slice/approach shots. </li>
@@ -979,7 +991,7 @@
 <p>As the racquet finishes, the lower body should finish pushing forward (the back leg can step through) and the torso should end turned across the body (though not over-rotated). The non-hitting arm may come around for balance in the finish. Immediately after striking, the player must <strong>recover</strong> to ready position: re-balance on the feet, return the racquet to center, and prepare for the next shot. </p>
 <p>A good cue is “finish high, then reset.” After each shot the player should bring the racquet back to the middle of the body and pivot to a neutral stance. On low balls, the follow-through might be lower (cutting under the ball), but even then the arm should extend back and up, not stop abruptly. Proper recovery also means tracking the opponent’s next shot, using footwork. (drills like alternating volleys or multi-ball drills can emphasize quick recovery.)</p>
 <h2 id="common-faults-and-fixes">Common Faults and Fixes</h2>
-<p>Frequent errors in 1HBH technique include: </p>
+<p><strong>Frequent errors in 1HBH technique include:</strong></p>
 <ul class="styled-list">
 <li><strong>Late contact (ball too far behind):</strong> striking the ball too late (close to the body) causes a push or pop-up. Fix by emphasizing “in front” contact. Use drills (like tossing a ball from above) that force you to hit as the ball bounces upward. </li>
 <li><strong>Poor rotation (arms-only swing):</strong> Using the arm/triceps instead of shoulders results in weak shots. A telltale fault is the elbow flaring forward early or “guiding” the racquet with the arm. The cure is to pull the elbow back longer and lead with the shoulder/core. A shadow-swing drill focusing on torso turn can help. </li>
@@ -990,7 +1002,7 @@
 </ul>
 <p>coaching cue: “Turn your shoulders, extend your arm, keep your wrist set.” Video feedback or mirror work can expose many of these faults. </p>
 <h2 id="injury-risks-and-prevention">Injury Risks and Prevention</h2>
-<p>The one-handed backhand is associated with particular overuse stresses: </p>
+<p><strong>The one-handed backhand is associated with particular overuse stresses:</strong></p>
 <ul class="styled-list">
 <li><strong>Tennis elbow (lateral epicondylitis):</strong> This is the most common 1HBH injury. The racquet’s vibration and high eccentric load on the wrist extensors at impact can irritate the common extensor tendon. As biomechanists report, one-handed backhands generate significant torque at the elbow (17–24 Nm) that must be absorbed by the tendons. In contrast, a two-handed backhand “transmits forces at ball impact through the elbow rather than the tissues,” and studies show 2HBH players have a much lower incidence of lateral elbow pain. Prevention: emphasize smooth Strokes, strengthen forearm extensors (e.g. wrist curls, reverse curls) and use proper grip tension. Using a slightly more open (Eastern) grip can also stabilize the wrist and reduce extreme Flexion angles. </li>
 <li><strong>shoulder/rotator cuff injuries:</strong> While not unique to the backhand (often serve/forehand are bigger culprits), improper 1HBH form (e.g. swinging with weak core, over-rotating shoulder) can contribute. Rotator-cuff tendinopathy or impingement can arise from repeated one-arm swings if shoulder muscles are imbalanced. Prevention: maintain scapular stability and rotator cuff strength (external rotation exercises), and warm up shoulders thoroughly. Focus on letting the torso do the work—if you feel strain in the shoulder, scale back and rebuild core rotation. </li>
@@ -1000,7 +1012,7 @@
 <div class="pullquote"><p>“In many cases, injury prevention comes back to form and biomechanics… paying attention to the entire chain of joints and muscles in a movement is absolutely key,” note sports-medicine experts. </p></div>
 <p>In short, the best way to avoid injury is impeccable technique and balanced Training. Strengthen legs, core and the elbow/shoulder musculature off-court. Stretch and warm up thoroughly. And vary your Strokes – avoid overusing just the one-handed backhand in practice. </p>
 <h2 id="drills-and-progressions">drills and Progressions</h2>
-<p>To ingrain the above principles, Coaches use Structured drills. Here are 6–8 practical drills (with cues) to develop a solid one-handed backhand:</p>
+<p><strong>To ingrain the above principles, Coaches use Structured drills. Here are 6–8 practical drills (with cues) to develop a solid one-handed backhand:</strong></p>
 <ul class="styled-list">
 <li>
 <p><strong>1. shoulder-Turn Feed drill:</strong> Feed simple tosses or slow balls and focus on <em>initiating</em> the stroke with a unit turn of the shoulders. Cue: “turn first, swing second.” Many players find it helps to pause at the end of the shoulder turn (with racquet back but shoulder still turned) before exploding forward. <em>Progression:</em> Gradually speed up feeds and add movement. </p>
@@ -1100,7 +1112,7 @@
 </tbody>
 </table>
 <p><strong>Notes on measurable attributes:</strong> Racquet head speeds are from ATP groundstroke data – Thiem’s 1HBH is among the fastest (≈</p>
-<h3>67.4 mph average), Federer’s in the mid-66s</h3>
+<h3><strong>67.4 mph average), Federer’s in the mid-66s</strong></h3>
 <p>Precise <strong>hip-shoulder separation angles</strong> aren’t commonly published, but Coaches observe that Federer’s chest remains highly sideways at contact (very little separation), whereas Wawrinka and Thiem “load” more (turning well beyond 45°). contact timing is qualitatively noted: Federer hits early and late (able to handle pace without big backswing), Wawrinka’s long swing means his contact sometimes feels later, and Thiem aggressively steps in. If exact numbers (like peak angular velocity) were available, they would reflect these stylistic differences, but sources are not cited here.</p>
 <p>Overall, while all four use Eastern-type grips and emphasize torso turn, Federer’s backhand is the “textbook” minimal-motion version, Wawrinka’s is the raw-power version with huge knee-bend and rotation, Thiem’s is the big-loading topspin version, and Rublev’s lies in between (more flat acceleration, partly arm-driven). Their racket speeds and biomechanics reflect these Tactics: Federer sacrifices some RPM for timing ease, Wawrinka and Thiem maximize RPM and mass, Rublev prioritizes consistency and flat depth. </p>
 <h2 id="summary-and-coaching-tips">Summary and coaching Tips</h2>
@@ -1124,7 +1136,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

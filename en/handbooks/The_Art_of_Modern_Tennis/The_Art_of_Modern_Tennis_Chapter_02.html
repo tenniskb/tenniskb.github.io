@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -1005,7 +1017,7 @@ Chapter 2: The Core, Torque &amp; Rotational Power</h2>
 <p>The player stands side-on to a wall, holding a medicine ball at chest height. Without moving the feet, they rotate the hips as far toward the wall as possible, pause for one second, then allow the shoulders and arms to follow through, releasing the ball into the wall. The one-second pause forces the player to feel the separation — the stretched obliques, the torso under tension — before the release. Begin with a 3 kg ball and focus entirely on the quality of the lag before progressing to heavier loads or faster tempos.</p>
 <p><strong>Anti-Rotation Holds</strong> build the isometric core strength required for stiffening at contact. Using a cable machine or resistance band anchored at hip height, the player holds the handle with both hands extended in front of the body and resists the rotational pull for 30–45 seconds per side. This drill is deceptively simple and deceptively hard. The quality to develop is not just the ability to hold the position but the ability to achieve it instantly from a relaxed state — mimicking the millisecond transition from fluid rotation to locked stiffness at contact.</p>
 <p><strong>The Rotational Wall Throw</strong> trains both the X-Factor lag and the explosive release under load. The player stands</p>
-<h3>1.5 metres from a solid wall, side-on, and throws a medicine ball into the wall using a full rotational sequence — hips first, then shoulders, then arms</h3>
+<h3><strong>1.5 metres from a solid wall, side-on, and throws a medicine ball into the wall using a full rotational sequence — hips first, then shoulders, then arms</strong></h3>
 <p>The rebound is caught and the motion reversed immediately into the next throw. The focus is on the distinct hip-then-shoulders sequence in the throw, not on the speed or force of the ball. Two sets of 12 repetitions per side.</p>
 <p><strong>The Pallof Press</strong> develops core braking and deceleration capacity. With a resistance band or cable anchored at chest height, the player presses both hands away from the body in a controlled extension, holds for two seconds, then returns. The exercise works through the entire range of anti-rotation resistance that the core braking function requires. Progress from slow, controlled reps to faster, more athletic tempo as the player's deceleration capacity improves. Three sets of 10 per side.</p>
 <hr/>
@@ -1027,11 +1039,10 @@ Chapter 2: The Core, Torque &amp; Rotational Power</h2>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="The_Art_of_Modern_Tennis_Chapter_03.html" class="nav-btn next">Next →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

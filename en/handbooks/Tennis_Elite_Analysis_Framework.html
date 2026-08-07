@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Elite Analysis Framework</title>
+<!DOCTYPE html><p><html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Elite Analysis Framework</title>
 <style>
 
  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
@@ -201,7 +199,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +800,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +853,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +874,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +902,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,14 +929,14 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Tennis Elite Analysis Framework — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#phân-tích-elite-tennis-players" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Phân Tích Elite Tennis Players</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#hệ-thống-5-layer-performance-model" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Hệ Thống 5-Layer Performance Model</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#mục-lục" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Mục Lục</a></li><li style="font-weight: 600;"><a href="#tổng-quan-framework" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tổng Quan Framework</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#vấn-đề-của-phân-tích-tennis-truyền-thống" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Vấn đề của phân tích tennis truyền thống</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#kiến-trúc-tổng-quan" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Kiến trúc tổng quan</a></li><li style="font-weight: 600;"><a href="#5-layer-performance-model" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">5-Layer Performance Model</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-1--biomechanical-base" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 1 — BIOMECHANICAL BASE</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-2--athletic-engine" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 2 — ATHLETIC ENGINE</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-3--shot-arsenal" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 3 — SHOT ARSENAL</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-4--tactical-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 4 — TACTICAL SYSTEM</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-5--identity-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 5 — IDENTITY OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#checklist-phân-tích-nhanh" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Checklist Phân Tích Nhanh</a></li><li style="font-weight: 600;"><a href="#phân-tích-novak-djokovic" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Phân Tích: Novak Djokovic</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-elastic-efficiency-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">"The Elastic Efficiency OS"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-1--biomechanical-base" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 1 — Biomechanical Base</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-2--athletic-engine" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 2 — Athletic Engine</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-3--shot-arsenal" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 3 — Shot Arsenal</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-4--tactical-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 4 — Tactical System</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-5--identity-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 5 — Identity OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-hợp-5-layers--djokovic" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tổng hợp 5 Layers — Djokovic</a></li><li style="font-weight: 600;"><a href="#phân-tích-jannik-sinner" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Phân Tích: Jannik Sinner</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-linear-precision-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">"The Linear Precision OS"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-1--biomechanical-base" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 1 — Biomechanical Base</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-2--athletic-engine" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 2 — Athletic Engine</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-3--shot-arsenal" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 3 — Shot Arsenal</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-4--tactical-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 4 — Tactical System</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-5--identity-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 5 — Identity OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-hợp-5-layers--sinner" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tổng hợp 5 Layers — Sinner</a></li><li style="font-weight: 600;"><a href="#phân-tích-carlos-alcaraz" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Phân Tích: Carlos Alcaraz</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-chaos-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">"The Chaos OS"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-1--biomechanical-base" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 1 — Biomechanical Base</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-2--athletic-engine" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 2 — Athletic Engine</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-3--shot-arsenal" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 3 — Shot Arsenal</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-4--tactical-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 4 — Tactical System</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-5--identity-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 5 — Identity OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-hợp-5-layers--alcaraz" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tổng hợp 5 Layers — Alcaraz</a></li><li style="font-weight: 600;"><a href="#phân-tích-learner-tien" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Phân Tích: Learner Tien</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-adaptive-efficiency-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">"The Adaptive Efficiency OS"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-1--biomechanical-base" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 1 — Biomechanical Base</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-2--athletic-engine" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 2 — Athletic Engine</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-3--shot-arsenal" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 3 — Shot Arsenal</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-4--tactical-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 4 — Tactical System</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#layer-5--identity-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Layer 5 — Identity OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-hợp-5-layers--learner-tien" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tổng hợp 5 Layers — Learner Tien</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#ceiling-analysis--tien-sẽ-đi-đến-đâu" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Ceiling Analysis — Tien sẽ đi đến đâu?</a></li><li style="font-weight: 600;"><a href="#bảng-so-sánh-tổng-hợp" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bảng So Sánh Tổng Hợp</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bốn-os-trong-một-bảng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bốn OS trong một bảng</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#vòng-tròn-khai-thác-lẫn-nhau" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Vòng tròn khai thác lẫn nhau</a></li><li style="font-weight: 600;"><a href="#áp-dụng-cho-club-player-development" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Áp Dụng Cho Club Player Development</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#nguyên-tắc-nền-tảng-scaled-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Nguyên tắc nền tảng: "Scaled OS"</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bước-1--chẩn-đoán-player-hiện-tại" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bước 1 — Chẩn đoán Player Hiện Tại</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bước-2--xác-định-natural-os" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bước 2 — Xác Định Natural OS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bước-3--xây-dựng-theo-thứ-tự-layer-1--5" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bước 3 — Xây Dựng Theo Thứ Tự Layer 1 → 5</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#lộ-trình-phát-triển-tổng-thể" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Lộ Trình Phát Triển Tổng Thể</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#template-đánh-giá-player-tóm-tắt-nhanh" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Template Đánh Giá Player (Tóm Tắt Nhanh)</a></li></ul></div>
 <h1 id="phan-tich-elite-tennis-players">Phân Tích Elite Tennis Players</h1>
 <h2 id="he-thong-5-layer-performance-model">Hệ Thống 5-Layer Performance Model</h2>
 <p><strong>Tác giả:</strong> Henry Pham (Phạm Đức Hải)
 <strong>Surrey, British Columbia, Canada — 2026</strong></p>
 <hr/>
-<div class="pullquote"><p>*"Không copy cú đánh — copy triết lý đằng sau cú đánh."*</p></div>
+<div class="pullquote"><p><strong>*"Không copy cú đánh — copy triết lý đằng sau cú đánh."*</strong></p></div>
 <hr/>
 <h2 id="muc-luc">Mục Lục</h2>
 <ol class="styled-list numbered">
@@ -943,8 +953,7 @@
 <h1 id="tong-quan-framework">Tổng Quan Framework</h1>
 <h2 id="van-e-cua-phan-tich-tennis-truyen-thong">Vấn đề của phân tích tennis truyền thống</h2>
 <p>Lỗi phân tích phổ biến nhất: <strong>chỉ nhìn vào cú đánh mà bỏ qua hệ thống phía sau nó.</strong></p>
-<p>Djokovic trượt trên hardcourt vì fascia của anh đã luyện 20 năm. Một club player</p>
-<h3>3.0 copy kỹ thuật đó sẽ chấn thương cổ chân</h3>
+<p>Djokovic trượt trên hardcourt vì fascia của anh đã luyện 20 năm. Một club player 3.0 copy kỹ thuật đó sẽ chấn thương cổ chân</p>
 <p>Federer đánh FH với minimal backswing vì timing của anh được luyện từ năm 8 tuổi — copy hành trình vợt mà không có timing đó chỉ tạo ra bóng lỗi.</p>
 <p>Điều thực sự cần học không phải là <em>cú đánh</em> — mà là <em>triết lý</em> đằng sau cú đánh. Đó là lý do framework này tồn tại.</p>
 <h2 id="kien-truc-tong-quan">Kiến trúc tổng quan</h2>
@@ -959,7 +968,7 @@ Layer 1 │ BIOMECHANICAL BASE ← Cơ sinh học từng cú đánh
 <h1 id="5-layer-performance-model">5-Layer Performance Model</h1>
 <h2 id="layer-1-biomechanical-base">Layer 1 — BIOMECHANICAL BASE</h2>
 <p><em>"Cơ thể vận hành như thế nào?"</em></p>
-<p>Đây là nền tảng vật lý. Phân tích từng cú đánh theo 4 trục:</p>
+<p><strong>Đây là nền tảng vật lý. Phân tích từng cú đánh theo 4 trục:</strong></p>
 <table class="data-table">
 <thead>
 <tr>
@@ -999,7 +1008,7 @@ Layer 1 │ BIOMECHANICAL BASE ← Cơ sinh học từng cú đánh
 <h2 id="layer-2-athletic-engine">Layer 2 — ATHLETIC ENGINE</h2>
 <p><em>"Nền tảng thể chất hỗ trợ lối chơi như thế nào?"</em></p>
 <h3 id="movement-signature">Movement Signature</h3>
-<p>Mỗi elite player có "chữ ký di chuyển" riêng:</p>
+<p><strong>Mỗi elite player có "chữ ký di chuyển" riêng:</strong></p>
 <table class="data-table">
 <thead>
 <tr>
@@ -1052,7 +1061,7 @@ Layer 1 │ BIOMECHANICAL BASE ← Cơ sinh học từng cú đánh
 <p><strong>Neutralizers</strong> — Dùng để reset điểm số khi bịép</p>
 <p><strong>Pressure Tools</strong> — Không ghi điểm trực tiếp nhưng bào mòn đối thủ theo thời gian</p>
 <p><strong>Pattern Sequences</strong> — Tổ hợp 3-5 cú đánh liên tiếp, được lập trình sẵn</p>
-<div class="pullquote"><p>Elite players không đánh từng cú đơn lẻ — họ chơi **patterns**. Nếu xem 100 điểm của một player, pattern nào xuất hiện nhiều nhất ở điểm quan trọng (30-40, break point)?</p></div>
+<div class="pullquote"><p>Elite players không đánh từng cú đơn lẻ — họ chơi patterns. Nếu xem 100 điểm của một player, pattern nào xuất hiện nhiều nhất ở điểm quan trọng (30-40, break point)?</p></div>
 <hr/>
 <h2 id="layer-4-tactical-system">Layer 4 — TACTICAL SYSTEM</h2>
 <p><em>"Triết lý chiến đấu là gì?"</em></p>
@@ -1110,7 +1119,7 @@ Biến 3: Đối thủ cụ thể (Big server / Baseliner / Net rusher)
 <p><strong>Pattern Recognition Under Pressure</strong> — Elite players không "nghĩ" trong điểm số; họ chạy pattern đã lập trình sẵn.</p>
 <hr/>
 <h2 id="checklist-phan-tich-nhanh">Checklist Phân Tích Nhanh</h2>
-<p>Dùng khi xem một trận đấu:</p>
+<p><strong>Dùng khi xem một trận đấu:</strong></p>
 <pre class="code-block"><code>□ L1 — Serve: Tốc độ? Hướng? Spin? Tỉ lệ 1st/2nd serve %?
 □ L1 — FH: Grip? Điểm tiếp xúc? Nguồn lực (topspin/flat)?
 □ L1 — BH: 1 tay hay 2 tay? Defensive hay offensive?
@@ -1132,7 +1141,7 @@ Biến 3: Đối thủ cụ thể (Big server / Baseliner / Net rusher)
 <hr/>
 <h1 id="phan-tich-novak-djokovic">Phân Tích: Novak Djokovic</h1>
 <h2 id="the-elastic-efficiency-os"><em>"The Elastic Efficiency Os"</em></h2>
-<div class="pullquote"><p>Djokovic trông "bất khả chiến bại" không phải vì anh đánh bóng mạnh nhất, mà vì anh **triệt tiêu mọi cơ hội của đối thủ** bằng cách tốiưu hóa độ bao phủ sân + khả năng đàn hồi + độ sâu của bóng thuộc hàng xuất sắc nhất lịch sử.</p></div>
+<div class="pullquote"><p>Djokovic trông "bất khả chiến bại" không phải vì anh đánh bóng mạnh nhất, mà vì anh triệt tiêu mọi cơ hội của đối thủ bằng cách tối ưu hóa độ bao phủ sân + khả năng đàn hồi + độ sâu của bóng thuộc hàng xuất sắc nhất lịch sử.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_1">Layer 1 — Biomechanical Base</h2>
 <h3 id="forehand">Forehand</h3>
@@ -1154,7 +1163,7 @@ Biến 3: Đối thủ cụ thể (Big server / Baseliner / Net rusher)
 <h2 id="layer-2-athletic-engine_1">Layer 2 — Athletic Engine</h2>
 <h3 id="movement-signature-elastic-sliding">Movement Signature: Elastic Sliding</h3>
 <p><strong>Đặc điểm:</strong> Được ví như "người không xương." Djokovic trượt trên mọi mặt sân, kể cả sân cứng — điều vốn là cấm kỵ với nhiều tay vợt để tránh chấn thương cổ chân.</p>
-<p><strong>Cơ chế:</strong> Kỹ thuật trượt để dừng lại và đổi hướng tức thì, làm giảm thời gian hồi vị. Bộ chân tập trung vào tiết kiệm sức lực và vị trí đứng tốiưu.</p>
+<p><strong>Cơ chế:</strong> Kỹ thuật trượt để dừng lại và đổi hướng tức thì, làm giảm thời gian hồi vị. Bộ chân tập trung vào tiết kiệm sức lực và vị trí đứng tối ưu.</p>
 <p><strong>Fascial Kinetic Chain:</strong> Djokovic không chỉ dùng cơ bắp — anh dùng hệ thống mô liên kết (fascia) như một mạng lưới lò xo để hấp thụ và tái phát lực.</p>
 <p><strong>Anticipation:</strong> Djokovic thường di chuyển <em>trước</em> khi đối thủ chạm bóng. Khi bóng tới, anh đãở đó — biến cú đánh khó của đối thủ thành neutral shot.</p>
 <h3 id="recovery-model">Recovery Model</h3>
@@ -1193,7 +1202,7 @@ Return BH cross deep → tiến mid-court → FH inside-out dứt điểm</p>
 <hr/>
 <h2 id="layer-5-identity-os_1">Layer 5 — Identity Os</h2>
 <h3 id="elastic-efficiency-os"><em>Elastic Efficiency Os</em></h3>
-<div class="pullquote"><p>**"Nhà toán học hình học"**: Không dùng lực — dùng góc, độ sâu và sự kiên nhẫn. Djokovic không chỉ chơi tennis; anh **giải mã** tennis của đối thủ.</p></div>
+<div class="pullquote"><p>"Nhà toán học hình học": Không dùng lực — dùng góc, độ sâu và sự kiên nhẫn. Djokovic không chỉ chơi tennis; anh giải mã tennis của đối thủ.</p></div>
 <h3 id="mental-architecture">Mental Architecture</h3>
 <p><strong>Pressure Response — Wolf Mentality:</strong>
 Djokovic mạnh nhất khi bị dồn vào đường cùng. Khi cả khán đài chống lại anh, anh kích hoạt <em>lockdown mode</em> — unforced error gần như về 0.</p>
@@ -1238,11 +1247,11 @@ Djokovic là "nhà toán học" trên sân đấu. Phân tích điểm yếu đ�
 <hr/>
 <h1 id="phan-tich-jannik-sinner">Phân Tích: Jannik Sinner</h1>
 <h2 id="the-linear-precision-os"><em>"The Linear Precision Os"</em></h2>
-<div class="pullquote"><p>Sinner không tạo ra sự hỗn loạn, không bao phủ sân bằng đàn hồi, không vẽ đường bóng bằng nghệ thuật. Anh **duy trìáp lực tuyến tính** — tốc độ cao, độ sâu nhất quán, không có điểm yếu rõ ràng để khai thác. Đối thủ không thua vì bị chói lóa — họ thua vì bị bào mòn bởi sự hoàn hảo không ngừng nghỉ.</p></div>
+<div class="pullquote"><p>Sinner không tạo ra sự hỗn loạn, không bao phủ sân bằng đàn hồi, không vẽ đường bóng bằng nghệ thuật. Anh duy trìáp lực tuyến tính — tốc độ cao, độ sâu nhất quán, không có điểm yếu rõ ràng để khai thác. Đối thủ không thua vì bị chói lóa — họ thua vì bị bào mòn bởi sự hoàn hảo không ngừng nghỉ.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_2">Layer 1 — Biomechanical Base</h2>
 <h3 id="forehand_1">Forehand</h3>
-<p><strong>Kỹ thuật:</strong> Semi-Western grip (index knuckle trên bevel 4), tư thế đứng xen kẽ giữa semi-open và neutral để chuyển trọng lượng hiệu quả và xoay hông tốiưu.</p>
+<p><strong>Kỹ thuật:</strong> Semi-Western grip (index knuckle trên bevel 4), tư thế đứng xen kẽ giữa semi-open và neutral để chuyển trọng lượng hiệu quả và xoay hông tối ưu.</p>
 <p><strong>Swing path:</strong> Hành trình dài nhưng backswing compact — nghịch lý cho phép xử lý bóng thấp và nhanh hiệu quả. Tốc độ trung bình 78 mph, nhanh hơn tour average 5 mph.</p>
 <p><strong>Vai trò:</strong> <em>Engine of control</em> — không chỉ là cú đánh mà là công cụ điều phối rally. Dùng để dictate pace, tạo góc inside-out, và đánh những forehand mạnh nhất đúng vào break/set points.</p>
 <h3 id="backhand-may-gia-toc">Backhand — Máy gia tốc</h3>
@@ -1336,7 +1345,9 @@ Return BH deep cross → Sinner tiến → FH mid-court tấn công</p>
 <h3 id="linear-precision-os"><em>Linear Precision Os</em></h3>
 <div class="pullquote"><p>Không điểm yếu, không cảm xúc, không nhượng bộ. Áp lực tuyến tính liên tục cho đến khi đối thủ sụp đổ.</p></div>
 <h3 id="mental-architecture-the-blank-wall">Mental Architecture: The Blank Wall</h3>
-<p><strong>Pressure Response:</strong> Chỉ những người vĩ đại mới thể hiện phong độ tốt nhất khi cần nhất. Sinner duy trì phong độ ngay cả trong bối cảnh scandal doping 2024 — minh chứng cho mental "bombproof".</p>
+<p><strong>Pressure</p>
+<p><strong>Response:</strong></p>
+<p></strong> Chỉ những người vĩ đại mới thể hiện phong độ tốt nhất khi cần nhất. Sinner duy trì phong độ ngay cả trong bối cảnh scandal doping 2024 — minh chứng cho mental "bombproof".</p>
 <p><strong>Momentum Management:</strong> Blank Face Protocol — không lộ cảm xúc sau điểm thắng hay thua. Tước đi hai thứ từ đối thủ: (1) feedback để điều chỉnh chiến thuật, (2) cơ hội khai thác momentum.</p>
 <p><strong>Big Point Performance:</strong> Sinner đánh những forehand <em>mạnh nhất</em> đúng vào break point và set point — ngược lại hoàn toàn với đa số player bị co cụm dưới áp lực.</p>
 <hr/>
@@ -1374,7 +1385,7 @@ Return BH deep cross → Sinner tiến → FH mid-court tấn công</p>
 <hr/>
 <h1 id="phan-tich-carlos-alcaraz">Phân Tích: Carlos Alcaraz</h1>
 <h2 id="the-chaos-os"><em>"The Chaos Os"</em></h2>
-<div class="pullquote"><p>Alcaraz không tốiưu hóa theo một chiều như Sinner, không kiểm soát hình học như Djokovic. Anh **phá vỡ cấu trúc dự đoán của đối thủ** — mỗi điểm là một trạng thái bất định cho đến tận cú đánh cuối. Drop shot giữa rally nhanh, lên lưới bất thình lình, serve-and-volley không báo trước — anh tạo ra sự hỗn loạn có kiểm soát và thống trị trong chính sự hỗn loạn đó.</p></div>
+<div class="pullquote"><p>Alcaraz không tối ưu hóa theo một chiều như Sinner, không kiểm soát hình học như Djokovic. Anh phá vỡ cấu trúc dự đoán của đối thủ — mỗi điểm là một trạng thái bất định cho đến tận cú đánh cuối. Drop shot giữa rally nhanh, lên lưới bất thình lình, serve-and-volley không báo trước — anh tạo ra sự hỗn loạn có kiểm soát và thống trị trong chính sự hỗn loạn đó.</p></div>
 <hr/>
 <h2 id="layer-1-biomechanical-base_3">Layer 1 — Biomechanical Base</h2>
 <h3 id="forehand-vu-khi-the-he-moi">Forehand — Vũ khí thế hệ mới</h3>
@@ -1526,7 +1537,7 @@ Là tay vợt thuận tay trái, Tien có lợi thế tự nhiên trong cả deu
 <hr/>
 <h2 id="layer-4-tactical-system_4">Layer 4 — Tactical System</h2>
 <h3 id="court-position-deep-baseline-defender">Court Position: Deep Baseline Defender</h3>
-<p>Sức mạnh nằmở khả năng đánh bóng sâu liên tục từ baseline, đẩy đối thủ vào thế phòng ngự và dùng court coverage + fitness để outlast hầu hết đối thủ.</p>
+<p>Sức mạnh nằm ở khả năng đánh bóng sâu liên tục từ baseline, đẩy đối thủ vào thế phòng ngự và dùng court coverage + fitness để outlast hầu hết đối thủ.</p>
 <h3 id="scoring-philosophy-forced-error-farmer-fitness-grinder">Scoring Philosophy: Forced Error Farmer + Fitness Grinder</h3>
 <p>Tien không dựa vào power serve hay big forehand — anh dùng phương pháp chiến lược và phòng ngự, xây dựng điểm số, hấp thụáp lực và thực hiện với sự đa dạng.</p>
 <h3 id="surface-adaptation-matrix">Surface Adaptation Matrix</h3>
@@ -1562,7 +1573,7 @@ Là tay vợt thuận tay trái, Tien có lợi thế tự nhiên trong cả deu
 <div class="pullquote"><p>Không có vũ khí số một, không có điểm yếu số một. Thắng bằng hệ thống chứ không bằng thiên tài.</p></div>
 <h3 id="mental-architecture-bo-nao-xuat-sac-nhat-trong-the-he-moi">Mental Architecture — Bộ não xuất sắc nhất trong thế hệ mới</h3>
 <p><strong>Pressure Response — Process-Based Calm:</strong></p>
-<p>Tien tự mô tả: <em>"Tôi tập trung vào những gì mình có thể kiểm soát và Chúý vào phía sân của mình. Điều đó giúp ích dù đối thủ ranking 5 hay 200. Đôi khi đầuóc có thể đi rất nhiều chỗ trong những trận như vậy. Chỉ tập trung vào những gì mình có thể kiểm soát giúp ích rất nhiều."</em></p>
+<p>Tien tự mô tả: <em>"Tôi tập trung vào những gì mình có thể kiểm soát và Chú ý vào phía sân của mình. Điều đó giúp ích dù đối thủ ranking 5 hay 200. Đôi khi đầuóc có thể đi rất nhiều chỗ trong những trận như vậy. Chỉ tập trung vào những gì mình có thể kiểm soát giúp ích rất nhiều."</em></p>
 <p><strong>Big Match Performance:</strong></p>
 <p>Năm 2025, Tien <strong>4-0 khi gặp top 10 ở vòng 2</strong> của các giải — đánh bại Medvedev (No.5), Zverev (No.2, 2 lần), Shelton (No.10) và Rublev (No.10). Đây không phải may mắn — đây là hệ thống tâm lý hoạt động dưới áp lực cực đại.</p>
 <p><strong>Coach's Assessment:</strong></p>
@@ -1691,7 +1702,7 @@ Tien (Adaptive) → bị phá bởi → Big serve + power baseline
 <h1 id="ap-dung-cho-club-player-development">Áp Dụng Cho Club Player Development</h1>
 <h2 id="nguyen-tac-nen-tang-scaled-os">Nguyên tắc nền tảng: "scaled OS"</h2>
 <p>Sai lầm phổ biến nhất của club players và HLV là <strong>copy kỹ thuật elite mà không hiểu OS phía sau nó.</strong></p>
-<div class="pullquote"><p>**Nguyên tắc vàng:** Không copy *cú đánh* — copy *triết lý* đằng sau cú đánh, rồi scale xuống trình độ hiện tại.</p></div>
+<div class="pullquote"><p>Nguyên tắc vàng: Không copy *cú đánh* — copy *triết lý* đằng sau cú đánh, rồi scale xuống trình độ hiện tại.</p></div>
 <hr/>
 <h2 id="buoc-1-chan-oan-player-hien-tai">Bước 1 — Chẩn đoán Player Hiện Tại</h2>
 <p>Trước khi xây dựng bất kỳ thứ gì, phải biết player đang ở đâu trên 5 layers.</p>
@@ -1766,26 +1777,24 @@ L5 — IDENTITY
 <p><strong>Nguyên tắc vàng: Không xây L4 khi L1 còn vỡ.</strong></p>
 <p>Đây là lỗi điển hình — dạy chiến thuật cho player có grip sai, hoặc dạy pattern cho người chưa có split step.</p>
 <h3 id="layer-1-3-iem-can-sua-ngay">Layer 1 — 3 Điểm Cần Sửa Ngay</h3>
-<p><strong>1. Grip phù hợp với Natural OS</strong></p>
+<h3><strong>1. Grip phù hợp với Natural OS</strong></h3>
 <ul class="styled-list">
 <li>Efficiency / Linear Precision OS → Semi-Western FH</li>
 <li>Chaos OS → Full Western cho topspin nặng</li>
 <li>Big Game OS → Continental serve, Eastern/Semi-Western FH</li>
 </ul>
-<p><strong>2. Contact point nhất quán</strong></p>
+<h3><strong>2. Contact point nhất quán</strong></h3>
 <p>Trước khi nghĩ đến tốc độ hay spin, player phải tiếp xúc bóng ở cùng một điểm trong không gian mỗi lần. Không có gì quan trọng hơnở giai đoạn đầu.</p>
-<p><strong>3. Kinetic chain cơ bản</strong></p>
+<h3><strong>3. Kinetic chain cơ bản</strong></h3>
 <p>Bài tập: đánh FH từ tư thế đứng im hoàn toàn, chỉ dùng tay → sau đó thêm hông vào → cảm nhận sự khác biệt. Đây là cách dạy kinetic chain hiệu quả nhất cho người mới bắt đầu.</p>
 <hr/>
 <h3 id="layer-2-athletic-engine-cho-club-level">Layer 2 — Athletic Engine Cho Club Level</h3>
-<p>Hai thứ tạo ra sự khác biệt lớn nhất ở club level, không cần thể hình elite:</p>
+<p><strong>Hai thứ tạo ra sự khác biệt lớn nhất ở club level, không cần thể hình elite:</strong></p>
 <p><strong>Split step</strong></p>
-<p>Phần lớn club players không có split step. Chỉ cần thêm split step đúng timing, player di chuyển nhanh hơn 30% ngay lập tức — không cần luyện thể lực thêm.</p>
+<p><strong>Phần lớn club players không có split step. Chỉ cần thêm split step đúng timing, player di chuyển nhanh hơn 30% ngay lập tức — không cần luyện thể lực thêm.</strong></p>
 <p><em>Cách luyện:</em> Đứng ở T, partner tung bóng, thực hiện split step đúng khoảnh khắc bóng rời tay. Lặp lại 50 lần/buổi tập trong 2 tuần.</p>
 <p><strong>Recovery step</strong></p>
-<p>Sau mỗi cú đánh, bước 1-2 bước về T. Tập thành phản xạ. Đây là điều phân biệt club player</p>
-<h3>3.5 và</h3>
-<h3>4.0 rõ nhất — không phải kỹ</h3>
+<p>Sau mỗi cú đánh, bước 1-2 bước về T. Tập thành phản xạ. Đây là điều phân biệt club player 3.5 và 4.0 rõ nhất — không phải kỹ</p>
 <p>thuật, mà là vị trí sau cú đánh.</p>
 <hr/>
 <h3 id="layer-3-xay-arsenal-theo-thu-tu-uu-tien">Layer 3 — Xây Arsenal Theo Thứ TựƯu Tiên</h3>
@@ -1819,7 +1828,7 @@ GIAI ĐOẠN 3 (năm 2+)
 <div class="pullquote"><p>Serve vào sân → giữ bóng deep + redirect pace → đợi đối thủ over-exert → BH DTL counter</p></div>
 <hr/>
 <h3 id="layer-5-xay-dung-identity-os">Layer 5 — Xây Dựng Identity Os</h3>
-<p>Đây là layer thường bị bỏ qua hoàn toàn ở club level — nhưng quyết định 40% kết quả trận đấu.</p>
+<p><strong>Đây là layer thường bị bỏ qua hoàn toàn ở club level — nhưng quyết định 40% kết quả trận đấu.</strong></p>
 <p><strong>3 việc cụ thể để xây Identity OS:</strong></p>
 <p><strong>1. Ritual giữa các điểm</strong>
 Chọn 1 hành động cố định sau mỗi điểm thua: nhìn dây vợt, lau mồ hôi, deep breath. Mục đích: không để não bộ replay điểm vừa thua. Djokovic làm điều này. Tien làm điều này. Club players không làm — và đó là lý do thua những điểm quan trọng.</p>
@@ -1827,9 +1836,8 @@ Chọn 1 hành động cố định sau mỗi điểm thua: nhìn dây vợt, la
 Player cần biết trước: <em>"Khi tôi thấy bóng ngắn qua T-line, tôi tiến và đánh FH inside-out."</em> Quyết định được đưa ra trước — không phải trong lúc bóng đang đến. Não bộ không đủ nhanh để quyết định trong tích tắc; phải lập trình sẵn.</p>
 <p><strong>3. Chấp nhận Natural OS của mình</strong>
 Một club player</p>
-<h3>4.0 với Efficiency OS nhất quán sẽ</h3>
-<p>đánh bại một player</p>
-<h3>4.5 đang cố chơi Chaos OS mà không có nền tảng</h3>
+<h3><strong>4.0 với Efficiency OS nhất quán sẽ</strong></h3>
+<p>đánh bại một player 4.5 đang cố chơi Chaos OS mà không có nền tảng</p>
 <p>Biết mình là ai trên sân là lợi thế cạnh tranh thực sự.</p>
 <hr/>
 <h2 id="lo-trinh-phat-trien-tong-the">Lộ Trình Phát Triển Tổng Thể</h2>
@@ -1842,7 +1850,7 @@ Năm 2+ L5: Xác định Natural OS + mental ritual
 <div class="pullquote"><p>Hầu hết club players nhảy thẳng lên L3-L4 mà không có L1-L2. Kết quả: kỹ thuật cao nhưng không ổn định dưới áp lực — vì nền móng chưa vững.</p></div>
 <hr/>
 <h2 id="template-anh-gia-player-tom-tat-nhanh">Template Đánh Giá Player (tóm Tắt Nhanh)</h2>
-<p>Dùng sau 1 buổi quan sát:</p>
+<p><strong>Dùng sau 1 buổi quan sát:</strong></p>
 <pre class="code-block"><code>Tên player: _______________
 Ngày: _______________
 
@@ -1884,7 +1892,8 @@ PRIORITY ACTIONS (chọn 1-2 điều cần sửa trước):
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

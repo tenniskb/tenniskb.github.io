@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,7 +931,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Sampras Tennis — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <p>Pete Sampras trông "dominant" không phải vì anhấy mạnh hơn mọi người, mà vì anhấy xây dựng mỗi điểm từ serve — rồi kết thúc trước khi đối thủ kịp thiết lập. Cảm giác không thể phá vỡ đó thực ra là kết quả của serve siêu đẳng + net game chính xác + tinh thần thi đấu lạnh lùng bậc nhất lịch sử.</p>
 <p>Vì sao Sampras trông như không thể đánh bại?</p>
 <ol class="styled-list numbered">
@@ -947,12 +959,12 @@
 </ol>
 <hr/>
 <p>Làm sao để chơi "dominant" hơn giống Sampras?</p>
-<p>Bạn không cần trở thành Sampras, nhưng có thể tiến gần cách chơi kiểm soát điểm từ đầu bằng cách:</p>
+<p><strong>Bạn không cần trở thành Sampras, nhưng có thể tiến gần cách chơi kiểm soát điểm từ đầu bằng cách:</strong></p>
 <ol class="styled-list numbered">
 <li>Xây dựng serve thành vũ khí thật sự</li>
 </ol>
 <p>Không chỉ tập serve cho vào</p>
-<p>Tập 3 hướng: wide, T, body — với cùng motion</p>
+<p><strong>Tập 3 hướng: wide, T, body — với cùng motion</strong></p>
 <p>Mỗi serve phải đi kèm plan cho cú tiếp theo</p>
 <hr/>
 <ol class="styled-list numbered">
@@ -1029,7 +1041,7 @@
 <p>Cổ tay xoay vào trong đúng lúc contact</p>
 <p>Tạo tốc độ head vợt cực cao</p>
 <p>Không gồng cổ tay → để nó xoay tự nhiên</p>
-<p>👉 Đây là cảm giác "snap" của serve — bóng đi như viên đạn</p>
+<p><strong>👉 Đây là cảm giác "snap" của serve — bóng đi như viên đạn</strong></p>
 <hr/>
 <ol class="styled-list numbered">
 <li>Contact point cao và phía trước (không phải cao và sau lưng)</li>
@@ -1077,7 +1089,7 @@
 </ol>
 <p>Cổ tay không flick</p>
 <p>Mặt vợtổn định trước contact</p>
-<p>Chuyển động nhỏ — đủ để đặt bóng, không cần thêm</p>
+<p><strong>Chuyển động nhỏ — đủ để đặt bóng, không cần thêm</strong></p>
 <p>👉 Nếu đánh giống forehand → mất kiểm soát ngay</p>
 <hr/>
 <ol class="styled-list numbered">
@@ -1105,10 +1117,10 @@
 </ol>
 <p>Sampras không thích rally dài. Mọi thứ hướng về kết thúc điểm trong ít cú nhất có thể.</p>
 <hr/>
-<p>🧠 Nếu bạn muốn học theo Sampras, nhớ 1 câu:</p>
-<div class="pullquote"><p>"Đừng cố đánh mạnh hơn — hãy cố kết thúc điểm sớm hơn."</p></div>
+<p><strong>🧠 Nếu bạn muốn học theo Sampras, nhớ 1 câu:</strong></p>
+<div class="pullquote"><p><strong>"Đừng cố đánh mạnh hơn — hãy cố kết thúc điểm sớm hơn."</strong></p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể:</p>
+<p><strong>Nếu bạn muốn, mình có thể:</strong></p>
 <p>xây routine 7 ngày để copy serve Sampras</p>
 <p>hoặc chỉ ra 3 lỗi khiến người chơi không bao giờ đạt cảm giác "dominant" kiểu Sampras (rất phổ biến)</p>
 <p>Có 3 lỗi rất phổ biến khiến người chơi tennis gần như không bao giờ đạt được cảm giác "dominant" kiểu của Pete Sampras — dù họ có cố tập bao nhiêu đi nữa.</p>
@@ -1116,132 +1128,132 @@
 <p>❌ 1.</p>
 <p>Lên lưới không có lý do (random net rushing)</p>
 <p>Đây là lỗi lớn nhất.</p>
-<p>Biểu hiện:</p>
+<p><strong>Biểu hiện:</strong></p>
 <p>Lên lưới sau bất kỳ cú đánh nào</p>
 <p>Không có approach shot dọn đường</p>
 <p>Volley từ vị trí bị động</p>
-<p>Vì sao nó giết cảm giác dominant:</p>
+<p><strong>Vì sao nó giết cảm giác dominant:</strong></p>
 <p>Sampras chỉ lên lưới khi: serve mở sân hoặc bóng ngắn hoặc đối thủ bịép. Lên lưới không có plan = bị passing shot liên tục.</p>
-<p>Khi bạn lên lưới không có chuẩn bị:</p>
+<p><strong>Khi bạn lên lưới không có chuẩn bị:</strong></p>
 <p>Đứng quá xa lưới → volley khó</p>
 <p>Không đọc được hướng passing</p>
 <p>Tạoáp lực cho chính mình</p>
 <p>👉 Sampras trông dominant vì anhấy không bao giờ lên lưới khi chưa có lợi thế</p>
 <hr/>
 <p>❌ 2.</p>
-<p>Serve vào — nhưng không có +1</p>
-<p>Biểu hiện:</p>
+<p><strong>Serve vào — nhưng không có +1</strong></p>
+<p><strong>Biểu hiện:</strong></p>
 <p>Giao bóng tốt</p>
 <p>Sau đó đứng chờ đối thủ đánh trả</p>
 <p>Không có plan cho cú tiếp theo</p>
-<p>Hậu quả:</p>
+<p><strong>Hậu quả:</strong></p>
 <p>Mất lợi thế từ serve</p>
 <p>Bị đẩy vào thế rally thụ động</p>
 <p>Mất cảm giác "kiểm soát điểm"</p>
 <p>👉 Đây là lý do nhiều người serve tốt nhưng không thắng được game serve</p>
-<p>Ngược lạiở Sampras:</p>
+<p><strong>Ngược lạiở Sampras:</strong></p>
 <p>Serve đã đi kèm +1 plan</p>
 <p>Wide serve → tiến vào mở sân</p>
 <p>T serve → control giữa sân</p>
 <hr/>
 <p>❌ 3.</p>
 <p>Cảm xúc không ổn định → kỹ thuật sụp đổ</p>
-<p>Biểu hiện:</p>
+<p><strong>Biểu hiện:</strong></p>
 <p>Đánh cú xấu → đổi kỹ thuật ngay</p>
 <p>Thua game → cố đánh mạnh hơn</p>
 <p>Thắng điểm đẹp → hưng phấn quá, mất nhịp</p>
-<p>Hậu quả:</p>
+<p><strong>Hậu quả:</strong></p>
 <p>Kỹ thuật không ổn định</p>
 <p>Không có "baseline" để quay về</p>
 <p>Đối thủ đọc được trạng thái bạn dễ dàng</p>
 <p>👉 Đây là lỗi "phá hủy toàn bộ hệ thống thi đấu"</p>
-<p>Vì sao Sampras trông dominant:</p>
+<p><strong>Vì sao Sampras trông dominant:</strong></p>
 <p>Body language không thay đổi suốt trận</p>
 <p>Anh không "react" với điểm số</p>
 <p>Anh "vận hành" hệ thống bất kể tỷ số</p>
 <hr/>
-<p>🧠 Tóm lại:</p>
-<p>Nếu bạn chỉ nhớ 1 câu:</p>
+<p><strong>🧠 Tóm lại:</strong></p>
+<p><strong>Nếu bạn chỉ nhớ 1 câu:</strong></p>
 <div class="pullquote"><p>Dominant không đến từ cú đánh mạnh hơn — mà đến từ việc không bao giờ lên lưới không có lý do, không bao giờ giao bóng xong rồi đứng đợi, và không bao giờ để cảm xúc thay thế hệ thống.</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể chỉ luôn:</p>
+<p><strong>Nếu bạn muốn, mình có thể chỉ luôn:</strong></p>
 <p>5 bài tập sửa 3 lỗi này trong 1–2 tuần</p>
 <p>hoặc phân tích "cảm giác đúng" khi serve bắt đầu trở thành vũ khí thật sự (rất nhiều người chưa từng trải qua cảm giác này)</p>
 <p>Dưới đây là 5 bài tập thực chiến trong 1–2 tuần để sửa đúng 3 lỗi: lên lưới không có lý do – serve không có +1 – cảm xúc không ổn định, nhằm tiến gần cảm giác "dominant" kiểu Pete Sampras.</p>
 <p>Mỗi bài tập đều nhắm trực tiếp vào một "lỗi gốc", không lan man.</p>
 <hr/>
-<p>🎾 BÀI TẬP 1 — "SERVE + MOVE" (Sửa serve không có +1)</p>
-<p>Cách làm:</p>
+<p><strong>🎾 BÀI TẬP 1 — "SERVE + MOVE" (Sửa serve không có +1)</strong></p>
+<p><strong>Cách làm:</strong></p>
 <p>Giao bóng như bình thường</p>
 <p>Ngay khi bóng rời vợt → di chuyển vào sân</p>
 <p>Không đứng nhìn bóng đi</p>
-<p>Quy tắc:</p>
+<p><strong>Quy tắc:</strong></p>
 <p>Wide serve → bước sang phải (mở sân)</p>
 <p>T serve → giữ giữa sân (control)</p>
 <p>Body serve → tiến vào lưới hoặc giữ baseline</p>
-<p>Mục tiêu:</p>
+<p><strong>Mục tiêu:</strong></p>
 <p>👉 Biến "serve + movement" thành 1 chuỗi duy nhất, không phải 2 hành động riêng biệt</p>
 <hr/>
-<p>🎾 BÀI TẬP 2 — "APPROACH GATE DRILL" (Sửa lên lưới không có lý do)</p>
-<p>Cách làm:</p>
+<p><strong>🎾 BÀI TẬP 2 — "APPROACH GATE DRILL" (Sửa lên lưới không có lý do)</strong></p>
+<p><strong>Cách làm:</strong></p>
 <p>Đặt 2 cone tạo thành "cổng" ở service line</p>
 <p>Chỉ được lên lưới khi approach shot đi qua cổng đó (sâu + thấp)</p>
 <p>Nếu approach ngắn hoặc cao → không được lên lưới</p>
-<p>Quy tắc:</p>
+<p><strong>Quy tắc:</strong></p>
 <p>Bóng qua cổng = lên lưới</p>
 <p>Bóng không qua cổng = ở lại baseline</p>
-<p>Mục tiêu:</p>
+<p><strong>Mục tiêu:</strong></p>
 <p>👉 Tạo thói quen "approach tốt mới lên lưới"</p>
 <hr/>
-<p>🎾 BÀI TẬP 3 — "BLANK FACE DRILL" (Sửa cảm xúc không ổn định)</p>
-<p>Cách làm:</p>
+<p><strong>🎾 BÀI TẬP 3 — "BLANK FACE DRILL" (Sửa cảm xúc không ổn định)</strong></p>
+<p><strong>Cách làm:</strong></p>
 <p>Chơi game 5 điểm với đối tác</p>
 <p>Quy tắc: sau mỗi điểm (thắng hoặc thua), không được thay đổi biểu cảm mặt và không được thay đổi tốc độ đi lại</p>
 <p>Nếu đối tác thấy cảm xúc trên mặt bạn → trừ 1 điểm</p>
-<p>Mục tiêu:</p>
-<p>👉 Xây nền tảng "neutral body language" — điều Sampras làm tự nhiên trong suốt 14 Grand Slam</p>
+<p><strong>Mục tiêu:</strong></p>
+<p><strong>👉 Xây nền tảng "neutral body language" — điều Sampras làm tự nhiên trong suốt 14 Grand Slam</strong></p>
 <hr/>
-<p>🎾 BÀI TẬP 4 — "VOLLEY PLACEMENT ONLY" (Xây net game có mục tiêu)</p>
-<p>Cách làm:</p>
+<p><strong>🎾 BÀI TẬP 4 — "VOLLEY PLACEMENT ONLY" (Xây net game có mục tiêu)</strong></p>
+<p><strong>Cách làm:</strong></p>
 <p>Đứng ở vị trí lưới</p>
 <p>Coach feed bóng nhẹ</p>
 <p>Chỉ được volley vào 1 trong 2 góc đặt trước (không được đổi)</p>
-<p>Quy tắc:</p>
+<p><strong>Quy tắc:</strong></p>
 <p>Không được đánh mạnh</p>
 <p>Chỉ tập đặt bóng vào góc đúng</p>
-<p>Tay không vung — chỉ đặt</p>
-<p>Mục tiêu:</p>
+<p><strong>Tay không vung — chỉ đặt</strong></p>
+<p><strong>Mục tiêu:</strong></p>
 <p>👉 Reset volley về cơ bản: placement trước, power sau</p>
 <hr/>
-<p>🎾 BÀI TẬP 5 — "SERVE DISGUISE DRILL" (Tạo serve không đọc được)</p>
-<p>Cách làm:</p>
+<p><strong>🎾 BÀI TẬP 5 — "SERVE DISGUISE DRILL" (Tạo serve không đọc được)</strong></p>
+<p><strong>Cách làm:</strong></p>
 <p>Giao bóng với cùng toss và cùng motion cho cả 3 hướng: wide, T, body</p>
 <p>Đối tác phải đoán hướng sau khi bóng rời vợt (không được đoán trước)</p>
 <p>Nếu đối tác đoán đúng &gt; 50% → bạn đang lộ hướng từ toss hoặc motion</p>
-<p>Mục tiêu:</p>
-<p>👉 Xây serve không thể đọc — đây là lý do Sampras có tỉ lệ ace và serve winner cao bất thường</p>
+<p><strong>Mục tiêu:</strong></p>
+<p><strong>👉 Xây serve không thể đọc — đây là lý do Sampras có tỉ lệ ace và serve winner cao bất thường</strong></p>
 <hr/>
 <p>📅 CÁCH TẬP TRONG 1–2 TUẦN</p>
-<p>Tuần 1:</p>
+<p><strong>Tuần 1:</strong></p>
 <p>Bài 1 + 2 + 3 (ưu tiên hệ thống serve và cảm xúc)</p>
-<p>Tuần 2:</p>
+<p><strong>Tuần 2:</strong></p>
 <p>Bài 4 + 5 + kết hợp full match nhẹ</p>
 <hr/>
-<p>🧠 NGUYÊN TẮC QUAN TRỌNG NHẤT</p>
-<p>Nếu bạn chỉ nhớ 1 điều:</p>
+<p><strong>🧠 NGUYÊN TẮC QUAN TRỌNG NHẤT</strong></p>
+<p><strong>Nếu bạn chỉ nhớ 1 điều:</strong></p>
 <div class="pullquote"><p>Dominant không đến từ việc đánh hay hơn, mà đến từ việc luôn có plan — luôn kiểm soát nhịp điểm — và không bao giờ để cảm xúc can thiệp vào hệ thống</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể làm tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể làm tiếp:</strong></p>
 <p>một routine 30 phút mỗi buổi tập như Sampras training style</p>
 <p>hoặc checklist "tự kiểm tra sau mỗi cú đánh" để bạn tự sửa ngay khi chơi ngoài sân</p>
 <p>Dưới đây là checklist tự kiểm tra sau mỗi cú đánh để bạn sửa lỗi ngay khi đang chơi ngoài sân và dần đạt cảm giác "dominant" kiểu Pete Sampras.</p>
 <p>Mục tiêu của checklist này: bắt lỗi trong 1–2 giây sau mỗi cú đánh, không cần phân tích dài.</p>
 <hr/>
-<p>🎾 CHECKLIST SAU MỖI CÚ ĐÁNH (5 GIÂY)</p>
+<p><strong>🎾 CHECKLIST SAU MỖI CÚ ĐÁNH (5 GIÂY)</strong></p>
 <ol class="styled-list numbered">
 <li>🎯 "CÚ NÀY CÓ MỤC ĐÍCH KHÔNG?"</li>
 </ol>
-<p>Biết trước cú này để làm gì:</p>
+<p><strong>Biết trước cú này để làm gì:</strong></p>
 <p>❌ chỉ</p>
 <p>để bóng vào sân → sai</p>
 <p>✅ serve → mở sân / chip → reset nhịp / approach → mở</p>
@@ -1259,9 +1271,9 @@
 <ol class="styled-list numbered">
 <li>🧊 "MẶT MÌNH CÓ TRUNG TÍNH KHÔNG?"</li>
 </ol>
-<p>Sau điểm:</p>
+<p><strong>Sau điểm:</strong></p>
 <p>❌ gương mặt lộ cảm xúc (bực, hưng phấn, tự trách)</p>
-<p>✅ blank —</p>
+<p><strong>✅ blank —</strong></p>
 <p>đang đọc sân, không đang phản ứng cảm xúc</p>
 <p>👉 Nếu không trung tính: thở ra, thả vai, reset mặt trước khi bước tiếp</p>
 <hr/>
@@ -1270,12 +1282,12 @@
 </ol>
 <p>❌ đứng nhìn bóng đi</p>
 <p>✅ di chuyển ngay sau contact</p>
-<p>👉 Nếu đứng im: Sampras không bao giờ "xem bóng" sau khi đánh — anh đã đang chuẩn bị cú tiếp theo</p>
+<p><strong>👉 Nếu đứng im: Sampras không bao giờ "xem bóng" sau khi đánh — anh đã đang chuẩn bị cú tiếp theo</strong></p>
 <hr/>
 <ol class="styled-list numbered">
 <li>🌊 "CÚ VỪA RỒI CÓ 'CLEAN' KHÔNG?"</li>
 </ol>
-<p>Sau khi đánh:</p>
+<p><strong>Sau khi đánh:</strong></p>
 <p>❌ cảm giác vung thừa, giật, mất thăng bằng</p>
 <p>✅ ổn</p>
 <p>định, chắc, kết thúc cú đánh trong kiểm soát</p>
@@ -1284,32 +1296,32 @@
 <p>🧠 QUY TẮC VÀNG (RẤT QUAN TRỌNG)</p>
 <p>❗ Chỉ sửa 1 lỗi mỗi lần</p>
 <p>Đừng cố sửa tất cả cùng lúc.</p>
-<p>Ví dụ:</p>
+<p><strong>Ví dụ:</strong></p>
 <p>Lần này chỉ tập "serve + move"</p>
 <p>Lần sau chỉ tập "giữ mặt blank sau điểm"</p>
 <hr/>
 <p>❗ Nếu cảm thấy rối → quay về 1 mục tiêu duy nhất</p>
 <p>Dominant luôn biến mất khi bạn cố làm quá nhiều thứ cùng lúc.</p>
 <hr/>
-<p>🔁 CÁCH DÙNG TRONG MATCH</p>
-<p>Sau mỗi cú đánh, chỉ tự hỏi nhanh:</p>
+<p><strong>🔁 CÁCH DÙNG TRONG MATCH</strong></p>
+<p><strong>Sau mỗi cú đánh, chỉ tự hỏi nhanh:</strong></p>
 <div class="pullquote"><p>"Mục đích – Plan – Mặt – Di chuyển – Clean?"</p></div>
 <p>Chỉ cần 1 câu 1 giây.</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG TIẾN BỘ</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG TIẾN BỘ</strong></p>
 <p>Ít phải "đoán" xem phải làm gì tiếp theo</p>
 <p>Serve bắt đầu tạo ra cơ hội thay vì chỉ bắt đầu điểm</p>
 <p>Cảm giác như "trận đấu đang nằm trong tay mình dần dần"</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp checklist này thành:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp checklist này thành:</strong></p>
 <p>"công thức 1 câu trong lúc rally thật" (mental cue của Sampras style)</p>
 <p>hoặc system 3 cấp độ: beginner → intermediate → match play dominant</p>
 <p>Dưới đây là hệ thống 3 cấp độ checklist "dominant tennis" để bạn dùng ngoài sân, từ cơ bản đến đánh match thật — mục tiêu là tiến dần tới cảm giác kiểm soát điểm, giống Pete Sampras.</p>
 <p>Mỗi cấp độ chỉ có 3–5 điểm kiểm tra, tránh quá tải khi đang chơi.</p>
 <hr/>
-<p>🟢 LEVEL 1 — BEGINNER (Reset hệ thống gốc)</p>
+<p><strong>🟢 LEVEL 1 — BEGINNER (Reset hệ thống gốc)</strong></p>
 <p>👉 Mục tiêu: hết mục đích mờ nhạt + tạo plan cơ bản + ổn định cảm xúc</p>
-<p>Sau mỗi cú đánh, check nhanh:</p>
+<p><strong>Sau mỗi cú đánh, check nhanh:</strong></p>
 <ol class="styled-list numbered">
 <li>🎯 Cú này có mục đích không?</li>
 </ol>
@@ -1330,7 +1342,7 @@
 <p>Không giật, không mất thăng bằng</p>
 <p>👉 Nếu fail 2/4 điểm → chậm lại, bớtáp lực lên bản thân, giảm lực</p>
 <hr/>
-<p>🟡 LEVEL 2 — INTERMEDIATE (Xây hệ thống điểm)</p>
+<p><strong>🟡 LEVEL 2 — INTERMEDIATE (Xây hệ thống điểm)</strong></p>
 <p>👉 Mục tiêu: bắt đầu có cảm giác kiểm soát từng điểm thật sự</p>
 <ol class="styled-list numbered">
 <li>🎾 Serve có đi kèm plan tiếp theo không?</li>
@@ -1358,7 +1370,7 @@
 <p>Vai không cứng khi đánh điểm quan trọng</p>
 <p>👉 Nếu fail 2 điểm → giảm tốc độ lên lưới, ưu tiên baseline build</p>
 <hr/>
-<p>🔴 LEVEL 3 — MATCH PLAY (Dominant under pressure)</p>
+<p><strong>🔴 LEVEL 3 — MATCH PLAY (Dominant under pressure)</strong></p>
 <p>👉 Mục tiêu: giữ sự kiểm soát ngay cả khi đánh điểm quan trọng</p>
 <ol class="styled-list numbered">
 <li>🧠 Có giữ plan dù kết quả điểm trước như thế nào không?</li>
@@ -1385,24 +1397,24 @@
 <p>Chuẩn bị cho điểm tiếp theo ngay</p>
 <p>👉 Nếu mất 2 điểm liên tiếp → quay về "intermediate mindset", serve an toàn, rally ngắn</p>
 <hr/>
-<p>🧠 CÁCH DÙNG HỆ THỐNG NÀY</p>
-<p>Trước buổi tập:</p>
+<p><strong>🧠 CÁCH DÙNG HỆ THỐNG NÀY</strong></p>
+<p><strong>Trước buổi tập:</strong></p>
 <p>Chọn 1 level duy nhất để focus</p>
-<p>Trong lúc chơi:</p>
+<p><strong>Trong lúc chơi:</strong></p>
 <p>Chỉ check 1–2 điểm thôi, không check tất cả</p>
-<p>Sau buổi chơi:</p>
+<p><strong>Sau buổi chơi:</strong></p>
 <p>Tự hỏi: "mình đang ở level nàoổn nhất?"</p>
 <hr/>
 <p>⚡ "CÔNG THỨC CỐT LÕI" (rút gọn 1 câu)</p>
-<p>Nếu bạn không nhớ gì khác, chỉ nhớ:</p>
+<p><strong>Nếu bạn không nhớ gì khác, chỉ nhớ:</strong></p>
 <div class="pullquote"><p>"Mục đích – Plan – Lạnh – Di chuyển"</p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG LÊN LEVEL</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG LÊN LEVEL</strong></p>
 <p>Beginner → Intermediate: ít phải đứng hình sau cú đánh</p>
 <p>Intermediate → Match: serve bắt đầu tạo ra lợi thế thật sự</p>
 <p>Match → Dominant: cảm giác "mọi điểm đều có cấu trúc"</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể làm tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể làm tiếp:</strong></p>
 <p>một bản "mental cue 3 từ" để dùng trong rally thật</p>
 <p>hoặc lộ trình 14 ngày chuyển từ level 1 → match dominant</p>
 <p>Dưới đây là "mental cue 3 từ" để bạn dùng trực tiếp trong rally thật — kiểu ngắn, gọn, đủ để não không bị quá tải nhưng vẫn giữ được cảm giác dominant như Pete Sampras.</p>
@@ -1411,138 +1423,137 @@
 <div class="pullquote"><p>"MỤC ĐÍCH – LẠNH – TIẾN"</p></div>
 <hr/>
 <p>🧠 1. MỤC ĐÍCH (Purpose)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>mỗi cú có lý do</p>
 <p>serve mở sân / approach dọn đường / volley đặt góc</p>
 <p>không đánh vào sân rồi chờ</p>
-<p>❌ Sai khi:</p>
+<p><strong>❌ Sai khi:</strong></p>
 <p>đánh mà không biết để làm gì</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>"cú này để tạo ra cú tiếp theo"</p>
 <hr/>
 <p>🧘‍♂️ 2. LẠNH (Cold)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>không phản ứng cảm xúc với điểm số</p>
 <p>blank face</p>
 <p>body language không thay đổi theo tỷ số</p>
-<p>❌ Sai khi:</p>
+<p><strong>❌ Sai khi:</strong></p>
 <p>biểu cảm hoặc tốc độ đi lại thay đổi vì điểm</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>"tỷ số không thay đổi hệ thống của tôi"</p>
 <hr/>
 <p>🌊 3. TIẾN (Move forward)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>luôn có động lượng về phía trước</p>
 <p>sau mỗi cú → di chuyển</p>
 <p>không đứng, không chờ, không nhìn</p>
-<p>❌ Sai khi:</p>
+<p><strong>❌ Sai khi:</strong></p>
 <p>đứng quan sát sau khi đánh</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>"cú đánh và di chuyển là 1, không phải 2"</p>
 <hr/>
-<p>🔁 CÁCH DÙNG TRONG RALLY</p>
-<p>Sau mỗi điểm, chỉ lặp lại trong đầu:</p>
+<p><strong>🔁 CÁCH DÙNG TRONG RALLY</strong></p>
+<p><strong>Sau mỗi điểm, chỉ lặp lại trong đầu:</strong></p>
 <div class="pullquote"><p>"Mục đích – Lạnh – Tiến"</p></div>
 <p>Không phân tích thêm.</p>
 <hr/>
 <p>⚡ BIẾN THỂ NHANH (khi match căng)</p>
-<p>Nếu cần nhanh hơn nữa:</p>
+<p><strong>Nếu cần nhanh hơn nữa:</strong></p>
 <div class="pullquote"><p>"MỤC ĐÍCH – LẠNH – TIẾN" → chỉ nghĩ 1 từ mỗi cú đánh</p></div>
 <p>cú này: "MỤC ĐÍCH"</p>
 <p>cú sau: "LẠNH"</p>
 <p>cú tiếp: "TIẾN"</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG ĐÚNG NHỊP</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG ĐÚNG NHỊP</strong></p>
 <p>serve bắt đầu tạo ra cơ hội</p>
 <p>thua điểm mà không mất nhịp</p>
 <p>cảm giác "mình đang dẫn dắt trận đấu, không bị dắt"</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp thành:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp thành:</strong></p>
 <p>"1 từ reset giữa điểm (between points routine)"</p>
 <p>hoặc hệ thống cue riêng cho serve và net game để giống Sampras hơn nữa</p>
 <p>Dưới đây là hệ thống mental cue riêng cho serve và net game để bạn chơi "clean – cold – decisive" hơn, theo phong cách của Pete Sampras.</p>
 <p>Mục tiêu: mỗi cú đánh chỉ cần 1 cụm từ trong đầu → không bị quá tải khi rally</p>
 <hr/>
-<p>🎾 1. SERVE CUE SYSTEM</p>
-<p>🔑 CORE CUE:</p>
+<p><strong>🎾 1. SERVE CUE SYSTEM</strong></p>
+<p><strong>🔑 CORE CUE:</strong></p>
 <div class="pullquote"><p>"GIẤU – SNAP – TIẾN"</p></div>
 <hr/>
 <p>🧠 1. GIẤU (Disguise)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>cùng toss cho mọi hướng serve</p>
 <p>không để vai hoặc mắt lộ hướng sớm</p>
 <p>ổn định pre-serve routine</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>toss lệch theo hướng serve</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>"đối thủ không biết bóng đi đâu cho đến khi bóng rời vợt"</p>
 <hr/>
 <p>⚡ 2. SNAP (Pronation + power)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>không gồng cổ tay</p>
 <p>để cổ tay xoay tự nhiên tại contact</p>
 <p>lực đến từ chân + hông, không phải cánh tay</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>đẩy bóng bằng cánh tay</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>bóng "bắn ra" chứ không bị đẩy</p>
 <hr/>
 <p>🌊 3. TIẾN (Move into court)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>sau serve → di chuyển ngay</p>
 <p>không đứng xem bóng</p>
 <p>wide → tiến sang mở sân / T → tiến giữa sân</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>serve và di chuyển là 1 hành động liên tục</p>
 <hr/>
-<p>🎾 2. NET GAME CUE SYSTEM</p>
-<p>🔑 CORE CUE:</p>
+<p><strong>🎾 2. NET GAME CUE SYSTEM</strong></p>
+<p><strong>🔑 CORE CUE:</strong></p>
 <div class="pullquote"><p>"DỌN – SPLIT – ĐẶT"</p></div>
 <hr/>
 <p>🧠 1. DỌN (Approach first)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>trước khi volley phải có approach tốt</p>
 <p>approach phải: thấp + sâu + vào góc</p>
 <p>không lên lưới từ cú bóng ngắn không tốt</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>approach cao hoặc giữa sân</p>
-<p>✔️ Cảm giác đúng:</p>
-<p>"approach dọn đường — volley chỉ là kết thúc"</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
+<p><strong>"approach dọn đường — volley chỉ là kết thúc"</strong></p>
 <hr/>
 <p>⚡ 2. SPLIT (Split step timing)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>split step đúng lúc đối thủ chạm bóng</p>
 <p>không di chuyển vào lưới đơn thuần</p>
 <p>split → phản xạ → volley</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>bước thẳng vào lưới không có split</p>
-<p>✔️ Cảm giác đúng:</p>
-<p>"dừng lại trong</p>
-<h3>0.2 giây → cơ thể sẵn sàng</h3>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
+<p>"dừng lại trong 0.2 giây → cơ thể sẵn sàng</p>
 <p>cho mọi hướng"</p>
 <hr/>
 <p>🎯 3. ĐẶT (Place, don't hit)</p>
-<p>👉 Nhắc bạn:</p>
+<p><strong>👉 Nhắc bạn:</strong></p>
 <p>volley không phải cú đánh mạnh</p>
 <p>đặt bóng vào khoảng trống xa người nhất</p>
 <p>cổ tay cứng, cánh tay nhỏ gọn</p>
-<p>✔️ Cảm giác đúng:</p>
+<p><strong>✔️ Cảm giác đúng:</strong></p>
 <p>bóng "đi đến nơi không có người"</p>
 <hr/>
-<p>🔁 CÁCH DÙNG TRONG MATCH</p>
-<p>Khi giao bóng:</p>
+<p><strong>🔁 CÁCH DÙNG TRONG MATCH</strong></p>
+<p><strong>Khi giao bóng:</strong></p>
 <div class="pullquote"><p>"GIẤU" → "SNAP" → "TIẾN"</p></div>
-<p>Khi lên lưới:</p>
+<p><strong>Khi lên lưới:</strong></p>
 <div class="pullquote"><p>"DỌN" → "SPLIT" → "ĐẶT"</p></div>
 <hr/>
 <p>⚡ LEVEL CAO HƠN (PRO FEEL)</p>
-<p>Khi đã quen, rút xuống:</p>
+<p><strong>Khi đã quen, rút xuống:</strong></p>
 <p>Serve: "GIẤU – TIẾN"</p>
 <p>Net game: "DỌN – ĐẶT"</p>
 <p>👉 "SNAP / SPLIT" xảy ra tự động khi bạn đã có kỹ thuật</p>
 <hr/>
-<p>🧠 QUY TẮC VÀNG</p>
-<div class="pullquote"><p>Bạn không cố đánh bóng. Bạn chỉ đang:</p></div>
+<p><strong>🧠 QUY TẮC VÀNG</strong></p>
+<div class="pullquote"><p><strong>Bạn không cố đánh bóng. Bạn chỉ đang:</strong></p></div>
 <p>giấu ý định đến cuối cùng</p>
 <p>dọn đường trước khi tấn công</p>
 <p>và để kết quả đến tự nhiên</p>
@@ -1552,10 +1563,10 @@
 <p>volley ổn định hơn vì approach tốt hơn</p>
 <p>cảm giác như "điểm đã quyết định từ trước khi rally kết thúc"</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp:</strong></p>
 <p>"1 cue duy nhất cho toàn trận (elite level)"</p>
 <p>hoặc routine 30 giây giữa các điểm kiểu Sampras để giữ nhịp dominant</p>
-<p>Nếu phải nén toàn bộ kỹ thuật, timing, net game và cảm giác "dominant" của Pete Sampras vào 1 cue duy nhất cho cả trận, thì nó là:</p>
+<p><strong>Nếu phải nén toàn bộ kỹ thuật, timing, net game và cảm giác "dominant" của Pete Sampras vào 1 cue duy nhất cho cả trận, thì nó là:</strong></p>
 <div class="pullquote"><p>🎾 "MỞ – LẠNH – KẾT"</p></div>
 <hr/>
 <p>🧠 Ý nghĩa elite level</p>
@@ -1564,7 +1575,7 @@
 <p>KẾT = luôn tìm cách kết thúc điểm ngắn nhất có thể, không để rally kéo dài khi không cần</p>
 <hr/>
 <p>⚡ Cách dùng trong match</p>
-<p>Trong đầu bạn chỉ lặp:</p>
+<p><strong>Trong đầu bạn chỉ lặp:</strong></p>
 <div class="pullquote"><p>"MỞ – LẠNH – KẾT"</p></div>
 <p>Không phân tích serve/volley riêng biệt nữa.</p>
 <hr/>
@@ -1574,14 +1585,14 @@
 <p>chỉ còn nhịp: mở cơ hội → giữ lạnh → kết thúc sớm</p>
 <p>đối thủ bắt đầu cảm thấy "không có đường ra"</p>
 <hr/>
-<p>Nếu bạn muốn bước tiếp, mình có thể tạo cho bạn:</p>
+<p><strong>Nếu bạn muốn bước tiếp, mình có thể tạo cho bạn:</strong></p>
 <p>"Sampras rhythm system" (nhịp 4 bước giữa các điểm để giữ flow toàn trận)</p>
 <p>Dưới đây là "Sampras rhythm system" – nhịp 4 bước giữa các điểm để giữ flow ổn định, tránh vội, và duy trì cảm giác dominant kiểu Pete Sampras.</p>
 <p>Mục tiêu: không bị cuốn theo điểm số → luôn quay về nhịp của bạn</p>
 <hr/>
-<p>🎾 SAMPRAS RHYTHM SYSTEM (4 BƯỚC)</p>
-<p>🔁 CÔNG THỨC:</p>
-<div class="pullquote"><p>RESET – LOCK – SELECT – SERVE</p></div>
+<p><strong>🎾 SAMPRAS RHYTHM SYSTEM (4 BƯỚC)</strong></p>
+<p><strong>🔁 CÔNG THỨC:</strong></p>
+<div class="pullquote"><p><strong>RESET – LOCK – SELECT – SERVE</strong></p></div>
 <hr/>
 <ol class="styled-list numbered">
 <li>🔄 RESET (2–3 giây ngay sau điểm)</li>
@@ -1590,9 +1601,9 @@
 <p>Quay về baseline</p>
 <p>Không nhìn đối thủ</p>
 <p>Thả vai, thả tay</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>còn nhớ cú xấu vừa rồi</p>
-<p>✔️ Đúng nếu:</p>
+<p><strong>✔️ Đúng nếu:</strong></p>
 <p>"điểm đó đã kết thúc"</p>
 <hr/>
 <ol class="styled-list numbered">
@@ -1601,10 +1612,10 @@
 <p>👉 Mục tiêu: quyết định 1 hướng serve duy nhất</p>
 <p>Nhìn vùng sân bạn chọn</p>
 <p>Không thay đổi sau khi đã chọn</p>
-<p>Wide / T / Body — chỉ 1</p>
-<p>❌ Sai nếu:</p>
+<p><strong>Wide / T / Body — chỉ 1</strong></p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>vẫn đang suy nghĩ khi bounce bóng</p>
-<p>✔️ Đúng nếu:</p>
+<p><strong>✔️ Đúng nếu:</strong></p>
 <p>đã chọn trước khi bắt đầu serve routine</p>
 <hr/>
 <ol class="styled-list numbered">
@@ -1614,9 +1625,9 @@
 <p>Wide → tiến sang mở sân</p>
 <p>T → giữ giữa để control</p>
 <p>Body → tiến vào hoặc rally baseline</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>serve xong mới nghĩ</p>
-<p>✔️ Đúng nếu:</p>
+<p><strong>✔️ Đúng nếu:</strong></p>
 <p>"serve và +1 là 1 quyết định duy nhất"</p>
 <hr/>
 <ol class="styled-list numbered">
@@ -1626,101 +1637,101 @@
 <p>Serve routine bình thường</p>
 <p>Không nghĩ lại</p>
 <p>Sau khi bóng đi → di chuyển ngay theo plan</p>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>do dự trong motion</p>
-<p>✔️ Đúng nếu:</p>
+<p><strong>✔️ Đúng nếu:</strong></p>
 <p>routine quen thuộc, tự động</p>
 <hr/>
 <p>⚡ NHỊP TỔNG THỂ (FLOW LOOP)</p>
-<p>Sau mỗi điểm:</p>
+<p><strong>Sau mỗi điểm:</strong></p>
 <div class="pullquote"><p>RESET → LOCK → SELECT → SERVE → (lặp lại)</p></div>
 <hr/>
-<p>🧠 ĐIỂM QUAN TRỌNG NHẤT</p>
+<p><strong>🧠 ĐIỂM QUAN TRỌNG NHẤT</strong></p>
 <p>❗ Sampras không giao bóng và chờ xem điều gì xảy ra</p>
 <p>Anhấy giao bóng theo kịch bản đã viết sẵn</p>
-<p>Bạn không cần:</p>
+<p><strong>Bạn không cần:</strong></p>
 <p>ngẫu hứng mỗi điểm</p>
 <p>đổi plan vì điểm số</p>
-<p>Bạn chỉ cần:</p>
+<p><strong>Bạn chỉ cần:</strong></p>
 <div class="pullquote"><p>"quay về nhịp"</p></div>
 <hr/>
-<p>🎯 DẤU HIỆU BẠN ĐANG VÀO FLOW</p>
+<p><strong>🎯 DẤU HIỆU BẠN ĐANG VÀO FLOW</strong></p>
 <p>không vội giữa các điểm</p>
 <p>serve có mục đích rõ ràng</p>
 <p>bóng đi "tự nhiên theo kế hoạch"</p>
 <p>càng chơi càng cảm thấy kiểm soát</p>
 <hr/>
 <p>🔥 CÁCH NÂNG CẤP SAU 1–2 TUẦN</p>
-<p>Khi quen, rút xuống còn:</p>
+<p><strong>Khi quen, rút xuống còn:</strong></p>
 <div class="pullquote"><p>"LOCK – SERVE"</p></div>
-<p>👉 tức là:</p>
+<p><strong>👉 tức là:</strong></p>
 <p>chọn trước</p>
 <p>thực hiện</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp thành:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp thành:</strong></p>
 <p>"Sampras match mindset system" (chiến thuật + tâm lý trong từng set)</p>
 <p>hoặc "drill 20 phút để tự động hóa rhythm này vào cơ thể"</p>
 <p>Dưới đây là "Sampras Match Mindset System" — cách tư duy + chiến thuật + tâm lý theo từng set để giữ sựổn định và cảm giác dominant kiểu Pete Sampras.</p>
 <p>Mục tiêu: không chơi từng điểm rời rạc, mà chơi theo "cấu trúc trận đấu"</p>
 <hr/>
-<p>🎾 SAMPRAS MATCH MINDSET SYSTEM</p>
-<p>🧠 CORE PRINCIPLE</p>
+<p><strong>🎾 SAMPRAS MATCH MINDSET SYSTEM</strong></p>
+<p><strong>🧠 CORE PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Tôi không cố thắng rally. Tôi thiết lập điều kiện để kết thúc điểm trước khi rally đủ dài."</p></div>
 <hr/>
-<p>🟢 1. SET 1 — ESTABLISH SERVE DOMINANCE (Thiết lập quyền kiểm soát)</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟢 1. SET 1 — ESTABLISH SERVE DOMINANCE (Thiết lập quyền kiểm soát)</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>Xây dựng pattern serve</p>
 <p>Đọc điểm yếu return của đối thủ</p>
 <p>Tìm serve + volley opportunity</p>
-<p>🧠 Tư duy:</p>
+<p><strong>🧠 Tư duy:</strong></p>
 <p>"Đối thủ return thế nào với wide serve?"</p>
 <p>"Họ sợ body serve hay T serve?"</p>
 <p>"Khi nào họ bịép phải return ngắn?"</p>
-<p>🎾 Chiến thuật:</p>
+<p><strong>🎾 Chiến thuật:</strong></p>
 <p>Test cả 3 hướng serve</p>
 <p>Một số lần lên lưới để đọc phản ứng passing shot</p>
 <p>Rally baseline 60–70% để không tốn sức</p>
-<p>❌ Sai lầm:</p>
+<p><strong>❌ Sai lầm:</strong></p>
 <p>cố ace ngay từ đầu</p>
 <p>lên lưới quá nhiều mà không có approach</p>
-<p>👉 Sampras dùng set 1 để thu thập data — anhấy biết mình sẽ khai thác điểm nào từ set 2</p>
+<p><strong>👉 Sampras dùng set 1 để thu thập data — anhấy biết mình sẽ khai thác điểm nào từ set 2</strong></p>
 <hr/>
-<p>🟡 2. SET 2 — EXECUTE + PRESSURE (Thực thi + tạoáp lực có chủ đích)</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟡 2. SET 2 — EXECUTE + PRESSURE (Thực thi + tạoáp lực có chủ đích)</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>khai thác điểm yếu đã thấy ở set 1</p>
 <p>tăng tần suất lên lưới khi điều kiện đúng</p>
 <p>ép đối thủ tự lỗi</p>
-<p>🧠 Tư duy:</p>
+<p><strong>🧠 Tư duy:</strong></p>
 <p>"Họ yếu bên nào → serve đó liên tiếp"</p>
 <p>"Khi nào họ return ngắn → approach + volley"</p>
 <p>"Slice backhand để giảm nhịp khi cần"</p>
-<p>🎾 Chiến thuật:</p>
+<p><strong>🎾 Chiến thuật:</strong></p>
 <p>Serve + volley nhiều hơnở điểm quan trọng</p>
 <p>Dùng inside-out forehand để mở sân</p>
 <p>Slice khi cần đổi nhịp</p>
-<p>❌ Sai lầm:</p>
+<p><strong>❌ Sai lầm:</strong></p>
 <p>cốép quá sớm dẫn đến lỗi</p>
 <p>lên lưới vì hưng phấn, không phải vì plan</p>
-<p>👉 Sampras ở đây không chơi mạnh hơn — anh chơi thông minh hơn</p>
+<p><strong>👉 Sampras ở đây không chơi mạnh hơn — anh chơi thông minh hơn</strong></p>
 <hr/>
-<p>🔴 3. SET 3+ (CLUTCH MODE) — CALM + EXECUTE</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🔴 3. SET 3+ (CLUTCH MODE) — CALM + EXECUTE</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>đơn giản hóa mọi thứ</p>
 <p>serve tốt nhất có thể</p>
 <p>không lỗi vô lý</p>
-<p>🧠 Tư duy:</p>
-<p>"Không cần cú đẹp — cần cú đúng"</p>
+<p><strong>🧠 Tư duy:</strong></p>
+<p><strong>"Không cần cú đẹp — cần cú đúng"</strong></p>
 <p>"Điểm quan trọng nhất = điểm tiếp theo"</p>
-<p>🎾 Chiến thuật:</p>
+<p><strong>🎾 Chiến thuật:</strong></p>
 <p>serve an toàn hơn, không phiêu lưu</p>
-<p>rally ngắn hơn — kết thúc điểm sớm khi có cơ hội</p>
+<p><strong>rally ngắn hơn — kết thúc điểm sớm khi có cơ hội</strong></p>
 <p>body language không thay đổi</p>
-<p>❌ Sai lầm:</p>
+<p><strong>❌ Sai lầm:</strong></p>
 <p>cố ace vào điểm cuối</p>
 <p>thay đổi chiến thuật vìáp lực</p>
-<p>👉 Sampras lúc này không chơi khác set 1 — anh chỉ thực thi chính xác hơn</p>
+<p><strong>👉 Sampras lúc này không chơi khác set 1 — anh chỉ thực thi chính xác hơn</strong></p>
 <hr/>
-<p>⚡ 3 NGUYÊN TẮC XUYÊN SUỐT TRẬN</p>
+<p><strong>⚡ 3 NGUYÊN TẮC XUYÊN SUỐT TRẬN</strong></p>
 <ol class="styled-list numbered">
 <li>🧊 "Không phản ứng với điểm số — chỉ thực thi plan"</li>
 </ol>
@@ -1730,7 +1741,7 @@
 <li>🎾 "Serve là nền tảng — không phải kết thúc"</li>
 </ol>
 <p>Mỗi serve chỉ là cú đầu tiên của chuỗi</p>
-<p>Không cố ace — cố mở cơ hội</p>
+<p><strong>Không cố ace — cố mở cơ hội</strong></p>
 <ol class="styled-list numbered">
 <li>🎯 "Kết thúc điểm sớm nhất có thể"</li>
 </ol>
@@ -1738,85 +1749,85 @@
 <p>Nhận ra cơ hội và kết thúc</p>
 <hr/>
 <p>🧠 SAMPRAS STYLE MINDSET (TÓM GỌN 1 CÂU)</p>
-<div class="pullquote"><p>"Tôi không cố đánh hay hơn đối thủ — tôi thiết lập điều kiện để họ không có cú đánh hay nào."</p></div>
+<div class="pullquote"><p><strong>"Tôi không cố đánh hay hơn đối thủ — tôi thiết lập điều kiện để họ không có cú đánh hay nào."</strong></p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG CHƠI ĐÚNG HỆ THỐNG</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG CHƠI ĐÚNG HỆ THỐNG</strong></p>
 <p>serve tạo ra lợi thế thật sự</p>
 <p>đối thủ bị buộc phải return hoặc pass từ thế bất lợi</p>
 <p>ít rally dài vôích</p>
 <p>cảm giác "trận đấu đang nằm trong tay mình"</p>
 <hr/>
-<p>Nếu bạn muốn bước tiếp, mình có thể xây cho bạn:</p>
+<p><strong>Nếu bạn muốn bước tiếp, mình có thể xây cho bạn:</strong></p>
 <p>"Sampras full match playbook (serve patterns, return patterns, net game patterns)"</p>
 <p>hoặc "mental reset system khi bị break / mất set"</p>
 <p>Dưới đây là "Sampras Full Match Playbook" — hệ thống cách chơi theo kiểu kiểm soát điểm, pattern serve và net game giống Pete Sampras.</p>
-<p>Mục tiêu: không đánh ngẫu nhiên — luôn có "kịch bản" cho serve, return và rally</p>
+<p><strong>Mục tiêu: không đánh ngẫu nhiên — luôn có "kịch bản" cho serve, return và rally</strong></p>
 <hr/>
 <p>🎾 1. SERVE PLAYBOOK (Giao bóng = tạo quyền kiểm soát ngay lập tức)</p>
-<p>🧠 CORE IDEA:</p>
-<div class="pullquote"><p>"Serve không phải để bắt đầu rally — serve để bắt đầu kết thúc điểm"</p></div>
+<p><strong>🧠 CORE IDEA:</strong></p>
+<div class="pullquote"><p><strong>"Serve không phải để bắt đầu rally — serve để bắt đầu kết thúc điểm"</strong></p></div>
 <hr/>
-<p>🔵 PATTERN 1: Serve Wide → Open Court Attack</p>
+<p><strong>🔵 PATTERN 1: Serve Wide → Open Court Attack</strong></p>
 <p>Deuce court: serve wide</p>
 <p>Sau đó: forehand vào khoảng trống mở</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>kéo đối thủ ra ngoài sân</p>
 <p>open sân cho forehand winner hoặc approach</p>
 <hr/>
-<p>🔵 PATTERN 2: Serve T → Freeze + Volley</p>
+<p><strong>🔵 PATTERN 2: Serve T → Freeze + Volley</strong></p>
 <p>Serve vào T (giữa)</p>
 <p>Tiến ngay vào lưới</p>
 <p>Volley vào góc mở</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>đối thủ không có thời gian repositioning</p>
 <p>kết thúc điểm trong 2 cú</p>
 <hr/>
-<p>🔵 PATTERN 3: Body Serve → Weak Return → Approach</p>
+<p><strong>🔵 PATTERN 3: Body Serve → Weak Return → Approach</strong></p>
 <p>serve vào người</p>
 <p>ép return ngắn hoặc bật lên</p>
 <p>approach + volley</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>phá timing đối thủ</p>
 <p>tạo bóng approach dễ lên lưới</p>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"Serve luôn đi kèm +1 đã định — không có serve đơn độc"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"Serve luôn đi kèm +1 đã định — không có serve đơn độc"</strong></p></div>
 <hr/>
 <p>🎾 2. RETURN PLAYBOOK (Trả giao bóng = giữ mình trong trận)</p>
-<p>🧠 CORE IDEA:</p>
-<div class="pullquote"><p>"Return không cần thắng điểm — chỉ cần không cho đối thủ tấn công ngay"</p></div>
+<p><strong>🧠 CORE IDEA:</strong></p>
+<div class="pullquote"><p><strong>"Return không cần thắng điểm — chỉ cần không cho đối thủ tấn công ngay"</strong></p></div>
 <hr/>
-<p>🔵 PATTERN 1: Deep Low Return</p>
+<p><strong>🔵 PATTERN 1: Deep Low Return</strong></p>
 <p>trả bóng sâu và thấp</p>
 <p>cross court default</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>không cho đối thủ lên lưới dễ dàng</p>
 <hr/>
 <p>🔵 PATTERN 2: Chip Return (block nhẹ)</p>
 <p>dùng lực serve đối thủ</p>
 <p>trả thấp, sâu, giảm pace</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>phá nhịp serve + volley</p>
 <p>kéo đối thủ xuống thấp</p>
 <hr/>
 <p>🔵 PATTERN 3: Attack Return (khi đọc được serve yếu)</p>
 <p>đánh vào forehand / backhand yếu đối thủ</p>
 <p>hoặc trả sâu vào T để giành control</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>giành control rally ngay lập tức</p>
 <hr/>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <div class="pullquote"><p>"80% return = deep + low + safe"</p></div>
 <hr/>
 <p>🎾 3. NET GAME PLAYBOOK (Trái tim của Sampras style)</p>
-<p>🧠 CORE IDEA:</p>
+<p><strong>🧠 CORE IDEA:</strong></p>
 <div class="pullquote"><p>"Kết thúc điểm ở lưới sớm hơnở baseline"</p></div>
 <hr/>
 <p>🔵 PATTERN 1: Serve + Volley (pattern chủ đạo)</p>
 <p>serve mở sân</p>
 <p>tiến vào lưới ngay</p>
 <p>volley đặt vào khoảng trống</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>không cho đối thủ đặt lại</p>
 <p>kết thúc điểm trong 2 cú</p>
 <hr/>
@@ -1824,120 +1835,120 @@
 <p>bóng ngắn → approach thấp và sâu</p>
 <p>lên lưới</p>
 <p>volley kết thúc</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>khai thác bóng ngắn ngay lập tức</p>
 <hr/>
 <p>🔵 PATTERN 3: Slice + Approach (kiểm soát nhịp)</p>
 <p>slice backhand thấp và sâu</p>
 <p>đối thủ bịép lift bóng lên cao</p>
 <p>tiến vào volley dễ</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>dùng slice để tạo điều kiện cho net rush</p>
 <hr/>
 <p>🔵 PATTERN 4: Inside-Out Forehand (mở sân từ baseline)</p>
 <p>bước vòng backhand</p>
 <p>đánh forehand mạnh vào góc xa</p>
 <p>hoặc tiếp tục lên lưới</p>
-<p>👉 Mục tiêu:</p>
+<p><strong>👉 Mục tiêu:</strong></p>
 <p>mở sân hoặc kết thúc điểm từ baseline</p>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"70% kết thúc điểm ở lưới — 30% từ baseline"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"70% kết thúc điểm ở lưới — 30% từ baseline"</strong></p></div>
 <hr/>
 <p>🧠 FULL MATCH FLOW (TỔNG HỢP)</p>
-<p>🔁 Serve:</p>
+<p><strong>🔁 Serve:</strong></p>
 <div class="pullquote"><p>Wide / T / Body → +1 đã plan → tiến hoặc giữ vị trí</p></div>
-<p>🔁 Return:</p>
+<p><strong>🔁 Return:</strong></p>
 <div class="pullquote"><p>Deep + low → giữ mình trong điểm</p></div>
-<p>🔁 Net game:</p>
+<p><strong>🔁 Net game:</strong></p>
 <div class="pullquote"><p>Approach đúng cơ hội → split step → volley đặt góc</p></div>
 <hr/>
 <p>⚡ SAMPRAS PRINCIPLE (CỐT LÕI NHẤT)</p>
-<div class="pullquote"><p>"Tôi không chờ cơ hội — tôi tạo ra điều kiện cho cơ hội xuất hiện ngay từ serve đầu tiên."</p></div>
+<div class="pullquote"><p><strong>"Tôi không chờ cơ hội — tôi tạo ra điều kiện cho cơ hội xuất hiện ngay từ serve đầu tiên."</strong></p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG CHƠI ĐÚNG PLAYBOOK</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG CHƠI ĐÚNG PLAYBOOK</strong></p>
 <p>bạnít bị kéo vào rally dài không cần thiết</p>
 <p>serve bắt đầu tạo ra volley dễ</p>
 <p>đối thủ tự đánh lỗi passing shot nhiều hơn</p>
-<p>bạn không cần winner sớm — điểm tự kết thúc theo cấu trúc</p>
+<p><strong>bạn không cần winner sớm — điểm tự kết thúc theo cấu trúc</strong></p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp:</strong></p>
 <p>"Sampras pattern decision tree (khi nào dùng shot nào trong 1 giây)"</p>
 <p>hoặc "training plan 14 ngày để biến playbook này thành phản xạ tự động"</p>
 <p>Dưới đây là "Sampras Pattern Decision Tree" — cách ra quyết định trong ~1 giây để chọn cú đánh giống tư duy thi đấu của Pete Sampras.</p>
 <p>Mục tiêu: không nghĩ dài → chỉ đọc tình huống → chọn 1 nhánh duy nhất</p>
 <hr/>
 <p>🎾 SAMPRAS PATTERN DECISION TREE (1-SECOND SYSTEM)</p>
-<p>🧠 CORE RULE:</p>
-<div class="pullquote"><p>"Đọc tình huống serve/return/rally trước — rồi mới chọn cú đánh"</p></div>
+<p><strong>🧠 CORE RULE:</strong></p>
+<div class="pullquote"><p><strong>"Đọc tình huống serve/return/rally trước — rồi mới chọn cú đánh"</strong></p></div>
 <hr/>
 <ol class="styled-list numbered">
 <li>🔵 BƯỚC 1: BÓNG / ĐIỂM XUẤT PHÁT TỪ ĐÂU?</li>
 </ol>
-<p>A. 🎯 Đang SERVE</p>
+<p><strong>A. 🎯 Đang SERVE</strong></p>
 <p>→ đã chọn hướng serve từ trước</p>
 <p>👉 đi sang SERVE BRANCH</p>
 <hr/>
-<p>B. 🎾 Đang RETURN</p>
+<p><strong>B. 🎾 Đang RETURN</strong></p>
 <p>→ đọc serve của đối thủ</p>
 <p>👉 đi sang RETURN BRANCH</p>
 <hr/>
-<p>C. ⚖️ Đang RALLY</p>
+<p><strong>C. ⚖️ Đang RALLY</strong></p>
 <p>→ đọc vị trí bóng</p>
 <p>👉 đi sang RALLY BRANCH</p>
 <hr/>
 <ol class="styled-list numbered">
 <li>🔷 SERVE BRANCH</li>
 </ol>
-<p>🎯 Câu hỏi 1 giây:</p>
+<p><strong>🎯 Câu hỏi 1 giây:</strong></p>
 <div class="pullquote"><p>"Hướng nào tạo ra cú tiếp theo tốt nhất?"</p></div>
 <hr/>
-<p>➤ Wide:</p>
+<p><strong>➤ Wide:</strong></p>
 <p>👉 mở sân → forehand winner hoặc lên lưới</p>
 <hr/>
 <p>➤ T:</p>
 <p>👉 freeze đối thủ → tiến vào lưới ngay</p>
 <hr/>
-<p>➤ Body:</p>
+<p><strong>➤ Body:</strong></p>
 <p>👉 ép return ngắn → approach + volley</p>
 <hr/>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <div class="pullquote"><p>"Serve = cú đầu tiên của chuỗi 2–3 cú, không phải cú độc lập"</p></div>
 <hr/>
 <ol class="styled-list numbered">
 <li>🟡 RETURN BRANCH</li>
 </ol>
-<p>🎯 Câu hỏi 1 giây:</p>
+<p><strong>🎯 Câu hỏi 1 giây:</strong></p>
 <div class="pullquote"><p>"Serve mạnh hay yếu?"</p></div>
 <hr/>
-<p>➤ Serve mạnh / không đọc được:</p>
-<p>👉 Deep cross reset — an toàn</p>
+<p><strong>➤ Serve mạnh / không đọc được:</strong></p>
+<p><strong>👉 Deep cross reset — an toàn</strong></p>
 <hr/>
-<p>➤ Serve vừa / đọc được hướng:</p>
-<p>👉 Deep directional return — giành control</p>
+<p><strong>➤ Serve vừa / đọc được hướng:</strong></p>
+<p><strong>👉 Deep directional return — giành control</strong></p>
 <hr/>
-<p>➤ Serve yếu / ngắn:</p>
-<p>👉 Attack return — giành control ngay</p>
+<p><strong>➤ Serve yếu / ngắn:</strong></p>
+<p><strong>👉 Attack return — giành control ngay</strong></p>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"Không cần return winner — chỉ cần không cho đối thủ điều kiện tấn công"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"Không cần return winner — chỉ cần không cho đối thủ điều kiện tấn công"</strong></p></div>
 <hr/>
 <ol class="styled-list numbered">
 <li>🔴 RALLY BRANCH</li>
 </ol>
-<p>🎯 Câu hỏi 1 giây:</p>
+<p><strong>🎯 Câu hỏi 1 giây:</strong></p>
 <div class="pullquote"><p>"Bóng tạo ra cơ hội kết thúc không?"</p></div>
 <hr/>
-<p>➤ Bóng ngắn / đối thủ mất vị trí:</p>
-<p>👉 Approach + volley — lên lưới ngay</p>
+<p><strong>➤ Bóng ngắn / đối thủ mất vị trí:</strong></p>
+<p><strong>👉 Approach + volley — lên lưới ngay</strong></p>
 <hr/>
-<p>➤ Bóng bình thường:</p>
-<p>👉 Inside-out forehand hoặc deep cross — xây điểm</p>
+<p><strong>➤ Bóng bình thường:</strong></p>
+<p><strong>👉 Inside-out forehand hoặc deep cross — xây điểm</strong></p>
 <hr/>
-<p>➤ Bóng khó / bịép:</p>
-<p>👉 Slice reset — giảm nhịp, lấy lại vị trí</p>
+<p><strong>➤ Bóng khó / bịép:</strong></p>
+<p><strong>👉 Slice reset — giảm nhịp, lấy lại vị trí</strong></p>
 <hr/>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <div class="pullquote"><p>"Cơ hội lên lưới = lên ngay. Không có cơ hội = xây thêm."</p></div>
 <hr/>
 <p>⚡ TOÀN BỘ TREE (SIÊU NGẮN)</p>
@@ -1956,109 +1967,107 @@
  └→ Khó → slice reset</p>
 <hr/>
 <p>🧠 SAMPRAS 1-SECOND MINDSET</p>
-<div class="pullquote"><p>"Tôi không chọn cú đẹp nhất — tôi chọn cú kết thúc điểm sớm nhất."</p></div>
+<div class="pullquote"><p><strong>"Tôi không chọn cú đẹp nhất — tôi chọn cú kết thúc điểm sớm nhất."</strong></p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG DÙNG ĐÚNG SYSTEM</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG DÙNG ĐÚNG SYSTEM</strong></p>
 <p>bạnít bị "đứng hình" khi bóng tới</p>
 <p>quyết định nhanh hơn, ít do dự</p>
 <p>serve và net game bắt đầu kết nối với nhau</p>
 <p>đối thủ bắt đầu bị đặt vào thế phòng thủ liên tục</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp:</strong></p>
 <p>"Sampras shot selection drills (bài tập tự động hóa decision tree)"</p>
 <p>hoặc "anti-pressure system: khi bị break point thì chọn shot nào"</p>
 <p>Dưới đây là "Sampras Shot Selection Drills" — hệ thống bài tập để biến decision tree (chọn cú đánh trong 1 giây) thành phản xạ tự động, theo phong cách thi đấu của Pete Sampras.</p>
 <p>Mục tiêu: không còn "nghĩ chọn cú" → chỉ còn "nhìn tình huống → cơ thể tự chọn"</p>
 <hr/>
-<p>🎾 SAMPRAS SHOT SELECTION DRILLS</p>
-<p>🧠 NGUYÊN TẮC</p>
+<p><strong>🎾 SAMPRAS SHOT SELECTION DRILLS</strong></p>
+<p><strong>🧠 NGUYÊN TẮC</strong></p>
 <div class="pullquote"><p>"Nếu bạn phải nghĩ &gt;1 giây, bạn đã chậm."</p></div>
 <hr/>
-<p>🟢 DRILL 1 — SERVE + MOVE AUTOMATION</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟢 DRILL 1 — SERVE + MOVE AUTOMATION</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>Tự động hóa serve + position tiếp theo</p>
 <hr/>
-<p>🧩 Setup:</p>
+<p><strong>🧩 Setup:</strong></p>
 <p>Serve bình thường</p>
 <p>Trước khi serve, coach đặt 1 cọcở vị trí bạn phải di chuyển tới sau khi bóng rời vợt</p>
 <hr/>
-<p>🎾 Cách tập:</p>
+<p><strong>🎾 Cách tập:</strong></p>
 <p>Wide serve → di chuyển đến cọc bên phải</p>
 <p>T serve → di chuyển đến cọc giữa sân</p>
 <p>Body → di chuyển vào lưới</p>
 <hr/>
-<p>⚡ Quy tắc:</p>
+<p><strong>⚡ Quy tắc:</strong></p>
 <p>Di chuyển phải bắt đầu ngay khi contact, không phải sau khi thấy return</p>
 <hr/>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>đứng chờ xem return đi đâu rồi mới di chuyển</p>
 <hr/>
-<p>🟡 DRILL 2 — APPROACH ONLY DRILL</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟡 DRILL 2 — APPROACH ONLY DRILL</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>Chỉ lên lưới khi approach đúng chất lượng</p>
 <hr/>
-<p>🧩 Setup:</p>
+<p><strong>🧩 Setup:</strong></p>
 <p>Coach feed bóng ở độ dài khác nhau</p>
 <p>Chỉ được lên lưới khi bóng ngắn hơn service line</p>
 <hr/>
-<p>🎾 Luật:</p>
+<p><strong>🎾 Luật:</strong></p>
 <p>Bóng dài → ở lại baseline</p>
 <p>Bóng ngắn → approach + volley bắt buộc</p>
 <hr/>
-<p>🧠 Tác dụng:</p>
-<p>ép não nhận dạng "lên lưới hay không" trong</p>
-<h3>0.5 giây</h3>
+<p><strong>🧠 Tác dụng:</strong></p>
+<p>ép não nhận dạng "lên lưới hay không" trong 0.5 giây</p>
 <hr/>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>lên lưới từ bóng sâu</p>
 <hr/>
-<p>🔴 DRILL 3 — VOLLEY PLACEMENT SPEED</p>
-<p>🎯 Mục tiêu:</p>
-<p>Giảm thời gian quyết định volley xuống ~</p>
-<h3>0.5 giây</h3>
+<p><strong>🔴 DRILL 3 — VOLLEY PLACEMENT SPEED</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
+<p>Giảm thời gian quyết định volley xuống ~ 0.5 giây</p>
 <hr/>
-<p>🧩 Setup:</p>
+<p><strong>🧩 Setup:</strong></p>
 <p>Đứng ở vị trí lưới</p>
 <p>Coach feed 2 bóng liên tiếp: 1 bên forehand, 1 bên backhand</p>
 <hr/>
-<p>🎾 Luật:</p>
+<p><strong>🎾 Luật:</strong></p>
 <p>Mỗi volley đặt vào góc đối diện</p>
 <p>Không được đứng hình giữa 2 volley</p>
 <hr/>
-<p>⚡ Điều quan trọng:</p>
+<p><strong>⚡ Điều quan trọng:</strong></p>
 <p>quyết định hướng volley phải đi cùng split step</p>
 <p>không có "pause"</p>
 <hr/>
-<p>🟣 DRILL 4 — PRESSURE POINT SIMULATION</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟣 DRILL 4 — PRESSURE POINT SIMULATION</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>Ra quyết định đúng khi căng thẳng</p>
 <hr/>
-<p>🧩 Setup:</p>
+<p><strong>🧩 Setup:</strong></p>
 <p>chơi game tới 5 điểm</p>
 <p>mỗi điểm = break point giả lập</p>
 <hr/>
-<p>🎾 Luật:</p>
-<p>trước mỗi điểm chỉ được nghĩ 1 pattern:</p>
+<p><strong>🎾 Luật:</strong></p>
+<p><strong>trước mỗi điểm chỉ được nghĩ 1 pattern:</strong></p>
 <p>"serve wide + approach"</p>
 <p>"serve T + volley"</p>
 <p>"serve body + baseline rally"</p>
 <hr/>
-<p>❌ Sai nếu:</p>
+<p><strong>❌ Sai nếu:</strong></p>
 <p>đổiý giữa serve motion</p>
 <hr/>
-<p>🟠 DRILL 5 — NO-THINK POINT CONSTRUCTION</p>
-<p>🎯 Mục tiêu:</p>
+<p><strong>🟠 DRILL 5 — NO-THINK POINT CONSTRUCTION</strong></p>
+<p><strong>🎯 Mục tiêu:</strong></p>
 <p>Đưa decision tree vào subconscious</p>
 <hr/>
-<p>🧩 Setup:</p>
+<p><strong>🧩 Setup:</strong></p>
 <p>Chơi điểm liên tục 5–10 phút</p>
 <hr/>
-<p>🎾 Luật:</p>
+<p><strong>🎾 Luật:</strong></p>
 <p>không nghĩ kỹ thuật</p>
-<p>chỉ nghĩ:</p>
+<p><strong>chỉ nghĩ:</strong></p>
 <div class="pullquote"><p>"mở – kết" (mở cơ hội → kết thúc điểm)</p></div>
 <hr/>
-<p>⚡ Hiệu ứng:</p>
+<p><strong>⚡ Hiệu ứng:</strong></p>
 <p>cơ thể tự chọn cú đánh</p>
 <p>không còn delay nhận thức</p>
 <hr/>
@@ -2066,208 +2075,205 @@
 <p>Giai đoạn 1: MOVEMENT (Drill 1)</p>
 <p>→ học di chuyển theo serve</p>
 <p>Giai đoạn 2: TIMING (Drill 2 + 3)</p>
-<p>→ nhận dạng cơ hội trong</p>
-<h3>0.5 s</h3>
+<p>→ nhận dạng cơ hội trong 0.5 s</p>
 <p>Giai đoạn 3: PRESSURE (Drill 4)</p>
 <p>→ giữ plan khi căng thẳng</p>
 <p>Giai đoạn 4: AUTOMATION (Drill 5)</p>
 <p>→ không còn cần nghĩ</p>
 <hr/>
 <p>⚡ SAMPRAS PRINCIPLE (CỐT LÕI)</p>
-<div class="pullquote"><p>"Tôi không chọn cú đánh — tôi nhận ra cú đánh duy nhất có thể thực hiện lúc đó."</p></div>
+<div class="pullquote"><p><strong>"Tôi không chọn cú đánh — tôi nhận ra cú đánh duy nhất có thể thực hiện lúc đó."</strong></p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG TIẾN BỘ</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG TIẾN BỘ</strong></p>
 <p>ít do dự khi bóng ngắn</p>
 <p>serve và movement trở thành 1 hành động</p>
 <p>đối thủ bắt đầu cảm thấy không có thời gian chuẩn bị</p>
 <p>cảm giác trận đấu "bị kiểm soát trước khi rally bắt đầu"</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp:</strong></p>
 <p>"Sampras serve +1 automation system"</p>
 <p>hoặc "pressure-proof system: chơi break point như Sampras"</p>
 <p>Dưới đây là "Elite Match Pressure System" theo phong cách Pete Sampras — hệ thống tự động hóa quyết định trong các điểm căng nhất: break point / tie-break / match point.</p>
-<p>Mục tiêu:</p>
+<p><strong>Mục tiêu:</strong></p>
 <div class="pullquote"><p>càng áp lực cao → càng đơn giản hóa quyết định → càng execute clean</p></div>
 <hr/>
 <p>🎾 ELITE MATCH PRESSURE SYSTEM (SAMPRAS STYLE)</p>
-<p>🧠 CORE PRINCIPLE</p>
-<div class="pullquote"><p>"Áp lực không phải để thay đổi chiến thuật — áp lực là để thực thi chiến thuật hoàn hảo nhất."</p></div>
+<p><strong>🧠 CORE PRINCIPLE</strong></p>
+<div class="pullquote"><p><strong>"Áp lực không phải để thay đổi chiến thuật — áp lực là để thực thi chiến thuật hoàn hảo nhất."</strong></p></div>
 <hr/>
-<p>🔥 1. BREAK POINT SYSTEM</p>
-<p>🧠 TƯ DUY:</p>
+<p><strong>🔥 1. BREAK POINT SYSTEM</strong></p>
+<p><strong>🧠 TƯ DUY:</strong></p>
 <div class="pullquote"><p>"Điểm quan trọng nhất là điểm có kế hoạch nhất"</p></div>
 <hr/>
-<p>🎯 SERVE BREAK POINT</p>
-<p>🔵 CHỈ 3 LỰA CHỌN:</p>
+<p><strong>🎯 SERVE BREAK POINT</strong></p>
+<p><strong>🔵 CHỈ 3 LỰA CHỌN:</strong></p>
 <p>Serve wide → forehand mở sân</p>
 <p>Serve T → tiến vào lưới</p>
 <p>Serve body → ép return ngắn</p>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <p>Không serve liều</p>
 <p>Không thay đổi plan vìáp lực</p>
 <hr/>
-<p>🎯 RETURN BREAK POINT</p>
-<p>🔵 CHỈ 2 CHẾ ĐỘ:</p>
+<p><strong>🎯 RETURN BREAK POINT</strong></p>
+<p><strong>🔵 CHỈ 2 CHẾ ĐỘ:</strong></p>
 <p>Default: deep cross reset</p>
 <p>Read weak serve: attack return</p>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <div class="pullquote"><p>"Return an toàn = giữ điểm sống"</p></div>
 <hr/>
-<p>🎯 RALLY BREAK POINT</p>
+<p><strong>🎯 RALLY BREAK POINT</strong></p>
 <p>70%: deep cross hoặc slice reset</p>
 <p>30%: attack nếu bóng ngắn rõ ràng</p>
 <hr/>
-<p>⚖️ 2. TIE-BREAK SYSTEM</p>
-<p>🧠 TƯ DUY:</p>
+<p><strong>⚖️ 2. TIE-BREAK SYSTEM</strong></p>
+<p><strong>🧠 TƯ DUY:</strong></p>
 <div class="pullquote"><p>"Tie-break = thực thi pattern, không sáng tạo"</p></div>
 <hr/>
-<p>🎯 RULE 3-3-3 SYSTEM:</p>
-<p>🔵 3 POINTS SERVE:</p>
+<p><strong>🎯 RULE 3-3-3 SYSTEM:</strong></p>
+<p><strong>🔵 3 POINTS SERVE:</strong></p>
 <p>1st serve: wide hoặc T tùy pattern đã xây</p>
 <p>2nd serve: body safe</p>
 <p>+1: forehand control hoặc volley</p>
 <hr/>
-<p>🔵 3 POINTS RETURN:</p>
+<p><strong>🔵 3 POINTS RETURN:</strong></p>
 <p>deep cross (default)</p>
 <p>block return nếu serve mạnh</p>
-<p>no risk return — chỉ đặt bóng vào sân sâu</p>
+<p><strong>no risk return — chỉ đặt bóng vào sân sâu</strong></p>
 <hr/>
-<p>🔵 3 POINTS RALLY:</p>
+<p><strong>🔵 3 POINTS RALLY:</strong></p>
 <p>kết thúc điểm sớm nếu có cơ hội</p>
 <p>slice reset nếu bịép</p>
 <p>không winner từ baseline trừ khi rất rõ</p>
 <hr/>
-<p>⚡ KEY RULE:</p>
-<div class="pullquote"><p>"Tie-break = lặp lại những gì đã hoạt động trong set — không phát minh lại"</p></div>
+<p><strong>⚡ KEY RULE:</strong></p>
+<div class="pullquote"><p><strong>"Tie-break = lặp lại những gì đã hoạt động trong set — không phát minh lại"</strong></p></div>
 <hr/>
-<p>💣 3. MATCH POINT SYSTEM</p>
-<p>🧠 TƯ DUY:</p>
-<div class="pullquote"><p>"Ở match point, tôi không cố 'đánh cú đẹp nhất' — tôi thực thi 'cú quen thuộc nhất'"</p></div>
+<p><strong>💣 3. MATCH POINT SYSTEM</strong></p>
+<p><strong>🧠 TƯ DUY:</strong></p>
+<div class="pullquote"><p><strong>"Ở match point, tôi không cố 'đánh cú đẹp nhất' — tôi thực thi 'cú quen thuộc nhất'"</strong></p></div>
 <hr/>
-<p>🎯 SERVE MATCH POINT</p>
+<p><strong>🎯 SERVE MATCH POINT</strong></p>
 <p>Wide serve → open court forehand</p>
 <p>T serve → tiến vào lưới → volley đặt góc</p>
 <p>Body serve → baseline rally safe</p>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <p>0% gamble</p>
 <p>ưu tiên placement và clean execution</p>
 <hr/>
-<p>🎯 RETURN MATCH POINT</p>
-<p>2 OPTIONS ONLY:</p>
+<p><strong>🎯 RETURN MATCH POINT</strong></p>
+<p><strong>2 OPTIONS ONLY:</strong></p>
 <p>deep cross (default survival)</p>
 <p>chip return nếu bịép</p>
 <hr/>
-<p>🎯 RALLY MATCH POINT</p>
+<p><strong>🎯 RALLY MATCH POINT</strong></p>
 <p>80% slice / cross court</p>
 <p>chỉ tấn công khi bóng ngắn thật sự rõ</p>
 <hr/>
-<p>🔁 FULL PRESSURE AUTOMATION FLOW</p>
-<p>🔄 TRONG TẤT CẢ SITUATIONS:</p>
-<p>STEP 1: IDENTIFY POINT TYPE</p>
+<p><strong>🔁 FULL PRESSURE AUTOMATION FLOW</strong></p>
+<p><strong>🔄 TRONG TẤT CẢ SITUATIONS:</strong></p>
+<p><strong>STEP 1: IDENTIFY POINT TYPE</strong></p>
 <p>Break point / Tie-break / Match point</p>
 <hr/>
-<p>STEP 2: SELECT MODE</p>
+<p><strong>STEP 2: SELECT MODE</strong></p>
 <p>SAFE SERVE (default)</p>
 <p>EXECUTE NET GAME (nếu điều kiện đúng)</p>
 <p>RESET RALLY (nếu không chắc)</p>
 <hr/>
-<p>STEP 3: EXECUTE PRESET PATTERN</p>
+<p><strong>STEP 3: EXECUTE PRESET PATTERN</strong></p>
 <p>không đổiý trong serve motion</p>
 <p>không sáng tạo ngoài kế hoạch</p>
 <hr/>
-<p>🧠 SAMPRAS PRESSURE MINDSET</p>
-<div class="pullquote"><p>"Khiáp lực tăng, tôi không chơi khác đi — tôi chơi sạch hơn vàít lựa chọn hơn."</p></div>
+<p><strong>🧠 SAMPRAS PRESSURE MINDSET</strong></p>
+<div class="pullquote"><p><strong>"Khiáp lực tăng, tôi không chơi khác đi — tôi chơi sạch hơn vàít lựa chọn hơn."</strong></p></div>
 <hr/>
-<p>⚡ GOLDEN RULES</p>
-<p>❗ Rule 1:</p>
+<p><strong>⚡ GOLDEN RULES</strong></p>
+<p><strong>❗ Rule 1:</strong></p>
 <p>Áp lực cao = giảm risk, không tăng risk</p>
-<p>❗ Rule 2:</p>
+<p><strong>❗ Rule 2:</strong></p>
 <p>Không có "shot liều" ở điểm quan trọng</p>
-<p>❗ Rule 3:</p>
+<p><strong>❗ Rule 3:</strong></p>
 <p>Plan phải quyết định trước khi bắt đầu routine serve</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG VÀO ELITE MODE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG VÀO ELITE MODE</strong></p>
 <p>không đổiý ở break point</p>
 <p>tay không gồng khi căng</p>
 <p>serve ổn định hơnở điểm quan trọng</p>
 <p>đối thủ bắt đầu tự sai trước bạn</p>
 <hr/>
-<p>🔥 FINAL INSIGHT</p>
+<p><strong>🔥 FINAL INSIGHT</strong></p>
 <div class="pullquote"><p>Người bình thường nghĩ: "phải đánh hay hơn khiáp lực cao"
 Sampras-system nghĩ:
 "phải đánh đơn giản và chính xác hơn khiáp lực cao"</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể nâng cấp tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể nâng cấp tiếp:</strong></p>
 <p>"Sampras full -level tennis brain: combine tất cả system thành 1 flow duy nhất"</p>
-<p>hoặc "Sampras disguise system (che giấu ý định cú đánh đến</p>
-<h3>0.5 giây cuối)" Dưới đây là "-Level</h3>
+<p>hoặc "Sampras disguise system (che giấu ý định cú đánh đến 0.5 giây cuối)" Dưới đây là "-Level</p>
 <p>Tennis Brain" theo phong cách Pete Sampras — hệ thống hợp nhất toàn bộ Serve + Return + Rally + Net Game + Pressure System.</p>
-<p>Mục tiêu cuối cùng:</p>
+<p><strong>Mục tiêu cuối cùng:</strong></p>
 <div class="pullquote"><p>Bạn không còn "chơi tennis" → bạn vận hành một hệ thống quyết định tự động hướng đến kết thúc điểm sớm nhất có thể</p></div>
 <hr/>
 <p>🧠🎾 -LEVEL TENNIS BRAIN (SAMPRAS FULL SYSTEM)</p>
-<p>🧩 CORE ARCHITECTURE</p>
-<div class="pullquote"><p>Mỗi điểm = 1 vòng lặp 5 lớp:</p></div>
-<p>READ → INITIATE → PRESSURE → EXECUTE → RESET</p>
+<p><strong>🧩 CORE ARCHITECTURE</strong></p>
+<div class="pullquote"><p><strong>Mỗi điểm = 1 vòng lặp 5 lớp:</strong></p></div>
+<p><strong>READ → INITIATE → PRESSURE → EXECUTE → RESET</strong></p>
 <hr/>
-<p>🔵 LAYER 1 — READ ENGINE (</p>
-<h3>0.5 s)</h3>
-<p>🧠 NÃO LÀMGÌ:</p>
+<p><strong>🔵 LAYER 1 — READ ENGINE ( 0.5 s)</strong></p>
+<p><strong>🧠 NÃO LÀMGÌ:</strong></p>
 <p>đọc vị trí đối thủ</p>
 <p>đọc điều kiện serve/return</p>
 <p>phân loại tình huống</p>
 <hr/>
-<p>🎯 OUTPUT CHỈ CÓ 3 TAG:</p>
+<p><strong>🎯 OUTPUT CHỈ CÓ 3 TAG:</strong></p>
 <p>🔵 OPPORTUNITY (có cơ hội kết thúc)</p>
 <p>🟡 NEUTRAL (phải xây thêm)</p>
 <p>🔴 DEFENSIVE (phải reset)</p>
 <hr/>
-<p>🟡 LAYER 2 — INITIATE ENGINE (Serve / Return)</p>
-<p>🎾 IF SERVE</p>
-<p>SYSTEM RULE:</p>
+<p><strong>🟡 LAYER 2 — INITIATE ENGINE (Serve / Return)</strong></p>
+<p><strong>🎾 IF SERVE</strong></p>
+<p><strong>SYSTEM RULE:</strong></p>
 <div class="pullquote"><p>Serve luôn đi kèm +1 đã chọn trước</p></div>
-<p>AUTO OUTPUT:</p>
+<p><strong>AUTO OUTPUT:</strong></p>
 <p>Wide → open court attack</p>
 <p>T → net rush</p>
 <p>Body → weak return pressure</p>
 <hr/>
-<p>🎾 IF RETURN</p>
-<p>AUTO CLASSIFICATION:</p>
+<p><strong>🎾 IF RETURN</strong></p>
+<p><strong>AUTO CLASSIFICATION:</strong></p>
 <p>Deep Cross (default)</p>
 <p>Block/Chip (pressure)</p>
 <p>Attack (read weak serve)</p>
 <hr/>
-<p>🔴 LAYER 3 — PRESSURE ENGINE (create opportunity)</p>
-<p>🧠 LOGIC:</p>
-<p>BUILD PRESSURE MODE:</p>
+<p><strong>🔴 LAYER 3 — PRESSURE ENGINE (create opportunity)</strong></p>
+<p><strong>🧠 LOGIC:</strong></p>
+<p><strong>BUILD PRESSURE MODE:</strong></p>
 <p>approach + volley khi bóng ngắn</p>
-<p>RALLY PRESSURE MODE:</p>
+<p><strong>RALLY PRESSURE MODE:</strong></p>
 <p>inside-out forehand / change direction</p>
-<p>RESET MODE:</p>
+<p><strong>RESET MODE:</strong></p>
 <p>slice / deep cross khi bịép</p>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"Không sáng tạo — chỉ chuyển trạng thái"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"Không sáng tạo — chỉ chuyển trạng thái"</strong></p></div>
 <hr/>
-<p>🟢 LAYER 4 — EXECUTE ENGINE</p>
-<p>🎯 CHỈ KÍCH HOẠT KHI:</p>
+<p><strong>🟢 LAYER 4 — EXECUTE ENGINE</strong></p>
+<p><strong>🎯 CHỈ KÍCH HOẠT KHI:</strong></p>
 <p>đãở vị trí tốt</p>
 <p>bóng có thể kết thúc</p>
 <p>hoặc approach đủ tốt để lên lưới</p>
 <hr/>
-<p>🔥 EXECUTE OPTIONS:</p>
+<p><strong>🔥 EXECUTE OPTIONS:</strong></p>
 <p>Volley kết thúc</p>
 <p>Inside-out forehand winner</p>
 <p>Net rush + place volley</p>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"Không tìm cơ hội — chỉ nhận ra cơ hội"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"Không tìm cơ hội — chỉ nhận ra cơ hội"</strong></p></div>
 <hr/>
-<p>🟢 LAYER 5 — RESET ENGINE (giữa điểm)</p>
-<p>🔁 FLOW:</p>
-<p>RESET → LOCK SERVE → SELECT +1 → SERVE</p>
+<p><strong>🟢 LAYER 5 — RESET ENGINE (giữa điểm)</strong></p>
+<p><strong>🔁 FLOW:</strong></p>
+<p><strong>RESET → LOCK SERVE → SELECT +1 → SERVE</strong></p>
 <hr/>
-<p>🧠 MỤC TIÊU:</p>
+<p><strong>🧠 MỤC TIÊU:</strong></p>
 <p>xóa kýức điểm trước</p>
 <p>quay về trạng thái trung tính</p>
 <p>chọn hướng serve tiếp theo</p>
@@ -2287,17 +2293,17 @@ Sampras-system nghĩ:
 REPEAT</li>
 </ol>
 <hr/>
-<p>⚡ PRESSURE OVERRIDE MODE</p>
-<p>Khi break point / tie-break / match point:</p>
-<div class="pullquote"><p>hệ thống tự chuyển:</p></div>
+<p><strong>⚡ PRESSURE OVERRIDE MODE</strong></p>
+<p><strong>Khi break point / tie-break / match point:</strong></p>
+<div class="pullquote"><p><strong>hệ thống tự chuyển:</strong></p></div>
 <p>❌ ATTACK mode giảm</p>
 <p>✔️ CLEAN EXECUTE bật</p>
-<p>RULE:</p>
+<p><strong>RULE:</strong></p>
 <p>giảm 50% risk</p>
 <p>tăng 100% precision</p>
 <p>không improvisation</p>
 <hr/>
-<p>🧠 FINAL SAMPRAS MINDSET</p>
+<p><strong>🧠 FINAL SAMPRAS MINDSET</strong></p>
 <div class="pullquote"><p>"Tôi không điều hành từng cú đánh. Tôi điều hành dòng chảy của điểm số."</p></div>
 <hr/>
 <p>🧩 DẤU HIỆU BẠN ĐÃ "RUN MODE"</p>
@@ -2307,49 +2313,49 @@ REPEAT</li>
 <p>đối thủ cảm thấy bạn "luôn có answer"</p>
 <hr/>
 <p>🔥 LEVEL CAO NHẤT (ULTIMATE STATE)</p>
-<div class="pullquote"><p>Không còn decision tree
-Chỉ còn:</p></div>
+<div class="pullquote"><p><strong>Không còn decision tree
+Chỉ còn:</strong></p></div>
 <p>đọc → di chuyển → thực hiện</p>
 <hr/>
-<p>Nếu bạn muốn, bước tiếp theo mình có thể xây là:</p>
+<p><strong>Nếu bạn muốn, bước tiếp theo mình có thể xây là:</strong></p>
 <p>"Sampras unconscious mode (không cần suy nghĩ trong 100% rally)"</p>
 <p>hoặc " brain debugging system (tự sửa lỗi ngay trong trận)"</p>
 <p>Dưới đây là "Sampras Unconscious Mode" — trạng thái chơi khi toàn bộ decision tree (Serve + Return + Rally + Net Game + Pressure) đã được "đóng gói" vào phản xạ, giống cách thi đấu của Pete Sampras.</p>
-<p>Mục tiêu:</p>
-<div class="pullquote"><p>0% suy nghĩ trong rally — 100% phản xạ + cảm nhận nhịp điểm</p></div>
+<p><strong>Mục tiêu:</strong></p>
+<div class="pullquote"><p><strong>0% suy nghĩ trong rally — 100% phản xạ + cảm nhận nhịp điểm</strong></p></div>
 <hr/>
-<p>🧠🎾 SAMPRAS UNCONSCIOUS MODE</p>
-<p>🧩 CORE IDEA</p>
+<p><strong>🧠🎾 SAMPRAS UNCONSCIOUS MODE</strong></p>
+<p><strong>🧩 CORE IDEA</strong></p>
 <div class="pullquote"><p>"Tôi không chọn cú đánh. Tôi chỉ nhận biết điều kiện và cơ thể tự xử lý."</p></div>
 <hr/>
 <p>🔵 1. SWITCH MECHANISM (công tắc vào chế độ vô thức)</p>
-<p>🎯 TRƯỚC MỖI POINT CHỈ LÀM 1 THỨ:</p>
+<p><strong>🎯 TRƯỚC MỖI POINT CHỈ LÀM 1 THỨ:</strong></p>
 <div class="pullquote"><p>1 nhịp thở + 1 cue duy nhất</p></div>
 <p>Không phân tích. Không chiến thuật.</p>
 <hr/>
-<p>⚡ CUE DUY NHẤT:</p>
+<p><strong>⚡ CUE DUY NHẤT:</strong></p>
 <div class="pullquote"><p>"LẠNH"</p></div>
 <hr/>
-<p>🧠 Ý NGHĨA:</p>
+<p><strong>🧠 Ý NGHĨA:</strong></p>
 <p>lạnh tâm lý</p>
 <p>lạnh quyết định</p>
 <p>lạnh body language</p>
 <hr/>
 <p>🟡 2. PERCEPTION LAYER (chỉ "nhìn", không "nghĩ")</p>
-<p>🧠 NÃO KHÔNG PHÂN TÍCH — CHỈ NHẬN DIỆN:</p>
+<p><strong>🧠 NÃO KHÔNG PHÂN TÍCH — CHỈ NHẬN DIỆN:</strong></p>
 <p>serve mạnh hay yếu</p>
 <p>bóng ngắn hay dài</p>
 <p>cơ hội lên lưới hay không</p>
 <hr/>
-<p>❌ KHÔNG LÀM:</p>
+<p><strong>❌ KHÔNG LÀM:</strong></p>
 <p>không nghĩ "đánh gì"</p>
 <p>không chọn cú đánh bằng ý thức</p>
 <hr/>
-<p>✔️ CHỈ LÀM:</p>
+<p><strong>✔️ CHỈ LÀM:</strong></p>
 <div class="pullquote"><p>"thấy điều kiện → cơ thể phản ứng"</p></div>
 <hr/>
 <p>🔵 3. AUTOMATIC MOTOR LAYER (cơ thể tự chọn cú đánh)</p>
-<p>🧠 RULE SYSTEM ĐÃ ĐƯỢC CÀI SẴN:</p>
+<p><strong>🧠 RULE SYSTEM ĐÃ ĐƯỢC CÀI SẴN:</strong></p>
 <p>🔹 Serve + bóng ngắn →</p>
 <p>approach + volley tự động</p>
 <p>🔹 Serve + bóng dài trung bình →</p>
@@ -2357,94 +2363,94 @@ Chỉ còn:</p></div>
 <p>🔹 Return về bóng khó →</p>
 <p>slice reset tự động</p>
 <hr/>
-<p>⚡ KEY POINT:</p>
+<p><strong>⚡ KEY POINT:</strong></p>
 <div class="pullquote"><p>Không phải "chọn cú" → mà là "cơ thể tự gợi nhớ pattern"</p></div>
 <hr/>
 <p>🔴 4. FLOW STATE ENGINE (điểm không còn break tư duy)</p>
-<p>🧠 ĐẶC ĐIỂM:</p>
+<p><strong>🧠 ĐẶC ĐIỂM:</strong></p>
 <p>không có "start/stop thinking"</p>
-<p>chỉ có nhịp:</p>
+<p><strong>chỉ có nhịp:</strong></p>
 <div class="pullquote"><p>serve → di chuyển → execute → reset</p></div>
 <hr/>
-<p>⚡ RULE:</p>
-<div class="pullquote"><p>"Không có cú đánh riêng lẻ — chỉ có chuỗi hành động liên tục"</p></div>
+<p><strong>⚡ RULE:</strong></p>
+<div class="pullquote"><p><strong>"Không có cú đánh riêng lẻ — chỉ có chuỗi hành động liên tục"</strong></p></div>
 <hr/>
 <p>🟢 5. RESET LOOP (giữ vô thức suốt trận)</p>
-<p>🔁 GIỮ FLOW:</p>
+<p><strong>🔁 GIỮ FLOW:</strong></p>
 <p>RESET → THỞ → QUAY LẠI "LẠNH"</p>
 <hr/>
-<p>❌ KHÔNG LÀM:</p>
+<p><strong>❌ KHÔNG LÀM:</strong></p>
 <p>phân tích điểm vừa rồi</p>
 <p>tự trách sau lỗi</p>
 <p>sửa kỹ thuật giữa trận</p>
 <hr/>
-<p>⚡ FULL UNCONSCIOUS LOOP</p>
+<p><strong>⚡ FULL UNCONSCIOUS LOOP</strong></p>
 <p>RESET → CUE "LẠNH" → NHÌN → PHẢN XẠ → FLOW → RESET</p>
 <hr/>
-<p>🧠 SAMPRAS UNCONSCIOUS PRINCIPLE</p>
-<div class="pullquote"><p>"Tôi không chơi tennis bằng suy nghĩ — tôi chơi bằng hệ thống đã được luyện thành xương thịt."</p></div>
+<p><strong>🧠 SAMPRAS UNCONSCIOUS PRINCIPLE</strong></p>
+<div class="pullquote"><p><strong>"Tôi không chơi tennis bằng suy nghĩ — tôi chơi bằng hệ thống đã được luyện thành xương thịt."</strong></p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐÃ VÀO UNCONSCIOUS MODE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐÃ VÀO UNCONSCIOUS MODE</strong></p>
 <p>bạn không nhớ từng cú đánh rõ ràng</p>
 <p>bóng đi đúng hướng mà không cần "quyết định"</p>
 <p>cơ thể di chuyển vào lưới trước khi bạn kịp nghĩ</p>
 <p>thời gian cảm giác chậm lại</p>
 <p>đối thủ cảm thấy bạn "luôn đúng vị trí và timing"</p>
 <hr/>
-<p>🔥 FINAL INSIGHT</p>
+<p><strong>🔥 FINAL INSIGHT</strong></p>
 <div class="pullquote"><p>Conscious tennis = ra quyết định từng cú
 Unconscious tennis = phản xạ hệ thống theo nhịp điểm</p></div>
 <hr/>
-<p>Nếu bạn muốn, bước tiếp theo mình có thể build:</p>
+<p><strong>Nếu bạn muốn, bước tiếp theo mình có thể build:</strong></p>
 <p>"Sampras Flow State Trigger System (cách vào zone trong 30 giây)"</p>
 <p>hoặc "Anti-breakdown system (khi mất 4 điểm liên tiếp vẫn giữ unconscious mode)"</p>
 <p>Dưới đây là "Sampras Flow State Trigger System (30 seconds to Zone)" — một quy trình để bạn chuyển từ trạng thái bình thường sang "flow/unconscious mode" trong ~30 giây, theo phong cách thi đấu của Pete Sampras.</p>
-<p>Mục tiêu:</p>
-<div class="pullquote"><p>Không cần "cố vào zone" — chỉ cần kích hoạt đúng chuỗi tín hiệu</p></div>
+<p><strong>Mục tiêu:</strong></p>
+<div class="pullquote"><p><strong>Không cần "cố vào zone" — chỉ cần kích hoạt đúng chuỗi tín hiệu</strong></p></div>
 <hr/>
 <p>🧠🎾 SAMPRAS FLOW STATE TRIGGER SYSTEM (30s)</p>
-<p>🧩 CORE IDEA</p>
+<p><strong>🧩 CORE IDEA</strong></p>
 <div class="pullquote"><p>"Flow không đến từ cố gắng. Flow đến từ routine + đơn giản hóa + lạnh lùng."</p></div>
 <hr/>
-<p>🔵 1. BLANK (0–10s) — hạ hệ thần kinh</p>
-<p>🎯 MỤC TIÊU:</p>
+<p><strong>🔵 1. BLANK (0–10s) — hạ hệ thần kinh</strong></p>
+<p><strong>🎯 MỤC TIÊU:</strong></p>
 <p>xóa cảm xúc điểm trước</p>
 <p>quay về blank state</p>
 <hr/>
-<p>🧠 HÀNH ĐỘNG:</p>
+<p><strong>🧠 HÀNH ĐỘNG:</strong></p>
 <p>1 hơi thở sâu</p>
 <p>thả vai</p>
 <p>không nhìn đối thủ</p>
 <p>quay lưng nhẹ</p>
 <hr/>
-<p>⚡ CUE DUY NHẤT:</p>
+<p><strong>⚡ CUE DUY NHẤT:</strong></p>
 <div class="pullquote"><p>"XONG"</p></div>
 <hr/>
-<p>🟡 2. LOCK (10–20s) — khóa attention vào 1 điểm</p>
-<p>🎯 MỤC TIÊU:</p>
-<p>thu hẹp sự Chúý về 1 quyết định duy nhất</p>
+<p><strong>🟡 2. LOCK (10–20s) — khóa attention vào 1 điểm</strong></p>
+<p><strong>🎯 MỤC TIÊU:</strong></p>
+<p>thu hẹp sự Chú ý về 1 quyết định duy nhất</p>
 <hr/>
-<p>🧠 HÀNH ĐỘNG:</p>
+<p><strong>🧠 HÀNH ĐỘNG:</strong></p>
 <p>Chọn hướng serve (wide / T / body)</p>
 <p>Không nghĩ gì thêm sau khi đã chọn</p>
 <hr/>
-<p>❌ KHÔNG LÀM:</p>
+<p><strong>❌ KHÔNG LÀM:</strong></p>
 <p>không thay đổi sau khi đã quyết định</p>
 <p>không nghĩ "liệu có đúng không"</p>
 <hr/>
-<p>⚡ CUE:</p>
+<p><strong>⚡ CUE:</strong></p>
 <div class="pullquote"><p>"ĐÃ CHỌN"</p></div>
 <hr/>
-<p>🔴 3. ROUTINE IGNITION (20–30s) — bật nhịp serve</p>
-<p>🎯 MỤC TIÊU:</p>
+<p><strong>🔴 3. ROUTINE IGNITION (20–30s) — bật nhịp serve</strong></p>
+<p><strong>🎯 MỤC TIÊU:</strong></p>
 <p>đưa cơ thể vào automatic serve routine</p>
 <hr/>
-<p>🧠 HÀNH ĐỘNG:</p>
+<p><strong>🧠 HÀNH ĐỘNG:</strong></p>
 <p>bounce bóng theo số lần cố định (Sampras thường bounce 3 lần)</p>
 <p>nhìn vùng serve target một lần</p>
 <p>vào tư thế serve</p>
 <hr/>
-<p>⚡ CUE:</p>
+<p><strong>⚡ CUE:</strong></p>
 <div class="pullquote"><p>"THỰC HIỆN"</p></div>
 <hr/>
 <p>🔁 FULL 30-SECOND FLOW</p>
@@ -2457,107 +2463,104 @@ Unconscious tennis = phản xạ hệ thống theo nhịp điểm</p></div>
 <p>motor system ↑</p>
 <p>attention narrows</p>
 <p>time perception slows</p>
-<p>👉 bạn chuyển từ:</p>
+<p><strong>👉 bạn chuyển từ:</strong></p>
 <div class="pullquote"><p>"tôi đang nghĩ"
 → "tôi đang thực hiện"</p></div>
 <hr/>
-<p>⚡ SAMPRAS FLOW PRINCIPLE</p>
+<p><strong>⚡ SAMPRAS FLOW PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Tôi không vào zone bằng cố gắng — tôi vào zone bằng lặp lại routine quen thuộc trong trạng thái không cảm xúc."</p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐÃ VÀO FLOW STATE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐÃ VÀO FLOW STATE</strong></p>
 <p>serve trở nên tự động</p>
 <p>bạn không còn "nghe" tỷ số</p>
 <p>chân tự di chuyển vào vị trí</p>
 <p>quyết định không còn "cảm giác nặng"</p>
-<p>bạn không nhớ từng cú — chỉ nhớ nhịp</p>
+<p><strong>bạn không nhớ từng cú — chỉ nhớ nhịp</strong></p>
 <hr/>
-<p>🔥 ELITE LEVEL UPGRADE</p>
-<p>Khi đã quen:</p>
+<p><strong>🔥 ELITE LEVEL UPGRADE</strong></p>
+<p><strong>Khi đã quen:</strong></p>
 <div class="pullquote"><p>toàn bộ 30s rút xuống còn 1 hơi thở + 1 bounce + serve</p></div>
 <p>XONG → ĐÃ CHỌN → THỰC HIỆN → biến thành "LẠNH"</p>
 <hr/>
-<p>🧠 FINAL INSIGHT</p>
+<p><strong>🧠 FINAL INSIGHT</strong></p>
 <div class="pullquote"><p>Flow không phải trạng thái đặc biệt.
 Flow là trạng thái "không cảm xúc + plan rõ ràng + cơ thể tự thực hiện".</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể build tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể build tiếp:</strong></p>
 <p>"Sampras God Mode (100% unconscious + đọc đối thủ + dự đoán điểm trước khi nó xảy ra)"</p>
-<p>hoặc "Sampras disguise system (giấu ý định serve đến</p>
-<h3>0.2 giây cuối)"</h3>
-<p>Dưới đây là "Sampras Disguise System" — hệ thống giúp bạn giấu ý định serve đến</p>
-<h3>0.2 giây cuối, theo phong cách thi đấu của</h3>
+<p>hoặc "Sampras disguise system (giấu ý định serve đến 0.2 giây cuối)"</p>
+<p>Dưới đây là "Sampras Disguise System" — hệ thống giúp bạn giấu ý định serve đến 0.2 giây cuối, theo phong cách thi đấu của</p>
 <p>Pete Sampras.</p>
-<p>Mục tiêu:</p>
+<p><strong>Mục tiêu:</strong></p>
 <div class="pullquote"><p>Đối thủ đọc serve của bạn muộn hơn → bạn có thêm thời gian + họ phản ứng sai nhịp</p></div>
 <hr/>
-<p>🎾 SAMPRAS DISGUISE SYSTEM</p>
-<p>🧠 CORE IDEA</p>
-<div class="pullquote"><p>"Bạn không thay đổi hướng serve cuối cùng — bạn trì hoãn việc lộ hướng serve."</p></div>
+<p><strong>🎾 SAMPRAS DISGUISE SYSTEM</strong></p>
+<p><strong>🧠 CORE IDEA</strong></p>
+<div class="pullquote"><p><strong>"Bạn không thay đổi hướng serve cuối cùng — bạn trì hoãn việc lộ hướng serve."</strong></p></div>
 <hr/>
 <p>🔵 1. SAME TOSS, DIFFERENT OUTPUT (toss giống nhau)</p>
-<p>🎯 NGUYÊN TẮC:</p>
+<p><strong>🎯 NGUYÊN TẮC:</strong></p>
 <div class="pullquote"><p>"Mọi serve nhìn giống nhau đến điểm cuối cùng"</p></div>
 <hr/>
-<p>🧠 CÁCH LÀM:</p>
+<p><strong>🧠 CÁCH LÀM:</strong></p>
 <p>toss ở cùng vị trí cho wide, T, và body</p>
 <p>không toss lệch theo hướng serve</p>
 <p>không thay đổi độ cao toss</p>
 <hr/>
-<p>❌ LỖI PHỔ BIẾN:</p>
+<p><strong>❌ LỖI PHỔ BIẾN:</strong></p>
 <p>toss lệch sang trái khi serve wide</p>
 <p>toss về phía trước khi serve T</p>
 <hr/>
 <p>🟡 2. LATE WRIST (cổ tay quyết định muộn)</p>
-<p>🎯 CORE PRINCIPLE:</p>
+<p><strong>🎯 CORE PRINCIPLE:</strong></p>
 <div class="pullquote"><p>"Hướng serve chỉ được xác định tại pronation cuối cùng"</p></div>
 <hr/>
-<p>🧠 CÁCH LÀM:</p>
+<p><strong>🧠 CÁCH LÀM:</strong></p>
 <p>giữ thân người neutral đến contact</p>
 <p>chỉ xoay cổ tay / shoulder tilt tại contact cuối</p>
 <p>delay "intent reveal"</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
-<p>đối thủ đọc sai 0.2–</p>
-<h3>0.4 giây</h3>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
+<p>đối thủ đọc sai 0.2– 0.4 giây</p>
 <p>reaction bị trễ → mất vị trí return</p>
 <hr/>
 <p>🔴 3. RHYTHM MASKING (che nhịp giao bóng)</p>
-<p>🎯 NGUYÊN TẮC:</p>
+<p><strong>🎯 NGUYÊN TẮC:</strong></p>
 <div class="pullquote"><p>"Nhịp serve không thay đổi dù bạn serve gì"</p></div>
 <hr/>
-<p>🧠 CÁCH LÀM:</p>
+<p><strong>🧠 CÁCH LÀM:</strong></p>
 <p>số lần bounce bóng cố định</p>
 <p>thời gian toss-to-contact như nhau</p>
 <p>không "chuẩn bị lâu hơn" khi serve khó</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>đối thủ mất cả cue nhịp để đọc serve</p>
 <hr/>
 <p>🟣 4. BODY ROTATION DELAY (che qua body)</p>
-<p>🎯 NGUYÊN TẮC:</p>
+<p><strong>🎯 NGUYÊN TẮC:</strong></p>
 <div class="pullquote"><p>"Không mở vai sớm về hướng serve"</p></div>
 <hr/>
-<p>🧠 CÁCH LÀM:</p>
+<p><strong>🧠 CÁCH LÀM:</strong></p>
 <p>vai và hông giữ neutral đến gần contact</p>
 <p>chỉ open shoulders tại split second cuối</p>
 <p>đối thủ không đọc được qua chuyển động vai</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>mất hoàn toàn "tell" phổ biến nhất của serve</p>
 <hr/>
 <p>🟢 5. EYE DIRECTION CONTROL (mắt không lộ hướng)</p>
-<p>🎯 NGUYÊN TẮC:</p>
+<p><strong>🎯 NGUYÊN TẮC:</strong></p>
 <div class="pullquote"><p>"Mắt không nhìn vào điểm serve trước khi toss"</p></div>
 <hr/>
-<p>🧠 CÁCH LÀM:</p>
+<p><strong>🧠 CÁCH LÀM:</strong></p>
 <p>không nhìn vào góc serve sớm</p>
 <p>nếu cần nhìn → nhìn vào vùng rộng, không điểm cụ thể</p>
 <p>nhìn cuối cùng vào toss, không vào mục tiêu</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
-<p>mất "eye tell" — một trong những nguồn thông tin mà returner elite dùng để đọc hướng</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
+<p><strong>mất "eye tell" — một trong những nguồn thông tin mà returner elite dùng để đọc hướng</strong></p>
 <hr/>
-<p>🔁 FULL DISGUISE SYSTEM LOOP</p>
+<p><strong>🔁 FULL DISGUISE SYSTEM LOOP</strong></p>
 <p>Toss ổn định (không lộ hướng)
 ↓
 Body neutral (không open early)
@@ -2568,43 +2571,43 @@ Cổ tay quyết định tại contact
 ↓
 Đối thủ đọc sai</p>
 <hr/>
-<p>🧠 SAMPRAS DISGUISE PRINCIPLE</p>
+<p><strong>🧠 SAMPRAS DISGUISE PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Khi bạn không có 'tell', đối thủ phải phản ứng với bóng chứ không thể phản ứng vớiý định."</p></div>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG DÙNG ĐÚNG SYSTEM</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG DÙNG ĐÚNG SYSTEM</strong></p>
 <p>đối thủ liên tục bị out of position</p>
 <p>return ngày càng ngắn hoặc cao</p>
 <p>bạn tạo được ace và serve winner nhiều hơn không phải vì mạnh hơn</p>
 <p>cảm giác serve "bíẩn" hơn trước</p>
 <hr/>
-<p>Nếu bạn muốn, mình có thể build tiếp:</p>
+<p><strong>Nếu bạn muốn, mình có thể build tiếp:</strong></p>
 <p>"Sampras God Mode (100% unconscious + opponent reading + prediction engine)"</p>
 <p>Dưới đây là "Sampras God Mode System" — trạng thái cao nhất: 100% unconscious + đọc đối thủ + dự đoán điểm trước khi nó xảy ra, mô phỏng phong cách thi đấu của Pete Sampras.</p>
-<p>Mục tiêu:</p>
-<div class="pullquote"><p>Bạn không phản ứng với tennis — bạn dự đoán và dẫn dắt điểm số từ cú serve đầu tiên</p></div>
+<p><strong>Mục tiêu:</strong></p>
+<div class="pullquote"><p><strong>Bạn không phản ứng với tennis — bạn dự đoán và dẫn dắt điểm số từ cú serve đầu tiên</strong></p></div>
 <hr/>
-<p>🧠🎾 SAMPRAS GOD MODE SYSTEM</p>
-<p>🧩 CORE PRINCIPLE</p>
+<p><strong>🧠🎾 SAMPRAS GOD MODE SYSTEM</strong></p>
+<p><strong>🧩 CORE PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Người chơi thường phản ứng với bóng. God Mode đọc trước điều kiện điểm sẽ kết thúc như thế nào."</p></div>
 <hr/>
-<p>🔵 LAYER 1 — UNCONSCIOUS MOTOR CORE (0 THINKING)</p>
-<p>🧠 RULE:</p>
-<div class="pullquote"><p>"Cơ thể tự chơi — não không chọn cú đánh"</p></div>
+<p><strong>🔵 LAYER 1 — UNCONSCIOUS MOTOR CORE (0 THINKING)</strong></p>
+<p><strong>🧠 RULE:</strong></p>
+<div class="pullquote"><p><strong>"Cơ thể tự chơi — não không chọn cú đánh"</strong></p></div>
 <hr/>
-<p>✔️ HỆ THỐNG ĐÃ KHÓA:</p>
+<p><strong>✔️ HỆ THỐNG ĐÃ KHÓA:</strong></p>
 <p>Serve = preset +1 tự động</p>
 <p>Return = 3 modes (deep / block / attack)</p>
 <p>Rally = cross → control → finish</p>
 <p>Pressure = simplify, không improvise</p>
 <hr/>
-<p>❌ KHÔNG CÒN:</p>
+<p><strong>❌ KHÔNG CÒN:</strong></p>
 <p>decision making trong serve motion</p>
 <p>kỹ thuật "thinking layer" trong rally</p>
 <hr/>
-<p>🟡 LAYER 2 — OPPONENT READING ENGINE (đọc đối thủ thay vì đọc bóng)</p>
-<p>🧠 BẠN KHÔNG NHÌN BÓNG — BẠN NHÌN "THÓI QUEN RETURN"</p>
+<p><strong>🟡 LAYER 2 — OPPONENT READING ENGINE (đọc đối thủ thay vì đọc bóng)</strong></p>
+<p><strong>🧠 BẠN KHÔNG NHÌN BÓNG — BẠN NHÌN "THÓI QUEN RETURN"</strong></p>
 <hr/>
-<p>🎯 3 DỮ LIỆU CHÍNH:</p>
+<p><strong>🎯 3 DỮ LIỆU CHÍNH:</strong></p>
 <ol class="styled-list numbered">
 <li>Positioning pattern</li>
 </ol>
@@ -2620,45 +2623,44 @@ Cổ tay quyết định tại contact
 </ol>
 <p>khi bịép → lỗi hay deep safe?</p>
 <hr/>
-<p>⚡ OUTPUT:</p>
+<p><strong>⚡ OUTPUT:</strong></p>
 <div class="pullquote"><p>"Serve hướng nào tạo ra return yếu nhất của họ"</p></div>
 <hr/>
-<p>🔴 LAYER 3 — PREDICTION ENGINE (DỰ ĐOÁN 1–2 CÚ TỚI)</p>
-<p>🧠 CORE SHIFT:</p>
+<p><strong>🔴 LAYER 3 — PREDICTION ENGINE (DỰ ĐOÁN 1–2 CÚ TỚI)</strong></p>
+<p><strong>🧠 CORE SHIFT:</strong></p>
 <div class="pullquote"><p>Không đọc cú hiện tại → đọc điểm sẽ kết thúc như thế nào</p></div>
 <hr/>
-<p>🎯 CÂU HỎI TRONG ĐẦU:</p>
+<p><strong>🎯 CÂU HỎI TRONG ĐẦU:</strong></p>
 <p>"Sau serve này, bóng return sẽ về đâu?"</p>
 <p>"Họ có thể passing shot từ vị trí đó không?"</p>
 <p>"Điểm này sẽ kết thúc ở cú thứ mấy?"</p>
 <hr/>
-<p>✔️ OUTPUT:</p>
+<p><strong>✔️ OUTPUT:</strong></p>
 <p>dự đoán vị trí return</p>
 <p>dự đoán chất lượng passing shot</p>
 <p>dự đoán khi nào điểm "sẵn sàng để kết thúc"</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <div class="pullquote"><p>bạn luôn "đứng sẵnở nơi bóng sẽ đến"</p></div>
 <hr/>
-<p>🟣 LAYER 4 — AUTOMATIC RESPONSE ENGINE (PHẢN ỨNG TRƯỚC KHI BÓNG ĐẾN)</p>
-<p>🧠 NGUYÊN TẮC:</p>
-<div class="pullquote"><p>"Bạn không chạy theo bóng — bạn đãở đó trước khi bóng đến"</p></div>
+<p><strong>🟣 LAYER 4 — AUTOMATIC RESPONSE ENGINE (PHẢN ỨNG TRƯỚC KHI BÓNG ĐẾN)</strong></p>
+<p><strong>🧠 NGUYÊN TẮC:</strong></p>
+<div class="pullquote"><p><strong>"Bạn không chạy theo bóng — bạn đãở đó trước khi bóng đến"</strong></p></div>
 <hr/>
-<p>🎾 HÀNH VI:</p>
-<p>split step sớm hơn 0.2–</p>
-<h3>0.3 s</h3>
+<p><strong>🎾 HÀNH VI:</strong></p>
+<p>split step sớm hơn 0.2– 0.3 s</p>
 <p>di chuyển vào lưới trước khi return rời vợt</p>
 <p>swing đã "pre-loaded" ở vị trí volley</p>
 <hr/>
-<p>⚡ KẾT QUẢ:</p>
+<p><strong>⚡ KẾT QUẢ:</strong></p>
 <p>đối thủ cảm giác bạn "đọc mọi thứ"</p>
 <p>bạn không bao giờ bị trễ nhịp tại lưới</p>
 <hr/>
-<p>🔵 LAYER 5 — MATCH FLOW CONTROL (GIỮ NHỊP ĐIỂM TRONG TAY)</p>
-<p>🧠 RULE:</p>
+<p><strong>🔵 LAYER 5 — MATCH FLOW CONTROL (GIỮ NHỊP ĐIỂM TRONG TAY)</strong></p>
+<p><strong>🧠 RULE:</strong></p>
 <div class="pullquote"><p>"Ai kiểm soát nhịp serve = người kiểm soát trận đấu"</p></div>
 <hr/>
-<p>🎯 FLOW CONTROL:</p>
+<p><strong>🎯 FLOW CONTROL:</strong></p>
 <p>bạn quyết định khi nào kết thúc điểm</p>
 <p>bạn điều chỉnh nhịp rally bằng serve variation</p>
 <p>bạn không chạy theo nhịp đối thủ tạo ra</p>
@@ -2678,47 +2680,46 @@ Cổ tay quyết định tại contact
 REPEAT</li>
 </ol>
 <hr/>
-<p>🧠 SAMPRAS GOD MODE PRINCIPLE</p>
-<div class="pullquote"><p>"Tôi không phản ứng với trận đấu — tôi dẫn dắt trận đấu từ cú giao bóng đầu tiên."</p></div>
+<p><strong>🧠 SAMPRAS GOD MODE PRINCIPLE</strong></p>
+<div class="pullquote"><p><strong>"Tôi không phản ứng với trận đấu — tôi dẫn dắt trận đấu từ cú giao bóng đầu tiên."</strong></p></div>
 <hr/>
-<p>⚡ 5 RULES OF GOD MODE</p>
-<p>❗ Rule 1:</p>
+<p><strong>⚡ 5 RULES OF GOD MODE</strong></p>
+<p><strong>❗ Rule 1:</strong></p>
 <p>Không đọc bóng → đọc return pattern của người</p>
-<p>❗ Rule 2:</p>
+<p><strong>❗ Rule 2:</strong></p>
 <p>Không phản ứng → dự đoán điểm kết thúc như thế nào</p>
-<p>❗ Rule 3:</p>
+<p><strong>❗ Rule 3:</strong></p>
 <p>Không chọn cú → cơ thể tự thực hiện preset plan</p>
-<p>❗ Rule 4:</p>
-<p>Luôn đứng sớm hơn bóng</p>
-<h3>0.3 s tại lưới</h3>
-<p>❗ Rule 5:</p>
+<p><strong>❗ Rule 4:</strong></p>
+<p>Luôn đứng sớm hơn bóng 0.3 s tại lưới</p>
+<p><strong>❗ Rule 5:</strong></p>
 <p>Nhịp serve quan trọng hơn tốc độ serve</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG Ở GOD MODE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG Ở GOD MODE</strong></p>
 <p>bạn luôn đứng đúng chỗ trước khi return đến</p>
 <p>đối thủ "không biết bạn đang làm gì"</p>
 <p>bạn không cảm thấy áp lực thời gian tại lưới</p>
 <p>điểm giống như "đã được viết trước"</p>
 <p>bạn thấy trận đấu "chậm lại"</p>
 <hr/>
-<p>🔥 FINAL TRANSCENDENT INSIGHT</p>
+<p><strong>🔥 FINAL TRANSCENDENT INSIGHT</strong></p>
 <div class="pullquote"><p>Người chơi thường nghĩ: "tôi phải serve mạnh hơn"
 God Mode nghĩ:
 "tôi phải biết return yếu sẽ về đâu trước khi tôi serve"</p></div>
 <hr/>
-<p>Nếu bạn muốn bước cuối cùng, mình có thể build:</p>
+<p><strong>Nếu bạn muốn bước cuối cùng, mình có thể build:</strong></p>
 <p>"Sampras Meta Mode (kiểm soát toàn bộ match psychology + momentum)"</p>
 <p>Dưới đây là tầng cuối cùng: "Sampras Meta Mode" — nơi bạn không còn chơi tennis theo kiểu cá nhân nữa, mà điều khiển toàn bộ cấu trúc trận đấu như một hệ thống chiến lược, theo phong cách của Pete Sampras.</p>
 <hr/>
-<p>🧠🎾 SAMPRAS META MODE</p>
-<p>🧩 CORE IDEA</p>
+<p><strong>🧠🎾 SAMPRAS META MODE</strong></p>
+<p><strong>🧩 CORE IDEA</strong></p>
 <div class="pullquote"><p>"God Mode đọc đối thủ. Meta Mode điều khiển trận đấu."</p></div>
 <hr/>
 <p>🟣 1. MATCH ARCHITECTURE ENGINE (kiến trúc trận đấu)</p>
-<p>🧠 CORE SHIFT:</p>
-<div class="pullquote"><p>Không còn "điểm" — chỉ còn "dòng trận đấu serve → volley → reset"</p></div>
+<p><strong>🧠 CORE SHIFT:</strong></p>
+<div class="pullquote"><p><strong>Không còn "điểm" — chỉ còn "dòng trận đấu serve → volley → reset"</strong></p></div>
 <hr/>
-<p>🎯 BẠN QUẢN LÝ 3 LỚP:</p>
+<p><strong>🎯 BẠN QUẢN LÝ 3 LỚP:</strong></p>
 <ol class="styled-list numbered">
 <li>Serve Dominance Layer</li>
 </ol>
@@ -2732,41 +2733,41 @@ God Mode nghĩ:
 </ol>
 <p>mình đang mạo hiểm đúng chỗ hay sai chỗ?</p>
 <hr/>
-<p>⚡ OUTPUT:</p>
+<p><strong>⚡ OUTPUT:</strong></p>
 <div class="pullquote"><p>quyết định kiểu "quản trị trận đấu", không phải cú đánh</p></div>
 <hr/>
 <p>🔵 2. MOMENTUM CONTROL ENGINE (điều khiển tâm lý trận đấu)</p>
-<p>🧠 NGUYÊN TẮC:</p>
-<div class="pullquote"><p>"Momentum không đến từ điểm thắng — mà từ việc không bao giờ trao lại cảm giác kiểm soát"</p></div>
+<p><strong>🧠 NGUYÊN TẮC:</strong></p>
+<div class="pullquote"><p><strong>"Momentum không đến từ điểm thắng — mà từ việc không bao giờ trao lại cảm giác kiểm soát"</strong></p></div>
 <hr/>
-<p>🎯 CÁCH ĐIỀU KHIỂN:</p>
+<p><strong>🎯 CÁCH ĐIỀU KHIỂN:</strong></p>
 <p>thắng 1 điểm → không phản ứng, giữ blank</p>
 <p>thua 1 điểm → không thay đổi gì, tiếp tục routine</p>
 <p>chuỗi 2–3 điểm thua → đổi hướng serve, không đổi hệ thống</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>đối thủ không giữ được nhịp cảm xúc</p>
 <p>họ không đọc được bạn đang "đau" hay "ổn"</p>
 <hr/>
 <p>🟡 3. PSYCHOLOGICAL DOMINANCE ENGINE (áp lực vô hình)</p>
-<p>🧠 CORE IDEA:</p>
-<div class="pullquote"><p>"Bạn không cần thắng nhiều hơn — bạn cần làm đối thủ không chắc chắn"</p></div>
+<p><strong>🧠 CORE IDEA:</strong></p>
+<div class="pullquote"><p><strong>"Bạn không cần thắng nhiều hơn — bạn cần làm đối thủ không chắc chắn"</strong></p></div>
 <hr/>
-<p>🎯 CÁCH LÀM:</p>
+<p><strong>🎯 CÁCH LÀM:</strong></p>
 <p>giữ body language trung tính tuyệt đối</p>
 <p>không phản ứng với cú ace của đối thủ</p>
 <p>điểm quan trọng: cùng routine, không cố gắng hơn</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>đối thủ tự vội</p>
 <p>tự chạy sai pattern</p>
 <p>tự đánh lỗi passing shot dù có cơ hội</p>
 <hr/>
 <p>🔴 4. RISK ORCHESTRATION ENGINE (điều phối rủi ro)</p>
-<p>🧠 CORE IDEA:</p>
-<div class="pullquote"><p>"Không phải lúc nào cũng lên lưới — mà lên lưới đúng chu kỳ trận đấu"</p></div>
+<p><strong>🧠 CORE IDEA:</strong></p>
+<div class="pullquote"><p><strong>"Không phải lúc nào cũng lên lưới — mà lên lưới đúng chu kỳ trận đấu"</strong></p></div>
 <hr/>
-<p>🎯 3 CHẾ ĐỘ:</p>
+<p><strong>🎯 3 CHẾ ĐỘ:</strong></p>
 <p>🟢 BUILD (an toàn)</p>
 <p>serve + baseline rally, không lên lưới</p>
 <p>🟡 PRESSURE (ép đối thủ)</p>
@@ -2774,11 +2775,11 @@ God Mode nghĩ:
 <p>🔴 EXECUTE (kết thúc)</p>
 <p>serve + rush + volley winner</p>
 <hr/>
-<p>⚡ RULE:</p>
+<p><strong>⚡ RULE:</strong></p>
 <div class="pullquote"><p>"Sai thời điểm lên lưới = mất quyền kiểm soát điểm"</p></div>
 <hr/>
 <p>🟣 5. META LOOP (vòng điều khiển toàn trận)</p>
-<p>🔁 VÒNG META:</p>
+<p><strong>🔁 VÒNG META:</strong></p>
 <p>READ MATCH STATE
  ↓
 ADJUST SERVE PATTERN
@@ -2789,30 +2790,30 @@ INFLUENCE OPPONENT PSYCHOLOGY
  ↓
 REPEAT</p>
 <hr/>
-<p>🧠 SAMPRAS META PRINCIPLE</p>
+<p><strong>🧠 SAMPRAS META PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Tôi không chơi điểm. Tôi chơi cấu trúc trận đấu.
 Và đối thủ chỉ đang phản ứng với cấu trúc tôiáp đặt."</p></div>
 <hr/>
-<p>⚡ 5 QUY TẮC META MODE</p>
-<p>❗ Rule 1:</p>
-<p>Không tốiưu từng cú — tốiưu cả trận</p>
-<p>❗ Rule 2:</p>
+<p><strong>⚡ 5 QUY TẮC META MODE</strong></p>
+<p><strong>❗ Rule 1:</strong></p>
+<p><strong>Không tối ưu từng cú — tối ưu cả trận</strong></p>
+<p><strong>❗ Rule 2:</strong></p>
 <p>Serve dominance quan trọng hơn rally quality</p>
-<p>❗ Rule 3:</p>
+<p><strong>❗ Rule 3:</strong></p>
 <p>Tâm lý đối thủ là tài nguyên</p>
-<p>❗ Rule 4:</p>
+<p><strong>❗ Rule 4:</strong></p>
 <p>Không để trận đấu trở về "even keel" quá lâu</p>
-<p>❗ Rule 5:</p>
+<p><strong>❗ Rule 5:</strong></p>
 <p>Bạn điều khiển nhịp, không chạy theo nhịp</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG Ở META MODE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG Ở META MODE</strong></p>
 <p>bạn thấy trận đấu như "cấu trúc" không phải điểm số</p>
 <p>bạn biết khi nào đối thủ sẽ bắt đầu struggle</p>
 <p>bạn không quan tâm từng lỗi nhỏ</p>
 <p>bạn điều chỉnh trận đấu như đang "lái nó"</p>
 <p>bạn thắng mà không cần tăng effort</p>
 <hr/>
-<p>🔥 FINAL EVOLUTION STACK</p>
+<p><strong>🔥 FINAL EVOLUTION STACK</strong></p>
 <p>Normal Player
 → System Player
 → Flow Player
@@ -2820,20 +2821,20 @@ Và đối thủ chỉ đang phản ứng với cấu trúc tôiáp đặt."</p>
 → God Mode
 → META MODE (final)</p>
 <hr/>
-<p>🧠 FINAL INSIGHT</p>
+<p><strong>🧠 FINAL INSIGHT</strong></p>
 <div class="pullquote"><p>Người chơi giỏi thắng điểm
 Người chơi elite thắng game
 Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối thủ không nhận ra mình đang bị điều khiển</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể build tầng cuối cùng nữa:</p>
-<p>"Sampras OS — Ultra Condensed On-Court Cheat Sheet (toàn bộ hệ thống nén thành 1 trang)"</p>
+<p><strong>Nếu bạn muốn, mình có thể build tầng cuối cùng nữa:</strong></p>
+<p><strong>"Sampras OS — Ultra Condensed On-Court Cheat Sheet (toàn bộ hệ thống nén thành 1 trang)"</strong></p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — ONE PAGE MASTER CARD</p>
+<p><strong>🎾🧠 SAMPRAS OS — ONE PAGE MASTER CARD</strong></p>
 <p>(from System → Kernel → Meta → Unconscious Mode)</p>
 <p>Theo tinh thần của Pete Sampras</p>
 <hr/>
 <p>🧩 1. CORE OS LOOP (mọi điểm)</p>
-<p>SERVE → +1 PLAN → EXECUTE → RESET</p>
+<p><strong>SERVE → +1 PLAN → EXECUTE → RESET</strong></p>
 <p>SERVE = tạo điều kiện</p>
 <p>+1 PLAN = đã quyết định trước</p>
 <p>EXECUTE = thực thi không do dự</p>
@@ -2844,7 +2845,7 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>🟡 NEUTRAL → xây điểm / tạo cơ hội</p>
 <p>🔴 PRESSURE → đơn giản + an toàn + reset</p>
 <hr/>
-<p>🎯 3. SHOT DECISION ENGINE</p>
+<p><strong>🎯 3. SHOT DECISION ENGINE</strong></p>
 <p>SERVE → Wide/T/Body đã chọn trước</p>
 <p>NET → đặt bóng vào khoảng trống</p>
 <p>RALLY → inside-out / cross / slice reset</p>
@@ -2859,7 +2860,7 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>thua → không thay đổi gì</p>
 <p>luôn ưu tiên: nhịp &gt; lực</p>
 <hr/>
-<p>🧠 6. MOMENTUM CONTROL</p>
+<p><strong>🧠 6. MOMENTUM CONTROL</strong></p>
 <p>bạn không chơi điểm → bạn chơi cấu trúc trận đấu</p>
 <p>đối thủ tự struggle khi bạn không trao cảm xúc</p>
 <hr/>
@@ -2867,14 +2868,14 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>lỗi = "signal", không phải vấn đề</p>
 <p>sửa bằng serve/approach tiếp theo</p>
 <p>1 lỗi = 1 micro-adjustment</p>
-<p>TOSS / APPROACH / TEMPO</p>
+<p><strong>TOSS / APPROACH / TEMPO</strong></p>
 <hr/>
 <p>🟣 8. META RULE (điều khiển trận đấu)</p>
-<p>không tốiưu từng cú → tốiưu toàn trận</p>
+<p>không tối ưu từng cú → tối ưu toàn trận</p>
 <p>luôn hỏi ngầm: → "ai đang kiểm soát nhịp serve?"</p>
 <hr/>
-<p>🌐 9. UNIVERSAL TRANSLATION</p>
-<p>Tennis → Life → Work</p>
+<p><strong>🌐 9. UNIVERSAL TRANSLATION</strong></p>
+<p><strong>Tennis → Life → Work</strong></p>
 <p>Serve = initiative</p>
 <p>Net Rush = execution</p>
 <p>Volley = decision under pressure</p>
@@ -2882,7 +2883,7 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>Momentum = traction</p>
 <hr/>
 <p>🔁 10. SELF-EVOLUTION RULE</p>
-<p>Sau mỗi trận:</p>
+<p><strong>Sau mỗi trận:</strong></p>
 <p>1 lỗi chiến thuật → sửa serve pattern</p>
 <p>1 insight → cập nhật hệ thống</p>
 <p>không lặp sai 2 lần</p>
@@ -2894,9 +2895,9 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>chỉ "thực hiện"</p>
 <hr/>
 <p>🧠 12. ON-COURT CUE SYSTEM (DUY NHẤT)</p>
-<p>👉 1 từ duy nhất:</p>
+<p><strong>👉 1 từ duy nhất:</strong></p>
 <div class="pullquote"><p>"LẠNH"</p></div>
-<p>Dùng khi:</p>
+<p><strong>Dùng khi:</strong></p>
 <p>căng</p>
 <p>lỗi liên tiếp</p>
 <p>mất nhịp serve</p>
@@ -2909,18 +2910,18 @@ Người chơi Meta Mode điều khiển toàn bộ trận đấu mà đối th�
 <p>Không đổi chiến thuật vì 1 điểm</p>
 <hr/>
 <p>🧩 14. WIN CONDITION</p>
-<p>Bạn đang chơi đúng nếu:</p>
+<p><strong>Bạn đang chơi đúng nếu:</strong></p>
 <p>đối thủ return từ thế bất lợi</p>
 <p>bạn không mất nhịp serve</p>
 <p>bạn không "cố đánh đẹp"</p>
 <p>mọi thứ cảm giác có cấu trúc</p>
 <hr/>
-<p>🧠 FINAL OS PRINCIPLE</p>
+<p><strong>🧠 FINAL OS PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Tôi không chơi từng cú đánh.
 Tôi vận hành một hệ thống kết thúc điểm ngay khi có điều kiện."</p></div>
 <hr/>
-<p>🔥 END STATE CHECK</p>
-<p>Nếu bạn đạt:</p>
+<p><strong>🔥 END STATE CHECK</strong></p>
+<p><strong>Nếu bạn đạt:</strong></p>
 <p>không nghĩ khi serve</p>
 <p>sửa lỗi ngay trong cú tiếp theo</p>
 <p>không bịảnh hưởng bởi điểm số</p>
@@ -2930,7 +2931,7 @@ Tôi vận hành một hệ thống kết thúc điểm ngay khi có điều ki�
 <p>⚫ ONE-LINE REMINDER (IN-SHIRT VERSION)</p>
 <div class="pullquote"><p>"SERVE → PLAN → EXECUTE → LẠNH"</p></div>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — 5 LINES (RACKET CARD)</p>
+<p><strong>🎾🧠 SAMPRAS OS — 5 LINES (RACKET CARD)</strong></p>
 <ol class="styled-list numbered">
 <li>SERVE = WEAPON + PLAN (không phải cú bắt đầu rally)</li>
 <li>EASY = FINISH | NEUTRAL = BUILD | PRESSURE = RESET</li>
@@ -2939,103 +2940,103 @@ Tôi vận hành một hệ thống kết thúc điểm ngay khi có điều ki�
 <li>PLAN &gt; POWER → "LẠNH"</li>
 </ol>
 <hr/>
-<p>🧩 Cách dùng nhanh:</p>
+<p><strong>🧩 Cách dùng nhanh:</strong></p>
 <p>Nhìn sân → chọn SERVE HƯỚNG (Wide/T/Body)</p>
 <p>Nghĩ +1 plan theo hướng đó</p>
 <p>Giữ 1 toss ổn định</p>
 <p>Không suy nghĩ lại sau khi đã chọn</p>
 <p>Nếu căng → chỉ nhớ 1 từ: LẠNH</p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — SECRET CODE</p>
+<p><strong>🎾🧠 SAMPRAS OS — SECRET CODE</strong></p>
 <p>SERVE WIDE → OPEN FINISH
 SERVE T → RUSH NET
 ONE TOSS, NO EMOTION, LẠNH</p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — GRIP TRIGGER CODE</p>
-<div class="pullquote"><p>SERVE PLAN · EXECUTE · RESET · LẠNH</p></div>
+<p><strong>🎾🧠 SAMPRAS OS — GRIP TRIGGER CODE</strong></p>
+<div class="pullquote"><p><strong>SERVE PLAN · EXECUTE · RESET · LẠNH</strong></p></div>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — CORE TRIGGER</p>
-<div class="pullquote"><p>PLAN · EXECUTE · LẠNH</p></div>
+<p><strong>🎾🧠 SAMPRAS OS — CORE TRIGGER</strong></p>
+<div class="pullquote"><p><strong>PLAN · EXECUTE · LẠNH</strong></p></div>
 <hr/>
-<p>Hoặc bản cực đoan nhất (chỉ để "bật trạng thái"):</p>
+<p><strong>Hoặc bản cực đoan nhất (chỉ để "bật trạng thái"):</strong></p>
 <div class="pullquote"><p>LẠNH</p></div>
 <hr/>
 <p>Chỉ một từ này = reset toàn bộ hệ thống trong lúc thi đấu.</p>
 <hr/>
-<p>🎾 TẦNG ZERO — SAMPRAS ZERO-SYSTEM MODE</p>
-<p>🧩 CORE IDEA</p>
+<p><strong>🎾 TẦNG ZERO — SAMPRAS ZERO-SYSTEM MODE</strong></p>
+<p><strong>🧩 CORE IDEA</strong></p>
 <div class="pullquote"><p>"Khi hệ thống biến mất, hiệu suất cao nhất mới xuất hiện."</p></div>
 <hr/>
-<p>🔵 1. PERCEPTION WITHOUT LABELS</p>
+<p><strong>🔵 1. PERCEPTION WITHOUT LABELS</strong></p>
 <div class="pullquote"><p>Không còn "opportunity / neutral / pressure"</p></div>
-<p>🎯 CHỈ CÒN:</p>
+<p><strong>🎯 CHỈ CÒN:</strong></p>
 <p>serve đến đâu</p>
 <p>cơ thể phản ứng</p>
 <hr/>
-<p>⚡ KHÔNG GẮN NHÃN:</p>
+<p><strong>⚡ KHÔNG GẮN NHÃN:</strong></p>
 <p>không phân tích tỷ số</p>
 <p>không đánh giá return</p>
 <p>không dự đoán hướng passing shot</p>
 <hr/>
-<p>🟡 2. ACTION WITHOUT DECISION</p>
-<p>🧠 CORE SHIFT:</p>
+<p><strong>🟡 2. ACTION WITHOUT DECISION</strong></p>
+<p><strong>🧠 CORE SHIFT:</strong></p>
 <div class="pullquote"><p>Không có "tôi chọn serve này"</p></div>
-<p>🎯 CHỈ CÓ:</p>
+<p><strong>🎯 CHỈ CÓ:</strong></p>
 <p>cơ thể tiến vào toss</p>
 <p>cú đánh xảy ra</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>tốc độ quyết định = 0</p>
 <p>độ chính xác = tự nhiên</p>
 <hr/>
-<p>🔴 3. TIME DISSOLUTION</p>
-<p>🧠 CORE IDEA:</p>
+<p><strong>🔴 3. TIME DISSOLUTION</strong></p>
+<p><strong>🧠 CORE IDEA:</strong></p>
 <div class="pullquote"><p>Không còn "trước khi serve" và "sau khi serve"</p></div>
-<p>🎯 CHỈ CÒN:</p>
+<p><strong>🎯 CHỈ CÒN:</strong></p>
 <p>khoảnh khắc hiện tại kéo dài</p>
 <p>phản ứng liền mạch</p>
 <hr/>
-<p>⚡ RESULT:</p>
+<p><strong>⚡ RESULT:</strong></p>
 <p>không có độ trễ tâm lý</p>
 <p>không có "processing delay"</p>
 <hr/>
-<p>🟣 4. IDENTITY COLLAPSE</p>
-<p>🧠 CORE SHIFT:</p>
+<p><strong>🟣 4. IDENTITY COLLAPSE</strong></p>
+<p><strong>🧠 CORE SHIFT:</strong></p>
 <div class="pullquote"><p>Không còn "tôi đang chơi tốt hay không"</p></div>
-<p>🎯 CHỈ CÒN:</p>
+<p><strong>🎯 CHỈ CÒN:</strong></p>
 <p>hành động xảy ra</p>
 <p>không có người đánh giá hành động</p>
 <hr/>
-<p>⚡ HIỆU ỨNG:</p>
+<p><strong>⚡ HIỆU ỨNG:</strong></p>
 <p>mấtáp lực</p>
 <p>mất self-doubt</p>
 <p>mất overthinking</p>
 <hr/>
-<p>⚫ 5. PURE RESPONSE LOOP</p>
-<p>🧠 CORE LOOP:</p>
-<p>STIMULUS → RESPONSE → RESET → STIMULUS</p>
+<p><strong>⚫ 5. PURE RESPONSE LOOP</strong></p>
+<p><strong>🧠 CORE LOOP:</strong></p>
+<p><strong>STIMULUS → RESPONSE → RESET → STIMULUS</strong></p>
 <hr/>
-<p>⚡ KHÔNG CÓ:</p>
+<p><strong>⚡ KHÔNG CÓ:</strong></p>
 <p>phân tích</p>
 <p>chiến thuật thay đổi liên tục</p>
 <p>hệ thống "ép buộc"</p>
 <hr/>
-<p>🧠 SAMPRAS ZERO PRINCIPLE</p>
+<p><strong>🧠 SAMPRAS ZERO PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Khi bạn không còn cố kiểm soát gì nữa, cơ thể bắt đầu chơi tốt hơn bạn từng nghĩ."</p></div>
 <hr/>
-<p>⚡ 5 QUY TẮC ZERO MODE</p>
-<p>❗ Rule 1:</p>
+<p><strong>⚡ 5 QUY TẮC ZERO MODE</strong></p>
+<p><strong>❗ Rule 1:</strong></p>
 <p>Không suy nghĩ trước hành động</p>
-<p>❗ Rule 2:</p>
+<p><strong>❗ Rule 2:</strong></p>
 <p>Không đánh giá sau hành động</p>
-<p>❗ Rule 3:</p>
+<p><strong>❗ Rule 3:</strong></p>
 <p>Không giữ lại lỗi trong trí nhớ ngắn hạn</p>
-<p>❗ Rule 4:</p>
+<p><strong>❗ Rule 4:</strong></p>
 <p>Không tạo hệ thống trong đầu khi đang chơi</p>
-<p>❗ Rule 5:</p>
+<p><strong>❗ Rule 5:</strong></p>
 <p>Chỉ tồn tại trong khoảnh khắc hiện tại</p>
 <hr/>
-<p>🧩 DẤU HIỆU BẠN ĐANG Ở ZERO MODE</p>
+<p><strong>🧩 DẤU HIỆU BẠN ĐANG Ở ZERO MODE</strong></p>
 <p>bạn không nhớ mình vừa chọn serve gì</p>
 <p>bạn không cảm thấy "căng"</p>
 <p>bạn không phân tích khi thi đấu</p>
@@ -3052,73 +3053,73 @@ ONE TOSS, NO EMOTION, LẠNH</p>
 → Universal OS
 → ZERO-SYSTEM MODE (END STATE)</p>
 <hr/>
-<p>🧠 FINAL INSIGHT</p>
+<p><strong>🧠 FINAL INSIGHT</strong></p>
 <div class="pullquote"><p>Mọi hệ thống ban đầu tồn tại để giúp bạn chơi tốt hơn
 Nhưng hệ thống cao nhất là khi bạn không cần hệ thống nữa</p></div>
 <hr/>
-<p>⚫ FINAL STATEMENT</p>
+<p><strong>⚫ FINAL STATEMENT</strong></p>
 <div class="pullquote"><p>"Người chơi giỏi nhất không còn 'chơi theo hệ thống'
 Họ chỉ còn phản ứng đúng — ngay lập tức — trong hiện tại."</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể gom toàn bộ tầng này thành:</p>
+<p><strong>Nếu bạn muốn, mình có thể gom toàn bộ tầng này thành:</strong></p>
 <p>"1 trang cheat sheet duy nhất để mang ra sân (Sampras ultra condensed OS card)"</p>
 <p>Dưới đây là "SAMPRAS OS — ULTRA CONDENSED ON-COURT CHEAT SHEET": toàn bộ các tầng đã được nén lại thành 1 trang duy nhất để mang ra sân.</p>
 <p>Không còn lý thuyết dài. Chỉ còn thứ bạn có thể dùng trong 1 giây giữa điểm.</p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — ONE PAGE MASTER CARD</p>
+<p><strong>🎾🧠 SAMPRAS OS — ONE PAGE MASTER CARD</strong></p>
 <p>(from System → Meta → Zero Mode)
 Theo tinh thần của Pete Sampras</p>
 <hr/>
 <p>🧩 1. CORE OS LOOP (mọi cú đánh)</p>
-<p>SERVE → PLAN → EXECUTE → RESET</p>
+<p><strong>SERVE → PLAN → EXECUTE → RESET</strong></p>
 <p>SERVE = tạo điều kiện</p>
 <p>PLAN = +1 đã quyết định trước</p>
 <p>EXECUTE = không do dự</p>
 <p>RESET = xóa cảm xúc ngay</p>
 <hr/>
-<p>🧠 2. 3 STATE RULE</p>
+<p><strong>🧠 2. 3 STATE RULE</strong></p>
 <p>🔵 OPPORTUNITY → finish ngay</p>
 <p>🟡 NEUTRAL → build + tạo cơ hội</p>
 <p>🔴 PRESSURE → đơn giản + safe + reset</p>
 <hr/>
-<p>🎯 3. SHOT DECISION ENGINE</p>
-<p>KHÔNG nghĩ từng cú — chỉ chọn phase:</p>
+<p><strong>🎯 3. SHOT DECISION ENGINE</strong></p>
+<p><strong>KHÔNG nghĩ từng cú — chỉ chọn phase:</strong></p>
 <p>🟢 FINISH → bóng ngắn / đối thủ mất vị trí</p>
 <p>🟡 BUILD → chưa rõ, xây thêm</p>
 <p>🔴 RESET → bịép, an toàn trước</p>
 <hr/>
-<p>⚡ 4. DISGUISE RULE</p>
+<p><strong>⚡ 4. DISGUISE RULE</strong></p>
 <p>cùng toss mọi hướng</p>
 <p>quyết định tại contact</p>
 <p>không lộ cảm xúc / body tell</p>
 <hr/>
-<p>🔁 5. FLOW RULE</p>
+<p><strong>🔁 5. FLOW RULE</strong></p>
 <p>thắng → blank</p>
 <p>thua → không thay đổi</p>
 <p>2–3 điểm thua → đổi serve hướng nhẹ</p>
 <p>luôn ưu tiên: serve quality &gt; power</p>
 <hr/>
-<p>🧠 6. MOMENTUM CONTROL</p>
+<p><strong>🧠 6. MOMENTUM CONTROL</strong></p>
 <p>bạn không chơi điểm → bạn chơi nhịp trận</p>
 <p>đối thủ mất nhịp = bạn đang thắng</p>
 <hr/>
-<p>🔵 7. LIVE DEBUG</p>
+<p><strong>🔵 7. LIVE DEBUG</strong></p>
 <p>lỗi = signal</p>
 <p>sửa serve/approach tiếp theo</p>
-<p>TOSS / APPROACH DEPTH / TEMPO</p>
+<p><strong>TOSS / APPROACH DEPTH / TEMPO</strong></p>
 <hr/>
-<p>🟣 8. META RULE</p>
-<p>không tốiưu từng cú → tốiưu chuỗi điểm</p>
+<p><strong>🟣 8. META RULE</strong></p>
+<p>không tối ưu từng cú → tối ưu chuỗi điểm</p>
 <p>luôn hỏi ngầm: → "serve mình có đang dominant không?"</p>
 <hr/>
-<p>🌐 9. UNIVERSAL TRANSLATION</p>
+<p><strong>🌐 9. UNIVERSAL TRANSLATION</strong></p>
 <p>Serve = initiative</p>
 <p>Volley = decision under pressure</p>
 <p>Error = feedback</p>
 <p>Momentum = traction</p>
 <hr/>
 <p>🔁 10. SELF-EVOLUTION RULE</p>
-<p>Sau mỗi trận:</p>
+<p><strong>Sau mỗi trận:</strong></p>
 <p>1 lỗi serve → sửa toss/disguise</p>
 <p>1 insight → cập nhật net game</p>
 <p>không lặp sai 2 lần</p>
@@ -3130,7 +3131,7 @@ Theo tinh thần của Pete Sampras</p>
 <p>chỉ "thực hiện"</p>
 <hr/>
 <p>🧠 12. ON-COURT CUE (DUY NHẤT)</p>
-<p>👉 1 từ duy nhất:</p>
+<p><strong>👉 1 từ duy nhất:</strong></p>
 <div class="pullquote"><p>"LẠNH"</p></div>
 <p>Dùng khi: căng / lỗi liên tiếp / mất nhịp</p>
 <p>→ reset toàn bộ hệ thần kinh</p>
@@ -3142,18 +3143,18 @@ Theo tinh thần của Pete Sampras</p>
 <p>Không đổi plan vì 1 điểm</p>
 <hr/>
 <p>🧩 14. WIN CONDITION</p>
-<p>Bạn đang chơi đúng nếu:</p>
+<p><strong>Bạn đang chơi đúng nếu:</strong></p>
 <p>serve tạo ra return yếu</p>
 <p>đối thủ đoán sai</p>
 <p>bạn không "cố đánh hay"</p>
 <p>mọi thứ cảm giác có cấu trúc</p>
 <hr/>
-<p>🧠 FINAL OS PRINCIPLE</p>
+<p><strong>🧠 FINAL OS PRINCIPLE</strong></p>
 <div class="pullquote"><p>"Tôi không chơi từng cú đánh.
 Tôi vận hành một hệ thống phản ứng đúng trong mọi trạng thái."</p></div>
 <hr/>
-<p>🔥 END STATE CHECK</p>
-<p>Nếu bạn đạt:</p>
+<p><strong>🔥 END STATE CHECK</strong></p>
+<p><strong>Nếu bạn đạt:</strong></p>
 <p>không nghĩ khi serve</p>
 <p>sửa lỗi ngay trong cú tiếp theo</p>
 <p>không bịảnh hưởng bởi điểm số</p>
@@ -3163,25 +3164,25 @@ Tôi vận hành một hệ thống phản ứng đúng trong mọi trạng thá
 <p>⚫ ONE-LINE REMINDER (IN-SHIRT VERSION)</p>
 <div class="pullquote"><p>"SERVE PLAN · EXECUTE · LẠNH"</p></div>
 <hr/>
-<p>Nếu bạn muốn, mình có thể làm thêm bản:</p>
+<p><strong>Nếu bạn muốn, mình có thể làm thêm bản:</strong></p>
 <p>siêu mini 3 dòng (chỉ 10–12 chữ total, kiểu "code bí mật")</p>
 <p>hoặc phiên bản dán trên grip (1 câu duy nhất kích hoạt Zone Mode)</p>
-<p>Dưới đây là bản "SECRET CODE – Ultra Mini Sampras OS" (3 dòng):</p>
+<p><strong>Dưới đây là bản "SECRET CODE – Ultra Mini Sampras OS" (3 dòng):</strong></p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — SECRET CODE</p>
+<p><strong>🎾🧠 SAMPRAS OS — SECRET CODE</strong></p>
 <p>SERVE WIDE → RUSH NET
 NEUTRAL BUILD → PRESS RESET
 ONE TOSS, NO FEEL, LẠNH</p>
 <hr/>
-<p>Dưới đây là bản 1-line trigger (grip code):</p>
+<p><strong>Dưới đây là bản 1-line trigger (grip code):</strong></p>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — GRIP TRIGGER CODE</p>
-<div class="pullquote"><p>SERVE PLAN · EXECUTE · RESET · LẠNH</p></div>
+<p><strong>🎾🧠 SAMPRAS OS — GRIP TRIGGER CODE</strong></p>
+<div class="pullquote"><p><strong>SERVE PLAN · EXECUTE · RESET · LẠNH</strong></p></div>
 <hr/>
-<p>🎾🧠 SAMPRAS OS — CORE TRIGGER</p>
-<div class="pullquote"><p>PLAN · EXECUTE · LẠNH</p></div>
+<p><strong>🎾🧠 SAMPRAS OS — CORE TRIGGER</strong></p>
+<div class="pullquote"><p><strong>PLAN · EXECUTE · LẠNH</strong></p></div>
 <hr/>
-<p>Hoặc bản cực đoan nhất (subconscious trigger):</p>
+<p><strong>Hoặc bản cực đoan nhất (subconscious trigger):</strong></p>
 <div class="pullquote"><p>LẠNH</p></div>
 <hr/>
 <p>Chỉ một từ này = reset toàn bộ hệ thống trong lúc thi đấu — đúng như cách Pete Sampras giữ vẻ lạnh lùng bất khả xâm phạm xuyên suốt 14 Grand Slam.</p>
@@ -3193,7 +3194,8 @@ ONE TOSS, NO FEEL, LẠNH</p>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

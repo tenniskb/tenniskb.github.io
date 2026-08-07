@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -941,7 +953,7 @@ Chapter 5: The Return of Serve</h2>
 <p>Aggressive positioning — standing on or inside the baseline — is the Djokovic and Alcaraz model. At this depth, the returner cuts off the server's wide angles, reduces the geometric space available for placement, and forces the server to beat them with pure velocity rather than movement. The trade-off is reaction time: every metre forward costs the returner approximately 15 milliseconds of available response window. Against a 220 km/h first serve, this is not trivial. The aggressive position is sustainable only when the returner's anticipation is developed to the point where they are reading the serve before the ball crosses the net rather than reacting to it after the bounce.</p>
 <p>Deep positioning — standing ten to fifteen feet behind the baseline — is the Medvedev and peak Nadal model on fast surfaces. The additional depth converts reaction time into swing room, allowing a fuller unit turn and a more complete kinetic chain delivery even against the heaviest serves. The cost is court position: from this depth, a neutralising return is achievable but a truly offensive return requires exceptional timing and acceleration. This trade-off is most justified against elite first serves and when the returner's primary objective is to build a rally rather than win the point in two or three shots.</p>
 <p>The 2026 ghosting pivot represents a third option that has emerged at the highest level: the returner shifts their starting position after the toss goes up, moving forward as the server's preparation suggests a kick serve to the backhand, or stepping wide as a slice to the body becomes apparent. This dynamic start, driven by pre-contact reading, merges the tactical advantages of both positions — the aggressive returner's early ball when the read is correct, the deep returner's reaction time when it is not.</p>
-<p>The decision matrix for position selection:</p>
+<p><strong>The decision matrix for position selection:</strong></p>
 <table class="data-table">
 <thead>
 <tr>
@@ -1076,11 +1088,10 @@ Chapter 5: The Return of Serve</h2>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="The_Art_of_Modern_Tennis_Chapter_06.html" class="nav-btn next">Next →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

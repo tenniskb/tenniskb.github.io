@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,7 +931,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Tennis ATP Forehand Techniques — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#executive-summary" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Executive Summary</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#1-core-principle-of-the-atp-forehand" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">1. core Principle of the ATP forehand</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-tennis-knowledgeglossarykinetic-chain-breakdown" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2. Tennis Knowledge/Glossary/kinetic chain Breakdown</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#3-timing-sequencing--common-errors" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">3. timing, sequencing &amp; Common errors</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#4-contact-point-and-body-position" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">4. contact Point and Body Position</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#5-forehand-variations-among-top-players" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">5. forehand Variations Among Top Players</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#6-drills--progressive-training-plan" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">6. drills &amp; Progressive Training Plan</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#7-common-faults--corrections" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">7. Common Faults &amp; Corrections</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#8-key-biomechanics--sports-science-findings" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">8. Key biomechanics &amp; Sports-Science Findings</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#9-practice-session--weekly-plan-intermediateadvanced" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">9. practice Session &amp; Weekly Plan (Intermediate/Advanced)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#10-video-examples-youtube--match-clips" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">10. Video Examples (YouTube / Match Clips)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#references" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">References</a></li></ul></div>
 <h1 id="executive-summary">Executive Summary</h1>
 <p>ATP-level forehands generate power by a coordinated Tennis Knowledge/Glossary/kinetic chain starting from the ground up. Research and coaching consensus emphasize <strong>full-body rotation</strong> – Leg Drive, hip‐shoulder separation, and torso twist – as the primary source of racket speed. Ground-reaction force (forward push into the court) is a key driver of ball speed. The most effective swings load energy in the trunk (the “X-Factor” stretch) and then sequentially uncoil legs→hips→shoulders→arm→wrist, maximizing racket lag and whip. ATP players consistently make contact well out in front (≈20–40 cm ahead of shoulder) with stable head position, enabling both power and control. Top pros differ in grip and stance: e.g. Nadal and Alcaraz use semi-Western grips and steep low-to-high loops (heavy topspin, high finish), whereas Federer/Djokovic use more eastern grips and flatter swings. drills that emphasize Leg Drive, explosive trunk rotation (medicine-ball throws), and delayed racket release are effective for building these Mechanics. Common faults include “swinging with the arms only” or Coiling shoulders/hips together (losing the X‐factor). A Structured practice plan (drills → targeted hitting → progressive rallying) reinforces the kinetic sequence. The guide below details these elements, with Biomechanicalevidence and video examples to illustrate each principle. </p>
@@ -1160,7 +1172,8 @@ At impact, Advanced players keep the center of mass stable (minimal head movemen
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

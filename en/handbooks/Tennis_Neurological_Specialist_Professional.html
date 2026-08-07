@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,15 +936,15 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Neuro Pro — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#the-tennis-neurological-specialist" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">THE TENNIS NEUROLOGICAL SPECIALIST</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#a-comprehensive-analysis-of-clinical-sports-neurology-and-neuro-performance-optimization" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">A Comprehensive Analysis of Clinical Sports Neurology and Neuro-Performance Optimization</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#foundations-of-clinical-sports-neurology-and-the-evolution-of-the-medical-subspecialty" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Foundations of Clinical Sports Neurology and the Evolution of the Medical Subspecialty</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#pathophysiology-and-management-of-traumatic-brain-injury-in-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Pathophysiology and Management of Traumatic Brain Injury in Tennis</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#advanced-specialized-clinics-and-neurological-rehabilitation-centers" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Advanced Specialized Clinics and Neurological Rehabilitation Centers</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#neuro-performance-coaching-the-science-of-the-neuro-centric-approach" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Neuro-Performance Coaching: The Science of the “Neuro-Centric” Approach</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#neuroathletics-reaction-speed-precision-and-the-alexander-zverev-model" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Neuroathletics: Reaction Speed, Precision, and the Alexander Zverev Model</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#neuro-tennis-and-the-research-into-neurocognitive-motor-control" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Neuro Tennis and the Research into Neurocognitive Motor Control</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#cognitive-enhancement-and-advanced-neuromodulation-technologies" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Cognitive Enhancement and Advanced Neuromodulation Technologies</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tennis-as-a-tool-for-cognitive-development-in-youth-and-adolescents" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis as a Tool for Cognitive Development in Youth and Adolescents</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#regulatory-environment-safety-protocols-and-the-2025-guidelines" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Regulatory Environment, Safety Protocols, and the 2025 Guidelines</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-future-of-the-discipline-synergy-and-inter-brain-synchrony" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The Future of the Discipline: Synergy and Inter-Brain Synchrony</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#works-cited" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Works Cited</a></li></ul></div>
 <p>Henry Pham · 2026 Edition</p>
-<p>THE TENNIS</p>
-<p>NEUROLOGICAL</p>
-<p>SPECIALIST</p>
-<p>A Comprehensive Analysis of</p>
+<p><strong>THE TENNIS</strong></p>
+<p><strong>NEUROLOGICAL</strong></p>
+<p><strong>SPECIALIST</strong></p>
+<p><strong>A Comprehensive Analysis of</strong></p>
 <p>Clinical Sports Neurology and Neuro-Performance Optimization</p>
-<p>Clinical Neurology · Neuro-Performance · Cognitive Science · Sports Medicine</p>
+<p><strong>Clinical Neurology · Neuro-Performance · Cognitive Science · Sports Medicine</strong></p>
 <h1 id="the-tennis-neurological-specialist">THE TENNIS NEUROLOGICAL SPECIALIST</h1>
 <h2 id="a-comprehensive-analysis-of-clinical-sports-neurology-and-neuro-performance-optimization">A Comprehensive Analysis of Clinical Sports Neurology and Neuro-Performance Optimization</h2>
 <p>By Henry Pham | 2026 Edition</p>
@@ -969,7 +981,7 @@
 <p>If the sensory input is fuzzy or inaccurate—for example, if a player’s eyes do not track the ball smoothly—the brain will perceive a high level of “threat.” In response, the nervous system will reflexively limit power, speed, and range of motion to protect the body from potential injury.[20] A neuro-performance specialist identifies these sensory “blind spots” and uses targeted drills to clear the signal, allowing the brain to unlock the athlete’s full physical potential.[20]</p>
 <h3 id="z-health-performance-and-the-neuro-revolution">Z-health Performance and the “neuro-revolution”</h3>
 <p>One of the most comprehensive curricula for neuro-performance specialists is Z-Health Performance, developed by Dr. Eric Cobb.[29] This certification program provides movement experts with the tools to assess the nervous system as precisely as a biomechanist might assess a joint angle.[30]</p>
-<p>The Z-Health curriculum is structured into several phases:</p>
+<p><strong>The Z-Health curriculum is structured into several phases:</strong></p>
 <p>R-Phase (Rehabilitation): Focusing on the basic joint-by-joint assessment of movement and sensory integration.[20]</p>
 <p>I-Phase (Integration): Deepening the focus on the visual and vestibular systems and how they integrate with motor control.[20]</p>
 <p>S-Phase (Sport): Applying neurological concepts to high-performance athletic skills like speed and power.[20]</p>
@@ -978,7 +990,7 @@
 <h2 id="neuroathletics-reaction-speed-precision-and-the-alexander-zverev-model">Neuroathletics: Reaction Speed, Precision, and the Alexander Zverev Model</h2>
 <p>The concept of “neuroathletics” gained significant international attention through its adoption by tennis professional Alexander Zverev.[27] Neuroathletics is essentially the further development of classic athletic training, where the focus is not on muscle mass but on the communication between the brain and the body.[27]</p>
 <h3 id="the-three-pillars-of-neuroathletics-in-tennis">The Three Pillars of Neuroathletics in Tennis</h3>
-<p>The application of neuroathletics in tennis rests on three central pillars that govern on-court success:</p>
+<p><strong>The application of neuroathletics in tennis rests on three central pillars that govern on-court success:</strong></p>
 <p>The Visual System: In tennis, the brain must judge the ball with millimeter precision at high speeds. Visual training involves sharpening gaze stability, depth perception, and tracking ability. A common exercise involves focusing on a thumb while moving the head rapidly, which trains the Vestibulo-Ocular Reflex (VOR), essential for maintaining a clear image of the ball while running.[27]</p>
 <p>The Balance (Vestibular) System: Clean footwork is impossible without a highly tuned vestibular system. Neuroathletic coaches use balance tasks on unstable surfaces or one-legged jumps with rotation to prepare players for the sudden changes in direction inherent in a match.[27]</p>
 <p>The Proprioceptive System: This is the body’s internal map. In tennis, this governs the player’s awareness of their limb positioning. Coaches may have players practice strokes with their eyes closed to force the brain to rely entirely on internal feedback from the muscles and joints, thereby refining the precision of the kinetic chain.[27]</p>
@@ -1089,7 +1101,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

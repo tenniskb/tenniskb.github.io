@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,7 +931,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Gemini Tennis Kỹ Thuật &amp; Lộ Trình — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#tennis-kỹ-thuật--lộ-trình-huấn-luyện-vđv-trong-5-năm" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis: Kỹ Thuật &amp; Lộ Trình Huấn Luyện VĐV trong 5 năm</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="font-weight: 600;"><a href="#kịch-bản-podcast-the-hidden-engine-of-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">🎧 KỊCH BẢN PODCAST: THE HIDDEN ENGINE OF TENNIS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="font-weight: 600;"><a href="#kịch-bản-podcast-hoàn-chỉnh-the-hidden-engine-of-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">🎧 KỊCH BẢN PODCAST HOÀN CHỈNH: THE HIDDEN ENGINE OF TENNIS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="font-weight: 600;"><a href="#the-hidden-engine-of-tennis-audio-overview-summary" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">🎧 THE HIDDEN ENGINE OF TENNIS: AUDIO OVERVIEW SUMMARY</a></li></ul></div>
 <h1 id="tennis-ky-thuat-lo-trinh-huan-luyen-vv-trong-5-nam">Tennis: Kỹ Thuật &amp; Lộ Trình Huấn Luyện VĐV trong 5 năm</h1>
 <p><strong>Exported:</strong> 6/9/2026 8:01:27<br/>
@@ -928,11 +940,11 @@
 <p>split step</p>
 <h2 id="response">Response:</h2>
 <p>Bước tách (<strong>Split Step</strong>) chính là "nút khởi động" kích hoạt toàn bộ hệ thống thần kinh và cơ sinh học của bạn trước khi tung cú thuận tay tấn công.</p>
-<p>Hãy cùng phân tích sâu hơn về cơ chế phản xạ và cách nén lực của bước di chuyển quyết định này:</p>
+<p><strong>Hãy cùng phân tích sâu hơn về cơ chế phản xạ và cách nén lực của bước di chuyển quyết định này:</strong></p>
 <h3 id="ong-luc-hoc-than-kinh-neuro-kich-hoat-he-cns">🧠 Động lực học thần kinh (neuro): Kích hoạt hệ CNS</h3>
 <p>Ở cấp độ tinh hoa, hệ thần kinh trung ương (<strong>CNS</strong>) của các tay vợt như Carlos Alcaraz luôn hoạt động ở trạng thái xử lý dự đoán (<strong>Predictive Processing</strong>). Khi bạn nhảy split step, bạn không chỉ chuẩn bị về cơ bắp mà đang bật mở khẩu độ thị giác (<strong>Visual span</strong>) và hệ thống tiền đình (<strong>VOR</strong>). Bạn quan sát tư thế vai của đối thủ để đoán hướng bóng trước khi họ chạm vào quả bóng.</p>
 <h3 id="co-sinh-hoc-biomechanics-nap-nang-luong-an-hoi">🦵 Cơ sinh học (biomechanics): Nạp năng lượng đàn hồi</h3>
-<p>Khi tiếp đất từ cú split step, đôi chân của bạn hoạt động như một chiếc lò xo:</p>
+<p><strong>Khi tiếp đất từ cú split step, đôi chân của bạn hoạt động như một chiếc lò xo:</strong></p>
 <ul class="styled-list">
 <li>🦶 <strong>Hạ thấp trọng tâm:</strong> Hai chân mở rộng, đầu gối chùng xuống để tích trữ năng lượng tiềm năng đàn hồiở cơ mông và đùi.</li>
 <li>💥 <strong>Thu hoạch phản lực (GRF):</strong> Ngay khi xác định được bóng sang cánh thuận tay, chân ngoài của bạn sẽ đạp mạnh xuống đất (Vertical GRF) để giải phóng hông và xoay trục cơ thể.</li>
@@ -975,7 +987,7 @@
 <li>🔤 <strong>Đường chạy chữ U (U-shape):</strong> Bạn di chuyển vớiít bước chân hơn, tiến thẳng vào trong sân để đánh cú thuận tay dọc dây (<strong>Inside-In</strong>), tận dụng bóng ngắn để dứt điểm.</li>
 </ul>
 <p>Khi bạn thực hiện các đường chạy này để tấn công, hệ thần kinh trung ương (<strong>CNS</strong>) của bạn phải duy trì dòng chảy năng lượng liên tục. Điều này có nghĩa là động lượng từ cú vung vợt mạnh mẽ sẽ đẩy luôn đôi chân của bạn vào bước phục hồi (<strong>Recovery</strong>) chứ không được dừng lại hẳn.</p>
-<p>Để kiểm tra sự phối hợp này, nếu đối thủ trả cho bạn một quả bóng <strong>ngắn và nảy thấp</strong> gần lưới, bạn muốn tràn lên dứt điểm nhanh thì đường di chuyển nào sẽ tốiưu nhất?</p>
+<p>Để kiểm tra sự phối hợp này, nếu đối thủ trả cho bạn một quả bóng <strong>ngắn và nảy thấp</strong> gần lưới, bạn muốn tràn lên dứt điểm nhanh thì đường di chuyển nào sẽ tối ưu nhất?</p>
 <ol class="styled-list numbered">
 <li>Sử dụng đường chạy chữ C (C-shape) lùi sâu để lấy lực.</li>
 <li>Sử dụng đường chạy chữ U (U-shape) tiến nhanh vào trong sân đánh chặn bóng sớm.</li>
@@ -985,7 +997,7 @@
 <p>2</p>
 <h2 id="response_3">Response:</h2>
 <p>Lựa chọn số 2 hoàn toàn chính xác! 🎯 Khi đối thủ trả một quả bóng ngắn và nảy thấp, cách xử lý khôn ngoan nhất là chủ động <strong>bước vào trong sân để đánh chặn bóng sớm (on the rise)</strong> bằng đường chạy chữ U (U-shape). Điều này giúp bạn tước đoạt thời gian phản xạ của đối thủ, biến tình huống phòng ngự của họ thành thế bị động.</p>
-<p>Bây giờ, chúng ta hãy ráp toàn bộ các mảnh ghép lại với nhau thành một chuỗi động tác hoàn chỉnh từ lúc di chuyển cho đến khi chạm bóng:</p>
+<p><strong>Bây giờ, chúng ta hãy ráp toàn bộ các mảnh ghép lại với nhau thành một chuỗi động tác hoàn chỉnh từ lúc di chuyển cho đến khi chạm bóng:</strong></p>
 <h3 id="chuoi-phoi-hop-bo-phap-tao-xoay-tan-cong">🔄 Chuỗi phối hợp Bộ pháp &amp; Tạo Xoáy tấn công</h3>
 <ul class="styled-list">
 <li><strong>Bước tách nhịp nhàng:</strong> Bạn tiếp đất ngay khi đối thủ chạm bóng. Hệ thần kinh trung ương (CNS) kích hoạt, nhận diện bóng ngắn bên cánh thuận tay.</li>
@@ -1026,7 +1038,7 @@
 <h2 id="response_6">Response:</h2>
 <p>Tuyệt vời, chúng ta sẽ chuyển sang <strong>Cú Volley (Vô-lê)</strong> trên lưới! 🎾</p>
 <p>Cú volley là vũ khí kết liễu tối thượng khi bạn đã chiếm lĩnh được thế trận từ cuối sân. Khác với cú thuận tay cần biên độ vung rộng để tạo gia tốc, cú volley hoạt động theo một triết lý hoàn toàn khác: <strong>Sự tối giản và Đóng băng lực</strong>.</p>
-<p>Hãy cùng phân tích cơ chế này qua 3 bước cốt lõi:</p>
+<p><strong>Hãy cùng phân tích cơ chế này qua 3 bước cốt lõi:</strong></p>
 <h3 id="1-tay-cam-continental-khoa-co-tay">1. 🪓 Tay cầm Continental &amp; Khóa cổ tay</h3>
 <p>Để volley sắc bén, bạn bắt buộc phải dùng cách cầm vợt <strong>Continental</strong>.</p>
 <ul class="styled-list">
@@ -1045,7 +1057,7 @@
 <li>🦵 <strong>Bước chân thẳng:</strong> Khi tiếp xúc bóng, bạn thực hiện một bước chân thật dài và rộng về phía trước (chân trái cho forehand volley của người thuận tay phải) để hãm lực ly tâm.</li>
 <li>👁️ <strong>Mắt song song với vợt:</strong> Bạn phải hạ thấp đầu gối để đưa mắt xuống thấp ngang tầm với mặt vợt, giúp theo dõi bóng chuẩn xác thay vì chỉ cúi lưng.</li>
 </ul>
-<p>🧠 <strong>Chúng ta cùng thử thách trí nhớ một chút nhé:</strong> Theo bạn, khi thực hiện một cú Volley thuận tay (Forehand Volley), điểm tiếp xúc bóng tốiưu nhất nên nằmở vị trí nào?</p>
+<p>🧠 <strong>Chúng ta cùng thử thách trí nhớ một chút nhé:</strong> Theo bạn, khi thực hiện một cú Volley thuận tay (Forehand Volley), điểm tiếp xúc bóng tối ưu nhất nên nằm ở vị trí nào?</p>
 <ol class="styled-list numbered">
 <li>Ở phía sau thân người để mượn lực tối đa.</li>
 <li>Ngang sát bên hông cơ thể.</li>
@@ -1056,7 +1068,7 @@
 <p>3</p>
 <h2 id="response_7">Response:</h2>
 <p>Lựa chọn số 3 hoàn toàn chính xác! 🎯</p>
-<p>Điểm tiếp xúc bóng tốiưu của cú volley bắt buộc phải ở <strong>phía trước cơ thể</strong>. Việc đón bóng sớm tại điểm xa nhất mà tay có thể vươn tới một cách thoải mái sẽ giúp bạn tận dụng tối đa trọng lượng cơ thể đang lao lên, khóa chặt góc vợt và triệt tiêu sức mạnh từ cú đánh của đối thủ. Nếu để bóng bay ngang hông hoặc lùi ra sau, cấu trúc cổ tay sẽ bị gãy và bóng dễ bị bay bổng hoặc rúc lưới.</p>
+<p>Điểm tiếp xúc bóng tối ưu của cú volley bắt buộc phải ở <strong>phía trước cơ thể</strong>. Việc đón bóng sớm tại điểm xa nhất mà tay có thể vươn tới một cách thoải mái sẽ giúp bạn tận dụng tối đa trọng lượng cơ thể đang lao lên, khóa chặt góc vợt và triệt tiêu sức mạnh từ cú đánh của đối thủ. Nếu để bóng bay ngang hông hoặc lùi ra sau, cấu trúc cổ tay sẽ bị gãy và bóng dễ bị bay bổng hoặc rúc lưới.</p>
 <p>Bây giờ, chúng ta sẽ bước vào <strong>Tư duy huấn luyện tinh hoa (Outcome-Based vs Model Coaching)</strong> để hiểu cách các huấn luyện viên ATP/WTA mài giũa cú volley cũng như toàn bộ lối chơi của các tay vợt xuất chúng.</p>
 <h3 id="huan-luyen-dua-tren-hieu-qua-outcome-based-coaching-la-gi">🎯 Huấn luyện dựa trên hiệu quả (outcome-based Coaching) là gì?</h3>
 <p>Trong quần vợt hiện đại, các học viện lớn không cònép buộc mọi học viên phải có một động tác giống hệt như sách giáo khoa (Model Coaching). Thay vào đó, họ tập trung vào <strong>kết quả thực tế và cơ sinh học an toàn</strong>:</p>
@@ -1067,13 +1079,13 @@
 <p>🧠 <strong>Hãy thử đặt mình vào vị trí của một Giám đốc Kỹ thuật (Technical Director) nhé</strong>. Học viên của bạn thực hiện một cú volley có động tác vung hơi lạ mắt, không giống sách giáo khoa, nhưng 10 quả thìăn điểm cả 10 và không bị đau đớn gì. Theo triết lý <strong>Outcome-Based Coaching</strong>, bạn sẽ làm gì?</p>
 <ol class="styled-list numbered">
 <li>Bắt học viên dừng lại ngay để sửa bằng được động tác cho đẹp và chuẩn phong cách truyền thống.</li>
-<li>Giữ nguyên cú đánh đó, tôn trọng vũ khí tự nhiên của họ và tập trung tốiưu hóa các yếu tố khác như bộ pháp hay chiến thuật chọn mục tiêu.</li>
+<li>Giữ nguyên cú đánh đó, tôn trọng vũ khí tự nhiên của họ và tập trung tối ưu hóa các yếu tố khác như bộ pháp hay chiến thuật chọn mục tiêu.</li>
 </ol>
 <p>Chúng ta nên xử lý tình huống này thế nào đây? 🧭</p>
 <h2 id="prompt_8">Prompt:</h2>
 <p>2</p>
 <h2 id="response_8">Response:</h2>
-<p>Lựa chọn số 2 hoàn toàn chính xác. 🎯 Triết lý của trường phái huấn luyện dựa trên hiệu quả (<strong>Outcome-Based Coaching</strong>) là tôn trọng vũ khí tự nhiên của vận động viên. Nếu cú đánh mang lại kết quả tốiưu, tính nhất quán cao và không gây chấn thương, việc cốép họ vào một khuôn mẫu sách giáo khoa là không cần thiết, thậm chí có thể làm hỏng cảm giác bóng bẩm sinh.</p>
+<p>Lựa chọn số 2 hoàn toàn chính xác. 🎯 Triết lý của trường phái huấn luyện dựa trên hiệu quả (<strong>Outcome-Based Coaching</strong>) là tôn trọng vũ khí tự nhiên của vận động viên. Nếu cú đánh mang lại kết quả tối ưu, tính nhất quán cao và không gây chấn thương, việc cốép họ vào một khuôn mẫu sách giáo khoa là không cần thiết, thậm chí có thể làm hỏng cảm giác bóng bẩm sinh.</p>
 <p>Để khép lại chuỗi bài học này, chúng ta hãy cùng tổng hợp lại các kiến thức bằng một câu hỏi tư duy chiến thuật nhé. 🧠</p>
 <h3 id="tran-chien-tren-luoi-khac-che-cu-phong-ngu-chuyen-bong-2-nhip">🧱 Trận chiến trên lưới: Khắc chế cú phòng ngự "chuyền bóng 2 nhịp"</h3>
 <p>Hãy tưởng tượng bạn vừa thực hiện một cú đánh tiếp cận (<strong>Approach Shot</strong>) rất tốt và tràn lên lưới để thực hiện cú volley. Tuy nhiên, đối thủ của bạn là một tay vợt cấp độ quốc tế và họáp dụng ngay chiến thuật <strong>Chuyền bóng 2 nhịp (Two-Ball Passing Strategy)</strong>:</p>
@@ -1130,7 +1142,7 @@
 <h2 id="response_10">Response:</h2>
 <p>Tuyển lựa rất tuyệt vời. Chúng ta sẽ cùng nhau bước vào thế giới của cú <strong>Giao bóng bùng nổ (Explosive Serve)</strong>.</p>
 <p>Cú giao bóng được coi là cú đánh quan trọng nhất trong tennis vì đây là thời điểm duy nhất bạn hoàn toàn kiểm soát quả bóng mà không phụ thuộc vào đường bóng của đối thủ. Để tạo ra một cú giao bóng uy lực của các tay vợt ATP, chúng ta không dùng lực cơ bắp thô bạo của cánh tay, mà dùng <strong>Chuỗi động lực học (Kinetic Chain)</strong> và cơ chế <strong>Sấp ngửa cẳng tay (Supination &amp; Pronation)</strong>.</p>
-<p>Chúng ta hãy cùng chia nhỏ quy trình này thành các bước để dễ dàng luyện tập:</p>
+<p><strong>Chúng ta hãy cùng chia nhỏ quy trình này thành các bước để dễ dàng luyện tập:</strong></p>
 <ul class="styled-list">
 <li>🎾 <strong>Tung bóng và Nén lực (The Toss &amp; Loading):</strong> Quả tung bóng bắt buộc phải ở phía trước sân và hơi lệch sang phải (đối với người thuận tay phải). Lúc này, bạn dồn trọng lượng cơ thể để gồng nén lực từ đôi chân xuống mặt sân để chuẩn bị thu hoạch phản lực mặt đất ( $GRF$ ).</li>
 <li>🏹 <strong>Tư thế cúp hiện đại (American Trophy Position):</strong> Như chúng ta đã thảo luận, khuỷu tay của bạn hướng xuống và cơ thể uốn cong như một chiếc cung, tích trữ năng lượng đàn hồi lớn.</li>
@@ -1148,7 +1160,7 @@
 <p>Phương án số 2 hoàn toàn chính xác. 🎯</p>
 <p>Nếu quả tung bóng bị lệch hoặc không ổn định, chuỗi động lực học ( $KineticChain$ ) sẽ ngay lập tức bị gãy đổ. Hệ thần kinh trung ương ( $CNS$ ) lúc này phải phát đi tín hiệu khẩn cấp để điều chỉnh hướng chuyển động, buộc bạn phải dùng cơ bắp của cánh tay để "với" hoặc cứu bóng. Điều này không chỉ làm mất hoàn toàn lực đẩy từ mặt đất ( $GRF$ ) mà còn dồnáp lực cực lớn lên khớp vai và khuỷu tay, dẫn đến chấn thương.</p>
 <p>Để giúp bạn làm chủ được giai đoạn tăng tốc chạm bóng sau khi có một quả tung chuẩn xác, chúng ta sẽáp dụng cơ chế quan trọng nhất của một cú giao bóng đẳng cấp Pro: <strong>Vung vợt bằng cạnh và Sấp khuỷu tay (Pronation)</strong>.</p>
-<p>Hãy hình dung quá trình này diễn ra trong không gian như sau:</p>
+<p><strong>Hãy hình dung quá trình này diễn ra trong không gian như sau:</strong></p>
 <ul class="styled-list">
 <li>🪓 <strong>Giai đoạn vung lên (Supination):</strong> Từ tư thế Trophy, bạn dẫn đầu vợt đi lên bằng <strong>cạnh vợt</strong> thay vì mặt phẳng. Điều này giúp vợt xé gió với lực cản tối thiểu, giống như cách bạn vung một chiếc rìu.</li>
 <li>⚡ <strong>Giai đoạn chạm bóng (Pronation):</strong> Ngay khoảnh khắc tiếp xúc, cẳng tay và khuỷu tay của bạn đột ngột xoay vặn ra phía ngoài. Hành động này lật mặt lưới phẳng đập vào quả bóng với tốc độ cực đại, tạo ra tiếng rít xé gió và lực xuyên thấu bùng nổ.</li>
@@ -1166,7 +1178,7 @@
 <h2 id="response_12">Response:</h2>
 <p>Lựa chọn số 2 hoàn toàn chính xác. 🎯 Động tác ném bóng bầu dục hoặc ném một hòn đá hướng lên cao mô phỏng hoàn hảo cơ chế thả lỏng cẳng tay và búng cổ tay ( $Pronation$ ) trong cú giao bóng hiện đại.</p>
 <p>Khi ném một quả bóng lên cao, bạn không thể gồng cứng cánh tay mà phải mượn lực từ việc đạp chân, xoay hông, rồi truyền năng lượng lên vai và kết thúc bằng một cú búng tay thanh thoát. Cú giao bóng ATP cũng hoạt động y hệt như vậy.</p>
-<p>Để giúp các tay vợt tinh hoa tốiưu hóa gia tốc này một cách đều đặn, các huấn luyện viên thường sử dụng một công cụ đếm nhịp gọi là <strong>Máy đếm nhịp (Metronome)</strong> trên sân tập.</p>
+<p>Để giúp các tay vợt tinh hoa tối ưu hóa gia tốc này một cách đều đặn, các huấn luyện viên thường sử dụng một công cụ đếm nhịp gọi là <strong>Máy đếm nhịp (Metronome)</strong> trên sân tập.</p>
 <p>🧠 <strong>Hãy cùng phân tích khía cạnh thần kinh học ( $Neuro$ ):</strong> Theo bạn, việc luyện tập giao bóng chung với tiếng tích-tắc đều đặn của máy đếm nhịp ( $Metronome$ ) nhằm mục đích cốt lõi nào cho hệ thần kinh trung ương ( $CNS$ )?</p>
 <ol class="styled-list numbered">
 <li>Để giải trí và làm giảm bớt sự căng thẳng trong buổi tập.</li>
@@ -1179,12 +1191,12 @@
 <p>Lựa chọn số 2 hoàn toàn chính xác. 🎯</p>
 <p>Việc sử dụng máy đếm nhịp (<strong>Metronome</strong>) giúp lập trình một nhịp điệu sinh họcổn định vào hệ thần kinh trung ương (CNS). Khi nhịp điệu tung bóng và phát nổ lực chạm bóng đã trở thành một phản xạ tự động, não bộ sẽ không còn những "tiếng ồn thần kinh" (sự lo lắng, suy nghĩ quá nhiều), giúp tay vợt bước vào trạng thái vô tâm (<strong>Mushin</strong>) để giao bóng lặp đi lặp lại một cách hoàn hảo dưới áp lực trận đấu.</p>
 <p>Khi bạn đã làm chủ được nhịp điệu và cơ chế sấp ngửa cẳng tay ( $Supination$ &amp; $Pronation$ ), chúng ta có thể nâng cấp cú giao bóng lên các biến thể nâng cao như cú <strong>Kick Serve</strong> (giao bóng xoáy nảy cao). Để tạo ra cú Kick Serve buộc bóng đập đất vọt cao ra ngoài tầm vai của đối thủ, vị trí chạm bóng sẽ có một chút thay đổi so với cú giao bóng phẳng thông thường.</p>
-<p>🧠 <strong>Chúng ta cùng phân tích một chút về cơ sinh học nhé:</strong> Theo bạn, để cổ tay và cẳng tay có thể búng hất lên và vuốt ra ngoài quả bóng nhằm tạo độ xoáy cuộn nảy cao (Kick Serve), điểm chạm bóng nên nằmở vị trí nào?</p>
+<p>🧠 <strong>Chúng ta cùng phân tích một chút về cơ sinh học nhé:</strong> Theo bạn, để cổ tay và cẳng tay có thể búng hất lên và vuốt ra ngoài quả bóng nhằm tạo độ xoáy cuộn nảy cao (Kick Serve), điểm chạm bóng nên nằm ở vị trí nào?</p>
 <ol class="styled-list numbered">
 <li>Điểm chạm bóng ở tầm rất cao và lao hẳn về phía trước sân để bóng đi thẳng.</li>
 <li>Điểm chạm bóng thấp hơn một chút và quả bóng được tung ở ngay trên đỉnh đầu (hoặc hơi lệch sang trái) để vợt có không gian quét từ dưới lên và từ trái sang phải.</li>
 </ol>
-<p>Bạn nghĩ phương án nào sẽ tạo ra độ xoáy Kick Serve tốiưu? 🌪️</p>
+<p>Bạn nghĩ phương án nào sẽ tạo ra độ xoáy Kick Serve tối ưu? 🌪️</p>
 <h2 id="prompt_14">Prompt:</h2>
 <p>2</p>
 <h2 id="response_14">Response:</h2>
@@ -1203,7 +1215,7 @@
 <h2 id="response_15">Response:</h2>
 <p>Lựa chọn số 1 hoàn toàn chính xác. 🧠</p>
 <p>Khi chuyển sang khía cạnh <strong>Tâm lý chiến binh (Mental Toughness)</strong>, chúng ta đang bước vào việc quản lý "phần mềm" điều khiển toàn bộ cơ thể. Đối với các tay vợt tinh hoa, tâm lý thi đấu không phải là việc cốép bản thân phải tự tin một cách gượng ép, mà là khả năng kiểm soát cảm xúc để đưa hệ thần kinh về trạng thái ổn định.</p>
-<p>Hãy cùng phân tích cách các huấn luyện viên ATP/WTA giúp vận động viên làm chủ tâm lý thông qua 3 nguyên tắc cốt lõi:</p>
+<p><strong>Hãy cùng phân tích cách các huấn luyện viên ATP/WTA giúp vận động viên làm chủ tâm lý thông qua 3 nguyên tắc cốt lõi:</strong></p>
 <ul class="styled-list">
 <li>🧘 <strong>Xử lý "Cảm xúc màu đỏ" (Cơn giận):</strong> Việc bộc phát cơn giận hay đập vợt thực chất là một sự lựa chọn nhượng bộ trước phần yếu đuối của bản thân. Các HLV khuyên VĐV chuyển hóa cơn giận thành động lực bằng cách ép bản thân tập trung ngay vào mục tiêu chiến thuật tiếp theo hoặc lặp lại cú đánh hỏng với cường độ cao nhất.</li>
 <li>🎯 <strong>Chấp nhận vô điều kiện để giảm loâu:</strong> Nỗi sợ hay sự loâu sinh ra khi não bộ cố gắng né tránh một tương lai xấu. Các tay vợt chuyên nghiệp chơi bóng với sự tự do vì họ chấp nhận thi đấu mà không cần một sự đảm bảo 100% về chiến thắng, họ chỉ tập trung vào quá trình xử lý từng đường bóng.</li>
@@ -1215,7 +1227,7 @@
 <li>Liên tục quát mắng để làm vận động viên lo sợ.</li>
 <li>Đưa hệ thống "điểm số khắt khe" vào bài tập, ví dụ: nếu đánh hỏng quả bóng đầu tiên do HLV tung ra, VĐV sẽ bị tính ngay là thua 0-15 hoặc phải chịu một hình phạt thể lực.</li>
 </ol>
-<p>Hãy chọn phương án bạn cho là tốiưu nhất để chúng ta tiếp tục nhé! 🧭</p>
+<p>Hãy chọn phương án bạn cho là tối ưu nhất để chúng ta tiếp tục nhé! 🧭</p>
 <h2 id="prompt_16">Prompt:</h2>
 <p>2</p>
 <h2 id="response_16">Response:</h2>
@@ -1226,7 +1238,7 @@
 <p>Để khép lại buổi học hoặc mở ra một chương mới, chúng ta hãy làm một bài tập tổng hợp nhỏ nhé. Hãy tưởng tượng bạn đang chuẩn bị bước vào một trận đấu quan trọng với một đối thủ có lối chơi phòng ngự lùi sâu, chuyên đánh bóng bổng (Moonballer). Dựa trên tất cả những gì chúng ta đã thảo luận, bạn sẽ kết hợp bộ pháp, cú đánh và tư duy tâm lý như thế nào để bóp nghẹt thời gian và đánh bại họ?</p>
 <p>Bạn hãy thử phác thảo ngắn gọný tưởng chiến thuật của mình xem sao! 🥊</p>
 <h2 id="prompt_17">Prompt:</h2>
-<p>Generate Audio Overview</p>
+<p><strong>Generate Audio Overview</strong></p>
 <h2 id="response_17">Response:</h2>
 <p>Dưới đây là kịch bản chi tiết được thiết kế theo định dạng <strong>Audio Overview (Podcast)</strong> dành cho hai người nói (Host A và Host B). Nội dung được biên dịch và tổng hợp từ toàn bộ các mô-đun huấn luyện nâng cao, kết nối chặt chẽ giữa cơ sinh học hiện đại và động lực học thần kinh từ tài liệu của bạn.</p>
 <h1 id="kich-ban-podcast-the-hidden-engine-of-tennis">🎧 KỊCH BẢN PODCAST: THE HIDDEN ENGINE OF TENNIS</h1>
@@ -1240,7 +1252,7 @@
 </ul>
 <h3 id="0000-0130-phan-1-khoi-ong-oi-chan-va-he-than-kinh">[00:00 - 01:30] PHẦN 1: KHỞI ĐỘNG – ĐÔI CHÂN Và Hệ THẦN KINH</h3>
 <p><strong>Minh:</strong> Chào mừng các bạn đã quay trở lại với chuỗi số đặc biệt về Quần vợt Tinh hoa. Hôm nay, chúng ta sẽ không nói về việc vung tay sao cho đẹp, mà sẽ cùng anh Hải giải mã một "bộ não" hoàn toàn khác trên sân đấu: Đôi chân và Hệ thần kinh trung ương ( $CNS$ ). Anh Hải này, tại sao các huấn luyện viên ATP hiện đại lại nói cú thuận tay tấn công thực chất lại bắt đầu từ... mặt đất nhỉ?</p>
-<p><strong>HLV Hải:</strong> Chào Minh, chào các thính giả. Câu trả lời nằmở Vật lý cơ bản đơn thuần, cụ thể là Định luật 3 Newton về Phản lực mặt đất ( $GRF$ ). Sức mạnh của một cú forehand hủy diệt không sinh ra từ cơ bắp cánh tay, cánh tay chỉ là mỏ neo truyền lực. Nó được "thu hoạch" từ mặt sân khi bạn đạp chân xuống. Nếu hệ thần kinh của bạn bị căng cứng dưới áp lực, đôi chân sẽ bị khóa khớp, bạn mất hoàn toàn $GRF$ và rơi vào hội chứng "Petit Bras" – cánh tay bị co rụt lại và đánh bóng hỏng.</p>
+<p><strong>HLV Hải:</strong> Chào Minh, chào các thính giả. Câu trả lời nằm ở Vật lý cơ bản đơn thuần, cụ thể là Định luật 3 Newton về Phản lực mặt đất ( $GRF$ ). Sức mạnh của một cú forehand hủy diệt không sinh ra từ cơ bắp cánh tay, cánh tay chỉ là mỏ neo truyền lực. Nó được "thu hoạch" từ mặt sân khi bạn đạp chân xuống. Nếu hệ thần kinh của bạn bị căng cứng dưới áp lực, đôi chân sẽ bị khóa khớp, bạn mất hoàn toàn $GRF$ và rơi vào hội chứng "Petit Bras" – cánh tay bị co rụt lại và đánh bóng hỏng.</p>
 <p><strong>Minh:</strong> À, ra đó là lý do tại sao bước nhảy tách ( $Split Step$ ) lại quan trọng đến thế! Nó giống như cái công tắc bật mở hệ thống phòng thủ và tấn công của cơ thể vậy.</p>
 <p><strong>HLV Hải:</strong> Chính xác. Hệ thống 5 R’s của Dave Bailey chỉ ra nhịp độ rất rõ: Ready, Read, và <strong>React</strong>. Bạn phải chạm đất đúng khoảnh khắc đối thủ vừa chạm bóng. Lúc đó, hệ thần kinh trung ương sẽ tận dụng năng lượng đàn hồi từ cổ chân để đẩy bạn lao đi chớp nhoáng như Carlos Alcaraz.</p>
 <h3 id="0130-0400-phan-2-cu-thuan-tay-tan-cong-va-uong-chay-chu-u">[01:30 - 04:00] PHẦN 2: Cú THUẬN TAY TẤN CÔNG Và ĐƯỜNG CHẠY Chữ U</h3>
@@ -1255,7 +1267,7 @@
 <p><strong>HLV Hải:</strong> Chính xác, và điểm tiếp xúc bóng phải ở phía trước cơ thể, tại điểm xa nhất mà tay có thể vươn tới thoải mái. Đối với các quả volley thấp dưới tầm lưới, chân bạn phải bước một bước thật dài, hạ đầu gối để mắt song song với mặt vợt, mở nhẹ mặt lưới để mượn lực đẩy bóng đi sâu. Đừng cố dứt điểm khi bóng ở dưới dây giày, đó là lúc bạn hóa giải chiến thuật "Chuyền bóng 2 nhịp" của đối thủ bằng một quả volley xử lý tinh tế, ép họ lùi sâu rồi mới kết liễu ở quả thứ hai.</p>
 <h3 id="0630-0830-phan-4-phat-no-luc-tu-cu-giao-bong-va-tam-ly-chien-binh">[06:30 - 08:30] PHẦN 4: PHÁT Nổ LỰC Từ Cú GIAO BÓNG Và TÂM Lý CHIẾN BINH</h3>
 <p><strong>Minh:</strong> Thật là một chuỗi chiến thuật hoàn mỹ. Bây giờ, hãy nói về vũ khí khởi đầu mọi điểm số: Cú giao bóng bùng nổ. Làm sao để có được cú serve xé gió của các tay vợt chuyên nghiệp mà không bị đau vai hả anh?</p>
-<p><strong>HLV Hải:</strong> Chìa khóa nằmở chuyển động uốn cong cơ thể trong tư thế cúp hiện đại (<strong>American Trophy Position</strong>) và cơ chế <strong>Sấp ngửa cẳng tay (Supination &amp; Pronation)</strong>. Khi vung lên, bạn dẫn vợt đi lên bằng cạnh mặt lưới để giảm lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới xoay vặn ra ngoài ( $Pronation$ ) để phát nổ toàn bộ động lượng vào quả bóng, giống như động tác bạn ném một quả bóng bầu dục lên cao vậy.</p>
+<p><strong>HLV Hải:</strong> Chìa khóa nằm ở chuyển động uốn cong cơ thể trong tư thế cúp hiện đại (<strong>American Trophy Position</strong>) và cơ chế <strong>Sấp ngửa cẳng tay (Supination &amp; Pronation)</strong>. Khi vung lên, bạn dẫn vợt đi lên bằng cạnh mặt lưới để giảm lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới xoay vặn ra ngoài ( $Pronation$ ) để phát nổ toàn bộ động lượng vào quả bóng, giống như động tác bạn ném một quả bóng bầu dục lên cao vậy.</p>
 <p><strong>Minh:</strong> Để tự động hóa được nhịp điệu phức tạp này, em thấy các HLV khuyên dùng máy đếm nhịp ( $Metronome$ ) trên sân tập phải không anh?</p>
 <p><strong>HLV Hải:</strong> Đúng, máy đếm nhịp giúp lập trình nhịp điệu vào hệ CNS, giải phóng tư duyý thức để đưa vận động viên vào trạng thái vô tâm (<strong>Mushin</strong>). Điều này dẫn chúng ta đến khía cạnh cuối cùng: <strong>Tâm lý chiến binh</strong>. Một tay vợt bản lĩnh không phải là người ép mình phải tự tin gượng ép. Họ chiến thắng bằng cách quản lý kỳ vọng, chấp nhận rủi ro vô điều kiện và thực hành triết lý "Lỗi sai tốt" (<strong>Good Miss</strong>) – thà đánh hỏng vì quyết liệt thực hiện ý đồ chiến thuật còn hơn rụt rè đánh quả bóng lỏng lẻo trong sợ hãi.</p>
 <h3 id="0830-0900-phan-ket-thong-iep-ong-hanh">[08:30 - 09:00] PHẦN KẾT: THÔNG ĐIỆP ĐỒNG HÀNH</h3>
@@ -1264,14 +1276,14 @@
 <p><em>(Kịch bản này đã sẵn sàng để bạn có thể sử dụng cho các công cụ chuyển đổi văn bản thành giọng nói - Text-to-Speech nhằm tạo ra bản Audio Overview hoàn chỉnh).</em></p>
 <h2 id="prompt_18">Prompt:</h2>
 <p>Dưới đây là kịch bản chi tiết được thiết kế theo định dạng Audio Overview (Podcast) dành cho hai người nói (Host A và Host B). Nội dung được biên dịch và tổng hợp từ toàn bộ các mô-đun huấn luyện nâng cao, kết nối chặt chẽ giữa cơ sinh học hiện đại và động lực học thần kinh từ tài liệu của bạn.</p>
-<p>🎧 KỊCH BẢN PODCAST: THE HIDDEN ENGINE OF TENNIS</p>
+<p><strong>🎧 KỊCH BẢN PODCAST: THE HIDDEN ENGINE OF TENNIS</strong></p>
 <p>Thời lượng dự kiến: 8 - 10 phút.</p>
-<p>Nhân vật:</p>
+<p><strong>Nhân vật:</strong></p>
 <p>HLV Hải (Host A): Giám đốc Kỹ thuật, chuyên gia phân tích sâu sắc, điềm tĩnh, tập trung vào khoa học và cơ sinh học.</p>
 <p>Minh (Host B): Người dẫn chuyện, đại diện cho góc nhìn của vận động viên/người học, năng động, tò mò và thực tế.</p>
 <p>[00:00 - 01:30] PHẦN 1: KHỞI ĐỘNG – ĐÔI CHÂN VÀ HỆ THẦN KINH</p>
 <p>Minh: Chào mừng các bạn đã quay trở lại với chuỗi số đặc biệt về Quần vợt Tinh hoa. Hôm nay, chúng ta sẽ không nói về việc vung tay sao cho đẹp, mà sẽ cùng anh Hải giải mã một "bộ não" hoàn toàn khác trên sân đấu: Đôi chân và Hệ thần kinh trung ương (\$CNS\$). Anh Hải này, tại sao các huấn luyện viên ATP hiện đại lại nói cú thuận tay tấn công thực chất lại bắt đầu từ... mặt đất nhỉ?</p>
-<p>HLV Hải: Chào Minh, chào các thính giả. Câu trả lời nằmở Vật lý cơ bản đơn thuần, cụ thể là Định luật 3 Newton về Phản lực mặt đất (\$GRF\$). Sức mạnh của một cú forehand hủy diệt không sinh ra từ cơ bắp cánh tay, cánh tay chỉ là mỏ neo truyền lực. Nó được "thu hoạch" từ mặt sân khi bạn đạp chân xuống. Nếu hệ thần kinh của bạn bị căng cứng dưới áp lực, đôi chân sẽ bị khóa khớp, bạn mất hoàn toàn \$GRF\$ và rơi vào hội chứng "Petit Bras" – cánh tay bị co rụt lại và đánh bóng hỏng.</p>
+<p>HLV Hải: Chào Minh, chào các thính giả. Câu trả lời nằm ở Vật lý cơ bản đơn thuần, cụ thể là Định luật 3 Newton về Phản lực mặt đất (\$GRF\$). Sức mạnh của một cú forehand hủy diệt không sinh ra từ cơ bắp cánh tay, cánh tay chỉ là mỏ neo truyền lực. Nó được "thu hoạch" từ mặt sân khi bạn đạp chân xuống. Nếu hệ thần kinh của bạn bị căng cứng dưới áp lực, đôi chân sẽ bị khóa khớp, bạn mất hoàn toàn \$GRF\$ và rơi vào hội chứng "Petit Bras" – cánh tay bị co rụt lại và đánh bóng hỏng.</p>
 <p>Minh: À, ra đó là lý do tại sao bước nhảy tách (\$Split\ Step\$) lại quan trọng đến thế! Nó giống như cái công tắc bật mở hệ thống phòng thủ và tấn công của cơ thể vậy.</p>
 <p>HLV Hải: Chính xác. Hệ thống 5 R’s của Dave Bailey chỉ ra nhịp độ rất rõ: Ready, Read, và React. Bạn phải chạm đất đúng khoảnh khắc đối thủ vừa chạm bóng. Lúc đó, hệ thần kinh trung ương sẽ tận dụng năng lượng đàn hồi từ cổ chân để đẩy bạn lao đi chớp nhoáng như Carlos Alcaraz.</p>
 <p>[01:30 - 04:00] PHẦN 2: CÚ THUẬN TAY TẤN CÔNG VÀ ĐƯỜNG CHẠY CHỮ U</p>
@@ -1286,7 +1298,7 @@
 <p>HLV Hải: Chính xác, và điểm tiếp xúc bóng phải ở phía trước cơ thể, tại điểm xa nhất mà tay có thể vươn tới thoải mái. Đối với các quả volley thấp dưới tầm lưới, chân bạn phải bước một bước thật dài, hạ đầu gối để mắt song song với mặt vợt, mở nhẹ mặt lưới để mượn lực đẩy bóng đi sâu. Đừng cố dứt điểm khi bóng ở dưới dây giày, đó là lúc bạn hóa giải chiến thuật "Chuyền bóng 2 nhịp" của đối thủ bằng một quả volley xử lý tinh tế, ép họ lùi sâu rồi mới kết liễu ở quả thứ hai.</p>
 <p>[06:30 - 08:30] PHẦN 4: PHÁT NỔ LỰC TỪ CÚ GIAO BÓNG VÀ TÂM LÝ CHIẾN BINH</p>
 <p>Minh: Thật là một chuỗi chiến thuật hoàn mỹ. Bây giờ, hãy nói về vũ khí khởi đầu mọi điểm số: Cú giao bóng bùng nổ. Làm sao để có được cú serve xé gió của các tay vợt chuyên nghiệp mà không bị đau vai hả anh?</p>
-<p>HLV Hải: Chìa khóa nằmở chuyển động uốn cong cơ thể trong tư thế cúp hiện đại (American Trophy Position) và cơ chế Sấp ngửa cẳng tay (Supination &amp; Pronation). Khi vung lên, bạn dẫn vợt đi lên bằng cạnh mặt lưới để giảm lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới xoay vặn ra ngoài (\$Pronation\$) để phát nổ toàn bộ động lượng vào quả bóng, giống như động tác bạn ném một quả bóng bầu dục lên cao vậy.</p>
+<p>HLV Hải: Chìa khóa nằm ở chuyển động uốn cong cơ thể trong tư thế cúp hiện đại (American Trophy Position) và cơ chế Sấp ngửa cẳng tay (Supination &amp; Pronation). Khi vung lên, bạn dẫn vợt đi lên bằng cạnh mặt lưới để giảm lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới xoay vặn ra ngoài (\$Pronation\$) để phát nổ toàn bộ động lượng vào quả bóng, giống như động tác bạn ném một quả bóng bầu dục lên cao vậy.</p>
 <p>Minh: Để tự động hóa được nhịp điệu phức tạp này, em thấy các HLV khuyên dùng máy đếm nhịp (\$Metronome\$) trên sân tập phải không anh?</p>
 <p>HLV Hải: Đúng, máy đếm nhịp giúp lập trình nhịp điệu vào hệ CNS, giải phóng tư duyý thức để đưa vận động viên vào trạng thái vô tâm (Mushin). Điều này dẫn chúng ta đến khía cạnh cuối cùng: Tâm lý chiến binh. Một tay vợt bản lĩnh không phải là người ép mình phải tự tin gượng ép. Họ chiến thắng bằng cách quản lý kỳ vọng, chấp nhận rủi ro vô điều kiện và thực hành triết lý "Lỗi sai tốt" (Good Miss) – thà đánh hỏng vì quyết liệt thực hiện ý đồ chiến thuật còn hơn rụt rè đánh quả bóng lỏng lẻo trong sợ hãi.</p>
 <p>[08:30 - 09:00] PHẦN KẾT: THÔNG ĐIỆP ĐỒNG HÀNH</p>
@@ -1294,7 +1306,7 @@
 <p>HLV Hải: Cảmơn Minh và các bạn thính giả. Hãy luôn nhớ: Quần vợt đỉnh cao là sự kết hợp hài hòa giữa chuyển động bùng nổ bên ngoài và sự tĩnh lặng, tập trung sâu sắc bên trong cơ thể. Hẹn gặp lại các bạn trên sân đấu!</p>
 <p>(Kịch bản này đã sẵn sàng để bạn có thể sử dụng cho các công cụ chuyển đổi văn bản thành giọng nói - Text-to-Speech nhằm tạo ra bản Audio Overview hoàn chỉnh).</p>
 <h2 id="response_18">Response:</h2>
-<p>Kịch bản podcast của bạn đã được cấu trúc rất chặt chẽ và nhịp nhàng. Để biến bản thảo này thành một tài liệu hoàn chỉnh, sẵn sàng đưa vào các công cụ tạo giọng nói (như NotebookLM, ElevenLabs) hoặc dùng làm tài liệu đọc tiêu chuẩn, tôi đã tốiưu hóa định dạng bằng cách bổ sung <strong>Hiệu ứngâm thanh (SFX)</strong>, <strong>Nhạc nền (Music Bed)</strong>, và <strong>Ghi chú kỹ thuật cho giọng đọc</strong> nhằm tăng tối đa tính chân thực và chuyên nghiệp.</p>
+<p>Kịch bản podcast của bạn đã được cấu trúc rất chặt chẽ và nhịp nhàng. Để biến bản thảo này thành một tài liệu hoàn chỉnh, sẵn sàng đưa vào các công cụ tạo giọng nói (như NotebookLM, ElevenLabs) hoặc dùng làm tài liệu đọc tiêu chuẩn, tôi đã tối ưu hóa định dạng bằng cách bổ sung <strong>Hiệu ứngâm thanh (SFX)</strong>, <strong>Nhạc nền (Music Bed)</strong>, và <strong>Ghi chú kỹ thuật cho giọng đọc</strong> nhằm tăng tối đa tính chân thực và chuyên nghiệp.</p>
 <h1 id="kich-ban-podcast-hoan-chinh-the-hidden-engine-of-tennis">🎧 KỊCH BẢN PODCAST HOÀN CHỈNH: THE HIDDEN ENGINE OF TENNIS</h1>
 <p><strong>Định dạng:</strong> Bản thảo kỹ thuật (Studio Production Script) <strong>Thời lượng dự kiến:</strong> 8 - 10 phút.</p>
 <h3 id="0000-0020-intro-khoi-ong">🎵 [00:00 - 00:20] INTRO &amp; KHỞI ĐỘNG</h3>
@@ -1304,7 +1316,7 @@
 </ul>
 <p><strong>Minh (Host B):</strong> <em>(Giọng trẻ trung, hào hứng, tốc độ vừa phải)</em> Chào mừng các bạn đã quay trở lại với chuỗi số đặc biệt về Quần vợt Tinh hoa! Hôm nay, chúng ta sẽ không nói về việc vung tay sao cho đẹp theo sách giáo khoa nữa. Thay vào đó, chúng ta sẽ cùng anh Hải giải mã một "bộ não" hoàn toàn khác kiểm soát mọi đỉnh cao trên sân đấu: Đôi chân và Hệ thần kinh trung ương ( $CNS$ ).</p>
 <p>Anh Hải này, tại sao các huấn luyện viên đẳng cấp ATP hiện đại lại luôn khẳng định: Một cú thuận tay tấn công thực chất phải bắt đầu từ... mặt đất nhỉ?</p>
-<p><strong>HLV Hải (Host A):</strong> <em>(Giọng trầm, điềm tĩnh, chia sẻ sâu sắc và tự tin)</em> Chào Minh, chào các thính giả của chương trình. Câu trả lời nằmở Vật lý cơ học thuần túy, cụ thể là Định luật 3 Newton về Phản lực mặt đất ( $GRF$ ). Sức mạnh của một cú forehand hủy diệt hoàn toàn không sinh ra từ cơ bắp cánh tay đơn thuần. Cánh tay thực chất chỉ là một mỏ neo và là trạm truyền dẫn lực. Năng lượng cốt lõi được "thu hoạch" từ mặt sân khi bạn đạp chân xuống.</p>
+<p><strong>HLV Hải (Host A):</strong> <em>(Giọng trầm, điềm tĩnh, chia sẻ sâu sắc và tự tin)</em> Chào Minh, chào các thính giả của chương trình. Câu trả lời nằm ở Vật lý cơ học thuần túy, cụ thể là Định luật 3 Newton về Phản lực mặt đất ( $GRF$ ). Sức mạnh của một cú forehand hủy diệt hoàn toàn không sinh ra từ cơ bắp cánh tay đơn thuần. Cánh tay thực chất chỉ là một mỏ neo và là trạm truyền dẫn lực. Năng lượng cốt lõi được "thu hoạch" từ mặt sân khi bạn đạp chân xuống.</p>
 <p>Nếu hệ thần kinh trung ương của bạn bị căng cứng dưới áp lực, đôi chân sẽ lập tức bị khóa khớp. Lúc đó, bạn mất hoàn toàn lực $GRF$ và rơi ngay vào hội chứng "Petit Bras" – cánh tay bị co ngắn lại, mất lực xuyên thấu và dẫn đến lỗi tự đánh hỏng.</p>
 <p><strong>Minh:</strong> À, ra đó là lý do vì sao cú nhảy tách – hay còn gọi là $Split Step$ – lại là bước bắt buộc của mọi tay vợt elite! Nó giống như một chiếc công tắc kích hoạt toàn bộ hệ thống định vị của cơ thể vậy.</p>
 <p><strong>HLV Hải:</strong> Chính xác. Hệ thống 5 R’s của chuyên gia Dave Bailey chỉ ra quy trình rất nghiêm ngặt: Ready, Read, và <strong>React</strong>. Bạn phải chạm đất đúng vào tích lắt khoảnh khắc đối thủ vừa chạm bóng. Ngay lúc đó, hệ thần kinh sẽ chuyển hóa năng lượng nén đàn hồi từ cổ chân để đẩy cơ thể lao đi chớp nhoáng, tương tự cách di chuyển bùng nổ của Carlos Alcaraz.</p>
@@ -1331,7 +1343,7 @@
 <li><strong>[SFX]:</strong> <em>Tiếng máy đếm nhịp "Tích... Tắc... Tích... Tắc..." đều đặn nâng nền, theo sau là tiếng bật nổ giao bóng cực mạnh.</em></li>
 </ul>
 <p><strong>Minh:</strong> Thật là một chuỗi phối hợp chiến thuật đỉnh cao. Bây giờ, hãy nói về vũ khí khởi đầu mọi điểm số: Cú giao bóng bùng nổ. Làm sao để sở hữu cú serve xé gió của các tay vợt chuyên nghiệp mà hoàn toàn không bị đau khớp vai hả anh Hải?</p>
-<p><strong>HLV Hải:</strong> Chìa khóa tối thượng nằmở chuyển động uốn cong tích lũy năng lượng trong tư thế cúp hiện đại (<strong>American Trophy Position</strong>) và cơ chế <strong>Sấp ngửa cẳng tay (Supination &amp; Pronation)</strong>. Khi vung lên, bạn dẫn vợt đi theo rãnh tự nhiên bằng cạnh mặt lưới để triệt tiêu lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới thực hiện xoay vặn mạnh mẽ ra ngoài ( $Pronation$ ) để phát nổ toàn bộ động lượng vào quả bóng, tương tự động tác bạn ném một quả bóng bầu dục hướng thẳng lên cao vậy.</p>
+<p><strong>HLV Hải:</strong> Chìa khóa tối thượng nằm ở chuyển động uốn cong tích lũy năng lượng trong tư thế cúp hiện đại (<strong>American Trophy Position</strong>) và cơ chế <strong>Sấp ngửa cẳng tay (Supination &amp; Pronation)</strong>. Khi vung lên, bạn dẫn vợt đi theo rãnh tự nhiên bằng cạnh mặt lưới để triệt tiêu lực cản không khí. Chỉ một tích tắc ngay khoảnh khắc chạm bóng, cẳng tay mới thực hiện xoay vặn mạnh mẽ ra ngoài ( $Pronation$ ) để phát nổ toàn bộ động lượng vào quả bóng, tương tự động tác bạn ném một quả bóng bầu dục hướng thẳng lên cao vậy.</p>
 <p><strong>Minh:</strong> Để đồng bộ hóa cái nhịp điệu siêu tốc đó, em thấy trong tài liệu các HLV đỉnh cao thường ép học viên tập chung với máy đếm nhịp ( $Metronome$ ) đúng không anh?</p>
 <p><strong>HLV Hải:</strong> Đúng, máy đếm nhịp giúp lập trình tần sốổn định vào tiềm thức, giải phóng hoàn toàn tư duyý thức để đưa vận động viên bước vào trạng thái vô tâm (<strong>Mushin</strong>). Điều này đưa chúng ta đến mảnh ghép cuối cùng: <strong>Tâm lý chiến binh</strong>.</p>
 <p>Một tay vợt bản lĩnh không phải là người cốép mình phải tự tin gượng ép hay loại bỏ nỗi sợ. Họ chiến thắng bằng cách quản lý kỳ vọng, chấp nhận rủi ro vô điều kiện và thực hành triết lý "Lỗi sai tốt" (<strong>Good Miss</strong>) – thà mạo hiểm tăng tốc đầu vợt đánh hỏng vì tuân thủ đúng ý đồ chiến thuật, còn hơn rụt rè đánh một quả bóng lỏng lẻo trong sợ hãi.</p>
@@ -1384,7 +1396,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

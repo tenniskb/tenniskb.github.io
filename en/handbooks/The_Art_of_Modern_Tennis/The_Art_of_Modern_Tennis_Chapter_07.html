@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -942,8 +954,7 @@ Chapter 7: The Backhand</h2>
 <p>Not the guide. Not the stabiliser. The engine.</p>
 <p>For a right-handed player, the two-handed backhand is mechanically a left-handed forehand. The left hand drives the racket through the contact zone. The left shoulder rotates forward. The left side of the core unwinds. The right hand is present, but its role is secondary — it maintains the grip, provides additional stability, and contributes to the final contact, but it does not initiate or drive the stroke.</p>
 <p>When the right hand dominates — as it does in the vast majority of two-hander errors at club level and a significant proportion at competitive level — the stroke loses its primary power source. The right hand's natural motion on the backhand side is a pushing action that produces a weak, flat, directionless ball. Coaches describe the result as "slappy" — the ball comes off the strings with pace but no weight, sitting up for the opponent rather than penetrating the court. The error is not technical in the conventional sense. The grip, the stance, and the swing path may all look correct. The problem is that the wrong hand is driving the movement.</p>
-<p>The correction for dominant-hand over-involvement cannot be achieved through verbal instruction alone. The player must feel the difference — specifically, they must feel what the stroke produces when the non-dominant arm is the sole driver. The lefty-forehand drill described in section</p>
-<h3>7.8 creates this sensation directly and irreplaceably</h3>
+<p>The correction for dominant-hand over-involvement cannot be achieved through verbal instruction alone. The player must feel the difference — specifically, they must feel what the stroke produces when the non-dominant arm is the sole driver. The lefty-forehand drill described in section 7.8 creates this sensation directly and irreplaceably</p>
 <hr/>
 <h3 id="73-the-one-hander-classical-modern-hybrid">7.3 The One-Hander: Classical Modern Hybrid The one-handed backhand's frequency at elite level has declined steadily since 2000, and the reasons are biomechanically sound: the two-hander handles the 2026 game's high balls, heavy pace, and time pressure more efficiently.</h3>
 <p>But the one-hander has not disappeared, and the players who still use it — Federer's legacy, Musetti, Tsitsipas, Dimitrov — have adapted it to survive in a game it was not originally designed for.</p>
@@ -1051,11 +1062,10 @@ Chapter 7: The Backhand</h2>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="The_Art_of_Modern_Tennis_Chapter_08.html" class="nav-btn next">Next →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

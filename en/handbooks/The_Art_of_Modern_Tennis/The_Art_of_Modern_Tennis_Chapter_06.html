@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -1054,8 +1066,7 @@ Chapter 6: The Forehand</h2>
 <p>On patterns: are you using the inside-in forehand as a genuine weapon or only the inside-out? Many elite players establish the inside-out successfully but leave the inside-in underdeveloped — the most obvious tactical follow-up shot unused. If inside-in percentage is low in your match data, dedicate a training block specifically to it under pattern conditions.</p>
 <hr/>
 <p><strong>Coach Track</strong> | Chapter 6</p>
-<p>When coaching your player's forehand, use the Technical Diagnostic Matrix in section</p>
-<h3>6.10 as your first-pass analysis tool before introducing any technical cue</h3>
+<p>When coaching your player's forehand, use the Technical Diagnostic Matrix in section 6.10 as your first-pass analysis tool before introducing any technical cue</p>
 <p>A player showing contact compression needs footwork work, not arm instruction. A player showing arming needs core sequencing work, not follow-through instruction.</p>
 <p>The fault-tolerant concept is particularly important for players preparing for fast surfaces or heavy hitters. Build double-bend repetitions into every session as an explicit fallback — not a replacement for the player's preferred model, but a trained alternative at match speed and pressure. The goal is a forehand with two reliable gears: full model when time allows, compact fallback when it does not.</p>
 <p>For the neurological layer: design sessions that begin with zero pressure and gradually introduce competitive stakes while monitoring the sound of contact. When the sound changes from deep-resonant to thin-slapping, the player has left Mushin. Name it without criticism, reset, and return to lower pressure before rebuilding. The player who learns to recognise the sound change themselves has the most powerful self-coaching tool in the game.</p>
@@ -1067,11 +1078,10 @@ Chapter 6: The Forehand</h2>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="The_Art_of_Modern_Tennis_Chapter_07.html" class="nav-btn next">Next →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

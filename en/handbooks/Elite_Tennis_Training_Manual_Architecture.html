@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Architecture — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="margin-left: 20px; font-size: 14px;"><a href="#master-table-of-contents-40-chapter-architecture" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">MASTER TABLE OF CONTENTS: 40-CHAPTER ARCHITECTURE</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-kình-engine--biomechanical-tone" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">THE KÌNH ENGINE &amp; BIOMECHANICAL TONE</a></li></ul></div>
 <p>To construct a 300-page, high-density technical manual synthesizing over 50 expert sources, we must architect the knowledge into a rigorous, physics-first framework. Due to the extreme density and length of a complete 40-chapter manuscript, this document provides the <strong>Complete 40-Chapter Master Architecture</strong> followed by the <strong>fully expanded foundational chapters</strong>.</p>
 <p>We will use this blueprint as our persistent memory. You may request the full expansion of any subsequent block of chapters.</p>
@@ -1131,7 +1143,7 @@
 <li><strong>Head-Eye Stillness</strong>: This is why <strong>Roger Federer’s</strong> head remained perfectly still at contact. By maintaining a stable axis, he ensured that 100% of the angular momentum was transferred into the ball rather than being dissipated by a shifting center of mass.</li>
 </ul>
 <h4 id="34-radius-manipulation-straight-arm-vs-double-bend">3.4 Radius Manipulation: Straight-Arm vs.</h3>
-<p>Double-Bend The modern game uses two primary strategies to manage the radius ($r$):</p>
+<p><strong>Double-Bend The modern game uses two primary strategies to manage the radius ($r$):</strong></p>
 <ul class="styled-list">
 <li><strong>The Straight-Arm (Federer/Nadal)</strong>: Maximizes $r$ for peak tangential velocity. This produces the highest potential "heavy" ball but requires perfect spacing and timing. </li>
 <li><strong>The Double-Bend (Djokovic/Sinner)</strong>: Slightly reduces $r$ by keeping the elbow bent. This decreases the moment of inertia ($I$), allowing for faster rotation ($\omega$) and better stability on high-speed returns where time is limited.</li>
@@ -1635,7 +1647,7 @@
 <hr/>
 <h3 id="chapter-14-neural-bracing-mitigating-centrifugal-forces-f_c-mv2-r">CHAPTER 14: Neural Bracing: Mitigating Centrifugal Forces ($F_c \= mv^2 / r$)</h3>
 <h4 id="141-the-centrifugal-crisis-the-physics-of-losing-the-frame">14.1 The Centrifugal Crisis: The Physics of "losing the Frame" As a tennis racket accelerates through the forward swing, it is no longer a static tool; it becomes a high-velocity rotating mass.</h3>
-<p>At elite speeds (racket head velocities exceeding 100 mph), the system is governed by the centrifugal force equation:</p>
+<p><strong>At elite speeds (racket head velocities exceeding 100 mph), the system is governed by the centrifugal force equation:</strong></p>
 <p>$$F_c \= \frac{mv^2}{r}$$</p>
 <ul class="styled-list">
 <li><strong>$m$ (Mass):</strong> The weight of the racket (static mass + swing weight). </li>
@@ -1650,7 +1662,7 @@
 <li><strong>The 2026 Audit:</strong> A "wet noodle" arm will physically collapse under the $F_c$ Elite players are loose during the <strong>acceleration phase</strong> but utilize a "hard-wired" bracing signal that fires microseconds before impact to bridge the gap between the trunk and the ball.</li>
 </ul>
 <h4 id="143-the-radius-paradox-v-omega-r-vs-f_c-mv2r">14.3 The Radius Paradox: $v \= \omega r$ vs.</h3>
-<p>$F_c \= mv^2/r$ Elite models must navigate the mathematical conflict between speed and stability:</p>
+<p><strong>$F_c \= mv^2/r$ Elite models must navigate the mathematical conflict between speed and stability:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>To increase velocity ($v$):</strong> One must either increase angular velocity ($\omega$) or increase the radius ($r$). This is why <strong>Carlos Alcaraz</strong> and <strong>Jannik Sinner</strong> utilize the "Straight Arm" or "Long Lever" forehand—it maximizes $r$ to generate massive $v$. </li>
 <li><strong>The Penalty:</strong> By maximizing $r$ and $v$, they simultaneously maximize the centrifugal load ($F_c$) that the wrist and shoulder must stabilize.</li>
@@ -1845,7 +1857,7 @@
 </ul>
 <hr/>
 <h4 id="184-kinetic-chain-variations-pull-vs-pivot">18.4 Kinetic Chain Variations: "pull" vs.</h3>
-<p>"Pivot" The two models utilize the kinetic chain differently:</p>
+<p><strong>"Pivot" The two models utilize the kinetic chain differently:</strong></p>
 <ul class="styled-list">
 <li><strong>Straight-Arm (The Pull)</strong>: The energy is delivered via a wide, pulling motion. This facilitates a more <strong>Eastern or Semi-Western</strong> grip and is optimized for "flattening out" the ball or hitting extreme "Lasso" topspin. </li>
 <li><strong>Double-Bend (The Pivot)</strong>: The energy is delivered via a rapid, internal rotation. This is the preferred setup for <strong>Western and Near-Western</strong> grips (Chapter 2), as it allows the strings to stay on the ball longer in the hitting zone.</li>
@@ -1864,7 +1876,7 @@
 </ul>
 <hr/>
 <h4 id="187-diagnostic-checklist-which-model-for-which-player">18.7 Diagnostic Checklist: Which Model for Which Player?</h3>
-<p>When selecting a mechanical blueprint for a high-performance junior, use these metrics:</p>
+<p><strong>When selecting a mechanical blueprint for a high-performance junior, use these metrics:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Anthropometrics</strong>: Players with long, wiry limbs (Federer-type) often gravitate toward the Straight-Arm to leverage their natural $r$. Players with denser, more muscular builds (Djokovic-type) benefit from the Double-Bend’s torque efficiency. </li>
 <li><strong>Vision Profile</strong>: Does the player have a high <strong>Quiet Eye</strong> duration? If yes, the Straight-Arm (which requires more precise spacing) is viable. If they have shorter saccadic latency, the Double-Bend’s "Fault Tolerance" is safer. </li>
@@ -2542,7 +2554,7 @@
 </ul>
 <hr/>
 <h4 id="323-clay-courts-the-flow-state-and-sliding-friction">32.3 Clay Courts: The "flow" State and Sliding Friction Clay court tennis is a game of <strong>Rotational Flow</strong> and <strong>Momentum Management</strong>.</h3>
-<p>The surface allows for—and demands—the redirection of energy through sliding.</p>
+<p><strong>The surface allows for—and demands—the redirection of energy through sliding.</strong></p>
 <ul class="styled-list">
 <li><strong>Elastic Duration</strong>: Because the ball slows down upon impact with the clay, the player has a larger 150ms execution window. This allows for a more "elastic" and "winding" backswing (Nadal-style), maximizing <strong>Elastic Potential Energy</strong> ($U_e$). </li>
 <li><strong>Sliding as a Brake</strong>: As established in Chapter 29, sliding on clay is a high-efficiency method of deceleration. The player uses the slide to "bleed off" momentum while simultaneously coiling for the strike. </li>
@@ -2944,7 +2956,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,20 +931,20 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Tennis System Playbook — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <p>TENNIS HIGH-PERFORMANCE MOVEMENT &amp; CONTACT SYSTEM</p>
 <ol class="styled-list numbered">
 <li>
 <p>Universal Movement System (UMS)</p>
 </li>
 <li>
-<p>4 States: Serve/Return, Neutral, Attack, Defense</p>
+<p><strong>4 States: Serve/Return, Neutral, Attack, Defense</strong></p>
 </li>
 <li>
 <p>Each state has default footwork, patterns, fallback, and traps</p>
 </li>
 <li>
-<p>Footwork Systems</p>
+<p><strong>Footwork Systems</strong></p>
 </li>
 <li>
 <p>Glide: micro-adjustment, timing control</p>
@@ -950,7 +962,7 @@
 <p>Perfect Spacing System (PSS)</p>
 </li>
 <li>
-<p>Read → Move → Glide → Contact</p>
+<p><strong>Read → Move → Glide → Contact</strong></p>
 </li>
 <li>
 <p>3 phases: Read, Approach, Lock</p>
@@ -977,7 +989,7 @@
 <p>Contact Optimization System (COS)</p>
 </li>
 <li>
-<p>Priority: Spacing → Contact Point → Racket Face → Swing</p>
+<p><strong>Priority: Spacing → Contact Point → Racket Face → Swing</strong></p>
 </li>
 <li>
 <p>Adjust based on ball speed, height, and spin</p>
@@ -989,7 +1001,7 @@
 <p>Micro-Timing System (MTS)</p>
 </li>
 <li>
-<p>Synchronize:</p>
+<p><strong>Synchronize:</strong></p>
 </li>
 <li>
 <p>Ball clock (rise/peak/fall)</p>
@@ -1007,7 +1019,7 @@
 <p>Contact Under Pressure System (CUPS)</p>
 </li>
 <li>
-<p>Priorities:</p>
+<p><strong>Priorities:</strong></p>
 </li>
 <li>
 <p>Clean contact</p>
@@ -1016,10 +1028,10 @@
 <p>Ball in play</p>
 </li>
 <li>
-<p>Depth</p>
+<p><strong>Depth</strong></p>
 </li>
 <li>
-<p>Tools:</p>
+<p><strong>Tools:</strong></p>
 </li>
 <li>
 <p>Short swing</p>
@@ -1034,7 +1046,7 @@
 <p>Height reset</p>
 </li>
 </ol>
-<p>FINAL PRINCIPLE:</p>
+<p><strong>FINAL PRINCIPLE:</strong></p>
 <p>You are not reacting to the ball.</p>
 <p>You are controlling time, space, and contact.</p>
 </div>
@@ -1045,7 +1057,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

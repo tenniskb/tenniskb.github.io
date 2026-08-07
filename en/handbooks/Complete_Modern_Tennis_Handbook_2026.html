@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -924,7 +936,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Handbook 2026 — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#19-the-complete-modern-tennis-handbook-2026-edition" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">19. THE COMPLETE MODERN TENNIS HANDBOOK: 2026 EDITION</a></li><li style="font-weight: 600;"><a href="#with-explanation-of-physics-formula-and-simplified-concepts" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">with Explanation of Physics Formula and simplified concepts</a></li><li style="font-weight: 600;"><a href="#the-complete-modern-tennis-handbook-2026-edition" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">THE COMPLETE MODERN TENNIS HANDBOOK: 2026 EDITION</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#mục-lục" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">MỤC LỤC</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-1-truyền-năng-lượng-động-det" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 1: TRUYỀN NĂNG LƯỢNG ĐỘNG (DET)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-2-hợp-nhất-thần-kinh---động-lực-nkf" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 2: HỢP NHẤT THẦN KINH - ĐỘNG LỰC (NKF)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-3-vợt-trọng-lượng-nặng--dit" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 3: VỢT TRỌNG LƯỢNG NẶNG &amp; DIT</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-4-giao-bóng-bùng-nổ-vertical-explosion" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 4: GIAO BÓNG BÙNG NỔ (VERTICAL EXPLOSION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-5-trả-giao-bóng---nạp-lực-trực-tiếp-dl" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 5: TRẢ GIAO BÓNG - NẠP LỰC TRỰC TIẾP (DL)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-7-bộ-pháp--di-chuyển-kinetic-foundation" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 7: BỘ PHÁP &amp; DI CHUYỂN (KINETIC FOUNDATION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-8-chiến-thuật-dựa-trên-dữ-liệu" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 8: CHIẾN THUẬT DỰA TRÊN DỮ LIỆU</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-9-động-cơ-sinh-học--hồi-phục" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 9: ĐỘNG CƠ SINH HỌC &amp; HỒI PHỤC</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#tổng-kết-và-download" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">TỔNG KẾT VÀ DOWNLOAD</a></li><li style="font-weight: 600;"><a href="#the-complete-modern-tennis-handbook-2026-full-edition" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">THE COMPLETE MODERN TENNIS HANDBOOK: 2026 FULL EDITION</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-1-truyền-năng-lượng-động-det" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 1: TRUYỀN NĂNG LƯỢNG ĐỘNG (DET)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-2-hợp-nhất-thần-kinh---động-lực-nkf" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 2: HỢP NHẤT THẦN KINH - ĐỘNG LỰC (NKF)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-3-vợt-trọng-lượng-nặng-dit" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 3: VỢT TRỌNG LƯỢNG NẶNG (DIT)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-4-giao-bóng-bùng-nổ-vertical-explosion" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 4: GIAO BÓNG BÙNG NỔ (VERTICAL EXPLOSION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-7-bộ-pháp--di-chuyển-kinetic-foundation" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 7: BỘ PHÁP &amp; DI CHUYỂN (KINETIC FOUNDATION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-10-tương-lai-2026---kỷ-nguyên-siêu-agent" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 10: TƯƠNG LAI 2026 - KỶ NGUYÊN SIÊU AGENT</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#hướng-dẫn-đóng-gói-tài-liệu-download" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">HƯỚNG DẪN ĐÓNG GÓI TÀI LIỆU (DOWNLOAD)</a></li><li style="font-weight: 600;"><a href="#cẩm-nang-tennis-hiện-đại-2026-kỷ-nguyên-siêu-agent" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CẨM NANG TENNIS HIỆN ĐẠI 2026: KỶ NGUYÊN SIÊU AGENT</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-1-truyền-năng-lượng-động-det" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 1: TRUYỀN NĂNG LƯỢNG ĐỘNG (DET)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-2-hợp-nhất-thần-kinh---động-lực-nkf" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 2: HỢP NHẤT THẦN KINH - ĐỘNG LỰC (NKF)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-3-vợt-trọng-lượng-nặng--dit" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 3: VỢT TRỌNG LƯỢNG NẶNG &amp; DIT</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-4-giao-bóng-bùng-nổ-vertical-explosion" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 4: GIAO BÓNG BÙNG NỔ (VERTICAL EXPLOSION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-7-bộ-pháp--di-chuyển-kinetic-foundation" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 7: BỘ PHÁP &amp; DI CHUYỂN (KINETIC FOUNDATION)</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-10-tương-lai-2026---meta-siêu-agent" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHƯƠNG 10: TƯƠNG LAI 2026 - META SIÊU AGENT</a></li></ul></div>
 <h1 id="19-the-complete-modern-tennis-handbook-2026-edition">19. THE COMPLETE MODERN TENNIS HANDBOOK: 2026 EDITION</h1>
 <h1 id="with-explanation-of-physics-formula-and-simplified-concepts">with Explanation of Physics Formula and simplified concepts</h1>
@@ -1051,7 +1063,7 @@
 <li><strong>Năng lượng Thần kinh ($V \cdot I$):</strong> Cường độ dòng điện não điều khiển sự co cơ. </li>
 <li><strong>Năng lượng Sóng ($p \cdot A$):</strong> Áp lực nén của mặt vợt lên quả bóng.</li>
 </ul>
-<h3 id="12-giao-thuc-toi-uu-hoa-det-20-trang-chi-tiet">1.2. Giao thức tốiưu hóa DET (20 trang chi tiết)</h3>
+<h3 id="12-giao-thuc-toi-uu-hoa-det-20-trang-chi-tiet">1.2. Giao thức tối ưu hóa DET (20 trang chi tiết)</h3>
 <ul class="styled-list">
 <li><strong>Phân tích sự hao hụt:</strong> Tại sao cú đánh của bạn trông mạnh nhưng bóng lại nhẹ? Đó là do "rò rỉ năng lượng" tại các khớp lỏng lẻo. </li>
 <li><strong>Kỹ thuật "Khóa cấu trúc":</strong> Cách sử dụng hệ mạc để biến cơ thể thành một chiếc lò xo thép vững chắc ngay tại thời điểm chạm bóng.</li>
@@ -1079,7 +1091,7 @@
 <p>$$Lực\ xuyên\ phá \= Độ\ nặng\ của\ vợt \times Tốc\ độ\ vung\ vợt$$</p>
 <ul class="styled-list">
 <li><strong>DIT (Dynamic Inertia Transfer):</strong> Cách truyền trọng lượng của vợt vào quả bóng để tạo ra độ "nặng". </li>
-<li><strong>Sweet Spot:</strong> Cách tùy chỉnh chì dán (Lead tape) để mở rộng vùng tiếp xúc tốiưu trên mặt vợt.</li>
+<li><strong>Sweet Spot:</strong> Cách tùy chỉnh chì dán (Lead tape) để mở rộng vùng tiếp xúc tối ưu trên mặt vợt.</li>
 </ul>
 <hr/>
 <h2 id="chuong-4-giao-bong-bung-no-vertical-explosion_1">CHƯƠNG 4: GIAO BÓNG BÙNG Nổ (VERTICAL EXPLOSION)</h2>
@@ -1111,7 +1123,7 @@
 </ul>
 <hr/>
 <h2 id="huong-dan-ong-goi-tai-lieu-download">HƯỚNG DẪN ĐÓNG GÓI TÀI LIỆU (DOWNLOAD)</h2>
-<p>Henry, để hoàn thành tài liệu dài hơn 200 trang này (mỗi chương 20 trang), tôi sẽ thực hiện theo các bước sau:</p>
+<p><strong>Henry, để hoàn thành tài liệu dài hơn 200 trang này (mỗi chương 20 trang), tôi sẽ thực hiện theo các bước sau:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Phần lý thuyết chuyên sâu:</strong> Mỗi phương trình đơn giản sẽ đi kèm một trang giải thích về giải phẫu học và vật lý lượng tửáp dụng trong tennis. </li>
 <li><strong>Phần bài tập thực hành:</strong> Mỗi chương bao gồm 10 bài tập định lượng với các chỉ số KPI cụ thể (ví dụ: Tốc độ xoay vai phải đạt 3000 độ/giây). </li>
@@ -1136,7 +1148,7 @@
 <li><strong>Áp lực tiếp đất (Nguồn gốc):</strong> Khả năng mượn lực phản hồi từ Trái Đất thông qua đôi chân.</li>
 </ul>
 <h3 id="12-ky-thuat-khoa-cau-truc-structural-locking">1.2. Kỹ thuật "khóa cấu trúc" (structural Locking) Năng lượng sẽ bị rò rỉ tại các khớp lỏng lẻo.</h3>
-<p>Để đạt hiệu suất trên 90%, bạn cần:</p>
+<p><strong>Để đạt hiệu suất trên 90%, bạn cần:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Duy trì Trục trung tâm (Central Axis):</strong> Cột sống thẳng đứng để năng lượng xoay không bị lệch. </li>
 <li><strong>Độ cứng cấu trúc cổ tay ($K_{wrist} \ge 0,85$):</strong> Cổ tay không được "vẩy" lỏng lẻo mà phải khóa lại như một khối thống nhất với vợt tại điểm chạm.</li>
@@ -1220,7 +1232,7 @@
 </ul>
 <hr/>
 <h3 id="the-simplified-math-form">The Simplified Math Form</h3>
-<p>If you want a cleaner, standard algebraic equation without the bulky text subscripts, you can write it like this:</p>
+<p><strong>If you want a cleaner, standard algebraic equation without the bulky text subscripts, you can write it like this:</strong></p>
 <p>$$D \= \frac{I \cdot \Delta\omega}{m}$$<br/>
 <strong>Where:</strong></p>
 <ul class="styled-list">
@@ -1237,7 +1249,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

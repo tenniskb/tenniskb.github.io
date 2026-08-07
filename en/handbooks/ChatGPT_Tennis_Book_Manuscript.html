@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,7 +931,7 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead"> Tennis Book Manuscript — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="font-weight: 600;"><a href="#tennis-book-manuscript" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Tennis Book Manuscript</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="font-weight: 600;"><a href="#chapter-6-v2-expansion--the-unified-model-of-elite-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">CHAPTER 6 (V2 EXPANSION) — THE UNIFIED MODEL OF ELITE TENNIS</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#subsection-63--the-complete-unified-model-tennis-as-a-continuous-stability-system" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Subsection 6.3 — The Complete Unified Model: Tennis as a Continuous stability System</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#631-why-a-final-model-is-necessary" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">6.3.1 Why a Final Model Is Necessary</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-1-tennis-is-not-a-sport-of-actions--it-is-a-sport-of-stability-maintenance" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #1: Tennis Is Not a Sport of Actions — It Is a Sport of stability Maintenance</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-2-everything-is-a-stability-variable" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #2: Everything Is a stability Variable</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-3-the-entire-match-is-a-continuous-stability-exchange" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #3: The Entire Match Is a Continuous stability Exchange</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-4-the-brain-is-a-monitoring-interface-not-a-controller" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #4: The brain Is a Monitoring Interface, Not a Controller</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-5-performance-is-the-rate-of-stability-decay-resistance" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #5: Performance Is the Rate of stability Decay Resistance</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-6-opponents-compete-through-mutual-destabilization" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #6: Opponents Compete Through Mutual DeStabilization</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-7-tactical-behavior-is-just-visible-stability-management" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #7: Tactical Behavior Is Just Visible stability Management</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-8-collapse-is-always-systemic-never-local" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #8: Collapse Is Always Systemic, Never Local</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-9-the-score-is-only-a-shadow-of-stability-dynamics" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #9: The Score Is Only a Shadow of stability dynamics</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#new-core-idea-10-the-structural-definition-of-the-unified-model" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">New core Idea #10: The Structural Definition of the Unified Model</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#632-final-insight-of-the-entire-framework" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">6.3.2 Final Insight of the Entire Framework</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#end-of-book--full-system-completed" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">END OF BOOK — FULL SYSTEM COMPLETED</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#prompt" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Prompt:</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#response" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Response:</a></li></ul></div>
 <h1 id="tennis-book-manuscript">Tennis Book Manuscript</h1>
 <p><strong>User:</strong> <br/>
@@ -944,23 +956,23 @@
 <li>match outcome logic</li>
 </ul>
 <p>But separation is only a teaching tool.</p>
-<p>In real performance:</p>
+<p><strong>In real performance:</strong></p>
 <div class="pullquote"><p>there is no separation at all — only one continuous stability system interacting with another stability system under evolving constraint.</p></div>
 <hr/>
 <h2 id="new-core-idea-1-tennis-is-not-a-sport-of-actions-it-is-a-sport-of-stability-maintenance">New core Idea #1: Tennis Is Not a Sport of Actions — It Is a Sport of stability Maintenance</h2>
-<p>Players often think they are:</p>
+<p><strong>Players often think they are:</strong></p>
 <ul class="styled-list">
 <li>hitting shots</li>
 <li>constructing points</li>
 <li>reacting to opponents</li>
 </ul>
-<p>But structurally:</p>
+<p><strong>But structurally:</strong></p>
 <div class="pullquote"><p>they are continuously maintaining or losing system stability under time pressure</p></div>
-<p>So the real activity is:</p>
+<p><strong>So the real activity is:</strong></p>
 <div class="pullquote"><p>stability management, not action execution</p></div>
 <hr/>
 <h2 id="new-core-idea-2-everything-is-a-stability-variable">New core Idea #2: Everything Is a stability Variable</h2>
-<p>In this unified model, every element becomes a stability factor:</p>
+<p><strong>In this unified model, every element becomes a stability factor:</strong></p>
 <ul class="styled-list">
 <li>perception → stabilizes anticipation</li>
 <li>movement → stabilizes positioning</li>
@@ -970,93 +982,93 @@
 <li>fatigue → destabilizes correction speed</li>
 <li>Tactics → emergent stability outcomes</li>
 </ul>
-<p>So everything is:</p>
+<p><strong>So everything is:</strong></p>
 <div class="pullquote"><p>either stabilizing or destabilizing the system</p></div>
 <hr/>
 <h2 id="new-core-idea-3-the-entire-match-is-a-continuous-stability-exchange">New core Idea #3: The Entire Match Is a Continuous stability Exchange</h2>
 <p>A rally is not a sequence of shots.</p>
-<p>It is:</p>
+<p><strong>It is:</strong></p>
 <div class="pullquote"><p>a continuous exchange of stability and instability between two interacting systems</p></div>
-<p>Each shot:</p>
+<p><strong>Each shot:</strong></p>
 <ul class="styled-list">
 <li>transfers stability burden</li>
 <li>modifies opponent recovery capacity</li>
 <li>shifts structural balance</li>
 </ul>
-<p>So tennis becomes:</p>
+<p><strong>So tennis becomes:</strong></p>
 <div class="pullquote"><p>dynamic stability negotiation over time</p></div>
 <hr/>
 <h2 id="new-core-idea-4-the-brain-is-a-monitoring-interface-not-a-controller">New core Idea #4: The brain Is a Monitoring Interface, Not a Controller</h2>
-<p>In the unified model:</p>
+<p><strong>In the unified model:</strong></p>
 <ul class="styled-list">
 <li>the brain does not generate motion directly</li>
 <li>it monitors system state</li>
 <li>and adjusts sensitivity thresholds</li>
 </ul>
-<p>So control is:</p>
+<p><strong>So control is:</strong></p>
 <div class="pullquote"><p>distributed through kình, not centralized in cognition</p></div>
 <hr/>
 <h2 id="new-core-idea-5-performance-is-the-rate-of-stability-decay-resistance">New core Idea #5: Performance Is the Rate of stability Decay Resistance</h2>
 <p>Winning is not about peak ability.</p>
-<p>It is about:</p>
+<p><strong>It is about:</strong></p>
 <ul class="styled-list">
 <li>how slowly stability decays under pressure</li>
 <li>how efficiently recovery restores coherence</li>
 <li>how long Structure resists collapse</li>
 </ul>
-<p>So performance equals:</p>
+<p><strong>So performance equals:</strong></p>
 <div class="pullquote"><p>resistance to structural entropy over time</p></div>
 <hr/>
 <h2 id="new-core-idea-6-opponents-compete-through-mutual-destabilization">New core Idea #6: Opponents Compete Through Mutual DeStabilization</h2>
-<p>Each player:</p>
+<p><strong>Each player:</strong></p>
 <ul class="styled-list">
 <li>destabilizes the other system</li>
 <li>while protecting their own stability</li>
 </ul>
-<p>So the match is:</p>
+<p><strong>So the match is:</strong></p>
 <div class="pullquote"><p>a bidirectional stability disruption contest</p></div>
 <hr/>
 <h2 id="new-core-idea-7-tactical-behavior-is-just-visible-stability-management">New core Idea #7: Tactical Behavior Is Just Visible stability Management</h2>
-<p>What looks like Tactics:</p>
+<p><strong>What looks like Tactics:</strong></p>
 <ul class="styled-list">
 <li>attacking</li>
 <li>defending</li>
 <li>changing direction</li>
 <li>varying pace</li>
 </ul>
-<p>Is actually:</p>
+<p><strong>Is actually:</strong></p>
 <div class="pullquote"><p>real-time adjustments to preserve internal stability while increasing opponent instability</p></div>
 <hr/>
 <h2 id="new-core-idea-8-collapse-is-always-systemic-never-local">New core Idea #8: Collapse Is Always Systemic, Never Local</h2>
 <p>A single error is never the cause.</p>
-<p>Instead:</p>
+<p><strong>Instead:</strong></p>
 <ul class="styled-list">
 <li>micro-instability accumulates</li>
 <li>correction speed decreases</li>
 <li>timing desynchronizes</li>
 <li>recovery fails</li>
 </ul>
-<p>So collapse is:</p>
+<p><strong>So collapse is:</strong></p>
 <div class="pullquote"><p>total system failure of stability coordination</p></div>
 <hr/>
 <h2 id="new-core-idea-9-the-score-is-only-a-shadow-of-stability-dynamics">New core Idea #9: The Score Is Only a Shadow of stability dynamics</h2>
-<p>What we see:</p>
+<p><strong>What we see:</strong></p>
 <ul class="styled-list">
 <li>points</li>
 <li>games</li>
 <li>sets</li>
 </ul>
-<p>What actually drives them:</p>
+<p><strong>What actually drives them:</strong></p>
 <ul class="styled-list">
 <li>hidden stability asymmetries</li>
 <li>kình coherence differences</li>
 <li>recovery efficiency gaps</li>
 </ul>
-<p>So scoring is:</p>
+<p><strong>So scoring is:</strong></p>
 <div class="pullquote"><p>a delayed reflection of deeper structural divergence</p></div>
 <hr/>
 <h2 id="new-core-idea-10-the-structural-definition-of-the-unified-model">New core Idea #10: The Structural Definition of the Unified Model</h2>
-<p>Tennis is:</p>
+<p><strong>Tennis is:</strong></p>
 <div class="pullquote"><p>a continuous dual-system stability competition in which two kình-based adaptive control fields interact under time pressure, where perception, movement, timing, fatigue, and Tactics are not separate mechanisms but expressions of a single stability regulation process, and match outcomes are determined by which system maintains coherence longer before crossing an irreversible stability threshold</p></div>
 <hr/>
 <h2 id="632-final-insight-of-the-entire-framework">6.3.2 Final Insight of the Entire Framework At the highest level:</h3>
@@ -1065,12 +1077,11 @@
 <h2 id="end-of-book-full-system-completed">END Of BOOK — FULL SYSTEM COMPLETED</h2>
 <hr/>
 <h2 id="prompt">Prompt:</h2>
-<p>4/24/2026, 7:19:52 AM</p>
-<p>ok</p>
+<p>4/24/2026, 7:19:52 AM ok.</p>
 <h2 id="response_1">Response:</h2>
 <p>4/24/2026, 7:19:52 AM</p>
 <p>That completes the full compiled Structure you asked for (Chapters 1–6 unified into a continuous manuscript-style model).</p>
-<p>If you want next steps, I can do any of these:</p>
+<p><strong>If you want next steps, I can do any of these:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Export as a clean .md file</strong> (proper title page, TOC, formatting, ready for download)</li>
 <li><strong>Convert into a publishable book format</strong> (with numbered sections, figure placeholders, Glossary)</li>
@@ -1095,7 +1106,8 @@
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>

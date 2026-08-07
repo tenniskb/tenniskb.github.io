@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -870,12 +860,20 @@
  .masthead { padding: 44px 24px 36px; }
  .content-wrap { padding: 0 16px; }
 }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -883,6 +881,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -908,9 +909,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -954,7 +966,7 @@ Chapter 9: The Slice &amp; Variety</h2>
 <h3 id="94-changing-height-moonball-vs-flat-slice">9.4 Changing Height: Moonball vs.</h3>
 <p>Flat Slice Two shots at opposite ends of the trajectory spectrum produce the same tactical outcome when used correctly: they force the opponent to recalibrate their timing in a direction they are not prepared for.</p>
 <p><strong>The moonball</strong> — extreme topspin with high net clearance, landing deep and bouncing above shoulder height — is the power baseliner's nightmare from the defensive position. When a player is under pressure and cannot produce a penetrating offensive ball, the moonball turns a defensive situation into a tactical one. Instead of a short, floating reply that the opponent attacks from mid-court, the moonball lands deep, bounces high, and forces the opponent back behind their own baseline to handle a ball above their shoulder. From that defensive position, generating an attacking reply requires exceptional mechanics — exactly what the high contact point and compromised kinetic chain described in section</p>
-<h3>9.1 make difficult</h3>
+<h3><strong>9.1 make difficult</strong></h3>
 <p>The moonball is most effective as a combination shot — deployed after a sequence of standard-height rallying balls to maximise the height change's disruptive effect. An opponent who has been hitting at chest height for three consecutive balls and suddenly receives a ball bouncing above their head is dealing with a completely different timing demand. The recalibration cost is highest at the moment of the change.</p>
 <p><strong>The flat slice</strong> operates at the opposite extreme. After a rally of heavy topspin balls bouncing above the waist, a flat slice that skids through below knee height creates the same recalibration demand in the opposite direction. The opponent has loaded their kinetic chain to generate GRF against a ball at standard height. The slice arrives thirty centimetres lower, earlier than expected, and stays low after the bounce. The chain fires against a ball that has already passed the optimal contact zone.</p>
 <p><strong>Mixing moonball and flat slice within a rally</strong> is the advanced application of height-change tactics. The opponent must simultaneously manage the memory of the previous shot's height and the incoming ball's trajectory — a dual-processing demand that generates timing errors even in technically accomplished players. The combination is most effective when the height changes are unpredictable: not alternating every other ball, but deployed at irregular intervals that prevent the opponent from establishing an anticipatory rhythm.</p>
@@ -1043,18 +1055,16 @@ Chapter 9: The Slice &amp; Variety</h2>
 <hr/>
 <h1 id="part-iii-the-complete-game">
 
-
 </div>
 <nav class="page-nav">
   <a href="The_Art_of_Modern_Tennis_Chapter_08.html" class="nav-btn prev">← Previous</a>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="The_Art_of_Modern_Tennis_Chapter_10.html" class="nav-btn next">Next →</a>
 </nav>
-<footer style="background: var(--ink); color: white; padding: 40px; margin-top: 80px; text-align: center; font-size: 13px; font-family: 'Space Mono', monospace; letter-spacing: 1px;">
- Tennis Future Lab · Cẩm nang tennis chuyên sâu · 2026
-</footer>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
+<footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body>
 </html>

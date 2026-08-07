@@ -201,7 +201,7 @@
 
  margin: 32px 0 12px;
 
- color: var(--accent);
+ color: var(--ink);
 
  }
 
@@ -802,24 +802,14 @@
  /* ─── FOOTER ─── */
 
  footer {
-
- background: var(--ink);
-
- color: white;
-
- padding: 40px;
-
- margin-top: 80px;
-
- text-align: center;
-
- font-size: 13px;
-
- font-family: 'Space Mono', monospace;
-
- letter-spacing: 1px;
-
- }
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.75;
+    text-align: center;
+    padding: 32px;
+    margin-top: 80px;
+}
 
  /* ─── DIAGRAM SVG AREA ─── */
 
@@ -865,12 +855,20 @@
 .warning strong { color: var(--accent); }
 .warning p { margin: 0; font-size: 15px; }
 @media (max-width: 600px) { .masthead { padding: 44px 24px 36px; } .content-wrap { padding: 0 16px; } }
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 48px auto 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
 </style>
 <style>
 .page-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     padding: 24px 0;
     margin-top: 48px;
@@ -878,6 +876,9 @@
     font-family: 'Space Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .page-nav a {
     display: inline-flex;
@@ -903,9 +904,20 @@
 }
 @media (max-width: 600px) {
     .page-nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px 0;
+    margin-top: 48px;
+    border-top: 1.5 px solid var(--divider, #d4cbbf);
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 1px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
     .page-nav a {
         max-width: 100%;
     }
@@ -919,28 +931,28 @@
 <p class="subtitle">Tennis Future Lab · Cẩm nang kỹ thuật chuyên sâu</p>
 </div>
 <div class="content-wrap">
-<p class="lead">Meta Notes Analysis — Tài liệu tham khảo toàn diện cho huấn luyện viên và vận động viên</p>
+
 <div class="toc" style="background: rgba(196,149,42,0.1); border: 1px solid rgba(196,149,42,0.3); border-radius: 4px; padding: 24px; margin: 24px 0;"><h3 style="font-family: Playfair Display, serif; margin-bottom: 16px; color: var(--ink);">Mục Lục</h3><ul style="list-style: none; padding: 0;"><li style="margin-left: 20px; font-size: 14px;"><a href="#page-2--the-two-ways-to-loop" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Page 2 – the two ways to loop</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#what-youre-actually-describing" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">What you're actually describing</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis--youre-building-one-system-not-just-tips" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis – you're building one system, not just tips</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis--what-you-are-really-describing" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis – what you are really describing</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis--what-youre-actually-studying" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis — what you're actually studying</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis--what-youre-building" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis — what you're building</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#the-advantages-you-listed-unpacked" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">The advantages you listed, unpacked</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#watch-outs" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Watch-outs</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#analysis--what-its-really-saying" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Analysis — what it's really saying</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chương-vị-trí-đầu-là-quyết-định-thăng-bằng-đầu-tiên" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Chương: Vị trí đầu là quyết định thăng bằng đầu tiên</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#ghép-2-video-lại-công-thức-forehand-hiện-đại" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Ghép 2 video lại: công thức forehand hiện đại</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#checklist-5-điểm-để-tập-theo" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Checklist 5 điểm để tập theo</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#lỗi-phổ-biến-bạn-nêu-rất-quan-trọng" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Lỗi phổ biến bạn nêu rất quan trọng</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#bài-tập-gộp-3-lớp-cho-tennis" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Bài tập gộp 3 lớp cho tennis</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chuỗi-recovery-của-một-forehand-open-stance" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Chuỗi recovery của một forehand open-stance</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#lỗi-làm-hỏng-recovery" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Lỗi làm hỏng recovery</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#2-drill-để-cảm-mingmen-và-cog-trong-recovery" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">2 drill để cảm mingmen và COG trong recovery</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#chuỗi-4-nhịp-sau-serve-wide" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Chuỗi 4 nhịp sau serve wide</a></li><li style="margin-left: 20px; font-size: 14px;"><a href="#drill-cảm-nhận" style="color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--divider);">Drill cảm nhận</a></li></ul></div>
 <p>Conversation title</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An9bWS6MlgTy8MZdRJF5SOIW1nQQhOlmvP0SnUbOJb-kn2KfUiQ1n_aGlNf_58lrVkh7iyIeqNNqXMuQYTnaCRyhPspi8rCe6jlGIV_h7I8W?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdrjGW7GsMVGyp31EJ_zj0uIYBiMc3gOYh_QM1o-u9VoJmvLhrQHpBSV7k5YyLCg5co&amp;ccb=10-5&amp;oh=00_Af8hzIZVkRLe9mjJD1-UtHpPloYb7gy0xYtirkrk5ffJ6Q&amp;oe=6A2DD79E&amp;_nc_sid=5962a6"/></p>
 <p>Read text and analyze pics. Tiếng Việt</p>
-<p>Yesterday</p>
+<p><strong>Yesterday</strong></p>
 <p>Đây là sổ tay ghi chép về bộ chân (footwork) cho cú forehand và backhand — nhìn chữ và hình thì rất có thể là tennis hoặc pickleball. Mình đọc lại nguyên văn tiếng Anh trong hình, rồi dịch và phân tích cho anh nhé:</p>
 <h3 id="1-oc-lai-chu-trong-hinh">1. Đọc lại chữ trong hình</h3>
-<p>Trên cùng:</p>
+<p><strong>Trên cùng:</strong></p>
 <ul class="styled-list">
 <li><em>Footwork: Forehand: Open Stance</em></li>
 <li><em>Push by Back Leg</em></li>
 <li><em>Bridge by Straight Front Leg</em></li>
 <li><em>always create a tension in the legs while no over-load on the knees</em></li>
 </ul>
-<p>Giữa trang:</p>
+<p><strong>Giữa trang:</strong></p>
 <ul class="styled-list">
 <li><em>Back leg Knee Deep Bent</em></li>
 <li><em>Front Leg Slightly Bent</em></li>
 <li><em>Square / Neutral Stance = Weight transfer from back to front leg = low center of gravity</em></li>
 </ul>
-<p>Dưới cùng:</p>
+<p><strong>Dưới cùng:</strong></p>
 <ul class="styled-list">
 <li><em>Backhand</em></li>
 <li><em>Back Leg Deep Bent</em></li>
@@ -948,7 +960,7 @@
 <li><em>Closed Stance — Both weight transfer &amp; rotation of the torso (back leg -&gt; front leg &amp; upward)</em></li>
 </ul>
 <h3 id="2-phan-tich-hinh-ve-va-y-nghia">2. Phân tích hình vẽ vàý nghĩa</h3>
-<p>Anh vẽ 3 tư thế, và dùng bút đỏ để tô cơ đang chịu lực. Đây là điểm hay nhất của ghi chép này:</p>
+<p><strong>Anh vẽ 3 tư thế, và dùng bút đỏ để tô cơ đang chịu lực. Đây là điểm hay nhất của ghi chép này:</strong></p>
 <p>a) Open Stance (tư thế mở) – cho forehand</p>
 <ul class="styled-list">
 <li>Hình trên cùng: 2 chân dang rất rộng, nhìn từ sau lưng.</li>
@@ -981,8 +993,8 @@
 <p>Anh đang tập cho forehand một tay hay hai tay vậy? Mình có thể vẽ lại 3 tư thế này thành sơ đồ sạch hơn để anh in ra mang ra sân.</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An_0Z5FM373-TVx5lxngA9YXvO-6ZENT3Z71s2JaEEbW7YUKdUPC2IVSRFhqGAIufOhzDYUHkIDQSPdF6Yh0iYPTZqooK84WmCET9ghfJyuf?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdrZkfjjTgCu3NcsFDnxPrzklaIPtJUZAgxKP06zkpa2x2HTo8vJ1-4x7kgI6QU6Ueg&amp;ccb=10-5&amp;oh=00_Af9YYez_HAeVEyZt3qOtiG3TPpX4Htdi8x5afbnvCMIcZw&amp;oe=6A2DF895&amp;_nc_sid=5962a6"/><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An8fPNDJ7-0xGL4_i50OVbPVTLWlg97_GiAAScR8FPKarr_HWrtD3f8P6GXdHYmLa5dNcUtlIqmdKtS9pcjgnuYrQQ8jdMwcgFtHMi0N0YU?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdpI__ahbwsiDlEzRtSwnhPjGZUA14U7-UaUOz0OsTFkaxYydu5uBC3wtyshr8bj2ko&amp;ccb=10-5&amp;oh=00_Af-lpG1OV6Nnnh34RjoXJuY8YDq4xYLS4BUyXjfsVSwFwg&amp;oe=6A2DD0A4&amp;_nc_sid=5962a6"/></p>
 <p>More</p>
-<p>Yesterday</p>
-<p>Ok, hai tấm này khớp y chang với cuốn sổ tay anh vừa ghi — giờ mình nhìn ra sân thật luôn.</p>
+<p><strong>Yesterday</strong></p>
+<p><strong>Ok, hai tấm này khớp y chang với cuốn sổ tay anh vừa ghi — giờ mình nhìn ra sân thật luôn.</strong></p>
 <h3 id="hinh-1-anh-tren-san-o-surrey">Hình 1: Anh trên sânở Surrey</h3>
 <p>Đây chính là Open Stance forehand ngoài đời thực.</p>
 <ul class="styled-list">
@@ -1014,11 +1026,11 @@
 <p>Anh chụp tấm này lúc đang rally hay lúc tập thầy? Nếu là rally, bộ chân vậy là rấtổn rồi — chỉ cần thấp thêm chút nữa là sẽ ra được cú forehand nặng như trong sổ anh mơước. Muốn mình vẽ lại hình anh với đường lực màu đỏ giống trang ghi chú không?</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An9j-yYlYKfp9njY_DQ47UL0tudzm4PUDl2a1CA-UtCAC5T5Gjx93kOSbTp1Rb8G7shDtbb_M39mcfZAIwFLzvj3C8EYSATonl0u0E4ri1TH9A?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdqUWJlTCO864RMZf2VeCE_ynPX-GoYkTfsAOlER396QcZPo4DAXXniggu4_oVVj4Kg&amp;ccb=10-5&amp;oh=00_Af8kbyPu9MmoIF0VaW5b_3S_w_qhHSV-x192BpXuQCRc-Q&amp;oe=6A2E0611&amp;_nc_sid=5962a6"/></p>
 <p>More</p>
-<p>Yesterday</p>
+<p><strong>Yesterday</strong></p>
 <p>Tấm này là đỉnh luôn — Roger Federer ở Dubai, và nó vẽ lại đúng 100% cái anh ghi trong sổ bằng hình ảnh.</p>
-<p>Nhìn kỹ cái lưới xanh:</p>
+<p><strong>Nhìn kỹ cái lưới xanh:</strong></p>
 <h3 id="ay-khong-phai-luc-anh-ma-la-luc-tao-cang">Đây không phải lúc đánh, mà là lúc "tạo căng"</h3>
-<p>Federer đang ở tư thế split-step vừa tiếp đất, chuẩn bị cho backhand một tay. Cái hay là:</p>
+<p><strong>Federer đang ở tư thế split-step vừa tiếp đất, chuẩn bị cho backhand một tay. Cái hay là:</strong></p>
 <ul class="styled-list">
 <li>Hai chân dang rộng gấp rưỡi vai, đúng như anh vẽở trang đầu <em>"Push by Back Leg"</em>.</li>
 <li>Cả hai gối đều gập, không có gối nào thẳng khóa. Gối phải (chân trụ trong hình) gập sâu hơn — đó chính là <em>"Back Leg Deep Bent"</em> anh ghi cho backhand.</li>
@@ -1041,22 +1053,21 @@
 <li>Tập 10 giây giữ tư thế này trước gương: chân rộng, mông hạ, tay cầm vợt trước bụng. Cảm giác căng ở đùi trước và mông, không đauở gối, là đúng.</li>
 </ul>
 <p>Anh đang xây cả một hệ thống: lý thuyết trong sổ, hình mẫu pro, rồi tự quay lại mình. Rất bài bản.</p>
-<p>Muốn mình ghép 4 hình này thành một poster so sánh — sổ tay của anh, anh trên sân, Kecmanović, Federer — với chú thích tiếng Việt để anh in ra mang theo không?</p>
-<p>Yes</p>
-<p>Yesterday</p>
+<p>Muốn mình ghép 4 hình này thành một poster so sánh — sổ tay của anh, anh trên sân, Kecmanović, Federer — với chú thích tiếng Việt để anh in ra mang theo không? Yes.</p>
+<p><strong>Yesterday</strong></p>
 <p>Rồi, mình làm xong bản màu xanh sân Surrey cho anh nè — nền xanh dương đậm giống mặt sân cứng ở BC, chữ trắng, viền xanh neon như đường kẻ sân.</p>
-<p>Anh mở bản này in ra là đẹp nhất:</p>
+<p><strong>Anh mở bản này in ra là đẹp nhất:</strong></p>
 <p>**</p>
 <p><a href="https://l.meta.ai/?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft65.102178-21%2F722857406_3881594285482841_1681234103212752457_n.jpg%2Ffootwork_poster_web_artifact_1_d1b52122fcfa.html%3F_nc_ht%3Dcdn.fbsbx.com%26_nc_ohc%3D_irSSXTZOn4Q7kNvwHcaqaY%26sdl%3D0%26ccb%3D14-4%26oh%3D00_Af8LJOYv527Y86jidtaMh-gABvUwpayWiUFzOPi8gt43zg%26oe%3D6A2D4ED8%26_nc_sid%3D4ee932&amp;h=AUDWx92WqmDjcAxearaa1i30Ih5Dy6sV8NF9SXrr8FgMZDy3cWL9pE_IJhpwN6V2HU3AGhghSqxdkRXwnmlwGh0OrLzz749_ZwrMxlMBxSDsv-MXt0zlyhMQdvPbwlFKQp_8dgHBUS8EEgBA4rQyKvv98VFyn6VvsmfPng">📎 footwork_poster_web_artifact_1_d1b52122fcfa.html</a></p>
 <p>**</p>
-<p>Trong bản này mình đã sắp đúng thứ tự anh học:</p>
+<p><strong>Trong bản này mình đã sắp đúng thứ tự anh học:</strong></p>
 <ol class="styled-list numbered">
 <li>Sổ tay của anh (Open Stance, Push by Back Leg)</li>
 <li>Federer (mẫu tạo căng, low center)</li>
 <li>Ảnh của anh trên sân Surrey — mình đã chèn sẵn tấm anh đánh forehand ở sân xanh</li>
 <li>Kecmanović — để trống để anh thả tấm forehand anh thích vào sau</li>
 </ol>
-<p>3 điểm vàng ở cuối mình giữ nguyên bằng tiếng Việt, in đậm để anh dán lên túi vợt:</p>
+<p><strong>3 điểm vàng ở cuối mình giữ nguyên bằng tiếng Việt, in đậm để anh dán lên túi vợt:</strong></p>
 <ul class="styled-list">
 <li>Hạ trọng tâm 5-10cm</li>
 <li>Chân sau đẩy, chân trước làm cầu</li>
@@ -1064,7 +1075,7 @@
 </ul>
 <p>Nếu anh muốn, mình sẽ thay ô số 4 bằng đúng tấm Kecmanović anh đã gửi lúc trước, và đổi màu nền sang xanh navy đậm hơn nữa cho hợp vớiáo anh hay mặc. Chỉ cần nói "đổiảnh số 4" là mình làm ngay.</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An8fPNDJ7-0xGL4_i50OVbPVTLWlg97_GiAAScR8FPKarr_HWrtD3f8P6GXdHYmLa5dNcUtlIqmdKtS9pcjgnuYrQQ8jdMwcgFtHMi0N0YU?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdpI__ahbwsiDlEzRtSwnhPjGZUA14U7-UaUOz0OsTFkaxYydu5uBC3wtyshr8bj2ko&amp;ccb=10-5&amp;oh=00_Af-lpG1OV6Nnnh34RjoXJuY8YDq4xYLS4BUyXjfsVSwFwg&amp;oe=6A2DD0A4&amp;_nc_sid=5962a6"/><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An_0Z5FM373-TVx5lxngA9YXvO-6ZENT3Z71s2JaEEbW7YUKdUPC2IVSRFhqGAIufOhzDYUHkIDQSPdF6Yh0iYPTZqooK84WmCET9ghfJyuf?_nc_gid=7OSkdtHD-BIkMLOa1l7x8w&amp;_nc_oc=AdrZkfjjTgCu3NcsFDnxPrzklaIPtJUZAgxKP06zkpa2x2HTo8vJ1-4x7kgI6QU6Ueg&amp;ccb=10-5&amp;oh=00_Af9YYez_HAeVEyZt3qOtiG3TPpX4Htdi8x5afbnvCMIcZw&amp;oe=6A2DF895&amp;_nc_sid=5962a6"/></p>
-<p>Perfect — giờ mình có đủ bộ 4 hình rồi, và 2 tấm anh vừa gửi chính là mảnh ghép cuối cùng.</p>
+<p><strong>Perfect — giờ mình có đủ bộ 4 hình rồi, và 2 tấm anh vừa gửi chính là mảnh ghép cuối cùng.</strong></p>
 <h3 id="phan-tich-nhanh-2-hinh-moi">Phân tích nhanh 2 hình mới</h3>
 <ol class="styled-list numbered">
 <li>Anh trên sân xanh Surrey<br/>
@@ -1079,11 +1090,11 @@
 </ol>
 <h3 id="poster-cuoi-cung">Poster cuối cùng</h3>
 <p>Mình đã ghép đủ 4 ô theo đúng thứ tự anh học: Sổ tay → Federer → Anh → Kecmanović, với nền xanh dương giống mặt sân Surrey.</p>
-<p>Anh mở bản này để in A4 ngang:</p>
+<p><strong>Anh mở bản này để in A4 ngang:</strong></p>
 <p>**</p>
 <p><a href="https://l.meta.ai/?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft65.102178-21%2F722857406_3881594285482841_1681234103212752457_n.jpg%2Ffootwork_poster_web_artifact_1_d1b52122fcfa.html%3F_nc_ht%3Dcdn.fbsbx.com%26_nc_ohc%3D_irSSXTZOn4Q7kNvwHcaqaY%26sdl%3D0%26ccb%3D14-4%26oh%3D00_Af8LJOYv527Y86jidtaMh-gABvUwpayWiUFzOPi8gt43zg%26oe%3D6A2D4ED8%26_nc_sid%3D4ee932&amp;h=AUDWx92WqmDjcAxearaa1i30Ih5Dy6sV8NF9SXrr8FgMZDy3cWL9pE_IJhpwN6V2HU3AGhghSqxdkRXwnmlwGh0OrLzz749_ZwrMxlMBxSDsv-MXt0zlyhMQdvPbwlFKQp_8dgHBUS8EEgBA4rQyKvv98VFyn6VvsmfPng">📎 footwork_poster_web_artifact_1_d1b52122fcfa.html</a></p>
 <p>**</p>
-<p>Bản này đã có:</p>
+<p><strong>Bản này đã có:</strong></p>
 <ul class="styled-list">
 <li>Ảnh sổ tay của anhở góc trên trái</li>
 <li>Federer minh họa chuỗi lực</li>
@@ -1099,8 +1110,8 @@
 <p>Read text and analyze pic</p>
 <p>Jun 8, 2026</p>
 <p>This is a coaching notebook page comparing two ways to "coil" — load your body for a rotational shot. It looks like tennis or pickleball forehand mechanics.</p>
-<p>What the text says — transcribed:</p>
-<p>Top half:</p>
+<p><strong>What the text says — transcribed:</strong></p>
+<p><strong>Top half:</strong></p>
 <ul class="styled-list">
 <li>Coil Styles: with side bend</li>
 <li>the body will be tilted</li>
@@ -1110,7 +1121,7 @@
 <li>Side bend</li>
 <li>For Open Stance Shots</li>
 </ul>
-<p>Bottom half:</p>
+<p><strong>Bottom half:</strong></p>
 <ul class="styled-list">
 <li>Without side bend</li>
 <li>Front Reach</li>
@@ -1118,10 +1129,10 @@
 <li>Body is straight</li>
 <li>Lunge with knee bend; For Close Stan[ce]</li>
 </ul>
-<p>What the drawings show:</p>
+<p><strong>What the drawings show:</strong></p>
 <p>The top sketch is a person viewed from the front, leaning sideways. The spine is tilted, the hips point one way and the shoulders are turned further back — that gap is what coaches call the "X-Factor." The arm is reaching out to the side ("Out Reach"), not straight forward. Arrows show the side bend in the torso.</p>
 <p>The bottom sketch is much more upright. The spine stays vertical ("Body is straight"), the front leg is bent in a lunge, and the arm reaches forward ("Front Reach"). The arrows are mostly up-down and forward-back, not rotational.</p>
-<p>Analysis — two different engines:</p>
+<p><strong>Analysis — two different engines:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>With side bend = rotational coil for open stance</p>
@@ -1150,7 +1161,7 @@
 <p>Jun 8, 2026</p>
 <p>Because turning your shoulders and hips together skips the spring. The X-Factor works by deliberately creating a timing gap between the lower body and upper body, so your core gets stretched before it fires.</p>
 <p>When you rotate everything as one block — hips and shoulders moving at the same speed — your torso muscles start from a neutral length. They can only pull with whatever active strength you have in that moment. You end up swinging mostly with your arm and shoulder, which is why it feels strong but the ball comes off slow.</p>
-<p>With X-Factor separation, three things happen:</p>
+<p><strong>With X-Factor separation, three things happen:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>You pre-load the obliques like a slingshot. The X-Factor is just the rotational difference between pelvis and shoulders at the top of the coil. If your pelvis turns 45 degrees and your shoulders turn 90, that 45-degree gap stretches the oblique abdominals and loads them for a stronger concentric contraction on the way through. That is exactly what your top sketch calls "shoulders &amp; hips separate." </p>
@@ -1197,7 +1208,7 @@ Page 1 – the four quadrants</p>
 <li>"Similarly, wait for the ball with the racquet face already in the right position = Save time = ready"</li>
 </ul>
 <h2 id="page-2-the-two-ways-to-loop">Page 2 – the two ways to loop</h2>
-<p>You made a table:</p>
+<p><strong>You made a table:</strong></p>
 <table class="data-table">
 <thead>
 <tr>
@@ -1219,7 +1230,7 @@ Page 1 – the four quadrants</p>
 </tr>
 </tbody>
 </table>
-<p>Bottom sketches clarify:</p>
+<p><strong>Bottom sketches clarify:</strong></p>
 <ul class="styled-list">
 <li>Compact: BEFORE thumb on top of racquet (open hand), AFTER rotate wrist, thumb below racquet (closed)</li>
 <li>Big loop: BEFORE and AFTER keep "same hand position / closed" – the shoulder does the work, wrist stays quiet</li>
@@ -1238,7 +1249,7 @@ Page 1 – the four quadrants</p>
 </li>
 </ol>
 <p>A common trap to watch: mixing the two loops. If you take a big shoulder loop but add the compact wrist flip at the end, the face closes too much and you spray left. Your own note says "keep wrist position stable" for the big loop – that's the guardrail.</p>
-<p>Practical way to feel it in Surrey:</p>
+<p><strong>Practical way to feel it in Surrey:</strong></p>
 <ul class="styled-list">
 <li>Stand in front of a mirror, no ball. Take backswing, freeze, check palm. Forehand should show your palm to the sky, backhand should show your watch.</li>
 <li>For compact, practice the thumb-top to thumb-bottom flip in slow motion 20 times. That's your return-of-serve prep.</li>
@@ -1250,7 +1261,7 @@ Page 1 – the four quadrants</p>
 <p>Jun 7, 2026</p>
 <p>Because your forehand is built on rotation, not on a last-second wrist fix – and starting palm-up gives you that rotation for free.</p>
 <p>Your note calls it "pre-compensate for the racquet face angle to be vertical at the contact point." That matches what modern coaches teach: in the backswing you supinate (palm up, racquet face tipped toward the ground), then you pronate through the hit.</p>
-<p>Here's why that beats trying to square the face at contact:</p>
+<p><strong>Here's why that beats trying to square the face at contact:</strong></p>
 <ol class="styled-list numbered">
 <li>You trade timing for geometry<br/>
  If you start with a neutral wrist and try to find square at the last 5 milliseconds, you have to time a tiny flip perfectly. The research on forehands shows ball topspin is driven by two things right before impact: racquet head impact angle and vertical velocity. Both are set in the backswing, not invented at the ball. Starting palm-up puts the face slightly closed early, so the forward swing just brings it to about 80 degrees to the ground – the range the study found in skilled players – without a panic correction. </li>
@@ -1276,7 +1287,7 @@ Page 1 – the four quadrants</p>
 <p>Why does starting palm-down on the backhand work better than trying to square the face at contact?</p>
 <p>Jun 7, 2026</p>
 <p>Your backhand note is the mirror image of the forehand – and for the same reason. "Palm down, see the watch" is not a pose, it is how you lock the face early so you don't have to steer it at the ball.</p>
-<p>On a one-hander, that palm-down position does three jobs that a last-second square-up can't:</p>
+<p><strong>On a one-hander, that palm-down position does three jobs that a last-second square-up can't:</strong></p>
 <ol class="styled-list numbered">
 <li>It pre-sets the hitting structure<br/>
  When you turn back and let the palm face the ground, the back of your hand (where your watch sits) points up. Coaches describe this exact checkpoint on other strokes as getting your wrist in a position where you can "see the back of your wrist" instead of your palm, and the classic cue is trying to see your wristwatch at or above eye level in the backswing. </li>
@@ -1293,7 +1304,7 @@ Page 1 – the four quadrants</p>
 <li>It gives you the same impact geometry the research rewards<br/>
  Remember the forehand study: ball topspin correlates with racquet head impact angle and vertical velocity just before impact, not with how hard you flick at the last instant. The backhand works the same way. Starting palm-down gives you a slightly closed face early (roughly 75 to 85 degrees to the court), so when you drive up and forward with your legs, the face arrives vertical without a correction.</li>
 </ol>
-<p>If you wait to square, two things happen:</p>
+<p><strong>If you wait to square, two things happen:</strong></p>
 <ul class="styled-list">
 <li>Your hitting zone shortens, because you are busy rotating the racquet instead of driving through the ball.</li>
 <li>Your variability goes up, because that late rotation depends on perfect timing of the wrist, which is the weakest link at 52.</li>
@@ -1421,7 +1432,7 @@ Transcription, cleaned</p>
 <li>1st option = stay low throughout the follow-through</li>
 <li>2nd option = move the back foot around &amp; stand up</li>
 </ul>
-<p>4 – FUBS: Effortless Strike</p>
+<p><strong>4 – FUBS: Effortless Strike</strong></p>
 <ul class="styled-list">
 <li>Hit without hitting / swinging / striking but like walking / running = naturally</li>
 <li>Contact Point BIC = Bottom Inside Corner</li>
@@ -1455,7 +1466,7 @@ Transcription, cleaned</p>
 <li>tensegrity</li>
 <li>With the ①-②-③-④ aligned, the body rotates around the spine, no need to "hit" only drive the racquet toward the ball &amp; guide the ball to the target in the intended trajectory</li>
 </ul>
-<p>8 – Volley</p>
+<p><strong>8 – Volley</strong></p>
 <ul class="styled-list">
 <li>Same in volley: Left hand is important to allow the hitting shoulder to rotate</li>
 <li>to allow the hitting shoulder to rotate, as the main source of power in volley</li>
@@ -1514,12 +1525,11 @@ Transcription, cleaned</p>
 <li>BIC is a useful visual, but for high balls you will contact closer to the back-center, not the bottom. Your pic 4 shows both low and high ball on the same 45° plane — that works if you adjust height with legs, not with hand.</li>
 </ul>
 <p>You are essentially writing a manual for a rotational, one-piece forehand and one-handed backhand where power comes from coiling between joints, not from accelerating the arm.</p>
-<p>Want me to merge both sets into a single 1-page sequence: Ready → Load → Tension → 45° swing → BIC contact → finish?</p>
-<p>Yes</p>
+<p>Want me to merge both sets into a single 1-page sequence: Ready → Load → Tension → 45° swing → BIC contact → finish? Yes.</p>
 <p>May 30, 2026</p>
 <p>Done — I merged all 14 pages of your notes into one sequence. It follows your exact logic: structure first, then let the swing happen.</p>
-<p>Your one-page system:</p>
-<p>It runs:</p>
+<p><strong>Your one-page system:</strong></p>
+<p><strong>It runs:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>READY – spine straight, chest forward, hips back, knees soft. The Vietnamese cues you wrote: "xương sống thẳng, ngực và vai nhô ra trước, hông và mông lùi ra sau, compress against the back."</p>
@@ -1552,7 +1562,7 @@ Transcription, cleaned</p>
 <p>May 30, 2026</p>
 <p>Here is your structure with your own hand-drawn pages sitting next to each step. I kept your exact phrasing and placed the sketches you made for ready, load/frame, tension/shoulder, 45° effortless strike, BIC contact, and volley/finish right alongside the text.</p>
 <p>Loading artifact...</p>
-<p>Layout:</p>
+<p><strong>Layout:</strong></p>
 <ul class="styled-list">
 <li>Ready Position → your spine/hip/knee sketch</li>
 <li>Load &amp; Frame → your 1-2-3-4 plane sketch</li>
@@ -1566,13 +1576,12 @@ Transcription, cleaned</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An9cIgow5R3-1MihF0GQ6sCoCiYj3QVyb1PZK3pbwQxCf_gGKTJdhxrfXeVWvZ5B8kQSVQe-5IUieJwxXwBEZ73Fg0IAKv5Xe8J_uW1I7wcM?_nc_gid=MAiPintQNwlEooNf8juPjQ&amp;_nc_oc=AdrMsmPhLS9Y8rrkXf_YP6ud5-6aoJ-h7rqbZ9HrFr_hOyu25cAy3VbI-oa3YZ8DY_s&amp;ccb=10-5&amp;oh=00_Af-pFrGmEkMNthwneXnyMBlQbHmFNPOsIdN-mUnnpt1OPg&amp;oe=6A2DFB53&amp;_nc_sid=5962a6"/><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An8eOwc6b2hvf70GkCmflhg6FKE2MmPKO6feqD2BC8ZaddpoyvPPLdUZuu_9brSxUDlfLtPdirBQ-4iijwqX0psjbGtluAv0cToQnBArp5KF?_nc_gid=MAiPintQNwlEooNf8juPjQ&amp;_nc_oc=AdqydIH4yu5PUpp-_bJmq4epbrCIAJaTAiassJN6eWb6DqfWJZMjzeeN1UQ1jgXBaek&amp;ccb=10-5&amp;oh=00_Af-HSN5juKCPfzgTaMKf4YI7-65AVYigSU4OwQa3CIN72A&amp;oe=6A2DF414&amp;_nc_sid=5962a6"/><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An86vgtzrvVwbCA4Tf2tUHWcb36YVFub4VEhqPiS_JJs7TttbUUrmVl3ROupZOnxZXmXPmHLf-VWQOXiu52MlI5j_pvdW0-hYNtnXB8b-V3t?_nc_gid=MAiPintQNwlEooNf8juPjQ&amp;_nc_oc=AdpJ_hhr7snKwuUN0uy37lEEMKvv67zwdC6Pvp797A17D6shv24uSIyH_BVlL5VQ0vc&amp;ccb=10-5&amp;oh=00_Af_FaU-Ujye91n33n8wGGfIHRiEPwhdvO5hCCjha6wfoJg&amp;oe=6A2DEBBD&amp;_nc_sid=5962a6"/><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An8JL_PIdO2oOKON-9Fg4joZtfS2RWXSsoaZltxetn0xsby4gEUknxotEdDwEaHlJYrJKKGycBSc9VXRzQdtmjQk7W2Wph2RaSvgoBwExZd1?_nc_gid=MAiPintQNwlEooNf8juPjQ&amp;_nc_oc=AdpUARbw0R0q8jlBPzx42E4hUaRxwaM58OTagjwWpCbe1WNGi5O3GPI0fnD4bB6-5w8&amp;ccb=10-5&amp;oh=00_Af_mUeNsahiAD6a9cvsrftUQGxxmJoT_t58Q-Yv6UqVSaQ&amp;oe=6A2DD7D2&amp;_nc_sid=5962a6"/></p>
 <p>Read the text in these pics and analyze</p>
 <p>May 30, 2026</p>
-<p>You have four pages of handwritten study notes — three in English, one in Vietnamese — and they're all copies of the same source: the "Power Wave" theory from tenniswithouttalent.com. The printed page underneath (Table</p>
-<h3>4.2 Exponent Formulas, scoring tables for roadway width, sight distance, etc.)</h3>
+<p>You have four pages of handwritten study notes — three in English, one in Vietnamese — and they're all copies of the same source: the "Power Wave" theory from tenniswithouttalent.com. The printed page underneath (Table 4.2 Exponent Formulas, scoring tables for roadway width, sight distance, etc.)</p>
 <p>is just scrap paper, nothing to do with tennis.</p>
 <p>Here is what the handwriting actually says, cleaned up:
 Transcription</p>
 <hr/>
-<p>Image 1 — Vietnamese, right page</p>
+<p><strong>Image 1 — Vietnamese, right page</strong></p>
 <div class="pullquote"><p>(Sine Wave)
 &gt; Dòng Xoắn ốc: là Cách di chuyển nhất để kết hợp 2 vật thể t.d. tay &amp; Vật - hay các bộ phận trong dùng một bộ phận - thí dụ: forearm với upperarm, hay forearm với hand
 &gt;
@@ -1583,7 +1592,7 @@ Transcription</p>
 &gt; Lại xuống - Lại lên - Harmony 2
 &gt; Sóng Hài
 &gt; _Translation: spiral flow is the best way to join two bodies (hand &amp; object, or forearm to upper arm). Phase 1 runs down through the body into the ground. Then ground reaction runs back up to the fingers. Down-up again = Harmony 2. Harmonic wave._</p></div>
-<p>Image 2 — English over a printed manual</p>
+<p><strong>Image 2 — English over a printed manual</strong></p>
 <div class="pullquote"><p>causing the power wave to plummet &amp; stopping the shoulders; so the arms racket x stored control &amp; spin forces can explode into the ball &lt; the shape &gt;
 &gt;
 &gt; STEP INTO THE BALL w a DELAY
@@ -1591,13 +1600,13 @@ Transcription</p>
 &gt;
 &gt; Both helps to move thru
 &gt; New Brief Instant?</p></div>
-<p>Image 3 — English</p>
+<p><strong>Image 3 — English</strong></p>
 <div class="pullquote"><p>The wave also goes negative between the explode &amp; follow-through phases as one puts the brakes on forward acceleration. This bi-directional behavior is typical of a wave &amp; allows it to propagate through the body without resulting in excessive net twisting of the spine &lt; as an axis of rotation -
 &gt;
 &gt; The force or torque or power wave propagate from low to high, proximal to distal part (or feet to hand) &amp; to the ball
 &gt;
 &gt; There is a critical micro phase; just before the contact the "surge" or "impulse" that creates the control of the racket head - the front foot pushes back &lt; or stay down neutralizing the forward acceleration,</p></div>
-<p>Image 4 — English, with graph</p>
+<p><strong>Image 4 — English, with graph</strong></p>
 <div class="pullquote"><p>Power Wave &lt; tenniswithouttalent.com/ PowerWave
 &gt; Max Power
 &gt;
@@ -1612,9 +1621,9 @@ Transcription</p>
 &gt;</p>
 <p>- The Power is negative before loading the Lock phase causing the hips to reverse-rotate creating the backswing proper</p></div>
 <h2 id="analysis-what-youre-actually-studying">Analysis — what you're actually studying</h2>
-<p>This is not generic note-taking. It's a direct copy of the site's model, and the site spells it out almost word-for-word:</p>
+<p><strong>This is not generic note-taking. It's a direct copy of the site's model, and the site spells it out almost word-for-word:</strong></p>
 <div class="pullquote"><p>"Theoretical Forehand Power Wave: Measured at the forearm. The shoulder and hips would see the same wave but would see it earlier... The power is negative before and during the lock phase causing the hips to reverse-rotate creating the backswing proper. The wave also goes negative between the explode and follow-through phases as one puts the brakes on forward acceleration." </p></div>
-<p>The core argument:</p>
+<p><strong>The core argument:</strong></p>
 <ol class="styled-list numbered">
 <li>
 <p>Tennis is not levers. The classic "muscles contract in sequence" model misses timing. You generate energy early in the feet, then <em>propagate</em> it through the body like a wave to the racket.</p>
@@ -1658,7 +1667,7 @@ Right column:</p>
 &gt; Và cùng chuyển động thì tạo ra một động lực (conservation of force dynamics)
 &gt; Khi liên kết bị thay đổi đột ngột - (đứt hay vặn cong) sẽ giải phóng ra lực</p></div>
 <p>Translation: parts in a closed circle or an open arc, when linked and moving together, create momentum. When that link is suddenly changed, broken or bent, it releases force. The big scribbled circle with inward arrows is the visual.</p>
-<p>Image 2 — Kinetic Chain vs Power Wave</p>
+<p><strong>Image 2 — Kinetic Chain vs Power Wave</strong></p>
 <div class="pullquote"><p>"Kinetic Chain" : Vs "Power Wave"
 &gt;
 &gt;</p>
@@ -1671,7 +1680,7 @@ Right column:</p>
 &gt; Move in 3D
 &gt; Bi-directional → + Back + Forth → + Up → Down
 &gt; Wacky Waving Inflatable Arm or Tube Man or Air Dancer or Sky D</p></div>
-<p>Image 3 — how to use the body</p>
+<p><strong>Image 3 — how to use the body</strong></p>
 <div class="pullquote"><p>CÁCH DÙNG NON-DOMINANT ARM
 &gt;
 &gt;</p>
@@ -1701,7 +1710,7 @@ Right column:</p>
 <p>The circle is how you conserve it. Image 1 is pure tensegrity logic. If body parts form a closed circle or even a loaded arc and stay connected while moving, momentum is conserved inside the system. No leak. The moment you suddenly break or bend that link, the stored energy is released. That is exactly why your earlier notes insist on "stopping the shoulders" — you break the proximal link on purpose, so the distal end (forearm, racket) explodes. It is also why the wave must go negative: you have to reload the circle.</p>
 </li>
 <li>
-<p>You need a frame to carry a wave. Image 3 gives the practical fixes:</p>
+<p><strong>You need a frame to carry a wave. Image 3 gives the practical fixes:</strong></p>
 </li>
 <li>
 <p>Tuck the non-dominant arm to the chest. You wrote it increases upper-body stiffness. That turns the torso from a loose chain into a rigid diamond-shaped frame, your "load bearing arch." A wave travels cleanly through a stiff structure, it dissipates in a soft one.</p>
@@ -1714,7 +1723,7 @@ Right column:</p>
 <p>Vision is timed like the wave. "Laser Line" scanning, then "Saccade Vision = drop eyes after ball leaves opponent strings." Then focus on the bounce, eliminate noise. That is not casual advice. You are sequencing perception to match the wave delay: wide scan early, saccade to pick up trajectory, then narrow focus on the one variable that predicts everything else — the bounce. It reduces cognitive load so the motor wave can run uninterrupted.</p>
 </li>
 </ol>
-<p>Put together, your model is now three layers:</p>
+<p><strong>Put together, your model is now three layers:</strong></p>
 <ul class="styled-list">
 <li>Physics layer: 3D bi-directional wave, not just rotation</li>
 <li>Structural layer: connected circles/arcs that store and release</li>
@@ -1725,8 +1734,8 @@ Right column:</p>
 <p>Why does tucking the non-dominant arm actually stiffen the torso instead of just helping balance?How would I train the saccade-to-bounce vision sequence you found in my notes?What if I applied the inflatable tube man idea to my serve — would the wave still work with a tossing arm?</p>
 <p>merge both sets into a single 1-page sequence</p>
 <p>May 30, 2026</p>
-<p>Done — I merged all seven pages of notes into one tight sequence.</p>
-<p>It keeps your original language (including the Vietnamese terms Dòng Xoắn ốc, Sóng Hài, Vòng cung chịu lực) but orders it as a usable flow:</p>
+<p><strong>Done — I merged all seven pages of notes into one tight sequence.</strong></p>
+<p><strong>It keeps your original language (including the Vietnamese terms Dòng Xoắn ốc, Sóng Hài, Vòng cung chịu lực) but orders it as a usable flow:</strong></p>
 <ol class="styled-list numbered">
 <li>Core idea → 2. Wave phases → 3. Three harmonies → 4. Physics → 5. Circle principle → 6. Chain vs Wave → 7. Build the frame → 8. Footwork timing → 9. Eyes and head → 10. Critical micro-phase</li>
 </ol>
@@ -1742,28 +1751,28 @@ Right column:</p>
 <li>LOADED = press on the racquet handle &amp; move up to the right side</li>
 <li>FH Volley (right sketch) / BH Volley (left sketch)[Tensegrity]</li>
 </ul>
-<p>Right margin:</p>
+<p><strong>Right margin:</strong></p>
 <ul class="styled-list">
 <li>When volley, only slightly pull back &amp; there's already the "impulse"</li>
 </ul>
-<p>Bottom half:</p>
+<p><strong>Bottom half:</strong></p>
 <ul class="styled-list">
 <li>BHV: R Shoulder moves inside / Elbow moves out</li>
 <li>Left Shoulder &amp; Right Shoulder move inside</li>
 <li>Cradle = Om Dong Dua Vot (blue ink)</li>
 </ul>
 <h3 id="page-2-how-to-create-big-shot-with-compact-stroke">Page 2 — "how to create big shot with compact stroke"</h3>
-<p>Header: To generate high speed:</p>
+<p><strong>Header: To generate high speed:</strong></p>
 <ul class="styled-list">
 <li>Very brief take back to create momentum &amp; counter force with the hop</li>
 <li>Hip moves forward</li>
 </ul>
-<p>Low ball:</p>
+<p><strong>Low ball:</strong></p>
 <ul class="styled-list">
 <li>Handle Low ball</li>
 <li>Close Racquet Face &amp; Top Points down</li>
 </ul>
-<p>High ball:</p>
+<p><strong>High ball:</strong></p>
 <ul class="styled-list">
 <li>Handle High Ball</li>
 <li>Close Racquet Face &amp; Top Points UP</li>
@@ -1772,12 +1781,12 @@ Right column:</p>
 <ul class="styled-list">
 <li>Footwork: 1 planted (flat foot), 1 support (on toes)</li>
 </ul>
-<p>Middle:</p>
+<p><strong>Middle:</strong></p>
 <ul class="styled-list">
 <li>1 foot planted / 1 foot Kicks back — Forehand</li>
 <li>1 foot Kicks back / 1 foot planted — Backhand</li>
 </ul>
-<p>Bottom:</p>
+<p><strong>Bottom:</strong></p>
 <ul class="styled-list">
 <li>RoS Stay low</li>
 <li>Forehand</li>
@@ -1833,7 +1842,7 @@ Right column:</p>
 <p>Because it's a figure-8, there is no stop. The left shoulder traces 1→2→1, the right traces 3→4→3, in rhythm. That's exactly how salsa dancers keep momentum — and how pros keep their upper body flowing between shots instead of resetting stiffly.</p>
 <hr/>
 <h3 id="the-big-picture">The big picture</h3>
-<p>You're not learning strokes, you're learning a loading system:</p>
+<p><strong>You're not learning strokes, you're learning a loading system:</strong></p>
 <ol class="styled-list numbered">
 <li>Pre-tension the whole body (tensegrity/cradle)</li>
 <li>Use a tiny takeback + hop to store elastic energy</li>
@@ -1842,17 +1851,16 @@ Right column:</p>
 <li>Control height with racquet-face angle, not swing size</li>
 </ol>
 <p>It reads like a hybrid of Oscar Wegner's Modern Tennis Methodology ("find, feel, finish," compact strokes), Vietnamese coaching cues, and dance-based body awareness. It's sophisticated — and it will feel weird at first because it asks you to trust the preload instead of muscling the ball.</p>
-<p>If you want to test it, try this sequence next time on court:</p>
+<p><strong>If you want to test it, try this sequence next time on court:</strong></p>
 <ul class="styled-list">
 <li>Volley drill: press handle with off-hand, shoulders in, only 6-inch pull back</li>
 <li>Groundstroke: hop-load, hip forward, racquet tip down on low balls</li>
 <li>Footwork: hit 10 forehands keeping left foot flat, right toe kicking back behind you</li>
 </ul>
-<p>Want me to turn these scribbles into a clean one-page cheat sheet you can keep in your bag?</p>
-<p>Yes</p>
+<p>Want me to turn these scribbles into a clean one-page cheat sheet you can keep in your bag? Yes.</p>
 <p>May 30, 2026</p>
 <p>Done — I turned your four pages of scribbles into a clean, one-page system you can actually use on court.</p>
-<p>It's organized exactly how you wrote it:</p>
+<p><strong>It's organized exactly how you wrote it:</strong></p>
 <ul class="styled-list">
 <li>Tensegrity &amp; Volley — preload the handle, shoulders in, cradle</li>
 <li>Compact Big Shot — brief takeback + hop, hip first, tip-down for low, tip-up for high</li>
@@ -1863,7 +1871,7 @@ Right column:</p>
 <p><img alt="Image attachment" src="https://scontent-sjc6-1.xx.fbcdn.net/m1/v/t0.71334-6/An-lEzDd8whuPtWyjx69xaldPIPDKiRV9SgPemVFw9EeiZnKk17r90yVKSdXVumW4BPPBhBhZEmWweL0TGRqJgUOtgss4j3jZJGhZ-MT27Q?_nc_gid=yHRComZIGvhHdw0HEZdcfA&amp;_nc_oc=AdqECt4gw8hgrRdEwv7VUi8glZH_RlmtmRltrmsS0Lo-aKN8khFJGUiyo0GWfLf0p-M&amp;ccb=10-5&amp;oh=00_Af_t-bhlSsYr9etqwtCMeoJua4_tWXWcIJ_C7UQzc_7MkA&amp;oe=6A2DF9D6&amp;_nc_sid=5962a6"/></p>
 <p>Read the text in the pic and analyze</p>
 <p>May 30, 2026</p>
-<p>Here's what your notebook page says — transcribed exactly as written:</p>
+<p><strong>Here's what your notebook page says — transcribed exactly as written:</strong></p>
 <p>Top left</p>
 <ul class="styled-list">
 <li>Optimal Arm Configuration</li>
@@ -1879,7 +1887,7 @@ Right column:</p>
 <li>Ulnar deviation</li>
 <li>≠ tensed Straight arm</li>
 </ul>
-<p>Bottom</p>
+<p><strong>Bottom</strong></p>
 <ul class="styled-list">
 <li>This is applicable in both serve &amp; forehand ground stroke.</li>
 <li>Advantages: + Spacing between racket &amp; body</li>
@@ -1957,13 +1965,13 @@ How to feel it in practice</p>
 <p>May 30, 2026</p>
 <p>Because "tight" feels like control, but in tennis it actually steals it.</p>
 <p>Think of the wrist not as a steering wheel you lock straight, but as the final hinge in a whip. Coaches say "loose" because they want you to stop trying to muscle the last 5% of the swing with the smallest, fastest-fatiguing muscles in your body.</p>
-<p>Here is the paradox unpacked:</p>
+<p><strong>Here is the paradox unpacked:</strong></p>
 <ol class="styled-list numbered">
 <li>You cannot steer during contact</li>
 </ol>
 <hr/>
 <p>Ball on strings lasts about 4 milliseconds. No human can consciously adjust the face in that window. Control has to come from a repeatable <em>path</em> into the ball, not from holding the racket rigid.</p>
-<p>When you grip tight and lock the wrist, you:</p>
+<p><strong>When you grip tight and lock the wrist, you:</strong></p>
 <ul class="styled-list">
 <li>shorten the swing arc</li>
 <li>fire forearm muscles early, which slows the racket</li>
@@ -1976,7 +1984,7 @@ How to feel it in practice</p>
 <hr/>
 <p>Your note says "maintain a loose wrist to keep controlled tension in arm" — that's the key. The stability does not disappear, it just shifts to bigger joints.</p>
 <p>Research on forehand phases shows muscle co-activation changes through the stroke, with the body creating joint stability during direction changes and deceleration, not by clamping the wrist the whole time. In serves, the biggest speeds come from pelvis, trunk, and upper arm rotation, not from wrist effort. </p>
-<p>So you get:</p>
+<p><strong>So you get:</strong></p>
 <ul class="styled-list">
 <li>shoulder and torso holding the shape (your "C" in the drawing)</li>
 <li>elbow staying bent for spacing</li>
@@ -1994,7 +2002,7 @@ How to feel it in practice</p>
 <li>What "loose" actually feels like</li>
 </ol>
 <hr/>
-<p>It is not floppy. Try this self-check:</p>
+<p><strong>It is not floppy. Try this self-check:</strong></p>
 <ul class="styled-list">
 <li>Hold your racket with a 3 out of 10 grip pressure. Someone should be able to tug it out with a light pull.</li>
 <li>Swing slowly. Your wrist should hinge back and down (ulnar deviation) on the backswing without you forcing it.</li>
@@ -2004,8 +2012,8 @@ How to feel it in practice</p>
 <p>Coaches teach loose wrist not to make you wild, but to take the steering job away from the tiny muscles that shake, and give it to the big kinetic chain that repeats. The wrist stays soft so the rest of your body can stay in control.</p>
 <p>merge both sets into a single 1-page sequence</p>
 <p>May 30, 2026</p>
-<p>Done — merged your notebook sketch with the loose-wrist explanation into one clean reference sheet.</p>
-<p>It keeps both sets together on a single page:</p>
+<p><strong>Done — merged your notebook sketch with the loose-wrist explanation into one clean reference sheet.</strong></p>
+<p><strong>It keeps both sets together on a single page:</strong></p>
 <ul class="styled-list">
 <li>left side = exactly what you wrote (core idea, ulnar deviation, advantages, the C-shape)</li>
 <li>right side = why loose equals control (the 4ms contact, stability up the chain, lag for spin, and what "loose" should feel like)</li>
@@ -2053,10 +2061,10 @@ Quick analysis</p>
 </ol>
 <p>Together with your first page, the story is complete: Page 1 builds the springy arm shape, Page 2 supplies the engine (legs → rotation) and the clean exit (alignment → wrap).</p>
 <hr/>
-<p>I turned this one into the same 1-page format:</p>
+<p><strong>I turned this one into the same 1-page format:</strong></p>
 <p>**</p>
 <p>**</p>
-<p>It has:</p>
+<p><strong>It has:</strong></p>
 <ul class="styled-list">
 <li>left column = your exact principles (GRF, L=ω×R, α&lt;180°, wrap)</li>
 <li>right column = what each means in plain language, plus common mistakes like "spinning without loading" or "stopping at contact"</li>
@@ -2079,20 +2087,19 @@ Quick analysis</p>
 </li>
 </ul>
 <p>Wrist dorsiflexion (extension) is actually a big contributor to upward racket velocity on table tennis backhands, which is why coaches use it deliberately to lift backspin. Flip it to flexion and you get the opposite: a lower, more penetrating trajectory.</p>
-<p>That's why your flexed, aligned position feels so reliable:</p>
+<p><strong>That's why your flexed, aligned position feels so reliable:</strong></p>
 <ul class="styled-list">
 <li>the face is pre-closed, so you don't have to time a last-moment snap</li>
 <li>the forearm drives the racket, not the little wrist muscles</li>
 <li>the ball stays under the net height ceiling and still lands deep</li>
 </ul>
 <p>It's the same idea as your tennis wrap and straight-arm alignment: build the structure first, then let the big rotation do the work. The wrist just holds the angle.</p>
-<p>Want me to make a one-page ping pong version of this, with the flexed vs extended face angles and a simple checkpoint for forehand topspin vs block?</p>
-<p>yes</p>
+<p>Want me to make a one-page ping pong version of this, with the flexed vs extended face angles and a simple checkpoint for forehand topspin vs block? yes.</p>
 <p>May 30, 2026</p>
-<p>Here you go — a one-page ping pong companion to your tennis notes.</p>
+<p><strong>Here you go — a one-page ping pong companion to your tennis notes.</strong></p>
 <p>**</p>
 <p>**</p>
-<p>It keeps your observation front and center:</p>
+<p><strong>It keeps your observation front and center:</strong></p>
 <ul class="styled-list">
 <li>Flexed = closed face = ball dips in</li>
 <li>Extended = open face = lift / risk of long</li>
@@ -2106,13 +2113,13 @@ Quick analysis</p>
 <p>This is a coach's notebook page on how to hold a volley — not swing it. It's messy handwriting, but the idea is sharp.
 Transcription</p>
 <hr/>
-<p>Right side is a sketch of a hand on a racquet handle, with three red circles:</p>
+<p><strong>Right side is a sketch of a hand on a racquet handle, with three red circles:</strong></p>
 <ul class="styled-list">
 <li>Thumb (top left of handle)</li>
 <li>Index Finger (top right)</li>
 <li>a third circle in the palm/heel of the hand</li>
 </ul>
-<p>Left side text:</p>
+<p><strong>Left side text:</strong></p>
 <div class="pullquote"><p>Volley:
 &gt; Grip: Palm is _not_ 100% compressed on the handle
 &gt; = allow a mini-movement of the racquet handle inside the grip
@@ -2201,7 +2208,7 @@ Loose doesn't mean floppy</p>
 <p>If you want to test it, hit ten volleys squeezing hard, then ten where you can barely feel the handle in your palm but your thumb is still pressing the back bevel. The loose ones will sit lower, with that soft backspin your note calls "take the pace away," because you finally let the racquet do the absorbing instead of your arm.</p>
 <p>merge both sets into a single 1-page sequence</p>
 <p>May 31, 2026</p>
-<p>Done — merged both into a clean, printable one-pager.</p>
+<p><strong>Done — merged both into a clean, printable one-pager.</strong></p>
 <p>It combines your handwritten notes with the "why loose beats tight" breakdown, plus the 3-step sequence at the bottom so you can take it to court.</p>
 <p>It's built to fit on a single A4 page: left side is your original notebook photo + clean transcription, right side is the physics/feel/tension explanation, and the footer gives you SET → MEET → SLICE. Save it to your phone or print it for your bag — no extra fluff, just the sequence you wrote, with the reasoning behind it.</p>
 <p>Conversation title</p>
@@ -2218,7 +2225,7 @@ Loose doesn't mean floppy</p>
 <li>Neutral</li>
 <li>Backwards</li>
 </ul>
-<p>Vietnamese (same idea):</p>
+<p><strong>Vietnamese (same idea):</strong></p>
 <ul class="styled-list">
 <li><em>Vị trí của đầuở trên thân người</em></li>
 <li><em>Ngả về trước</em> — lean forward</li>
@@ -2249,7 +2256,7 @@ Loose doesn't mean floppy</p>
 <blockquote class="pullquote">
 <p>roughly: "It will decide the balance and what the body can do next; then it adjusts and re-learns balance."</p>
 </blockquote>
-<p>Right side — the loop</p>
+<p><strong>Right side — the loop</strong></p>
 <ul class="styled-list">
 <li>⇒ Vestibular ⇒ VOR</li>
 <li>⇒ Eyes ⇒ Brain ⇒ Body parts</li>
@@ -2267,7 +2274,7 @@ Loose doesn't mean floppy</p>
 <p>Vestibular → VOR → Eyes. The vestibulo-ocular reflex is automatic: it moves your eyes opposite to head motion so the world stays stable. It "helps maintain clear vision and balance during head or body movement".</p>
 </li>
 <li>
-<p>Eyes → Brain → Body. Once the VOR tries to lock gaze, the brain compares:</p>
+<p><strong>Eyes → Brain → Body. Once the VOR tries to lock gaze, the brain compares:</strong></p>
 </li>
 <li>
 <p>vestibular (head tilt)</p>
@@ -2275,7 +2282,7 @@ Loose doesn't mean floppy</p>
 <li>visual (do I still see the horizon?)</li>
 <li>proprioceptive (what are my ankles/knees doing?)</li>
 </ol>
-<p>The output is a postural command — in your note, "Body parts, e.g. legs."</p>
+<p><strong>The output is a postural command — in your note, "Body parts, e.g. legs."</strong></p>
 <ol class="styled-list numbered">
 <li>Your key observation: forward tilt = no more horizon. When you drop the nose, the eyes pitch down. The VOR still tries to stabilize, but the visual reference (horizon line) disappears from the upper visual field. Without that horizon, the brain loses its fastest verticality cue.
 
@@ -2312,7 +2319,7 @@ Chapter: Head Position Is the First Balance Decision</p>
 <p>It fails in two ways with sustained forward tilt. First, the eyes hit their orbital limit — they cannot keep looking up forever while the chin stays down. Second, the visual input changes. The horizon, the strongest cue for verticality, leaves the upper visual field. The brain now gets a vestibular signal saying "pitched" and a visual signal saying "no horizon to check against."</p>
 <p>That mismatch is what your note calls "forward tilt = no more horizon." It's not poetic, it's literal. Lose the horizon and the brain down-weights vision, up-weights vestibular and proprioception.</p>
 <h3 id="4-eyes-to-brain-the-integration-bottleneck">4. Eyes to brain — the integration bottleneck</h3>
-<p>Your arrow "Eyes → Brain" is where the decision happens. The brainstem and cerebellum compare three maps:</p>
+<p><strong>Your arrow "Eyes → Brain" is where the decision happens. The brainstem and cerebellum compare three maps:</strong></p>
 <ol class="styled-list numbered">
 <li>vestibular: head is down</li>
 <li>visual: ground texture moving, no stable horizon</li>
@@ -2322,13 +2329,13 @@ Chapter: Head Position Is the First Balance Decision</p>
 <p>It is not laziness. Locking the knees reduces degrees of freedom, which reduces the amount of sensory processing needed. It feels safer, but it makes you less able to absorb a perturbation, which is why beginners on skis or people with vestibular loss look rigid.</p>
 <p>Your middle Vietnamese sentence describes this learning loop: <em>Sẽ quyết định sự cân bằng về khả năng cơ thể sẽ làm gì tiếp đó thì điều chỉnh và tập lại cân bằng.</em> The head position predicts the next motor set, then the system adjusts and re-learns balance. That is sensorimotor reweighting in plain language.</p>
 <h3 id="5-brain-to-body-parts-the-output-you-feel">5. Brain to body parts — the output you feel</h3>
-<p>The final arrow to "legs" is the observable part. With neutral head:</p>
+<p><strong>The final arrow to "legs" is the observable part. With neutral head:</strong></p>
 <ul class="styled-list">
 <li>VOR gain is normal, eyes stay on horizon</li>
 <li>brain trusts vision, permits knee and ankle flexion</li>
 <li>you get fluid, anticipatory adjustments</li>
 </ul>
-<p>With sustained forward head:</p>
+<p><strong>With sustained forward head:</strong></p>
 <ul class="styled-list">
 <li>VOR is working overtime but visual anchor is gone</li>
 <li>brain reduces trust in vision, increases co-contraction</li>
@@ -2336,7 +2343,7 @@ Chapter: Head Position Is the First Balance Decision</p>
 </ul>
 <p>This is why coaches cue "head up" before "bend your knees." You cannot get the knees until the head gives the brain permission.</p>
 <h3 id="6-why-this-matters-beyond-the-notebook">6. Why this matters beyond the notebook</h3>
-<p>The same loop shows up everywhere:</p>
+<p><strong>The same loop shows up everywhere:</strong></p>
 <ul class="styled-list">
 <li>Rehab: gaze-stabilization exercises (×1, ×2 VOR training) are prescribed precisely to restore the head-eye link so patients stop locking their legs.</li>
 <li>Sport: a snowboarder looking at the board loses horizon, stiffens, catches an edge. A fighter dropping the chin to watch feet loses peripheral vision and balance.</li>
@@ -2346,9 +2353,9 @@ Chapter: Head Position Is the First Balance Decision</p>
 <p>Change the first node — bring the nose back to neutral, keep the horizon in the upper third of your visual field — and the rest of the chain reorganizes without you having to think "bend knees."</p>
 <p>That is the practical takeaway from your one page: balance training starts at the skull, not the feet.</p>
 <p>Why does losing the horizon make my brain lock my knees instead of bending them?What if I train with a forward head on purpose — would that build better balance?Help me turn this loop into a 5-minute daily drill I can do at home</p>
-<p>What if I train with a forward head on purpose — would that build better balance?</p>
+<p><strong>What if I train with a forward head on purpose — would that build better balance?</strong></p>
 <p>May 31, 2026</p>
-<p>Yes — but only if you treat forward head as a weighted vest, not as your default posture.</p>
+<p><strong>Yes — but only if you treat forward head as a weighted vest, not as your default posture.</strong></p>
 <p>Training with your nose down on purpose takes away the visual crutch you drew on the right side of your page — "forward tilt = no more horizon." That forces the loop you mapped (Vestibular → VOR → Eyes → Brain → Body) to work without its fastest input. Done deliberately, that is exactly how vestibular rehab works.</p>
 <h3 id="what-actually-improves">What actually improves</h3>
 <ol class="styled-list numbered">
@@ -2364,7 +2371,7 @@ Chapter: Head Position Is the First Balance Decision</p>
 </ol>
 <p>So if your sport or life requires looking down — wrestling, BJJ, mountain biking, plumbing under a sink — brief, controlled forward-head practice makes you less panicky when the horizon is gone.</p>
 <h3 id="what-gets-worse-if-you-live-there">What gets worse if you live there</h3>
-<p>Your note already flagged the cost: "no bend of the knees." With chronic forward head:</p>
+<p><strong>Your note already flagged the cost: "no bend of the knees." With chronic forward head:</strong></p>
 <ul class="styled-list">
 <li>The VOR is still trying to stabilize vision during head movements by adjusting eye muscles, but it hits its limit. Dynamic visual acuity drops, so you miss fast cues.</li>
 <li>The brain chooses stiffness over fluidity. Healthy people actually show <em>more</em> variable head movements during gaze tasks than vestibular patients — higher sample entropy means more adaptability, not less. Training yourself to lock the head and knees trains the opposite of adaptability.</li>
@@ -2375,7 +2382,7 @@ Chapter: Head Position Is the First Balance Decision</p>
 <p>Think 80/20.</p>
 <p>80% of balance work: neutral head, horizon available. This is where you build the VOR gain and ankle strategy you want to keep.</p>
 <p>20%: deliberate horizon removal. Keep it short, progressive, and measurable.</p>
-<p>A simple progression you can steal from clinic protocols:</p>
+<p><strong>A simple progression you can steal from clinic protocols:</strong></p>
 <ol class="styled-list numbered">
 <li>Seated pitch holds — sit, tuck chin 20° down, hold 30 seconds while breathing. No sway allowed. 3 reps. This is habituation, not strength.</li>
 <li>Standing weight shifts, nose down — feet hip-width, pitch head, shift weight slow side-to-side. Keep knees soft on purpose — override the lock reflex you noted. 1 minute.</li>
@@ -2407,7 +2414,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 </ol>
 <p>Vì vậy nếu môn thể thao hay công việc của bạn buộc phải nhìn xuống — vật, BJJ, xe đạp địa hình, sửaống nước dưới bồn rửa — thì những buổi tập ngắn, có kiểm soát với đầu cúi sẽ giúp bạn bớt hoảng khi mất đường chân trời.</p>
 <h3 id="ieu-te-i-neu-ban-song-luon-trong-tu-the-o">Điều tệ đi nếu bạn sống luôn trong tư thế đó</h3>
-<p>Ghi chú của bạn đã chỉ ra cái giá: "no bend of the knees" (không gập gối). Với đầu cúi mãn tính:</p>
+<p><strong>Ghi chú của bạn đã chỉ ra cái giá: "no bend of the knees" (không gập gối). Với đầu cúi mãn tính:</strong></p>
 <ul class="styled-list">
 <li>VOR vẫn cố gắng ổn định thị giác khi đầu di chuyển bằng cách điều chỉnh cơ mắt, nhưng nó chạm giới hạn. Thị lực động giảm, bạn bỏ lỡ tín hiệu nhanh.</li>
 <li>Não chọn cứng thay vì linh hoạt. Người khỏe mạnh thực ra có chuyển động đầu <em>biến thiên nhiều hơn</em> khi làm nhiệm vụ nhìn so với bệnh nhân tiền đình — entropy mẫu cao hơn nghĩa là thích nghi tốt hơn, không phải kém hơn. Tự tập để khóa đầu và khóa gối là bạn đang tập ngược lại với khả năng thích nghi.</li>
@@ -2418,7 +2425,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <p>Nghĩ theo tỉ lệ 80/20.</p>
 <p>80% tập thăng bằng: đầu trung tính, còn đường chân trời. Đây là lúc bạn xây độ lợi VOR và chiến lược cổ chân mà bạn muốn giữ.</p>
 <p>20%: chủ động bỏ đường chân trời. Giữ ngắn, tăng dần, và đo được.</p>
-<p>Một tiến trình đơn giản bạn có thể mượn từ phòng khám:</p>
+<p><strong>Một tiến trình đơn giản bạn có thể mượn từ phòng khám:</strong></p>
 <ol class="styled-list numbered">
 <li>Giữ cúi khi ngồi — ngồi, gập cằm xuống khoảng 20 độ, giữ 30 giây trong khi thở đều. Không lắc lư. 3 lần. Đây là thích nghi, không phải tập sức.</li>
 <li>Dịch trọng lượng đứng, mũi chúc xuống — chân rộng bằng hông, cúi đầu, dịch chậm qua lại hai bên. Cốý giữ gối mềm — vượt qua phản xạ khóa gối mà bạn đã ghi. 1 phút.</li>
@@ -2444,7 +2451,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <li>Neutral</li>
 <li>Backwards</li>
 </ul>
-<p>Tiếng Việt (cùng ý):</p>
+<p><strong>Tiếng Việt (cùng ý):</strong></p>
 <ul class="styled-list">
 <li><em>Vị trí của đầuở trên thân người</em></li>
 <li><em>Ngả về trước</em></li>
@@ -2472,7 +2479,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <p><em>đó thì điều chỉnh và tập lại cân bằng</em></p>
 </li>
 </ul>
-<p>Bên phải — vòng lặp</p>
+<p><strong>Bên phải — vòng lặp</strong></p>
 <ul class="styled-list">
 <li>⇒ Vestibular ⇒ VOR</li>
 <li>⇒ Eyes ⇒ Brain ⇒ Body parts</li>
@@ -2513,13 +2520,13 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <p>Không phải lười. Khóa gối giảm bậc tự do, giảm lượng xử lý cảm giác cần thiết. Cảm giác an toàn ngắn hạn, nhưng làm bạn kém hấp thụ nhiễu động.</p>
 <p>Câu tiếng Việt ở giữa mô tả vòng học này: vị trí đầu dự đoán bộ vận động tiếp theo, rồi hệ thống điều chỉnh và học lại thăng bằng. Đó chính là tái cân bằng cảm giác.</p>
 <h3 id="5-nao-toi-cac-bo-phan-co-the-au-ra-ban-cam-nhan">5. Não tới các bộ phận cơ thể — đầu ra bạn cảm nhận</h3>
-<p>Với đầu trung tính:</p>
+<p><strong>Với đầu trung tính:</strong></p>
 <ul class="styled-list">
 <li>Độ lợi VOR bình thường, mắt giữ được chân trời</li>
 <li>não tin vào thị giác, cho phép gập gối và cổ chân</li>
 <li>bạn có điều chỉnh linh hoạt, mang tính dự đoán</li>
 </ul>
-<p>Với đầu cúi kéo dài:</p>
+<p><strong>Với đầu cúi kéo dài:</strong></p>
 <ul class="styled-list">
 <li>VOR làm việc quá sức nhưng mất mốc thị giác</li>
 <li>não giảm tin vào mắt, tăng đồng co cơ</li>
@@ -2544,7 +2551,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <hr/>
 <ul class="styled-list">
 <li>
-<p>0-7s: lỗi “drop wrist” — cổ tay gập xuống, đầu vợt chúc thẳng xuống đất. Có dấu X đỏ.</p>
+<p><strong>0-7s: lỗi “drop wrist” — cổ tay gập xuống, đầu vợt chúc thẳng xuống đất. Có dấu X đỏ.</strong></p>
 </li>
 <li>
 <p>7-11s: đánh thử với lỗi đó → “No Power…”</p>
@@ -2555,7 +2562,7 @@ Có — nhưng chỉ khi bạn xem tư thế cúi đầu như một chiếc áo 
 <li>Lỗi sai: thả cổ tay chúc xuống</li>
 </ul>
 <hr/>
-<p>Nhìn kỹở giây 3-6, bạn sẽ thấy:</p>
+<p><strong>Nhìn kỹở giây 3-6, bạn sẽ thấy:</strong></p>
 <ul class="styled-list">
 <li>Cổ tay phải bị bẻ gập xuống (flexion), lòng bàn tay hướng lên trời</li>
 <li>Đầu vợt thấp hơn cán vợt rất nhiều, gần như chạm đất</li>
@@ -2577,7 +2584,7 @@ Lực phải đi từ chân → hông xoay → thân trên → vai kéo tay → 
 <li>Kỹ thuật đúng: “Instead…”</li>
 </ol>
 <hr/>
-<p>Nhìn từ giây 13-16, cách sửa rất đơn giản nhưng khác hoàn toàn về cảm giác:</p>
+<p><strong>Nhìn từ giây 13-16, cách sửa rất đơn giản nhưng khác hoàn toàn về cảm giác:</strong></p>
 <ul class="styled-list">
 <li>Cổ tay trung tính, hơi ngửa nhẹ (extension): không gập xuống, không bẻ lên quá. Đầu vợt luôn cao hơn hoặc ngang cổ tay trong suốt take-back.</li>
 <li>Take-back ngang, không xuống: hai mũi tên xanh trong video chỉ rõ — vợt đi ra sau theo mặt phẳng ngang, giống như bạn đang đút vợt vào túi quần sau.</li>
@@ -2620,7 +2627,7 @@ Lực phải đi từ chân → hông xoay → thân trên → vai kéo tay → 
 <li>Cách tự sửa trên sân</li>
 </ol>
 <hr/>
-<p>Bạn không cần đổi grip hay mua vợt mới, chỉ cần sửa cảm giác ở take-back:</p>
+<p><strong>Bạn không cần đổi grip hay mua vợt mới, chỉ cần sửa cảm giác ở take-back:</strong></p>
 <ol class="styled-list numbered">
 <li>Shadow với điểm dừng: xoay vai, đưa vợt ra sau và dừng lại kiểm tra — đầu vợt có cao hơn cổ tay không? Lòng bàn tay cầm vợt hơiúp xuống đất là đúng.</li>
 <li>Cue “đút túi sau”: tưởng tượng bạn đang kéo cán vợt đút vào túi quần sau bên phải, không phải thả vợt xuống đất.</li>
@@ -2735,7 +2742,7 @@ Phần bổ sung: Forehand của Rublev – tại sao nó mạnh mà không cầ
 <li>Dantian không phải "điểm", mà là hệ điều áp</li>
 </ol>
 <hr/>
-<p>Trong giải phẫu vận động, lower dantian trùng gần như hoàn hảo với vùng tạo Intra-Abdominal Pressure:</p>
+<p><strong>Trong giải phẫu vận động, lower dantian trùng gần như hoàn hảo với vùng tạo Intra-Abdominal Pressure:</strong></p>
 <ul class="styled-list">
 <li>cơ hoành ở trên</li>
 <li>sàn chậu ở dưới</li>
@@ -2750,7 +2757,7 @@ Phần bổ sung: Forehand của Rublev – tại sao nó mạnh mà không cầ
 </ol>
 <hr/>
 <p>Mingmen ở L2-L3 chính là nơi posterior oblique sling và thoracolumbar fascia giao nhau. Khi bạn "mở mingmen", lưng dưới không ưỡn cũng không gù, mà nở ngang ra sau như một quả bóng nhỏ.</p>
-<p>Tác dụng cơ học:</p>
+<p><strong>Tác dụng cơ học:</strong></p>
 <ul class="styled-list">
 <li>giữ pelvis không bị "chết" khi xoay</li>
 <li>cho phép hip-shoulder separation thật sự, vì cột sống có thể xoắn đàn hồi</li>
@@ -2763,7 +2770,7 @@ Phần bổ sung: Forehand của Rublev – tại sao nó mạnh mà không cầ
 </ol>
 <hr/>
 <p>COG không cố định ở rốn. Nó di chuyển mỗi mili-giây. Novak Djokovic, Roger Federer, Carlos Alcaraz giỏi không phải vì họ giữ thấp mãi, mà vì họ điều khiển vector rơi của COG cực chuẩn.</p>
-<p>Chuỗi trong forehand:</p>
+<p><strong>Chuỗi trong forehand:</strong></p>
 <ul class="styled-list">
 <li>split → COG sink thẳng xuống giữa hai chân</li>
 <li>unit turn → COG dồn vào mép ngoài bàn chân sau</li>
@@ -2772,12 +2779,12 @@ Phần bổ sung: Forehand của Rublev – tại sao nó mạnh mà không cầ
 <p>Khi COG đi đúng, ground reaction force đi xuyên qua dantian rồi bật ra mingmen, bạn không cần dùng tay bù.
 Khi 3 lớp chồng khít</p>
 <hr/>
-<p>Bạn mô tả rất chuẩn. Mình chỉ thêm cơ chế thần kinh:</p>
+<p><strong>Bạn mô tả rất chuẩn. Mình chỉ thêm cơ chế thần kinh:</strong></p>
 <p>Dantian gather → tạo IAPổn định trục<br/>
 Mingmen expand → tạo độ đàn hồi fascia phía sau<br/>
 COG project → tạo hướng lực xuống đất và phản lực lên</p>
-<p>Kết quả là thứ nội gia gọi là "fajin", còn biomechanics gọi là proximal-to-distal sequencing với pre-stretch tốiưu. Andrey Rublev không hề "đánh mạnh", anhấy chỉ thả COG vào chân phải, để dantian xoay, mingmen bật ra, tay chỉ là đầu roi.</p>
-<p>Dấu hiệu bạn đang làm đúng trên sân sẽ y hệt bạn liệt kê:</p>
+<p>Kết quả là thứ nội gia gọi là "fajin", còn biomechanics gọi là proximal-to-distal sequencing với pre-stretch tối ưu. Andrey Rublev không hề "đánh mạnh", anhấy chỉ thả COG vào chân phải, để dantian xoay, mingmen bật ra, tay chỉ là đầu roi.</p>
+<p><strong>Dấu hiệu bạn đang làm đúng trên sân sẽ y hệt bạn liệt kê:</strong></p>
 <ul class="styled-list">
 <li>chân ăn đất nhưng gối mềm</li>
 <li>bụng dưới alive, không cứng</li>
@@ -2786,21 +2793,21 @@ COG project → tạo hướng lực xuống đất và phản lực lên</p>
 </ul>
 <h2 id="loi-pho-bien-ban-neu-rat-quan-trong">Lỗi phổ biến bạn nêu rất quan trọng</h2>
 <p>"Siết abs" giết cả 3 lớp cùng lúc. Khi rectus abdominis gồng, cơ hoành bị khóa lên cao → mất IAP, thoracolumbar fascia bị kéo căng trước → mingmen đóng, pelvis bị kéo về trước → COG không thể sink. Lúc đó bạn buộc phải đánh bằng vai-tay, đúng kiểu "đứt đoạn".</p>
-<p>Cách sửa không phải thả lỏng hoàn toàn, mà là chuyển từ "brace" sang "breathe-pressurize":</p>
+<p><strong>Cách sửa không phải thả lỏng hoàn toàn, mà là chuyển từ "brace" sang "breathe-pressurize":</strong></p>
 <ol class="styled-list numbered">
 <li>hít mũi 70% vào bụng dưới và hai bên sườn</li>
 <li>giữ nhẹáp lực khi xoay, không nín thở</li>
 <li>thở ra chậm qua miệng đúng lúc contact</li>
 </ol>
 <h2 id="bai-tap-gop-3-lop-cho-tennis">Bài tập gộp 3 lớp cho tennis</h2>
-<p>Thử 2 phút trước khi đánh:</p>
+<p><strong>Thử 2 phút trước khi đánh:</strong></p>
 <ul class="styled-list">
 <li>Đứng athletic base như Rublev, hai tayôm bóng medicine nhẹ trước dantian. Hít vào, cảm nhận bụng nở 360 độ, lưng dưới đẩy nhẹ ra sau (mingmen). Thở ra, xoay chậm sang phải mà không để bóng rơi, giữ COGở giữa bàn chân.</li>
 <li>Sang forehand shadow: khi unit turn, nghĩ "dantian kéo, mingmen mở". Khi drop vào slot, để COG rơi vào chân ngoài 0,2 giây rồi mới đẩy lên. Bạn sẽ thấy vợt tự rơi vào đúng vị trí butt-cap-chỉ-bóng mà không cần bẻ cổ tay.</li>
 </ul>
 <p>Làm đúng, cảm giác forehand sẽ chuyển từ "mình vung vợt" sang "đất đẩy mình, thân xoay, tay đi theo" — đúng thứ power effortless mà nội gia nhắm tới.</p>
 <p>Bạn đang muốn mình chuyển framework này thành một progression cụ thể cho serve hay cho di chuyển recovery? Hai tình huống đó dùng mingmen và COG hơi khác nhau.</p>
-<p>Recovery</p>
+<p><strong>Recovery</strong></p>
 <p>May 15, 2026</p>
 <p>Recovery là nơi 3 lớp bạn vừa tách ra thể hiện rõ nhất. Đánh xong ai cũng vung được, nhưng lấy lại thăng bằng để đánh quả tiếp theo mà không tốn chân — đó là lúc dantian dẫn hướng, mingmen bật lại, và COG được chiếu đi chứ không bị kéo lê.</p>
 <p>Trong tennis hiện đại, recovery không phải "chạy về giữa sân". Nó là một cú rơi có kiểm soát.
@@ -2824,13 +2831,13 @@ Recovery nhìn qua 3 lớp</p>
 <li>Roger Federer nổi tiếng vì recovery trông như lướt: ôngấy luôn để COG đi trước chân một nhịp</li>
 </ol>
 <h2 id="chuoi-recovery-cua-mot-forehand-open-stance">Chuỗi recovery của một forehand open-stance</h2>
-<p>Lấy đúng chuyển động của Rublev trong clip làm mẫu:</p>
+<p><strong>Lấy đúng chuyển động của Rublev trong clip làm mẫu:</strong></p>
 <ol class="styled-list numbered">
 <li>Absorption (0:03-0:04 sau contact): tay kết thúc cao, dantian vẫn giữáp lực, mingmen còn mở. COG vẫnở ngoài chân phải. Đừng vội kéo người lại.</li>
 <li>Redirect (nhịp đầu tiên): thở ra nhẹ, dantian xoay bụng về trái, mingmen co lại. Cảm giác như lưng dưới "hút" xương cùng vào giữa. COG bắt đầu rơi chéo về trung tâm, không phải do bạn bước mà do trọng lượng tự đổ.</li>
 <li>Re-acceleration: khi COG rơi qua giữa hai chân, chân trái chạm đất, bạn chỉ cần thả cho phản lực đẩy lên. Không cần bước crossover lớn.</li>
 </ol>
-<p>Nếu làm đúng, bạn sẽ thấy 3 dấu hiệu:</p>
+<p><strong>Nếu làm đúng, bạn sẽ thấy 3 dấu hiệu:</strong></p>
 <ul class="styled-list">
 <li>chân không kêu "cộp" khi phanh</li>
 <li>bụng dưới ấm và kiểm soát, không phải đùi rát</li>
@@ -2843,11 +2850,11 @@ Recovery nhìn qua 3 lớp</p>
 <li>Nhìn về chỗ vừa đánh: đầu quay lại giữ COGở phía sau, bạn không thể rơi về trước được. Mắt phải chuyển sang hướng di chuyển ngay khi bóng rời vợt</li>
 </ol>
 <h2 id="2-drill-e-cam-mingmen-va-cog-trong-recovery">2 drill để cảm mingmen và COG trong recovery</h2>
-<p>Drill 1 – Wall bounce dantian</p>
+<p><strong>Drill 1 – Wall bounce dantian</strong></p>
 <ul class="styled-list">
 <li>Đứng cách tường 1m, đánh forehand shadow xong chạm nhẹ tay trái vào tường ở độ cao ngực. Mục tiêu không phải chạm tường, mà là để bụng dưới kéo người bạn về tường. Nếu phải bước dài mới chạm được, bạn đang dùng chân chứ không phải dantian.</li>
 </ul>
-<p>Drill 2 – Drop and catch</p>
+<p><strong>Drill 2 – Drop and catch</strong></p>
 <ul class="styled-list">
 <li>Sau cú forehand thật, cốý để chân ngoài trụ thêm nửa giây, cảm nhận COG rơi chéo vào trong. Đếm "một" rồi mới cho chân trong chạm đất. Ban đầu sẽ thấy chậm, sau 10 phút bạn sẽ thấy ít bước hơn mà vẫn về kịp.</li>
 </ul>
@@ -2916,7 +2923,7 @@ Lỗi giết recovery sau serve wide</p>
 </ul>
 <p>Khi ba lớp khớp, serve wide không còn là điểm yếu. Bạn sẽ có cảm giác giống như nội gia nói: chân chạm đất, bụng dẫn, lưng bật, người tự trôi về giữa mà không tốn sức.</p>
 <p>Bạn muốn mình mổ chi tiết cho serve wide bên ad court với kick (vì lúc đó landing và hướng rơi của COG khác hẳn slice deuce), hay phân tích cách Carlos Alcaraz dùng recovery này để vào lưới ngay sau serve?</p>
-<p>Alcaraz</p>
+<p><strong>Alcaraz</strong></p>
 <p>May 15, 2026</p>
 <p>Carlos Alcaraz là case study hoàn hảo cho serve wide + recovery bằng nội lực, vì cậuấy không có serve 230km/h như Opelka, nhưng lại thắng điểm giao bóng nhờ cách rơi và bật lại.</p>
 <p>Từ 2024-2025, Alcaraz đổi hẳn động tác giao bóng: nâng chân phải cao hơn, tay trái vươn sâu hơn, và chủý "load hông sau lên trên" thay vì chỉ đẩy lên bằng vai. HLV của cậuấy mô tả đúng trọng tâm: drive the back hip upward to generate spin and control. Đó chính là ngôn ngữ phương Tây của dantian + mingmen. </p>
@@ -2931,7 +2938,7 @@ Lỗi giết recovery sau serve wide</p>
 <li>Mingmen là cái lò xo sau lưng<br/>
  Chân phải nâng cao tạo độ gậpở thắt lưng, thoracolumbar fascia ở L2-L3 bị kéo căng ra sau — đúng nghĩa "mở mingmen". Khi đáp chân trái xuống sau serve wide bên deuce, fascia đó bật ngược lại.</li>
 </ol>
-<p>Bạn sẽ thấy 2 điểm đặc trưng ở Alcaraz mà serve thường không có:</p>
+<p><strong>Bạn sẽ thấy 2 điểm đặc trưng ở Alcaraz mà serve thường không có:</strong></p>
 <ul class="styled-list">
 <li>lưng dưới không bao giờ sụp xuống khi landing. Nó giữ độ cong tự nhiên, như đang "nở"</li>
 <li>cú bật về không đến từ bắp đùi, mà từ một cú nhún rất nhỏở giữa lưng dưới. Nhìn chậm, vai cậuấy hạ xuống 3-4cm rồi nảy lên, chân chỉ đi theo</li>
@@ -2955,7 +2962,7 @@ Lỗi giết recovery sau serve wide</p>
 </ol>
 <p>Toàn bộ quá trình mất khoảng 0,9 giây, nhanh hơn trung bình ATP khoảng 0,2 giây.</p>
 <h3 id="cam-giac-e-tap-theo-alcaraz">Cảm giác để tập theo Alcaraz</h3>
-<p>Đừng bắt chước tốc độ chân. Bắt chước trình tự bên trong:</p>
+<p><strong>Đừng bắt chước tốc độ chân. Bắt chước trình tự bên trong:</strong></p>
 <ul class="styled-list">
 <li>Trước khi toss: hít vào bụng dưới và hai bên sườn, cảm nhận lưng dưới đẩy nhẹ ra sau (mingmen). Giữ cảm giác đó suốt motion.</li>
 <li>Khi vung lên: nghĩ "hông phải lên, rốn sang trái". Đừng nghĩ "đánh mạnh".</li>
@@ -2995,9 +3002,9 @@ Lỗi giết recovery sau serve wide</p>
 <p>Tạo file docx cho tất cả chat, không bỏ đoạn nào, mandatory</p>
 <p>May 15, 2026</p>
 <p>Đã tạo xong file DOCX đầy đủ — mình giữ nguyên 100% nội dung chat từ đầu đến cuối, không cắt đoạn nào, kèm cả 2 hình minh họa Alcaraz.</p>
-<p>Bạn tải vềở đây:</p>
+<p><strong>Bạn tải vềở đây:</strong></p>
 <p><a href="https://l.meta.ai/?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft65.102178-21%2F699543962_1293169169691095_5367593991697829462_n.docx%2FToan_bo_Chat_Phan_tich_Tennis_Noi_cong.docx%3F_nc_cat%3D104%26ccb%3D1-7%26_nc_sid%3D5ac5b8%26_nc_ohc%3DENadXX4JQ2oQ7kNvwE3bfz8%26_nc_oc%3DAdr5kxn0B6SG361eS78Dl5U-p24DcPa4f5OnR9UbdYNREJkyM4IQFhAguHUICHzmDZE%26_nc_zt%3D7%26_nc_ht%3Dcdn.fbsbx.com%26_nc_gid%3Dbu5D-K3ZqVbcBccQ2klybw%26_nc_ss%3D7b2a8%26oh%3D00_Af9lQgBQNjRRdSD2rJdEeghzh6qASe9ri2XMOMhmoRfadw%26oe%3D6A2DF15C&amp;h=AUDWx92WqmDjcAxearaa1i30Ih5Dy6sV8NF9SXrr8FgMZDy3cWL9pE_IJhpwN6V2HU3AGhghSqxdkRXwnmlwGh0OrLzz749_ZwrMxlMBxSDsv-MXt0zlyhMQdvPbwlFKQp_8dgHBUS8EEgBA4rQyKvv98VFyn6VvsmfPng">📎 Toan_bo_Chat_Phan_tich_Tennis_Noi_cong.docx</a></p>
-<p>File gồm:</p>
+<p><strong>File gồm:</strong></p>
 <ul class="styled-list">
 <li>Phân tích forehand drop wrist</li>
 <li>Bổ sung clip Rublev</li>
@@ -3110,7 +3117,7 @@ Lỗi giết recovery sau serve wide</p>
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
 <p>May 18, 2026</p>
 <p>Video này dạy đúng "bí mật" của forehand hiện đại: backswing không phải là kéo vợt ra sau, mà là đưa khuỷu tay ra sau và duỗi thẳng. Đây là thứ bạn thấy ở Carlos Alcaraz, , Rafael Nadal – và HLV trong clip tách nó thành 2 checkpoint rất rõ.</p>
-<p>Dưới đây là phân tích từng bước, kèm hình cắt từ video của bạn:</p>
+<p><strong>Dưới đây là phân tích từng bước, kèm hình cắt từ video của bạn:</strong></p>
 <h3 id="1-bat-au-unit-turn-xoay-than-khong-phai-keo-tay">1. Bắt đầu: Unit Turn (xoay thân), KHÔNG phải kéo tay</h3>
 <p>Sau khi nhận diện bóng, việc đầu tiên là xoay vai-hông, tay không đánh vẫn giữ trên vợt. Bạn thấy Alcaraz ở đây – vợt vẫn trước ngực, thân đã xoay.</p>
 <p><img alt="frames/01_unit_turn_alcaraz.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703083935_2178442772954974_5580951654112389708_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=5brDMwxVlXUQ7kNvwEuqoCp&amp;_nc_oc=AdqWTgYSkMvtxeB3ZWFxSMZj3iU8CsbaT6-kRZ52f08bYPjTYL9ifaJLI6_50jM0WVo&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_ojN3YUYo6h14kKAgLRsg0RF32NnA_Cag1T0B3ncDMQQ&amp;oe=6A2DF517"/></p>
@@ -3125,7 +3132,7 @@ Lỗi giết recovery sau serve wide</p>
 <p>Ngay sau đó: "extend our elbow straight out". Từ vị trí khuỷu tay đã ra sau, bạn duỗi thẳng cánh tay đánh, bàn tay thả lỏng.</p>
 <p><img alt="frames/04_coach_extend.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703165387_1320355796685803_696901602244853045_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=UuW10RaC_1EQ7kNvwFFU9Ug&amp;_nc_oc=AdqVhLx2vWvETCANzwNHVGb6s4V-6RCvPlT5N2Z_9P4WKGmP4wuV0tGIGVl30WE_PB8&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9a_IiGVFj0BpaxsvjxJQa7H5UB2ypG2I8uqchCTr8yEw&amp;oe=6A2DDCA2"/></p>
 <p>frames/04_coach_extend.jpg</p>
-<p>Nadal là ví dụ hoàn hảo cho chuỗi 2 động tác này:</p>
+<p><strong>Nadal là ví dụ hoàn hảo cho chuỗi 2 động tác này:</strong></p>
 <ul class="styled-list">
 <li>Hình 1: khuỷu tay co và kéo ra sau</li>
 </ul>
@@ -3137,7 +3144,7 @@ Lỗi giết recovery sau serve wide</p>
 <p><img alt="frames/06_nadal_straighten.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700624915_915621351524524_3410278374991576484_n.jpg?_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=_roFljwdL24Q7kNvwG_PLQd&amp;_nc_oc=AdpZcdauuuykhmvKsju6ux80GVMCEL6tsM4tI8MDFhonKuLmuIYLwcZuPesGU440H_w&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8uALM-SpaPyrokjAXPMoBxGi1r_2Kro2DU_J76blo93w&amp;oe=6A2DD726"/></p>
 <p>frames/06_nadal_straighten.jpg</p>
 <h3 id="4-vi-tri-world-class-cuoi-backswing">4. Vị trí "world-class" cuối backswing</h3>
-<p>Khi làm đúng 2 bước trên, bạn sẽ tự động rơi vào tư thế chuẩn mà HLV gọi là "5:30":</p>
+<p><strong>Khi làm đúng 2 bước trên, bạn sẽ tự động rơi vào tư thế chuẩn mà HLV gọi là "5:30":</strong></p>
 <ul class="styled-list">
 <li>Cánh tay phải thẳng hàng với hông phải (không cao quá vai, không dính sát người)</li>
 <li>Đầu vợt hướng lên, chếch ra sau khoảng 5 giờ 30 trên mặt đồng hồ</li>
@@ -3148,11 +3155,11 @@ Lỗi giết recovery sau serve wide</p>
 <p>frames/08_racket_530.jpg</p>
 <p>Djokovic ở hình dưới là mẫu: tay duỗi gần như song song mặt sân, đầu vợt cao hơn cán vợt, tạo thành chữ "L" ngược. Đây là vị trí mà HLV nói "finish your unit turn".</p>
 <h3 id="5-tai-sao-vi-tri-nay-tao-ra-power">5. Tại sao vị trí này tạo ra power?</h3>
-<p>HLV giải thích rất đúng về sinh học vận động:</p>
+<p><strong>HLV giải thích rất đúng về sinh học vận động:</strong></p>
 <div class="pullquote"><p>Khi bạnở vị trí 5:30 với tay duỗi, lúc tăng tốc về phía trước, vợt sẽ tự động "flip" – rơi ra xa khỏi cơ thể, rồi lật vào bóng.</p></div>
 <p><img alt="frames/09_accelerate_flip.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/699996600_1738279117055334_5462218417025022090_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=YDUCN98PAlMQ7kNvwGGSvOn&amp;_nc_oc=AdqPfZ5CQg9D2LlldKjEgmPTbKTkdJBBLBvYLK879_mBDr7DOXlV3MMCO4ClwJ_MEmM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9Wf-gS67OUlXP_RBw0V-FRaBjyO0YL7xjqMhB0uu662Q&amp;oe=6A2DE43B"/></p>
 <p>frames/09_accelerate_flip.jpg</p>
-<p>Đây không phải là bạn cố vẩy cổ tay. Đó là kết quả của:</p>
+<p><strong>Đây không phải là bạn cố vẩy cổ tay. Đó là kết quả của:</strong></p>
 <ol class="styled-list numbered">
 <li>Inertia lag: đầu vợt nặng đi sau tay</li>
 <li>Internal shoulder rotation: vai trong xoay khi vào contact</li>
@@ -3172,19 +3179,19 @@ Lỗi giết recovery sau serve wide</p>
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
 <p>May 18, 2026</p>
 <p>Video này giải đúng cái lỗi mà 90% người chơi phong trào mắc: cố gắng tăng tốc bằng cách gồng tay. HLV nói thẳng – power không đến từ việc siết cẳng tay, mà đến từ chuỗi cơ lớn: chân → hông → core → ngực/vai.</p>
-<p>Đây là phân tích kỹ thuật theo đúng trình tự trong clip, kèm hình cắt từ video:</p>
+<p><strong>Đây là phân tích kỹ thuật theo đúng trình tự trong clip, kèm hình cắt từ video:</strong></p>
 <h3 id="1-van-e-tightening-your-arm-mat-toc-o">1. Vấn đề: "tightening your arm" = mất tốc độ</h3>
 <p>HLV mô tả động tác sai trước: cánh tay căng cứng, vai nhô lên, bạn cố "đẩy" vợt bằng bắp tay.</p>
 <p><img alt="frames2/02_wrong_tighten.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703084000_1634045414346919_6093491352000863084_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=VhU0oEFZj-4Q7kNvwHZYmPN&amp;_nc_oc=AdqYUsOETsj4iBcMhD_UKe0Hmh6yzvc5EhRFyUd0bMimz1M5T4srR0NitvHk3L4LyEA&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9Czc683K9-_l0b6RQf-PV5zxRsXtBIlt6McWW2IWItHg&amp;oe=6A2DD1C2"/></p>
 <p>frames2/02_wrong_tighten.jpg</p>
-<p>Khi bạn làm vậy:</p>
+<p><strong>Khi bạn làm vậy:</strong></p>
 <ul class="styled-list">
 <li>Cổ tay khóa → không có lag (độ trễ vợt)</li>
 <li>Vai bị cô lập → lực chỉ từ cơ nhỏ, dễ chấn thương khuỷu tay</li>
 <li>Tốc độ đầu vợt thấp dù bạn thấy mình đánh rất mạnh</li>
 </ul>
 <h3 id="2-nguyen-tac-ung-tang-toc-tu-co-lon">2. Nguyên tắc đúng: tăng tốc từ cơ lớn</h3>
-<p>HLV chỉ vào 3 nhóm:</p>
+<p><strong>HLV chỉ vào 3 nhóm:</strong></p>
 <p>a) Chân (legs) – tạo lực đẩy từ mặt đất</p>
 <p><img alt="frames2/03_point_legs.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700529691_792144487167196_7418175690010546863_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=HNKLyHeY7osQ7kNvwG-5DJQ&amp;_nc_oc=AdrZSkYuj8XUUkT-cJXvUeuyCp1T57aIXn9mClhck6QpBd2s39cjx2_idTuiSB9fT8I&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_jEDvQQ6U2pad0DusNHQKJvEVu3euXw8GynnWlCJxPvw&amp;oe=6A2DFD3F"/></p>
 <p>frames2/03_point_legs.jpg</p>
@@ -3214,7 +3221,7 @@ Ngực mở, vai trước kéo cánh tay đi như dây xích. Cẳng tay vẫn t
 <p><img alt="frames2/09_pull_arm.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700304889_26964211913190626_3010398321224576570_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=5gtUaMJMMCYQ7kNvwGFfRMF&amp;_nc_oc=AdoW-TI7FvXlr8wDscOm5lfFDvHrRFk8dRCZSIw8Op9L-oVe5rIhq9GuA0XohsKHIW8&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-qIJKZRHho6IR0xhM0qf4rskUeJF_xiCUDEmShwJn0_g&amp;oe=6A2DFFD6"/></p>
 <p>frames2/09_pull_arm.jpg</p>
 <p>Cảm giác đúng: ngực bạn "kéo" khuỷu tay, không phải bắp tay kéo vợt.</p>
-<p>Bước 5 – Contact tốiưu<br/>
+<p>Bước 5 – Contact tối ưu<br/>
 Khi hông-ngực đã xoay gần hết, tay mới bung ra. Điểm chạm trước người, mặt vợt hơi đóng, thân vẫn thăng bằng.</p>
 <p><img alt="frames2/10_contact.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703218458_2005603396701920_6725849868300277167_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=aeZmpnvahNUQ7kNvwGoL9Se&amp;_nc_oc=Ado81czYTNrZrtHmoaf2jypJRJj9hMmWKruFqUBIp9OMMw5nYZM6wGI9qylr-LUMNsU&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-Hi8woi3G5X4iIcOlOqiQCguP3nlmJobyZkVutuXGtuA&amp;oe=6A2DDA4B"/></p>
 <p>frames2/10_contact.jpg</p>
@@ -3228,7 +3235,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Thả lỏng = tốc độ đầu vợt cao hơn: cơ căng cứng co chậm hơn cơ thả lỏng rồi bật nhanh</li>
 <li>Ít chấn thương: vai và ngực chịu tải, không phải cổ tay/khuỷu</li>
 </ol>
-<p>HLV tóm gọnở đầu clip:</p>
+<p><strong>HLV tóm gọnở đầu clip:</strong></p>
 <div class="pullquote"><p>"generate power not by tightening or tensing your arm but to generate power from the bigger muscles of your body"</p></div>
 <h3 id="5-cach-tap-ngay-tren-san">5. Cách tập ngay trên sân</h3>
 <ul class="styled-list">
@@ -3237,12 +3244,11 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Drill 3 – 70% lỏng: đánh rally chỉ dùng 70% lực, tập trung vàoâm thanh chân đạp và tiếng hông xoay, không nghe tiếng "gồng" ở tay.</li>
 </ul>
 <p>Nếu bạn đã xem video backswing trước, ghép 2 bài lại sẽ ra công thức hoàn chỉnh: elbow back + extend (tạo cấu trúc) → drive legs + rotate hips + pull from pec (tạo tốc độ).</p>
-<p>Muốn mình làm thêm sơ đồ mũi tên lực cho chuỗi chân-hông-vai, hay phân tích chậm pha lag của vợt trong clip này không?</p>
-<p>Có</p>
+<p>Muốn mình làm thêm sơ đồ mũi tên lực cho chuỗi chân-hông-vai, hay phân tích chậm pha lag của vợt trong clip này không? Có.</p>
 <p>May 18, 2026</p>
-<p>Ok, làm luôn cho bạn — vừa sơ đồ mũi tên lực, vừa mổ chậm pha "lag" mà HLV nhắc tới.</p>
+<p><strong>Ok, làm luôn cho bạn — vừa sơ đồ mũi tên lực, vừa mổ chậm pha "lag" mà HLV nhắc tới.</strong></p>
 <h3 id="1-so-o-chuoi-luc-kinetic-chain">1. Sơ đồ chuỗi lực (kinetic Chain)</h3>
-<p>Nhìn 4 khung này theo chiều kim đồng hồ, bạn sẽ thấy lực đi từ dưới lên, không phải từ tay:</p>
+<p><strong>Nhìn 4 khung này theo chiều kim đồng hồ, bạn sẽ thấy lực đi từ dưới lên, không phải từ tay:</strong></p>
 <p><img alt="kinetic_chain_diagram.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703031262_1539918054409446_7610316589082291535_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=08puIw9PXkwQ7kNvwG0ozXN&amp;_nc_oc=Adp9iCBG5skaFg2uw63yS4yFBnc0LYYFWJkliXTucewf1tej0QVlCqfcuPXbyTf7EbM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-8ed5NrMbb10D_Xn0elruZJE05P4sFl2IrqK1Lsm-_qA&amp;oe=6A2DF679"/></p>
 <p>kinetic_chain_diagram.jpg</p>
 <ul class="styled-list">
@@ -3269,7 +3275,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </ul>
 <div class="pullquote"><p>Mấu chốt HLV nói: "accelerate from the pec and the shoulder" chính là mũi tên số 3. Bạn không đẩy vợt, bạn để ngực kéo cả hệ thống tay-vợt đi.</p></div>
 <h3 id="2-phan-tich-cham-pha-lag-03-giay-quyet-inh">2. Phân tích chậm pha lag (0.3 giây quyết định)</h3>
-<p>Đây là 7 khung liên tiếp từ lúc bắt đầu kéo đến lúc chạm bóng:</p>
+<p><strong>Đây là 7 khung liên tiếp từ lúc bắt đầu kéo đến lúc chạm bóng:</strong></p>
 <p><img alt="lag_sequence.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703031262_1824635901828533_4818303771166302037_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=yh0Cv6gTcxIQ7kNvwHqWCmv&amp;_nc_oc=AdpM6-X7XMXWb_XGp_-WVZIkzrmhWRbeABazDdj7RG5gnejP0H8LAOLEBr_2Wj91Ylk&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af97rvECW960ie98WShRZQ7dUIDxlWNcj2zuLHmBX7tykg&amp;oe=6A2DD1A9"/></p>
 <p>lag_sequence.jpg</p>
 <ul class="styled-list">
@@ -3289,7 +3295,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
 <p>May 18, 2026</p>
 <p>Video này chốt lại cả chuỗi forehand mà mình phân tích trước đó: backswing đúng + tăng tốc từ thân sẽ vô nghĩa nếu điểm chạm sai. HLV đưa ra con số vàng: cánh tay tạo góc ∼45° so với thân, và bóng chạm phía trước người.</p>
-<p>Đây là phân tích chi tiết kèm hình từ clip:</p>
+<p><strong>Đây là phân tích chi tiết kèm hình từ clip:</strong></p>
 <h3 id="1-chuan-vang-45-va-phia-truoc">1. Chuẩn vàng: 45° và phía trước</h3>
 <p>HLV lặp đi lặp lại: "arm is going to be oriented at approximately a 45 degree angle away from your body". Không duỗi thẳng 180°, cũng không co 90°.</p>
 <p><img alt="frames3/02_45deg_demo.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/702026772_2511645322628006_8331466502314070480_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=j4J5DiaRUNEQ7kNvwGOlL8b&amp;_nc_oc=AdoTOqivDASg3byjVvz1Hp7OV2HVeHAi44KGuyW05e7CTr4HMgtWoCoaNT11GG7oHfg&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_4vlepwMZvKQWQ1SUXNT1FF3zdOfIBpUF3O9q9C7ltcQ&amp;oe=6A2DE081"/></p>
@@ -3297,21 +3303,21 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Bạn thấy ở hình trên, tay đánh vươn ra khỏi thân, khuỷu hơi cong tự nhiên, vợt cách hông khoảng một gang tay rưỡi. Đây chính là vị trí mà Novak Djokovic giữ trong clip so sánh:</p>
 <p><img alt="frames3/djokovic_45_annotated.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703165406_2142967476482543_3786885949069531188_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=jebJtvQxA9oQ7kNvwGAfasc&amp;_nc_oc=Adqr4wl2mNeWxtN917FS7OA7fJJZyqJHJdnG7xmNnWd_fj2rE7DODJUdIH1yqesIrFo&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8CyM8BrqKyWvLdCoPXPQycSldysrCUdLWAuQ89oVseMw&amp;oe=6A2DD888"/></p>
 <p>frames3/djokovic_45_annotated.jpg</p>
-<p>Góc này cho phép:</p>
+<p><strong>Góc này cho phép:</strong></p>
 <ul class="styled-list">
 <li>Vai-ngực đã xoay hết → lực đã truyền xong</li>
 <li>Cẳng tay còn không gian để "whip" qua bóng</li>
 <li>Mắt nhìn rõ bóng vào giữa mặt vợt (sweet spot)</li>
 </ul>
 <h3 id="2-loi-pho-bien-tay-qua-cong-qua-gan-nguoi">2. Lỗi phổ biến: tay quá cong, quá gần người</h3>
-<p>HLV gọi đây là "really common mistake". Trong phần BEFORE, học viên đánh với tay co sát ngực:</p>
+<p><strong>HLV gọi đây là "really common mistake". Trong phần BEFORE, học viên đánh với tay co sát ngực:</strong></p>
 <p><img alt="frames3/06_before_bent.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700260268_1461232985252320_873412464897888620_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=r5P02WShqm8Q7kNvwEYgIXx&amp;_nc_oc=AdrjumTC2ofJf7HKR07IkLFWfeayFSeUpYAvgsGvq3gdGpSRV3OPR8ZSf9AafdHTYvw&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8KT-RbQQXTNV4tyVlCcv5ytdvL92qxM0bt-7684_YZ8A&amp;oe=6A2DDA5A"/></p>
 <p>frames3/06_before_bent.jpg</p>
 <p><img alt="frames3/07_before_close.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/702076521_1104442986091590_3723506188655711916_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=MKas_EPKt54Q7kNvwGGOx9n&amp;_nc_oc=Adqllg5nLdzPJvcjBBRMAEkfX4vGOIayj_tbC1A7Jhw_J_oO4nXnfIy-Xuv3J48aClM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af859AXaG4UWLjAj9qyYFUBxqa6_t0F0fiWJ-fxOKVkROw&amp;oe=6A2DD9C0"/></p>
 <p>frames3/07_before_close.jpg</p>
-<p>Hậu quả y như transcript:</p>
+<p><strong>Hậu quả y như transcript:</strong></p>
 <div class="pullquote"><p>"they won't feel that they're really hitting the sweet spot consistently... arm will be too bent and too close to their body"</p></div>
-<p>Khi tay gần, bạn buộc phải làm động tác bù:</p>
+<p><strong>Khi tay gần, bạn buộc phải làm động tác bù:</strong></p>
 <ul class="styled-list">
 <li>flex their wrists in order to get the ball across — gập cổ tay để đẩy bóng qua lưới</li>
 </ul>
@@ -3328,7 +3334,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Bạn thấy ở hình AFTER, bóng đã rời vợt nhưng tay vẫnở xa thân, không bị kéo vào ngực. Đây là kết quả của 2 video trước: backswing tạo khoảng trống (elbow back + extend) và acceleration kéo từ ngực, nên tay tự nhiên vươn ra đúng 45°.</p>
 <h3 id="4-tai-sao-45-lai-hieu-qua-ve-vat-ly">4. Tại sao 45° lại hiệu quả về vật lý?</h3>
 <ol class="styled-list numbered">
-<li>Leverage tốiưu: cánh tay là đòn bẩy. 45° cho bạn vừa đủ chiều dài đòn (tạo tốc độ đầu vợt) mà vẫn giữ cơ vaiở vùng mạnh.</li>
+<li>Leverage tối ưu: cánh tay là đòn bẩy. 45° cho bạn vừa đủ chiều dài đòn (tạo tốc độ đầu vợt) mà vẫn giữ cơ vaiở vùng mạnh.</li>
 <li>Tầm nhìn: bóng ở trước giúp mắt – tay phối hợp tốt hơn, bạn đánh vào sweet spot nhiều hơn 20-30% (lý do HLV nói "hitting sweet spot consistently").</li>
 <li>Không gian cho pronation: sau chạm, cẳng tay xoay vào trong tự nhiên, không bị kẹt bởi thân.</li>
 </ol>
@@ -3339,8 +3345,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Bài tập "tường": đứng cách tường 1 cánh tay, swing chậm. Nếu vợt chạm tường trước khi bạn tới điểm 45°, nghĩa là bạn đang kéo tay vào.</li>
 </ol>
 <div class="pullquote"><p>Kết nối 3 video: Backswing (tạo 5:30) → Acceleration (đạp chân, xoay hông, ngực kéo) → Contact (45° phía trước). Thiếu bước cuối, 2 bước đầu chỉ tạo ra cú đánh mạnh nhưng thiếu kiểm soát.</p></div>
-<p>Bạn muốn mình ghép 3 checkpoint này thành 1 poster tập luyện in ra mang ra sân, hay làm video slow-motion so sánh góc tay của bạn với Djokovic?</p>
-<p>Có</p>
+<p>Bạn muốn mình ghép 3 checkpoint này thành 1 poster tập luyện in ra mang ra sân, hay làm video slow-motion so sánh góc tay của bạn với Djokovic? Có.</p>
 <p>May 18, 2026</p>
 <p>Sorry, it seems that I had some problems on my side. Please try again.</p>
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
@@ -3349,12 +3354,12 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <div class="pullquote"><p>Transcript tóm gọn: "loading from a semi-open stance rotating through the shot and finishing in the open stance... give you forward weight shift of your entire body and rotation from your trunk."</p></div>
 <h3 id="1-checkpoint-1-load-tu-semi-open-stance">1. Checkpoint 1 – Load từ semi-open stance</h3>
 <p>Không đứng hẳn ngang (closed) cũng không mở hẳn. Chân trước hơi chếch 45°, hông và vai đã xoay, trọng tâm dồn vào chân sau.</p>
-<p>Nhìn HLV và Carlos Alcaraz ở cùng 1 thời điểm:</p>
+<p><strong>Nhìn HLV và Carlos Alcaraz ở cùng 1 thời điểm:</strong></p>
 <p><img alt="frames4/02_semiopen_load_coach.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700985545_1475014860264572_2491748292356341518_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=kWqfm9bZCRIQ7kNvwGGRMbz&amp;_nc_oc=Ado2jePYyesHqYsClw_4ULuFCT5Rta_0LLtybYNhvh7uvYD-W459OkuJyUHCz4oTub0&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8601lq5oofoEh2tbqXBbZfhcYUiVJp-INEZx7EbsWylQ&amp;oe=6A2DFAD6"/></p>
 <p>frames4/02_semiopen_load_coach.jpg</p>
 <p><img alt="frames4/01_semiopen_load_alcaraz.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703031262_1917497335634732_6291667307398952039_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=xFs37mLjT-wQ7kNvwFVsxzK&amp;_nc_oc=Adq_McgARaZ3lBplhvtzeFfdIl2jlIzV08DF_sVNN0tIxRvdhng3iJyrhXlgenv0mg4&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_zPaSOiQSvNbbZw4sSt35P1HL2-4rY1zMVDQh9EYs98w&amp;oe=6A2DDC5E"/></p>
 <p>frames4/01_semiopen_load_alcaraz.jpg</p>
-<p>Bạn thấy:</p>
+<p><strong>Bạn thấy:</strong></p>
 <ul class="styled-list">
 <li>Gối sau gập, mông hạ thấp → đang "nạp" năng lượng đàn hồi</li>
 <li>Mũi chân trước hướng lưới, cho phép xoay hông dễ dàng</li>
@@ -3368,7 +3373,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>frames4/04_finish_open_alcaraz.jpg</p>
 <p>Ở hình finish, Alcaraz đã xoay 180°, chân sau rời đất, ngực hướng lưới. HLV gọi đây là "finishing in the open stance".</p>
 <h3 id="3-tai-sao-semi-open-open-tao-effortless-power">3. Tại sao semi-open → open tạo "effortless power"?</h3>
-<p>HLV giải thích bằng 2 lực mà Rafael Nadal làm mẫu:</p>
+<p><strong>HLV giải thích bằng 2 lực mà Rafael Nadal làm mẫu:</strong></p>
 <p>a) Forward weight shift – trọng tâm lao tới</p>
 <p><img alt="frames4/06_nadal_weight_shift.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703154613_2212470552901142_6770636917679359206_n.jpg?_nc_cat=105&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=zwtw12-XiaoQ7kNvwFEjL5k&amp;_nc_oc=AdpLzIgNAg96O8PJ2rwtAhz1cwaNi8QtmXMkOieH1er9fbDQ6fgGTPmL34ZOqEv76BY&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-c6ShMo9ahvVAZmy9C4Kt3O0XoN6L93JR4QuF4HjPXLA&amp;oe=6A2DED0D"/></p>
 <p>frames4/06_nadal_weight_shift.jpg</p>
@@ -3377,7 +3382,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p><img alt="frames4/07_nadal_trunk_rotation.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703084000_1304589634392544_2390247548156912303_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=uuURCbxG3SMQ7kNvwGuoibT&amp;_nc_oc=Ado9CtjmmGXu_44LJGViAnNbQXOZOrB6Q_lAV3_WJzM4X8MkNm5dbcNhSsOM-TjsWuA&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_tUhpvOOhRdN4Vlp9JVBCzV3jh_lG-7pK69_6F-Wp_Gg&amp;oe=6A2DD29F"/></p>
 <p>frames4/07_nadal_trunk_rotation.jpg</p>
 <p>Vòng xanh trong video chỉ rõ thân trên xoay như lò xo. Lực xoay này lớn gấp 3-4 lần lực bắp tay.</p>
-<p>Khi kết hợp:</p>
+<p><strong>Khi kết hợp:</strong></p>
 <ul class="styled-list">
 <li>Weight shift = đưa khối lượng cơ thể vào bóng (giống đấm bốc bước tới)</li>
 <li>Rotation = tăng tốc góc cho vợt<br/>
@@ -3406,22 +3411,22 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Bạn muốn mình làm sơ đồ so sánh 3 kiểu stance (closed – semi-open – open) với mũi tên trọng tâm, hay cắt slow-motion đoạn Nadal để đo góc xoay hông?</p>
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
 <p>May 18, 2026</p>
-<p>Đây là video "sửa lỗi số 1" mà HLV nhấn mạnh – không phải kỹ thuật tay, mà là tâm lý khiến bạn lùi lại và mất chuyển trọng tâm. Transcript nói rất rõ:</p>
+<p><strong>Đây là video "sửa lỗi số 1" mà HLV nhấn mạnh – không phải kỹ thuật tay, mà là tâm lý khiến bạn lùi lại và mất chuyển trọng tâm. Transcript nói rất rõ:</strong></p>
 <div class="pullquote"><p>"when they're playing against weaker players, they start to get nervous... they're going to back up and they're not going to transfer their body weight forward"</p></div>
 <h3 id="1-loi-before-lui-lai-anh-bang-tay">1. Lỗi BEFORE: lùi lại, đánh bằng tay</h3>
-<p>Trong 3 giây đầu, bạn thấy học viên đánh forehand nhưng cả người ngả ra sau, chân bước lùi:</p>
+<p><strong>Trong 3 giây đầu, bạn thấy học viên đánh forehand nhưng cả người ngả ra sau, chân bước lùi:</strong></p>
 <p><img alt="frames5/01_before_mistake.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703645544_1263904912572287_310266980244159881_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=W3Pe6nlUu8kQ7kNvwHZbjZK&amp;_nc_oc=AdqGkvpuukIDIC0YoyZUeKkUiEMlBiz34Ts5AeF-2pWa8vExCMrJAgmUYVOERpq1H68&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-TJ9KvX-0dMtqr_2GUcjfLs9XkUvuE85jvct4hVDN6ug&amp;oe=6A2DE955"/></p>
 <p>frames5/01_before_mistake.jpg</p>
 <p><img alt="frames5/02_back_up.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/701018955_976984588384801_8149411698478203000_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=5ePzm1KgkTUQ7kNvwGGZoBw&amp;_nc_oc=AdqdKIzmFloxXq4T-iPFmUD4bI0c0QKfp0SwsE4bT1R7efn-t5HnDKu8FBxOWkelCnk&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_033mpViJi6YOQSDTf1Px9WzpK1VQshrTDLwKYHjKHIA&amp;oe=6A2DD1CD"/></p>
 <p>frames5/02_back_up.jpg</p>
-<p>HLV mô tả: "they're going to back up" – khi căng thẳng, phản xạ tự nhiên là tạo khoảng cách an toàn. Hậu quả:</p>
+<p><strong>HLV mô tả: "they're going to back up" – khi căng thẳng, phản xạ tự nhiên là tạo khoảng cách an toàn. Hậu quả:</strong></p>
 <ul class="styled-list">
 <li>Trọng tâm dồn về gót chân sau → không có lực đẩy về trước</li>
 <li>Vai mở sớm để "với" bóng → mất chuỗi xoay thân</li>
 <li>Bạn phải dùng cổ tay và bắp tay để bù → bóng thiếu lực, thiếu xoáy</li>
 </ul>
 <h3 id="2-mau-ung-alcaraz-chuyen-trong-tam-ve-phia-truoc">2. Mẫu đúng: Alcaraz chuyển trọng tâm về phía trước</h3>
-<p>HLV chèn clip Carlos Alcaraz để so sánh. Nhìn mũi tên xanh trong video:</p>
+<p><strong>HLV chèn clip Carlos Alcaraz để so sánh. Nhìn mũi tên xanh trong video:</strong></p>
 <p><img alt="frames5/04_alcaraz_transfer.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700223729_2740005896384491_7660222297980193281_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=d-aIt0g6mZoQ7kNvwEcNFGP&amp;_nc_oc=AdoOmOTE5OHwt1cwHOflKKtvhcJJ4X7cEMY8WgEvyIM4EUwXqWEO73FCBw_88Y0NTsk&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-Ex9Ro7nJ-ZY1KBqCo1cCsQ3zxtu75cf3dk6EGGnOfLA&amp;oe=6A2DEC0C"/></p>
 <p>frames5/04_alcaraz_transfer.jpg</p>
 <ul class="styled-list">
@@ -3430,11 +3435,11 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Đây chính là "transfer their body weight forward into the core" mà người chơi phong trào bỏ quên</li>
 </ul>
 <h3 id="3-cach-sua-step-by-step-hlv-ua-ra">3. Cách sửa step-by-step (HLV đưa ra)</h3>
-<p>Bước 1 – Vào tư thế wide semi-open</p>
+<p><strong>Bước 1 – Vào tư thế wide semi-open</strong></p>
 <p><img alt="frames5/05_semiopen_wide.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703165390_1685721302568138_3567404378103832676_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=9iRRF4wn2YoQ7kNvwH2qYuo&amp;_nc_oc=Adoaam6LNSS2uUZBr76AgfgfgL3J-1D5rAXV1moW_IJjBEXm32h0025tSCAIe-YMCAc&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8kGYd6CkwXH0FIMvxC0DcbkJwd2V0diuqFDFF6Nu91xw&amp;oe=6A2DF103"/></p>
 <p>frames5/05_semiopen_wide.jpg</p>
 <p>Hai chân rộng hơn vai, chân trước chếch 45°, hạ thấp trọng tâm. Tư thế rộng giúp bạn không bị bật ngửa khi bóng tới.</p>
-<p>Bước 2 – Khi tăng tốc: shift weight forward + rotate</p>
+<p><strong>Bước 2 – Khi tăng tốc: shift weight forward + rotate</strong></p>
 <p><img alt="frames5/06_shift_forward.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700641099_989837993513556_9107946886006910889_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=B0ANFl89MlAQ7kNvwECQseZ&amp;_nc_oc=AdqrPZ-stQnCQXPepi4Wj_Km-stAwGFmGmRg5aNw5aXDStF980B-MgOoB10-9L-hPws&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9CESt9kIElMLEryk5bTVRMKD8CWPNkF4oTFGiymFmG_g&amp;oe=6A2DE336"/></p>
 <p>frames5/06_shift_forward.jpg</p>
 <p><img alt="frames5/07_rotate.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700316595_2006076783630975_3266908330416786070_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=3cZpWb1nY1UQ7kNvwGXTcFW&amp;_nc_oc=AdrzEJTuJhh5coTv3TU4UhzW659jHAOh3YtYhaXyFRV05EXeGoEow7P-5bBroTlsJ44&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-ULrvAw3q4cylnXEG8iD6v78nX4HMK6349e6mFCtn8JA&amp;oe=6A2DE1DC"/></p>
@@ -3455,7 +3460,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </ol>
 <p>Nếu chân sau vẫn trụ nguyên chỗ, nghĩa là bạn đang đánh bằng tay.</p>
 <h3 id="4-after-khac-biet-ro-ret">4. AFTER: khác biệt rõ rệt</h3>
-<p>Cùng một học viên, sau khiáp dụng:</p>
+<p><strong>Cùng một học viên, sau khiáp dụng:</strong></p>
 <p><img alt="frames5/10_after_correct.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703096960_3616274711868737_7482537605425416007_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=jwaIaNX2pwwQ7kNvwFbzxRr&amp;_nc_oc=Adon8dEqb9khdXzTiZacV0-1ehy36IWU80SmW9CbmPlSEjWsrcajD14LpwibYFh0y18&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-AwgxZd__JKvgYvlklNciyRHGDOEU7wGOFq-T7tvh1fg&amp;oe=6A2DD80E"/></p>
 <p>frames5/10_after_correct.jpg</p>
 <p><img alt="frames5/11_after_finish.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703165382_2337850060377858_5330078592214988913_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=G0l6ND_uz1sQ7kNvwEvXw7u&amp;_nc_oc=AdqTys_JxKLM3tpXBR6E0xFWrlhRGwBejlPwoNPELq8m79NMZsgTMKvmHlsZsbZF3IM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_R0aOGnytylNH7gL-0f-ychFHxOrHGK5lK79UaNfr-Eg&amp;oe=6A2DF75B"/></p>
@@ -3475,13 +3480,13 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Phân tích kỹ thuật có kèm hình minh họa</p>
 <p>May 18, 2026</p>
 <p>Video cuối này chốt lại nguyên nhân gốc rễ của cảm giác "đánh bị cứng, thiếu lực" mà HLV nhắc đi nhắc lại trong cả series: không phải do bạn yếu tay, mà do bạn gồng cổ tay khi tăng tốc.</p>
-<p>Transcript rất rõ:</p>
+<p><strong>Transcript rất rõ:</strong></p>
 <div class="pullquote"><p>"The most common mistake... they're going to tense up their wrist and that's what causes your feelings of tension... weakness... tight. Whereas... Nadal and Federer... wrist is going to stay in an extended position lagging behind the upper arm joint as it travels forward through contact."</p></div>
 <h3 id="1-loi-gong-co-tay-khi-accelerate">1. Lỗi: gồng cổ tay khi accelerate</h3>
-<p>HLV mô phỏng lỗi ngay phút 11-13:</p>
+<p><strong>HLV mô phỏng lỗi ngay phút 11-13:</strong></p>
 <p><img alt="frames6/04_coach_tense.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700324484_1688046538891941_4736555001488225709_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=xDO2v0n-ajMQ7kNvwGmZNzF&amp;_nc_oc=Adq9ll9_aTRxYuv1SGVCy2GB4N7Mf35WvMFiGnGuYSBJ872Dln4I6pL05WFkmPGUGFk&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9HjwKO7ILWLzQY0wIZQQspqGmde6VYnfU5-xhfdLm5Zg&amp;oe=6A2DEC6A"/></p>
 <p>frames6/04_coach_tense.jpg</p>
-<p>Bạn thấy cổ tay gập vào, mặt vợt đóng sớm. Khi bạn làm vậy:</p>
+<p><strong>Bạn thấy cổ tay gập vào, mặt vợt đóng sớm. Khi bạn làm vậy:</strong></p>
 <ul class="styled-list">
 <li>Cơ cẳng tay co cứng → mất "lag" tự nhiên</li>
 <li>Khớp cổ tay khóa → lực từ thân không truyền được ra đầu vợt</li>
@@ -3489,7 +3494,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </ul>
 <p>Đây là lỗi ngay cả "Ice" (người chơi giỏi trong nhóm) cũng mắc – vì phản xạ muốn kiểm soát bóng.</p>
 <h3 id="2-mau-pro-nadal-federer-giu-co-tay-extended-lagging">2. Mẫu pro: Nadal – Federer giữ cổ tay "extended &amp; lagging"</h3>
-<p>Mở đầu video là 3 góc quay liên tiếp của Rafael Nadal:</p>
+<p><strong>Mở đầu video là 3 góc quay liên tiếp của Rafael Nadal:</strong></p>
 <p><img alt="frames6/01_nadal_contact1.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700277359_1514598760334914_6623028395014507341_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=Fy043mk3A7cQ7kNvwHz10Ka&amp;_nc_oc=AdqWWqZF6QTO1kfLzXM5tIp2nDEx266PkhZhvQolvVpQK1pNSJFBv0oz-jj1th6HwuQ&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_lofPAxxt3aQhSdCXT_UODT4kZ2DxqekVv6-TXbNhluw&amp;oe=6A2DF2F5"/></p>
 <p>frames6/01_nadal_contact1.jpg</p>
 <p><img alt="frames6/02_nadal_contact2.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700605151_1331827135510310_2939662362409770558_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=2FnkkuX7XSkQ7kNvwFGsWWE&amp;_nc_oc=AdrSROmGs-5QtOJBtiuvRnUCceZavYmPJUidgZT_GGxJGSQjqLDfI3R_uhjgxDTRM9c&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af_qQtqLSx-80pzT52jpmmcB_90PyAvexMDQ_LwkB5w6ag&amp;oe=6A2DE4E7"/></p>
@@ -3497,7 +3502,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p><img alt="frames6/03_nadal_contact3.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/701280856_1732767574383005_1444402665978511106_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=zf7QWnnO7hIQ7kNvwEqOCis&amp;_nc_oc=Adpvn3sedcWLCKK48r982rGTSfeoLEb4gmf3Dkj-akJszq1bSZWi_JGeCE3fduCjm-U&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9RLnv3MSSs9QHNVUI_0GklkfS5RkQJ4TQ6a3jgv5qrjQ&amp;oe=6A2DDBCC"/></p>
 <p>frames6/03_nadal_contact3.jpg</p>
 <p>Nhìn kỹ cổ tay: luôn ngửa nhẹ ra sau (extended), không gập vào. Vợt tụt lại phía sau cẳng tay.</p>
-<p>HLV phân tích chi tiết hơnở phút 27-32:</p>
+<p><strong>HLV phân tích chi tiết hơnở phút 27-32:</strong></p>
 <p><img alt="frames6/07_wrist_extended.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700707541_2853789554985266_6199464159091716866_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=FnVt-_tNeHIQ7kNvwH8n84Z&amp;_nc_oc=AdrPnmh18zSrkJZ_20ik2g8lk4Y2s2gH2I5XsHT-uw-t1p2vk0vG-wku4KIbuqblvJw&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af9k_GfuV_8Q2SrVE7kEesGR2kLp8HBb0n2PT86A5TWoCg&amp;oe=6A2DE930"/></p>
 <p>frames6/07_wrist_extended.jpg</p>
 <p><img alt="frames6/08_lag_behind.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/701233573_1288791133416892_718996241810950983_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=43ntsNIof88Q7kNvwEqvKhQ&amp;_nc_oc=AdrWnbA_U-CFloaSQLnPVoUD8KZQkMV5vwK927-ec8YPOh4kpa3hrIyhXrRfDqk0zRY&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8xvhHYHPTSgZADJkv7sBylFGeuqkjhGlJeT3OJlFbS7g&amp;oe=6A2DDB98"/></p>
@@ -3510,7 +3515,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Chỉ đến sát contact, quán tính mới kéo vợt bắt kịp – tạo ra whip mà không cần siết</li>
 </ul>
 <h3 id="3-cam-giac-ung-arm-pulls-wrist-stays-loose">3. Cảm giác đúng: "arm pulls, wrist stays loose"</h3>
-<p>HLV tổng kếtở cuối clip:</p>
+<p><strong>HLV tổng kếtở cuối clip:</strong></p>
 <p><img alt="frames6/10_pull_forward.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/703165390_853236867829085_3263972533668626226_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=oKDisxIxjAQQ7kNvwGTVf3L&amp;_nc_oc=AdpfNlwLowIw-SpKZDhUb46yPAEnLZlSVuA0EhX2PyANAAxY4pFY2lo9pGGiT9qIw3A&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af8FT9f_9-_MYALM0jgeZdvUGn4QRSz5SHjmASnqLj3tQQ&amp;oe=6A2DE004"/></p>
 <p>frames6/10_pull_forward.jpg</p>
 <p><img alt="frames6/11_loose_wrist_through.jpg" src="https://cdn.fbsbx.com/v/t65.102178-21/700852366_1214481903969003_443589861951976_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=fVcSTcZKqJsQ7kNvwHTHgWL&amp;_nc_oc=Adr1Y50AaZJPxT9dZk0gypcoUKEu4o-m8f9DEl1Co6tHXJx7eANTtoyF7UAAkSnu9z8&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=BVFAVII_7M1t76oyRl70Zg&amp;_nc_ss=7b2a8&amp;oh=00_Af-vZTvOThY_0ScV79m1nSY7qwfIcWyAdY6DcZw3zblO_Q&amp;oe=6A2E02A8"/></p>
@@ -3528,7 +3533,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Kiểm soát mặt vợt: cổ tay gồng thường làm mặt vợt xoay lung tung; cổ tay lỏng giữ mặt vợtổn định lâu hơn qua vùng contact</li>
 </ol>
 <h3 id="ket-noi-toan-bo-6-video-thanh-1-he-thong">Kết nối toàn bộ 6 video thành 1 hệ thống</h3>
-<p>Bạn đã có đủ mảnh ghép:</p>
+<p><strong>Bạn đã có đủ mảnh ghép:</strong></p>
 <ol class="styled-list numbered">
 <li>Backswing 5:30 – tạo khoảng trống</li>
 <li>Tăng tốc từ thân – không dùng tay</li>
@@ -3538,18 +3543,17 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Video này – cổ tay lỏng, extended – cho phép whip xảy ra</li>
 </ol>
 <p>Nếu bạn gồng cổ tay (bước 6), 5 bước trước gần như vô hiệu – vì năng lượng bị chặn ngay trước khi ra vợt.</p>
-<p>Drill 30 giây để cảm nhận:</p>
+<p><strong>Drill 30 giây để cảm nhận:</strong></p>
 <ul class="styled-list">
 <li>Cầm vợt bằng 3 ngón (cái-trỏ-giữa), 2 ngón còn lại thả lỏng.</li>
 <li>Đánh nhẹ vào tường, chỉ tập trung giữ cổ tay ngửa. Nếu vợt rung và bật ra, bạn đang đúng. Nếu bạn phải siết để giữ vợt, bạn đang gồng.</li>
 </ul>
-<p>Muốn mình ghép 6 nguyên tắc này thành 1 infographic "Forehand Pro Checklist" để bạn in ra dán vào túi vợt không?</p>
-<p>Có</p>
+<p>Muốn mình ghép 6 nguyên tắc này thành 1 infographic "Forehand Pro Checklist" để bạn in ra dán vào túi vợt không? Có.</p>
 <p>May 18, 2026</p>
-<p>Xong rồi! Mình đã ghép cả 6 nguyên tắc từ 6 video thành 1 infographic để bạn mang ra sân:</p>
+<p><strong>Xong rồi! Mình đã ghép cả 6 nguyên tắc từ 6 video thành 1 infographic để bạn mang ra sân:</strong></p>
 <p>**</p>
 <p>**</p>
-<p>Trong đó có đủ:</p>
+<p><strong>Trong đó có đủ:</strong></p>
 <ol class="styled-list numbered">
 <li>Backswing 5:30 – khuỷu ra sau, duỗi thẳng</li>
 <li>Tăng tốc từ thân – đạp chân, xoay hông, ngực kéo</li>
@@ -3566,7 +3570,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>**</p>
 <p><a href="https://l.meta.ai/?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft65.102178-21%2F703657367_1302686841836334_4942181734492373456_n.docx%2FPhan_tich_Forehand_Pro.docx%3F_nc_cat%3D110%26ccb%3D1-7%26_nc_sid%3D5ac5b8%26_nc_ohc%3DFnoBZG1Q76kQ7kNvwGpGYfg%26_nc_oc%3DAdr4NDMGDkM5pWRjI4vdLo4AUo-c1t1YFdtbNhSzqLUgeZTexe85g4jrr4YJjMPvZSA%26_nc_zt%3D7%26_nc_ht%3Dcdn.fbsbx.com%26_nc_gid%3DBVFAVII_7M1t76oyRl70Zg%26_nc_ss%3D7b2a8%26oh%3D00_Af_i1tIvwH3BbgBIZjt6nw8nQxDA_gHqk3R1_sPC111wCQ%26oe%3D6A2DE273&amp;h=AUDWx92WqmDjcAxearaa1i30Ih5Dy6sV8NF9SXrr8FgMZDy3cWL9pE_IJhpwN6V2HU3AGhghSqxdkRXwnmlwGh0OrLzz749_ZwrMxlMBxSDsv-MXt0zlyhMQdvPbwlFKQp_8dgHBUS8EEgBA4rQyKvv98VFyn6VvsmfPng">📎 Phan_tich_Forehand_Pro.docx</a></p>
 <p>**</p>
-<p>Nội dung file gồm:</p>
+<p><strong>Nội dung file gồm:</strong></p>
 <ul class="styled-list">
 <li>6 nguyên tắc vàng phân tích riêng biệt: Backswing 5:30, Tăng tốc từ cơ lớn, Contact 45°, Stance semi-open→open, Chuyển trọng tâm, Cổ tay lỏng</li>
 <li>Mỗi phần kèm 3 hình minh họa cắt trực tiếp từ clip của Alcaraz, Nadal, Djokovic, Federer</li>
@@ -3616,14 +3620,13 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Quay lại từ bên hông – lần tới nhờ bạn quay máy đặt ngang hông (không quay từ sau lưng), mình sẽ đo chính xác góc khuỷu và độ lag cho bạn.</li>
 </ol>
 <p>Bạn đã có nền di chuyển và timing rất tự nhiên – chỉ cần chỉnh 2 chi tiết "đẩy khuỷu ra sau" và "đợi bóng vào trước" là forehand sẽ nặng và nhẹ hơn rõ rệt, đúng như cảm giác "effortless power" trong các video pro.</p>
-<p>Muốn mình làm video so sánh side-by-side cú forehand của bạn với Alcaraz ở cùng góc quay không?</p>
-<p>Có</p>
+<p>Muốn mình làm video so sánh side-by-side cú forehand của bạn với Alcaraz ở cùng góc quay không? Có.</p>
 <p>May 31, 2026</p>
 <p>Đây là clip so sánh mình làm cho bạn — mình lấy 1 cú forehand của bạn (giây 10-13) và chèn chú thích trực tiếp để thấy rõ 2 điểm cần sửa so với mẫu pro:</p>
 <p>**</p>
 <p>📎 <a href="https://l.meta.ai/?u=https%3A%2F%2Fcdn.fbsbx.com%2Fv%2Ft65.102178-21%2F712883117_1010264264872984_7635200781982510232_n.mp4%2Fuser_forehand_analysis.mp4%3F_nc_cat%3D100%26ccb%3D1-7%26_nc_sid%3D5ac5b8%26_nc_ohc%3DVONorm3F36cQ7kNvwG7uMhI%26_nc_oc%3DAdqxQvsFpTYkkxQDnWaUS93rcNhbK2dAqWwhwf_XBaURYU_IoocqkOb3-Sn0Yk5FicQ%26_nc_zt%3D28%26_nc_ht%3Dcdn.fbsbx.com%26_nc_gid%3DBVFAVII_7M1t76oyRl70Zg%26_nc_ss%3D7b2a8%26oh%3D00_Af_KuAJ-SW12dxAX8G04v3yyuwLhf3Q1AzgOleci-a783w%26oe%3D6A2DE42F&amp;h=AUDWx92WqmDjcAxearaa1i30Ih5Dy6sV8NF9SXrr8FgMZDy3cWL9pE_IJhpwN6V2HU3AGhghSqxdkRXwnmlwGh0OrLzz749_ZwrMxlMBxSDsv-MXt0zlyhMQdvPbwlFKQp_8dgHBUS8EEgBA4rQyKvv98VFyn6VvsmfPng">user_forehand_analysis.mp4</a></p>
 <p>**</p>
-<p>Trong video:</p>
+<p><strong>Trong video:</strong></p>
 <ul class="styled-list">
 <li>0:00-1.5 s: mình đánh dấu "Backswing: khuỷu chưa ra sau" – bạn thấy tay vẫn sát người, chưa đạt vị trí 5:30 như Alcaraz</li>
 <li>1.5-3s: "Contact: tay gần người ∼30°" – so với góc 45° vàng, bạn đang đánh hơi muộn và gần</li>
@@ -3639,19 +3642,18 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
  [Image blocked: Alcaraz]</li>
 </ul>
 <p>Khác biệt rõ nhất là khoảng trống giữa khuỷu và hông – Alcaraz có khoảng 1 gang tay, bạn gần như chạm sườn.</p>
-<p>Bước tiếp theo mình đề xuất:</p>
+<p><strong>Bước tiếp theo mình đề xuất:</strong></p>
 <ol class="styled-list numbered">
 <li>Xem video phân tích 3 lần, tập trung vào cảm giác "đẩy khuỷu ra sau"</li>
 <li>Quay lại 1 clip mới từ góc hông (điện thoại đặt ngang lưới, cao bằng hông), mình sẽ làm side-by-side thật với Alcaraz frame-by-frame</li>
 </ol>
-<p>Bạn muốn mình làm tiếp video slow-motion</p>
-<h3>0.25 x để thấy rõ cổ tay</h3>
+<p>Bạn muốn mình làm tiếp video slow-motion 0.25 x để thấy rõ cổ tay</p>
 <p>không?</p>
 <p>Conversation title</p>
 <p>Phân tích kỹ thuật</p>
 <p>May 16, 2026</p>
 <p>Forehand của Andrey Rublev trong video này là ví dụ kinh điển về "sức mạnh gọn gàng" – không vung vẩy loằng ngoằng, mọi thứ đều xoay quanh việc tích trữ năng lượng ở thân người rồi giải phóng thẳng vào bóng.</p>
-<p>Dựa trên đoạn slow-moở Indian Wells (credit: @Slow Mo Tennis), mình tách ra 7 chìa khóa kỹ thuật:</p>
+<p><strong>Dựa trên đoạn slow-moở Indian Wells (credit: @Slow Mo Tennis), mình tách ra 7 chìa khóa kỹ thuật:</strong></p>
 <ol class="styled-list numbered">
 <li>Tư thế sẵn sàng</li>
 </ol>
@@ -3739,7 +3741,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Tay trái làm "phanh khoảng cách" → luôn đánh ở phía trước, điểm ngọt ổn định</li>
 <li>Chuỗi động học rõ ràng: chân đẩy → hông mở → thân xoay → tay vung → vợt tăng tốc muộn</li>
 </ul>
-<p>Nếu bạn muốn tập theo, đừng bắt chước tốc độ của Rublev. Hãy tập 3 thứ trước:</p>
+<p><strong>Nếu bạn muốn tập theo, đừng bắt chước tốc độ của Rublev. Hãy tập 3 thứ trước:</strong></p>
 <ol class="styled-list numbered">
 <li>Giữ tay trái trên vợt khi xoay vai</li>
 <li>Để butt cap chỉ vào bóng trước khi vung</li>
@@ -3789,9 +3791,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Chân ngoài dẫn động: Rublev pivot chân ngoài ở Indian Wells, Fonseca pivot chân phải ở Melbourne để khởi động xoay hông</li>
 <li>Xuyên bóng: cả hai đều đẩy tay về phía trước qua điểm chạm, tạo cú đánh "penetrating" chứ không chỉ brush tạo xoáy</li>
 </ul>
-<p>Fonseca đang được ATP đoở mức 81 mph và</p>
-<h3>3.019 vòng/phút, forehand quality</h3>
-<h3>9.8 ở Argentina Open – con số đặt cậuấy ngay cạnh</h3>
+<p>Fonseca đang được ATP đoở mức 81 mph và 3.019 vòng/phút, forehand quality 9.8 ở Argentina Open – con số đặt cậuấy ngay cạnh</p>
 <p>Alcaraz và Sinner về tốc độ thuần. Phân tích kỹ thuật cũng nhấn mạnh cậuấy dùng "kinetic chain transfer, early contact, leg engagement" – đúng y như video.</p>
 <h3 id="khac-biet-chinh">Khác biệt chính</h3>
 <table class="data-table">
@@ -3835,24 +3835,24 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </tr>
 </tbody>
 </table>
-<p>Nói ngắn gọn:</p>
+<p><strong>Nói ngắn gọn:</strong></p>
 <ul class="styled-list">
 <li>Rublev = máyép thủy lực. Mọi thứ được khóa chặt, khoảng cách tay trái giữ chuẩn từng milimet, rồi nổ tung bằng thân. Phù hợp khi bạn muốn đánh sớm, bóng phẳng, ít thời gian.</li>
 <li>Fonseca = dây thun dài. Loop cao, thả vợt rơi, dùng chân và hông ném vào bóng, tạo tốc độ đầu vợt khủng. Phù hợp khi bạn có thời gian chuẩn bị và muốn kết hợp nặng và xoáy.</li>
 </ul>
 <h3 id="nen-hoc-gi-tu-moi-nguoi">Nên học gì từ mỗi người</h3>
-<p>Nếu forehand của bạn hay bị rúc vào người hoặc mấtổn định:</p>
+<p><strong>Nếu forehand của bạn hay bị rúc vào người hoặc mấtổn định:</strong></p>
 <ul class="styled-list">
 <li>lấy tay trái spacer của Rublev, giữ nó song song baseline đến khi chuẩn bị vung.</li>
 </ul>
-<p>Nếu forehand thiếu lực và bạn hay kéo bằng tay:</p>
+<p><strong>Nếu forehand thiếu lực và bạn hay kéo bằng tay:</strong></p>
 <ul class="styled-list">
 <li>lấy bài của Fonseca: pivot chân ngoài trước, giữ hai tay lâu hơn, cảm giác để vợt rơi rồi mới dùng chân phải đẩy hông vào.</li>
 </ul>
 <p>Hai người chứng minh cùng một nguyên tắc: sức mạnh không đến từ cánh tay. Rublev chọn gọn và chính xác, Fonseca chọn dài và bùng nổ. Chọn phong cách nào tùy vào thể hình và nhịp đánh của bạn, nhưng giữ nguyên chuỗi: chân – hông – vai – tay.</p>
 <p>Tạo hình minh họa 7 điểm trên từ video</p>
 <p>May 17, 2026</p>
-<p>Đây là 7 hình cắt từ video Fonseca, mình gắn nhãn đúng theo chuỗi mà bình luận viên phân tích:</p>
+<p><strong>Đây là 7 hình cắt từ video Fonseca, mình gắn nhãn đúng theo chuỗi mà bình luận viên phân tích:</strong></p>
 <h3 id="1-pivot-chan-ngoai-khoi-ong-unit-turn">1. Pivot chân ngoài – khởi động unit turn</h3>
 <p>Bắt đầu bằng xoay bàn chân ngoài, hông quay trước rồi mới đến vai.</p>
 <p><img alt="fonseca_point_1.png" src="https://cdn.fbsbx.com/v/t65.102178-21/701408101_1295923275414042_5832717342162125696_n.jpg?_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=wx-zLSOJye8Q7kNvwGtg8vW&amp;_nc_oc=Ado1Ox_m3rNHdFZWBdksbFAYxaXSk-_F2ra6LWillhqLBJpdHfjbdEPRLieMVXQlCCY&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af-XYQz34XQ3bYBwfoowFY3BYT72ji2hMRThuFqpRci4Sw&amp;oe=6A2DD0C9"/></p>
@@ -3885,7 +3885,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>So sánh kỹ thuật với Sinner</p>
 <p>May 17, 2026</p>
 <p>Forehand của Jannik Sinner trong video bạn gửi là trường hợp đặc biệt – không giống Rublev, cũng không giống Fonseca. Nếu Rublev là "ép thủy lực" và Fonseca là "dây thun dài", thì Sinner là "roi da": swing nhìn nhỏ nhưng đầu vợt tăng tốc khủng khiếp nhờ cách đặt vợtở power position.</p>
-<p>Video phân tích rất rõ điểm then chốt:</p>
+<p><strong>Video phân tích rất rõ điểm then chốt:</strong></p>
 <ul class="styled-list">
 <li>Ở vị trí chuẩn bị phát lực, đầu vợt của Sinner chỉ sang phải sân, chuôi vợt chỉ sang trái, mặt vợt gần như nằm ngang</li>
 <li>Truyền thống (như Alcaraz trong video so sánh, và gần với Rublev/Fonseca) thì đầu vợtở trên grip, dựng đứng</li>
@@ -3964,7 +3964,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Tóm lại: Rublev dùng thân, Fonseca dùng chân và hông, Sinner dùng đòn bẩy của vợt. Ba cách đều đúng, nhưng Sinner là kỹ thuật khó nhân bản nhất vì nó sống nhờ timing của cú lật vợt, không phải sức mạnh cơ bắp.</p>
 <p>Tạo hình minh họa 7 điểm trên từ video</p>
 <p>May 17, 2026</p>
-<p>Xong, mình cắt 7 khoảnh khắc then chốt từ video của Jannik Sinner để bạn thấy rõ vì sao forehand cậuấy được gọi là "độc nhất":</p>
+<p><strong>Xong, mình cắt 7 khoảnh khắc then chốt từ video của Jannik Sinner để bạn thấy rõ vì sao forehand cậuấy được gọi là "độc nhất":</strong></p>
 <h3 id="1-power-position-vi-tri-ac-trung">1. Power position – vị trí đặc trưng</h3>
 <p>Đây là khung hình video nhấn mạnh ngay từ đầu.</p>
 <p><img alt="sinner_point_1.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702319626_2165062080945188_1685627609371356011_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=-lHXwnURRKAQ7kNvwG-EGil&amp;_nc_oc=AdrBb3T4nbzIyLJ_0YXkCaun_tluRWJw8M57DZKCwtzuOLlpP4XiJnQLtsuA2AOL_qM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af9aoZXA0EqulpeCJtcstEG1NicXsQguowrigf9DX5cH8g&amp;oe=6A2DE4DD"/></p>
@@ -4030,7 +4030,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>So sánh kỹ thuật với Alcaraz</p>
 <p>May 17, 2026</p>
 <p>Lần này video bạn gửi liệt kê rất rõ 8 điểm làm nên forehand của Carlos Alcaraz. Đặt cạnh forehand của Andrey Rublev mà mình phân tích đầu tiên, bạn sẽ thấy hai trường phái hiện đại đối đầu nhau: một bên là "khóa chặt để xuyên", một bên là "thả lỏng để quất".</p>
-<p>Video Alcaraz tóm tắt 8 điểm:</p>
+<p><strong>Video Alcaraz tóm tắt 8 điểm:</strong></p>
 <ol class="styled-list numbered">
 <li>Semi open stance</li>
 <li>Elbow up and away from the body</li>
@@ -4073,7 +4073,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Nói ngắn gọn: Rublev xây forehand trên khung xương chắc chắn. Alcaraz xây forehand trên độ đàn hồi. Một người thắng bằng độ chính xác, người kia thắng bằng độ bùng nổ. Chọn khung nào tùy vào cơ thể bạn – nếu cổ tay và cảm giác bóng tốt, đi theo 8 điểm của Alcaraz; nếu bạn cần sựổn định trong rally dài, giữ nguyên công thức của Rublev.</p>
 <p>Tạo hình minh họa 8 điểm trên từ video</p>
 <p>May 17, 2026</p>
-<p>Đây là 8 hình mình cắt đúng theo 8 "performance qualities" mà video mô tả về forehand của Carlos Alcaraz:</p>
+<p><strong>Đây là 8 hình mình cắt đúng theo 8 "performance qualities" mà video mô tả về forehand của Carlos Alcaraz:</strong></p>
 <ol class="styled-list numbered">
 <li>Semi open stance</li>
 </ol>
@@ -4129,13 +4129,13 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>
 <p>Elbow up and away<br/>
  Ở</p>
-<h3>3.5 s, khuỷu tay phải đưa cao ngang vai, tách xa thân</h3>
+<h3><strong>3.5 s, khuỷu tay phải đưa cao ngang vai, tách xa thân</strong></h3>
 <p>Bạn không thấy cậuấy ép khuỷu vào sườn như người chơi phong trào hay làm.</p>
 </li>
 <li>
 <p>Racket head hơi chúi trước<br/>
  Ở</p>
-<h3>6.8 s, đầu vợt không dựng đứng mà nghiêng nhẹ về phía lưới</h3>
+<h3><strong>6.8 s, đầu vợt không dựng đứng mà nghiêng nhẹ về phía lưới</strong></h3>
 <p>Chính góc này tạo ra độ "treo" để vợt rơi vào lag sau đó.</p>
 </li>
 </ol>
@@ -4157,8 +4157,8 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>
 <p>Loose wrist – pre-stretch<br/>
  Bạn thấy rõở</p>
-<h3>0.5 s và</h3>
-<h3>7.4 s: cổ tay gập ra sau, mặt vợt tụt dưới bóng rồi mới bật lên</h3>
+<h3><strong>0.5 s và</strong></h3>
+<h3><strong>7.4 s: cổ tay gập ra sau, mặt vợt tụt dưới bóng rồi mới bật lên</strong></h3>
 <p>Không có sự gồng cứng.</p>
 </li>
 <li>
@@ -4168,7 +4168,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>
 <p>Follow through hoàn chỉnh<br/>
  Ở</p>
-<h3>0.9 s, tay vung hết qua vai trái, vợt kết thúc cao, cơ thể tự xoay để hồi vị trí</h3>
+<h3><strong>0.9 s, tay vung hết qua vai trái, vợt kết thúc cao, cơ thể tự xoay để hồi vị trí</strong></h3>
 <p>Không dừng giữa chừng.</p>
 </li>
 </ol>
@@ -4180,21 +4180,19 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <li>Điều này xác nhận 8 điểm kia không phải lý thuyết suông, mà là thứ cậuấy lặp lại vô thức.</li>
 </ul>
 <h3 id="neu-ban-muon-copy">Nếu bạn muốn copy</h3>
-<p>Đừng copy tốc độ. Copy thứ tự:</p>
+<p><strong>Đừng copy tốc độ. Copy thứ tự:</strong></p>
 <ol class="styled-list numbered">
 <li>Đặt chân semi-open trước</li>
 <li>Đưa khuỷu lên cao ngay khi xoay vai</li>
 <li>Để đầu vợt hơi chúi, đừng dựng đứng</li>
 <li>Thả lỏng cổ tay và để chân đẩy trước, tay đi sau</li>
 </ol>
-<p>Làm chậm như trong clip</p>
-<h3>3.2 s –</h3>
-<h3>4.3 s, bạn sẽ cảm nhận được cú "whip" mà không cần vung mạnh</h3>
+<p>Làm chậm như trong clip 3.2 s – 4.3 s, bạn sẽ cảm nhận được cú "whip" mà không cần vung mạnh</p>
 <p>Đó chính là bí mật khiến forehand Alcaraz nhìn nhẹ mà bóng bay 78 mph.</p>
 <p>So sánh kỹ thuật với Federer</p>
 <p>May 17, 2026</p>
 <p>Video bạn gửi tóm gọn đúng "bí mật" của forehand Roger Federer: không phải vung mạnh, mà là cuộn cổ tay để tạo pre-stretch.</p>
-<p>Theo lời bình trong clip:</p>
+<p><strong>Theo lời bình trong clip:</strong></p>
 <ul class="styled-list">
 <li>Đầu tiên vợtở vị trí đầu mũi chỉ sang phải</li>
 <li>Khi tay đánh bắt đầu đi tới, mũi vợt được lật sang trái, ra sau lưng</li>
@@ -4231,7 +4229,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p><img alt="federer_4.png" src="https://cdn.fbsbx.com/v/t65.102178-21/702351817_842352328931734_1214201615830030585_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=5ac5b8&amp;_nc_ohc=2NDtrq9CWoYQ7kNvwGOPPvl&amp;_nc_oc=AdraJWMex6pq5lEFcXe_bw5O41FMM7zWMWKj_bJPUEsJfxa2LaW2f1V6nMOvTcN2DJM&amp;_nc_zt=7&amp;_nc_ht=cdn.fbsbx.com&amp;_nc_gid=Z9sm8Jt7Um5GOxje8wgDBA&amp;_nc_ss=7b2a8&amp;oh=00_Af_jekmH6uludabRcX94gDvghaSWpto9rOxXm-iSR92JZQ&amp;oe=6A2DEACD"/></p>
 <p>federer_4.png</p>
 <h3 id="ban-nen-hoc-gi-tu-federer">Bạn nên học gì từ Federer</h3>
-<p>Nếu forehand của bạn giống Rublev – chắc, khỏe, nhưng thiếu tốc độ đầu vợt – hãy thêm đúng một thứ Federer làm:</p>
+<p><strong>Nếu forehand của bạn giống Rublev – chắc, khỏe, nhưng thiếu tốc độ đầu vợt – hãy thêm đúng một thứ Federer làm:</strong></p>
 <ol class="styled-list numbered">
 <li>Ở cuối takeback, để đầu vợt chỉ sang phải (với tay phải)</li>
 <li>Khi bắt đầu vung tới, chủ động để đầu vợt rơi ra sau lưng, chỉ sang trái</li>
@@ -4244,7 +4242,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>Novak Djokovic chính là ví dụ sống cho chuỗi này, nhưng anh thực hiện nó theo cách "tiết kiệm" hơn nhiều so với người trong clip (đó là Carlos Alcaraz).</p>
 <h3 id="djokovic-lam-chuoi-nay-nhu-the-nao">Djokovic làm chuỗi này như thế nào</h3>
 <p>Theo phân tích kỹ thuật, forehand của Novak Djokovic dùng grip ¾ Western, semi-open stance, cuộn người sớm và follow-through chính xác. Điểm mạnh là topspin, thăng bằng và chuyển động đầu vợt rất nhanh. Anh nổi bật nhờ "compact turn, early shoulder rotation, and relaxed wrist allow natural racket drop and timing-driven acceleration". </p>
-<p>Đặt cạnh video kinetic chain:</p>
+<p><strong>Đặt cạnh video kinetic chain:</strong></p>
 <ol class="styled-list numbered">
 <li>ground → legs</li>
 <li>Video: chân đạp mạnh, đầu gối gập sâu, mũi tên đỏ đẩy lên</li>
@@ -4266,7 +4264,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 </ul>
 <p>Nói đơn giản: video cho bạn thấy kinetic chain "lý tưởng" khi được phóng đại để dạy. Djokovic cho bạn thấy kinetic chain "thực dụng" khi phải đánh 25 cú liên tiếp mà không mất thăng bằng.</p>
 <h3 id="bai-hoc-cho-nguoi-choi-phong-trao">Bài học cho người chơi phong trào</h3>
-<p>Nếu bạn đang học chuỗi lực:</p>
+<p><strong>Nếu bạn đang học chuỗi lực:</strong></p>
 <ol class="styled-list numbered">
 <li>Đừng bắt đầu bằng tay như nhiều người làm. Hãy tập đúng thứ tự trong video: đạp chân trước, để hông kéo thân, rồi mới thả tay</li>
 <li>Học Djokovic trước Alcaraz: giữ chuyển động nhỏ, compact turn, vai xoay sớm. Khi đã cảm nhận được lực đi từ chân lên, mới thêm biên độ lớn như trong clip</li>
@@ -4340,7 +4338,7 @@ Sau chạm bóng, vai tiếp tục xoay, tay vắt tự nhiên qua vai đối di
 <p>It's messy on purpose, but there's a clear system here. Let me decode it for you:
 What each sketch says</p>
 <hr/>
-<p>The page is divided into 4 stick-figure drawings:</p>
+<p><strong>The page is divided into 4 stick-figure drawings:</strong></p>
 <ol class="styled-list numbered">
 <li>Top left — Back View</li>
 <li>Label: "Side Bend at waist"</li>
@@ -4355,7 +4353,7 @@ What each sketch says</p>
 <li>Label: "Shift to the left side"</li>
 <li>Shows the downswing/follow-through position with the torso leaning left, arm hanging down. Weight has moved to the lead leg, but the spine is still tilted away from the target.</li>
 </ol>
-<p>Right margin (vertical writing):</p>
+<p><strong>Right margin (vertical writing):</strong></p>
 <div class="pullquote"><p>"Key: Instead of bending forward at the backswing phase, bend backward to..."</p></div>
 <p>The rest is cut off, but it probably ends "...load into your trail hip" or "...create elastic tension."
 The biomechanical idea</p>
@@ -4375,7 +4373,7 @@ The biomechanical idea</p>
 <p>The discus comparison is spot-on: a discus thrower creates power by tilting the torso away from the direction of throw, loading the back leg, then violently uncoiling and shifting weight forward. Golf uses the exact same sequence, just on a smaller base.
 Why this matters</p>
 <hr/>
-<p>If you bend forward in the backswing, you:</p>
+<p><strong>If you bend forward in the backswing, you:</strong></p>
 <ul class="styled-list">
 <li>lose your spine angle</li>
 <li>early-extend (stand up) on the downswing</li>
@@ -4417,18 +4415,17 @@ Why this matters</p>
 <p>That is exactly the difference between the static <em>Discobolus</em> idea and modern rotational mechanics.</p>
 <p>Bending forward shortens the lever, collapses the left side, and moves CoG over the toes. You lose radius and you can't block.</p>
 <p>Bending backward, meaning side-bending away from the target while staying behind the knee line, keeps the throwing arm long and relaxed, maintains hip-shoulder separation, and lets the left leg act as a rigid brake so all velocity goes into the discus.</p>
-<p>Your notes are essentially a coach's shorthand for:</p>
+<p><strong>Your notes are essentially a coach's shorthand for:</strong></p>
 <ul class="styled-list">
 <li>Long lever</li>
 <li>Torque generation</li>
 <li>Dynamic block</li>
 </ul>
 <p>All three of your Core Mechanical Checkpoints are in those four little drawings.</p>
-<p>Do you want me to turn your 5-phase sequence and these sketches into a clean one-page visual cheat sheet you can keep in your training log?</p>
-<p>yes</p>
+<p>Do you want me to turn your 5-phase sequence and these sketches into a clean one-page visual cheat sheet you can keep in your training log? yes.</p>
 <p>Jun 1, 2026</p>
 <p>Here is your one-page coaching cheat sheet. It combines your 5-phase sequence with the notebook cues you sketched: side bend, CoG behind the knee line, the discus coil, and the left-side shift.</p>
-<p>It is laid out as:</p>
+<p><strong>It is laid out as:</strong></p>
 <ul class="styled-list">
 <li>Top: The 5-phase kinetic sequence from Wind-Up to Delivery &amp; Release</li>
 <li>Middle: The three Core Mechanical Checkpoints: Long Lever, Hip-Shoulder Separation, and Dynamic Block</li>
@@ -4442,7 +4439,8 @@ Why this matters</p>
   <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
   <a href="index.html" class="nav-btn next">Next →</a>
 </nav>
-<footer class="cc-license" style="color: white; font-size: 0.88 em; border-top: 1px solid #e5e7eb; margin-top: 32px; padding-top: 14px;">
-<p style="margin: 4px 0; color: white;">Created by <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
-</footer>
+
+    <hr class="footer-divider">
+
+    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
 </body></html>
