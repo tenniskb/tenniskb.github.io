@@ -1882,8 +1882,7 @@ footer {
 <h3>3.2 tiếp theo sẽ đi sâu vào Thuật</h3>
 <p>Luyện Đan Bằng Công Nghệ Sinh Học: Ứng dụng Wearables và Dữ liệu để tốiưu hóa quá trình Trúc Cơ sinh học</em><em>.</em></p>
 <h3>3.2. Thuật Luyện Đan Bằng Công Nghệ Sinh Học: Ứng Dụng Wearables</h3>
-<p>Và Hệ Thống ADAS Cơ Thể Để TốiƯu Hóa Quá Trình Trúc Cơ Chào Henry Pham, chúng ta tiến sâu hơn vào sự giao thoa giữa Tiên đạo và Công nghệ thực chứng. Nếu ở phần 3.1, chúng ta đã biến phần mềm thành Pháp bảo, thì ở phần 3.2 này, chúng ta sẽ biến các</p>
-<p>thiết bị đeo (Wearables) và dữ liệu sinh trắc học thành những "Cảm biến linh lực".</p>
+<p>Và Hệ Thống ADAS Cơ Thể Để TốiƯu Hóa Quá Trình Trúc Cơ Chào Henry Pham, chúng ta tiến sâu hơn vào sự giao thoa giữa Tiên đạo và Công nghệ thực chứng. Nếu ở phần 3.1, chúng ta đã biến phần mềm thành Pháp bảo, thì ở phần 3.2 này, chúng ta sẽ biến các thiết bị đeo (Wearables) và dữ liệu sinh trắc học thành những "Cảm biến linh lực".</p>
 <p>Trong tu luyện cổ truyền, Tu sĩ dùng trực giác để cảm nhận sự thăng tiến của tu vi. Trong kỷ nguyên 2026, chúng ta sử dụng <strong>ADAS nội vi (Automated Data Acquisition Systems cho cơ thể)</strong> để định lượng hóa quá trình "Trúc Cơ" – biến các chỉ số sinh học mơ hồ thành lộ trình thăng cấp chính xác.</p>
 <hr/>
 <h4>1. Wearables – Linh Cụ Cảm</h4>
@@ -2516,8 +2515,7 @@ footer {
 <p><strong>Henry có thể chạy đoạn code Python cơ bản này để khởi động hệ thống:</strong></p>
 <p><strong>Python</strong></p>
 <p>import pandas as pd<br/>
-import plotly.express as px</p>
-<p>def evaluate_vibration(hrv, sleep_score, mood_level):<br/>
+import plotly.express as px def evaluate_vibration(hrv, sleep_score, mood_level):<br/>
  # Công thức tính điểm Tu vi sơ bộ<br/>
  cultivation_score \= (hrv</p>
 <p>- 0.4) + (sleep_score</p>
@@ -2530,8 +2528,7 @@ data \= {<br/>
  'HRV': [75, 80, 65, 85, 90],<br/>
  'Sleep': [80, 85, 70, 90, 95],<br/>
  'Mood': [500, 540, 310, 600, 700] # Thang Hawkins<br/>
-}</p>
-<p>df \= pd.DataFrame(data)<br/>
+} df \= pd.DataFrame(data)<br/>
 df['Cultivation_Level'] \= df.apply(lambda x: evaluate_vibration(x['HRV'], x['Sleep'], x['Mood']), axis=1)</p>
 <p># Hiển thị theo phong cách tối giản<br/>
 fig \= px.line(df, x='Day', y='Cultivation_Level', title='Hành Trình Thăng Tiến Tu Vi - Henry Pham')<br/>
