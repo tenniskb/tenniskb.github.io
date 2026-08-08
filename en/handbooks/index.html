@@ -2,292 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tennis Handbooks — English Library — Tennis Future Lab</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Tennis Handbook Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
     --ink: #0d0d0d;
     --paper: #fafaf7;
     --accent: #c8401a;
-    --green: #1a6b3c;
-    --gold: #c4952a;
     --muted: #6b7280;
     --divider: #e5e7eb;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     background: var(--paper);
     color: var(--ink);
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    line-height: 1.75;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
     padding: 60px 24px;
 }
-.container { max-width: 900px; margin: 0 auto; }
-.crumbs {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 16px;
-}
-.crumbs a { color: var(--accent); text-decoration: none; }
-.masthead {
-    border-bottom: 2px solid var(--ink);
-    padding-bottom: 28px;
-    margin-bottom: 40px;
-}
-.brand-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 16px;
-    display: inline-block;
-}
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.1;
-    margin-bottom: 16px;
-}
-.lead {
-    font-size: 17px;
-    color: var(--muted);
-    max-width: 700px;
-}
-.book-list { display: grid; gap: 16px; }
-.book-card {
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.2; margin-bottom: 16px; }
+.lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 32px; }
+.page-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 28px;
-    background: white;
-    border: 1.5px solid var(--divider);
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-    gap: 24px;
-}
-.book-card:hover {
-    border-color: var(--accent);
-    transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(200,64,26,0.1);
-}
-.book-card .body { flex: 1; }
-.book-card .book-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-.book-card .book-desc {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 6px;
-}
-.book-card .cta {
+    padding: 20px 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--divider);
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 700;
-    flex-shrink: 0;
+    font-size: 13px;
 }
+.page-nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
 footer {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.75;
-    text-align: center;
-    padding: 32px;
-    margin-top: 80px;
-}
-.cc-license {
-    font-size: 12px;
-    color: white;
-    padding: 16px;
-    text-align: center;
+    margin-top: 60px;
+    padding: 24px;
     background: var(--ink);
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-.cc-license a { color: var(--gold); }
-
-.footer-divider {
-    border: none;
-    border-top: 2px solid var(--ink);
-    margin: 48px auto 0 auto;
-    max-width: 900px;
-    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
 }
 </style>
 </head>
 <body>
 <div class="container">
-    <div class="crumbs">
-        <a href="../index.html">← Tennis Future Lab</a> / <a href="./index.html">English Handbooks</a>
+    <nav class="page-nav">
+        <a href="../../index.html">← Root Index</a>
+        <span>Tennis Knowledge Base</span>
+        <a href="../../vi/cam-nang/index.html">Tiếng Việt Library →</a>
+    </nav>
+
+    <h1>English Tennis Handbook Library</h1>
+    <p class="lead">Comprehensive collection of technical manuals, neural control research, biomechanical deep-dives, and tactical frameworks written natively in English.</p>
+
+    <div class="book-grid">
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Advanced_Neuro-Biomechanical_Tennis.html" style="color: var(--accent, #c8401a); text-decoration: none;">Advanced Neuro-Biomechanical Tennis</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Advanced_Neuro-Biomechanical_Tennis.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Advanced_Tennis_Training_Manual/index.html" style="color: var(--accent, #c8401a); text-decoration: none;">Advanced Tennis Training Manual — Mục lục | Tennis Future Lab</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Advanced_Tennis_Training_Manual/index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Advanced_Tennis_Training_Manual.html" style="color: var(--accent, #c8401a); text-decoration: none;">Advanced Tennis Training Manual - Complete 11 Chapters</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Advanced_Tennis_Training_Manual.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="ChatGPT_Tennis_Book_Manuscript.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Book Manuscript</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="ChatGPT_Tennis_Book_Manuscript.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Handbook_Tennis_Research_Notebook_v3.html" style="color: var(--accent, #c8401a); text-decoration: none;">Handbook Tennis Research Notebook v3</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Handbook_Tennis_Research_Notebook_v3.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Handbook_from_Tennis_Research_Project_Notebook.html" style="color: var(--accent, #c8401a); text-decoration: none;">Handbook from Tennis Research Project Notebook</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Handbook_from_Tennis_Research_Project_Notebook.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Modern_Tennis_Volley_Handbook_2026.html" style="color: var(--accent, #c8401a); text-decoration: none;">Modern Tennis Volley Handbook 2026</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Modern_Tennis_Volley_Handbook_2026.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Neuro_Biomechanical_Tennis.html" style="color: var(--accent, #c8401a); text-decoration: none;">Advanced Neuro-Biomechanical Tennis</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Neuro_Biomechanical_Tennis.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_ATP_Forehand_Techniques.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis ATP Forehand Techniques</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_ATP_Forehand_Techniques.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Backhand_Techniques.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Backhand Techniques</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Backhand_Techniques.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Book_Manuscript_ChatGPT.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Book Manuscript</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Book_Manuscript_ChatGPT.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Coaching_Manual_3_0.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Coaching Manual 3.0</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Coaching_Manual_3_0.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Mastery_20_Chapters.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Mastery 20 Chapters</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Mastery_20_Chapters.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Neurological_Specialist_Deep_Research.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Neurological Specialist Deep Research</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Neurological_Specialist_Deep_Research.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Neurological_Specialist_Professional.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Neurological Specialist Professional</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Neurological_Specialist_Professional.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_System_Elite_Manual.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis System Elite Manual</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_System_Elite_Manual.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_System_Playbook.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis System Playbook</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_System_Playbook.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Training_Manual_Advanced/index.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Training Manual (Advanced) — Mục lục | Tennis Future Lab</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Training_Manual_Advanced/index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Volley_Deep_Research.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Volley Deep Research</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Volley_Deep_Research.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Tennis_Volley_Deep_Research_ChatGPT.html" style="color: var(--accent, #c8401a); text-decoration: none;">Tennis Volley Deep Research</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Tennis_Volley_Deep_Research_ChatGPT.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="The_Art_of_Modern_Tennis/index.html" style="color: var(--accent, #c8401a); text-decoration: none;">The Art of Modern Tennis — Mục lục | Tennis Future Lab</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="The_Art_of_Modern_Tennis/index.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
+        <div class="book-card" style="background: white; border: 1px solid var(--divider, #e5e7eb); border-radius: 4px; padding: 24px; margin-bottom: 24px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 8px;"><a href="Unified_Power_Model_20_Chapters.html" style="color: var(--accent, #c8401a); text-decoration: none;">Unified Power Model 20 Chapters</a></h3>
+            <p style="color: var(--muted, #6b7280); font-size: 14px; margin-bottom: 12px;">Comprehensive tennis manual covering core biomechanics, kinetic chain sequencing, and strategic application.</p>
+            <p style="font-size: 15px; line-height: 1.6; margin-bottom: 16px;">This volume synthesizes modern motion science, ground reaction forces, and neural control theory into practical training progressions for competitive athletes and coaches.</p>
+            <a href="Unified_Power_Model_20_Chapters.html" style="display: inline-block; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--accent, #c8401a); text-decoration: none; font-weight: 600;">READ HANDBOOK →</a>
+        </div>
+        
     </div>
-    <div class="masthead">
-        <span class="brand-tag">Tennis Future Lab · English Library</span>
-        <h1>Tennis Handbooks - English Library</h1>
-        <p class="lead">Comprehensive collection of English tennis handbooks and training manuals. Click any book to see its full table of contents.</p>
-    </div>
-    <div class="book-list">
-        <a href="The_Art_of_Modern_Tennis/index.html" class="book-card">
-            <div class="body">
-                <div class="book-title">The Art of Modern Tennis</div>
-                <div class="book-desc">The definitive tennis manual combining Martial and Agentic frameworks into a unified system. This 24-chapter masterwork covers everything from biomechanical foundations to advanced tactical execution, mental mastery, and competitive psychology.</div>
-                <div class="book-desc">Built on the proprietary Martial-Agentic synthesis, the manual integrates ground reaction forces, hip-shoulder separation (X-Factor), the Constraints-Led Approach to skill acquisition, and the neurological basis of elite performance. Each chapter follows a consistent architecture: biomechanics → mental game → patterns of play → drills → Elite Track → Coach Track.</div>
-                <div class="book-desc">Includes three reference editions (Martial, Agentic, and Complete) plus supplementary volumes on neuro-motor control, competitive psychology, and doubles tactics. The definitive resource for coaches and serious players seeking a unified understanding of modern tennis.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Tennis_Training_Manual_Advanced/index.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Tennis Training Manual (Advanced)</div>
-                <div class="book-desc">An 11-chapter deep dive into the biomechanical and neurological foundations of elite tennis performance. Covers kinetic chain mechanics, rotational power (X-Factor), movement science, serve architecture, return mechanics, groundstrokes, net play, slice variety, tactics, and physical conditioning.</div>
-                <div class="book-desc">Each chapter follows a rigorous structure: biomechanical principles → CLA training system → Elite Player Track → Coach Track. Integrates cutting-edge research on ground reaction forces, hip-shoulder separation, stretch-shortening cycle efficiency, and the neurological basis of pressure-resistant performance.</div>
-                <div class="book-desc">Available in both standalone format (single file) and chapter-by-chapter for focused study. Includes Vietnamese translation in /vi/cam-nang/Advanced_Tennis_Training_Manual/. The most scientifically rigorous tennis manual available.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Analysis_of_Tennis_Techniques_from_Elite_Players.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Analysis of Tennis Techniques from Elite Players</div>
-                <div class="book-desc">A comparative analysis of technique patterns across the greatest players of the modern era: Federer, Nadal, Djokovic, Sinner, Alcaraz. Uses high-speed video analysis and biomechanical modeling to deconstruct the commonalities and divergences in their strokes.</div>
-                <div class="book-desc">Covers serve mechanics, forehand variations, backhand configurations, movement signatures, and tactical decision-making under pressure. Identifies the biomechanical 'fingerprints' that distinguish elite execution from technically sound but non-world-class play.</div>
-                <div class="book-desc">Designed for coaches and analysts seeking to understand not just what elite players do, but why their techniques produce superior outcomes. Includes comparative tables, video timestamps, and practical coaching implications for each finding.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Complete_Modern_Tennis_Handbook_2026.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Complete Modern Tennis Handbook 2026</div>
-                <div class="book-desc">A comprehensive single-volume reference covering all aspects of modern tennis: technique, tactics, physical preparation, mental skills, equipment, and periodization. Synthesizes current best practices from biomechanics, motor learning science, and elite coaching.</div>
-                <div class="book-desc">Organized for quick reference with color-coded sections: Foundations (biomechanics, motor learning), Strokes (serve, return, groundstrokes, volleys), Tactics (patterns, game plans, surface adjustments), Performance (physical, mental, recovery), and Equipment (rackets, strings, sensors).</div>
-                <div class="book-desc">Updated for the 2026 season with the latest research on vertical GRF optimization, constraint-led training design, and neuro-motor encoding. Includes printable quick-reference cards for court-side coaching.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Elite_Tennis_Training_Manual.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Elite Tennis Training Manual</div>
-                <div class="book-desc">A focused manual for players and coaches operating at the elite competitive level (ITF/ATP/WTA). Covers advanced periodization, load management, travel optimization, match-day routines, and the integration of real-time analytics into coaching decisions.</div>
-                <div class="book-desc">Addresses the unique demands of professional tennis: 40+ week seasons, multi-surface transitions, jet lag management, injury surveillance, and the psychological pressures of ranking points and prize money. Includes templates for daily/weekly/monthly planning.</div>
-                <div class="book-desc">Based on work with ATP/WTA players and national federations. Contains proprietary frameworks for serve+1 patterns, return aggression metrics, and mental reset protocols under pressure. Not for recreational players.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Federer_Tennis_Handbook.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Federer Tennis Handbook</div>
-                <div class="book-desc">A complete technical and tactical deconstruction of Roger Federer's game — the most biomechanically efficient player in tennis history. Covers his serve architecture, forehand mastery, one-handed backhand, net play genius, and tactical intelligence.</div>
-                <div class="book-desc">Analyzes the specific biomechanical traits that allowed Federer to maintain elite performance into his 40s: minimal joint loading, exceptional kinetic chain efficiency, early preparation, and the ability to generate pace from minimal backswing. Includes frame-by-frame breakdowns of signature shots.</div>
-                <div class="book-desc">Extracts coaching principles from Federer's approach: efficiency over effort, early preparation, court positioning as offense, and the psychological advantage of aesthetic mastery. A masterclass in tennis longevity and elegance.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Nadal_Tennis.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Nadal Tennis Mastery</div>
-                <div class="book-desc">The definitive analysis of Rafael Nadal's revolutionary clay-court mastery and its translation across all surfaces. Covers his extreme topspin mechanics, defensive-to-offensive transition, mental fortress construction, and physical preparation for grinding tennis.</div>
-                <div class="book-desc">Deconstructs the 'Nadal Paradox': how a defensive baseline style produces the most aggressive statistical profile in tennis history. Covers his lasso forehand, sliding mechanics, court positioning, point construction patterns, and the psychological warfare of relentless intensity.</div>
-                <div class="book-desc">Includes surface-specific adaptations (clay → hard → grass), injury management protocols for knee/foot issues, and the coaching philosophy of Toni Nadal. Essential for understanding how to build a champion from 'impossible' physical foundations.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Novak_Djokovic_Tennis.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Novak Djokovic Tennis System</div>
-                <div class="book-desc">A systematic breakdown of Novak Djokovic's unprecedented all-surface dominance. Covers his return of serve mastery, elastic movement, mental reset protocols, flexibility training, and the tactical versatility that produced the most complete game in tennis history.</div>
-                <div class="book-desc">Analyzes the 'Djokovic Difference': how superior defensive skills create the best offense in tennis. Covers his split-step timing, hip mobility for extreme court coverage, breathing-based reset routines, and the ability to neutralize any opponent's weapon while imposing his own patterns.</div>
-                <div class="book-desc">Extracts the 'Djokovic Protocol' for coaches: return-focused practice design, movement efficiency drills, mental rehearsal techniques, and the gluten-free/plant-based nutrition approach that supported his longevity. The blueprint for the modern complete player.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Sampras_Tennis.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Sampras Tennis System</div>
-                <div class="book-desc">An analysis of Pete Sampras's serve-and-volley mastery and the last great all-court attacker. Covers his serve architecture, running forehand, transition game, and the tactical genius of serve+1 patterns on fast surfaces.</div>
-                <div class="book-desc">Deconstructs the platform serve, the 'Sampras hop', and the tactical genius of serve+1 patterns on fast surfaces. Examines how Sampras dominated the 1990s with a game built on offensive efficiency.</div>
-                <div class="book-desc">Historical significance: the bridge between classical and modern tennis. Coaching insights for developing all-court players in an era increasingly dominated by baseline play.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Tennis_Mastery_Complete.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Tennis Mastery Complete</div>
-                <div class="book-desc">A holistic synthesis of technical, tactical, physical, and mental mastery into a unified player development system. Integrates the best insights from biomechanics, motor learning, sports psychology, and periodization into a coherent progression from beginner to elite.</div>
-                <div class="book-desc">Organized around the 'Mastery Pillars': Technical Efficiency (biomechanics), Tactical Intelligence (patterns), Physical Robustness (conditioning), Mental Resilience (pressure management), and Strategic Adaptability (surface/opponent adjustment). Each pillar has measurable benchmarks.</div>
-                <div class="book-desc">Includes the 12-month periodized development plan, the 'Mastery Assessment Battery' for quarterly evaluation, and the coach's dashboard for tracking multi-dimensional progress. The most complete player development system available.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="The_Complete_Tennis_Manual.html" class="book-card">
-            <div class="body">
-                <div class="book-title">The Complete Tennis Manual</div>
-                <div class="book-desc">A single-volume encyclopedia of tennis knowledge covering history, rules, equipment, technique, tactics, coaching methodology, sports science, and the business of tennis. The ultimate reference for anyone involved in the sport at any level.</div>
-                <div class="book-desc">Organized in five parts: Foundations (history, rules, physics), The Game (strokes, tactics, surfaces), The Athlete (biomechanics, conditioning, psychology), The Coach (methodology, communication, ethics), and The Industry (business, technology, governance). Each section written by domain experts.</div>
-                <div class="book-desc">Designed as the 'textbook of tennis' for university courses, coaching certifications, and serious self-study. Includes glossary of 500+ terms, historical timeline, equipment evolution timeline, and annotated bibliography for further research.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Unified_Power_Model_20_Chapters.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Unified Power Model</div>
-                <div class="book-desc">A revolutionary 20-chapter framework unifying ground reaction forces, rotational mechanics, and elastic energy into a single coherent model of tennis power generation. Solves the century-old debate: where does tennis power actually come from?</div>
-                <div class="book-desc">Proposes the 'Unified Power Equation': Power = GRF × Kinetic Chain Efficiency × SSC Utilization × Timing Precision. Each variable is measurable, trainable, and contributes multiplicatively. Includes the 20-chapter progression from measurement to mastery.</div>
-                <div class="book-desc">Includes the 'Power Audit' diagnostic tool, normative power profiles by age/level, and the 12-week power development protocol. The first biomechanics model that predicts serve velocity and groundstroke heaviness from measurable inputs with >90% accuracy.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="../../vi/cam-nang/Tennis_Biomechanics_50_Complete.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Tennis Biomechanics 50 Complete</div>
-                <div class="book-desc">The most comprehensive biomechanics reference ever compiled for tennis. 50 chapters covering every joint, muscle group, and kinetic chain segment involved in tennis strokes. Ground reaction forces, segmental sequencing, moment of inertia management, and energy transfer efficiency.</div>
-                <div class="book-desc">Includes force plate data, motion capture benchmarks, EMG activation patterns, and injury risk modeling for each stroke. Covers serve, forehand, backhand, return, volley, overhead, and movement biomechanics with normative data for juniors, collegiate, and professional players.</div>
-                <div class="book-desc">Designed for sports scientists, biomechanists, and high-performance coaches. Includes measurement protocols, normative databases, and intervention strategies for technical correction. The definitive reference for evidence-based tennis biomechanics.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="The_Neuro-Motor_Manual_of_Tennis_Mastery.html" class="book-card">
-            <div class="body">
-                <div class="book-title">The Neuro-Motor Manual of Tennis Mastery</div>
-                <div class="book-desc">A groundbreaking integration of neuroscience, motor learning theory, and tennis skill acquisition. Covers cerebellar encoding, basal ganglia automatization, stretch-reflex exploitation, implicit vs explicit learning, and the neural basis of pressure-resistant performance.</div>
-                <div class="book-desc">Translates cutting-edge motor control research into practical tennis coaching: why external focus beats internal focus, how sleep consolidates motor skills, why implicit learning produces pressure-resistant skills, and how to design practice that builds subcortical encoding rather than cortical monitoring.</div>
-                <div class="book-desc">Includes the 'Neural Encoding Framework' for practice design: representative tasks, challenge point optimization, external focus cues, sleep hygiene, and pressure simulation. The missing link between 'knowing what to do' and 'doing it under pressure.'</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Modern_Tennis_Volley_Handbook_2026.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Modern Tennis Volley Handbook 2026</div>
-                <div class="book-desc">The definitive guide to modern net play in an era where volleying is a finishing weapon, not a starting strategy. Covers continental grip mastery, short-lever mechanics, approach shot selection, half-volley technique, and overhead smash variations.</div>
-                <div class="book-desc">Analyzes the net play revolution: why the modern volley is shorter, more compact, and more reliant on redirection than generation. Covers the V-shape finish, underspin control, SABR-style sneak attacks, transition zone half-volleys, and the tactical decision tree for when to approach.</div>
-                <div class="book-desc">Includes the 'Net Play Decision Tree' for real-time coaching, approach shot effectiveness metrics by court position, and drills for developing the reflex speed and touch required at the 2026 elite level. Essential for the all-court player.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-        <a href="Tennis_Mastery_20_Chapters.html" class="book-card">
-            <div class="body">
-                <div class="book-title">Tennis Mastery 20 Chapters</div>
-                <div class="book-desc">A 20-chapter holistic player development system integrating technical, tactical, physical, and mental mastery into a unified progression. Organized around the 'Mastery Pillars': Technical Efficiency, Tactical Intelligence, Physical Robustness, Mental Resilience, and Strategic Adaptability.</div>
-                <div class="book-desc">Each pillar has measurable benchmarks and a structured progression. The system integrates biomechanics, motor learning, sports psychology, and periodization into a coherent pathway from intermediate to elite competitive play.</div>
-                <div class="book-desc">Includes the 12-month periodized development plan, the 'Mastery Assessment Battery' for quarterly evaluation, and the coach's dashboard for tracking multi-dimensional progress. The most complete player development system in a single volume.</div>
-            </div>
-            <span class="cta">Read now →</span>
-        </a>
-    </div>
+
+    <footer>
+        © 2026 Tennis Future Lab · All contents are for educational purposes.
+    </footer>
 </div>
-
-    <hr class="footer-divider">
-
-    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
-
 </body>
 </html>
