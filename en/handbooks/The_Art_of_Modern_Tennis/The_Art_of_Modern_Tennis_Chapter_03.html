@@ -1,1231 +1,266 @@
 <!DOCTYPE html>
-
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Advanced Tennis Training Manual</title>
-<style>
-
- @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
- :root {
-
- --ink: #0d0d0d;
-
- --paper: #f5f0e8;
-
- --accent: #c8401a;
-
- --green: #1a6b3c;
-
- --gold: #c4952a;
-
- --muted: #6b6255;
-
- --divider: #d4cbbf;
-
- }
-
- * { margin: 0; padding: 0; box-sizing: border-box; }
-
- body {
-
- background: var(--paper);
-
- color: var(--ink);
-
- font-family: 'DM Sans', sans-serif;
-
- font-size: 17px;
-
- line-height: 1.75;
-
- }
-
- /* ─── MASTHEAD ─── */
-
- .masthead {
-
- background: var(--ink);
-
- color: var(--paper);
-
- padding: 64px 40px 48px;
-
- position: relative;
-
- overflow: hidden;
-
- }
-
- .masthead::before {
-
- content: '';
-
- position: absolute;
-
- top: -60px; right: -80px;
-
- width: 420px; height: 420px;
-
- border: 60px solid rgba(200,64,26,0.18);
-
- border-radius: 50%;
-
- }
-
- .masthead::after {
-
- content: '';
-
- position: absolute;
-
- bottom: -100px; left: -40px;
-
- width: 280px; height: 280px;
-
- border: 40px solid rgba(196,149,42,0.15);
-
- border-radius: 50%;
-
- }
-
- .tag {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 11px;
-
- letter-spacing: 3px;
-
- text-transform: uppercase;
-
- color: var(--accent);
-
- display: inline-block;
-
- margin-bottom: 20px;
-
- }
-
- h1 {
-
- font-family: 'Playfair Display', serif;
-
- font-size: clamp(2.2rem, 5vw, 3.6rem);
-
- line-height: 1.1;
-
- max-width: 700px;
-
- margin-bottom: 24px;
-
- }
-
- .subtitle {
-
- font-size: 18px;
-
- color: white;
-
- max-width: 560px;
-
- font-weight: 300;
-
- }
-
- /* ─── LAYOUT ─── */
-
- .content-wrap {
-
- max-width: 900px;
-
- margin: 0 auto;
-
- padding: 0 24px;
-
- }
-
- /* ─── LEAD ─── */
-
- .lead {
-
- font-size: 20px;
-
- font-weight: 500;
-
- line-height: 1.6;
-
- color: var(--ink);
-
- padding: 52px 0 20px;
-
- border-bottom: 2px solid var(--ink);
-
- margin-bottom: 52px;
-
- }
-
- /* ─── SECTION HEADER ─── */
-
- .section-label {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 10px;
-
- letter-spacing: 4px;
-
- text-transform: uppercase;
-
- color: var(--muted);
-
- margin-bottom: 10px;
-
- }
-
- h2 {
-
- font-family: 'Playfair Display', serif;
-
- font-size: clamp(1.6rem, 3vw, 2.4rem);
-
- margin-bottom: 20px;
-
- line-height: 1.2;
-
- }
-
- h3 {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.3rem;
-
- margin: 32px 0 12px;
-
- color: var(--ink);
-
- }
-
- p { margin-bottom: 18px; color: #2a2520; }
-
- /* ─── PULL QUOTE ─── */
-
- .pullquote {
-
- border-left: 5px solid var(--accent);
-
- padding: 20px 28px;
-
- margin: 40px 0;
-
- background: rgba(200,64,26,0.05);
-
- }
-
- .pullquote p {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.25rem;
-
- font-style: italic;
-
- margin: 0;
-
- color: var(--ink);
-
- }
-
- /* ─── KINETIC CHAIN DIAGRAM ─── */
-
- .chain-diagram {
-
- margin: 48px 0;
-
- background: var(--ink);
-
- border-radius: 4px;
-
- padding: 40px 32px;
-
- color: var(--paper);
-
- }
-
- .chain-diagram h3 { color: var(--gold); margin-top: 0; }
-
- .chain-nodes {
-
- display: flex;
-
- flex-direction: column;
-
- gap: 0;
-
- }
-
- .chain-node {
-
- display: flex;
-
- align-items: center;
-
- gap: 20px;
-
- padding: 12px 0;
-
- position: relative;
-
- }
-
- .chain-node:not(:last-child)::after {
-
- content: '';
-
- position: absolute;
-
- left: 19px;
-
- top: 44px;
-
- width: 2px;
-
- height: 28px;
-
- background: var(--accent);
-
- }
-
- .node-icon {
-
- width: 40px; height: 40px;
-
- border-radius: 50%;
-
- background: var(--accent);
-
- display: flex;
-
- align-items: center;
-
- justify-content: center;
-
- font-family: 'Space Mono', monospace;
-
- font-size: 13px;
-
- font-weight: 700;
-
- flex-shrink: 0;
-
- color: white;
-
- }
-
- .node-text strong {
-
- display: block;
-
- font-size: 15px;
-
- color: var(--paper);
-
- margin-bottom: 2px;
-
- }
-
- .node-text span {
-
- font-size: 13px;
-
- color: rgba(245,240,232,0.55);
-
- }
-
- /* ─── PHOTO ANALYSIS CARD ─── */
-
- .analysis-grid {
-
- display: grid;
-
- grid-template-columns: 1fr 1fr;
-
- gap: 24px;
-
- margin: 40px 0;
-
- }
-
- @media (max-width: 640px) { .analysis-grid { grid-template-columns: 1fr; } }
-
- .analysis-card {
-
- border: 1.5px solid var(--divider);
-
- border-radius: 4px;
-
- overflow: hidden;
-
- background: white;
-
- }
-
- .analysis-card img {
-
- width: 100%;
-
- height: 220px;
-
- object-fit: cover;
-
- object-position: top;
-
- display: block;
-
- }
-
- .card-body { padding: 20px; }
-
- .card-body .player-tag {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 10px;
-
- letter-spacing: 2px;
-
- text-transform: uppercase;
-
- color: var(--muted);
-
- margin-bottom: 6px;
-
- display: block;
-
- }
-
- .card-body h4 {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.1rem;
-
- margin-bottom: 10px;
-
- color: var(--ink);
-
- }
-
- .card-body p { font-size: 14px; margin-bottom: 0; color: #3a342e; }
-
- .phase-badge {
-
- display: inline-block;
-
- font-family: 'Space Mono', monospace;
-
- font-size: 10px;
-
- letter-spacing: 1px;
-
- background: var(--green);
-
- color: white;
-
- padding: 3px 10px;
-
- border-radius: 2px;
-
- margin-bottom: 10px;
-
- }
-
- /* ─── KNEE ANATOMY VISUAL ─── */
-
- .anatomy-block {
-
- display: grid;
-
- grid-template-columns: 1fr 1fr;
-
- gap: 20px;
-
- margin: 40px 0;
-
- }
-
- @media (max-width: 600px) { .anatomy-block { grid-template-columns: 1fr; } }
-
- .anatomy-card {
-
- padding: 28px;
-
- border-radius: 4px;
-
- }
-
- .anatomy-card.safe {
-
- background: rgba(26,107,60,0.08);
-
- border: 1.5px solid rgba(26,107,60,0.3);
-
- }
-
- .anatomy-card.danger {
-
- background: rgba(200,64,26,0.07);
-
- border: 1.5px solid rgba(200,64,26,0.3);
-
- }
-
- .anatomy-card h4 {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 12px;
-
- letter-spacing: 2px;
-
- text-transform: uppercase;
-
- margin-bottom: 16px;
-
- }
-
- .safe h4 { color: var(--green); }
-
- .danger h4 { color: var(--accent); }
-
- .anatomy-card ul { list-style: none; padding: 0; }
-
- .anatomy-card li {
-
- font-size: 14px;
-
- padding: 7px 0;
-
- border-bottom: 1px solid rgba(0,0,0,0.08);
-
- display: flex;
-
- align-items: flex-start;
-
- gap: 10px;
-
- }
-
- .anatomy-card li:last-child { border-bottom: none; }
-
- .safe li::before { content: '✓'; color: var(--green); font-weight: 700; }
-
- .danger li::before { content: '✗'; color: var(--accent); font-weight: 700; }
-
- /* ─── PLAYER COMPARISON ─── */
-
- .comparison {
-
- margin: 48px 0;
-
- }
-
- .comparison-header {
-
- display: grid;
-
- grid-template-columns: 1fr 1fr;
-
- gap: 20px;
-
- margin-bottom: 0;
-
- }
-
- .player-header {
-
- padding: 20px 24px;
-
- color: white;
-
- }
-
- .player-header.nj { background: #1a1a2e; }
-
- .player-header.rf { background: #2e1a1a; }
-
- .player-header .name {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.4rem;
-
- font-weight: 700;
-
- margin-bottom: 4px;
-
- }
-
- .player-header .descriptor {
-
- font-size: 12px;
-
- font-style: italic;
-
- opacity: 0.7;
-
- }
-
- .compare-row {
-
- display: grid;
-
- grid-template-columns: 1fr 1fr;
-
- }
-
- .compare-cell {
-
- padding: 14px 24px;
-
- font-size: 14px;
-
- border-bottom: 1px solid var(--divider);
-
- }
-
- .compare-cell:first-child { background: rgba(26,26,46,0.04); }
-
- .compare-cell:last-child { background: rgba(46,26,26,0.04); }
-
- .compare-label {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 10px;
-
- letter-spacing: 1px;
-
- text-transform: uppercase;
-
- color: var(--muted);
-
- grid-column: 1/-1;
-
- padding: 10px 24px 4px;
-
- background: var(--paper);
-
- border-bottom: 1px solid var(--divider);
-
- font-weight: 700;
-
- }
-
- /* ─── DRILL CARDS ─── */
-
- .drills {
-
- display: grid;
-
- grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
- gap: 20px;
-
- margin: 36px 0;
-
- }
-
- .drill-card {
-
- background: white;
-
- border: 1.5px solid var(--divider);
-
- border-top: 4px solid var(--gold);
-
- padding: 24px;
-
- border-radius: 0 0 4px 4px;
-
- }
-
- .drill-number {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 28px;
-
- font-weight: 700;
-
- color: var(--gold);
-
- opacity: 0.4;
-
- margin-bottom: 8px;
-
- display: block;
-
- }
-
- .drill-card h4 {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.05rem;
-
- margin-bottom: 8px;
-
- }
-
- .drill-card p { font-size: 13px; margin: 0; color: var(--muted); }
-
- /* ─── SECTION DIVIDER ─── */
-
- .section {
-
- padding: 60px 0 40px;
-
- border-top: 1px solid var(--divider);
-
- }
-
- .section:first-of-type { border-top: none; }
-
- /* ─── WARNING BOX ─── */
-
- .warning {
-
- background: rgba(200,64,26,0.08);
-
- border: 1.5px solid rgba(200,64,26,0.25);
-
- padding: 24px 28px;
-
- margin: 36px 0;
-
- border-radius: 4px;
-
- }
-
- .warning strong { color: var(--accent); }
-
- .warning p { margin: 0; font-size: 15px; }
-
- /* ─── PRINCIPLE STRIP ─── */
-
- .principle {
-
- background: var(--green);
-
- color: white;
-
- padding: 36px 40px;
-
- margin: 48px 0;
-
- }
-
- .principle p {
-
- font-family: 'Playfair Display', serif;
-
- font-size: 1.4rem;
-
- font-style: italic;
-
- color: white;
-
- margin: 0;
-
- max-width: 640px;
-
- }
-
- /* ─── SENSATION LIST ─── */
-
- .sensation-grid {
-
- display: grid;
-
- grid-template-columns: 1fr 1fr;
-
- gap: 24px;
-
- margin: 32px 0;
-
- }
-
- @media (max-width: 560px) { .sensation-grid { grid-template-columns: 1fr; } }
-
- .sensation-box { padding: 24px; border-radius: 4px; }
-
- .sensation-box.feel { background: rgba(196,149,42,0.1); border: 1.5px solid rgba(196,149,42,0.3); }
-
- .sensation-box.avoid { background: rgba(200,64,26,0.07); border: 1.5px solid rgba(200,64,26,0.25); }
-
- .sensation-box h4 {
-
- font-family: 'Space Mono', monospace;
-
- font-size: 11px;
-
- letter-spacing: 2px;
-
- text-transform: uppercase;
-
- margin-bottom: 14px;
-
- }
-
- .feel h4 { color: var(--gold); }
-
- .avoid h4 { color: var(--accent); }
-
- .sensation-box li {
-
- font-size: 14px;
-
- margin-bottom: 8px;
-
- padding-left: 20px;
-
- position: relative;
-
- list-style: none;
-
- }
-
- .feel li::before { content: '◆'; position: absolute; left: 0; color: var(--gold); font-size: 8px; top: 4px; }
-
- .avoid li::before { content: '◆'; position: absolute; left: 0; color: var(--accent); font-size: 8px; top: 4px; }
-
- /* ─── FOOTER ─── */
-
- footer {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.75;
-    text-align: center;
-    padding: 32px;
-    margin-top: 80px;
-}
-
- /* ─── DIAGRAM SVG AREA ─── */
-
- .svg-diagram {
-
- margin: 40px 0;
-
- text-align: center;
-
- }
-
- svg text { font-family: 'DM Sans', sans-serif; }
-
- @media (max-width: 600px) {
-
- .masthead { padding: 44px 24px 36px; }
-
- .content-wrap { padding: 0 16px; }
-
- .player-header .name { font-size: 1.1rem; }
-
- .compare-cell { font-size: 13px; padding: 12px 16px; }
-
- .compare-label { padding: 10px 16px 4px; }
-
- .player-header { padding: 16px; }
-
- }
-
-/* Additional custom styles */
-.toc ul li { margin-bottom: 8px; }
-.toc ul li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-.styled-list { padding-left: 24px; margin: 16px 0; }
-.styled-list li { margin-bottom: 8px; }
-.styled-list.numbered { list-style-type: decimal; }
-.data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
-.data-table th, .data-table td { padding: 12px 16px; border: 1px solid var(--divider); text-align: left; }
-.data-table th { background: var(--ink); color: var(--paper); font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; }
-.code-block { background: var(--ink); color: var(--paper); padding: 20px; border-radius: 4px; overflow-x: auto; font-family: 'Space Mono', monospace; font-size: 13px; margin: 24px 0; }
-.section-divider { border-top: 1px solid var(--divider); margin: 48px 0; }
-.pullquote { border-left: 5px solid var(--accent); padding: 20px 28px; margin: 40px 0; background: rgba(200,64,26,0.05); }
-.pullquote p { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-style: italic; margin: 0; color: var(--ink); }
-.warning { background: rgba(200,64,26,0.08); border: 1.5px solid rgba(200,64,26,0.25); padding: 24px 28px; margin: 36px 0; border-radius: 4px; }
-.warning strong { color: var(--accent); }
-.warning p { margin: 0; font-size: 15px; }
-
-@media (max-width: 600px) {
- .masthead { padding: 44px 24px 36px; }
- .content-wrap { padding: 0 16px; }
-}
-
-.footer-divider {
-    border: none;
-    border-top: 2px solid var(--ink);
-    margin: 48px auto 0 auto;
-    max-width: 900px;
-    width: 100%;
-}
-</style>
-<style>
-.page-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 24px 0;
-    margin-top: 48px;
-    border-top: 1.5px solid var(--divider, #d4cbbf);
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 1px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.page-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: var(--accent, #c8401a);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 16px;
-    border: 1px solid var(--divider, #d4cbbf);
-    border-radius: 4px;
-    background: var(--paper, #f5f0e8);
-    transition: all 0.2s ease;
-    flex: 1;
-    max-width: 240px;
-    text-align: center;
-}
-.page-nav a:hover {
-    background: var(--accent, #c8401a);
-    color: #ffffff;
-    border-color: var(--accent, #c8401a);
-}
-@media (max-width: 600px) {
-    .page-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 24px 0;
-    margin-top: 48px;
-    border-top: 1.5px solid var(--divider, #d4cbbf);
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 1px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-    .page-nav a {
-        max-width: 100%;
-    }
-}
-</style>
-<style id="tfl-theme-system">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:wght@400;700&display=swap');
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>The Art of Modern Tennis — Chapter 3: movement &amp; footwork</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-    --ink: #0d0d0d;
-    --paper: #fafaf7;
-    --accent: #c8401a;
-    --green: #1a6b3c;
-    --gold: #c4952a;
-    --muted: #6b7280;
-    --divider: #e5e7eb;
+  --ink: #0d0d0d;
+  --paper: #f5f0e8;
+  --accent: #c8401a;
+  --green: #1a6b3c;
+  --gold: #c4952a;
+  --muted: #6b6255;
+  --divider: #d4cbbf;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    line-height: 1.75;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
 }
-
 .masthead {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 64px 40px 48px;
-    position: relative;
-    overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 64px 40px 48px;
+  position: relative;
+  overflow: hidden;
 }
-
-.masthead .tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    display: inline-block;
-    margin-bottom: 20px;
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 420px; height: 420px;
+  border: 60px solid rgba(200,64,26,0.18);
+  border-radius: 50%;
 }
-
-.masthead h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1.15;
-    max-width: 800px;
-    margin-bottom: 20px;
-    color: #ffffff;
+.masthead::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -40px;
+  width: 280px; height: 280px;
+  border: 40px solid rgba(196,149,42,0.15);
+  border-radius: 50%;
 }
-
-.masthead .subtitle {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 600px;
-    font-weight: 300;
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-block;
+  margin-bottom: 20px;
+  position: relative;
 }
-
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  max-width: 700px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.subtitle {
+  font-size: 18px;
+  color: rgba(245,240,232,0.7);
+  max-width: 560px;
+  font-weight: 300;
+  position: relative;
+}
 .content-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: var(--ink);
-    line-height: 1.25;
+.lead {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink);
+  padding: 52px 0 20px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 52px;
 }
-
-h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 24px; }
-h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
-h3 { font-size: 1.3rem; margin: 32px 0 12px; }
-h4 { font-size: 1.1rem; margin: 24px 0 8px; font-weight: 700; }
-
-p { margin-bottom: 16px; }
-
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.styled-list { padding-left: 24px; margin: 16px 0; }
-.styled-list li { margin-bottom: 8px; }
-
-.page-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 24px 0;
-    margin-top: 48px;
-    border-top: 1.5px solid var(--divider);
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 1px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
 }
-
-.page-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 16px;
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    background: white;
-    transition: all 0.2s ease;
-    flex: 1;
-    max-width: 240px;
-    text-align: center;
+.chapter { padding: 44px 0 8px; border-top: 1px solid var(--divider); }
+.chapter:first-of-type { border-top: none; }
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
-
-.page-nav a:hover {
-    background: var(--accent);
-    color: #ffffff;
-    border-color: var(--accent);
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin: 32px 0 12px;
+  color: var(--accent);
 }
-
+h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin: 24px 0 10px;
+  color: var(--ink);
+}
+p { margin-bottom: 18px; color: #2a2520; }
+strong { color: var(--ink); }
+.pullquote {
+  border-left: 5px solid var(--accent);
+  padding: 20px 28px;
+  margin: 32px 0;
+  background: rgba(200,64,26,0.05);
+}
+.pullquote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0;
+  color: var(--ink);
+}
+.warning {
+  background: rgba(200,64,26,0.08);
+  border: 1.5px solid rgba(200,64,26,0.25);
+  padding: 22px 28px;
+  margin: 32px 0;
+  border-radius: 4px;
+}
+.warning p { margin: 0; font-size: 15px; }
+.warning .badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+.styled-list { margin: 12px 0 24px; padding-left: 28px; }
+.styled-list li { margin-bottom: 8px; line-height: 1.7; }
+table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+th, td { border: 1px solid var(--divider); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); background: rgba(200,64,26,0.05); }
+hr { border: none; border-top: 1px solid var(--divider); margin: 32px 0; }
+.page-nav { display: flex; justify-content: space-between; gap: 12px; margin: 56px 0 24px; flex-wrap: wrap; }
+.nav-btn { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1.5px solid var(--divider); padding: 10px 16px; border-radius: 3px; }
+.nav-btn:hover { border-color: var(--accent); color: var(--accent); }
 footer {
-    margin-top: 80px;
-    padding: 40px 24px;
-    background: var(--ink);
-    color: #ffffff;
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    text-align: center;
-    line-height: 1.75;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 24px;
+  margin-top: 80px;
+  text-align: center;
+  font-size: 13px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(245,240,232,0.2);
 }
-</style>
-</head>
-<body>>
+footer strong { color: var(--gold); }
+footer a { color: var(--gold); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer .credit-label { color: var(--gold); }
+@media (max-width: 600px) {
+  .masthead { padding: 44px 24px 36px; }
+  .content-wrap { padding: 0 16px; }
+}
+</style></head><body>
+
 <div class="masthead">
-<span class="tag">The Art of Modern Tennis</span>
-<h1>Chapter 03</h1>
-<p class="subtitle">Tennis Future Lab · The Art of Modern Tennis</p>
+  <span class="tag">The Art of Modern Tennis</span>
+  <h1>Chapter 03</h1>
+  <p class="subtitle">movement &amp; footwork</p>
 </div>
+
 <div class="content-wrap">
-<p class="lead">The Art of Modern Tennis — Comprehensive Reference for Coaches and Players</p>
-<h3>Chapter 3: Movement &amp; Footwork</h3>
-<p>Power without position is wasted. The rotational forces described in Chapters 1 and 2 — the ground reaction, the X-Factor, the stiffening at contact — can only be deployed if the player arrives at the ball in balance, with time to load. Movement is not the glamorous part of tennis. It is, however, the part that makes everything else possible.</p>
+<p class="lead">power without position is wasted. The rotational forces described in Chapters 1 and 2 — the ground reaction, the X-Factor, the stiffening at contact — can only be deployed if the player arrives at the ball in balance, with time to load. movement is not the glamorous part of tennis. It is, however, the part that makes everything else possible.</p>
+
 <p>In the 2026 game, movement has evolved from simple running into a sophisticated system of inertia management and lateral deceleration. Players are no longer just getting to the ball — they are managing their body's momentum in real time, converting lateral speed into rotational power, and recovering position before the opponent has even decided where to play next. This chapter breaks that system down to its components.</p>
 <hr/>
-<h3>3.1 The Foundation of Balance: Why Footwork Precedes</h3>
-<p>Everything Before discussing specific movement patterns, it is necessary to establish the principle that underlies all of them. A great shot does not begin with the backswing. It does not begin with the split-step. It begins with the feet finding the right position relative to the ball - and from that position, creating a stable, upright platform from which the kinetic chain can fire. The feet serve two functions simultaneously. They are the power station - the interface with the ground through which all GRF is generated, as established in Chapter 1. And they are the anchor - the structural foundation that keeps the entire kinetic chain aligned from ground to strings. When the feet are wrong, nothing else can be right. A perfect shoulder turn from a bad base produces a bad shot. A perfect base with an imperfect swing still gives the player something to work with.</p>
-<p>The non-negotiable outcome of correct footwork is upright posture at the moment of contact. Back straight, knees bent, weight centred. When elite players like Federer and Djokovic make contact, their spines are vertical — not leaning, not reaching, not collapsed. This uprightness is not a stylistic choice. It is a biomechanical requirement. The shoulder rotation, the core stiffening, the energy transfer described in previous chapters — all of them depend on a vertical spine to function correctly. The feet create the conditions for that spine. This is why footwork is architecture, not logistics.</p>
-<p>The single most common footwork error at every level of the game — from club player to touring professional — is what Bailey calls <strong>"chasing the ball"</strong>: stepping the front foot forward before the back foot has established a stable base. The result is immediate postural collapse. The player lurches toward the ball, loses the upright spine, and is forced to compensate with the arm. Every coach reading this manual will recognise this pattern. Every player reading it has done it under pressure. The correction is always the same: <strong>establish the back foot first. Always.</strong></p>
+<h3>3.1 The foundation ofbalance: Why footwork Precedes Everything</h3>
+<p>Before discussing specific movement patterns, it is necessary to establish the principle that underlies all of them. A great shot does not begin with the backswing. It does not begin with the split-step. It begins with the feet finding the right position relative to the ball — and from that position, creating a stable, upright platform from which the kinetic chain can fire.</p>
+<p>The feet serve two functions simultaneously. They are the power station — the interface with the ground through which all GRF is generated, as established in Chapter 1. And they are the Anchor — the structural foundation that keeps the entire kinetic chain aligned from ground to strings. When the feet are wrong, nothing else can be right. A perfect shoulder turn from a bad base produces a bad shot. A perfect base with an imperfect swing still gives the player something to work with.</p>
+<p>The non-negotiable outcome of correct footwork is upright posture at the moment of contact. Back straight, knees bent, weight centred. When elite players like Federer and Djokovic make contact, their spines are vertical — not leaning, not reaching, not collapsed. This uprightness is not a stylistic choice. It is a Biomechanicalrequirement. The shoulder rotation, the core stiffening, the energy transfer described in previous chapters — all of them depend on a vertical spine to function correctly. The feet create the conditions for that spine. This is why footwork is architecture, not logistics.</p>
+<p>The single most common footwork error at every level of the game — from club player to touring professional — is what Bailey calls <strong>"chasing the ball"</strong>: stepping the front foot forward before the back foot has established a stable base. The result is immediate postural collapse. The player lurches toward the ball, loses the upright spine, and is forced to compensate with the arm. Every coach reading this Manual will recognise this pattern. Every player reading it has done it under pressure. The correction is always the same: <strong>establish the back foot first. Always.</strong></p>
 <hr/>
-<h3>3.2 The Three Stances and</h3>
-<p>When to Use Them Elite footwork is not a single movement pattern. It is a decision system - a real-time selection of the optimal stance based on ball position, height, and available time. Bailey's framework identifies three core stances and a decision matrix for choosing between them.</p>
-<p><strong>The Neutral Stance</strong> is the attacking standard. When the player has time and position — when the ball is coming to them rather than pulling them wide — the neutral stance allows maximum transfer of linear momentum into the shot. The front foot steps toward the ball's flight path, and the line connecting the toes sits perpendicular to the baseline. This creates the forward weight transfer that drives penetrating, heavy groundstrokes. The neutral stance is particularly powerful on balls arriving at hip height in the central court zone. For the backhand specifically, the neutral stance enables the front arm to lead the stroke from a fully sideways shoulder position, producing maximum stability and depth.</p>
-<p>The pro tip for the neutral stance is active, not passive: do not wait for the ball to arrive and then step. Step into the ball's line as it approaches. This anticipatory movement converts the player's entire bodyweight into forward momentum at the moment of contact — transforming the shot from a swing into a weapon.</p>
-<p><strong>The Open Stance</strong> is the adaptive solution. When the ball pulls the player wide, arrives above shoulder height, or moves too fast to allow a neutral setup, the open stance provides the flexibility to still produce a quality shot from a compromised position. In the open stance, the outside foot — the left foot for a right-handed player — becomes the primary anchor. It loads like a compressed spring as the player decelerates into the shot, then releases through the rotational unwind. There is no forward weight transfer here. The power comes entirely from the outside leg's explosive push combined with hip rotation.</p>
-<p>The open stance is not a defensive compromise. In the modern game it is a primary offensive tool, particularly on the forehand side where extreme open-stance loading allows players to generate enormous angular momentum from wide positions. On the backhand, it provides rapid recovery options after the hit — because the feet are already facing the court, the player can push off immediately without needing to unwind from a closed position.</p>
+<h3>3.2 The Three Stances and When to Use Them</h3>
+<p>Elite footwork is not a single movement pattern. It is a decision system — a real-time selection of the optimal stance based on ball position, height, and available time. Bailey's framework identifies three core stances and a decision matrix for choosing between them.</p>
+<p><strong>The Neutral Stance</strong> is the attacking standard. When the player has time and position — when the ball is coming to them rather than pulling them wide — the neutral stance allows maximum transfer of Linear momentum into the shot. The front foot steps toward the ball's flight path, and the line connecting the toes sits perpendicular to the Baseline. This creates the forward weight transfer that drives penetrating, heavy groundStrokes. The neutral stance is particularly powerful on balls arriving at hip height in the central court zone. For the backhand specifically, the neutral stance enables the front arm to lead the stroke from a fully sideways shoulder position, producing maximum stability and depth.</p>
+<p>The pro tip for the neutral stance is active, not passive: do not wait for the ball to arrive and then step. Step into the ball's line as it approaches. This Anticipatory movement converts the player's entire bodyweight into forward momentum at the moment of contact — transforming the shot from a swing into a weapon.</p>
+<p><strong>The open stance</strong> is the adaptive solution. When the ball pulls the player wide, arrives above shoulder height, or moves too fast to allow a neutral setup, the open stance provides the flexibility to still produce a quality shot from a compromised position. In the open stance, the outside foot — the left foot for a right-handed player — becomes the primary Anchor. It loads like a compressed spring as the player decelerates into the shot, then releases through the rotational unwind. There is no forward weight transfer here. The power comes entirely from the outside leg's explosive push combined with hip rotation.</p>
+<p>The open stance is not a Defensive compromise. In the modern game it is a primary offensive tool, particularly on the forehand side where extreme open-stance loading allows players to generate enormous angular momentum from wide positions. On the backhand, it provides rapid recovery options after the hit — because the feet are already facing the court, the player can push off immediately without needing to unwind from a closed position.</p>
 <p><strong>The Closed Stance</strong> is the specialist tool, and it belongs almost exclusively to the backhand. On the forehand, crossing the front foot across the body locks the hips and prevents clean rotation — it is an error. On the backhand, it is a deliberate mechanical advantage. The cross-step — stepping the right foot (for a right-hander) diagonally across the body — keeps the shoulders in a sideways position for longer, giving the hitting arm more time and space to lead the stroke through. This extended sideways alignment is precisely what the backhand's biomechanics require for maximum control and depth.</p>
 <p>The cross-step can and should be wide. On low or short balls that require maximum reach, Bailey's framework allows the cross-step to extend two to three times shoulder-width — a deep lunge that maintains shoulder alignment while stretching the player's coverage to its limit. The back foot establishes the base; the cross-step extends the range without sacrificing the spine.</p>
 <hr/>
-<h3>3.3 The Decision Matrix Knowing how to execute each stance is one skill</h3>
-<p>Knowing instantly which stance to select in any given situation is the higher skill - and it is what separates players who look comfortable from players who look rushed even when they have the same amount of time.</p>
-<table class="data-table">
-<thead>
-<tr>
-<th>Ball Type</th>
-<th>Recommended Stance</th>
-<th>Primary Benefit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Low or short ball</strong></td>
-<td>Closed — cross-step</td>
-<td>Maximum reach while keeping shoulders sideways for stability</td>
-</tr>
-<tr>
-<td><strong>High ball</strong></td>
-<td>Open</td>
-<td>Handle above-shoulder contact without losing balance or base</td>
-</tr>
-<tr>
-<td><strong>Wide ball — pulled off court</strong></td>
-<td>Open</td>
-<td>Optimise lateral coverage and recovery speed after the hit</td>
-</tr>
-<tr>
-<td><strong>Ball at the body — central position</strong></td>
-<td>Neutral</td>
-<td>Transfer forward momentum to dominate and attack</td>
-</tr>
-</tbody>
-</table>
-<p>The decision should be made the moment the ball leaves the opponent's strings — not when it arrives. Players who wait to read the ball until it bounces are always late. Players who read the opponent's racket face angle and ball trajectory immediately after contact have the decision made before the ball clears the net. This early reading is a trainable skill, and it is closely linked to the split-step mechanics described in the next section.</p>
+<h3>3.3 The Decision Matrix</h3>
+<p>Knowing how to execute each stance is one skill. Knowing instantly which stance to select in any given situation is the higher skill — and it is what separates players who look comfortable from players who look rushed even when they have the same amount of time.</p>
+<table><thead><tr><th>Ball Type</th><th>Recommended Stance</th><th>Primary Benefit</th></tr></thead><tbody><tr><td><strong>Low or short ball</strong></td><td>Closed — cross-step</td><td>Maximum reach while keeping shoulders sideways for stability</td></tr><tr><td><strong>High ball</strong></td><td>Open</td><td>handle above-shoulder contact without losing balance or base</td></tr><tr><td><strong>Wide ball — pulled off court</strong></td><td>Open</td><td>Optimise lateral coverage and recovery speed after the hit</td></tr><tr><td><strong>Ball at the body — central position</strong></td><td>neutral</td><td>Transfer forward momentum to dominate and attack</td></tr></tbody></table>
+<p>The decision should be made the moment the ball leaves the opponent's strings — not when it arrives. Players who wait to read the ball until it bounces are always late. Players who read the opponent's racket face angle and ball trajectory immediately after contact have the decision made before the ball clears the Net. This early reading is a trainable skill, and it is closely linked to the split-step Mechanics described in the next section.</p>
 <hr/>
-<h3>3.4 The Sliding Revolution: All-Surface Mechanics</h3>
-<p>The most significant movement evolution of the last decade is one that would have been considered technically impossible - or at least inadvisable - as recently as 2010: elite players now slide on all surfaces. Sliding was clay's gift to movement efficiency. On clay, the granular surface absorbs lateral momentum gradually, allowing players to decelerate through a long, controlled slide rather than planting abruptly and absorbing the full impact in a single joint-loading moment. The result is a wider strike zone, a smoother deceleration, and significantly reduced stress on the knees and ankles. What Djokovic recognised - and what Alcaraz and Sinner have since standardised - is that the biomechanical benefits of sliding do not belong to clay alone. With the development of high-durability lateral-friction footwear, hard court sliding became not only possible but preferable. The jarring "stick-and-snap" stop of early 2000s hard court movement - which loaded the ankle and knee in a single abrupt impact - has been progressively replaced by a controlled slide that distributes deceleration force across a longer time period and a larger muscle group.</p>
+<h3>3.4 The sliding Revolution: All-Surface Mechanics</h3>
+<p>The most significant movement evolution of the last decade is one that would have been considered technically impossible — or at least inadvisable — as recently as 2010: elite players now slide on all surfaces.</p>
+<p>sliding was clay's gift to movement efficiency. On clay, the granular surface absorbs lateral momentum gradually, allowing players to decelerate through a long, controlled slide rather than planting abruptly and absorbing the full impact in a single joint-loading moment. The result is a wider strike zone, a smoother deceleration, and significantly reduced stress on the knees and ankles.</p>
+<p>What Djokovic recognised — and what Alcaraz and Sinner have since standardised — is that the Biomechanicalbenefits of sliding do not belong to clay alone. With the development of high-durability lateral-friction footwear, hard court sliding became not only possible but preferable. The jarring "stick-and-snap" stop of early 2000s hard court movement — which loaded the ankle and knee in a single abrupt impact — has been progressively replaced by a controlled slide that distributes deceleration force across a longer time period and a larger muscle group.</p>
 <p>On grass, the adaptation is subtler. The 2026 micro-slide — a two to four inch controlled skid at the end of a lateral movement — allows players to fine-tune their centre of gravity on a surface that has become more consistent and resilient than the slick grass courts of previous decades. It is not the full clay-court slide. It is a precision tool for the last few centimetres of positioning.</p>
-<p>The practical implication for training is that clay-court movement mechanics are no longer a surface specialty. They are the universal movement standard. Players who have only trained on hard courts and have never developed sliding mechanics are at a structural disadvantage in the modern game — not just on clay, but everywhere.</p>
+<p>The practical implication for Training is that clay-court movement Mechanics are no longer a surface specialty. They are the universal movement standard. Players who have only trained on hard courts and have never developed sliding Mechanics are at a structural disadvantage in the modern game — not just on clay, but everywhere.</p>
 <hr/>
-<h3>3.5 The Gravity Step and Recovery Logic</h3>
-<p>In the 2026 game, the point does not end when the ball leaves the strings. Recovery begins at that exact moment - before watching where the shot lands, before celebrating or lamenting the quality of the hit. The player who recovers fastest controls the next exchange. The player who watches their shot is already behind. The primary recovery tool of elite modern movers is the Gravity Step, also called the drop step. Rather than pushing off from a planted foot - which requires a muscular contraction to initiate lateral movement - the gravity step works by dropping the lead hip outside the base of support. This creates a controlled fall toward the direction of movement, and gravity provides the initial acceleration for free. The first step is faster than any muscular push can produce because it bypasses the push-off delay entirely.</p>
-<p>The gravity step is most valuable in the first movement after a shot — the transition from striker to mover. From the open stance, the outside foot simply releases its load and drops in the recovery direction. From the neutral stance, the back foot unweights and steps laterally. In both cases, the critical quality is immediacy: the recovery begins before the conscious mind has evaluated the quality of the shot just played.</p>
-<p>For wide recovery — when the player has been pulled significantly off court — the Out-Wide Brake is the deceleration mechanism. As the player reaches the ball wide, the outside leg absorbs one hundred percent of the lateral kinetic energy through an explosive eccentric load of the quad and glute. That absorbed energy is not wasted. It is immediately redirected into a Power Step back toward the centre. The outside leg loads and fires in a single movement — a stop that is simultaneously a launch.</p>
-<p>The gold standard recovery sequence, once position has been re-established, follows what the extended movement research calls the SCS Rhythm: <strong>Split</strong> to reset readiness, <strong>Crossover</strong> to cover distance rapidly, and <strong>Shuffle</strong> for the final precision adjustment into the hitting position. This three-step rhythm — split, crossover, shuffle — appears in the movement patterns of virtually every elite mover on tour and provides a reliable framework for coaching recovery at all levels.</p>
+<h3>3.5 The Gravity Step and recovery Logic</h3>
+<p>In the 2026 game, the point does not end when the ball leaves the strings. recovery begins at that exact moment — before watching where the shot lands, before celebrating or lamenting the quality of the hit. The player who recovers fastest controls the next exchange. The player who watches their shot is already behind.</p>
+<p>The primary recovery tool of elite modern movers is the Gravity Step, also called the Drop step. Rather than pushing off from a planted foot — which requires a muscular contraction to initiate lateral movement — the gravity step works by Dropping the lead hip outside the base of support. This creates a controlled fall toward the direction of movement, and gravity provides the initial acceleration for free. The first step is faster than any muscular push can produce because it bypasses the push-off delay entirely.</p>
+<p>The gravity step is most valuable in the first movement after a shot — the transition from striker to mover. From the open stance, the outside foot simply releases its load and Drops in the recovery direction. From the neutral stance, the back foot unweights and steps laterally. In both cases, the critical quality is immediacy: the recovery begins before the conscious mind has evaluated the quality of the shot just played.</p>
+<p>For wide recovery — when the player has been pulled significantly off court — the Out-Wide Brake is the deceleration mechanism. As the player reaches the ball wide, the outside leg absorbs one hundred percent of the lateral kinetic energy through an explosive eccentric load of the quad and glute. That absorbed energy is not wasted. It is immediately redirected into a power Step back toward the centre. The outside leg loads and fires in a single movement — a stop that is simultaneously a launch.</p>
+<p>The gold standard recovery sequence, once position has been re-established, follows what the extended movement research calls the SCS Rhythm: <strong>Split</strong> to reset readiness, <strong>Crossover</strong> to cover distance rapidly, and <strong>Shuffle</strong> for the final precision adjustment into the hitting position. This three-step Rhythm — split, crossover, shuffle — appears in the movement patterns of virtually every elite mover on tour and provides a reliable framework for coaching recovery at all levels.</p>
 <hr/>
 <h3>3.6 The Active Split-Step: 2026 Standard</h3>
-<p>The split-step has always been the reset mechanism - the neutral, balanced hop that prepares the player to move in any direction. In the 2026 game it has become something more specific and more powerful: an informational trigger that pre-loads the body in the probable direction of movement before the ball's trajectory is even confirmed. The timing requirement is precise. The player must be in the air at the exact moment the opponent makes contact with the ball. Not before - being in the air too early means landing before the ball's direction is known, losing the directional advantage. Not after - landing after the ball's direction is clear means the player is flat-footed at the moment they most need to be loaded and ready.</p>
+<p>The split-step has always been the reset mechanism — the neutral, balanced hop that prepares the player to move in any direction. In the 2026 game it has become something more specific and more powerful: an informational trigger that pre-loads the body in the probable direction of movement before the ball's trajectory is even confirmed.</p>
+<p>The timing requirement is precise. The player must be in the air at the exact moment the opponent makes contact with the ball. Not before — being in the air too early means landing before the ball's direction is known, losing the directional advantage. Not after — landing after the ball's direction is clear means the player is flat-footed at the moment they most need to be loaded and ready.</p>
 <p>Landing simultaneously with the opponent's contact means the player lands with trajectory information already available. The body can begin its directional loading on the landing itself rather than after a separate preparation phase. In a game measured in fractions of seconds, this timing difference is enormous.</p>
 <p>The 2026 upgrade to this timing is directional pre-loading. Tracking data from professional matches shows that elite players do not land with equal weight on both feet. Based on reading the opponent's shoulder angle, racket face position, and body orientation in the moments before contact, they subtly shift approximately sixty percent of their landing weight onto the foot corresponding to the probable ball direction. This gives them a 0.05-second head start on lateral movement — a figure that sounds negligible until you consider that a ball traveling at 150 km/h covers approximately two metres in that time.</p>
-<p>The active split-step is not an instinct that elite players are born with. It is a learned skill, built through years of deliberate visual training — specifically the practice of reading the opponent's preparation, not just the ball itself. Coaches who want to develop this quality in their players must create drills that reward early reading, not late reaction.</p>
+<p>The active split-step is not an instinct that elite players are born with. It is a learned skill, built through years of deliberate Visual Training — specifically the practice of reading the opponent's preparation, not just the ball itself. Coaches who want to develop this quality in their players must create drills that reward early reading, not late reaction.</p>
 <hr/>
-<h3>3.7 Footwork Evolution: 2000–2026</h3>
-<table class="data-table">
-<thead>
-<tr>
-<th>Feature</th>
-<th>2000–2010</th>
-<th>2020–2026</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Primary Stop Mechanism</strong></td>
-<td>Plant and pivot — single-impact deceleration</td>
-<td>Slide and rotate — distributed deceleration</td>
-</tr>
-<tr>
-<td><strong>Recovery Step</strong></td>
-<td>Side-shuffle and crossover</td>
-<td>Gravity step and power brake</td>
-</tr>
-<tr>
-<td><strong>Centre of Gravity</strong></td>
-<td>Upright and vertical</td>
-<td>Low, wide and dynamic</td>
-</tr>
-<tr>
-<td><strong>Surface Strategy</strong></td>
-<td>Surface-specific movement mechanics</td>
-<td>Universal all-surface sliding</td>
-</tr>
-<tr>
-<td><strong>Split-Step Function</strong></td>
-<td>Neutral hop — equal directional readiness</td>
-<td>Active pulse — directional pre-load from opponent reading</td>
-</tr>
-<tr>
-<td><strong>Footwear Requirement</strong></td>
-<td>General lateral support</td>
-<td>High-durability lateral friction with slide technology</td>
-</tr>
-<tr>
-<td><strong>Stance Selection</strong></td>
-<td>Primarily neutral and closed</td>
-<td>Full three-stance decision matrix in real time</td>
-</tr>
-<tr>
-<td><strong>Recovery Initiation</strong></td>
-<td>After evaluating the shot</td>
-<td>Simultaneously with ball leaving strings</td>
-</tr>
-</tbody>
-</table>
+<h3>3.7 footwork Evolution: 2000–2026</h3>
+<table><thead><tr><th>Feature</th><th>2000–2010</th><th>2020–2026</th></tr></thead><tbody><tr><td><strong>Primary Stop Mechanism</strong></td><td>Plant and pivot — single-impact deceleration</td><td>Slide and rotate — distributed deceleration</td></tr><tr><td><strong>recovery Step</strong></td><td>Side-shuffle and crossover</td><td>Gravity step and power brake</td></tr><tr><td><strong>Centre of Gravity</strong></td><td>Upright and vertical</td><td>Low, wide and dynamic</td></tr><tr><td><strong>Surface Strategy</strong></td><td>Surface-specific movement Mechanics</td><td>Universal all-surface sliding</td></tr><tr><td><strong>Split-Step Function</strong></td><td>neutral hop — equal directional readiness</td><td>Active pulse — directional pre-load from opponent reading</td></tr><tr><td><strong>Footwear Requirement</strong></td><td>General lateral support</td><td>High-durability lateral friction with slide Technologyy</td></tr><tr><td><strong>Stance Selection</strong></td><td>Primarily neutral and closed</td><td>Full three-stance decision matrix in real time</td></tr><tr><td><strong>recovery Initiation</strong></td><td>After evaluating the shot</td><td>Simultaneously with ball leaving strings</td></tr></tbody></table>
 <hr/>
-<h3>3.8 Biomechanical Risk: Hip and Ankle Audit</h3>
-<p>The evolution of movement mechanics in the modern game has produced a corresponding shift in injury profiles. The dominant injury of the early 2000s - the acute ankle sprain from a hard plant on a fast surface - has declined significantly as sliding mechanics have removed the abrupt single-point loading that caused it. In its place, the 2026 game presents two primary injury patterns. Hip labrum wear results from the repetitive extreme lateral spread required for low-centre-of-gravity sliding. Every slide loads the hip joint in a position of deep abduction - a position the labrum was not designed to sustain thousands of times per season without specific preparation. Adductor strains follow a similar logic: the explosive lateral extension of the slide positions the adductors under maximal eccentric load, and without adequate eccentric strength training, they fail at the moment of maximum demand.</p>
-<p>The solution to both injury patterns is eccentric deceleration training — teaching the muscles to absorb force during the slide rather than simply producing explosive force for the push. This is a fundamentally different muscular quality from the concentric power work that dominates most conditioning programmes, and it must be trained explicitly. Pre-hab for modern movement means building an athlete who can not only explode laterally but control and absorb that explosion with equal reliability.</p>
+<h3>3.8 Biomechanical Risk: Hip and ankle Audit</h3>
+<p>The evolution of movement Mechanics in the modern game has produced a corresponding shift in injury profiles. The dominant injury of the early 2000s — the acute ankle sprain from a hard plant on a fast surface — has declined significantly as sliding Mechanics have removed the abrupt single-point loading that caused it.</p>
+<p>In its place, the 2026 game presents two primary injury patterns. Hip labrum wear results from the repetitive extreme lateral spread required for low-centre-of-gravity sliding. Every slide loads the hip joint in a position of deep abduction — a position the labrum was not designed to sustain thousands of times per season without specific preparation. Adductor strains follow a similar logic: the explosive lateral extension of the slide positions the adductors under maximal eccentric load, and without adequate eccentric strength Training, they fail at the moment of maximum demand.</p>
+<p>The solution to both injury patterns is eccentric deceleration Training — teaching the muscles to absorb force during the slide rather than simply producing explosive force for the push. This is a fundamentally different muscular quality from the concentric power work that dominates most conditioning programmes, and it must be trained explicitly. Pre-hab for modern movement means building an athlete who can not only explode laterally but control and absorb that explosion with equal reliability.</p>
 <hr/>
-<h3>3.9 Movement Drills The Reactive Light Drill develops split-step precision and directional loading simultaneously.</h3>
-<p>Using a light-based reaction system on the court surface, the player performs a continuous split-step sequence and moves to illuminate targets as they appear. The drill rewards the exact timing quality required for the active split-step — players who jump too early or too late fail to reach the light in time. Progress from random single-light patterns to multi-light sequences that force the SCS recovery rhythm between each target.</p>
-<p><strong>The Two-Step Brake</strong> corrects the most common recovery inefficiency — taking multiple small steps after a wide ball instead of one large decelerating stride. From a wide position, the player practises stopping their lateral momentum in a single large outside-leg stride, then recovering to the centre in one explosive crossover. Resistance bands anchored at the centre of the court can be added to simulate the power-step load and to reinforce the immediate reversal of momentum.</p>
-<p><strong>Core-Centred Sliding</strong> addresses the most common fault in newly developed sliding mechanics — the torso tilting forward over the lead knee during the slide, which collapses the upright posture established in section 3.1. The player practises full lateral slides while holding a medicine ball at chest height with both arms extended. The weight of the ball makes any forward tilt immediately apparent and self-correcting. Begin with a 3 kg ball on clay before progressing to hard court sliding.</p>
-<p><strong>Shadow Ghosting</strong> is perhaps the highest-value movement drill available — used systematically by Djokovic throughout his career as a primary training tool. The player moves through a complete five or six-point movement pattern on court without a ball, executing every footwork sequence, every stance selection, every recovery step, and every split-step at match speed. The absence of the ball removes the distraction of ball-tracking and forces pure movement quality. Fifteen to twenty minutes of shadow ghosting at match intensity develops movement automaticity faster than any ball-based drill of equivalent duration.</p>
-<p><strong>The Heel-Strike Correction Drill</strong> addresses the second most common movement fault after chasing the ball — moving with weight on the heels, which prevents the explosive gravity step and produces flat-footed, slow recovery. Using a short agility ladder, the player moves through footwork patterns with small rubber bands looped around the toes, creating a constant tactile reminder to move on the balls of the feet. Once the feeling is established in the ladder, transfer it immediately to court movement patterns.</p>
+<h3>3.9 movement drills</h3>
+<p><strong>The Reactive Light drill</strong> develops split-step precision and directional loading simultaneously. Using a light-based reaction system on the court surface, the player performs a continuous split-step sequence and moves to illuminate targets as they appear. The drill rewards the exact timing quality required for the active split-step — players who jump too early or too late fail to reach the light in time. Progress from random single-light patterns to multi-light sequences that force the SCS recovery Rhythm between each target.</p>
+<p><strong>The Two-Step Brake</strong> corrects the most common recovery inefficiency — taking multiple small steps after a wide ball instead of one large decelerating stride. From a wide position, the player practises stopping their lateral momentum in a single large outside-leg stride, then recovering to the centre in one explosive crossover. Resistance bands Anchored at the centre of the court can be added to simulate the power-step load and to reinforce the immediate reversal of momentum.</p>
+<p><strong>core-Centred sliding</strong> addresses the most common fault in newly developed sliding Mechanics — the torso tilting forward over the lead knee during the slide, which collapses the upright posture established in section 3.1. The player practises full lateral slides while holding a medicine ball at chest height with both arms extended. The weight of the ball makes any forward Tiltimmediately apparent and self-correcting. Begin with a 3 kg ball on clay before progressing to hard court sliding.</p>
+<p><strong>Shadow Ghosting</strong> is perhaps the highest-value movement drill available — used systematically by Djokovic throughout his career as a primary Training tool. The player moves through a complete five or six-point movement pattern on court without a ball, executing every footwork sequence, every stance selection, every recovery step, and every split-step at match speed. The absence of the ball removes the distraction of ball-tracking and forces pure movement quality. Fifteen to twenty minutes of shadow ghosting at match intensity develops movement automaticity faster than any ball-based drill of equivalent duration.</p>
+<p><strong>The Heel-strike Correction drill</strong> addresses the second most common movement fault after chasing the ball — moving with weight on the heels, which prevents the explosive gravity step and produces flat-footed, slow recovery. Using a short agility ladder, the player moves through footwork patterns with small rubber bands looped around the toes, creating a constant tactile reminder to move on the balls of the feet. Once the Feeling is established in the ladder, transfer it immediately to court movement patterns.</p>
 <hr/>
 <p><strong>Elite Player Track</strong> | Chapter 3</p>
-<p>Your movement game at this level is already highly developed. The refinement available to you is not in learning new patterns but in eliminating the small collapses that occur under competitive pressure. The two most common elite-level movement failures are split-step timing drift — the step becoming fractionally early or late in the third set of a tight match — and recovery initiation delay, where fatigue causes a brief pause after the shot before recovery begins.</p>
-<p>Both are mental before they are physical. Split-step timing drift is almost always caused by attention shifting from the opponent's preparation to the ball's flight — a subtle narrowing of focus that costs the timing advantage described in section 3.6. Recovery delay is caused by result-evaluation: watching the shot to assess its quality before beginning to move. At your level, train yourself to regard the moment the ball leaves your strings as a movement trigger, not a waiting point.</p>
+<p>Your movement game at this level is already highly developed. The refinement available to you is not in Learning new patterns but in eliminating the small collapses that occur under competitive pressure. The two most common elite-level movement failures are split-step timing drift — the step becoming fractionally early or late in the third set of a tight match — and recovery initiation delay, where fatigue causes a brief pause after the shot before recovery begins.</p>
+<p>Both are mental before they are physical. Split-step timing drift is almost always caused by attention shifting from the opponent's preparation to the ball's flight — a subtle narrowing of focus that costs the timing advantage described in section 3.6. recovery delay is caused by result-evaluation: watching the shot to assess its quality before beginning to move. At your level, train yourself to regard the moment the ball leaves your strings as a movement trigger, not a waiting point.</p>
 <p>Bailey's back-foot-first principle applies to you under pressure as much as to any club player. When the score is tight and the ball is coming fast, the instinct is to lunge — to chase the ball with the front foot before the base is established. Every time you do this, your upright posture collapses and your kinetic chain fires from a compromised base. The back foot goes down first. Always. This is not a technical detail. It is the architecture of every elite shot you will ever hit.</p>
 <hr/>
 <p><strong>Coach Track</strong> | Chapter 3</p>
 <p>When coaching your player on movement, use Bailey's decision matrix as your primary diagnostic framework. Rather than simply telling a player their footwork is wrong, identify which stance they used and whether it was the optimal choice for that ball. A player hitting an open-stance backhand on a central, hip-high ball is making a decision error, not a technical error. A player hitting a neutral stance on a wide, above-shoulder ball is fighting their own movement system. The correction is the decision, not the technique.</p>
-<p>The back-foot-first principle is your single most transferable coaching cue across all levels. For beginners and club players, this one correction alone — establishing the back foot before stepping forward — will produce more immediate improvement than any technical intervention in the stroke itself. Demonstrate it. Create drills around it. Return to it whenever technical work seems to be stalling without clear reason.</p>
-<p>For developing the active split-step, the most effective training environment is opponent-reading drills rather than ball-reaction drills. Set up situations where the player must call the direction of the opponent's shot before the ball crosses the net, based solely on reading the preparation. Players who learn to read early develop the directional pre-loading that defines elite split-step mechanics naturally. Players who are only trained on ball-reaction remain reactive rather than anticipatory.</p>
-<p>Programme shadow ghosting into every training week, not just for warm-up. Fifteen minutes of high-intensity ghost movement at the start of a session activates movement patterns that carry over into every drill that follows. Players who ghost consistently show measurably faster court coverage within four to six weeks.</p>
+<p>The back-foot-first principle is your single most transferable coaching cue across all levels. For beginners and club players, this one correction alone — establishing the back foot before stepping forward — will produce more immediate improvement than any technical intervention in the stroke itself. Demonstrate it. Create drills around it.return to it whenever technical work seems to be stalling without clear reason.</p>
+<p>For developing the active split-step, the most effective Training environment is opponent-reading drills rather than ball-reaction drills. Set up situations where the player must call the direction of the opponent's shot before the ball crosses the Net, based solely on reading the preparation. Players who learn to read early develop the directional pre-loading that defines elite split-step Mechanics naturally. Players who are only trained on ball-reaction remain reactive rather than Anticipatory.</p>
+<p>Programme shadow ghosting into every Training week, not just for warm-up. Fifteen minutes of high-intensity ghost movement at the start of a session activates movement patterns that carry over into every drill that follows. Players who ghost consistently show measurably faster court coverage within four to six weeks.</p>
 <hr/>
-<h1 id="part-ii-the-strokes">
-
-</div>
+<p><em>Each stroke chapter follows the same architecture: biomechanics → Mental Game → Patterns of Play → drills → Elite Track → Coach Track</em></p>
+<hr/>
 <nav class="page-nav">
-  <a href="The_Art_of_Modern_Tennis_Chapter_02.html" class="nav-btn prev">← Previous</a>
-  <a href="index.html" class="nav-btn toc">≡ Table of Contents</a>
-  <a href="The_Art_of_Modern_Tennis_Chapter_04.html" class="nav-btn next">Next →</a>
+  <a href="The_Art_of_Modern_Tennis_Chapter_02.html" class="nav-btn prev">&larr; Previous</a>
+  <a href="index.html" class="nav-btn toc">&equiv; Table of Contents</a>
+  <a href="The_Art_of_Modern_Tennis_Chapter_04.html" class="nav-btn next">Next &rarr;</a>
 </nav>
 
-    <hr class="footer-divider">
+</div>
 
-    <footer>© 2026 Henry Pham Duc · Tennis Future Lab · All contents are for educational purpose.</footer>
-</body>
-</html>
+<footer>
+  <p style="margin: 4px 0;"><span class="credit-label">Created by</span> <strong>Henry Pham, Tennis Future Lab</strong> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank">Creative Commons BY-NC-SA 4.0</a>.</p>
+</footer>
+</body></html>
