@@ -69,7 +69,12 @@ a, button, .page-nav a, .lang-card, .book-card a, .site-structure a {
   cursor: var(--cursor-ball);
 }
 
-/* ─── masthead: quiet title page with a vertical divider accent ─── */
+/* ─── masthead: quiet title page with a vertical divider accent ───
+   Centered to match the same 900px column that .content-wrap,
+   .page-nav, and footer already use — the masthead's own inline
+   <style> block has no max-width/margin:auto on its tag/h1/subtitle,
+   so without this they sit flush against the padding edge (left-
+   aligned) while the rest of the page is centered. ─── */
 .masthead {
   background: var(--paper) !important;
   color: var(--ink) !important;
@@ -77,6 +82,7 @@ a, button, .page-nav a, .lang-card, .book-card a, .site-structure a {
   border-bottom: 1px solid var(--divider);
   overflow: visible !important;
   position: relative;
+  text-align: center !important;
 }
 .masthead::before, .masthead::after { display: none !important; content: none !important; }
 .masthead .tag,
@@ -86,6 +92,13 @@ a, button, .page-nav a, .lang-card, .book-card a, .site-structure a {
   letter-spacing: 2.5px !important;
   color: var(--muted) !important;
   text-transform: uppercase;
+}
+.masthead h1,
+.masthead .subtitle,
+.masthead p.subtitle {
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .masthead .subtitle,
 .masthead p.subtitle {
@@ -107,6 +120,12 @@ h1 {
   line-height: 1.15 !important;
   padding-left: 20px;
   border-left: 2px solid var(--accent);
+}
+/* the left-border accent reads oddly on a centered masthead title —
+   drop it there, keep it for in-column reading h1s */
+.masthead h1 {
+  padding-left: 0 !important;
+  border-left: none !important;
 }
 h2 { font-size: clamp(1.5rem, 3vw, 2rem) !important; margin-top: 2.4em !important; font-weight: 400 !important; }
 h3 { font-size: 1.3rem !important; margin-top: 1.8em !important; font-weight: 400 !important; }
