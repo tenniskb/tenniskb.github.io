@@ -868,6 +868,15 @@
     max-width: 900px;
     width: 100%;
 }
+
+.math-var { font-style: italic; font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', serif; }
+.math-var sub, .math-var sup { font-style: normal; }
+.math-var sub { font-size: 0.75em; }
+.math-var sup { font-size: 0.75em; }
+.math-frac { display: inline-block; vertical-align: -0.5em; position: relative; text-align: center; }
+.math-frac .math-num { display: block; border-bottom: 1px solid currentColor; padding: 0 0.2em; }
+.math-frac .math-den { display: block; padding: 0 0.2em; }
+.math-text { font-family: 'DM Sans', sans-serif; font-style: normal; }
 </style>
 <style>
 .page-nav {
@@ -1093,7 +1102,7 @@ footer {
 <h3>1.1. Công thức Năng lượng Tổng quát</h3>
 <p>Thay vì chỉ dùng sức mạnh cơ bắp, DET kết hợp cả điện năng thần kinh và áp lực tiếp xúc.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Năng\ lượng\ tổng \= Sức\ mạnh\ cơ\ bắp + Tín\ hiệu\ thần\ kinh + Áp\ lực\ tiếp\ đất$$</p>
+<p><i class="math-var">Năng lượng tổng = Sức mạnh cơ bắp + Tín hiệu thần kinh + Áp lực tiếp đất</i></p>
 <h3>1.2. Hiệu suất truyền tải Năng lượng từ chân truyền lên vợt sẽ bị hao hụt qua các khớp</h3>
 <p>DET hướng tới việc giảm thiểu sự hao hụt này.</p>
 <ul class="styled-list">
@@ -1105,57 +1114,57 @@ footer {
 <h3>2.1. Nhịp điệu của Chuỗi động lực</h3>
 <p>Lực đánh không đến từ một cú giật cục, mà là sự cộng dồn các ngọn sóng năng lượng từ chân -&gt; hông -&gt; vai -&gt; tay.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Lực\ đánh \= Tổng\ các\ đợt\ phát\ lực\ (Chân + Hông + Vai + Tay)$$</p>
+<p><i class="math-var">Lực đánh = Tổng các đợt phát lực (Chân + Hông + Vai + Tay)</i></p>
 <ul class="styled-list">
-<li><strong>Điều kiện lý tưởng:</strong> Các bộ phận phải phối hợpăn ý trên 92% ($\sigma_{sync} \ge 0,92$) để đạt chuẩn NKF.</li>
+<li><strong>Điều kiện lý tưởng:</strong> Các bộ phận phải phối hợpăn ý trên 92% (<i class="math-var">σ<sub>sync</sub> ge 0,92</i>) để đạt chuẩn NKF.</li>
 </ul>
-<h3>2.2. Độ trễ thần kinh ($\Delta t$)</h3>
+<h3>2.2. Độ trễ thần kinh (<i class="math-var">Δ t</i>)</h3>
 <p>Là thời gian từ lúc não ra lệnh đến khi cơ bắp thực sự co.</p>
 <ul class="styled-list">
-<li><strong>Mục tiêu:</strong> $\le 2,5$ ms (mili giây). Nếu chậm hơn, bạn sẽ bị "trễ bóng".</li>
+<li><strong>Mục tiêu:</strong> <i class="math-var">le 2,5</i> ms (mili giây). Nếu chậm hơn, bạn sẽ bị "trễ bóng".</li>
 </ul>
 <hr/>
 <h2>CHƯƠNG 3: VỢT TRỌNG LƯỢNG NẶNG &amp; DIT</h2>
 <h3>3.1. Chỉ số dịch chuyển quán tính (DIT)</h3>
 <p>Sử dụng vợt nặng giúp mượn lực tốt hơn và giảm rung chấn lên tay.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Hiệu\ quả\ vung\ vợt \= \frac{Độ\ nặng\ vung\ \times\ Độ\ tăng\ tốc\ độ}{Cân\ nặng\ người\ chơi}$$</p>
+<p><i class="math-var">Hiệu quả vung vợt = <span class="math-frac"><span class="math-num">Độ nặng vung × Độ tăng tốc độ</span><span class="math-den">Cân nặng người chơi</span></span></i></p>
 <ul class="styled-list">
-<li><strong>Nguyên lý:</strong> Vợt nặng ($I_{racket}$) tạo ra quán tính lớn, giúp "cày" qua bóng mạnh mẽ hơn mà người chơi không cần gồng tay quá nhiều.</li>
+<li><strong>Nguyên lý:</strong> Vợt nặng (<i class="math-var">I<sub>racket</sub></i>) tạo ra quán tính lớn, giúp "cày" qua bóng mạnh mẽ hơn mà người chơi không cần gồng tay quá nhiều.</li>
 </ul>
 <hr/>
 <h2>CHƯƠNG 4: GIAO BÓNG BÙNG Nổ (VERTICAL EXPLOSION)</h2>
 <h3>4.1. Lực đẩy từ mặt đất (GRF)</h3>
 <p>Cú giao bóng mạnh bắt đầu từ đôi chân, không phải cánh tay.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Lực\ đẩy\ lên \= Cân\ nặng\ tĩnh + Sức\ bật\ bùng\ nổ$$</p>
+<p><i class="math-var">Lực đẩy lên = Cân nặng tĩnh + Sức bật bùng nổ</i></p>
 <ul class="styled-list">
-<li><strong>Mốc chuẩn:</strong> Khi đạp đất, lực nén xuống sân phải đạt từ <strong>2,3 đến 2,5 lần</strong> trọng lượng cơ thể bạn ($2,5 \times BW$).</li>
+<li><strong>Mốc chuẩn:</strong> Khi đạp đất, lực nén xuống sân phải đạt từ <strong>2,3 đến 2,5 lần</strong> trọng lượng cơ thể bạn (<i class="math-var">2,5 × BW</i>).</li>
 </ul>
 <hr/>
 <p>CHƯƠNG 5: TRẢ GIAO BÓNG - NẠP LỰC TRỰC TIẾP (DL)</p>
 <h3>5.1. Phản xạ nạp lực (direct</h3>
 <p>Load) Rút ngắn thời gian chuẩn bị để đối phó với những cú giao bóng tốc độ cao (130-150 mph).</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Đà\ trả\ bóng \= Đà\ bật\ nhảy\ (Split-step) + Lực\ đạp\ tới + Lực\ xoay\ hông$$</p>
+<p><i class="math-var">Đà trả bóng = Đà bật nhảy (Split-step) + Lực đạp tới + Lực xoay hông</i></p>
 <ul class="styled-list">
-<li><strong>Mục tiêu:</strong> Tổng thời gian từ lúc đối thủ chạm bóng đến khi bạn chạm bóng phải $\le 0,12$ giây.</li>
+<li><strong>Mục tiêu:</strong> Tổng thời gian từ lúc đối thủ chạm bóng đến khi bạn chạm bóng phải <i class="math-var">le 0,12</i> giây.</li>
 </ul>
 <hr/>
 <h2>CHƯƠNG 7: BỘ PHÁP &AMP; DI CHUYỂN (KINETIC FOUNDATION)</h2>
 <h3>7.1. Hiệu suất di chuyển Khả năng cứu bóng và phản công phụ thuộc vào việc giữ thăng bằng khi trượt</h3>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Hiệu\ suất\ di\ chuyển \= Kiểm\ soát\ trọng\ tâm \times Độ\ giữ\ thăng\ bằng \times Trợ\ lực\ trọng\ trường$$</p>
+<p><i class="math-var">Hiệu suất di chuyển = Kiểm soát trọng tâm × Độ giữ thăng bằng × Trợ lực trọng trường</i></p>
 <ul class="styled-list">
 <li><strong>DSI (Chỉ số ổn định):</strong> Nếu bạn bị nghiêng trục khi trượt, khả năng đánh trả sẽ giảm theo cấp số nhân. </li>
 <li><strong>GSM (Trợ lực trọng lực):</strong> Tận dụng việc "thả rơi" trọng tâm để bắt đầu bước chạy nhanh hơn.</li>
 </ul>
 <hr/>
 <h2>CHƯƠNG 8: CHIẾN THUẬT DỰA TRÊN Dữ LIỆU</h2>
-<h3>8.1. Xác suất lỗi theo vùng ($P_{error}$)</h3>
+<h3>8.1. Xác suất lỗi theo vùng (<i class="math-var">P<sub>error</sub></i>)</h3>
 <p>Đánh bóng thông minh là đánh vào vùng có tỷ lệ thành công cao nhất.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Tỷ\ lệ\ lỗi \= \frac{Số\ lần\ đánh\ hỏng\ tại\ một\ vùng}{Tổng\ số\ lần\ đánh\ vào\ vùng\ đó}$$</p>
+<p><i class="math-var">Tỷ lệ lỗi = <span class="math-frac"><span class="math-num">Số lần đánh hỏng tại một vùng</span><span class="math-den">Tổng số lần đánh vào vùng đó</span></span></i></p>
 <ul class="styled-list">
 <li><strong>Ứng dụng:</strong> Sử dụng bản đồ nhiệt (Heatmap) để loại bỏ những cú đánh "tự sát" có tỷ lệ hỏng trên 50%.</li>
 </ul>
@@ -1164,7 +1173,7 @@ footer {
 <h3>9.1. Quản lý năng lượng thần kinh</h3>
 <p>Theo dõi biến thiên nhịp tim (HRV) để biết khi nào cơ thể quá tải.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Sẵn\ sàng\ thi\ đấu \= Năng\ lượng\ tích\ lũy - Độ\ mỏi\ thần\ kinh$$</p>
+<p><i class="math-var">Sẵn sàng thi đấu = Năng lượng tích lũy - Độ mỏi thần kinh</i></p>
 <ul class="styled-list">
 <li><strong>Lưuý:</strong> Nếu HRV giảm quá 5ms sau buổi tập, hệ thần kinh cần được "Reset" ngay lập tức để tránh chấn thương.</li>
 </ul>
@@ -1187,11 +1196,11 @@ footer {
 <p>Động Trong tennis hiện đại, năng lượng không chỉ là lực cơ bắp.</p>
 <p>Nó là một dòng chảy tích hợp từ mặt đất lên đỉnh đầu vợt.</p>
 <p><strong>Phương trình cơ bản:</strong></p>
-<p>$$Năng\ lượng\ tổng\ (E) \= Năng\ lượng\ Cơ\ học + Năng\ lượng\ Thần\ kinh + Năng\ lượng\ Sóng$$</p>
+<p><i class="math-var">Năng lượng tổng (E) = Năng lượng Cơ học + Năng lượng Thần kinh + Năng lượng Sóng</i></p>
 <ul class="styled-list">
-<li><strong>Năng lượng Cơ học ($F \cdot v$):</strong> Lực đạp chân nhân với vận tốc vung tay. </li>
-<li><strong>Năng lượng Thần kinh ($V \cdot I$):</strong> Cường độ dòng điện não điều khiển sự co cơ. </li>
-<li><strong>Năng lượng Sóng ($p \cdot A$):</strong> Áp lực nén của mặt vợt lên quả bóng.</li>
+<li><strong>Năng lượng Cơ học (<i class="math-var">F · v</i>):</strong> Lực đạp chân nhân với vận tốc vung tay. </li>
+<li><strong>Năng lượng Thần kinh (<i class="math-var">V · I</i>):</strong> Cường độ dòng điện não điều khiển sự co cơ. </li>
+<li><strong>Năng lượng Sóng (<i class="math-var">p · A</i>):</strong> Áp lực nén của mặt vợt lên quả bóng.</li>
 </ul>
 <h3>1.2. Giao thức tối ưu hóa DET (20 trang chi tiết)</h3>
 <ul class="styled-list">
@@ -1204,13 +1213,13 @@ footer {
 <h3>2.1. Sự đồng bộ hóa (synchronization)</h3>
 <p>Một cú đánh hoàn hảo yêu cầu tất cả các bộ phận phát lực cùng một lúc hoặc nối tiếp nhau theo một nhịp điệu hoàn hảo.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Độ\ đồng\ bộ\ (Sync) \= \frac{Sự\ ăn\ ý\ giữa\ các\ khớp}{Số\ lượng\ khớp\ tham\ gia}$$</p>
+<p><i class="math-var">Độ đồng bộ (Sync) = <span class="math-frac"><span class="math-num">Sự ăn ý giữa các khớp</span><span class="math-den">Số lượng khớp tham gia</span></span></i></p>
 <ul class="styled-list">
 <li><strong>Ngưỡng Elite:</strong> Chỉ số đồng bộ phải đạt trên <strong>0.92</strong>. Nếu hông xoay quá sớm so với vai, bạn mất 30% sức mạnh.</li>
 </ul>
 <h3>2.2. Huấn luyện Phản xạ siêu tốc</h3>
 <ul class="styled-list">
-<li>Sử dụng cảm biến sEMG để đo độ trễ từ não đến cơ ($\Delta t$). </li>
+<li>Sử dụng cảm biến sEMG để đo độ trễ từ não đến cơ (<i class="math-var">Δ t</i>). </li>
 <li>Mục tiêu: Rút ngắn thời gian chuẩn bị xuống dưới <strong>2.5 mili giây</strong> để có thể phản xạ với các cú serve 200km/h.</li>
 </ul>
 <hr/>
@@ -1219,7 +1228,7 @@ footer {
 <h3>3.1. Tại sao vợt nặng lại thắng?</h3>
 <p>Theo định luật bảo toàn động lượng, một vật nặng hơn khi đang di chuyển sẽ khó bị dừng lại hơn bởi quả bóng.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Lực\ xuyên\ phá \= Độ\ nặng\ của\ vợt \times Tốc\ độ\ vung\ vợt$$</p>
+<p><i class="math-var">Lực xuyên phá = Độ nặng của vợt × Tốc độ vung vợt</i></p>
 <ul class="styled-list">
 <li><strong>DIT (Dynamic Inertia Transfer):</strong> Cách truyền trọng lượng của vợt vào quả bóng để tạo ra độ "nặng". </li>
 <li><strong>Sweet Spot:</strong> Cách tùy chỉnh chì dán (Lead tape) để mở rộng vùng tiếp xúc tối ưu trên mặt vợt.</li>
@@ -1230,7 +1239,7 @@ footer {
 <h3>4.1. Lực phản chấn từ mặt đất (GRF)</h3>
 <p>Cú serve mạnh nhất không đến từ vai, mà đến từ đôi chân đạp vào mặt đất.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Sức\ mạnh\ cú\ serve \= Cân\ nặng\ cơ\ thể \times 2.5$$</p>
+<p><i class="math-var">Sức mạnh cú serve = Cân nặng cơ thể × 2.5</i></p>
 <ul class="styled-list">
 <li><strong>Loading:</strong> Cách khuỵu gối để nén 2.5 lần trọng lượng cơ thể vào mặt sân. </li>
 <li><strong>Uncoiling:</strong> Chuyển hóa lực nén dọc thành vòng xoay ngang của hông và vai.</li>
@@ -1238,7 +1247,7 @@ footer {
 <hr/>
 <h2>CHƯƠNG 7: BỘ PHÁP &AMP; DI CHUYỂN (KINETIC FOUNDATION)</h2>
 <p>Nghệ thuật của sự cân bằng động.</p>
-<h3>7.1. Trượt và Phanh (sliding Mechanics) Phương trình đơn giản: $$Độ\ ổn\ định \= 100\% - (Độ\ nghiêng\ người \times Độ\ rít\ mặt\ sân)$$</h3>
+<h3>7.1. Trượt và Phanh (sliding Mechanics) Phương trình đơn giản: <i class="math-var">Độ ổn định = 100% - (Độ nghiêng người × Độ rít mặt sân)</i></h3>
 <ul class="styled-list">
 <li><strong>DSI (Chỉ số suy giảm ổn định):</strong> Nếu bạn trượt trên sân cứng với trục cơ thể bị nghiêng, bạn sẽ mất hoàn toàn khả năng phát lực trả bóng. </li>
 <li><strong>GSM (Trợ lực trọng lực):</strong> Kỹ thuật "thả rơi" người để bắt đầu bước chạy nhanh hơn 15% so với việc dùng sức chân thuần túy.</li>
@@ -1249,7 +1258,7 @@ footer {
 <h3>10.1. Hệ thống Agent cho Tennis Sử dụng các mô hình như</h3>
 <p>Gemini và NotebookLM để tổng hợp video trận đấu và đưa ra chiến thuật thời gian thực.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Hiệu\ suất\ thi\ đấu \= Kỹ\ thuật\ cá\ nhân \times Dữ\ liệu\ $$</p>
+<p><i class="math-var">Hiệu suất thi đấu = Kỹ thuật cá nhân × Dữ liệu</i></p>
 <ul class="styled-list">
 <li><strong>Phân tích P(error):</strong> sẽ chỉ ra tọa độ nào trên sân đối thủ thường đánh hỏng nhiều nhất để bạn tấn công vào đó.</li>
 </ul>
@@ -1274,7 +1283,7 @@ footer {
 <p>Trong tennis truyền thống, người ta dạy bạn "đánh bằng tay" hoặc "xoay hông". Trong hệ thống DET, chúng ta coi cơ thể là một bộ tích tụ điện sinh học và cơ học.</p>
 <h3>1.1. Phương trình Năng lượng Hợp nhất</h3>
 <p>Để một người bình thường hiểu được năng lượng đến từ đâu, chúng ta sử dụng công thức:</p>
-<p>$$Năng\ lượng\ tổng \= Sức\ mạnh\ cơ\ bắp + Tín\ hiệu\ thần\ kinh + Áp\ lực\ tiếp\ đất$$</p>
+<p><i class="math-var">Năng lượng tổng = Sức mạnh cơ bắp + Tín hiệu thần kinh + Áp lực tiếp đất</i></p>
 <ul class="styled-list">
 <li><strong>Sức mạnh cơ bắp (Phần nhìn thấy):</strong> Là sự co rút của các bó cơ đùi, hông và vai. </li>
 <li><strong>Tín hiệu thần kinh (Phần ẩn):</strong> Cường độ điện não kích hoạt các đơn vị vận động. Một hệ thần kinh mệt mỏi sẽ làm cú đánh mất đi 30% uy lực dù cơ bắp vẫn to khỏe. </li>
@@ -1285,23 +1294,23 @@ footer {
 <p><strong>Để đạt hiệu suất trên 90%, bạn cần:</strong></p>
 <ol class="styled-list numbered">
 <li><strong>Duy trì Trục trung tâm (Central Axis):</strong> Cột sống thẳng đứng để năng lượng xoay không bị lệch. </li>
-<li><strong>Độ cứng cấu trúc cổ tay ($K_{wrist} \ge 0,85$):</strong> Cổ tay không được "vẩy" lỏng lẻo mà phải khóa lại như một khối thống nhất với vợt tại điểm chạm.</li>
+<li><strong>Độ cứng cấu trúc cổ tay (<i class="math-var">K<sub>wrist</sub> ge 0,85</i>):</strong> Cổ tay không được "vẩy" lỏng lẻo mà phải khóa lại như một khối thống nhất với vợt tại điểm chạm.</li>
 </ol>
 <hr/>
 <h2>CHƯƠNG 2: HỢP NHẤT THẦN KINH - ĐỘNG LỰC (NKF)</h2>
 <p>Sự đồng bộ hóa hoàn hảo giữa ý nghĩ và vận động.</p>
-<h3>2.1. Chỉ số Đồng bộ hóa ($\sigma_{sync}$)</h3>
+<h3>2.1. Chỉ số Đồng bộ hóa (<i class="math-var">σ<sub>sync</sub></i>)</h3>
 <p>Cú đánh hỏng thường không phải do yếu, mà do "lệch nhịp".</p>
 <p>Nếu hông xoay quá sớm hoặc quá trễ so với vai, chuỗi động lực bị đứt gãy.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Độ\ đồng\ bộ \= Sự\ ăn\ ý\ giữa\ các\ khớp\ (Chân \rightarrow Hông \rightarrow Vai \rightarrow Tay)$$</p>
+<p><i class="math-var">Độ đồng bộ = Sự ăn ý giữa các khớp (Chân → Hông → Vai → Tay)</i></p>
 <ul class="styled-list">
-<li><strong>Chuẩn NKF:</strong> $\sigma_{sync} \ge 0,92$. Ở mức này, bạn sẽ có cảm giác "đánh như không đánh", bóng bay đi cực nhanh với nỗ lực tối thiểu.</li>
+<li><strong>Chuẩn NKF:</strong> <i class="math-var">σ<sub>sync</sub> ge 0,92</i>. Ở mức này, bạn sẽ có cảm giác "đánh như không đánh", bóng bay đi cực nhanh với nỗ lực tối thiểu.</li>
 </ul>
 <h3>2.2. Khoảng trễ Thần kinh - Cơ (electromechanical Delay)</h3>
 <p>Não phát lệnh, nhưng cần thời gian để cơ co.</p>
 <p><strong>Phương trình:</strong></p>
-<p>$$Lực\ thực\ tế \= Tín\ hiệu\ não\ (đã\ trừ\ đi\ độ\ trễ\ 0,05s)$$</p>
+<p><i class="math-var">Lực thực tế = Tín hiệu não (đã trừ đi độ trễ 0,05s)</i></p>
 <ul class="styled-list">
 <li><strong>Ứng dụng:</strong> Bạn phải ra quyết định vung vợt <em>trước</em> khi bóng đến vị trí mong muốn khoảng 0.05 giây để bù đắp cho khoảng hụt sinh lý này.</li>
 </ul>
@@ -1311,16 +1320,15 @@ footer {
 <h3>3.1. Chỉ số Dịch chuyển Quán tính (DIT)</h3>
 <p>Tại sao các tay vợt chuyên nghiệp dán thêm chì vào đầu vợt?</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Hiệu\ suất\ vung \= \frac{Trọng\ lượng\ vung\ (Swingweight) \times Tốc\ độ\ vung}{Cân\ nặng\ người\ chơi}$$</p>
+<p><i class="math-var">Hiệu suất vung = <span class="math-frac"><span class="math-num">Trọng lượng vung (Swingweight) × Tốc độ vung</span><span class="math-den">Cân nặng người chơi</span></span></i></p>
 <ul class="styled-list">
-<li><strong>Vợt nặng ($I_{racket}$):</strong> Giúp hấp thụ chấn động từ bóng, bảo vệ cổ tay khỏi mô-men xoắn ($\tau$). </li>
+<li><strong>Vợt nặng (<i class="math-var">I<sub>racket</sub></i>):</strong> Giúp hấp thụ chấn động từ bóng, bảo vệ cổ tay khỏi mô-men xoắn (<i class="math-var">τ</i>). </li>
 <li><strong>DIT High:</strong> Khi bạn vung một cây vợt nặng với tốc độ cao, quả bóng sẽ bị "nghiền nát" thay vì bật ngược lại.</li>
 </ul>
 <hr/>
 <h2>CHƯƠNG 4: GIAO BÓNG BÙNG Nổ (VERTICAL EXPLOSION)</h2>
 <p>Biến cơ thể thành một chiếc lò xo thẳng đứng.</p>
-<h3>4.1. Lực phản chấn (GRF) Cú giao bóng bắt đầu từ dưới lòng bàn chân Phương trình đơn giản: $$Lực\ đẩy\ lên \=</h3>
-<p>Trọng\ lượng\ bạn + Lực\ đạp\ chân$$</p>
+<h3>4.1. Lực phản chấn (GRF) Cú giao bóng bắt đầu từ dưới lòng bàn chân Phương trình đơn giản: <i class="math-var">Lực đẩy lên = Trọng lượng bạn + Lực đạp chân</i></p>
 <ul class="styled-list">
 <li><strong>Mốc 2.5 xBW:</strong> Một tay vợt 80kg phải đạp xuống sân một lực tương đương 200kg để tạo ra cú giao bóng 200km/h. </li>
 <li><strong>Trophy Pose:</strong> Là trạng thái nén lò xo tối đa, chuẩn bị cho việc giải phóng năng lượng dọc trục.</li>
@@ -1328,10 +1336,10 @@ footer {
 <hr/>
 <h2>CHƯƠNG 7: BỘ PHÁP &AMP; DI CHUYỂN (KINETIC FOUNDATION)</h2>
 <p>Nghệ thuật di chuyển không tốn sức.</p>
-<h3>7.1. Trợ lực Trọng trường ($S_{gravity}$)</h3>
+<h3>7.1. Trợ lực Trọng trường (<i class="math-var">S<sub>gravity</sub></i>)</h3>
 <p>Đừng dùng sức chân để chạy, hãy để Trái Đất kéo bạn đi.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Sức\ bật\ di\ chuyển \= 1 + (\frac{Độ\ hạ\ thấp\ trọng\ tâm}{Chiều\ cao\ của\ bạn})$$</p>
+<p><i class="math-var">Sức bật di chuyển = 1 + (<span class="math-frac"><span class="math-num">Độ hạ thấp trọng tâm</span><span class="math-den">Chiều cao của bạn</span></span>)</i></p>
 <ul class="styled-list">
 <li><strong>Split-step:</strong> Khi bạn nhảy lên và rơi xuống, bạn đang "nạp" trọng lực vào chân. </li>
 <li><strong>GSM Boost:</strong> Việc hạ thấp trọng tâm giúp bạn có thêm 15-20% sức bật ngang mà không tốn thêm năng lượng cơ bắp.</li>
@@ -1339,10 +1347,10 @@ footer {
 <hr/>
 <h2>CHƯƠNG 10: TƯƠNG LAI 2026 - META SIÊU AGENT</h2>
 <p>Kỷ nguyên của dữ liệu và hỗ trợ.</p>
-<h3>10.1. Phân tích Xác suất lỗi ($P_{error}$)</h3>
+<h3>10.1. Phân tích Xác suất lỗi (<i class="math-var">P<sub>error</sub></i>)</h3>
 <p>Dùng để loại bỏ những cú đánh rủi ro cao.</p>
 <p><strong>Phương trình đơn giản:</strong></p>
-<p>$$Tỷ\ lệ\ hỏng \= \frac{Số\ lần\ đánh\ hỏng\ tại\ góc\ đó}{Tổng\ số\ lần\ bạn\ đánh\ vào\ đó}$$</p>
+<p><i class="math-var">Tỷ lệ hỏng = <span class="math-frac"><span class="math-num">Số lần đánh hỏng tại góc đó</span><span class="math-den">Tổng số lần bạn đánh vào đó</span></span></i></p>
 <ul class="styled-list">
 <li><strong>Chiến thuật Meta:</strong> Nếu báo cáo rằng cú dọc dây của bạn có tỷ lệ hỏng 60%, bạn phải chuyển sang đánh chéo sân an toàn (tỷ lệ hỏng 15%) cho đến khi lấy lại cảm giác.</li>
 </ul>
@@ -1362,21 +1370,21 @@ footer {
 <hr/>
 <h3>What the Variables Mean</h3>
 <ul class="styled-list">
-<li><strong>$D_{\text{IT}}$</strong>: The Inertia Transfer index. This represents the momentum generated relative to the player's size. </li>
-<li><strong>$I_{\text{racket}}$</strong>: The moment of inertia of the racket. This is the racket's "swing weight," or how much it resists being rotated. </li>
-<li><strong>$\omega_{\text{impact}} - \omega_{\text{lag}}$</strong>: The change in the racket's rotational speed. It takes the rotational speed at the exact moment of hitting the ball ($\omega_{\text{impact}}$) and subtracts the speed at the slowest, most pulled-back point of the swing ($\omega_{\text{lag}}$). </li>
-<li><strong>$m_{\text{player}}$</strong>: The mass (weight) of the player.</li>
+<li><strong><i class="math-var">D<sub><span class="math-text">IT</span></sub></i></strong>: The Inertia Transfer index. This represents the momentum generated relative to the player's size. </li>
+<li><strong><i class="math-var">I<sub><span class="math-text">racket</span></sub></i></strong>: The moment of inertia of the racket. This is the racket's "swing weight," or how much it resists being rotated. </li>
+<li><strong><i class="math-var">ω<sub><span class="math-text">impact</span></sub> - ω<sub><span class="math-text">lag</span></sub></i></strong>: The change in the racket's rotational speed. It takes the rotational speed at the exact moment of hitting the ball (<i class="math-var">ω<sub><span class="math-text">impact</span></sub></i>) and subtracts the speed at the slowest, most pulled-back point of the swing (<i class="math-var">ω<sub><span class="math-text">lag</span></sub></i>). </li>
+<li><strong><i class="math-var">m<sub><span class="math-text">player</span></sub></i></strong>: The mass (weight) of the player.</li>
 </ul>
 <hr/>
 <h3>The Simplified Math Form</h3>
 <p><strong>If you want a cleaner, standard algebraic equation without the bulky text subscripts, you can write it like this:</strong></p>
-<p>$$D \= \frac{I \cdot \Delta\omega}{m}$$<br/>
+<p><i class="math-var">D = <span class="math-frac"><span class="math-num">I · Δω</span><span class="math-den">m</span></span></i><br/>
 <strong>Where:</strong></p>
 <ul class="styled-list">
-<li>$D$ \= Momentum transfer index </li>
-<li>$I$ \= Racket inertia </li>
-<li>$\Delta\omega$ \= Change in angular velocity (the increase in swing speed) </li>
-<li>$m$ \= Mass of the player</li>
+<li><i class="math-var">D</i> \= Momentum transfer index </li>
+<li><i class="math-var">I</i> \= Racket inertia </li>
+<li><i class="math-var">Δω</i> \= Change in angular velocity (the increase in swing speed) </li>
+<li><i class="math-var">m</i> \= Mass of the player</li>
 </ul>
 </div>
 

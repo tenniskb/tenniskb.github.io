@@ -170,6 +170,15 @@ footer .credit-label { color: var(--gold); }
   .masthead { padding: 44px 24px 36px; }
   .content-wrap { padding: 0 16px; }
 }
+
+.math-var { font-style: italic; font-family: 'Latin Modern Math', 'STIX Two Math', 'Cambria Math', serif; }
+.math-var sub, .math-var sup { font-style: normal; }
+.math-var sub { font-size: 0.75em; }
+.math-var sup { font-size: 0.75em; }
+.math-frac { display: inline-block; vertical-align: -0.5em; position: relative; text-align: center; }
+.math-frac .math-num { display: block; border-bottom: 1px solid currentColor; padding: 0 0.2em; }
+.math-frac .math-den { display: block; padding: 0 0.2em; }
+.math-text { font-family: 'DM Sans', sans-serif; font-style: normal; }
 </style></head><body>
 
 <div class="masthead">
@@ -198,7 +207,7 @@ footer .credit-label { color: var(--gold); }
 <p><strong>E_total = Tích phân [t0 đến tf] của { F(t) x v(t) + V_skin(t) x I_skin(t) + p(t) x A(t) } dt</strong></p>
 <p>Hoặc dạng ký hiệu đơn giản để bạn tiện lưu trữ bằng Markdown:</p>
 <h4>Diễn giải chi tiết ý nghĩa từng thành phần trong Tennis hiện đại:</h4>
-<p>Phương trình này đại diện cho <strong>Tổng năng lượng (E_total)</strong> được truyền vào cú đánh trong suốt khoảng thời gian từ khi bắt đầu vung vợt ($t_0$) cho đến khi kết thúc cú đánh ($t_f$). Năng lượng này được tổng hợp từ 3 nguồn (kênh) chính:</p>
+<p>Phương trình này đại diện cho <strong>Tổng năng lượng (E_total)</strong> được truyền vào cú đánh trong suốt khoảng thời gian từ khi bắt đầu vung vợt (<i class="math-var">t<sub>0</sub></i>) cho đến khi kết thúc cú đánh (<i class="math-var">t<sub>f</sub></i>). Năng lượng này được tổng hợp từ 3 nguồn (kênh) chính:</p>
 <h4>💡 Ứng dụng thực tế trong huấn luyện:</h4>
 <p>Năng lượng của một cú đánh đỉnh cao không sinh ra từ cơ bắp tay. Nó bắt đầu bằng áp lực chân nén xuống mặt sân (<strong>p·A</strong>), truyền qua chuỗi hệ thống cơ-mạc-gân (<strong>F·v</strong>), dưới sự dẫn truyền và kích thích cực nhanh của hệ thần kinh (<strong>V_skin·I_skin</strong>) để phóng ra đầu vợt. Bất kỳ sự tắc nghẽn hay "rò rỉ" nào ở một trong các thành phần trên đều khiến cú đánh bị giảm hiệu suất, tốn sức nhưng bóng đi không nặng.</p>
 <h3>1.3. Chỉ Số Hiệu Suất Truyền Tải (The 92% Rule)</h3>
@@ -217,9 +226,9 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này đo lường <strong>mức độ bảo toàn và hiệu suất giải phóng năng lượng</strong> khi nó đi qua từng "mắt xích" của chuỗi động lực học (Kinetic Chain), hoặc khi năng lượng truyền từ cơ thể vào cây vợt và giải phóng lên quả bóng.</p>
 <h4>💡 Ứng dụng thực tế và "The 92% Rule":</h4>
 <p>Khi năng lượng dịch chuyển qua chuỗi động lực, một phần luôn bị tiêu tán dưới dạng nhiệt và độ rung động do các lỗi kỹ thuật (gồng cứng cơ, sai thời điểm - timing, hoặc lệch trục cơ thể).</p>
-<p><strong>Dây tự nhiên (Natural Gut):</strong> Có hệ số $η \sim 0.95$ (mất rất ít năng lượng, bóng đi cực êm và trợ lực tốt).</p>
-<p><strong>Dây Polyester:</strong> Có hệ số $η \sim 0.80$ (hấp thụ và làm tiêu tán năng lượng nhiều hơn, đổi lại cho khả năng kiểm soát và tạo xoáy cao).</p>
-<p><strong>Vận động viên được huấn luyện tốt (The 92% Rule):</strong> Đạt chỉ số <strong>$η \sim 0.88 - 0.92$</strong>. Điều này nghĩa là họ tối thiểu hóa tối đa sự "rò rỉ" năng lượng, giúp cú vung vợt đạt hiệu suất giải phóng cao nhất mà cơ thể lại ít chịu phản lực cơ học tiêu cực nhất, ngăn ngừa chấn thương một cách tự nhiên.</p>
+<p><strong>Dây tự nhiên (Natural Gut):</strong> Có hệ số <i class="math-var">η sim 0.95</i> (mất rất ít năng lượng, bóng đi cực êm và trợ lực tốt).</p>
+<p><strong>Dây Polyester:</strong> Có hệ số <i class="math-var">η sim 0.80</i> (hấp thụ và làm tiêu tán năng lượng nhiều hơn, đổi lại cho khả năng kiểm soát và tạo xoáy cao).</p>
+<p><strong>Vận động viên được huấn luyện tốt (The 92% Rule):</strong> Đạt chỉ số <strong><i class="math-var">η sim 0.88 - 0.92</i></strong>. Điều này nghĩa là họ tối thiểu hóa tối đa sự "rò rỉ" năng lượng, giúp cú vung vợt đạt hiệu suất giải phóng cao nhất mà cơ thể lại ít chịu phản lực cơ học tiêu cực nhất, ngăn ngừa chấn thương một cách tự nhiên.</p>
 <h3>1.4. Cấu Trúc Hệ Mạc (Fascial Tensegrity)</h3>
 <p>Hệ mạc (fascia) là mạng lưới mô liên kết bao quanh toàn bộ cơ bắp, gân và xương. Không giống cơ bắp — vốn chỉ co theo một hướng — hệ mạc có thể lưu trữ và giải phóng năng lượng đàn hồi theo nhiều hướng đồng thời, giống như một bộ dây thun ba chiều.</p>
 <h4>1.4.1. Ứng Dụng Thực Tiễn: Kỹ Thuật Xoay Chéo (X-Factor)</h4>
@@ -251,8 +260,8 @@ footer .credit-label { color: var(--gold); }
 <p>Trong bộ môn tennis, tại khoảnh khắc bóng chạm dây (Impact), cổ tay phải chuyển đổi trạng thái cực nhanh từ "mềm mại" (để tích lũy năng lượng và tạo độ linh hoạt) sang "cứng nhắc như thép" trong vòng một phần vài nghìn giây nhằm truyền tải lực tối đa vào bóng và bảo vệ khớp xương.</p>
 <h4>💡 Ứng dụng thực tế và Ngưỡng Elite:</h4>
 <p>Mối quan hệ tỷ lệ nghịch giữa <strong>K_wrist</strong> và <strong>delta_theta</strong> quyết định độ chính xác và an toàn của cú đánh:</p>
-<p><strong>Ngưỡng Elite ($K\_wrist \ge 0.85$):</strong> Cổ tay được khóa hoàn hảo. Khi $K\_wrist$ cao, góc biến dạng $\Delta \theta$ sẽ cực kỳ nhỏ, mặt vợt vững như tảng đá tại thời điểm tác động. Nhờ đó, <strong>hơn 92% năng lượng</strong> được truyền trọn vẹn vào quả bóng, đường bóng đi chuẩn xác và uy lực.</p>
-<p><strong>Ngưỡng Nguy Hiểm ($K\_wrist &lt; 0.5$):</strong> Cổ tay bị lật hoặc lỏng lẻo. Lực va chạm lớn khiến cổ tay bị ngửa hoặc gập quá mức ($\Delta \theta$ lớn). Điều này gây ra hiện tượng rò rỉ năng lượng (bóng đi nhẹ, mất kiểm soát) và đẩy toàn bộ áp lực tổn thương lên khu vực phức hợp sụn sợi tam giác (<strong>TFCC</strong>), dễ dẫn đến chấn thương cổ tay kéo dài.</p>
+<p><strong>Ngưỡng Elite (<i class="math-var">K<sub>w</sub>rist ge 0.85</i>):</strong> Cổ tay được khóa hoàn hảo. Khi <i class="math-var">K<sub>w</sub>rist</i> cao, góc biến dạng <i class="math-var">Δ θ</i> sẽ cực kỳ nhỏ, mặt vợt vững như tảng đá tại thời điểm tác động. Nhờ đó, <strong>hơn 92% năng lượng</strong> được truyền trọn vẹn vào quả bóng, đường bóng đi chuẩn xác và uy lực.</p>
+<p><strong>Ngưỡng Nguy Hiểm (<i class="math-var">K<sub>w</sub>rist &lt; 0.5</i>):</strong> Cổ tay bị lật hoặc lỏng lẻo. Lực va chạm lớn khiến cổ tay bị ngửa hoặc gập quá mức (<i class="math-var">Δ θ</i> lớn). Điều này gây ra hiện tượng rò rỉ năng lượng (bóng đi nhẹ, mất kiểm soát) và đẩy toàn bộ áp lực tổn thương lên khu vực phức hợp sụn sợi tam giác (<strong>TFCC</strong>), dễ dẫn đến chấn thương cổ tay kéo dài.</p>
 <h3>1.6. Bài Tập Thực Hành: Phòng Thí Nghiệm DET</h3>
 <h4>Bài tập 1: Đo Lực Đạp Đất (GRF Drill)</h4>
 <p>Chuẩn bị: Cảm biến áp lực trong giày hoặc ứng dụng điện thoại đo rung động.</p>
@@ -314,10 +323,10 @@ footer .credit-label { color: var(--gold); }
 <p><strong>F_total(t) = SUM[k=1 đến K] của A_k x exp(-(t - t_{k,i})² / (2 x sigma_k²))</strong></p>
 <p>Hoặc dạng ký hiệu văn bản tối giản để bạn dễ lưu trữ:</p>
 <h4>Diễn giải chi tiết ý nghĩa trong Tennis hiện đại:</h4>
-<p>Phương trình này mô tả cách các "ngọn sóng" lực sinh ra từ các nhóm cơ khác nhau cộng dồn lại theo thời gian ($t$). Trong một cú đánh lý tưởng, lực tổng hợp (<strong>F_total</strong>) đạt đỉnh nhọn duy nhất ngay tại thời điểm mặt vợt chạm bóng (<strong>t_impact</strong>), tạo ra hiện tượng <strong>"Cộng hưởng tối ưu" (Optimal Summation)</strong>.</p>
+<p>Phương trình này mô tả cách các "ngọn sóng" lực sinh ra từ các nhóm cơ khác nhau cộng dồn lại theo thời gian (<i class="math-var">t</i>). Trong một cú đánh lý tưởng, lực tổng hợp (<strong>F_total</strong>) đạt đỉnh nhọn duy nhất ngay tại thời điểm mặt vợt chạm bóng (<strong>t_impact</strong>), tạo ra hiện tượng <strong>"Cộng hưởng tối ưu" (Optimal Summation)</strong>.</p>
 <h4>💡 Ứng dụng thực tế trong huấn luyện:</h4>
 <p>Để tối ưu hóa phương trình này, bí quyết không nằm ở việc bạn cố gắng gồng bao nhiêu cơ, mà nằm ở <strong>sự phối hợp thời gian (Timing)</strong>:</p>
-<p><strong>Chuỗi kích hoạt chuẩn xác:</strong> Lực phải đi tuần tự từ dưới lên trên: Chân ($k=1$) → Hông ($k=2$) → Vai ($k=3$) → Tay/Cổ tay ($k=4$). Đỉnh lực của mắt xích trước phải làm bệ phóng cho mắt xích sau.</p>
+<p><strong>Chuỗi kích hoạt chuẩn xác:</strong> Lực phải đi tuần tự từ dưới lên trên: Chân (<i class="math-var">k=1</i>) → Hông (<i class="math-var">k=2</i>) → Vai (<i class="math-var">k=3</i>) → Tay/Cổ tay (<i class="math-var">k=4</i>). Đỉnh lực của mắt xích trước phải làm bệ phóng cho mắt xích sau.</p>
 <p><strong>Khóa cổ tay chớp nhoáng:</strong> Vì cổ tay có <strong>sigma</strong> rất nhỏ, việc bung cổ tay quá sớm trước khi chạm bóng sẽ khiến ngọn sóng lực cuối cùng bị tiêu tán hoàn toàn vào không khí, dẫn đến cú đánh bị lỏng và thiếu lực.</p>
 <h3>2.4. Khoảng Trễ Thần Kinh - Cơ (Electromechanical Delay - EMD)</h3>
 <p>Có một khoảng thời gian không thể tránh khỏi giữa lúc não phát lệnh "Đánh!" và lúc cơ bắp thực sự tạo ra lực. Khoảng trễ này là kẻ thù của sự chính xác trong những tình huống phản ứng nhanh.</p>
@@ -329,9 +338,9 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này giải thích một thực tế sinh lý học quan trọng trong thể thao: <strong>Có một khoảng thời gian trễ không thể tránh khỏi (EMD - Electromechanical Delay) giữa lúc não bạn phát lệnh "Đánh bóng!" và lúc cơ bắp thực sự co rút để tạo ra lực.</strong> Đối với các pha bóng tốc độ cao (trên 150 km/h), khoảng trễ này chính là kẻ thù số một của sự chính xác.</p>
 <h4>💡 Ứng dụng thực tiễn: Kỹ thuật Split-Step Bù Trừ Trễ</h4>
 <p>Tổng thời gian trễ từ khi mắt thấy bóng đến khi cơ bắp sinh lực thực tế (Tổng EMD) thường kéo dài từ <strong>100ms đến 160ms</strong>. Trong khi đó, một đường bóng nhanh chỉ cho bạn khoảng 400ms - 500ms để phản ứng. Nếu bạn đợi bóng nảy rồi mới phát lệnh vung vợt, cơ bắp sẽ luôn bị trễ.</p>
-<p>Để tối ưu hóa và "bù trừ" khoảng trễ $\Delta t$ này, các vận động viên Elite áp dụng 2 bài tập:</p>
+<p>Để tối ưu hóa và "bù trừ" khoảng trễ <i class="math-var">Δ t</i> này, các vận động viên Elite áp dụng 2 bài tập:</p>
 <p><strong>Split-Step (Bước nhảy tách chấn):</strong> Nhẹ nhàng bật nhảy và tiếp đất ngay tại khoảnh khắc đối thủ chạm bóng. Động tác này kích hoạt trước hệ thần kinh và làm căng hệ mạc ở chân, giảm tối đa thời gian trễ truyền dẫn cơ xuống dưới <strong>120ms</strong>.</p>
-<p><strong>Tập luyện Plyometric:</strong> Các bài tập nhảy hộp (Box Jump), bật nhảy chớp nhoáng giúp hệ thần kinh tăng tốc độ giải phóng $Ca^{2+}$, biến đổi cấu trúc sợi cơ để ép xung <strong>beta_i</strong> đạt đỉnh nhanh hơn, giúp cú ra đòn trở nên thanh thoát và mang tính đón đầu (Anticipation).</p>
+<p><strong>Tập luyện Plyometric:</strong> Các bài tập nhảy hộp (Box Jump), bật nhảy chớp nhoáng giúp hệ thần kinh tăng tốc độ giải phóng <i class="math-var">Ca<sup>2+</sup></i>, biến đổi cấu trúc sợi cơ để ép xung <strong>beta_i</strong> đạt đỉnh nhanh hơn, giúp cú ra đòn trở nên thanh thoát và mang tính đón đầu (Anticipation).</p>
 <h4>2.4.1. Ứng Dụng Thực Tiễn: Split-Step Bù Trừ Trễ</h4>
 <p>Trong những pha bóng với tốc độ 150 km/h, quỹ thời gian từ khi đối thủ chạm bóng đến khi bạn vung vợt chỉ vào khoảng 0.4-0.5 giây. Với EMD 100-160ms, nếu bạn đợi bóng nảy lên rồi mới phát lệnh thì cơ bắp sẽ luôn bị trễ.</p>
 <p>Split-Step (Bước nhảy tách chấn): Nhảy nhẹ lên ngay khi đối thủ chuẩn bị tiếp bóng — não phát lệnh chuẩn bị TRƯỚC khi bóng đến, bù đắp hoàn hảo cho EMD.</p>
@@ -358,7 +367,7 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này thể hiện sự giao thoa hoàn hảo giữa <strong>Sinh cơ học hiện đại (Biomechanics)</strong> và <strong>Cốt lõi trục cột sống (Hệ trục Trung tâm)</strong>. Nó khẳng định rằng độ chính xác của mọi cú đánh không quyết định bởi tay, mà quyết định bởi mức độ bất động/ổn định của "Đan Điền" (Trung tâm khối lượng - Center of Mass) và đầu của bạn trong suốt quá trình vung vợt.</p>
 <h4>💡 Ứng dụng thực tế và phân tích từ các huyền thoại:</h4>
 <p>Khi bạn thực hiện một cú Forehand hoặc Backhand bùng nổ, các làn sóng lực phát ra từ chân qua chuỗi động lực (NKF) tạo ra một momen xoắn rất mạnh xung quanh trục cơ thể.</p>
-<p><strong>Hiện tượng rò rỉ năng lượng:</strong> Nếu vùng trung tâm (Core/Đan điền) lỏng lẻo, <strong>CM</strong> sẽ bị dao động ($CM\_stability$ giảm mạnh). Lúc này, chỉ số đồng bộ hóa toàn thân (<strong>sigma_sync</strong>) sẽ tụt dốc lập tức vì não bộ buộc phải phân bổ ngược <strong>20 - 30%</strong> năng lượng tính toán để điều phối các cơ nhỏ khác co rút nhằm giữ thăng bằng thay vì dồn lực tấn công.</p>
+<p><strong>Hiện tượng rò rỉ năng lượng:</strong> Nếu vùng trung tâm (Core/Đan điền) lỏng lẻo, <strong>CM</strong> sẽ bị dao động (<i class="math-var">CM<sub>s</sub>tability</i> giảm mạnh). Lúc này, chỉ số đồng bộ hóa toàn thân (<strong>sigma_sync</strong>) sẽ tụt dốc lập tức vì não bộ buộc phải phân bổ ngược <strong>20 - 30%</strong> năng lượng tính toán để điều phối các cơ nhỏ khác co rút nhằm giữ thăng bằng thay vì dồn lực tấn công.</p>
 <p><strong>Bí mật của Federer và Djokovic:</strong> Nếu quan sát kỹ các pha quay chậm (Slow-motion), bạn sẽ thấy khi họ di chuyển cắt sân và vung vợt, <strong>đầu và trục xương sống của họ gần như bất động hoàn toàn</strong> so với mặt đất. Trục xương sống luôn vuông góc, vùng thắt lưng và bụng dưới (Mệnh môn - Đan điền) vững như bàn thạch.</p>
 <p><strong>Bài học cốt lõi:</strong> Muốn bóng đi chuẩn xác và uy lực, hãy triệt tiêu mọi sự lắc lư của đầu và vai. Giữ "Hệ trục thẳng đứng" ổn định chính là chìa khóa để giải phóng năng lượng đầu vợt một cách tự nhiên và chính xác nhất.</p>
 <h3>2.7. Kế Hoạch Đo Lường sigma_sync</h3>
@@ -390,9 +399,9 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình tích phân này giải thích bản chất toán học của <strong>Swingweight</strong> — yếu tố quyết định độ "nặng vung" và khả năng xuyên phá của cây vợt khi chạm bóng, thay vì chỉ nhìn vào trọng lượng tĩnh (tổng số gram) ghi trên cán vợt.</p>
 <h4>💡 Ứng dụng thực tiễn: Sức mạnh của bình phương khoảng cách (x²)</h4>
 <p>Vì biến số khoảng cách <strong>x được bình phương (x²)</strong>, vị trí phân bổ trọng lượng dọc theo thân vợt có sức ảnh hưởng cực kỳ khủng khiếp đến Swingweight:</p>
-<p><strong>Tác động ở đỉnh vợt (Vị trí 12h):</strong> Nếu bạn dán thêm <strong>5 gram</strong> chì (lead tape) vào đỉnh vợt (với $x \approx 68\text{cm}$), do hiệu ứng bình phương, chỉ số Swingweight (<strong>I_racket</strong>) sẽ <strong>tăng vọt thêm khoảng 2,312 kg·cm²</strong>. Cây vợt lập tức trở nên đầm hơn, lực xuyên phá mạnh hơn đáng kể nhưng vung sẽ tốn sức hơn.</p>
-<p><strong>Tác động ở cổ vợt (Vị trí chữ V):</strong> Nếu dán cùng <strong>5 gram</strong> chì đó vào cổ vợt (với $x \approx 20\text{cm}$), Swingweight chỉ tăng thêm vỏn vẹn <strong>200 kg·cm²</strong> (gần như không cảm thấy sự thay đổi khi vung).</p>
-<p><strong>Bí quyết căn chỉnh vợt (Customization):</strong> Khi muốn tăng lực đánh và độ ổn định chống rung cho mặt vợt mà không muốn làm tổng trọng lượng vợt tăng lên quá nhiều, việc dán chì vào các góc <strong>12h, 10h và 2h</strong> chính là ứng dụng trực tiếp của phương trình tích phân này nhằm tối đa hóa giá trị $x^2$.</p>
+<p><strong>Tác động ở đỉnh vợt (Vị trí 12h):</strong> Nếu bạn dán thêm <strong>5 gram</strong> chì (lead tape) vào đỉnh vợt (với <i class="math-var">x ≈ 68<span class="math-text">cm</span></i>), do hiệu ứng bình phương, chỉ số Swingweight (<strong>I_racket</strong>) sẽ <strong>tăng vọt thêm khoảng 2,312 kg·cm²</strong>. Cây vợt lập tức trở nên đầm hơn, lực xuyên phá mạnh hơn đáng kể nhưng vung sẽ tốn sức hơn.</p>
+<p><strong>Tác động ở cổ vợt (Vị trí chữ V):</strong> Nếu dán cùng <strong>5 gram</strong> chì đó vào cổ vợt (với <i class="math-var">x ≈ 20<span class="math-text">cm</span></i>), Swingweight chỉ tăng thêm vỏn vẹn <strong>200 kg·cm²</strong> (gần như không cảm thấy sự thay đổi khi vung).</p>
+<p><strong>Bí quyết căn chỉnh vợt (Customization):</strong> Khi muốn tăng lực đánh và độ ổn định chống rung cho mặt vợt mà không muốn làm tổng trọng lượng vợt tăng lên quá nhiều, việc dán chì vào các góc <strong>12h, 10h và 2h</strong> chính là ứng dụng trực tiếp của phương trình tích phân này nhằm tối đa hóa giá trị <i class="math-var">x<sup>2</sup></i>.</p>
 <h3>3.3. Chỉ Số Dịch Chuyển Quán Tính (DIT)</h3>
 <p>DIT định lượng hiệu quả truyền quán tính từ cây vợt vào quả bóng, được chuẩn hoá theo khối lượng người chơi. Người chơi nhẹ hơn cần I_racket lớn hơn hoặc Delta_omega lớn hơn để đạt cùng DIT với người nặng hơn.</p>
 <p>Công thức <strong>Chỉ Số Dịch Chuyển Quán Tính (DIT - Dynamic Inertia Transfer)</strong> từ tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -446,7 +455,7 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này mô tả cơ chế sinh cơ học ở <strong>giai đoạn giảm tốc (Follow-through / Deceleration)</strong> ngay sau khi mặt vợt rời khỏi quả bóng. Nó giải thích cách cơ thể hấp thụ phản lực từ cú đánh để bảo vệ các khớp xương.</p>
 <h4>💡 Ý nghĩa y tế quan trọng và Phòng tránh chấn thương:</h4>
 <p>Khi bạn vung vợt với tốc độ cực cao, một lượng động lượng khổng lồ được sinh ra. Sau khi bóng rời vợt, phần động lượng còn lại không tự nhiên biến mất mà nó dội ngược lại cơ thể qua cánh tay (<strong>Delta_L_body</strong>).</p>
-<p><strong>Cơ chế chấn thương (Tennis Elbow / Rách chóp xoay):</strong> Nếu cơ thể không vững, hệ trục lỏng lẻo (chỉ số cứng vững cổ tay $K\_wrist$ thấp, vùng lõi core yếu), toàn bộ lượng động lượng dội ngược <strong>Delta_L_body</strong> này sẽ tập trung áp lực vào các khớp cô lập yếu nhất — thường là khuỷu tay hoặc chóp xoay vai. Đây chính là nguyên nhân cốt lõi gây ra chấn thương dai dẳng.</p>
+<p><strong>Cơ chế chấn thương (Tennis Elbow / Rách chóp xoay):</strong> Nếu cơ thể không vững, hệ trục lỏng lẻo (chỉ số cứng vững cổ tay <i class="math-var">K<sub>w</sub>rist</i> thấp, vùng lõi core yếu), toàn bộ lượng động lượng dội ngược <strong>Delta_L_body</strong> này sẽ tập trung áp lực vào các khớp cô lập yếu nhất — thường là khuỷu tay hoặc chóp xoay vai. Đây chính là nguyên nhân cốt lõi gây ra chấn thương dai dẳng.</p>
 <p><strong>Giải pháp từ các tay vợt Elite:</strong> Các vận động viên chuyên nghiệp luôn kết thúc cú đánh bằng một vòng ôm vai mượt mà (giữ chuỗi động lực chuyển động liên tục cho đến khi hết đà). Hành động này giúp phân phối đều <strong>Delta_L_body</strong> dọc theo toàn bộ dải mạc chéo thân người và cơ lưng lớn, biến quá trình "hãm phanh" thành một dòng chảy năng lượng êm ái, triệt tiêu hoàn toàn áp lực có hại lên khớp tay.</p>
 <h3>3.6. Độ Cứng Vật Liệu &amp; Hệ Số Đàn Hồi</h3>
 <p>Công thức <strong>Độ Cứng Kết Cấu (Stiffness)</strong> trong cẩm nang của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -457,10 +466,10 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này định lượng độ cứng vật lý (<strong>k</strong>) của dây vợt hoặc khung vợt khi chịu lực tác động từ quả bóng. Nó quyết định trực tiếp đến cảm giác bóng (feel), khả năng kiểm soát và độ êm của cú đánh.</p>
 <h4>💡 Ứng dụng thực tế trong lựa chọn và căng dây:</h4>
 <p>Dựa vào cấu trúc vật liệu (<strong>E</strong>), bạn có thể tối ưu hóa lối chơi và bảo vệ cơ thể thông qua bảng phân loại thực tế sau:</p>
-<p><strong>Ruột tự nhiên (Natural Gut - $E \sim 2.5 - 3.5$):</strong> Độ cứng kết cấu <strong>k</strong> thấp nhất. Dây lún sâu và đàn hồi cực tốt, mang lại cảm giác êm ái tối đa cho cổ tay/khuỷu tay, trợ lực tự nhiên rất cao.</p>
-<p><strong>Đa sợi (Multifilament - $E \sim 3.5 - 5.0$):</strong> Độ cứng trung bình. Cân bằng hoàn hảo giữa lực và khả năng kiểm soát, giải pháp thay thế kinh tế cho dây ruột tự nhiên.</p>
-<p><strong>Polyester (Poly - $E \sim 8.0 - 12.0$):</strong> Độ cứng kết cấu <strong>k</strong> rất cao. Dây cực kỳ cứng, ít biến dạng tự nhiên nhưng lại cho phép các tay vợt Elite vung cực mạnh mà bóng không bị bay ra ngoài sân, hỗ trợ tạo xoáy (spin) tối đa.</p>
-<p><strong>Hybrid (Poly/Gut - $E \sim 5.0 - 7.0$):</strong> Sự kết hợp phổ biến nhất trên Tour chuyên nghiệp (như Federer hay Djokovic thường dùng). Bằng cách đan dọc dây Poly và đan ngang dây Gut (hoặc ngược lại), họ chủ động điều chỉnh để đạt được một chỉ số <strong>k</strong> hoàn hảo — vừa có độ kiểm soát và xoáy của Poly, vừa giữ được sự êm ái và lực của dây Gut.</p>
+<p><strong>Ruột tự nhiên (Natural Gut - <i class="math-var">E sim 2.5 - 3.5</i>):</strong> Độ cứng kết cấu <strong>k</strong> thấp nhất. Dây lún sâu và đàn hồi cực tốt, mang lại cảm giác êm ái tối đa cho cổ tay/khuỷu tay, trợ lực tự nhiên rất cao.</p>
+<p><strong>Đa sợi (Multifilament - <i class="math-var">E sim 3.5 - 5.0</i>):</strong> Độ cứng trung bình. Cân bằng hoàn hảo giữa lực và khả năng kiểm soát, giải pháp thay thế kinh tế cho dây ruột tự nhiên.</p>
+<p><strong>Polyester (Poly - <i class="math-var">E sim 8.0 - 12.0</i>):</strong> Độ cứng kết cấu <strong>k</strong> rất cao. Dây cực kỳ cứng, ít biến dạng tự nhiên nhưng lại cho phép các tay vợt Elite vung cực mạnh mà bóng không bị bay ra ngoài sân, hỗ trợ tạo xoáy (spin) tối đa.</p>
+<p><strong>Hybrid (Poly/Gut - <i class="math-var">E sim 5.0 - 7.0</i>):</strong> Sự kết hợp phổ biến nhất trên Tour chuyên nghiệp (như Federer hay Djokovic thường dùng). Bằng cách đan dọc dây Poly và đan ngang dây Gut (hoặc ngược lại), họ chủ động điều chỉnh để đạt được một chỉ số <strong>k</strong> hoàn hảo — vừa có độ kiểm soát và xoáy của Poly, vừa giữ được sự êm ái và lực của dây Gut.</p>
 <h3>3.7. Bài Tập Thực Hành DIT</h3>
 <h4>Bài Tập 1: Shadow Swing Quá Tải (Overload Training)</h4>
 <p>Dùng vợt tập nặng 400g+ (hoặc thêm lead tape tạm thời).</p>
@@ -486,11 +495,11 @@ footer .credit-label { color: var(--gold); }
 <h4>Diễn giải chi tiết ý nghĩa trong cú Giao bóng (Serve) bùng nổ:</h4>
 <p>Phương trình này định lượng <strong>Lực phản chấn từ mặt đất theo phương thẳng đứng (Vertical Ground Reaction Force)</strong>. Trong một cú giao bóng hiện đại, lực không bắt đầu từ tay hay vai, mà nó được sinh ra ngay từ khoảnh khắc bàn chân tương tác và đạp mạnh xuống mặt sân. Mặt sân sẽ "trả lại" một lực tương đương đẩy ngược vào cơ thể bạn.</p>
 <h4>💡 Ví dụ thực tế và Ngưỡng Elite (2.3x - 2.5x BW):</h4>
-<p><strong>Phép tính cơ học:</strong> Nếu một tay vợt nặng <strong>80kg</strong> ($m\_player = 80$) đạt đến <strong>Ngưỡng Elite (phát lực bằng 2.5 lần trọng lượng cơ thể - 2.5x Body Weight)</strong>, lực đạp xuống sàn thực tế sẽ là:</p>
-<p>$$F_v = 80 \times 9.8 \times 2.5 = 1,960\text{ Newton}$$</p>
+<p><strong>Phép tính cơ học:</strong> Nếu một tay vợt nặng <strong>80kg</strong> (<i class="math-var">m<sub>p</sub>layer = 80</i>) đạt đến <strong>Ngưỡng Elite (phát lực bằng 2.5 lần trọng lượng cơ thể - 2.5x Body Weight)</strong>, lực đạp xuống sàn thực tế sẽ là:</p>
+<p><i class="math-var">F<sub>v</sub> = 80 × 9.8 × 2.5 = 1,960<span class="math-text"> Newton</span></i></p>
 <p>Con số này tương đương với một lực nặng gần <strong>200 kg</strong> nén xuống mặt sân và dội ngược lên cơ thể bạn trong một khoảng thời gian cực ngắn (chưa đầy 0.1 giây).</p>
 <p><strong>Ứng dụng thực tiễn (Cơ chế lò xo):</strong> Lực đẩy dọc khổng lồ này sau khi dội từ mặt đất lên sẽ chạy qua gối, hông, lõi cơ (core), rồi được khuếch đại qua vai và cẳng tay để chuyển hóa thành tốc độ bay của quả bóng (<strong>V_serve</strong>).</p>
-<p>⚡ <strong>Mẹo huấn luyện:</strong> Để tối ưu hóa lực đẩy dọc này mà không làm mất thăng bằng, bạn cần giữ cho <strong>Hệ trục thẳng đứng (Trục cột sống)</strong> cực kỳ ổn định trong lúc khuỵu và bật nhảy. Nếu cơ thể bị đổ hoặc ngả về phía trước quá sớm trước khi chân thoát lực, làn sóng năng lượng $F_v$ sẽ bị gãy và rò rỉ, khiến cú giao bóng bị giảm uy lực đáng kể.</p>
+<p>⚡ <strong>Mẹo huấn luyện:</strong> Để tối ưu hóa lực đẩy dọc này mà không làm mất thăng bằng, bạn cần giữ cho <strong>Hệ trục thẳng đứng (Trục cột sống)</strong> cực kỳ ổn định trong lúc khuỵu và bật nhảy. Nếu cơ thể bị đổ hoặc ngả về phía trước quá sớm trước khi chân thoát lực, làn sóng năng lượng <i class="math-var">F<sub>v</sub></i> sẽ bị gãy và rò rỉ, khiến cú giao bóng bị giảm uy lực đáng kể.</p>
 <h3>4.2. Vận Tốc Giao Bóng: Phương Trình Cộng Dồn Ba Khối</h3>
 <p>Sai lầm chết người của người phong trào: Khối 1 (Hông) gần như không đóng góp do kỹ thuật yếu. Cơ thể bù trừ bằng cách ép Khối 3 (Tay) làm phần lớn công việc. Nhưng cánh tay là cấu trúc nhỏ và mong manh — khi phải gánh vác quá tải, chóp xoay vai sẽ bị rách.</p>
 <p>Công thức <strong>Phương Trình Vận Tốc Giao Bóng (Phương Trình Cộng Dồn Ba Khối)</strong> từ tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -500,7 +509,7 @@ footer .credit-label { color: var(--gold); }
 <h4>Diễn giải chi tiết ý nghĩa trong cú Giao bóng (Serve) đỉnh cao:</h4>
 <p>Phương trình này là nền tảng cốt lõi giải thích cách vận tốc quả giao bóng (<strong>V_serve</strong>) được hình thành từ sự cộng dồn động lượng của 3 khối cơ quan chính, chuyển hóa dọc theo chuỗi động lực từ dưới lên trên và giải phóng vào quả bóng.</p>
 <h4>💡 Sai lầm chết người của người chơi phong trào:</h4>
-<p>Nhìn vào tỷ lệ đóng góp, bạn có thể thấy <strong>hơn 70% vận tốc giao bóng</strong> được quyết định bởi hai khối lớn bên dưới: <strong>Hông ($k=1$)</strong> và <strong>Vai ($k=2$)</strong>.</p>
+<p>Nhìn vào tỷ lệ đóng góp, bạn có thể thấy <strong>hơn 70% vận tốc giao bóng</strong> được quyết định bởi hai khối lớn bên dưới: <strong>Hông (<i class="math-var">k=1</i>)</strong> và <strong>Vai (<i class="math-var">k=2</i>)</strong>.</p>
 <p><strong>Lỗi "Cậy sức tay":</strong> Rất nhiều người chơi phong trào gần như đóng góp 0% lực từ hông và vai do kỹ thuật xoay trục yếu. Họ chỉ cố dùng sức mạnh đơn độc của cánh tay và cổ tay để quất bóng. Hệ quả là cú giao bóng thiếu lực, quỹ đạo bóng ngắn, dễ rúc lưới và cực kỳ nhanh mệt hoặc chấn thương vai.</p>
 <p><strong>Giải pháp tối ưu tốc độ đỉnh:</strong> Để đạt vận tốc giao bóng tối đa, bạn cần tập trung vào việc khuỵu chân chuẩn (Trophy Position), đạp đất mạnh để kích hoạt <strong>omega_hip</strong>, sau đó giữ độ trễ của vai để trục vai xoay bùng nổ tiếp theo, và cuối cùng mới giải phóng cánh tay như một chiếc roi da lỏng để <strong>DIT</strong> kết thúc hoàn hảo chuỗi truyền tải năng lượng.</p>
 <h3>4.3. Giai Đoạn Nạp Lò Xo (Loading Phase)</h3>
@@ -519,7 +528,7 @@ footer .credit-label { color: var(--gold); }
 <p>Vì biên độ khuỵu gối <strong>delta_x</strong> được <strong>bình phương ((delta_x)²)</strong>, nên độ sâu của gối ảnh hưởng trực tiếp đến lượng năng lượng nạp vào. Tuy nhiên, sinh cơ học tennis đỉnh cao đòi hỏi bạn phải tuân thủ nghiêm ngặt các nguyên lý sau để không làm tiêu tán năng lượng:</p>
 <p><strong>Ngưỡng gối tối ưu (Trophy Pose):</strong> Góc gập gối lý tưởng nhất là từ <strong>100° đến 120°</strong>. Trọng tâm hạ thấp vừa phải, cột sống giữ thẳng tuyệt đối trên hệ trục trung tâm để chuẩn bị cho cú bật.</p>
 <p><strong>Sai lầm hạ quá sâu (&gt;120°):</strong> Nếu gập gối quá sâu, bạn sẽ làm mất đi tính đàn hồi tự nhiên của hệ mạc, ép cơ đùi phải làm việc quá tải theo dạng co cơ tĩnh (isometric), khiến cú bật nhảy bị chậm và mất lực.</p>
-<p><strong>Cửa sổ thời gian nạp lực ($\Delta t_{load}$):</strong> Khoảng thời gian nạp lò xo này phải <strong>cực kỳ ngắn</strong>. Bạn cần khuỵu xuống và ngay lập tức đạp đất bùng nổ hướng trục thẳng đứng (Drive Phase) để đạt ngưỡng lực phản chấn <strong>2.5x BW</strong> (gấp 2.5 lần trọng lượng cơ thể). Nếu giữ tư thế khuỵu quá lâu, năng lượng đàn hồi <strong>E_stored</strong> sẽ bị biến thành nhiệt lượng và rò rỉ hoàn toàn.</p>
+<p><strong>Cửa sổ thời gian nạp lực (<i class="math-var">Δ t<sub>load</sub></i>):</strong> Khoảng thời gian nạp lò xo này phải <strong>cực kỳ ngắn</strong>. Bạn cần khuỵu xuống và ngay lập tức đạp đất bùng nổ hướng trục thẳng đứng (Drive Phase) để đạt ngưỡng lực phản chấn <strong>2.5x BW</strong> (gấp 2.5 lần trọng lượng cơ thể). Nếu giữ tư thế khuỵu quá lâu, năng lượng đàn hồi <strong>E_stored</strong> sẽ bị biến thành nhiệt lượng và rò rỉ hoàn toàn.</p>
 <h3>4.4. Gia Tốc Xoay Trong (Internal Rotation — IR)</h3>
 <p>Xoay trong của xương cánh tay là chuyển động nhanh nhất của cơ thể người từng được ghi nhận trong thể thao. Đây là "cú vút roi" cuối cùng tạo ra tốc độ đầu vợt khủng khiếp.</p>
 <p>Công thức <strong>Gia Tốc Xoay Trong (Internal Rotation — IR)</strong> đang hiển thị trên màn hình tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -583,8 +592,8 @@ footer .credit-label { color: var(--gold); }
 <p>Khi đối mặt với một cú giao bóng sấm sét có vận tốc lên tới <strong>200 km/h</strong>, quả bóng chỉ mất khoảng <strong>0.4 – 0.5 giây</strong> để bay từ bên kia sân sang vạch baseline của bạn. Trong khoảng thời gian chớp nhoáng đó, não bộ và cơ thể bạn phải hoàn thành một chuỗi xử lý nghiêm ngặt được định lượng bằng phương trình trên nhằm mục đích: <strong>Chuyển hóa từ thế thủ (Return) sang thế công (Counter-attack) ngay lập tức.</strong></p>
 <h4>💡 Ứng dụng thực tế: Hai yếu tố then chốt để đạt ngưỡng ≤ 0.12s</h4>
 <p>Để ép tổng thời gian chu trình rơi vào vùng tối ưu của các tay vợt Elite, cẩm nang của bạn chỉ ra 2 hành động bắt buộc:</p>
-<p><strong>Split-Step Timing (Bật nhảy đón đầu):</strong> Nhẹ nhàng nhảy lên và tiếp đất <strong>đúng lúc đối thủ tung bóng lên (toss)</strong>. Hành động này đưa cơ bắp chân vào trạng thái "nạp sẵn" (pre-stretching) ngay khi bóng vừa rời vợt đối phương, giúp triệt tiêu hoàn toàn độ trễ của $t_{nhan\_dien}$.</p>
-<p><strong>Unit Turn (Xoay khối đồng nhất):</strong> Loại bỏ hoàn toàn việc dùng tay kéo vợt ra sau. Ngay khi xác định được hướng bóng, bạn khóa cổ tay (<strong>K_wrist</strong>) và xoay toàn bộ khối hông + vai ra sau như một thể thống nhất. Biên độ cực ngắn này giúp $t_{nap\_luc\_DL}$ diễn ra gần như tức thì, sẵn sàng mượn chính lực của cú giao bóng để trả đòn.</p>
+<p><strong>Split-Step Timing (Bật nhảy đón đầu):</strong> Nhẹ nhàng nhảy lên và tiếp đất <strong>đúng lúc đối thủ tung bóng lên (toss)</strong>. Hành động này đưa cơ bắp chân vào trạng thái "nạp sẵn" (pre-stretching) ngay khi bóng vừa rời vợt đối phương, giúp triệt tiêu hoàn toàn độ trễ của <i class="math-var">t<sub>nhan<sub>d</sub>ien</sub></i>.</p>
+<p><strong>Unit Turn (Xoay khối đồng nhất):</strong> Loại bỏ hoàn toàn việc dùng tay kéo vợt ra sau. Ngay khi xác định được hướng bóng, bạn khóa cổ tay (<strong>K_wrist</strong>) và xoay toàn bộ khối hông + vai ra sau như một thể thống nhất. Biên độ cực ngắn này giúp <i class="math-var">t<sub>nap<sub>l</sub>uc<sub>D</sub>L</sub></i> diễn ra gần như tức thì, sẵn sàng mượn chính lực của cú giao bóng để trả đòn.</p>
 <h3>5.2. Cơ Chế Nạp Trực Tiếp (Direct Load vs. Traditional Backswing)</h3>
 <p>Trong Backswing truyền thống, cánh tay đưa vợt ra sau khoảng 60-90cm. Điều này tốn 150-200ms. Với Direct Load, bạn loại bỏ hoàn toàn hành trình này và thay bằng "xoay vai nén" ngắn.</p>
 <p>Công thức <strong>Phương Trình Động Lượng Trả Bóng (Return Momentum)</strong> từ tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -597,8 +606,8 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này chính là cơ sở toán học cho chiến thuật <strong>Dâng cao vào sân (Standing Inside the Baseline)</strong> mà các tay vợt đẳng cấp thường xuyên sử dụng:</p>
 <p><strong>Tối đa hóa lực mượn:</strong> Bằng việc đứng cao, bạn đón bóng khi <strong>v_incoming_ball</strong> đang ở mức lớn nhất (chưa bị giảm tốc do lực cản không khí và độ ma sát mặt sân).</p>
 <p><strong>Yêu cầu khắt khe về kỹ thuật:</strong> Để ép sân thành công bằng công thức này, hai điều kiện bắt buộc phải đạt ngưỡng Elite:</p>
-<p><strong>$K\_wrist \ge 0.90$:</strong> Khóa cổ tay tuyệt đối, biến mặt vợt thành một bức tường thép vững chãi. Nếu cổ tay lỏng lẻo, bóng sẽ bị dội ngược và hỏng ngay lập tức.</p>
-<p><strong>$\sigma\_sync \ge 0.88$:</strong> Hệ thống thần kinh - cơ phải đồng bộ hóa cực cao để thực hiện động tác xoay nén vai/hông và chạm bóng chuẩn xác trong cửa sổ thời gian cực ngắn.</p>
+<p><strong><i class="math-var">K<sub>w</sub>rist ge 0.90</i>:</strong> Khóa cổ tay tuyệt đối, biến mặt vợt thành một bức tường thép vững chãi. Nếu cổ tay lỏng lẻo, bóng sẽ bị dội ngược và hỏng ngay lập tức.</p>
+<p><strong><i class="math-var">σ<sub>s</sub>ync ge 0.88</i>:</strong> Hệ thống thần kinh - cơ phải đồng bộ hóa cực cao để thực hiện động tác xoay nén vai/hông và chạm bóng chuẩn xác trong cửa sổ thời gian cực ngắn.</p>
 <h4>5.2.1. Hai Yếu Tố Then Chốt</h4>
 <p>Split-Step Timing: Nhảy nhẹ lên và chạm đất đúng lúc đối thủ tung bóng lên (toss) — không phải khi vợt tiếp bóng. Điều này cho phép chân ở trạng thái "nạp" khi bóng rời vợt đối thủ.</p>
 <p>Unit Turn: Thay vì backswing bằng tay, xoay vai + hông như một khối đơn nhất (unit) ra phía sau. Biên độ chỉ cần 20-30° thay vì 60-90° như backswing truyền thống.</p>
@@ -615,8 +624,8 @@ footer .credit-label { color: var(--gold); }
 <p><strong>Rút ngắn khoảng cách chặn bóng:</strong> Khi bạn chủ động đứng tràn vào trong vạch baseline, bạn đang chủ động làm giảm giá trị <strong>x_intercept</strong> xuống từ <strong>30 đến 50cm</strong>.</p>
 <p><strong>Tiết kiệm thời gian quý báu:</strong> Hành động dâng cao này bẻ gãy quỹ đạo bay của bóng sớm hơn, giúp bạn "ăn gian" thêm được <strong>50 đến 80 mili-giây</strong> thời gian cực kỳ quý báu để dồn ép đối thủ vào thế bị động.</p>
 <p><strong>Điều kiện bắt buộc:</strong> Chiến thuật này chỉ thành công khi bạn đáp ứng đủ hai bộ chỉ số cơ học nghiêm ngặt đã thiết lập ở các chương trước:</p>
-<p><strong>$K\_wrist \ge 0.90$:</strong> Cổ tay phải khóa cứng tuyệt đối như một bức tường thép vì bóng đến sát sân sẽ rất nhanh và nặng.</p>
-<p><strong>$\sigma\_sync \ge 0.88$:</strong> Chỉ số đồng bộ hóa thần kinh - cơ phải đạt mức xuất sắc để chuỗi động lực nén ngắn (<em>Direct Load</em>) diễn ra chuẩn xác tuyệt đối mà không có động tác thừa.</p>
+<p><strong><i class="math-var">K<sub>w</sub>rist ge 0.90</i>:</strong> Cổ tay phải khóa cứng tuyệt đối như một bức tường thép vì bóng đến sát sân sẽ rất nhanh và nặng.</p>
+<p><strong><i class="math-var">σ<sub>s</sub>ync ge 0.88</i>:</strong> Chỉ số đồng bộ hóa thần kinh - cơ phải đạt mức xuất sắc để chuỗi động lực nén ngắn (<em>Direct Load</em>) diễn ra chuẩn xác tuyệt đối mà không có động tác thừa.</p>
 <h3>5.4. Bài Tập Direct Load Thực Tiễn</h3>
 <h4>Bài Tập 1: Wall-Step Reflex</h4>
 <p>Đứng cách tường 1.5m, nhờ người ném bóng mạnh vào tường từ phía bên.</p>
@@ -640,7 +649,7 @@ footer .credit-label { color: var(--gold); }
 <p>Như đã nêu trong tài liệu, một cú Volley chuẩn mực không phải là một cú đánh sinh năng lượng (như Forehand hay Backhand). Đó là một cú chặn có chủ đích — nơi bạn mượn và chuyển hướng toàn bộ năng lượng từ đường bóng của đối thủ.</p>
 <h4>💡 Ứng dụng thực tế theo cấu trúc cẩm nang:</h4>
 <p>Để tối ưu hóa phương trình này và biến vùng lưới thành "vùng tử địa" đối với đối thủ, bạn cần thực hiện đồng bộ hai yếu tố kỹ thuật cốt lõi:</p>
-<p><strong>Khóa cổ tay tuyệt đối ($K_{wall}$ cực đại):</strong> Tại thời điểm chạm bóng, cổ tay phải hoàn toàn cố định để triệt tiêu hiện tượng lật mặt vợt. Nếu cổ tay lỏng lẻo, $K_{wall}$ sụt giảm sẽ khiến lực bóng đến ($F_{ball\_in}$) hấp thụ ngược vào tay gây lỗi hoặc rúc lưới.</p>
+<p><strong>Khóa cổ tay tuyệt đối (<i class="math-var">K<sub>wall</sub></i> cực đại):</strong> Tại thời điểm chạm bóng, cổ tay phải hoàn toàn cố định để triệt tiêu hiện tượng lật mặt vợt. Nếu cổ tay lỏng lẻo, <i class="math-var">K<sub>wall</sub></i> sụt giảm sẽ khiến lực bóng đến (<i class="math-var">F<sub>ball<sub>i</sub>n</sub></i>) hấp thụ ngược vào tay gây lỗi hoặc rúc lưới.</p>
 <p><strong>Kỹ thuật V-Step kết hợp góc 45°:</strong> Thay vì đứng yên hoặc bước ngang, việc áp dụng bước chân <strong>V-Step</strong> (bước chéo 45° về phía trước) giúp cơ thể chủ động lao vào giao điểm đón bóng. Động tác này tối ưu hóa khoảng cách <strong>delta_x_push</strong> ở ngay trước mặt (Eye-level), tăng 20% tốc độ đổi hướng và giúp cú Punch Volley đi cực kỳ sắc bén, sầm uất mà không cần tốn sức vung tay sâu.</p>
 <h3>6.2. Hình Học Không Gian Và Vùng Kiểm Soát</h3>
 <p>Công thức <strong>Vùng Kiểm Soát Tại Lưới (Coverage Zone Geometry)</strong> từ Chương 6.2 trong cẩm nang của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -673,10 +682,10 @@ footer .credit-label { color: var(--gold); }
 <h4>💡 Ứng dụng thực tế theo 3 biến thể Volley trong cẩm nang:</h4>
 <p>Thay vì vung vợt mở biên độ rộng (giống như các cú đánh baseline), việc điều hướng bóng tại lưới phụ thuộc hoàn toàn vào việc bạn điều chỉnh <strong>theta_face</strong> kết hợp với chỉ số cứng vững cổ tay (<strong>K_wrist</strong>):</p>
 <p><strong>Punch Volley (Đẩy và Điều hướng):</strong></p>
-<p>Bạn duy trì chỉ số khóa cổ tay tối đa <strong>$K\_wrist = 0.95 - 1.0$</strong>.</p>
+<p>Bạn duy trì chỉ số khóa cổ tay tối đa <strong><i class="math-var">K<sub>w</sub>rist = 0.95 - 1.0</i></strong>.</p>
 <p>Lúc này, bạn chỉ cần chủ động xoay nhẹ góc mặt vợt (<strong>theta_face</strong>) một cách tinh tế để mượn hoàn toàn lực bóng đến (<strong>F_ball_in</strong>) và đẩy vợt về phía trước một khoảng ngắn <strong>10 - 15cm</strong>, bóng sẽ lập tức đổi hướng ra góc hiểm cực kỳ chuẩn xác theo phương trình góc phản xạ. Dùng hiệu quả khi bóng đối phương đến nhanh và thấp dưới lưới.</p>
 <p><strong>Drop Volley (Volley bỏ nhỏ):</strong></p>
-<p>Thay vì khóa cứng, bạn chủ động <strong>giảm nhẹ $K\_wrist$ xuống vùng nguy hiểm (0.70 - 0.80)</strong> ngay tại mili-giây va chạm.</p>
+<p>Thay vì khóa cứng, bạn chủ động <strong>giảm nhẹ <i class="math-var">K<sub>w</sub>rist</i> xuống vùng nguy hiểm (0.70 - 0.80)</strong> ngay tại mili-giây va chạm.</p>
 <p>Hành động chủ động "mềm tay" này giúp mặt vợt hơi ngửa ra sau (làm thay đổi đột ngột <strong>theta_face</strong>), đóng vai trò như một bộ giảm chấn hấp thụ toàn bộ động lượng bóng đến, khiến quả bóng mất lực hoàn toàn và rơi ngay sát lưới bên sân đối phương.</p>
 <p><strong>Swing Volley (Volley tấn công):</strong></p>
 <p>Khi đối phương trả bóng bổng, chậm và có thời gian chuẩn bị cao trên lưới, bạn kết hợp một pha mini-swing (đưa vợt ra sau ngắn khoảng <strong>20cm</strong>) rồi thực hiện động tác punch mạnh mẽ hướng từ trên xuống để ép góc <strong>theta_out</strong> cắm thẳng sang góc sân trống.</p>
@@ -702,8 +711,8 @@ footer .credit-label { color: var(--gold); }
 <p>Ngay phía dưới công thức này trong chương 7.2, tài liệu của bạn chỉ rõ cách tối ưu hóa <strong>GSM_boost</strong> (Hệ số trợ lực trọng trường) thông qua kỹ thuật <strong>Split-Step đúng cách</strong>:</p>
 <p><strong>Nhảy nhẹ lên (5 - 8cm):</strong> Không cần nhảy quá cao, mục đích là giải phóng cơ thể khỏi trạng thái tĩnh.</p>
 <p><strong>Thả lỏng hoàn toàn khi chạm đất:</strong> Khi chân chạm đất (đúng lúc đối thủ chạm bóng), bạn không gồng cơ mà thả lỏng toàn bộ để trọng lực kéo người xuống sâu một chút.</p>
-<p><strong>Gối gập nhẹ (100° - 110°):</strong> Góc gập lý tưởng này giúp nén hệ mạc và cơ đùi lại như một chiếc lò xo, đẩy chỉ số $S\_gravity$ đạt từ <strong>1.15 đến 1.25</strong>.</p>
-<p><strong>Bí quyết di chuyển Elite:</strong> Khi đạt $S\_gravity = 1.25$, bạn đang có thêm <strong>25% năng lượng "miễn phí"</strong> lấy từ trọng lực Trái Đất tích lũy vào hệ mạc. Ngay khi xác định được hướng bóng, chiếc lò xo này sẽ tự động "Bung" bước đầu tiên sang ngang cực kỳ bùng nổ, giúp bạn chiếm lĩnh vị trí chặn bóng nhanh chóng mà lại tốn rất ít sức cơ bắp chân.</p>
+<p><strong>Gối gập nhẹ (100° - 110°):</strong> Góc gập lý tưởng này giúp nén hệ mạc và cơ đùi lại như một chiếc lò xo, đẩy chỉ số <i class="math-var">S<sub>g</sub>ravity</i> đạt từ <strong>1.15 đến 1.25</strong>.</p>
+<p><strong>Bí quyết di chuyển Elite:</strong> Khi đạt <i class="math-var">S<sub>g</sub>ravity = 1.25</i>, bạn đang có thêm <strong>25% năng lượng "miễn phí"</strong> lấy từ trọng lực Trái Đất tích lũy vào hệ mạc. Ngay khi xác định được hướng bóng, chiếc lò xo này sẽ tự động "Bung" bước đầu tiên sang ngang cực kỳ bùng nổ, giúp bạn chiếm lĩnh vị trí chặn bóng nhanh chóng mà lại tốn rất ít sức cơ bắp chân.</p>
 <h3>7.2. Hệ Số Trợ Lực Trọng Trường (Gravity Shift Multiplier — GSM)</h3>
 <p>Khi S_gravity = 1: Không có trợ lực, 100% năng lượng từ cơ bắp chân. Khi S_gravity = 1.25: 25% năng lượng "miễn phí" từ trọng lực. Tay vợt Elite đạt S_gravity = 1.15-1.25 thường xuyên nhờ kỹ thuật Split-step hoàn hảo.</p>
 <h4>7.2.1. Ứng Dụng: Split-Step Đúng Kỹ Thuật</h4>
@@ -733,10 +742,10 @@ footer .credit-label { color: var(--gold); }
 <p>Như được ghi nhận trong tài liệu, phương trình này định lượng mức độ suy giảm thăng bằng và độ ổn định của trục cơ thể khi vận động viên thực hiện kỹ thuật trượt dài trên mặt sân (slide) — một đặc trưng cơ học cực kỳ quan trọng trên sân đất nện hoặc khi phòng thủ cuối sân.</p>
 <h4>💡 Ứng dụng thực tế để đạt Ngưỡng Elite (DSI &gt; 0.85):</h4>
 <p>Mối quan hệ tỷ lệ nghịch trong hàm mũ chỉ ra rằng để giữ được <strong>DSI &gt; 0.85</strong> (ngưỡng chuyển động tối ưu của các tay vợt chuyên nghiệp), bạn cần kiểm soát nghiêm ngặt hai yếu tố sau:</p>
-<p><strong>Triệt tiêu độ nghiêng trục ($\Delta\theta_{slide}$ tối thiểu):</strong></p>
-<p>Khi trượt dài để đón bóng, sai lầm phổ biến là để người bị ngả nghiêng hoặc đổ vai quá nhiều ra ngoài bán kính quay. Việc giữ "Hệ trục thẳng đứng" vuông góc với mặt sân giúp hạ thấp góc biến dạng $\Delta\theta_{slide}$, đảm bảo lõi cơ thể (<strong>Core/Đan điền</strong>) không bị mất trọng tâm.</p>
+<p><strong>Triệt tiêu độ nghiêng trục (<i class="math-var">Δθ<sub>slide</sub></i> tối thiểu):</strong></p>
+<p>Khi trượt dài để đón bóng, sai lầm phổ biến là để người bị ngả nghiêng hoặc đổ vai quá nhiều ra ngoài bán kính quay. Việc giữ "Hệ trục thẳng đứng" vuông góc với mặt sân giúp hạ thấp góc biến dạng <i class="math-var">Δθ<sub>slide</sub></i>, đảm bảo lõi cơ thể (<strong>Core/Đan điền</strong>) không bị mất trọng tâm.</p>
 <p><strong>Hạ thấp khối tâm đồng bộ:</strong></p>
-<p>Thay vì trượt ở tư thế đứng cao chân, việc chùng gối sâu và hạ thấp trọng tâm (<strong>h_drop</strong>) giúp tăng diện tích bám đất và tối ưu hóa hệ số ma sát $\lambda$. Điều này giúp bạn kiểm soát quãng đường trượt chủ động, khóa bộ pháp đứng vững ngay lập tức tại điểm intercept nhằm giải phóng trọn vẹn lực phản chấn từ mặt đất (GRF) vào quả bóng.</p>
+<p>Thay vì trượt ở tư thế đứng cao chân, việc chùng gối sâu và hạ thấp trọng tâm (<strong>h_drop</strong>) giúp tăng diện tích bám đất và tối ưu hóa hệ số ma sát <i class="math-var">lambda</i>. Điều này giúp bạn kiểm soát quãng đường trượt chủ động, khóa bộ pháp đứng vững ngay lập tức tại điểm intercept nhằm giải phóng trọn vẹn lực phản chấn từ mặt đất (GRF) vào quả bóng.</p>
 <h3>7.4. Ảnh Hưởng Của Mặt Sân Đến Lambda</h3>
 <p>Bí quyết kỹ thuật của Djokovic và Alcaraz khi trượt trên sân cứng: Họ không thể thay đổi mu (mặt sân), nên họ tối ưu hoá Delta_theta_slide. Thực hiện trượt với tư thế chân mở rộng tối đa nhưng tuyệt đối giữ trục xương sống gần thẳng đứng (Delta_theta ≈ 0). Nhờ vậy, DSI vẫn đủ cao để phản công ngay.</p>
 <h3>7.5. Bài Tập Bộ Pháp Chuyên Sâu</h3>
@@ -760,11 +769,11 @@ footer .credit-label { color: var(--gold); }
 <p>Như được ghi nhận trong tài liệu, mục tiêu của phương trình này là chuyển đổi lối chơi từ "chiến thuật bản năng" sang "chiến thuật xác suất" — biến mỗi trận đấu thành một ván cờ toán học nơi bạn luôn nắm lợi thế bằng cách định lượng tỷ lệ đánh hỏng tại các tọa độ mục tiêu cụ thể trên sân.</p>
 <h4>💡 Quản trị rủi ro theo Phân loại Vùng P_error:</h4>
 <p>Dựa trên cấu trúc dữ liệu Meta từ cẩm nang, mặt sân được chia thành 4 phân khu rủi ro rõ rệt để vận động viên đưa ra quyết định tối ưu hóa <strong>Chỉ số Thông minh Chiến thuật (Shot_IQ)</strong>:</p>
-<p><strong>Vùng Xanh - An toàn ($P\_error &lt; 10\%$):</strong> Vùng có tỷ lệ hỏng cực thấp. Chiến thuật tối ưu là <strong>đánh chủ yếu vào đây</strong> trong mọi tình huống để duy trì mạch bóng bền (rally) và ép đối thủ tự đánh hỏng.</p>
-<p><strong>Vùng Vàng - Chấp nhận được ($10\% - 25\%$):</strong> Vùng có rủi ro vừa phải. Chỉ nên sử dụng <strong>khi bạn đang có lợi thế về vị trí</strong> (đứng sâu trong sân và chủ động tấn công).</p>
-<p><strong>Vùng Cam - Rủi ro ($25\% - 50\%$):</strong> Vùng nguy hiểm. Chỉ nên mạo hiểm nhắm tới <strong>khi bạn đang dẫn trước đối thủ ít nhất 2 điểm</strong> trong game đấu.</p>
-<p><strong>Vùng Đỏ - Tử địa ($P\_error &gt; 50\%$):</strong> Vùng có nguy cơ hỏng quá nửa. <strong>Tuyệt đối tránh</strong> nhắm vào đây trong mọi hoàn cảnh.</p>
-<p>🧠 <strong>Sai lầm điển hình của người chơi phong trào:</strong> Nhớ mãi một cú đánh ghi điểm (winner) dọc dây cực kỳ đẹp mắt nhưng quên mất rằng mình đã đánh hỏng đến 9 lần trước đó để đổi lấy 1 lần thành công. Nếu $P\_error$ của cú đánh đó lên tới $70\%$ (Vùng Đỏ), thì chỉ số thông minh chiến thuật <strong>Shot_IQ</strong> thực tế của bạn đang cực kỳ thấp, bất kể cú đánh trông có hoa mỹ đến thế nào.</p>
+<p><strong>Vùng Xanh - An toàn (<i class="math-var">P<sub>e</sub>rror &lt; 10%</i>):</strong> Vùng có tỷ lệ hỏng cực thấp. Chiến thuật tối ưu là <strong>đánh chủ yếu vào đây</strong> trong mọi tình huống để duy trì mạch bóng bền (rally) và ép đối thủ tự đánh hỏng.</p>
+<p><strong>Vùng Vàng - Chấp nhận được (<i class="math-var">10% - 25%</i>):</strong> Vùng có rủi ro vừa phải. Chỉ nên sử dụng <strong>khi bạn đang có lợi thế về vị trí</strong> (đứng sâu trong sân và chủ động tấn công).</p>
+<p><strong>Vùng Cam - Rủi ro (<i class="math-var">25% - 50%</i>):</strong> Vùng nguy hiểm. Chỉ nên mạo hiểm nhắm tới <strong>khi bạn đang dẫn trước đối thủ ít nhất 2 điểm</strong> trong game đấu.</p>
+<p><strong>Vùng Đỏ - Tử địa (<i class="math-var">P<sub>e</sub>rror &gt; 50%</i>):</strong> Vùng có nguy cơ hỏng quá nửa. <strong>Tuyệt đối tránh</strong> nhắm vào đây trong mọi hoàn cảnh.</p>
+<p>🧠 <strong>Sai lầm điển hình của người chơi phong trào:</strong> Nhớ mãi một cú đánh ghi điểm (winner) dọc dây cực kỳ đẹp mắt nhưng quên mất rằng mình đã đánh hỏng đến 9 lần trước đó để đổi lấy 1 lần thành công. Nếu <i class="math-var">P<sub>e</sub>rror</i> của cú đánh đó lên tới <i class="math-var">70%</i> (Vùng Đỏ), thì chỉ số thông minh chiến thuật <strong>Shot_IQ</strong> thực tế của bạn đang cực kỳ thấp, bất kể cú đánh trông có hoa mỹ đến thế nào.</p>
 <h3>8.2. Phương Trình Quyết Định Chiến Thuật</h3>
 <p>Sai lầm điển hình của người có cái tôi cao: Nhớ mãi một cú winner dọc dây để đời và liên tục thử lại, quên mất đã đánh hỏng 9 lần trước đó. Nếu P_error của cú đó là 70%, Shot_IQ thực tế cực kỳ thấp dù cú đánh trông đẹp.</p>
 <p>Công thức <strong>Phương Trình Quyết Định Chiến Thuật (Shot IQ Equation)</strong> từ Mục 8.2 trong cẩm nang của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
@@ -774,9 +783,9 @@ footer .credit-label { color: var(--gold); }
 <h4>💡 Ứng dụng thực tế để tối ưu hóa Shot IQ:</h4>
 <p>Để đạt được một cú đánh có <strong>Shot_IQ</strong> cao nhất, cẩm nang của bạn nhấn mạnh triết lý: <strong>Tối ưu hóa hệ số: Tối đa hóa hiệu suất thắng điểm chứ không phải tối đa hóa tốc độ hay góc.</strong></p>
 <p><strong>Hiểm nhưng rủi ro (Shot_IQ thấp):</strong></p>
-<p>Khi bạn cố đánh một cú dọc dây sát vạch tư thế khó. Dù <strong>P_win_rally</strong> có thể cao, nhưng vì vị trí quá hiểm nên nguy cơ đánh hỏng <strong>P_error(x, y)</strong> vọt lên $60\% - 70\%$. Kết quả là chỉ số <strong>Shot_IQ</strong> tổng thể của bạn tụt xuống rất thấp. Đây là lỗi tư duy kinh điển của người chơi phong trào.</p>
+<p>Khi bạn cố đánh một cú dọc dây sát vạch tư thế khó. Dù <strong>P_win_rally</strong> có thể cao, nhưng vì vị trí quá hiểm nên nguy cơ đánh hỏng <strong>P_error(x, y)</strong> vọt lên <i class="math-var">60% - 70%</i>. Kết quả là chỉ số <strong>Shot_IQ</strong> tổng thể của bạn tụt xuống rất thấp. Đây là lỗi tư duy kinh điển của người chơi phong trào.</p>
 <p><strong>Hợp lý và An toàn (Shot_IQ cao - Ngưỡng Elite):</strong></p>
-<p>Thay vì đánh sát vạch, bạn điều bóng sâu bén vào góc sân nhưng cách vạch an toàn khoảng <strong>50cm</strong> (Vùng Xanh hoặc Vùng Vàng). Lúc này, <strong>P_error(x, y)</strong> giảm mạnh xuống dưới $15\%$, trong khi <strong>P_win_rally</strong> vẫn giữ ở mức khá cao vì đối thủ vẫn phải di chuyển vất vả để đỡ bóng. Phép chia này đẩy <strong>Shot_IQ</strong> của bạn lên mức tối ưu, giúp bạn làm chủ trận đấu một cách bền vững và khoa học.</p>
+<p>Thay vì đánh sát vạch, bạn điều bóng sâu bén vào góc sân nhưng cách vạch an toàn khoảng <strong>50cm</strong> (Vùng Xanh hoặc Vùng Vàng). Lúc này, <strong>P_error(x, y)</strong> giảm mạnh xuống dưới <i class="math-var">15%</i>, trong khi <strong>P_win_rally</strong> vẫn giữ ở mức khá cao vì đối thủ vẫn phải di chuyển vất vả để đỡ bóng. Phép chia này đẩy <strong>Shot_IQ</strong> của bạn lên mức tối ưu, giúp bạn làm chủ trận đấu một cách bền vững và khoa học.</p>
 <h3>8.3. Phân Tích Điểm Yếu Đối Thủ (Opponent Profiling)</h3>
 <p>Phân tích tư thế tiếp bóng: Đối thủ thuận trái hay phải? Ai có trái tay yếu khi chạy (P_error &gt; 60%)?</p>
 <p>Phân tích hành vi khi mệt: Tốc độ di chuyển giảm &gt; 5% sau set 2? Khi đó tăng cường đánh sâu vào hai góc.</p>
@@ -788,7 +797,7 @@ footer .credit-label { color: var(--gold); }
 <h4>💡 3 Kịch bản Khai thác Chiến thuật Dựa trên Cẩm nang:</h4>
 <p>Mục tiêu cốt lõi của phương trình này là tìm ra tọa độ có chỉ số <strong>P_error_opponent cao nhất (thường là &gt; 60%)</strong> để xây dựng toàn bộ bẫy chiến thuật xung quanh nó:</p>
 <p><strong>Phân tích tư thế tiếp bóng (Trái tay khi chạy):</strong></p>
-<p>Nếu dữ liệu Meta cho thấy đối thủ có $P\_error\_opponent &gt; 60\%$ khi phải đánh trái tay trong tư thế di chuyển, chiến thuật xuyên suốt của bạn là thực hiện các cú đánh góc rộng (cross-court) ép sâu về phía cuối sân bên trái để bắt họ phải liên tục chạy cứu bóng.</p>
+<p>Nếu dữ liệu Meta cho thấy đối thủ có <i class="math-var">P<sub>e</sub>rror<sub>o</sub>pponent &gt; 60%</i> khi phải đánh trái tay trong tư thế di chuyển, chiến thuật xuyên suốt của bạn là thực hiện các cú đánh góc rộng (cross-court) ép sâu về phía cuối sân bên trái để bắt họ phải liên tục chạy cứu bóng.</p>
 <p><strong>Phân tích hành vi khi mệt (Thể lực suy giảm):</strong></p>
 <p>Theo dõi tốc độ di chuyển của đối thủ. Nếu tốc độ di chuyển giảm <strong>&gt; 5% sau set 2</strong>, điều đó chứng tỏ hệ cơ-mạc của họ bắt đầu rò rỉ năng lượng. Lúc này, xác suất lỗi ở hai góc sân sẽ vọt lên, bạn cần tăng cường các đường bóng sâu, nặng vào hai góc xa thay vì đánh an toàn vào giữa sân.</p>
 <p><strong>Phân tích bẫy khi bị ép (Xây dựng bẫy vị trí):</strong></p>
@@ -861,7 +870,7 @@ footer .credit-label { color: var(--gold); }
 <p><strong>sEMG (Cảm biến bề mặt da):</strong> Đo lường chính xác thứ tự kích hoạt các nhóm cơ dọc theo chuỗi động lực và cường độ tín hiệu thần kinh, giúp phát hiện sớm các điểm rò rỉ năng lượng.</p>
 <p><strong>IMU tích hợp trong vợt (Inertial Measurement Unit):</strong> Đo tốc độ đầu vợt (RHS), tốc độ xoáy (RPM) và xác định chính xác vị trí tâm mặt vợt tiếp xúc bóng (Sweet spot).</p>
 <p><strong>Wearable HRV (Whoop, Garmin, Polar):</strong> Theo dõi liên tục 24/7 chỉ số biến thiên nhịp tim nhằm tính toán độ mệt mỏi thần kinh trung ương (<strong>CNS_Fatigue</strong>), tối ưu hóa cá nhân hóa lịch trình phục hồi.</p>
-<p>🤖 <strong>Tầm quan trọng của Siêu Agent (Logic Điều Hành):</strong> Toàn bộ dữ liệu thô này sẽ được nạp trực tiếp vào các Agent thông minh như <strong>DET Analyzer Agent</strong> để tính toán tức thì các chỉ số phức tạp ($X\text{-Factor}, K_{wrist}, \sigma_{sync}$) ở tốc độ quay 240fps, từ đó đưa ra cảnh báo lỗi kỹ thuật (ví dụ: <em>"Cổ tay lỏng"</em>) và tự động đề xuất bài tập sửa lỗi ngay lập tức trên sân tập.</p>
+<p>🤖 <strong>Tầm quan trọng của Siêu Agent (Logic Điều Hành):</strong> Toàn bộ dữ liệu thô này sẽ được nạp trực tiếp vào các Agent thông minh như <strong>DET Analyzer Agent</strong> để tính toán tức thì các chỉ số phức tạp (<i class="math-var">X<span class="math-text">-Factor</span>, K<sub>wrist</sub>, σ<sub>sync</sub></i>) ở tốc độ quay 240fps, từ đó đưa ra cảnh báo lỗi kỹ thuật (ví dụ: <em>"Cổ tay lỏng"</em>) và tự động đề xuất bài tập sửa lỗi ngay lập tức trên sân tập.</p>
 <h3>10.2. Thu Thập Dữ Liệu Đa Chiều</h3>
 <p>Computer Vision (Camera điện thoại): Phân tích góc xoay, X-Factor, điểm chạm bóng. Độ chính xác 85-90% so với lab chuyên nghiệp.</p>
 <p>sEMG (Cảm biến bề mặt da): Đo thứ tự kích hoạt cơ, cường độ tín hiệu thần kinh. Chi phí: 150-500 USD/bộ.</p>
@@ -875,11 +884,11 @@ footer .credit-label { color: var(--gold); }
 <p>Toàn bộ dòng dữ liệu thô <strong>Data_total</strong> này sau khi hợp nhất sẽ được đẩy thẳng vào các Agent thông minh chuyên biệt để xử lý và đưa ra phản hồi thời gian thực ngay trên sân tập:</p>
 <p><strong>DET Analyzer Agent (Phân tích Kỹ thuật):</strong></p>
 <p><strong>Đầu vào:</strong> Video quay cú Forehand 240fps + Dữ liệu cảm biến IMU.</p>
-<p><strong>Xử lý:</strong> Tính toán tức thì các chỉ số $X\text{-Factor}$, $K_{wrist}$, $\sigma_{sync}$.</p>
-<p><strong>Đầu ra:</strong> Nếu phát hiện chỉ số cứng vững cổ tay <strong>$K\_wrist &lt; 0.75$</strong>, hệ thống sẽ lập tức gửi cảnh báo <em>"Cổ tay lỏng"</em> và tự động đề xuất các bài tập sửa lỗi tương ứng để khóa cổ tay vững chắc.</p>
+<p><strong>Xử lý:</strong> Tính toán tức thì các chỉ số <i class="math-var">X<span class="math-text">-Factor</span></i>, <i class="math-var">K<sub>wrist</sub></i>, <i class="math-var">σ<sub>sync</sub></i>.</p>
+<p><strong>Đầu ra:</strong> Nếu phát hiện chỉ số cứng vững cổ tay <strong><i class="math-var">K<sub>w</sub>rist &lt; 0.75</i></strong>, hệ thống sẽ lập tức gửi cảnh báo <em>"Cổ tay lỏng"</em> và tự động đề xuất các bài tập sửa lỗi tương ứng để khóa cổ tay vững chắc.</p>
 <p><strong>Strategy Meta Agent (Tối ưu hóa Chiến thuật):</strong></p>
 <p><strong>Đầu vào:</strong> Dữ liệu vị trí đánh và kết quả của 100 điểm gần nhất.</p>
-<p><strong>Xử lý:</strong> Định lượng xác suất lỗi không gian $P\_error(x, y)$ để thiết lập bản đồ nhiệt thực tế.</p>
+<p><strong>Xử lý:</strong> Định lượng xác suất lỗi không gian <i class="math-var">P<sub>e</sub>rror(x, y)</i> để thiết lập bản đồ nhiệt thực tế.</p>
 <p><strong>Đầu ra:</strong> Đưa ra cảnh báo trực quan nếu bạn đang lạm dụng các cú đánh có rủi ro quá cao (Ví dụ: <em>"Tránh dọc dây, rủi ro lỗi đang ở mức 67%"</em>), giúp bạn điều chỉnh chiến thuật để đẩy chỉ số <strong>Shot_IQ</strong> lên mức tinh anh.</p>
 <h3>10.3. Cấu Hình Siêu Agent: Logic Điều Hành</h3>
 <h4>10.3.1. DET Analyzer Agent</h4>
@@ -916,10 +925,10 @@ footer .credit-label { color: var(--gold); }
 <p><strong>Hiệu ứng tăng tốc đầu vợt (Tăng RHS):</strong></p>
 <p>Về mặt lý thuyết, một cánh tay đòn <strong>L_lever</strong> dài hơn sẽ giúp bạn tăng tốc độ đầu vợt (Racket Head Speed) nhanh hơn đáng kể ở cùng một tốc độ xoay trục thân người.</p>
 <p><strong>Hậu quả của một cú đánh lệch tâm (Mishit):</strong></p>
-<p><strong>Khi bóng chạm đúng tâm ngọt (Sweet spot):</strong> Chiều dài cánh tay đòn đạt mức tiêu chuẩn thiết kế, lực va chạm $F$ được triệt tiêu và chuyển hóa mượt mà thành động năng của bóng.</p>
-<p><strong>Khi bóng chạm lệch lên đỉnh vợt (Tip):</strong> Khoảng cách hình học tăng lên, kéo theo <strong>L_lever tăng thêm vài cm</strong>. Do phép nhân đại số với lực va chạm $F$, mô-men xoắn dội ngược (<strong>tau</strong>) vọt lên gấp nhiều lần.</p>
+<p><strong>Khi bóng chạm đúng tâm ngọt (Sweet spot):</strong> Chiều dài cánh tay đòn đạt mức tiêu chuẩn thiết kế, lực va chạm <i class="math-var">F</i> được triệt tiêu và chuyển hóa mượt mà thành động năng của bóng.</p>
+<p><strong>Khi bóng chạm lệch lên đỉnh vợt (Tip):</strong> Khoảng cách hình học tăng lên, kéo theo <strong>L_lever tăng thêm vài cm</strong>. Do phép nhân đại số với lực va chạm <i class="math-var">F</i>, mô-men xoắn dội ngược (<strong>tau</strong>) vọt lên gấp nhiều lần.</p>
 <p>Đây chính là lý do tại sao một cú đánh hụt tâm (<em>mishit</em>) dù bóng đi rất nhẹ nhưng lại truyền một lực chấn động cực kỳ đau và buốt chạy thẳng vào cổ tay hoặc khuỷu tay của bạn.</p>
-<p><strong>Giải pháp đồng bộ kỹ thuật từ Chương 11.2:</strong> Để làm chủ hoàn toàn cánh tay đòn này mà không làm quá tải hệ xương khớp, cẩm nang khuyến nghị bạn áp dụng kỹ thuật <strong>"Dropping The Pinky"</strong> (thả ngón út hơi trượt ra khỏi butt cap) nhằm tối ưu hóa thêm 1-2cm chiều dài <strong>L_lever</strong> cơ học một cách chủ động, đồng thời bắt buộc phải giữ chỉ số cứng vững cổ tay <strong>$K\_wrist \ge 0.87$</strong> để hệ mạc cẳng tay chịu tải an toàn.</p>
+<p><strong>Giải pháp đồng bộ kỹ thuật từ Chương 11.2:</strong> Để làm chủ hoàn toàn cánh tay đòn này mà không làm quá tải hệ xương khớp, cẩm nang khuyến nghị bạn áp dụng kỹ thuật <strong>"Dropping The Pinky"</strong> (thả ngón út hơi trượt ra khỏi butt cap) nhằm tối ưu hóa thêm 1-2cm chiều dài <strong>L_lever</strong> cơ học một cách chủ động, đồng thời bắt buộc phải giữ chỉ số cứng vững cổ tay <strong><i class="math-var">K<sub>w</sub>rist ge 0.87</i></strong> để hệ mạc cẳng tay chịu tải an toàn.</p>
 <p>Ứng dụng cực kỳ thực tiễn: Khi bóng chạm vào đỉnh vợt (tip) thay vì điểm ngọt (sweet spot), L_lever tăng thêm vài cm. Do phép nhân, tau tăng lên gấp nhiều lần. Đây là lý do tại sao "mishit" đau tay nhiều hơn cú đánh trực tiếp dù bóng đến nhẹ hơn.</p>
 <p>Công thức <strong>Mô-men Xoắn (Torque Equation)</strong> đang hiển thị trên màn hình tài liệu của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
 <p><strong>tau = F x L_lever</strong></p>
@@ -929,12 +938,12 @@ footer .credit-label { color: var(--gold); }
 <p>Phương trình này là chiếc cầu nối động học giữa lực va chạm cơ học (<strong>F</strong>) tại thời điểm mặt vợt chạm bóng và áp lực bẻ vặn (<strong>tau</strong>) mà hệ thống xương khớp, cơ mạc ở tay bạn phải gánh chịu.</p>
 <h4>💡 Ứng dụng thực tế: Phân tích hiện tượng Mishit và Giải pháp Elite</h4>
 <p>Do mối quan hệ nhân tuyến tính trực tiếp với chiều dài cánh tay đòn <strong>L_lever</strong>, điểm chạm bóng trên mặt vợt sẽ định đoạt mức độ an toàn cho cánh tay của bạn:</p>
-<p><strong>Khi chạm đúng Tâm Ngọt (Sweet Spot):</strong> * Khoảng cách <strong>L_lever</strong> đạt chuẩn thiết kế hình học của cây vợt. Lực va chạm $F$ được hấp thụ và chuyển hóa mượt mà thành động năng đẩy bóng đi. Mô-men xoắn <strong>tau</strong> nằm trong ngưỡng chịu tải an toàn của hệ mạc cẳng tay.</p>
+<p><strong>Khi chạm đúng Tâm Ngọt (Sweet Spot):</strong> * Khoảng cách <strong>L_lever</strong> đạt chuẩn thiết kế hình học của cây vợt. Lực va chạm <i class="math-var">F</i> được hấp thụ và chuyển hóa mượt mà thành động năng đẩy bóng đi. Mô-men xoắn <strong>tau</strong> nằm trong ngưỡng chịu tải an toàn của hệ mạc cẳng tay.</p>
 <p><strong>Khi đánh hụt tâm lên Đỉnh Vợt (Tip Mishit):</strong> * Quả bóng bị đón lệch lên phía đỉnh đầu vợt, vô tình <strong>kéo dài cánh tay đòn L_lever thêm vài cm</strong>.</p>
-<p>Theo phương trình nhân, dù lực bóng đến $F$ có thể nhẹ, nhưng <strong>L_lever</strong> tăng sẽ khiến mô-men xoắn <strong>tau</strong> vọt lên gấp nhiều lần. Cây vợt lập tức bị lật hoặc rung lắc dữ dội, truyền một chấn động xoắn cực mạnh chạy thẳng vào cẳng tay. Đây là lý do tại sao các cú đánh lỗi tâm (<em>mishit</em>) luôn mang lại cảm giác đau buốt và ê tay ngay lập tức.</p>
+<p>Theo phương trình nhân, dù lực bóng đến <i class="math-var">F</i> có thể nhẹ, nhưng <strong>L_lever</strong> tăng sẽ khiến mô-men xoắn <strong>tau</strong> vọt lên gấp nhiều lần. Cây vợt lập tức bị lật hoặc rung lắc dữ dội, truyền một chấn động xoắn cực mạnh chạy thẳng vào cẳng tay. Đây là lý do tại sao các cú đánh lỗi tâm (<em>mishit</em>) luôn mang lại cảm giác đau buốt và ê tay ngay lập tức.</p>
 <p><strong>Giải pháp đồng bộ kỹ thuật từ Mục 11.2:</strong> Để tối đa hóa tốc độ đầu vợt (RHS) nhờ lợi thế của cánh tay đòn dài mà không làm chấn thương khớp, cẩm nang của bạn đưa ra chỉ dẫn phối hợp:</p>
 <p>Áp dụng kỹ thuật <strong>"Dropping The Pinky"</strong> (để ngón út hơi trượt nhẹ ra ngoài butt cap) giúp tăng chiều dài cơ học <strong>L_lever</strong> chủ động thêm 1-2cm nhằm tăng tốc độ vút bóng.</p>
-<p><strong>Điều kiện bắt buộc:</strong> Hệ thần kinh phải khóa cứng cổ tay để giữ chỉ số cứng vững <strong>$K\_wrist \ge 0.87$</strong> tại thời điểm va chạm, biến cẳng tay thành một khối liên kết thép chịu tải, triệt tiêu hoàn toàn mô-men xoắn dội ngược gây hại.</p>
+<p><strong>Điều kiện bắt buộc:</strong> Hệ thần kinh phải khóa cứng cổ tay để giữ chỉ số cứng vững <strong><i class="math-var">K<sub>w</sub>rist ge 0.87</i></strong> tại thời điểm va chạm, biến cẳng tay thành một khối liên kết thép chịu tải, triệt tiêu hoàn toàn mô-men xoắn dội ngược gây hại.</p>
 <h3>11.2. Kỹ Thuật "Dropping The Pinky" — Tăng Tốc Đầu Vợt</h3>
 <p>Nhiều tay vợt chuyên nghiệp cầm cán vợt tụt xuống dưới, ngón út trượt ra khỏi butt cap. Hành động nhỏ này làm dịch chuyển tọa độ lòng bàn tay ra xa hơn so với tâm vợt, làm tăng L_lever thêm 1-2cm. Nhờ công thức I = m × r² của mô-men quán tính, 1-2cm này khuếch đại tốc độ đầu vợt đáng kể.</p>
 <p>Lợi ích: Tăng RHS (Racket Head Speed) 3-5%.</p>
@@ -949,8 +958,8 @@ footer .credit-label { color: var(--gold); }
 <p>Một cú đánh phẳng (flat) có thể bay rất nhanh nhưng dễ bị block lại. Trong khi đó, một cú "bóng nặng" chuẩn mực (Elite topspin) mang một nguồn năng lượng xoáy cực lớn, khi chạm đất và nảy lên sẽ ma sát với mặt sân để chuyển hóa toàn bộ động năng thành lực đẩy ngang, khiến đối thủ khi chặn bóng có cảm giác nặng trịch <strong>"như cản một bánh xe tải"</strong>.</p>
 <h4>💡 Triết lý cơ học cốt lõi: Sức mạnh đến từ Bộ pháp (Footwork)</h4>
 <p>Điểm mấu chốt và quan trọng nhất của phương trình này nằm ở bản chất toán học: <strong>Đây là một phép NHÂN chứ không phải phép cộng.</strong></p>
-<p><strong>Hệ quả chết người ($v_{ground} = 0$):</strong> Nếu bộ pháp của bạn lười biếng hoặc di chuyển chậm dẫn đến việc đến điểm đón bóng muộn ($v_{ground} = 0$), thì theo quy tắc nhân, <strong>A_heavy sẽ bằng 0 tuyệt đối</strong>. Lúc này, bất kể bạn cố gắng dùng sức bắp tay vặn xoay thân người mạnh mẽ (<strong>omega_torso</strong> cao) hay vuốt bóng tạo xoáy nhiều bao nhiêu, quả bóng bay đi vẫn sẽ bị "bẹt", thiếu lực và không có độ nặng.</p>
-<p>⚡ <strong>Lời khuyên huấn luyện từ trang 86:</strong> Hãy luôn nhớ rằng <strong>Bộ pháp quyết định uy lực của cú đánh — chứ không phải bắp tay</strong>. Bạn bắt buộc phải di chuyển bứt tốc sớm, chiếm lĩnh tọa độ intercept một cách chủ động để đẩy $v_{ground}$ lên cao nhất, tạo đòn bẩy vững chắc cho hông và vai xoay bùng nổ, từ đó mới tạo ra được một cú "Heavy Ball" thực thụ.</p>
+<p><strong>Hệ quả chết người (<i class="math-var">v<sub>ground</sub> = 0</i>):</strong> Nếu bộ pháp của bạn lười biếng hoặc di chuyển chậm dẫn đến việc đến điểm đón bóng muộn (<i class="math-var">v<sub>ground</sub> = 0</i>), thì theo quy tắc nhân, <strong>A_heavy sẽ bằng 0 tuyệt đối</strong>. Lúc này, bất kể bạn cố gắng dùng sức bắp tay vặn xoay thân người mạnh mẽ (<strong>omega_torso</strong> cao) hay vuốt bóng tạo xoáy nhiều bao nhiêu, quả bóng bay đi vẫn sẽ bị "bẹt", thiếu lực và không có độ nặng.</p>
+<p>⚡ <strong>Lời khuyên huấn luyện từ trang 86:</strong> Hãy luôn nhớ rằng <strong>Bộ pháp quyết định uy lực của cú đánh — chứ không phải bắp tay</strong>. Bạn bắt buộc phải di chuyển bứt tốc sớm, chiếm lĩnh tọa độ intercept một cách chủ động để đẩy <i class="math-var">v<sub>ground</sub></i> lên cao nhất, tạo đòn bẩy vững chắc cho hông và vai xoay bùng nổ, từ đó mới tạo ra được một cú "Heavy Ball" thực thụ.</p>
 <h3>11.4. Độ Cứng Đàn Hồi Hệ Mạc (Fascial Spring Constant)</h3>
 <h4>11.4.1. Huấn Luyện Hệ Mạc Để Tăng k_fascia</h4>
 <p>Fascial Stretch Training (FST): Kéo giãn cơ-mạc theo nhiều hướng đồng thời (3D stretching) tăng k_fascia hiệu quả hơn stretching tĩnh thông thường.</p>
@@ -995,17 +1004,17 @@ footer .credit-label { color: var(--gold); }
 <p>Như được ghi nhận trực tiếp trên màn hình hiển thị của tài liệu, đây là phương trình tổng hợp tối thượng kết nối toàn bộ chuỗi động lực từ mặt đất lên đến đỉnh vợt (). Làm chủ phương trình này đồng nghĩa với việc bạn làm chủ một cú giao bóng hoàn hảo đạt tốc độ Tour Level mà không phụ thuộc vào sức mạnh cơ bắp thuần túy.</p>
 <h4>💡 Ứng dụng thực tế: Cơ chế bẻ gãy lực bằng "X-Factor Stretch"</h4>
 <p>Điểm tinh anh của công thức nằm ở cụm tử số. Để tạo ra một <strong>V_serve</strong> sấm sét, các tay vợt chuyên nghiệp không vung hông và vai cùng một lúc. Họ vận hành theo chuỗi tuần tự nghiêm ngặt:</p>
-<p><strong>Kích hoạt hông trước ($\omega_{hip}$ bùng nổ):</strong> Từ tư thế Trophy Position, chân đạp đất giải phóng lực phản chấn (GRF), đẩy hông xoay mở về phía trước. Lúc này, trục vai vẫn được giữ lại phía sau.</p>
-<p><strong>Tối ưu hóa chỉ số DIT (Độ trễ vàng):</strong> Sự lệch pha chuyển động giữa hông và vai tạo ra một khoảng trễ <strong>DIT</strong>. Khoảng trễ này kéo căng toàn bộ hệ cơ mạc chéo ở vùng bụng và lồng ngực (Core), tích lũy một lượng năng lượng đàn hồi khổng lồ ($E_{elastic}$) giống như việc bạn kéo căng một sợi dây thun.</p>
-<p><strong>Bung vai ($\omega_{shoulder}$ đạt cực đại):</strong> Ngay khi sợi dây thun cơ thịt đạt giới hạn căng, trục vai sẽ được "bắn" về phía trước với tốc độ góc khủng khiếp, truyền trọn vẹn động lượng qua cánh tay thẳng lên điểm tiếp xúc bóng ở trên cao.</p>
-<div class="warning"><p><span class="badge">Luu y</span><strong>Sai lầm cốt tử của người chơi phong tào:</strong> Vung hông và vai cùng một thời điểm (chỉ số $DIT = 0$). Hành động này triệt tiêu hoàn toàn hiệu ứng kéo dãn cơ-mạc, khiến chuỗi động lực bị bẻ gãy ngay từ vùng lõi. Kết quả là bạn phải dùng toàn bộ cơ bắp bẳng tay để "quất" bóng, vừa khiến cú giao bóng bị nhẹ, vừa đẩy khớp vai vào vùng nguy hiểm rách dây chằng cực kỳ cao.</p></div>
+<p><strong>Kích hoạt hông trước (<i class="math-var">ω<sub>hip</sub></i> bùng nổ):</strong> Từ tư thế Trophy Position, chân đạp đất giải phóng lực phản chấn (GRF), đẩy hông xoay mở về phía trước. Lúc này, trục vai vẫn được giữ lại phía sau.</p>
+<p><strong>Tối ưu hóa chỉ số DIT (Độ trễ vàng):</strong> Sự lệch pha chuyển động giữa hông và vai tạo ra một khoảng trễ <strong>DIT</strong>. Khoảng trễ này kéo căng toàn bộ hệ cơ mạc chéo ở vùng bụng và lồng ngực (Core), tích lũy một lượng năng lượng đàn hồi khổng lồ (<i class="math-var">E<sub>elastic</sub></i>) giống như việc bạn kéo căng một sợi dây thun.</p>
+<p><strong>Bung vai (<i class="math-var">ω<sub>shoulder</sub></i> đạt cực đại):</strong> Ngay khi sợi dây thun cơ thịt đạt giới hạn căng, trục vai sẽ được "bắn" về phía trước với tốc độ góc khủng khiếp, truyền trọn vẹn động lượng qua cánh tay thẳng lên điểm tiếp xúc bóng ở trên cao.</p>
+<div class="warning"><p><span class="badge">Luu y</span><strong>Sai lầm cốt tử của người chơi phong tào:</strong> Vung hông và vai cùng một thời điểm (chỉ số <i class="math-var">DIT = 0</i>). Hành động này triệt tiêu hoàn toàn hiệu ứng kéo dãn cơ-mạc, khiến chuỗi động lực bị bẻ gãy ngay từ vùng lõi. Kết quả là bạn phải dùng toàn bộ cơ bắp bẳng tay để "quất" bóng, vừa khiến cú giao bóng bị nhẹ, vừa đẩy khớp vai vào vùng nguy hiểm rách dây chằng cực kỳ cao.</p></div>
 <p>Công thức <strong>Phương Trình Kết Quả Trận Đấu (Match Result Equation)</strong> hiển thị ở cuối Chương 12 trong cẩm nang của bạn có thể viết lại hoàn toàn dưới dạng văn bản thông thường như sau:</p>
 <p><strong>Result = (DET/NKF Skills) x (AI_data_quality x Adaptability)</strong></p>
 <h4>Diễn giải chi tiết ý nghĩa theo Triết lý Huấn luyện Hybrid:</h4>
 <p>Như được ghi nhận trực tiếp trên màn hình hiển thị của tài liệu, đây là phương trình tổng kết tối thượng, định nghĩa lại công thức chiến thắng trong kỷ nguyên tennis công nghệ. Kết quả một trận đấu (<strong>Result</strong>) không còn phụ thuộc đơn lẻ vào tài năng thiên bẩm, mà là tích số đồng bộ giữa <strong>Năng lực cốt lõi của con người</strong> và <strong>Khả năng khai thác công nghệ dữ liệu</strong>.</p>
 <h4>💡 Phân tích Lộ trình Ứng dụng Toàn diện cho Henry Pham (Tennis Future Lab)</h4>
 <p>Ngay phía dưới công thức, cẩm nang thiết lập một <strong>Lộ trình 10 tháng</strong> nghiêm ngặt (Trang 93) nhằm số hóa và nâng cấp toàn diện các biến số trong phương trình của bạn:</p>
-<div class="warning"><p><span class="badge">Luu y</span><strong>Lời cảnh báo từ phương trình nhân:</strong> Bản chất của toán học đại số chỉ ra rằng đây là một chuỗi liên kết nhân tích lũy. Nếu bạn có kỹ năng cơ học cực tốt (<strong>DET/NKF Skills</strong> rất cao) nhưng lại thiếu khả năng thích nghi chiến thuật hoặc không tin tưởng vào dữ liệu phân tích của máy học (<strong>Adaptability</strong> hoặc <strong>AI_data_quality</strong> tiến về $0$), thì toàn bộ phương trình <strong>Result sẽ sụp đổ</strong>. Chiến thắng chỉ đến khi bạn mở lòng phối hợp hoàn hảo giữa bản năng con người và trí tuệ nhân tạo.</p></div>
+<div class="warning"><p><span class="badge">Luu y</span><strong>Lời cảnh báo từ phương trình nhân:</strong> Bản chất của toán học đại số chỉ ra rằng đây là một chuỗi liên kết nhân tích lũy. Nếu bạn có kỹ năng cơ học cực tốt (<strong>DET/NKF Skills</strong> rất cao) nhưng lại thiếu khả năng thích nghi chiến thuật hoặc không tin tưởng vào dữ liệu phân tích của máy học (<strong>Adaptability</strong> hoặc <strong>AI_data_quality</strong> tiến về <i class="math-var">0</i>), thì toàn bộ phương trình <strong>Result sẽ sụp đổ</strong>. Chiến thắng chỉ đến khi bạn mở lòng phối hợp hoàn hảo giữa bản năng con người và trí tuệ nhân tạo.</p></div>
 <h3>12.3. Lộ Trình Ứng Dụng Cho Henry Pham — Tennis Future Lab</h3>
 </div>
 <div class="chapter">
