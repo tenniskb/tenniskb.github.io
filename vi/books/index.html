@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Thư viện sách tennis kinh điển tiếng Việt - Đọc trực tuyến và tải trọn bộ PDF bản dịch xuất bản chuẩn mực quốc tế.">
+  <meta name="author" content="Tennis Unified">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <title>Thư Viện Sách Quần Vợt Tiếng Việt - Tennis Unified</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..800;1,7..72,300..800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/javascripts/darkmode.js" defer></script>
+
+  <style>
+    :root {
+      --primary: #0f3d2e;
+      --primary-light: #1b5e20;
+      --secondary: #b8860b;
+      --secondary-light: #d4af37;
+      --dark: #0f172a;
+      --gray-light: #f8fafc;
+      --border-color: #e2e8f0;
+      --card-bg: #ffffff;
+      --font-body: 'Literata', Georgia, serif;
+      --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark);
+      background-color: #f1f5f9;
+      line-height: 1.65;
+    }
+
+    .books-hero {
+      background: linear-gradient(135deg, #0f3d2e 0%, #1b5e20 50%, #064e3b 100%);
+      color: #ffffff;
+      padding: 50px 24px 40px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .books-hero-badge {
+      display: inline-block;
+      background: var(--secondary);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .books-hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .books-hero p {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .books-container {
+      max-width: 1140px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-divider-title {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 40px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 10px;
+    }
+
+    .section-divider-title span.badge {
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    .book-card-horizontal {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .book-card-horizontal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .book-cover-col {
+      flex: 0 0 150px;
+      max-width: 160px;
+    }
+
+    .book-cover-col img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      border: 1px solid rgba(0,0,0,0.08);
+      display: block;
+    }
+
+    .book-info-col {
+      flex: 1;
+    }
+
+    .book-meta-tag {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .book-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0 0 8px 0;
+    }
+
+    .book-card-authors {
+      font-size: 0.92rem;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+
+    .book-card-desc {
+      font-size: 0.93rem;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .book-actions-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-reader {
+      background: var(--primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(15,61,46,0.3);
+      transition: background 0.2s;
+    }
+
+    .btn-reader:hover {
+      background: var(--primary-light);
+    }
+
+    .btn-pdf-vi {
+      background: var(--secondary);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(184,134,11,0.3);
+      transition: background 0.2s;
+    }
+
+    .btn-pdf-vi:hover {
+      background: #9a7009;
+    }
+
+    .btn-pdf-en {
+      background: #475569;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .btn-pdf-en:hover {
+      background: #334155;
+    }
+
+    @media (max-width: 768px) {
+      .book-card-horizontal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .book-cover-col {
+        max-width: 140px;
+      }
+      .book-card-desc {
+        text-align: left;
+      }
+      .book-actions-row {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+
+
+
+<header class="books-hero">
+  <div class="books-hero-badge">DI SẢN CHIẾN THUẬT QUẦN VỢT THẾ GIỚI</div>
+  <h1>Thư Viện Sách Quần Vợt Tiếng Việt</h1>
+  <p>Tuyển tập các tác phẩm kinh điển về kỹ thuật, chiến thuật Đánh Đơn và Đánh Đôi được chuyển ngữ sang tiếng Việt với tiêu chuẩn xuất bản quốc tế. Hỗ trợ đọc tương tác trực tuyến và tải về trọn bộ PDF vector chất lượng cao.</p>
+</header>
+
+<main class="books-container">
+
+  <!-- SECTION 1: KỸ THUẬT & CHIẾN THUẬT ĐÁNH ĐƠN (SINGLES & ALL-AROUND MASTERY) -->
+  <h2 class="section-divider-title">
+    <span>🎾 Kỹ Thuật &amp; Bí Quyết Đánh Đơn (Singles &amp; All-Around Mastery)</span>
+    <span class="badge">Huyền Thoại</span>
+  </h2>
+
+  <!-- BOOK: 228 TENNIS TIPS (ROD LAVER) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="228_tennis_tips_vi.html">
+        <img src="laver_assets/cover.jpg" alt="Bìa sách 228 Tennis Tips Rod Laver">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Tuyệt Phẩm Huyền Thoại (1977) · 228 Lời Khuyên Cốt Lõi · 76 Trang Minh Họa Gốc</span>
+      <h3 class="book-card-title">228 Lời Khuyên Tennis Cốt Lõi (228 Tennis Tips)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Rod Laver</strong> (Huyền thoại duy nhất 2 lần lập cú đúp Grand Slam lịch sử) · Minh họa kỹ thuật bởi <strong>Jim Jonson</strong>.
+      </div>
+      <p class="book-card-desc">
+        Tuyển tập tinh hoa đúc kết 228 lời khuyên vô giá từ huyền thoại vĩ đại Rod Laver về toàn bộ các khía cạnh cốt lõi của quần vợt: Cú thuận tay, trái tay, giao bóng sấm sét, trả giao bóng, nghệ thuật bắt volley trên lưới, đập smash bật nhảy, cú lốp xoáy topspin, bộ chân linh hoạt và tư duy thi đấu đỉnh cao. Kèm 76 trang minh họa nguyên bản của họa sĩ Jim Jonson.
+      </p>
+      <div class="book-actions-row">
+        <a href="228_tennis_tips_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="228_Tennis_Tips_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (78 Trang, 17.5 MB)</a>
+        <a href="228_tennis_tips_vi.html" class="btn-pdf-en">🔍 Tra Cứu Tương Tác 228 Tips</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: ARTHUR ASHE ON TENNIS (ARTHUR ASHE & ALEXANDER MCNAB) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="arthur_ashe_on_tennis_vi.html">
+        <img src="ashe_assets/cover.jpg" alt="Bìa sách Arthur Ashe on Tennis">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Di Sản Bất Hủ (1995) · 103 Chương Chuyên Sâu · 33 Ảnh Tư Liệu Lịch Sử</span>
+      <h3 class="book-card-title">Arthur Ashe Bàn Về Quần Vợt (Arthur Ashe on Tennis)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Arthur Ashe &amp; Alexander McNab</strong> · Với lời tựa tưởng nhớ của <strong>John McPhee</strong>, <strong>Billie Jean King</strong>, <strong>George Vecsey</strong> &amp; <strong>Lori McNeil</strong>.
+      </div>
+      <p class="book-card-desc">
+        Công trình tâm huyết cuối đời của huyền thoại Arthur Ashe: Phân tích cơ sinh học các đòn đánh cổ điển, giải mã chiến thuật Percentage Tennis đánh bại Jimmy Connors tại chung kết Wimbledon 1975 lịch sử, phân tích chuyên môn sâu sắc về các nhà vô địch (Agassi, Becker, Chang, Courier, Edberg, Graf, McEnroe, Sampras), tâm lý học thi đấu đỉnh cao và cẩm nang đánh đôi toàn diện.
+      </p>
+      <div class="book-actions-row">
+        <a href="arthur_ashe_on_tennis_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="Arthur_Ashe_on_Tennis_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (73 Trang, 1.3 MB)</a>
+        <a href="arthur_ashe_on_tennis_vi.html" class="btn-pdf-en">🔍 Tra Cứu 103 Chương</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: TENNIS STROKES AND TACTICS (JOHN LITTLEFORD & ANDREW MAGRATH) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="tennis_strokes_tactics_vi.html">
+        <img src="strokes_tactics_assets/cover.jpg" alt="Bìa sách Tennis Strokes and Tactics John Littleford Andrew Magrath">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Cẩm Nang Kỹ Thuật Đương Đại · 36 Chuyên Đề · 29 Ảnh Phân Tích Đa Góc Máy</span>
+      <h3 class="book-card-title">Kỹ Thuật &amp; Chiến Thuật Quần Vợt Đỉnh Cao (Tennis Strokes &amp; Tactics)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: John Littleford &amp; Andrew Magrath</strong> · Nhiếp ảnh kỹ thuật và phân tích cơ sinh học đa góc máy.
+      </div>
+      <p class="book-card-desc">
+        Giáo trình trực quan hiện đại phân tích chi tiết từng giai đoạn động học của mọi đòn đánh: Thuận tay topspin hiện đại, cú trái một tay và hai tay, giao bóng xoáy cắn kick serve, cắt slice trượt thấp, đòn đánh phủ đầu Serve+1 và Return+1 của Djokovic, Federer, Nadal cùng các đội hình đánh đôi biến ảo (Australian, I-Formation).
+      </p>
+      <div class="book-actions-row">
+        <a href="tennis_strokes_tactics_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="Tennis_Strokes_Tactics_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (38 Trang, 3.9 MB)</a>
+        <a href="tennis_strokes_tactics_vi.html" class="btn-pdf-en">🔍 Tra Cứu 36 Chuyên Đề</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK 10: ADVANCED TENNIS (PAUL METZLER & JOHN NEWCOMBE) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="advanced_tennis_vi.html">
+        <img src="metzler_assets/cover.jpg" alt="Bìa sách Advanced Tennis Paul Metzler John Newcombe">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Kinh Điển Nâng Cao · 11 Chương Trọn Vẹn · 29 Ảnh &amp; Sơ Đồ Chiến Thuật</span>
+      <h3 class="book-card-title">Quần Vợt Nâng Cao (Advanced Tennis)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Paul Metzler</strong> · Lời tựa: <strong>Esca Stephens</strong> · Giới thiệu: <strong>John Newcombe</strong> (7x Grand Slam)
+      </div>
+      <p class="book-card-desc">
+        Kiệt tác phân tích chiến thuật và cơ học cú đánh kinh điển của huyền thoại Paul Metzler. Cuốn sách giải mã bản lĩnh thi đấu, triệt tiêu lỗi giao bóng kép bằng tư thế đầu, khoảng dừng căn nhịp (timing pause) của Crawford và Hoad, kỹ thuật passing shot uốn cong qua mép lưới của Rod Laver, hóa giải mọi trở ngại thời tiết cùng cẩm nang đánh đôi đỉnh cao.
+      </p>
+      <div class="book-actions-row">
+        <a href="advanced_tennis_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="Advanced_Tennis_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (34 Trang, 12.8 MB)</a>
+        <a href="advanced_tennis_vi.html" class="btn-pdf-en">🔍 Tra Cứu 11 Chương</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK 11: BOLLETTIERI'S TENNIS HANDBOOK (NICK BOLLETTIERI) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="bollettieri_tennis_handbook_vi.html">
+        <img src="bollettieri_assets/cover.jpg" alt="Bìa sách Bollettieri's Tennis Handbook Nick Bollettieri">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Hệ Thống Đào Tạo Đỉnh Cao · 15 Chương Toàn Thư · 16 Ảnh &amp; Giải Phẫu Động Tác</span>
+      <h3 class="book-card-title">Cẩm Nang Quần Vợt Bollettieri (Bollettieri's Tennis Handbook)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Nick Bollettieri</strong> (Hall of Fame) · Người sáng lập Học viện IMG Academy / Bradenton
+      </div>
+      <p class="book-card-desc">
+        Giáo trình toàn diện của HLV số 1 thế giới từng đào tạo 10 tay vợt đứng đầu bảng xếp hạng (Agassi, Sampras, Seles, Courier, Sharapova, Williams). Cuốn sách chia sẻ hệ thống phát triển tài năng, cú thuận tay sát thủ (Killer Forehand), trái tay bộc phá, giao bóng siêu thanh, phát minh độc quyền cú Swing Volley, phương pháp rèn thể lực SAQ và huấn luyện tinh thần thép.
+      </p>
+      <div class="book-actions-row">
+        <a href="bollettieri_tennis_handbook_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="Bollettieri_Tennis_Handbook_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (28 Trang, 4.5 MB)</a>
+        <a href="bollettieri_tennis_handbook_vi.html" class="btn-pdf-en">🔍 Tra Cứu 15 Chương</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK 12: ADVANCED TENNIS FOR COACHES (GUNDARS A. TILMANIS) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="advanced_tennis_coaches_vi.html">
+        <img src="tilmanis_assets/cover.jpg" alt="Bìa sách Advanced Tennis for Coaches Teachers and Players Gundars A. Tilmanis">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Cơ Sinh Học Thể Thao · 8 Chương &amp; Thuật Ngữ · 16 Ảnh &amp; Biểu Đồ Động Học</span>
+      <h3 class="book-card-title">Quần Vợt Nâng Cao Cho Huấn Luyện Viên &amp; Đấu Thủ (Advanced Tennis for Coaches)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Gundars A. Tilmanis</strong> (B.Sc., M.Sc. Oregon, Dip. P.E. Melbourne) · Chuyên gia cơ sinh học thể thao ứng dụng
+      </div>
+      <p class="book-card-desc">
+        Giáo trình khoa học sư phạm kinh điển giải mã bản chất vật lý của môn quần vợt: Định luật chuyển dịch trọng tâm, hiệu ứng khí động học Magnus của các loại xoáy, phương pháp giải quyết vấn đề (problem-solving) thay cho lối dạy vẹt, cùng phân tích cơ sinh học 14 cú đánh mẫu mực của Ken Rosewall, Margaret Court, Evonne Goolagong, Tony Roche.
+      </p>
+      <div class="book-actions-row">
+        <a href="advanced_tennis_coaches_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="Advanced_Tennis_Coaches_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (19 Trang, 5.1 MB)</a>
+        <a href="advanced_tennis_coaches_vi.html" class="btn-pdf-en">🔍 Tra Cứu 8 Chương</a>
+      </div>
+    </div>
+  </article>
+
+            <!-- Book 13: Coaching Tennis Successfully -->
+            <article class="book-card" data-category="strategy" data-title="Huấn Luyện Quần Vợt Thành Công Coaching Tennis Successfully USTA Ron Woods Stan Smith">
+                <div class="book-card-thumb">
+                    <img src="coaching_assets/thumb_cover.jpg" alt="Bìa sách Huấn Luyện Quần Vợt Thành Công" loading="lazy">
+                    <span class="book-badge badge-official">USTA Official</span>
+                </div>
+                <div class="book-card-content">
+                    <div class="book-meta">
+                        <span class="book-category"><i class="fa-solid fa-graduation-cap"></i> Huấn Luyện & Quản Lý Đội Tuyển</span>
+                        <span class="book-author"><i class="fa-solid fa-user-pen"></i> USTA & TS. Ron Woods (Lời tựa: Stan Smith)</span>
+                    </div>
+                    <h3 class="book-title">
+                        <a href="coaching_tennis_successfully_vi.html">Huấn Luyện Quần Vợt Thành Công (Coaching Tennis Successfully)</a>
+                    </h3>
+                    <p class="book-desc">
+                        Tác phẩm cẩm nang huấn luyện chuẩn mực của Hiệp hội Quần vợt Hoa Kỳ (USTA) và TS. Ron Woods. Hệ thống hóa toàn diện triết lý sư phạm, chuỗi động lực học các cú đánh, chiến thuật thi đấu đơn theo tỷ lệ xác suất, sơ đồ đánh đôi hiện đại, mẫu báo cáo trinh sát và quản lý đội tuyển học đường.
+                    </p>
+                    <div class="book-card-actions">
+                        <a href="coaching_tennis_successfully_vi.html" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Đọc Sách Trực Tuyến
+                        </a>
+                        <a href="Coaching_Tennis_Successfully_Vietnamese_Final.pdf" class="btn btn-secondary" download>
+                            <i class="fa-solid fa-file-pdf"></i> Tải PDF (2.5 MB)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 14: Focused for Tennis -->
+            <article class="book-card" data-category="mental" data-title="Tập Trung Trong Quần Vợt Focused for Tennis Karl Slaikeu Robert Trogolo Three Rs System">
+                <div class="book-card-thumb">
+                    <img src="focused_assets/thumb_cover.jpg" alt="Bìa sách Tập Trung Trong Quần Vợt" loading="lazy">
+                    <span class="book-badge badge-psychology">Sport Psychology</span>
+                </div>
+                <div class="book-card-content">
+                    <div class="book-meta">
+                        <span class="book-category"><i class="fa-solid fa-brain"></i> Tâm Lý Học & Bản Lĩnh Thi Đấu</span>
+                        <span class="book-author"><i class="fa-solid fa-user-doctor"></i> TS. Karl Slaikeu & Robert Trogolo</span>
+                    </div>
+                    <h3 class="book-title">
+                        <a href="focused_for_tennis_vi.html">Tập Trung Trong Quần Vợt (Focused for Tennis)</a>
+                    </h3>
+                    <p class="book-desc">
+                        Tác phẩm tâm lý học thể thao kinh điển giới thiệu Hệ Thống Rèn Luyện 3 Chữ R (Release - Review - Reset Routine) trong 20-25 giây giữa các điểm số. Hóa giải 7 tội lỗi chết người (Nổ tung, Nghẹn thở, Vội vã, Buông xuôi) và duy trì sự điềm tĩnh tuyệt đối dưới áp lực đỉnh cao.
+                    </p>
+                    <div class="book-card-actions">
+                        <a href="focused_for_tennis_vi.html" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Đọc Sách Trực Tuyến
+                        </a>
+                        <a href="Focused_for_Tennis_Vietnamese_Final.pdf" class="btn btn-secondary" download>
+                            <i class="fa-solid fa-file-pdf"></i> Tải PDF (0.4 MB)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 15: Complete Conditioning for Tennis -->
+            <article class="book-card" data-category="fitness" data-title="Thể Lực Toàn Diện Trong Quần Vợt Complete Conditioning for Tennis USTA Paul Roetert Todd Ellenbecker Jim Courier">
+                <div class="book-card-thumb">
+                    <img src="conditioning_assets/thumb_cover.jpg" alt="Bìa sách Thể Lực Toàn Diện Trong Quần Vợt" loading="lazy">
+                    <span class="book-badge badge-fitness">Thể Lực & Phục Hồi</span>
+                </div>
+                <div class="book-card-content">
+                    <div class="book-meta">
+                        <span class="book-category"><i class="fa-solid fa-dumbbell"></i> Thể Lực & Phòng Ngừa Chấn Thương</span>
+                        <span class="book-author"><i class="fa-solid fa-user-doctor"></i> USTA, TS. Paul Roetert & BS. Todd Ellenbecker</span>
+                    </div>
+                    <h3 class="book-title">
+                        <a href="complete_conditioning_for_tennis_vi.html">Thể Lực Toàn Diện Trong Quần Vợt (Complete Conditioning for Tennis)</a>
+                    </h3>
+                    <p class="book-desc">
+                        Cẩm nang khoa học thể thao chuẩn mực của USTA. Cung cấp 17 bài kiểm tra thể lực, hơn 50 bài tập sức mạnh chuỗi động lực học, phác đồ bảo vệ khớp vai chóp xoay, bài tập tốc độ nhanh nhẹn (Spider run, Hexagon), và giáo án phân kỳ mùa giải đỉnh cao.
+                    </p>
+                    <div class="book-card-actions">
+                        <a href="complete_conditioning_for_tennis_vi.html" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Đọc Sách Trực Tuyến
+                        </a>
+                        <a href="Complete_Conditioning_for_Tennis_Vietnamese_Final.pdf" class="btn btn-secondary" download>
+                            <i class="fa-solid fa-file-pdf"></i> Tải PDF (1.3 MB)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 16: Arthur Ashe: Portrait in Motion -->
+            <article class="book-card" data-category="mental" data-title="Arthur Ashe Chân Dung Trong Chuyển Động Portrait in Motion Frank Deford Nhật Ký Huyền Thoại Quần Vợt">
+                <div class="book-card-thumb">
+                    <img src="portrait_assets/thumb_cover.jpg" alt="Bìa sách Arthur Ashe: Chân Dung Trong Chuyển Động" loading="lazy">
+                    <span class="book-badge badge-mental">Hồi Ký &amp; Tư Duy Sống</span>
+                </div>
+                <div class="book-card-content">
+                    <div class="book-meta">
+                        <span class="book-category"><i class="fa-solid fa-feather-pointed"></i> Nhật Ký &amp; Bản Lĩnh Thể Thao</span>
+                        <span class="book-author"><i class="fa-solid fa-user-pen"></i> Arthur Ashe &amp; Frank Deford</span>
+                    </div>
+                    <h3 class="book-title">
+                        <a href="arthur_ashe_portrait_in_motion_vi.html">Arthur Ashe: Chân Dung Trong Chuyển Động (Portrait in Motion)</a>
+                    </h3>
+                    <p class="book-desc">
+                        Tác phẩm nhật ký một năm thi đấu lịch sử (1973–1974) ghi lại chân thực cuộc đời Arthur Ashe qua 71 thành phố và 5 châu lục. Những phân tích chiến thuật đối đầu Borg, Connors, Nastase; góc nhìn sâu sắc về chính trị, nhân quyền tại Nam Phi và phẩm cách mẫu mực của một nhà vô địch.
+                    </p>
+                    <div class="book-card-actions">
+                        <a href="arthur_ashe_portrait_in_motion_vi.html" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Đọc Sách Trực Tuyến
+                        </a>
+                        <a href="Arthur_Ashe_Portrait_in_Motion_Vietnamese_Final.pdf" class="btn btn-secondary" download>
+                            <i class="fa-solid fa-file-pdf"></i> Tải PDF (1.0 MB)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Book 17: Coaching Youth Tennis -->
+            <article class="book-card" data-category="coaching" data-title="Huấn Luyện Quần Vợt Trẻ Em Coaching Youth Tennis ASEP USTA Ron Woods Sư Phạm Tiếp Cận Trò Chơi Games Approach">
+                <div class="book-card-thumb">
+                    <img src="youth_tennis_assets/thumb_cover.jpg" alt="Bìa sách Huấn Luyện Quần Vợt Trẻ Em" loading="lazy">
+                    <span class="book-badge badge-coaching">Huấn Luyện Thiếu Nhi</span>
+                </div>
+                <div class="book-card-content">
+                    <div class="book-meta">
+                        <span class="book-category"><i class="fa-solid fa-graduation-cap"></i> Sư Phạm Thể Thao &amp; Huấn Luyện Trẻ Em</span>
+                        <span class="book-author"><i class="fa-solid fa-chalkboard-user"></i> ASEP &amp; Ron Woods (USTA)</span>
+                    </div>
+                    <h3 class="book-title">
+                        <a href="coaching_youth_tennis_vi.html">Huấn Luyện Quần Vợt Trẻ Em (Coaching Youth Tennis)</a>
+                    </h3>
+                    <p class="book-desc">
+                        Giáo trình sư phạm chuẩn mực của Chương trình Giáo dục Thể thao Hoa Kỳ (ASEP) và USTA. Phương pháp tiếp cận trò chơi (Games Approach), mô hình giảng dạy I-D-E-A, sơ cứu chấn thương thể thao R-I-C-E, và hệ thống giáo án trọn mùa cùng trò chơi thực chiến cho lứa tuổi từ 6 đến 18.
+                    </p>
+                    <div class="book-card-actions">
+                        <a href="coaching_youth_tennis_vi.html" class="btn btn-primary">
+                            <i class="fa-solid fa-book-open"></i> Đọc Sách Trực Tuyến
+                        </a>
+                        <a href="Coaching_Youth_Tennis_Vietnamese_Final.pdf" class="btn btn-secondary" download>
+                            <i class="fa-solid fa-file-pdf"></i> Tải PDF (4.3 MB)
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+  <!-- SECTION 2: CHIẾN THUẬT ĐỒNG NHẤT ĐƠN & ĐÔI -->
+  <h2 class="section-divider-title">
+    <span>🏆 Chiến Thuật Toàn Diện: Đánh Đơn &amp; Đánh Đôi</span>
+    <span class="badge">Đỉnh Cao</span>
+  </h2>
+
+  <!-- BOOK: TENNIS TACTICS (TALBERT & OLD) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/tennis_tactics_vi.html">
+        <img src="../doubles/tactics_assets/cover.jpg" alt="Bìa sách Tennis Tactics: Singles and Doubles">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Tuyệt Phẩm Chiến Thuật Kinh Điển (1983) · 65 Sơ Đồ Toàn Diện · 9 Bảng Thống Kê</span>
+      <h3 class="book-card-title">Chiến Thuật Tennis: Đánh Đơn và Đánh Đôi (Tennis Tactics)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: William F. Talbert &amp; Bruce S. Old</strong> · Minh họa bởi <strong>Katharine D. Old</strong> · Lời tựa bởi <strong>Arthur R. Ashe</strong> · Lời nói đầu bởi <strong>Chris Evert Lloyd</strong>.
+      </div>
+      <p class="book-card-desc">
+        Công trình độc nhất vô nhị hệ thống hóa toàn diện các chiến lược đỉnh cao cho cả hai thể thức Đơn và Đôi. Khảo cứu sâu sắc 65 sơ đồ tác chiến, bức tường lòng chảo trên lưới, 4 cách tiếp cận lưới, nghệ thuật phán đoán dưới nửa giây, các cú vô-lê dứt điểm và đòn bẫy đối thủ kinh điển.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/tennis_tactics_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/Tennis_Tactics_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (92 Trang, 6.1 MB)</a>
+        <a href="../../doubles/Tennis_tactics__singles_and_doubles.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh (26 MB)</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- SECTION 2: CHIẾN THUẬT ĐÁNH ĐÔI ĐỈNH CAO -->
+  <h2 class="section-divider-title">
+    <span>👥 Tủ Sách Chiến Thuật Đánh Đôi Đỉnh Cao (Doubles Strategy)</span>
+    <span class="badge">Chuyên Sâu</span>
+  </h2>
+
+  <!-- BOOK: WINNING DOUBLES (SCOTT PERLSTEIN) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/winning_doubles_vi.html">
+        <img src="../doubles/perlstein_assets/cover.jpg" alt="Bìa sách Winning Doubles Scott Perlstein">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Sổ Tay Thực Chiến 64 Nước Biến (1995) · Hệ Thống Bức Tường Trên Lưới</span>
+      <h3 class="book-card-title">Chiến Thuật Đánh Đôi Đỉnh Cao (Winning Doubles)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Scott Perlstein</strong> · Lời tựa bởi <strong>Richey Reneberg</strong> (Cựu Số 1 Thế Giới ATP Doubles, Vô Địch Wimbledon &amp; US Open).
+      </div>
+      <p class="book-card-desc">
+        Sổ tay chiến thuật tình huống hoàn chỉnh bậc nhất với 64 bài bản thực chiến (Shot-by-Shot Playbook) kèm ảnh chụp hiện trường chi tiết. Phân tích cặn kẽ nghệ thuật thiết lập bức tường lưới, kỹ năng bắt bài (poaching), phản xạ đè bóng và phối hợp ăn ý giữa hai đối tác.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/winning_doubles_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/Winning_Doubles_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (83 Trang, 23.6 MB)</a>
+        <a href="../../doubles/Winning_doubles.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh (46 MB)</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: THE GAME OF DOUBLES IN TENNIS (TALBERT & OLD) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/the_game_of_doubles_vi.html">
+        <img src="../doubles/talbert_assets/cover.jpg" alt="Bìa sách The Game of Doubles in Tennis">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Bản Đồ Chiến Thuật 112 Tình Huống (1956) · Chuẩn Mực Học Thuật Toàn Cầu</span>
+      <h3 class="book-card-title">Nghệ Thuật Đánh Đôi Trong Quần Vợt (The Game of Doubles in Tennis)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: William F. Talbert &amp; Bruce S. Old</strong> · 112 Sơ đồ sân đấu chi tiết.
+      </div>
+      <p class="book-card-desc">
+        Tác phẩm được Arthur Ashe vinh danh là công trình chuẩn mực và định hình toàn bộ nền chiến thuật đánh đôi hiện đại. Khảo cứu 112 sơ đồ diễn biến đường bóng từ giao bóng, trả bóng, lưới đối đầu đến bọc lót đồng đội.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/the_game_of_doubles_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/The_Game_of_Doubles_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (128 Trang, 34.8 MB)</a>
+        <a href="../../doubles/The_game_of_doubles_in_tennis.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: WINNING TENNIS DOUBLES (NORMA DOERNER) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/winning_tennis_doubles_vi.html">
+        <img src="../doubles/doerner_assets/cover.jpg" alt="Bìa sách Winning Tennis Doubles Norma Doerner">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Cẩm Nang Kỹ Thuật Động Tác Đánh Đôi (1989) · 45 Chuỗi Ảnh Động Học</span>
+      <h3 class="book-card-title">Bí Quyết Chiến Thắng Trong Đánh Đôi (Winning Tennis Doubles)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Norma Doerner</strong> · Hệ thống hóa kỹ thuật cơ sinh học đánh đôi.
+      </div>
+      <p class="book-card-desc">
+        Cung cấp 45 chuỗi hình ảnh liên hoàn phân tích góc mở vợt, điểm tiếp xúc bóng, vị trí đặt chân và kỹ năng di chuyển đồng bộ trong đánh đôi.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/winning_tennis_doubles_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/Winning_Tennis_Doubles_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (37.4 MB)</a>
+        <a href="../../doubles/Winning_tennis_doubles.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: DOUBLES STRATEGY (FRANCOISE DURR) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/durr_doubles_strategy_vi.html">
+        <img src="../doubles/durr_assets/cover.png" alt="Bìa sách Doubles Strategy Francoise Durr">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Tâm Lý Chiến &amp; Chiến Lược Tiếp Cận Sáng Tạo (1978) · 43 Sơ Đồ</span>
+      <h3 class="book-card-title">Chiến Lược Đánh Đôi: Cẩm Nang Học Viên &amp; Huấn Luyện Viên (Doubles Strategy)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Françoise Dürr</strong> (Huyền thoại 12 danh hiệu Grand Slam).
+      </div>
+      <p class="book-card-desc">
+        Tác phẩm đi sâu vào khía cạnh tâm lý đồng đội, hóa giải áp lực, kỹ năng đọc trận đấu và nghệ thuật tận dụng góc mở sân độc đáo của một trong những nữ tay vợt đánh đôi vĩ đại nhất lịch sử.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/durr_doubles_strategy_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/Doubles_Strategy_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (59.1 MB)</a>
+        <a href="../../doubles/Doubles_strategy__a_creative_and_psychological_approach_to_tennis.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: TENNIS DOUBLES: TACTICS & FORMATIONS (STAN SMITH) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="../doubles/tennis_doubles_vi.html">
+        <img src="../doubles/book_assets/cover.png" alt="Bìa sách Tennis Doubles: Tactics and Formations">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Đội Hình &amp; Chiến Thuật Hiện Đại (2004) · 48 Sơ Đồ &amp; Đội Hình Úc / Chữ I</span>
+      <h3 class="book-card-title">Chiến Thuật &amp; Đội Hình Đánh Đôi (Tennis Doubles: Tactics and Formations)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: Stan Smith &amp; Justin Gimelstob</strong> · Minh họa bởi Brenda Schultz-McCarthy.
+      </div>
+      <p class="book-card-desc">
+        Hệ thống hóa toàn bộ các đội hình đánh đôi hiện đại: Đội hình chuẩn, Đội hình Úc (Australian Formation), Đội hình chữ I (I-Formation), chiến thuật giao bóng bắt lưới và đè bẹp các đối thủ giao bóng uy lực.
+      </p>
+      <div class="book-actions-row">
+        <a href="../doubles/tennis_doubles_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="../doubles/Tennis_Doubles_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (90.9 MB)</a>
+        <a href="../../doubles/Tennis_doubles__tactics_and_formations.pdf" target="_blank" class="btn-pdf-en">📄 Bản Gốc Tiếng Anh</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- BOOK: HOW TO PLAY WINNING DOUBLES (GEORGE LOTT) -->
+  <article class="book-card-horizontal">
+    <div class="book-cover-col">
+      <a href="how_to_play_winning_doubles_vi.html">
+        <img src="lott_assets/thumb_cover.jpg" alt="Bìa sách How to Play Winning Doubles George Lott">
+      </a>
+    </div>
+    <div class="book-info-col">
+      <span class="book-meta-tag">Kinh Điển Chiến Thuật Vô Song (1979) · Trí Tuệ 12 Grand Slam · Minh Họa Laura Duggan</span>
+      <h3 class="book-card-title">Bí Quyết Đánh Đôi Chiến Thắng (How to Play Winning Doubles)</h3>
+      <div class="book-card-authors">
+        <strong>Tác giả: George Lott &amp; Jeffrey Bairstow</strong> · Minh họa bởi <strong>Laura Duggan</strong> · A Tennis Magazine Book.
+      </div>
+      <p class="book-card-desc">
+        Công trình bất hủ của huyền thoại George Lott — người được mệnh danh là Bill Tilden của nội dung đánh đôi. Đúc kết nghệ thuật đánh dink chéo sân vào hành lang, giao bóng 3 điểm rơi chiến lược, cú lốp giải vây, tấn công vào lỗ hổng giữa hai đối thủ và tư duy phối hợp đồng đội đỉnh cao.
+      </p>
+      <div class="book-actions-row">
+        <a href="how_to_play_winning_doubles_vi.html" class="btn-reader">📖 Đọc Trực Tuyến Bản Dịch</a>
+        <a href="How_to_Play_Winning_Doubles_Vietnamese_Final.pdf" target="_blank" class="btn-pdf-vi">📥 Tải PDF Tiếng Việt (21 Trang, 7.3 MB)</a>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer style="background: #0f172a; color: #94a3b8; padding: 40px 20px; text-align: center; font-size: 0.9rem; margin-top: 60px;">
+  <p style="margin-bottom: 8px;"><strong>Tennis Unified</strong> &bull; Nền tảng tri thức và văn hiến quần vợt chuyên sâu.</p>
+  <p style="margin: 0;">Bản dịch phục vụ mục đích học tập, nghiên cứu phi thương mại cho cộng đồng yêu tennis Việt Nam.</p>
+</footer>
+
+</body>
+</html>
