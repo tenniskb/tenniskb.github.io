@@ -383,6 +383,18 @@ table tr:nth-child(even) td { background: rgba(0, 0, 0, 0.02); }
 .md-skip { display: none !important; }
 .md-clipboard { display: none !important; }
 
+/* Suppress duplicate MkDocs header when tu-topnav is present */
+.tu-topnav ~ .md-header,
+.tu-topnav ~ * .md-header,
+body:has(.tu-topnav) .md-header,
+header.md-header {
+  display: none !important;
+}
+
+body:has(.tu-topnav) .md-main {
+  margin-top: 0 !important;
+}
+
 /* === Top navigation (taichinow-style flattened) ========================== */
 
 .tu-topnav {
