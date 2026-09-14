@@ -297,7 +297,7 @@
       );
 
       countEl.textContent = filtered.length + ' / ' + ALL_TERMS.length + ' thuật ngữ';
-      resultsEl.replaceChildren();
+      resultsEl.innerHTML = '';
 
       if (!filtered.length){
         resultsEl.appendChild(el('div', 'empty-state', 'Không tìm thấy thuật ngữ phù hợp. Thử một từ khóa khác.'));
