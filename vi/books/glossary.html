@@ -343,7 +343,1853 @@
       document.getElementById('themeToggle').textContent = isDark ? 'Chế độ tối' : 'Chế độ sáng';
     });
 
-        const EMBEDDED_TERMS = [{"id": "kinetic_chain", "term_en": "Kinetic Chain", "term_vi_standard": "Chuỗi động học liên hoàn", "variants_to_replace": ["chuỗi động lực", "dây chuyền động lực", "chuỗi vận động"], "category": "biomechanics", "note": "Trình tự truyền lực từ chân → hông → thân → vai → tay → vợt."}, {"id": "pronation", "term_en": "Pronation", "term_vi_standard": "Động tác sấp cổ tay / xoay trong cẳng tay", "variants_to_replace": ["gập cổ tay", "sấp tay"], "category": "biomechanics", "note": "Xoay xương quay quanh xương trụ, thường thấy ở pha tiếp xúc bóng của cú giao bóng và forehand hiện đại."}, {"id": "internal_shoulder_rotation", "term_en": "Internal Shoulder Rotation", "term_vi_standard": "Xoay trong khớp vai", "variants_to_replace": ["xoay vai vào trong", "vặn vai trong"], "category": "biomechanics", "note": "Chuyển động chính tạo tốc độ đầu vợt trong pha tăng tốc của cú giao bóng."}, {"id": "external_shoulder_rotation", "term_en": "External Shoulder Rotation", "term_vi_standard": "Xoay ngoài khớp vai", "variants_to_replace": ["xoay vai ra ngoài"], "category": "biomechanics", "note": "Giai đoạn 'lên dây cót' (loading) trước khi xoay trong khớp vai."}, {"id": "split_step", "term_en": "Split-step", "term_vi_standard": "Bước nhún tách chân chuẩn bị", "variants_to_replace": ["bước nhảy tách", "bước chuẩn bị nhảy"], "category": "footwork_movement", "note": "Động tác nhún nhẹ hai chân ngay trước khi đối thủ tiếp xúc bóng."}, {"id": "unit_turn", "term_en": "Unit Turn", "term_vi_standard": "Xoay nguyên khối thân trên", "variants_to_replace": ["xoay đơn vị", "xoay khối người"], "category": "biomechanics", "note": "Vai, hông và chân xoay đồng bộ như một khối ngay khi nhận diện hướng bóng."}, {"id": "kinetic_energy_transfer", "term_en": "Energy Transfer / Summation of Speed", "term_vi_standard": "Cộng dồn tốc độ theo chuỗi", "variants_to_replace": ["cộng lực tuần tự"], "category": "biomechanics", "note": "Nguyên lý mỗi khớp truyền và khuếch đại tốc độ cho khớp tiếp theo trong chuỗi động học."}, {"id": "ground_reaction_force", "term_en": "Ground Reaction Force (GRF)", "term_vi_standard": "Lực phản lực từ mặt đất", "variants_to_replace": ["phản lực nền", "lực đẩy từ sàn"], "category": "biomechanics", "note": "Lực mặt sân tác động ngược lại cơ thể khi đạp chân, là nguồn lực khởi phát của chuỗi động học."}, {"id": "kinetic_loading", "term_en": "Loading Phase", "term_vi_standard": "Giai đoạn nạp lực", "variants_to_replace": ["giai đoạn dồn lực", "pha tích lũy năng lượng"], "category": "biomechanics", "note": "Giai đoạn dồn trọng tâm và kéo giãn cơ trước khi bung lực (ví dụ: gối khuỵu trước khi bật nhảy giao bóng)."}, {"id": "fascia_sling_system", "term_en": "Fascia / Sling System", "term_vi_standard": "Hệ thống dây chằng chéo cân mạc", "variants_to_replace": ["hệ thống sling cơ", "chuỗi cơ chéo"], "category": "biomechanics", "note": "Mạng lưới cân mạc kết nối các nhóm cơ chéo (ví dụ: sling sau chéo vai-hông đối diện) hỗ trợ truyền lực xoay."}, {"id": "contact_point", "term_en": "Contact Point", "term_vi_standard": "Điểm tiếp xúc bóng", "variants_to_replace": ["điểm chạm bóng", "điểm va chạm"], "category": "strokes", "note": "Vị trí không gian nơi mặt vợt gặp bóng."}, {"id": "strike_zone", "term_en": "Strike Zone", "term_vi_standard": "Vùng đánh bóng lý tưởng", "variants_to_replace": ["vùng đánh tối ưu"], "category": "strokes", "note": "Khoảng không gian (chiều cao, khoảng cách) mà người chơi tạo lực và kiểm soát tốt nhất."}, {"id": "kinetic_wiper_finish", "term_en": "Windshield Wiper Finish", "term_vi_standard": "Kết thúc kiểu cần gạt nước", "variants_to_replace": ["vung vợt kiểu gạt mưa", "kết thúc xoay tròn"], "category": "strokes", "note": "Kiểu kết thúc cú forehand hiện đại, cánh tay quét vòng cung tạo topspin cao."}, {"id": "open_stance", "term_en": "Open Stance", "term_vi_standard": "Tư thế đứng mở", "variants_to_replace": ["thế đứng mở người", "đứng ngang mở"], "category": "strokes", "note": "Hai vai và hông song song với lưới khi đánh bóng, phổ biến ở forehand hiện đại."}, {"id": "semi_open_stance", "term_en": "Semi-Open Stance", "term_vi_standard": "Tư thế đứng bán mở", "variants_to_replace": ["đứng nửa mở"], "category": "strokes", "note": "Trung gian giữa đứng mở và đứng ngang (closed stance)."}, {"id": "closed_stance", "term_en": "Closed Stance", "term_vi_standard": "Tư thế đứng ngang (đóng)", "variants_to_replace": ["đứng đóng"], "category": "strokes", "note": "Chân trước bước chéo qua, vai vuông góc với lưới; thường dùng cho slice hoặc cú đánh kiểm soát."}, {"id": "topspin", "term_en": "Topspin", "term_vi_standard": "Xoáy lên (topspin)", "variants_to_replace": ["xoáy thuận", "xoáy trên"], "category": "strokes", "note": "Bóng xoáy theo chiều tiến, tạo quỹ đạo vòng cung và nảy cao."}, {"id": "backspin_slice", "term_en": "Backspin / Slice", "term_vi_standard": "Xoáy ngược (slice)", "variants_to_replace": ["xoáy dưới"], "category": "strokes", "note": "Bóng xoáy ngược chiều tiến, quỹ đạo thấp, nảy thấp và trượt."}, {"id": "kick_serve", "term_en": "Kick Serve (Topspin Serve)", "term_vi_standard": "Giao bóng xoáy bật cao (kick serve)", "variants_to_replace": ["giao bóng xoáy lên", "giao bóng nảy cao"], "category": "strokes", "note": "Cú giao bóng xoáy hỗn hợp topspin-sidespin khiến bóng nảy cao bất thường."}, {"id": "flat_serve", "term_en": "Flat Serve", "term_vi_standard": "Giao bóng phẳng (flat serve)", "variants_to_replace": ["giao bóng thẳng", "giao bóng không xoáy"], "category": "strokes", "note": "Cú giao bóng tối đa tốc độ, ít xoáy."}, {"id": "slice_serve", "term_en": "Slice Serve", "term_vi_standard": "Giao bóng xoáy ngang (slice serve)", "variants_to_replace": ["giao bóng cắt ngang"], "category": "strokes", "note": "Cú giao bóng xoáy cạnh khiến bóng đi vòng cung ngang và kéo đối thủ ra khỏi sân."}, {"id": "volley", "term_en": "Volley", "term_vi_standard": "Cú vô-lê (volley)", "variants_to_replace": ["đánh không nảy"], "category": "strokes", "note": "Đánh bóng trước khi bóng chạm đất, thường thực hiện gần lưới."}, {"id": "half_volley", "term_en": "Half-Volley", "term_vi_standard": "Nửa vô-lê (half-volley)", "variants_to_replace": ["vô lê nửa nảy"], "category": "strokes", "note": "Đánh bóng ngay sau khi bóng vừa nảy chạm đất."}, {"id": "drop_shot", "term_en": "Drop Shot", "term_vi_standard": "Cú bỏ nhỏ (drop shot)", "variants_to_replace": ["cú thả bóng"], "category": "tactics", "note": "Cú đánh nhẹ, ít lực, bóng rơi ngay sau lưới đối phương."}, {"id": "lob", "term_en": "Lob", "term_vi_standard": "Cú lốp bóng (lob)", "variants_to_replace": [], "category": "tactics", "note": "Đánh bóng bay cao qua đầu đối thủ, thường dùng để phòng thủ hoặc phá thế lưới."}, {"id": "approach_shot", "term_en": "Approach Shot", "term_vi_standard": "Cú đánh tiến lưới (approach shot)", "variants_to_replace": ["cú đánh lên lưới"], "category": "tactics", "note": "Cú đánh sâu, chắc, kèm theo bước tiến lên lưới ngay sau đó."}, {"id": "passing_shot", "term_en": "Passing Shot", "term_vi_standard": "Cú đánh xuyên qua (passing shot)", "variants_to_replace": ["cú đánh vượt qua"], "category": "tactics", "note": "Cú đánh nhằm vượt qua người chơi đang đứng ở lưới."}, {"id": "cross_court", "term_en": "Cross-Court", "term_vi_standard": "Đánh chéo sân (cross-court)", "variants_to_replace": ["đánh chéo góc"], "category": "tactics", "note": "Đánh bóng theo đường chéo từ góc sân này sang góc sân đối diện."}, {"id": "down_the_line", "term_en": "Down-the-Line", "term_vi_standard": "Đánh dọc biên (down-the-line)", "variants_to_replace": ["đánh thẳng biên", "đánh dọc đường biên"], "category": "tactics", "note": "Đánh bóng song song với đường biên dọc, ít an toàn hơn cross-court nhưng bất ngờ hơn."}, {"id": "inside_out", "term_en": "Inside-Out Forehand", "term_vi_standard": "Forehand chạy vòng đánh chéo (inside-out)", "variants_to_replace": ["forehand chạy né", "forehand lách trái"], "category": "tactics", "note": "Chạy vòng qua backhand để đánh forehand chéo sân từ phía trái sân (với người thuận tay phải)."}, {"id": "depth_control", "term_en": "Depth (Ball Depth)", "term_vi_standard": "Độ sâu của bóng", "variants_to_replace": ["độ dài bóng", "khoảng cách rơi bóng"], "category": "tactics", "note": "Khoảng cách từ lưới đến điểm bóng nảy trong sân đối phương."}, {"id": "angle_of_shot", "term_en": "Angle (Shot Angle)", "term_vi_standard": "Góc mở của cú đánh", "variants_to_replace": ["góc đánh bóng"], "category": "tactics", "note": "Góc lệch của đường bóng so với đường thẳng vuông góc lưới, dùng để kéo giãn đối thủ."}, {"id": "pattern_of_play", "term_en": "Pattern of Play", "term_vi_standard": "Mẫu hình đường bóng (pattern of play)", "variants_to_replace": ["chuỗi bài đánh", "mô hình chiến thuật"], "category": "tactics", "note": "Chuỗi đường bóng lặp lại có chủ đích nhằm dẫn dắt đối thủ vào tình huống bất lợi."}, {"id": "neutral_ball", "term_en": "Neutral Ball", "term_vi_standard": "Bóng trung tính (neutral ball)", "variants_to_replace": ["bóng cân bằng"], "category": "tactics", "note": "Đường bóng không tạo lợi thế rõ rệt cho bên nào, thường đánh giữa sân với độ sâu vừa phải."}, {"id": "offensive_ball", "term_en": "Offensive/Attacking Ball", "term_vi_standard": "Bóng tấn công", "variants_to_replace": ["bóng chủ động", "bóng áp đảo"], "category": "tactics", "note": "Đường bóng đặt đối thủ vào thế phòng ngự."}, {"id": "defensive_ball", "term_en": "Defensive Ball", "term_vi_standard": "Bóng phòng ngự", "variants_to_replace": ["bóng thủ", "bóng chống đỡ"], "category": "tactics", "note": "Đường bóng nhằm mục đích duy trì điểm và tránh sai lầm, không nhằm ghi điểm ngay."}, {"id": "poaching", "term_en": "Poaching", "term_vi_standard": "Cắt lưới cướp điểm (poaching)", "variants_to_replace": ["bọc lưới", "chặn bóng cướp phần"], "category": "doubles", "note": "Người ở lưới di chuyển sang phần sân của đồng đội để chặn bóng và kết thúc điểm."}, {"id": "i_formation", "term_en": "I-Formation", "term_vi_standard": "Đội hình chữ I (I-formation)", "variants_to_replace": ["thế đứng chữ I"], "category": "doubles", "note": "Đội hình giao bóng đôi trong đó cả hai người cùng đứng gần đường giữa trước khi giao bóng."}, {"id": "australian_formation", "term_en": "Australian Formation", "term_vi_standard": "Đội hình Australia (Australian formation)", "variants_to_replace": ["thế đứng Úc"], "category": "doubles", "note": "Người giao bóng và đồng đội đứng cùng một bên sân để che một đường đánh chéo."}, {"id": "one_up_one_back", "term_en": "One-Up-One-Back", "term_vi_standard": "Đội hình một lên một xuống", "variants_to_replace": ["một trước một sau"], "category": "doubles", "note": "Một người ở lưới, một người ở cuối sân — đội hình đôi truyền thống."}, {"id": "two_back", "term_en": "Two-Back", "term_vi_standard": "Đội hình hai người cuối sân (two-back)", "variants_to_replace": ["cả hai đứng sau"], "category": "doubles", "note": "Cả hai người chơi đôi cùng lùi về cuối sân, thường dùng khi bị lốp bóng hoặc phòng ngự."}, {"id": "net_partner", "term_en": "Net Partner", "term_vi_standard": "Đồng đội đứng lưới (net partner)", "variants_to_replace": ["đồng đội trên lưới"], "category": "doubles", "note": "Người chơi đôi đứng gần lưới trong khi đồng đội giao/nhận bóng ở cuối sân."}, {"id": "middle_of_court_theory", "term_en": "Middle Theory", "term_vi_standard": "Nguyên lý đánh vào giữa sân", "variants_to_replace": ["chiến thuật đánh giữa"], "category": "doubles", "note": "Đánh bóng vào khoảng giữa hai đối thủ đôi để gây nhiễu loạn trách nhiệm phòng thủ (giảm góc)."}, {"id": "recovery_step", "term_en": "Recovery (Recovery Step)", "term_vi_standard": "Bước hồi vị (recovery step)", "variants_to_replace": ["bước trở lại vị trí", "hồi phục vị trí"], "category": "footwork_movement", "note": "Di chuyển trở lại vị trí trung tâm/chiến thuật sau khi thực hiện cú đánh."}, {"id": "crossover_step", "term_en": "Crossover Step", "term_vi_standard": "Bước chân bắt chéo (crossover step)", "variants_to_replace": ["bước chéo chân"], "category": "footwork_movement", "note": "Kỹ thuật di chuyển nhanh sang ngang bằng cách bắt chéo hai chân, dùng cho quãng đường dài."}, {"id": "shuffle_step", "term_en": "Shuffle Step / Side Step", "term_vi_standard": "Bước trượt ngang (shuffle step)", "variants_to_replace": ["bước lê chân", "bước ngang nhỏ"], "category": "footwork_movement", "note": "Bước di chuyển ngang nhỏ, giữ trọng tâm thấp, dùng cho quãng đường ngắn gần lưới."}, {"id": "adjustment_steps", "term_en": "Adjustment Steps", "term_vi_standard": "Bước điều chỉnh (adjustment steps)", "variants_to_replace": ["bước căn chỉnh vị trí"], "category": "footwork_movement", "note": "Các bước nhỏ cuối cùng để căn đúng khoảng cách và thăng bằng trước khi tiếp xúc bóng."}, {"id": "center_of_gravity", "term_en": "Center of Gravity / Balance", "term_vi_standard": "Trọng tâm cơ thể", "variants_to_replace": ["tâm trọng lực"], "category": "biomechanics", "note": "Vị trí trọng tâm ảnh hưởng trực tiếp đến thăng bằng và khả năng tạo lực."}, {"id": "proprioception", "term_en": "Proprioception", "term_vi_standard": "Cảm nhận bản thể (proprioception)", "variants_to_replace": ["cảm giác cơ thể", "nhận thức vị trí cơ thể"], "category": "biomechanics", "note": "Khả năng cảm nhận vị trí và chuyển động của cơ thể/vợt mà không cần nhìn."}, {"id": "motor_learning", "term_en": "Motor Learning", "term_vi_standard": "Học vận động (motor learning)", "variants_to_replace": ["học kỹ năng vận động", "huấn luyện thần kinh cơ"], "category": "training_conditioning", "note": "Quá trình hình thành và củng cố kỹ năng vận động qua luyện tập lặp lại."}, {"id": "muscle_memory", "term_en": "Muscle Memory", "term_vi_standard": "Trí nhớ cơ (muscle memory)", "variants_to_replace": ["ký ức cơ bắp"], "category": "training_conditioning", "note": "Khả năng thực hiện động tác tự động hóa nhờ luyện tập lặp lại nhiều lần."}, {"id": "reaction_time", "term_en": "Reaction Time", "term_vi_standard": "Thời gian phản xạ", "variants_to_replace": ["tốc độ phản ứng"], "category": "training_conditioning", "note": "Khoảng thời gian từ khi nhận kích thích (bóng rời vợt đối thủ) đến khi bắt đầu phản ứng."}, {"id": "anticipation", "term_en": "Anticipation", "term_vi_standard": "Khả năng đoán trước (anticipation)", "variants_to_replace": ["dự đoán tình huống", "phán đoán bóng"], "category": "mental_psychology", "note": "Kỹ năng đọc tín hiệu cơ thể/vợt đối thủ để dự đoán hướng bóng trước khi tiếp xúc."}, {"id": "focus_concentration", "term_en": "Focus / Concentration", "term_vi_standard": "Sự tập trung", "variants_to_replace": ["khả năng chú ý", "tập trung tinh thần"], "category": "mental_psychology", "note": "Trạng thái duy trì sự chú ý vào nhiệm vụ hiện tại (điểm bóng đang diễn ra)."}, {"id": "choking", "term_en": "Choking (Under Pressure)", "term_vi_standard": "Hiện tượng 'nghẹt thở' tâm lý (choking)", "variants_to_replace": ["tâm lý hoảng loạn", "vỡ trận tâm lý"], "category": "mental_psychology", "note": "Sự sụt giảm hiệu suất đột ngột do áp lực tâm lý quá mức ở thời điểm quyết định."}, {"id": "flow_state", "term_en": "Flow State / The Zone", "term_vi_standard": "Trạng thái dòng chảy (flow state)", "variants_to_replace": ["vùng thi đấu đỉnh cao", "trạng thái xuất thần"], "category": "mental_psychology", "note": "Trạng thái tâm lý tối ưu, thi đấu tự nhiên không suy nghĩ, tập trung tuyệt đối."}, {"id": "visualization", "term_en": "Visualization", "term_vi_standard": "Hình dung tinh thần (visualization)", "variants_to_replace": ["tưởng tượng trước trận"], "category": "mental_psychology", "note": "Kỹ thuật tâm lý tưởng tượng trước các tình huống/kết quả để chuẩn bị tinh thần."}, {"id": "unforced_error", "term_en": "Unforced Error", "term_vi_standard": "Lỗi tự đánh hỏng (unforced error)", "variants_to_replace": ["lỗi không bị ép", "lỗi tự mắc phải"], "category": "tactics", "note": "Sai lầm xảy ra mà không do áp lực trực tiếp từ cú đánh của đối thủ."}, {"id": "forced_error", "term_en": "Forced Error", "term_vi_standard": "Lỗi bị ép buộc (forced error)", "variants_to_replace": ["lỗi do bị ép"], "category": "tactics", "note": "Sai lầm xảy ra do áp lực từ một cú đánh tốt của đối thủ."}, {"id": "conditioning", "term_en": "Conditioning", "term_vi_standard": "Rèn luyện thể lực (conditioning)", "variants_to_replace": ["thể lực nền", "huấn luyện thể chất"], "category": "training_conditioning", "note": "Chương trình rèn luyện sức bền, sức mạnh và tốc độ chuyên biệt cho quần vợt."}, {"id": "periodization", "term_en": "Periodization", "term_vi_standard": "Chu kỳ hóa tập luyện (periodization)", "variants_to_replace": ["phân kỳ huấn luyện"], "category": "training_conditioning", "note": "Chia chương trình tập luyện thành các giai đoạn có mục tiêu khác nhau trong năm."}, {"id": "shadow_swing", "term_en": "Shadow Swing", "term_vi_standard": "Vung vợt không bóng (shadow swing)", "variants_to_replace": ["đánh khống", "vung tay không"], "category": "training_conditioning", "note": "Luyện tập kỹ thuật vung vợt mà không có bóng thật, tập trung vào cơ chế chuyển động."}, {"id": "grip_continental", "term_en": "Continental Grip", "term_vi_standard": "Cách cầm vợt Continental", "variants_to_replace": ["cầm vợt kiểu lục địa"], "category": "equipment_scoring", "note": "Kiểu cầm vợt trung tính, dùng cho giao bóng, vô-lê và slice."}, {"id": "grip_eastern", "term_en": "Eastern Grip", "term_vi_standard": "Cách cầm vợt Eastern", "variants_to_replace": ["cầm vợt kiểu Đông"], "category": "equipment_scoring", "note": "Kiểu cầm vợt bán-Tây, phù hợp bóng độ cao trung bình."}, {"id": "grip_western", "term_en": "Western / Semi-Western Grip", "term_vi_standard": "Cách cầm vợt Western / Bán-Western", "variants_to_replace": ["cầm vợt kiểu Tây"], "category": "equipment_scoring", "note": "Kiểu cầm vợt phổ biến trong forehand hiện đại, tạo topspin cao."}, {"id": "racquet_head_speed", "term_en": "Racquet Head Speed", "term_vi_standard": "Tốc độ đầu vợt", "variants_to_replace": ["tốc độ mặt vợt", "vận tốc vợt"], "category": "biomechanics", "note": "Tốc độ di chuyển của đầu vợt tại thời điểm tiếp xúc bóng, yếu tố quyết định tốc độ bóng đi."}, {"id": "break_point", "term_en": "Break Point", "term_vi_standard": "Điểm bẻ giao bóng (break point)", "variants_to_replace": ["điểm phá giao"], "category": "equipment_scoring", "note": "Điểm mà người nhận giao bóng có cơ hội thắng ván đấu của đối thủ đang giao bóng."}, {"id": "unforced_rhythm", "term_en": "Tempo / Rhythm", "term_vi_standard": "Nhịp điệu trận đấu (tempo/rhythm)", "variants_to_replace": ["nhịp thi đấu"], "category": "tactics", "note": "Tốc độ và nhịp độ trao đổi bóng mà một bên áp đặt lên trận đấu."}];
+        const EMBEDDED_TERMS = [
+  {
+    "id": "kinetic_chain",
+    "term_en": "Kinetic Chain",
+    "term_vi_standard": "Chuỗi động học liên hoàn",
+    "term_vi_translation": "Chuỗi động học liên hoàn",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Trình tự truyền lực từ chân → hông → thân → vai → tay → vợt."
+  },
+  {
+    "id": "pronation",
+    "term_en": "Pronation",
+    "term_vi_standard": "Động tác sấp cổ tay / xoay trong cẳng tay",
+    "term_vi_translation": "Động tác sấp cổ tay / xoay trong cẳng tay",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Xoay xương quay quanh xương trụ, thường thấy ở pha tiếp xúc bóng của cú giao bóng và forehand hiện đại."
+  },
+  {
+    "id": "internal_shoulder_rotation",
+    "term_en": "Internal Shoulder Rotation (ISR)",
+    "term_vi_standard": "Xoay trong khớp vai",
+    "term_vi_translation": "Xoay trong khớp vai",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Xoay khớp vai hướng vào trong, đặc trưng của pha backswing trong cú giao bóng và cú đánh forehand."
+  },
+  {
+    "id": "external_shoulder_rotation",
+    "term_en": "External Shoulder Rotation (ESR)",
+    "term_vi_standard": "Xoay ngoài khớp vai",
+    "term_vi_translation": "Xoay ngoài khớp vai",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Xoay khớp vai hướng ra ngoài, xảy ra trong pha follow-through."
+  },
+  {
+    "id": "shoulder_hip_separation",
+    "term_en": "Shoulder-Hip Separation (X-Factor)",
+    "term_vi_standard": "Mức độ tách biệt vai và hông",
+    "term_vi_translation": "Mức độ tách biệt vai và hông",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Sự xoay chênh lệch giữa vai và hông trong pha backswing, tạo ra lực xoắn cho cú đánh."
+  },
+  {
+    "id": "kinetic_energy_transfer",
+    "term_en": "Summation of Speed / Energy Transfer",
+    "term_vi_standard": "Cộng dồn tốc độ theo chuỗi",
+    "term_vi_translation": "Cộng dồn tốc độ theo chuỗi",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Nguyên lý truyền năng lượng tuần tự từ các khớp cơ thể để tạo tốc độ vợt tối đa."
+  },
+  {
+    "id": "ground_reaction_force",
+    "term_en": "Ground Reaction Force (GRF)",
+    "term_vi_standard": "Lực phản lực từ mặt đất",
+    "term_vi_translation": "Lực phản lực từ mặt đất",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Lực mặt đất tác dụng ngược lên cơ thể khi vận động viên đạp xuống sân."
+  },
+  {
+    "id": "loading_phase",
+    "term_en": "Loading Phase (Kinetic Loading)",
+    "term_vi_standard": "Giai đoạn nạp lực",
+    "term_vi_translation": "Giai đoạn nạp lực",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Giai đoạn dồn lực vào cơ và gân trước khi giải phóng cú đánh."
+  },
+  {
+    "id": "fascia_sling_system",
+    "term_en": "Fascia / Sling System",
+    "term_vi_standard": "Hệ thống dây chằng chéo cân mạc",
+    "term_vi_translation": "Hệ thống dây chằng chéo cân mạc",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Hệ thống các dây chằng fascia kết nối các nhóm cơ, truyền lực xuyên suốt cơ thể."
+  },
+  {
+    "id": "contact_point",
+    "term_en": "Contact Point",
+    "term_vi_standard": "Điểm tiếp xúc bóng",
+    "term_vi_translation": "Điểm tiếp xúc bóng",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Vị trí tiếp xúc giữa mặt vợt và trái banh, quyết định hướng và độ xoáy của banh."
+  },
+  {
+    "id": "strike_zone",
+    "term_en": "Strike Zone",
+    "term_vi_standard": "Vùng đánh bóng lý tưởng",
+    "term_vi_translation": "Vùng đánh bóng lý tưởng",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Vùng không gian tối ưu để tiếp xúc bóng, thường ở ngang hông hoặc cao hơn một chút."
+  },
+  {
+    "id": "wiper_finish",
+    "term_en": "Windshield Wiper Finish",
+    "term_vi_standard": "Kết thúc kiểu cần gạt nước",
+    "term_vi_translation": "Kết thúc kiểu cần gạt nước",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Pha follow-through vợt qua người kiểu cần gạt nước, đặc trưng của forehand topspin hiện đại."
+  },
+  {
+    "id": "open_stance",
+    "term_en": "Open Stance",
+    "term_vi_standard": "Thế đứng mở",
+    "term_vi_translation": "Thế đứng mở",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Tư thế đứng mà hướng người về phía sân đối phương, thường dùng cho forehand cơ bản."
+  },
+  {
+    "id": "semi_open_stance",
+    "term_en": "Semi-Open Stance",
+    "term_vi_standard": "Thế đứng bán mở",
+    "term_vi_translation": "Thế đứng bán mở",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Tư thế đứng giữa open và closed, phổ biến trong forehand hiện đại."
+  },
+  {
+    "id": "closed_stance",
+    "term_en": "Closed Stance",
+    "term_vi_standard": "Thế đứng ngang (đóng)",
+    "term_vi_translation": "Thế đứng ngang (đóng)",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Tư thế đứng mà người hướng vuông góc với lưới, dùng cho backhand và forehand kiểu cũ."
+  },
+  {
+    "id": "leg_drive",
+    "term_en": "Leg Drive",
+    "term_vi_standard": "Lực đẩy từ chân",
+    "term_vi_translation": "Lực đẩy từ chân",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Sử dụng lực đẩy chân để tạo sức mạnh cho cú đánh."
+  },
+  {
+    "id": "hip_rotation",
+    "term_en": "Hip Rotation",
+    "term_vi_standard": "Xoay hông",
+    "term_vi_translation": "Xoay hông",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Xoay hông để khởi động và truyền lực trong chuỗi động học."
+  },
+  {
+    "id": "trunk_rotation",
+    "term_en": "Trunk Rotation",
+    "term_vi_standard": "Xoay thân người",
+    "term_vi_translation": "Xoay thân người",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Xoay thân người để tạo lực xoắn và truyền năng lượng."
+  },
+  {
+    "id": "elbow_extension",
+    "term_en": "Elbow Extension",
+    "term_vi_standard": "Duỗi khuỷu tay",
+    "term_vi_translation": "Duỗi khuỷu tay",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Động tác duỗi khuỷu tay trong pha tiếp xúc, tăng tốc độ vợt."
+  },
+  {
+    "id": "wrist_flick",
+    "term_en": "Wrist Flick (Lag)",
+    "term_vi_standard": "Búng cổ tay",
+    "term_vi_translation": "Búng cổ tay",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Động tác búng cổ tay tạo tốc độ vợt bổ sung trong pha tiếp xúc."
+  },
+  {
+    "id": "racket_head_speed",
+    "term_en": "Racket Head Speed",
+    "term_vi_standard": "Tốc độ đầu vợt",
+    "term_vi_translation": "Tốc độ đầu vợt",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Tốc độ di chuyển của đầu vợt khi tiếp xúc bóng."
+  },
+  {
+    "id": "racket_head_acceleration",
+    "term_en": "Racket Head Acceleration",
+    "term_vi_standard": "Gia tốc đầu vợt",
+    "term_vi_translation": "Gia tốc đầu vợt",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Mức độ tăng tốc của đầu vợt trong pha downswing và tiếp xúc."
+  },
+  {
+    "id": "impact_shock",
+    "term_en": "Impact Shock / Vibration",
+    "term_vi_standard": "Chấn động khi tiếp xúc",
+    "term_vi_translation": "Chấn động khi tiếp xúc",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Lực va chạm truyền qua vợt vào tay và cổ tay khi tiếp xúc bóng."
+  },
+  {
+    "id": "muscle_activation",
+    "term_en": "Muscle Activation / Firing",
+    "term_vi_standard": "Kích hoạt cơ",
+    "term_vi_translation": "Kích hoạt cơ",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Sự hoạt động của các nhóm cơ trong quá trình thực hiện cú đánh."
+  },
+  {
+    "id": "stretch_shortening_cycle",
+    "term_en": "Stretch-Shortening Cycle (SSC)",
+    "term_vi_standard": "Chuỗn co kéo - rút ngắn",
+    "term_vi_translation": "Chuỗn co kéo - rút ngắn",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Cơ chế cơ học nơi cơ được kéo dài trước khi co lại, tạo ra lực lớn hơn."
+  },
+  {
+    "id": "counter_force",
+    "term_en": "Counter Force / Opposition",
+    "term_vi_standard": "Lực đối kháng",
+    "term_vi_translation": "Lực đối kháng",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Sử dụng lực phản để ổn định và kiểm soát cú đánh."
+  },
+  {
+    "id": "angular_momentum",
+    "term_en": "Angular Momentum",
+    "term_vi_standard": "Mô men góc",
+    "term_vi_translation": "Mô men góc",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Lực quay được tạo ra từ sự xoay của cơ thể và vợt."
+  },
+  {
+    "id": "linear_momentum",
+    "term_en": "Linear Momentum",
+    "term_vi_standard": "Mô men tuyến tính",
+    "term_vi_translation": "Mô men tuyến tính",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Lực di chuyển theo đường thẳng, thường từ bước chân vào cú đánh."
+  },
+  {
+    "id": "balance_stability",
+    "term_en": "Balance & Stability",
+    "term_vi_standard": "Thăng bằng và ổn định",
+    "term_vi_translation": "Thăng bằng và ổn định",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Khả năng duy trì trọng tâm khi di chuyển và đánh bóng."
+  },
+  {
+    "id": "kinematic_sequence",
+    "term_en": "Kinematic Sequence",
+    "term_vi_standard": "Trình tự động học",
+    "term_vi_translation": "Trình tự động học",
+    "variants_to_replace": [],
+    "category": "biomechanics",
+    "note": "Trình tự kích hoạt các khớp: chân → hông → thân → vai → tay → vợt."
+  },
+  {
+    "id": "split_step",
+    "term_en": "Split-Step",
+    "term_vi_standard": "Bước nhún tách chân chuẩn bị",
+    "term_vi_translation": "Bước nhún tách chân chuẩn bị",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước nhảy nhỏ tách chân để chuẩn bị di chuyển theo mọi hướng."
+  },
+  {
+    "id": "unit_turn",
+    "term_en": "Unit Turn",
+    "term_vi_standard": "Xoay nguyên khối thân trên",
+    "term_vi_translation": "Xoay nguyên khối thân trên",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Xoay đồng thời thân người và vợt trong pha chuẩn bị."
+  },
+  {
+    "id": "first_step",
+    "term_en": "First Step / Reaction Step",
+    "term_vi_standard": "Bước đầu tiên / Bước phản ứng",
+    "term_vi_translation": "Bước đầu tiên / Bước phản ứng",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân đầu tiên phản ứng lại bóng đối phương."
+  },
+  {
+    "id": "crossover_step",
+    "term_en": "Crossover Step",
+    "term_vi_standard": "Bước chéo chân",
+    "term_vi_translation": "Bước chéo chân",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chéo chân để di chuyển nhanh theo chiều ngang."
+  },
+  {
+    "id": "shuffle_step",
+    "term_en": "Shuffle Step (Lateral Slide)",
+    "term_vi_standard": "Bước trượt ngang",
+    "term_vi_translation": "Bước trượt ngang",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Di chuyển trượt chân theo chiều ngang mà không chéo chân."
+  },
+  {
+    "id": "recovery_step",
+    "term_en": "Recovery Step",
+    "term_vi_standard": "Bước phục hồi",
+    "term_vi_translation": "Bước phục hồi",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân để trở lại vị trí trung tâm sau khi đánh bóng."
+  },
+  {
+    "id": "court_coverage",
+    "term_en": "Court Coverage",
+    "term_vi_standard": "Bao phủ sân",
+    "term_vi_translation": "Bao phủ sân",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Khả năng di chuyển để đến mọi vị trí trên sân."
+  },
+  {
+    "id": "court_positioning",
+    "term_en": "Court Positioning",
+    "term_vi_standard": "Định vị trên sân",
+    "term_vi_translation": "Định vị trên sân",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Chiến lược di chuyển và chiếm giữ vị trí trên sân."
+  },
+  {
+    "id": "approach_footwork",
+    "term_en": "Approach Footwork",
+    "term_vi_standard": "Bước chân tiến vào",
+    "term_vi_translation": "Bước chân tiến vào",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân tiến về phía lưới để chặn bóng ngắn."
+  },
+  {
+    "id": "volley_footwork",
+    "term_en": "Volley Footwork",
+    "term_vi_standard": "Bước chân đánh volê",
+    "term_vi_translation": "Bước chân đánh volê",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân ngắn gọn để đánh volê gần lưới."
+  },
+  {
+    "id": "serve_footwork",
+    "term_en": "Serve Footwork (Platform / Pinpoint)",
+    "term_vi_standard": "Bước chân giao bóng",
+    "term_vi_translation": "Bước chân giao bóng",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Kỹ thuật bước chân khi giao bóng, bao gồm platform và pinpoint."
+  },
+  {
+    "id": "drop_step",
+    "term_en": "Drop Step",
+    "term_vi_standard": "Bước lùi",
+    "term_vi_translation": "Bước lùi",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước lùi để tạo khoảng cách khi bóng bay xa."
+  },
+  {
+    "id": "pistol_step",
+    "term_en": "Pistol Step",
+    "term_vi_standard": "Bước súng",
+    "term_vi_translation": "Bước súng",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân đặc biệt với góc 90 độ để tạo lực đẩy."
+  },
+  {
+    "id": "spanish_movement",
+    "term_en": "Spanish Movement",
+    "term_vi_standard": "Phong cách di chuyển Tây Ban Nha",
+    "term_vi_translation": "Phong cách di chuyển Tây Ban Nha",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Kỹ thuật di chuyển trên sân đất nứt đặc trưng của vận động viên Tây Ban Nha."
+  },
+  {
+    "id": "kick_through",
+    "term_en": "Kick Through",
+    "term_vi_standard": "Đẩy chân qua",
+    "term_vi_translation": "Đẩy chân qua",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Động tác đẩy chân qua sau khi đánh bóng."
+  },
+  {
+    "id": "load_and_explode",
+    "term_en": "Load and Explode",
+    "term_vi_standard": "Nạp và bùng nổ",
+    "term_vi_translation": "Nạp và bùng nổ",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Nạp lực vào chân và giải phóng nhanh chóng để di chuyển."
+  },
+  {
+    "id": "stop_and_go",
+    "term_en": "Stop and Go",
+    "term_vi_standard": "Dừng và đi",
+    "term_vi_translation": "Dừng và đi",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Kỹ thuật dừng đột ngột rồi bắt đầu di chuyển nhanh."
+  },
+  {
+    "id": "accelerate_decelerate",
+    "term_en": "Acceleration / Deceleration",
+    "term_vi_standard": "Tăng tốc / Giảm tốc",
+    "term_vi_translation": "Tăng tốc / Giảm tốc",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Khả năng tăng tốc và giảm tốc nhanh chóng."
+  },
+  {
+    "id": "change_of_direction",
+    "term_en": "Change of Direction",
+    "term_vi_standard": "Đổi hướng",
+    "term_vi_translation": "Đổi hướng",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Khả năng thay đổi hướng di chuyển nhanh chóng."
+  },
+  {
+    "id": "slide_recovery",
+    "term_en": "Slide and Recovery",
+    "term_vi_standard": "Trượt và phục hồi",
+    "term_vi_translation": "Trượt và phục hồi",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Kỹ thuật trượt trên sân và phục hồi vị trí."
+  },
+  {
+    "id": "heel_to_toe",
+    "term_en": "Heel to Toe Transition",
+    "term_vi_standard": "Chuyển gót chân đầu ngón",
+    "term_vi_translation": "Chuyển gót chân đầu ngón",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Chuyển động từ gót chân đến đầu ngón chân khi di chuyển."
+  },
+  {
+    "id": "inside_out_movement",
+    "term_en": "Inside-Out Movement",
+    "term_vi_standard": "Di chuyển từ trong ra ngoài",
+    "term_vi_translation": "Di chuyển từ trong ra ngoài",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Di chuyển từ trong ra ngoài để tạo góc đánh."
+  },
+  {
+    "id": "cross_court_movement",
+    "term_en": "Cross-Court Movement",
+    "term_vi_standard": "Di chuyển chéo sân",
+    "term_vi_translation": "Di chuyển chéo sân",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Di chuyển chéo sân để bao phủ sân đối phương."
+  },
+  {
+    "id": "down_the_line_movement",
+    "term_en": "Down-the-Line Movement",
+    "term_vi_standard": "Di chuyển dọc theo đường",
+    "term_vi_translation": "Di chuyển dọc theo đường",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Di chuyển dọc theo đường biên để tạo góc đánh khó."
+  },
+  {
+    "id": "short_step_adjustment",
+    "term_en": "Short Step Adjustment",
+    "term_vi_standard": "Điều chỉnh bước nhỏ",
+    "term_vi_translation": "Điều chỉnh bước nhỏ",
+    "variants_to_replace": [],
+    "category": "footwork_movement",
+    "note": "Bước chân nhỏ để điều chỉnh vị trí trước khi đánh bóng."
+  },
+  {
+    "id": "forehand",
+    "term_en": "Forehand",
+    "term_vi_standard": "Cú đánh tay thuận (forehand)",
+    "term_vi_translation": "Cú đánh tay thuận (forehand)",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng bằng mặt vợt tay thuận, cú đánh cơ bản nhất trong tennis."
+  },
+  {
+    "id": "backhand",
+    "term_en": "Backhand",
+    "term_vi_standard": "Cú đánh tay trái (backhand)",
+    "term_vi_translation": "Cú đánh tay trái (backhand)",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng bằng mặt vợt tay trái, bao gồm một tay và hai tay."
+  },
+  {
+    "id": "one_handed_backhand",
+    "term_en": "One-Handed Backhand",
+    "term_vi_standard": "Cú đánh tay trái một tay",
+    "term_vi_translation": "Cú đánh tay trái một tay",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú backhand chỉ dùng một tay cầm vợt, tạo ra follow-through đẹp và linh hoạt."
+  },
+  {
+    "id": "two_handed_backhand",
+    "term_en": "Two-Handed Backhand",
+    "term_vi_standard": "Cú đánh tay trái hai tay",
+    "term_vi_translation": "Cú đánh tay trái hai tay",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú backhand dùng hai tay cầm vợt, tạo ra sức mạnh và ổn định hơn."
+  },
+  {
+    "id": "forehand_topspin",
+    "term_en": "Forehand Topspin",
+    "term_vi_standard": "Cú đánh tay thuận xoáy lên",
+    "term_vi_translation": "Cú đánh tay thuận xoáy lên",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú forehand tạo ra độ xoáy lên (topspin) để bóng bay còng và nảy cao."
+  },
+  {
+    "id": "forehand_flat",
+    "term_en": "Forehand Flat Drive",
+    "term_vi_standard": "Cú đánh tay thuận bóng ngang",
+    "term_vi_translation": "Cú đánh tay thuận bóng ngang",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú forehand đánh bóng ngang, ít xoáy, tốc độ cao."
+  },
+  {
+    "id": "forehand_slice",
+    "term_en": "Forehand Slice / Cut",
+    "term_vi_standard": "Cú đánh tay thuận cắt xoáy",
+    "term_vi_translation": "Cú đánh tay thuận cắt xoáy",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú forehand tạo ra độ xoáy ngang hoặc xuống, bóng bay thấp và lướt."
+  },
+  {
+    "id": "backhand_slice",
+    "term_en": "Backhand Slice",
+    "term_vi_standard": "Cú đánh tay trái cắt xoáy",
+    "term_vi_translation": "Cú đánh tay trái cắt xoáy",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú backhand tạo ra độ xoáy ngang, thường dùng để phòng thủ hoặc thay đổi nhịp."
+  },
+  {
+    "id": "backhand_topspin",
+    "term_en": "Backhand Topspin",
+    "term_vi_standard": "Cú đánh tay trái xoáy lên",
+    "term_vi_translation": "Cú đánh tay trái xoáy lên",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú backhand tạo ra độ xoáy lên, thường dùng hai tay."
+  },
+  {
+    "id": "volley",
+    "term_en": "Volley",
+    "term_vi_standard": "Cú đánh volê (bóng nảy)",
+    "term_vi_translation": "Cú đánh volê (bóng nảy)",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng trước khi nảy, thường thực hiện gần lưới."
+  },
+  {
+    "id": "forehand_volley",
+    "term_en": "Forehand Volley",
+    "term_vi_standard": "Cú đánh volê tay thuận",
+    "term_vi_translation": "Cú đánh volê tay thuận",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê thực hiện bằng mặt vợt tay thuận."
+  },
+  {
+    "id": "backhand_volley",
+    "term_en": "Backhand Volley",
+    "term_vi_standard": "Cú đánh volê tay trái",
+    "term_vi_translation": "Cú đánh volê tay trái",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê thực hiện bằng mặt vợt tay trái."
+  },
+  {
+    "id": "half_volley",
+    "term_en": "Half Volley",
+    "term_vi_standard": "Cú đánh bóng vừa nảy",
+    "term_vi_translation": "Cú đánh bóng vừa nảy",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng ngay sau khi nảy, thường ở góc thấp."
+  },
+  {
+    "id": "overhead_smash",
+    "term_en": "Overhead Smash",
+    "term_vi_standard": "Cú đánh đập bóng cao",
+    "term_vi_translation": "Cú đánh đập bóng cao",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng cao từ trên xuống, thường để kết thúc điểm."
+  },
+  {
+    "id": "lob",
+    "term_en": "Lob",
+    "term_vi_standard": "Cú đánh bóng cao (lob)",
+    "term_vi_translation": "Cú đánh bóng cao (lob)",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng bay cao vượt qua đối phương ở gần lưới."
+  },
+  {
+    "id": "defensive_lob",
+    "term_en": "Defensive Lob",
+    "term_vi_standard": "Cú đánh bóng cao phòng thủ",
+    "term_vi_translation": "Cú đánh bóng cao phòng thủ",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú lob để thoát khỏi tình thế bị ép, tạo thời gian phục hồi."
+  },
+  {
+    "id": "offensive_lob",
+    "term_en": "Offensive Lob",
+    "term_vi_standard": "Cú đánh bóng cao tấn công",
+    "term_vi_translation": "Cú đánh bóng cao tấn công",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú lob để tấn công, bóng bay sâu và cao."
+  },
+  {
+    "id": "drop_shot",
+    "term_en": "Drop Shot",
+    "term_vi_standard": "Cú đánh bóng thả (drop shot)",
+    "term_vi_translation": "Cú đánh bóng thả (drop shot)",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú đánh bóng nhẹ, bóng rơi ngay sau lưới, khó tiếp cận."
+  },
+  {
+    "id": "drop_volley",
+    "term_en": "Drop Volley",
+    "term_vi_standard": "Cú đánh volê thả",
+    "term_vi_translation": "Cú đánh volê thả",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê nhẹ, bóng rơi ngay sau lưới."
+  },
+  {
+    "id": "drive_volley",
+    "term_en": "Drive Volley",
+    "term_vi_standard": "Cú đánh volê mạnh",
+    "term_vi_translation": "Cú đánh volê mạnh",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê đánh mạnh, bóng bay nhanh và sâu."
+  },
+  {
+    "id": "punch_volley",
+    "term_en": "Punch Volley",
+    "term_vi_standard": "Cú đánh volê đấm",
+    "term_vi_translation": "Cú đánh volê đấm",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê ngắn gọn, bóng bay nhanh và thấp."
+  },
+  {
+    "id": "swing_volley",
+    "term_en": "Swing Volley",
+    "term_vi_standard": "Cú đánh volê vung",
+    "term_vi_translation": "Cú đánh volê vung",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú volê có pha vung vợt, tạo ra sức mạnh và xoáy."
+  },
+  {
+    "id": "forehand_grip",
+    "term_en": "Forehand Grip",
+    "term_vi_standard": "Cách cầm vợt tay thuận",
+    "term_vi_translation": "Cách cầm vợt tay thuận",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt phù hợp cho cú forehand, bao gồm Eastern, Western, Semi-Western."
+  },
+  {
+    "id": "backhand_grip",
+    "term_en": "Backhand Grip",
+    "term_vi_standard": "Cách cầm vợt tay trái",
+    "term_vi_translation": "Cách cầm vợt tay trái",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt phù hợp cho cú backhand."
+  },
+  {
+    "id": "continental_grip",
+    "term_en": "Continental Grip",
+    "term_vi_standard": "Cách cầm vợt Continental",
+    "term_vi_translation": "Cách cầm vợt Continental",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt đa năng, dùng cho giao bóng, volê, và overhead."
+  },
+  {
+    "id": "eastern_grip",
+    "term_en": "Eastern Grip",
+    "term_vi_standard": "Cách cầm vợt Eastern",
+    "term_vi_translation": "Cách cầm vợt Eastern",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt cổ điển, phù hợp cho forehand bóng ngang."
+  },
+  {
+    "id": "western_grip",
+    "term_en": "Western Grip",
+    "term_vi_standard": "Cách cầm vợt Western",
+    "term_vi_translation": "Cách cầm vợt Western",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt hiện đại, tạo ra topspin nặng."
+  },
+  {
+    "id": "semi_western_grip",
+    "term_en": "Semi-Western Grip",
+    "term_vi_standard": "Cách cầm vợt Semi-Western",
+    "term_vi_translation": "Cách cầm vợt Semi-Western",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt phổ biến nhất hiện đại, cân bằng giữa topspin và bóng ngang."
+  },
+  {
+    "id": "australian_grip",
+    "term_en": "Australian Grip",
+    "term_vi_standard": "Cách cầm vợt Australian",
+    "term_vi_translation": "Cách cầm vợt Australian",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt forehand với hỗ trợ cổ tay."
+  },
+  {
+    "id": "hammer_grip",
+    "term_en": "Hammer Grip",
+    "term_vi_standard": "Cách cầm vợt kiểm búa",
+    "term_vi_translation": "Cách cầm vợt kiểm búa",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cách cầm vợt kiểm cầm búa, thường dùng cho giao bóng."
+  },
+  {
+    "id": "serve_motion",
+    "term_en": "Serve Motion",
+    "term_vi_standard": "Chuyển động giao bóng",
+    "term_vi_translation": "Chuyển động giao bóng",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Chuyển động hoàn chỉnh của cú giao bóng, từ toss đến follow-through."
+  },
+  {
+    "id": "flat_serve",
+    "term_en": "Flat Serve",
+    "term_vi_standard": "Cú giao bóng ngang",
+    "term_vi_translation": "Cú giao bóng ngang",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú giao bóng tốc độ cao, ít xoáy."
+  },
+  {
+    "id": "slice_serve",
+    "term_en": "Slice Serve",
+    "term_vi_standard": "Cú giao bóng cắt xoáy",
+    "term_vi_translation": "Cú giao bóng cắt xoáy",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú giao bóng tạo ra độ xoáy ngang, bóng bay cong."
+  },
+  {
+    "id": "kick_serve",
+    "term_en": "Kick Serve / Topspin Serve",
+    "term_vi_standard": "Cú giao bóng xoáy lên",
+    "term_vi_translation": "Cú giao bóng xoáy lên",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú giao bóng tạo ra độ xoáy lên, bóng nảy cao."
+  },
+  {
+    "id": "underhand_serve",
+    "term_en": "Underhand Serve",
+    "term_vi_standard": "Cú giao bóng dưới",
+    "term_vi_translation": "Cú giao bóng dưới",
+    "variants_to_replace": [],
+    "category": "strokes",
+    "note": "Cú giao bóng thấp, thường dùng để bất ngờ đối phương."
+  },
+  {
+    "id": "rally",
+    "term_en": "Rally",
+    "term_vi_standard": "Pha trao đổi bóng",
+    "term_vi_translation": "Pha trao đổi bóng",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Chuỗi cú đánh liên tục giữa hai bên."
+  },
+  {
+    "id": "baseline_rally",
+    "term_en": "Baseline Rally",
+    "term_vi_standard": "Trao đổi bóng ở phía sau sân",
+    "term_vi_translation": "Trao đổi bóng ở phía sau sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Pha trao đổi bóng từ phía sau sân, thường với forehand và backhand."
+  },
+  {
+    "id": "approach_shot",
+    "term_en": "Approach Shot",
+    "term_vi_standard": "Cú đánh tiến vào",
+    "term_vi_translation": "Cú đánh tiến vào",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh để tiến vào gần lưới, thường là cú đánh ngắn hoặc cắt xoáy."
+  },
+  {
+    "id": "passing_shot",
+    "term_en": "Passing Shot",
+    "term_vi_standard": "Cú đánh xuyên qua",
+    "term_vi_translation": "Cú đánh xuyên qua",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh vượt qua đối phương ở gần lưới."
+  },
+  {
+    "id": "angle_shot",
+    "term_en": "Angle Shot",
+    "term_vi_standard": "Cú đánh góc",
+    "term_vi_translation": "Cú đánh góc",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh tạo ra góc rộng, buộc đối phương phải di chuyển nhiều."
+  },
+  {
+    "id": "down_the_line",
+    "term_en": "Down the Line",
+    "term_vi_standard": "Cú đánh dọc theo đường",
+    "term_vi_translation": "Cú đánh dọc theo đường",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh bóng dọc theo đường biên, tạo ra góc khó."
+  },
+  {
+    "id": "cross_court",
+    "term_en": "Cross-Court",
+    "term_vi_standard": "Cú đánh chéo sân",
+    "term_vi_translation": "Cú đánh chéo sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh bóng chéo sân, tạo ra khoảng cách xa."
+  },
+  {
+    "id": "inside_out",
+    "term_en": "Inside-Out",
+    "term_vi_standard": "Cú đánh từ trong ra ngoài",
+    "term_vi_translation": "Cú đánh từ trong ra ngoài",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh từ trong ra ngoài, tạo ra góc đánh khó."
+  },
+  {
+    "id": "inside_in",
+    "term_en": "Inside-In",
+    "term_vi_standard": "Cú đánh từ trong vào trong",
+    "term_vi_translation": "Cú đánh từ trong vào trong",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh từ trong vào trong, thường dùng để tấn công."
+  },
+  {
+    "id": "moonball",
+    "term_en": "Moonball",
+    "term_vi_standard": "Cú đánh bóng cao chậm",
+    "term_vi_translation": "Cú đánh bóng cao chậm",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh bóng cao và chậm, thường dùng để thay đổi nhịp."
+  },
+  {
+    "id": "junk_ball",
+    "term_en": "Junk Ball",
+    "term_vi_standard": "Cú đánh bóng vô hiệu",
+    "term_vi_translation": "Cú đánh bóng vô hiệu",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh bóng khó đọc, thường có xoáy lạ hoặc tốc độ chậm."
+  },
+  {
+    "id": "serve_and_volley",
+    "term_en": "Serve and Volley",
+    "term_vi_standard": "Giao bóng và tiến vào",
+    "term_vi_translation": "Giao bóng và tiến vào",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Chiến thuật giao bóng rồi tiến vào gần lưới để đánh volê."
+  },
+  {
+    "id": "return_of_serve",
+    "term_en": "Return of Serve",
+    "term_vi_standard": "Cú đánh trả bóng giao",
+    "term_vi_translation": "Cú đánh trả bóng giao",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cú đánh trả bóng giao của đối phương."
+  },
+  {
+    "id": "return_position",
+    "term_en": "Return Position",
+    "term_vi_standard": "Vị trí trả bóng giao",
+    "term_vi_translation": "Vị trí trả bóng giao",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vị trí đứn để trả bóng giao, thường ở góc sân."
+  },
+  {
+    "id": "serve_position",
+    "term_en": "Serve Position",
+    "term_vi_standard": "Vị trí giao bóng",
+    "term_vi_translation": "Vị trí giao bóng",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vị trí đứn để giao bóng, thường ở giữa sân."
+  },
+  {
+    "id": "doubles_position",
+    "term_en": "Doubles Position",
+    "term_vi_standard": "Vị trí đánh đôi",
+    "term_vi_translation": "Vị trí đánh đôi",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vị trí đứn khi đánh đôi, thường ở góc sân."
+  },
+  {
+    "id": "net_position",
+    "term_en": "Net Position",
+    "term_vi_standard": "Vị trí gần lưới",
+    "term_vi_translation": "Vị trí gần lưới",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vị trí đứn gần lưới để đánh volê."
+  },
+  {
+    "id": "baseline_position",
+    "term_en": "Baseline Position",
+    "term_vi_standard": "Vị trí phía sau sân",
+    "term_vi_translation": "Vị trí phía sau sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vị trí đứn ở phía sau sân để trao đổi bóng."
+  },
+  {
+    "id": "court_geometry",
+    "term_en": "Court Geometry",
+    "term_vi_standard": "Hình học sân",
+    "term_vi_translation": "Hình học sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Cách sử dụng không gian sân để tạo ra góc đánh."
+  },
+  {
+    "id": "court_opening",
+    "term_en": "Court Opening",
+    "term_vi_standard": "Khoảng trống trên sân",
+    "term_vi_translation": "Khoảng trống trên sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Khoảng trống trên sân mà đối phương không thể bao phủ."
+  },
+  {
+    "id": "pattern_play",
+    "term_en": "Pattern Play",
+    "term_vi_standard": "Mẫu đánh bóng",
+    "term_vi_translation": "Mẫu đánh bóng",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Mẫu đánh bóng lặp lại để tạo ra lợi thế."
+  },
+  {
+    "id": "tempo_control",
+    "term_en": "Tempo Control",
+    "term_vi_standard": "Kiểm soát nhịp độ",
+    "term_vi_translation": "Kiểm soát nhịp độ",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Kiểm soát nhịp độ trận đấu để làm khó đối phương."
+  },
+  {
+    "id": "momentum_shift",
+    "term_en": "Momentum Shift",
+    "term_vi_standard": "Thay đổi đà",
+    "term_vi_translation": "Thay đổi đà",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Thay đổi đà trận đấu để lấy lại lợi thế."
+  },
+  {
+    "id": "pressure_point",
+    "term_en": "Pressure Point",
+    "term_vi_standard": "Điểm ép buộc",
+    "term_vi_translation": "Điểm ép buộc",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Điểm quan trọng trong trận đấu, thường là break point hoặc set point."
+  },
+  {
+    "id": "clutch_play",
+    "term_en": "Clutch Play",
+    "term_vi_standard": "Đánh bóng quyết định",
+    "term_vi_translation": "Đánh bóng quyết định",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Đánh bóng quyết định vào thời điểm quan trọng."
+  },
+  {
+    "id": "percentage_tennis",
+    "term_en": "Percentage Tennis",
+    "term_vi_standard": "Tennis tỷ lệ phầm trăm",
+    "term_vi_translation": "Tennis tỷ lệ phầm trăm",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Chiến thuật đánh bóng an toàn, giảm thiểu sai lầm."
+  },
+  {
+    "id": "aggressive_baseline",
+    "term_en": "Aggressive Baseline",
+    "term_vi_standard": "Tấn công từ phía sau sân",
+    "term_vi_translation": "Tấn công từ phía sau sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Chiến thuật tấn công từ phía sau sân với topspin mạnh."
+  },
+  {
+    "id": "all_court_game",
+    "term_en": "All-Court Game",
+    "term_vi_standard": "Lối chơi toàn sân",
+    "term_vi_translation": "Lối chơi toàn sân",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Lối chơi linh hoạt, có thể chơi ở mọi vị trí trên sân."
+  },
+  {
+    "id": "counter_puncher",
+    "term_en": "Counter-Puncher",
+    "term_vi_standard": "Người đánh phản công",
+    "term_vi_translation": "Người đánh phản công",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vận động viên chuyên đánh phản công, chờ đối phương sai lầm."
+  },
+  {
+    "id": "serve_and_volleyer",
+    "term_en": "Serve-and-Volleyer",
+    "term_vi_standard": "Người giao bóng và tiến vào",
+    "term_vi_translation": "Người giao bóng và tiến vào",
+    "variants_to_replace": [],
+    "category": "tactics",
+    "note": "Vận động viên chuyên giao bóng và tiến vào gần lưới."
+  },
+  {
+    "id": "doubles",
+    "term_en": "Doubles",
+    "term_vi_standard": "Đánh đôi",
+    "term_vi_translation": "Đánh đôi",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Trận đấu giữa hai cặp, mỗi cặp hai người."
+  },
+  {
+    "id": "doubles_formation",
+    "term_en": "Doubles Formation",
+    "term_vi_standard": "Đội hình đánh đôi",
+    "term_vi_translation": "Đội hình đánh đôi",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Đội hình đánh đôi, bao gồm side-by-side và up-and-back."
+  },
+  {
+    "id": "side_by_side",
+    "term_en": "Side-by-Side",
+    "term_vi_standard": "Đánh ngang",
+    "term_vi_translation": "Đánh ngang",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Đội hình hai người đứng ngang nhau ở cùng một vị trí."
+  },
+  {
+    "id": "up_and_back",
+    "term_en": "Up-and-Back (I-Formation)",
+    "term_vi_standard": "Đánh trên-dưới (đội hình I)",
+    "term_vi_translation": "Đánh trên-dưới (đội hình I)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Đội hình một người ở gần lưới, một người ở phía sau sân."
+  },
+  {
+    "id": "australian_formation",
+    "term_en": "Australian Formation",
+    "term_vi_standard": "Đội hình Úc",
+    "term_vi_translation": "Đội hình Úc",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Đội hình đánh đôi với hai người đứng cùng bên."
+  },
+  {
+    "id": "serve_and_volley_doubles",
+    "term_en": "Serve-and-Volley Doubles",
+    "term_vi_standard": "Đánh đôi giao bóng và tiến vào",
+    "term_vi_translation": "Đánh đôi giao bóng và tiến vào",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Chiến thuật đánh đôi với người giao bóng tiến vào gần lưới."
+  },
+  {
+    "id": "return_doubles",
+    "term_en": "Return of Serve (Doubles)",
+    "term_vi_standard": "Trả bóng giao (đánh đôi)",
+    "term_vi_translation": "Trả bóng giao (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Cú đánh trả bóng giao trong đánh đôi."
+  },
+  {
+    "id": "poach",
+    "term_en": "Poach",
+    "term_vi_standard": "Chặn bóng",
+    "term_vi_translation": "Chặn bóng",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Di chuyển chéo để chặn bóng đối phương ở gần lưới."
+  },
+  {
+    "id": "fake_poach",
+    "term_en": "Fake Poach",
+    "term_vi_standard": "Giả chặn bóng",
+    "term_vi_translation": "Giả chặn bóng",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Động tác giả chặn bóng để làm đối phương lúng túng."
+  },
+  {
+    "id": "overhead_doubles",
+    "term_en": "Overhead (Doubles)",
+    "term_vi_standard": "Cú đánh đập bóng cao (đánh đôi)",
+    "term_vi_translation": "Cú đánh đập bóng cao (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Cú đánh đập bóng cao trong đánh đôi, thường để kết thúc điểm."
+  },
+  {
+    "id": "volley_exchange",
+    "term_en": "Volley Exchange",
+    "term_vi_standard": "Trao đổi volê",
+    "term_vi_translation": "Trao đổi volê",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Pha trao đổi volê giữa hai cặp ở gần lưới."
+  },
+  {
+    "id": "passing_shot_doubles",
+    "term_en": "Passing Shot (Doubles)",
+    "term_vi_standard": "Cú đánh xuyên qua (đánh đôi)",
+    "term_vi_translation": "Cú đánh xuyên qua (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Cú đánh vượt qua đối phương ở gần lưới trong đánh đôi."
+  },
+  {
+    "id": "lob_doubles",
+    "term_en": "Lob (Doubles)",
+    "term_vi_standard": "Cú đánh bóng cao (đánh đôi)",
+    "term_vi_translation": "Cú đánh bóng cao (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Cú đánh bóng cao vượt qua đối phương ở gần lưới."
+  },
+  {
+    "id": "court_coverage_doubles",
+    "term_en": "Court Coverage (Doubles)",
+    "term_vi_standard": "Bao phủ sân (đánh đôi)",
+    "term_vi_translation": "Bao phủ sân (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Cách bao phủ sân trong đánh đôi, thường chia đôi sân."
+  },
+  {
+    "id": "communication_doubles",
+    "term_en": "Communication",
+    "term_vi_standard": "Giao tiếp",
+    "term_vi_translation": "Giao tiếp",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Giao tiếp giữa hai người chơi trong đánh đôi."
+  },
+  {
+    "id": "partner_call",
+    "term_en": "Partner Call",
+    "term_vi_standard": "Gọi bạn chơi",
+    "term_vi_translation": "Gọi bạn chơi",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Gọi bạn chơi để xác định ai đánh bóng."
+  },
+  {
+    "id": "switching",
+    "term_en": "Switching",
+    "term_vi_standard": "Đổi vị trí",
+    "term_vi_translation": "Đổi vị trí",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Đổi vị trí giữa hai người chơi trong đánh đôi."
+  },
+  {
+    "id": "stacking",
+    "term_en": "Stacking",
+    "term_vi_standard": "Xếp chồng",
+    "term_vi_translation": "Xếp chồng",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Chiến thuật xếp chồng vị trí trong đánh đôi."
+  },
+  {
+    "id": "serve_strategy_doubles",
+    "term_en": "Serve Strategy (Doubles)",
+    "term_vi_standard": "Chiến thuật giao bóng (đánh đôi)",
+    "term_vi_translation": "Chiến thuật giao bóng (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Chiến thuật giao bóng trong đánh đôi."
+  },
+  {
+    "id": "return_strategy_doubles",
+    "term_en": "Return Strategy (Doubles)",
+    "term_vi_standard": "Chiến thuật trả bóng (đánh đôi)",
+    "term_vi_translation": "Chiến thuật trả bóng (đánh đôi)",
+    "variants_to_replace": [],
+    "category": "doubles",
+    "note": "Chiến thuật trả bóng giao trong đánh đôi."
+  },
+  {
+    "id": "warm_up",
+    "term_en": "Warmup",
+    "term_vi_standard": "Khởi động",
+    "term_vi_translation": "Khởi động",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Quá trình khởi động trước khi tập luyện hoặc thi đấu."
+  },
+  {
+    "id": "cool_down",
+    "term_en": "Cooldown",
+    "term_vi_standard": "Hạ nhiệt",
+    "term_vi_translation": "Hạ nhiệt",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Quá trình hạ nhiệt sau khi tập luyện hoặc thi đấu."
+  },
+  {
+    "id": "cardio",
+    "term_en": "Cardiovascular Training",
+    "term_vi_standard": "Tập tim mạch",
+    "term_vi_translation": "Tập tim mạch",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện tim mạch để cải thiện sức bền."
+  },
+  {
+    "id": "strength_training",
+    "term_en": "Strength Training",
+    "term_vi_standard": "Tập sức mạnh",
+    "term_vi_translation": "Tập sức mạnh",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện sức mạnh để tăng sức mạnh cơ bắp."
+  },
+  {
+    "id": "flexibility_training",
+    "term_en": "Flexibility Training",
+    "term_vi_standard": "Tập linh hoạt",
+    "term_vi_translation": "Tập linh hoạt",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện linh hoạt để cải thiện phạm vi chuyển động."
+  },
+  {
+    "id": "agility_training",
+    "term_en": "Agility Training",
+    "term_vi_standard": "Tập nhanh nhẹn",
+    "term_vi_translation": "Tập nhanh nhẹn",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện nhanh nhẹn để cải thiện phản xạ và di chuyển."
+  },
+  {
+    "id": "balance_training",
+    "term_en": "Balance Training",
+    "term_vi_standard": "Tập thăng bằng",
+    "term_vi_translation": "Tập thăng bằng",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện thăng bằng để cải thiện ổn định."
+  },
+  {
+    "id": "coordination_training",
+    "term_en": "Coordination Training",
+    "term_vi_standard": "Tập phối hợp",
+    "term_vi_translation": "Tập phối hợp",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện phối hợp tay-mắt và cơ thể."
+  },
+  {
+    "id": "reaction_training",
+    "term_en": "Reaction Training",
+    "term_vi_standard": "Tập phản xạ",
+    "term_vi_translation": "Tập phản xạ",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện phản xạ để cải thiện thời gian phản ứng."
+  },
+  {
+    "id": "speed_training",
+    "term_en": "Speed Training",
+    "term_vi_standard": "Tập tốc độ",
+    "term_vi_translation": "Tập tốc độ",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện tốc độ để cải thiện tốc độ di chuyển."
+  },
+  {
+    "id": "endurance_training",
+    "term_en": "Endurance Training",
+    "term_vi_standard": "Tập sức bền",
+    "term_vi_translation": "Tập sức bền",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện sức bền để duy trì thể lực lâu dài."
+  },
+  {
+    "id": "power_training",
+    "term_en": "Power Training",
+    "term_vi_standard": "Tập sức mạnh bứt phá",
+    "term_vi_translation": "Tập sức mạnh bứt phá",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện sức mạnh bứt phá để tạo ra lực lớn trong thời gian ngắn."
+  },
+  {
+    "id": "footwork_drills",
+    "term_en": "Footwork Drills",
+    "term_vi_standard": "Bài tập bước chân",
+    "term_vi_translation": "Bài tập bước chân",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Bài tập bước chân để cải thiện kỹ thuật di chuyển."
+  },
+  {
+    "id": "shadow_swing",
+    "term_en": "Shadow Swing",
+    "term_vi_standard": "Vung vợt bóng giả",
+    "term_vi_translation": "Vung vợt bóng giả",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Vung vợt không bóng để luyện kỹ thuật."
+  },
+  {
+    "id": "ball_machine_drill",
+    "term_en": "Ball Machine Drill",
+    "term_vi_standard": "Bài tập máy bắn bóng",
+    "term_vi_translation": "Bài tập máy bắn bóng",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Bài tập với máy bắn bóng để luyện kỹ thuật cơ bản."
+  },
+  {
+    "id": "live_ball_drill",
+    "term_en": "Live Ball Drill",
+    "term_vi_standard": "Bài tập bóng thật",
+    "term_vi_translation": "Bài tập bóng thật",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Bài tập với bóng thật để mô phỏng tình huống thi đấu."
+  },
+  {
+    "id": "match_play",
+    "term_en": "Match Play",
+    "term_vi_standard": "Thi đấu",
+    "term_vi_translation": "Thi đấu",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Thi đấu thực tế để áp dụng kỹ thuật và chiến thuật."
+  },
+  {
+    "id": "video_analysis",
+    "term_en": "Video Analysis",
+    "term_vi_standard": "Phân tích video",
+    "term_vi_translation": "Phân tích video",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Phân tích video để cải thiện kỹ thuật và chiến thuật."
+  },
+  {
+    "id": "periodization",
+    "term_en": "Periodization",
+    "term_vi_standard": "Chu kỳ hóa",
+    "term_vi_translation": "Chu kỳ hóa",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Lên kế hoạch tập luyện theo chu kỳ để đạt đỉnh thể lực."
+  },
+  {
+    "id": "recovery_training",
+    "term_en": "Recovery Training",
+    "term_vi_standard": "Tập phục hồi",
+    "term_vi_translation": "Tập phục hồi",
+    "variants_to_replace": [],
+    "category": "training_conditioning",
+    "note": "Tập luyện phục hồi để phục hồi cơ thể sau tập luyện nặng."
+  },
+  {
+    "id": "mental_toughness",
+    "term_en": "Mental Toughness",
+    "term_vi_standard": "Sức mạnh tinh thần",
+    "term_vi_translation": "Sức mạnh tinh thần",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Khả năng duy trì tập trung và kiểm soát cảm xúc dưới áp lực."
+  },
+  {
+    "id": "focus",
+    "term_en": "Focus / Concentration",
+    "term_vi_standard": "Tập trung",
+    "term_vi_translation": "Tập trung",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Khả năng tập trung vào cú đánh hiện tại, không phân tâm."
+  },
+  {
+    "id": "visualization",
+    "term_en": "Visualization",
+    "term_vi_standard": "Hình dung",
+    "term_vi_translation": "Hình dung",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Kỹ thuật hình dung cú đánh trước khi thực hiện."
+  },
+  {
+    "id": "positive_self_talk",
+    "term_en": "Positive Self-Talk",
+    "term_vi_standard": "Tự động viên",
+    "term_vi_translation": "Tự động viên",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Nói chuyện tích cực với bản thân để tăng tự tin."
+  },
+  {
+    "id": "breathing_techniques",
+    "term_en": "Breathing Techniques",
+    "term_vi_standard": "Kỹ thuật thở",
+    "term_vi_translation": "Kỹ thuật thở",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Kỹ thuật thở để giảm căng thẳng và tập trung."
+  },
+  {
+    "id": "emotional_control",
+    "term_en": "Emotional Control",
+    "term_vi_standard": "Kiểm soát cảm xúc",
+    "term_vi_translation": "Kiểm soát cảm xúc",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Khả năng kiểm soát cảm xúc tiêu cực như tức giận hoặc thất vọng."
+  },
+  {
+    "id": "resilience",
+    "term_en": "Resilience",
+    "term_vi_standard": "Khả năng phục hồi",
+    "term_vi_translation": "Khả năng phục hồi",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Khả năng phục hồi sau thất bại hoặc sai lầm."
+  },
+  {
+    "id": "flow_state",
+    "term_en": "Flow State (The Zone)",
+    "term_vi_standard": "Trạng thái dòng chảy",
+    "term_vi_translation": "Trạng thái dòng chảy",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Trạng thái tập trung cao độ, mọi cú đánh đều chính xác."
+  },
+  {
+    "id": "choking",
+    "term_en": "Choking",
+    "term_vi_standard": "Nghẹn ngào / Áp lực",
+    "term_vi_translation": "Nghẹn ngào / Áp lực",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Mất tập trung và thi hiện kém dưới áp lực."
+  },
+  {
+    "id": "confidence",
+    "term_en": "Confidence",
+    "term_vi_standard": "Tự tin",
+    "term_vi_translation": "Tự tin",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Sự tự tin vào khả năng của bản thân."
+  },
+  {
+    "id": "motivation",
+    "term_en": "Motivation",
+    "term_vi_standard": "Động lực",
+    "term_vi_translation": "Động lực",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Động lực để tập luyện và thi đấu."
+  },
+  {
+    "id": "goal_setting",
+    "term_en": "Goal Setting",
+    "term_vi_standard": "Đặt mục tiêu",
+    "term_vi_translation": "Đặt mục tiêu",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Đặt mục tiêu ngắn hạn và dài hạn để phát triển."
+  },
+  {
+    "id": "pre_match_routine",
+    "term_en": "Pre-Match Routine",
+    "term_vi_standard": "Thói quen trước trận",
+    "term_vi_translation": "Thói quen trước trận",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Thói quen trước trận để chuẩn bị tinh thần."
+  },
+  {
+    "id": "between_point_routine",
+    "term_en": "Between-Point Routine",
+    "term_vi_standard": "Thói quen giữa các điểm",
+    "term_vi_translation": "Thói quen giữa các điểm",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Thói quen giữa các điểm để phục hồi và chuẩn bị."
+  },
+  {
+    "id": "adversity_response",
+    "term_en": "Adversity Response",
+    "term_vi_standard": "Phản ứng với khó khăn",
+    "term_vi_translation": "Phản ứng với khó khăn",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Cách phản ứng khi gặp khó khăn trong trận đấu."
+  },
+  {
+    "id": "match_mindset",
+    "term_en": "Match Mindset",
+    "term_vi_standard": "Tư duy thi đấu",
+    "term_vi_translation": "Tư duy thi đấu",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Tư duy thi đấu để đạt hiệu suất tối đa."
+  },
+  {
+    "id": "pressure_management",
+    "term_en": "Pressure Management",
+    "term_vi_standard": "Quản lý áp lực",
+    "term_vi_translation": "Quản lý áp lực",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Cách quản lý áp lực trong tình huống quan trọng."
+  },
+  {
+    "id": "distraction_management",
+    "term_en": "Distraction Management",
+    "term_vi_standard": "Quản lý sự phân tâm",
+    "term_vi_translation": "Quản lý sự phân tâm",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Cách quản lý sự phân tâm từ môi trường xung quanh."
+  },
+  {
+    "id": "competitive_spirit",
+    "term_en": "Competitive Spirit",
+    "term_vi_standard": "Tinh thần cạnh tranh",
+    "term_vi_translation": "Tinh thần cạnh tranh",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Tinh thần cạnh tranh lành mạnh để phát triển."
+  },
+  {
+    "id": "enjoyment",
+    "term_en": "Enjoyment",
+    "term_vi_standard": "Tận hưởng",
+    "term_vi_translation": "Tận hưởng",
+    "variants_to_replace": [],
+    "category": "mental_psychology",
+    "note": "Tận hưởng trận đấu để giảm áp lực và tăng hiệu suất."
+  },
+  {
+    "id": "racket",
+    "term_en": "Racket / Racquet",
+    "term_vi_standard": "Vợt tennis",
+    "term_vi_translation": "Vợt tennis",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Dụng cụ cầm tay để đánh bóng, bao gồm frame, strings, và grip."
+  },
+  {
+    "id": "strings",
+    "term_en": "Strings",
+    "term_vi_standard": "Dây vợt",
+    "term_vi_translation": "Dây vợt",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Dây vợt tạo ra độ đàn hồi và kiểm soát bóng."
+  },
+  {
+    "id": "string_tension",
+    "term_en": "String Tension",
+    "term_vi_standard": "Độ căng dây vợt",
+    "term_vi_translation": "Độ căng dây vợt",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Độ căng dây vợt, ảnh hưởng đến sức mạnh và kiểm soát."
+  },
+  {
+    "id": "grip",
+    "term_en": "Grip (Overgrip)",
+    "term_vi_standard": "Bọc cán vợt",
+    "term_vi_translation": "Bọc cán vợt",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Bọc cán vợt để tăng độ bám và thoải mái."
+  },
+  {
+    "id": "dampener",
+    "term_en": "Dampener / Vibration Dampener",
+    "term_vi_standard": "Giảm chấn",
+    "term_vi_translation": "Giảm chấn",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Thiết bị giảm chấn động khi tiếp xúc bóng."
+  },
+  {
+    "id": "shoes",
+    "term_en": "Tennis Shoes",
+    "term_vi_standard": "Giày tennis",
+    "term_vi_translation": "Giày tennis",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Giày thiết kế đặc biệt cho tennis, hỗ trợ di chuyển và bảo vệ chân."
+  },
+  {
+    "id": "clothing",
+    "term_en": "Tennis Clothing",
+    "term_vi_standard": "Quần áo tennis",
+    "term_vi_translation": "Quần áo tennis",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Quần áo thiết kế cho tennis, thoáng khí và thoải mái."
+  },
+  {
+    "id": "wristband",
+    "term_en": "Wristband",
+    "term_vi_standard": "Băng tay",
+    "term_vi_translation": "Băng tay",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Băng tay để mồ hôi và hỗ trợ cổ tay."
+  },
+  {
+    "id": "headband",
+    "term_en": "Headband",
+    "term_vi_standard": "Băng đầu",
+    "term_vi_translation": "Băng đầu",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Băng đầu để mồ hôi và giữ tóc."
+  },
+  {
+    "id": "sunglasses",
+    "term_en": "Sunglasses",
+    "term_vi_standard": "Kính râm",
+    "term_vi_translation": "Kính râm",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Kính râm để bảo vệ mắt khỏi ánh nắng."
+  },
+  {
+    "id": "sunscreen",
+    "term_en": "Sunscreen",
+    "term_vi_standard": "Kem chống nắng",
+    "term_vi_translation": "Kem chống nắng",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Kem chống nắng để bảo vệ da khi chơi ngoài trời."
+  },
+  {
+    "id": "water_bottle",
+    "term_en": "Water Bottle",
+    "term_vi_standard": "Bình nước",
+    "term_vi_translation": "Bình nước",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Bình nước để giữ nước khi tập luyện và thi đấu."
+  },
+  {
+    "id": "towel",
+    "term_en": "Towel",
+    "term_vi_standard": "Khăn",
+    "term_vi_translation": "Khăn",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Khăn để lau mồ hôi."
+  },
+  {
+    "id": "bag",
+    "term_en": "Tennis Bag",
+    "term_vi_standard": "Túi tennis",
+    "term_vi_translation": "Túi tennis",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Túi đựng vợt và dụng cụ tennis."
+  },
+  {
+    "id": "ball",
+    "term_en": "Tennis Ball",
+    "term_vi_standard": "Bóng tennis",
+    "term_vi_translation": "Bóng tennis",
+    "variants_to_replace": [],
+    "category": "equipment",
+    "note": "Bóng tennis tiêu chuẩn, bao gồm bóng xanh, vàng, và đỏ."
+  },
+  {
+    "id": "court_surface",
+    "term_en": "Court Surface",
+    "term_vi_standard": "Bề mặt sân",
+    "term_vi_translation": "Bề mặt sân",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Bề mặt sân tennis, bao gồm cỏ, đất nứt, nhựa cứng, và thảm."
+  },
+  {
+    "id": "grass_court",
+    "term_en": "Grass Court",
+    "term_vi_standard": "Sân cỏ",
+    "term_vi_translation": "Sân cỏ",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Sân cỏ tự nhiên, bóng bay nhanh và thấp."
+  },
+  {
+    "id": "clay_court",
+    "term_en": "Clay Court",
+    "term_vi_standard": "Sân đất nứt",
+    "term_vi_translation": "Sân đất nứt",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Sân đất nứt, bóng bay chậm và nảy cao."
+  },
+  {
+    "id": "hard_court",
+    "term_en": "Hard Court",
+    "term_vi_standard": "Sân nhựa cứng",
+    "term_vi_translation": "Sân nhựa cứng",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Sân nhựa cứng, bóng bay trung bình và đều."
+  },
+  {
+    "id": "indoor_court",
+    "term_en": "Indoor Court",
+    "term_vi_standard": "Sân trong nhà",
+    "term_vi_translation": "Sân trong nhà",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Sân trong nhà, không bị ảnh hưởng bởi thời tiết."
+  },
+  {
+    "id": "scoring",
+    "term_en": "Scoring System",
+    "term_vi_standard": "Hệ thống tính điểm",
+    "term_vi_translation": "Hệ thống tính điểm",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Hệ thống tính điểm tennis: 15, 30, 40, game."
+  },
+  {
+    "id": "deuce",
+    "term_en": "Deuce",
+    "term_vi_standard": "Hòa (deuce)",
+    "term_vi_translation": "Hòa (deuce)",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Tình huống hòa 40-40, cần thắng 2 điểm liên tiếp để thắng game."
+  },
+  {
+    "id": "advantage",
+    "term_en": "Advantage",
+    "term_vi_standard": "Ưu thế (advantage)",
+    "term_vi_translation": "Ưu thế (advantage)",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Ưu thế sau deuce, cần thắng điểm tiếp theo để thắng game."
+  },
+  {
+    "id": "tiebreak",
+    "term_en": "Tiebreak",
+    "term_vi_standard": "Tiebreak (game quyết định)",
+    "term_vi_translation": "Tiebreak (game quyết định)",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Game quyết định khi tỷ số 6-6, thắng 7 điểm với cách biệt 2."
+  },
+  {
+    "id": "no_ad_scoring",
+    "term_en": "No-Ad Scoring",
+    "term_vi_standard": "Tính điểm không ưu thế",
+    "term_vi_translation": "Tính điểm không ưu thế",
+    "variants_to_replace": [],
+    "category": "court_scoring",
+    "note": "Hệ thống tính điểm nhanh, không có ưu thế sau deuce."
+  }
+];
 
     fetch(GLOSSARY_JSON_PATH)
       .then(r => {
