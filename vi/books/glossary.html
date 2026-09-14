@@ -146,10 +146,41 @@
 </style>
 <link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
 <link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  /* site.css loads at html { font-size: 25px } and restyles inputs/h2 — restore this page. */
+  html { font-size: 16px !important; }
+  body.glossary-page{
+    display:block;
+    background: var(--page-bg);
+    color: var(--text-main);
+    font-family: var(--grotesk);
+    line-height:1.5;
+  }
+  body.glossary-page .court-lines a{ color:inherit; }
+  .toolbar, .search-row{ width:100%; }
+  #search{
+    flex:1 1 260px;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    display:block;
+    font-size:1.05rem;
+  }
+  h2.category-title{
+    font-family: var(--serif);
+    font-size:1.05rem !important;
+    font-weight:600;
+    margin:0 0 8px;
+    padding-bottom:6px !important;
+    border-bottom:1px solid var(--hairline) !important;
+    color: var(--court-ink-soft) !important;
+  }
+  [data-theme="dark"] h2.category-title{ color: var(--court-ink) !important; }
+</style>
 <script src="/assets/javascripts/lang-toggle.js" defer></script>
 <script src="/assets/javascripts/darkmode.js" defer></script>
 </head>
-<body data-theme="light">
+<body class="glossary-page" data-theme="light">
 <!-- FLATTENED-TOP-NAV-START -->
 <div class="tu-topnav">
   <a href="/vi/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
@@ -252,6 +283,13 @@
       return hay.includes(norm(q));
     }
 
+    function el(tag, className, text){
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text != null && text !== '') node.textContent = text;
+      return node;
+    }
+
     function render(){
       const q = searchEl.value.trim();
       const filtered = ALL_TERMS.filter(t =>
@@ -259,9 +297,10 @@
       );
 
       countEl.textContent = filtered.length + ' / ' + ALL_TERMS.length + ' thuật ngữ';
+      resultsEl.replaceChildren();
 
       if (!filtered.length){
-        resultsEl.innerHTML = '<div class="empty-state">Không tìm thấy thuật ngữ phù hợp. Thử một từ khóa khác.</div>';
+        resultsEl.appendChild(el('div', 'empty-state', 'Không tìm thấy thuật ngữ phù hợp. Thử một từ khóa khác.'));
         return;
       }
 
@@ -270,26 +309,32 @@
         (byCategory[t.category] = byCategory[t.category] || []).push(t);
       });
 
-      const order = Object.keys(CATEGORY_LABELS).filter(c => byCategory[c]);
-      resultsEl.innerHTML = order.map(cat => `
-        <section class="category-block">
-          <h2 class="category-title">${CATEGORY_LABELS[cat]}</h2>
-          ${byCategory[cat]
-            .sort((a,b) => a.term_vi_standard.localeCompare(b.term_vi_standard, 'vi'))
-            .map(t => `
-              <article class="term-card">
-                <div class="term-head">
-                  <span class="term-vi">${t.term_vi_standard}</span>
-                  <span class="term-en">${t.term_en}</span>
-                </div>
-                ${t.note ? `<div class="term-note">${t.note}</div>` : ''}
-                ${(t.variants_to_replace && t.variants_to_replace.length)
-                  ? `<div class="term-variants">${t.variants_to_replace.map(v => `<em>${v}</em>`).join(', ')}</div>`
-                  : ''}
-              </article>
-            `).join('')}
-        </section>
-      `).join('');
+      Object.keys(CATEGORY_LABELS).filter(c => byCategory[c]).forEach(cat => {
+        const section = el('section', 'category-block');
+        section.appendChild(el('h2', 'category-title', CATEGORY_LABELS[cat]));
+        byCategory[cat]
+          .slice()
+          .sort((a,b) => String(a.term_vi_standard || '').localeCompare(String(b.term_vi_standard || ''), 'vi'))
+          .forEach(t => {
+            const article = el('article', 'term-card');
+            const head = el('div', 'term-head');
+            head.appendChild(el('span', 'term-vi', t.term_vi_standard));
+            head.appendChild(el('span', 'term-en', t.term_en));
+            article.appendChild(head);
+            if (t.note) article.appendChild(el('div', 'term-note', t.note));
+            const variants = t.variants_to_replace || [];
+            if (variants.length){
+              const wrap = el('div', 'term-variants');
+              variants.forEach((name, i) => {
+                if (i) wrap.appendChild(document.createTextNode(', '));
+                wrap.appendChild(el('em', '', name));
+              });
+              article.appendChild(wrap);
+            }
+            section.appendChild(article);
+          });
+        resultsEl.appendChild(section);
+      });
     }
 
     searchEl.addEventListener('input', render);
