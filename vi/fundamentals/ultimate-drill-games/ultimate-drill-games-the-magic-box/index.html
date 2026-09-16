@@ -1,1 +1,483 @@
-DQo8IWRvY3R5cGUgaHRtbD4NCjxodG1sIGxhbmc9InZpIiBjbGFzcz0ibm8tanMiPg0KICA8aGVhZD4NCjxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9Sm9zdDppdGFsLHdnaHRAMCwyMDA7MCwzMDA7MCw0MDA7MCw1MDA7MCw2MDA7MSwzMDAmZmFtaWx5PURNK1NhbnM6aXRhbCx3Z2h0QDAsMzAwOzAsNDAwOzAsNTAwOzEsNDAwJmZhbWlseT1TcGFjZStNb25vOndnaHRANDAwOzcwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+DQoNCiAgICANCiAgICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4NCiAgICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsaW5pdGlhbC1zY2FsZT0xIj4NCiAgICAgIA0KICAgICAgICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iQ29tcHJlaGVuc2l2ZSB1bmlmaWVkIHRlbm5pcyBrbm93bGVkZ2UgYmFzZSDigJQgRnVuZGFtZW50YWxzLCBTdHJva2UgQW5hbHlzaXMsIFJlZmVyZW5jZSBMaWJyYXJ5LCBhbmQgbW9yZSI+DQogICAgICANCiAgICAgIA0KICAgICAgICA8bWV0YSBuYW1lPSJhdXRob3IiIGNvbnRlbnQ9IkhlbnJ5IFBoYW0iPg0KICAgICAgDQogICAgICANCiAgICAgIA0KICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICAgICAgPGxpbmsgcmVsPSJhbHRlcm5hdGUiIGhyZWY9Ii4uLy4uLy4uLy4uL2Z1bmRhbWVudGFscy91bHRpbWF0ZS1kcmlsbC1nYW1lcy91bHRpbWF0ZS1kcmlsbC1nYW1lcy10aGUtbWFnaWMtYm94LyIgaHJlZmxhbmc9ImVuIj4NCiAgICAgICAgDQogICAgICAgICAgPGxpbmsgcmVsPSJhbHRlcm5hdGUiIGhyZWY9Ii4vIiBocmVmbGFuZz0idmkiPg0KICAgICAgICANCiAgICAgIA0KICAgICAgDQogICAgICA8bGluayByZWw9Imljb24iIGhyZWY9Ii4uLy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvZmF2aWNvbi5wbmciPg0KICAgICAgPG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJta2RvY3MtMS42LjEsIG1rZG9jcy1tYXRlcmlhbC05LjcuNyI+DQogICAgDQogICAgDQogICAgICANCiAgICAgICAgPHRpdGxlPlVsdGltYXRlIGRyaWxsIGdhbWVzIHRoZSBtYWdpYyBib3ggLSBUZW5uaXMgVW5pZmllZCBMaWJyYXJ5PC90aXRsZT4NCiAgICAgIA0KICAgICAgDQoNCiAgICANCiAgICANCiAgICAgIA0KICAgIA0KICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgICANCiAgICAgICAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tIiBjcm9zc29yaWdpbj4NCiAgICAgICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9RE0rU2FuczozMDAsMzAwaSw0MDAsNDAwaSw3MDAsNzAwaSU3Q1JvYm90bytNb25vOjQwMCw0MDBpLDcwMCw3MDBpJmRpc3BsYXk9ZmFsbGJhY2siPg0KICAgICAgICA8c3R5bGU+OnJvb3R7LS1tZC10ZXh0LWZvbnQ6IkRNIFNhbnMiOy0tbWQtY29kZS1mb250OiJSb2JvdG8gTW9ubyJ9PC9zdHlsZT4NCiAgICANCiAgICA8c2NyaXB0Pl9fbWRfc2NvcGU9bmV3IFVSTCgiLi4vLi4vLi4vLi4iLGxvY2F0aW9uKSxfX21kX2hhc2g9ZT0+Wy4uLmVdLnJlZHVjZSgoKGUsXyk9PihlPDw1KS1lK18uY2hhckNvZGVBdCgwKSksMCksX19tZF9nZXQ9KGUsXz1sb2NhbFN0b3JhZ2UsdD1fX21kX3Njb3BlKT0+SlNPTi5wYXJzZShfLmdldEl0ZW0odC5wYXRobmFtZSsiLiIrZSkpLF9fbWRfc2V0PShlLF8sdD1sb2NhbFN0b3JhZ2UsYT1fX21kX3Njb3BlKT0+e3RyeXt0LnNldEl0ZW0oYS5wYXRobmFtZSsiLiIrZSxKU09OLnN0cmluZ2lmeShfKSl9Y2F0Y2goZSl7fX08L3NjcmlwdD4NCiAgICANCiAgICAgIA0KDQogICAgDQogICAgDQogIA0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvYXNzZXRzL3N0eWxlc2hlZXRzL2NlcnVsZWFuLm1pbi5jc3MiPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvYXNzZXRzL2Nzcy9zaXRlLmNzcyI+PHNjcmlwdCBzcmM9Ii9hc3NldHMvamF2YXNjcmlwdHMvbGFuZy10b2dnbGUuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvYXNzZXRzL2phdmFzY3JpcHRzL2Rhcmttb2RlLmpzIiBkZWZlcj48L3NjcmlwdD48L2hlYWQ+DQogIA0KICANCiAgICANCiAgICANCiAgICANCiAgICANCiAgICANCiAgICA8Ym9keSBkaXI9Imx0ciIgZGF0YS1tZC1jb2xvci1zY2hlbWU9ImRlZmF1bHQiIGRhdGEtbWQtY29sb3ItcHJpbWFyeT0iY3VzdG9tIiBkYXRhLW1kLWNvbG9yLWFjY2VudD0iY3VzdG9tIj4NCjwhLS0gRkxBVFRFTkVELVRPUC1OQVYtU1RBUlQgLS0+DQo8ZGl2IGNsYXNzPSJ0dS10b3BuYXYiPg0KICA8YSBocmVmPSIvdmkvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJIb21lIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn4+gPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+SG9tZTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9mdW5kYW1lbnRhbHMvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJGdW5kYW1lbnRhbHMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfk5Y8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5GdW5kYW1lbnRhbHM8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvZG91Ymxlcy8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9IsSQw6FuaCDEkMO0aSI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+RpTwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPsSQw6FuaCDEkMO0aTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9zdHJva2UtYW5hbHlzaXMvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJTdHJva2UgQW5hbHlzaXMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfp6A8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5TdHJva2UgQW5hbHlzaXM8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvY29hY2gtdmlkZW8tbGlicmFyeS8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9IkNvYWNoIExpYnJhcnkiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjpM8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5Db2FjaCBMaWJyYXJ5PC9zcGFuPjwvYT4NCiAgPGEgaHJlZj0iL3ZpL3Rlbm5pcy12aWRlby1saWJyYXJ5LyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iVmlkZW8gTGlicmFyeSI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+OrDwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPlZpZGVvIExpYnJhcnk8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvdGVubmlzLXRlY2huaWNhbC1yZWZlcmVuY2UvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJUZWNobmljYWwgUmVmZXJlbmNlIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OaPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+VGVjaG5pY2FsIFJlZmVyZW5jZTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS90bmtiL3ZpLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iS2hvIFRyaSBUaOG7qWMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfkqE8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5LaG8gVHJpIFRo4bupYzwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS90ZW5uaXMtZXZvbHV0aW9uLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iVGVubmlzIEV2b2x1dGlvbiI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+4pqhPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+VGVubmlzIEV2b2x1dGlvbjwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9ibG9nLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iQmxvZyI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+TnTwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPkJsb2c8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvYm9vay8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9Ik1hc3RlciBCb29rIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OVPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+TWFzdGVyIEJvb2s8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvYm9va3MvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJCb29rcyBDYXRhbG9nIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OaPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+Qm9va3MgQ2F0YWxvZzwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS8iIGNsYXNzPSJ0dS1uYXYtaXRlbSB0dS1uYXYtbGFuZyIgZGF0YS1sYW5nLXRvZ2dsZSB0aXRsZT0iU3dpdGNoIHRvIEVuZ2xpc2giPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjJA8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5FbmdsaXNoPC9zcGFuPjwvYT4NCiAgPGJ1dHRvbiBjbGFzcz0idHUtbmF2LWl0ZW0gdHUtbmF2LWRhcmttb2RlIiB0aXRsZT0iRGFyayBNb2RlIiB0eXBlPSJidXR0b24iPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjJk8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5EYXJrIE1vZGU8L3NwYW4+PC9idXR0b24+DQo8L2Rpdj4NCjwhLS0gRkxBVFRFTkVELVRPUC1OQVYtRU5EIC0tPg0KICAgIDxpbnB1dCBjbGFzcz0ibWQtdG9nZ2xlIiBkYXRhLW1kLXRvZ2dsZT0iZHJhd2VyIiB0eXBlPSJjaGVja2JveCIgaWQ9Il9fZHJhd2VyIiBhdXRvY29tcGxldGU9Im9mZiI+DQogICAgPGlucHV0IGNsYXNzPSJtZC10b2dnbGUiIGRhdGEtbWQtdG9nZ2xlPSJzZWFyY2giIHR5cGU9ImNoZWNrYm94IiBpZD0iX19zZWFyY2giIGF1dG9jb21wbGV0ZT0ib2ZmIj4NCiAgICA8bGFiZWwgY2xhc3M9Im1kLW92ZXJsYXkiIGZvcj0iX19kcmF3ZXIiPjwvbGFiZWw+DQogICAgPGRpdiBkYXRhLW1kLWNvbXBvbmVudD0ic2tpcCI+DQogICAgICANCiAgICAgICAgDQogICAgICAgIDxhIGhyZWY9IiN1bHRpbWF0ZS1kcmlsbC1nYW1lcy10aGUtbWFnaWMtYm94IiBjbGFzcz0ibWQtc2tpcCI+DQogICAgICAgICAgQuG7jyBxdWENCiAgICAgICAgPC9hPg0KICAgICAgDQogICAgPC9kaXY+DQogICAgPGRpdiBkYXRhLW1kLWNvbXBvbmVudD0iYW5ub3VuY2UiPg0KICAgICAgDQogICAgPC9kaXY+DQogICAgDQogICAgDQogICAgICANCg0KPGhlYWRlciBjbGFzcz0ibWQtaGVhZGVyIiBkYXRhLW1kLWNvbXBvbmVudD0iaGVhZGVyIj4NCiAgPG5hdiBjbGFzcz0ibWQtaGVhZGVyX19pbm5lciBtZC1ncmlkIiBhcmlhLWxhYmVsPSLEkOG6p3UgdHJhbmciPg0KICAgIDxhIGhyZWY9Ii4uLy4uLyIgdGl0bGU9IlRlbm5pcyBVbmlmaWVkIExpYnJhcnkiIGNsYXNzPSJtZC1oZWFkZXJfX2J1dHRvbiBtZC1sb2dvIiBhcmlhLWxhYmVsPSJUZW5uaXMgVW5pZmllZCBMaWJyYXJ5IiBkYXRhLW1kLWNvbXBvbmVudD0ibG9nbyI+DQogICAgICANCiAgDQogIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMiA4YTMgMyAwIDAgMCAzLTMgMyAzIDAgMCAwLTMtMyAzIDMgMCAwIDAtMyAzIDMgMyAwIDAgMCAzIDNtMCAzLjU0QzkuNjQgOS4zNSA2LjUgOCAzIDh2MTFjMy41IDAgNi42NCAxLjM1IDkgMy41NCAyLjM2LTIuMTkgNS41LTMuNTQgOS0zLjU0VjhjLTMuNSAwLTYuNjQgMS4zNS05IDMuNTQiLz48L3N2Zz4NCg0KICAgIDwvYT4NCiAgICA8bGFiZWwgY2xhc3M9Im1kLWhlYWRlcl9fYnV0dG9uIG1kLWljb24iIGZvcj0iX19kcmF3ZXIiPg0KICAgICAgDQogICAgICA8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMyA2aDE4djJIM3ptMCA1aDE4djJIM3ptMCA1aDE4djJIM3oiLz48L3N2Zz4NCiAgICA8L2xhYmVsPg0KICAgIDxkaXYgY2xhc3M9Im1kLWhlYWRlcl9fdGl0bGUiIGRhdGEtbWQtY29tcG9uZW50PSJoZWFkZXItdGl0bGUiPg0KICAgICAgPGRpdiBjbGFzcz0ibWQtaGVhZGVyX19lbGxpcHNpcyI+DQogICAgICAgIDxkaXYgY2xhc3M9Im1kLWhlYWRlcl9fdG9waWMiPg0KICAgICAgICAgIDxzcGFuIGNsYXNzPSJtZC1lbGxpcHNpcyI+DQogICAgICAgICAgICBUZW5uaXMgVW5pZmllZCBMaWJyYXJ5DQogICAgICAgICAgPC9zcGFuPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0ibWQtaGVhZGVyX190b3BpYyIgZGF0YS1tZC1jb21wb25lbnQ9ImhlYWRlci10b3BpYyI+DQogICAgICAgICAgPHNwYW4gY2xhc3M9Im1kLWVsbGlwc2lzIj4NCiAgICAgICAgICAgIA0KICAgICAgICAgICAgICBVbHRpbWF0ZSBkcmlsbCBnYW1lcyB0aGUgbWFnaWMgYm94DQogICAgICAgICAgICANCiAgICAgICAgICA8L3NwYW4+DQogICAgICAgIDwvZGl2Pg0KICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQogICAgDQogICAgICANCiAgICANCiAgICANCiAgICANCiAgICAgIDxkaXYgY2xhc3M9Im1kLWhlYWRlcl9fb3B0aW9uIj4NCiAgPGRpdiBjbGFzcz0ibWQtc2VsZWN0Ij4NCiAgICANCiAgICA8YnV0dG9uIGNsYXNzPSJtZC1oZWFkZXJfX2J1dHRvbiBtZC1pY29uIiBhcmlhLWxhYmVsPSJDaOG7jW4gbmfDtG4gbmfhu68iPg0KICAgICAgPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTEyLjg3IDE1LjA3LTIuNTQtMi41MS4wMy0uMDNBMTcuNSAxNy41IDAgMCAwIDE0LjA3IDZIMTdWNGgtN1YySDh2MkgxdjJoMTEuMTdDMTEuNSA3LjkyIDEwLjQ0IDkuNzUgOSAxMS4zNSA4LjA3IDEwLjMyIDcuMyA5LjE5IDYuNjkgOGgtMmMuNzMgMS42MyAxLjczIDMuMTcgMi45OCA0LjU2bC01LjA5IDUuMDJMNCAxOWw1LTUgMy4xMSAzLjExek0xOC41IDEwaC0yTDEyIDIyaDJsMS4xMi0zaDQuNzVMMjEgMjJoMnptLTIuNjIgNyAxLjYyLTQuMzNMMTkuMTIgMTd6Ii8+PC9zdmc+DQogICAgPC9idXR0b24+DQogICAgPGRpdiBjbGFzcz0ibWQtc2VsZWN0X19pbm5lciI+DQogICAgICA8dWwgY2xhc3M9Im1kLXNlbGVjdF9fbGlzdCI+DQogICAgICAgIA0KICAgICAgICAgIDxsaSBjbGFzcz0ibWQtc2VsZWN0X19pdGVtIj4NCiAgICAgICAgICAgIDxhIGhyZWY9Ii4uLy4uLy4uLy4uL2Z1bmRhbWVudGFscy91bHRpbWF0ZS1kcmlsbC1nYW1lcy91bHRpbWF0ZS1kcmlsbC1nYW1lcy10aGUtbWFnaWMtYm94LyIgaHJlZmxhbmc9ImVuIiBjbGFzcz0ibWQtc2VsZWN0X19saW5rIj4NCiAgICAgICAgICAgICAgRW5nbGlzaA0KICAgICAgICAgICAgPC9hPg0KICAgICAgICAgIDwvbGk+DQogICAgICAgIA0KICAgICAgICAgIDxsaSBjbGFzcz0ibWQtc2VsZWN0X19pdGVtIj4NCiAgICAgICAgICAgIDxhIGhyZWY9Ii4vIiBocmVmbGFuZz0idmkiIGNsYXNzPSJtZC1zZWxlY3RfX2xpbmsiPg0KICAgICAgICAgICAgICBUaeG6v25nIFZp4buHdA0KICAgICAgICAgICAgPC9hPg0KICAgICAgICAgIDwvbGk+DQogICAgICAgIA0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgPC9kaXY+DQo8L2Rpdj4NCiAgICANCiAgICANCiAgICANCiAgPC9uYXY+DQogIA0KPC9oZWFkZXI+DQogICAgDQogICAgPGRpdiBjbGFzcz0ibWQtY29udGFpbmVyIiBkYXRhLW1kLWNvbXBvbmVudD0iY29udGFpbmVyIj4NCiAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgICAgDQoNCiAgICAgICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgIDxtYWluIGNsYXNzPSJtZC1tYWluIiBkYXRhLW1kLWNvbXBvbmVudD0ibWFpbiI+DQogICAgICAgIDxkaXYgY2xhc3M9Im1kLW1haW5fX2lubmVyIG1kLWdyaWQiPg0KICAgICAgICAgIA0KICAgICAgICAgICAgDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyIG1kLXNpZGViYXItLXByaW1hcnkiIGRhdGEtbWQtY29tcG9uZW50PSJzaWRlYmFyIiBkYXRhLW1kLXR5cGU9Im5hdmlnYXRpb24iID4NCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyX19zY3JvbGx3cmFwIj4NCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1kLXNpZGViYXJfX2lubmVyIj4NCiAgICAgICAgICAgICAgICAgICAgDQoNCiAgDQoNCjxuYXYgY2xhc3M9Im1kLW5hdiBtZC1uYXYtLXByaW1hcnkgbWQtbmF2LS1saWZ0ZWQiIGFyaWEtbGFiZWw9IlRoYW5oIMSRaeG7gXUgaMaw4bubbmciIGRhdGEtbWQtbGV2ZWw9IjAiPg0KICA8bGFiZWwgY2xhc3M9Im1kLW5hdl9fdGl0bGUiIGZvcj0iX19kcmF3ZXIiPg0KICAgIDxhIGhyZWY9Ii4uLy4uLyIgdGl0bGU9IlRlbm5pcyBVbmlmaWVkIExpYnJhcnkiIGNsYXNzPSJtZC1uYXZfX2J1dHRvbiBtZC1sb2dvIiBhcmlhLWxhYmVsPSJUZW5uaXMgVW5pZmllZCBMaWJyYXJ5IiBkYXRhLW1kLWNvbXBvbmVudD0ibG9nbyI+DQogICAgICANCiAgDQogIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMiA4YTMgMyAwIDAgMCAzLTMgMyAzIDAgMCAwLTMtMyAzIDMgMCAwIDAtMyAzIDMgMyAwIDAgMCAzIDNtMCAzLjU0QzkuNjQgOS4zNSA2LjUgOCAzIDh2MTFjMy41IDAgNi42NCAxLjM1IDkgMy41NCAyLjM2LTIuMTkgNS41LTMuNTQgOS0zLjU0VjhjLTMuNSAwLTYuNjQgMS4zNS05IDMuNTQiLz48L3N2Zz4NCg0KICAgIDwvYT4NCiAgICBUZW5uaXMgVW5pZmllZCBMaWJyYXJ5DQogIDwvbGFiZWw+DQogIA0KICA8dWwgY2xhc3M9Im1kLW5hdl9fbGlzdCIgZGF0YS1tZC1zY3JvbGxmaXg+DQogICAgDQogICAgICANCiAgICAgIA0KICANCiAgDQogIA0KICANCiAgICA8bGkgY2xhc3M9Im1kLW5hdl9faXRlbSI+DQogICAgICA8YSBocmVmPSIuLi8uLi8iIGNsYXNzPSJtZC1uYXZfX2xpbmsiPg0KICAgICAgICANCiAgDQogIA0KICA8c3BhbiBjbGFzcz0ibWQtZWxsaXBzaXMiPg0KICAgIA0KICANCiAgICBUcmFuZyBDaOG7pw0KICANCg0KICAgIA0KICA8L3NwYW4+DQogIA0KICANCg0KICAgICAgPC9hPg0KICAgIDwvbGk+DQogIA0KDQogICAgDQogICAgICANCiAgICAgIA0KICANCiAgDQogIA0KICANCiAgICANCiAgICANCiAgICAgIA0KICAgICAgICANCiAgICAgICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICANCiAgICANCiAgICANCiAgICANCiAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgDQogICAgDQogICAgICANCiAgICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgDQogICAgPGxpIGNsYXNzPSJtZC1uYXZfX2l0ZW0gbWQtbmF2X19pdGVtLS1wcnVuZWQgbWQtbmF2X19pdGVtLS1uZXN0ZWQiPg0KICAgICAgDQogICAgICAgIA0KICANCiAgDQogIA0KICAgIDxhIGhyZWY9Ii4uLy4uLy4uL2NvYWNoLXZpZGVvLWxpYnJhcnkvIiBjbGFzcz0ibWQtbmF2X19saW5rIj4NCiAgICAgIA0KICANCiAgDQogIDxzcGFuIGNsYXNzPSJtZC1lbGxpcHNpcyI+DQogICAgDQogIA0KICAgIFRoxrAgVmnhu4duIFZpZGVvIEhMVg0KICANCg0KICAgIA0KICA8L3NwYW4+DQogIA0KICANCg0KICAgICAgDQogICAgICAgIDxzcGFuIGNsYXNzPSJtZC1uYXZfX2ljb24gbWQtaWNvbiI+PC9zcGFuPg0KICAgICAgDQogICAgPC9hPg0KICANCg0KICAgICAgDQogICAgPC9saT4NCiAgDQoNCiAgICANCiAgPC91bD4NCjwvbmF2Pg0KICAgICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgDQogICAgICAgICAgICANCiAgICAgICAgICAgICAgDQogICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1kLXNpZGViYXIgbWQtc2lkZWJhci0tc2Vjb25kYXJ5IiBkYXRhLW1kLWNvbXBvbmVudD0ic2lkZWJhciIgZGF0YS1tZC10eXBlPSJ0b2MiID4NCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyX19zY3JvbGx3cmFwIj4NCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1kLXNpZGViYXJfX2lubmVyIj4NCiAgICAgICAgICAgICAgICAgICAgDQoNCjxuYXYgY2xhc3M9Im1kLW5hdiBtZC1uYXYtLXNlY29uZGFyeSIgYXJpYS1sYWJlbD0iTeG7pWMgbOG7pWMiPg0KICANCiAgDQogIA0KICAgIA0KICANCiAgDQo8L25hdj4NCiAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgICAgPGRpdiBjbGFzcz0ibWQtY29udGVudCIgZGF0YS1tZC1jb21wb25lbnQ9ImNvbnRlbnQiPg0KICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICANCg0KICANCg0KICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgPGFydGljbGUgY2xhc3M9Im1kLWNvbnRlbnRfX2lubmVyIG1kLXR5cGVzZXQiPg0KICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgDQoNCjwhLS0gVFAtTkFWLVNUQVJUIC0tPg0KDQo8cD48YSBocmVmPSIuLi91bHRpbWF0ZS1kcmlsbC1nYW1lcy1sb2JzdGVyLWN1cC8iPiBQcmV2aW91czogVWx0aW1hdGUgRHJpbGwgR2FtZXMgLSBMb2JzdGVyIEN1cDwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi8iPvCfj6AgVWx0aW1hdGUgRHJpbGwgR2FtZXMgSG9tZTwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi91bHRpbWF0ZS1kcmlsbC1nYW1lcy10aGUtc2VydmUtYm94LXNpeC10YXJnZXRzLWdhbWUvIj5OZXh0OiBVbHRpbWF0ZSBEcmlsbCBHYW1lcyAtIFRoZSBTZXJ2ZSBCb3ggLSBTaXggVGFyZ2V0cyBHYW1lIDwvYT48L3A+DQo8aHIgLz4NCjwhLS0gVFAtTkFWLUVORCAtLT4NCg0KPGgxIGlkPSJ1bHRpbWF0ZS1kcmlsbC1nYW1lcy10aGUtbWFnaWMtYm8iPlVsdGltYXRlIGRyaWxsIGdhbWVzIHRoZSBtYWdpYyBib3g8YSBjbGFzcz0iaGVhZGVybGluayIgaHJlZj0iI3VsdGltYXRlLWRyaWxsLWdhbWVzLXRoZS1tYWdpYy1ibyIgdGl0bGU9IlBlcm1hbmVudCBsaW5rIj48L2E+PC9oMT4NCg0KPHA+PHN0cm9uZz5Db21wcmVoZW5zaXZlIHVuaWZpZWQgdGVubmlzIGtub3dsZWRnZSBiYXNlIOKAlCBGdW5kYW1lbnRhbHMsIFN0cm9rZSBBbmFseXNpcywgUmVmZXJlbmNlIExpYnJhcnksIGFuZCBtb3JlPC9zdHJvbmc+PC9wPg0KDQo8cD5VbHRpbWF0ZSBEcmlsbCBHYW1lczpUaGUgTWFnaWMgQm94PC9wPg0KDQo8cD5Kb3JnZSBDYXBlc3Rhbnk8L3A+DQoNCjxwPk9uZSBvZiB0aGUgbW9zdCBlZmZlY3RpdmUgc2VydmljZSByZXR1cm5z4oCUYW5kIGxlYXN0IHVzZWQgYXQgbG93ZXIgbGV2ZWxz4oCUaXMgZGVlcCBhbmQgZG93biB0aGUgbWlkZGxlLCBpbnRvIHdoYXQgSSBjYWxsIHRoZSBNYWdpYyBCb3guIEl04oCZcyBhIGdyZWF0IHdheSB0byBydXNoIHRoZSBzZXJ2ZXIsIHB1c2ggaGltIGJhY2sgaW4gdGhlIGNvdXJ0LCBudWxsaWZ5IHNlcnZpY2UgYW5nbGVzLCBhbmQgZ2V0IGNvbnRyb2wgb2YgcG9pbnRzLjwvcD4NCg0KPHA+SGVyZSBpcyBob3cgdGhlIGdhbWUgd29ya3MuIERlZmluZSB0aGUgTWFnaWMgQm94IHRhcmdldCBhcmVhIG9uIHRoZSBjb3VydCB3aXRoIHN0cmlwcyBvciBvdGhlciBtYXJrZXJzIG9yIGV2ZW4gY2hhbGsuIEl04oCZcyBzaG91bGQgYmUgcm91Z2hseSA4IGZlZXQgYnkgOCBmZWV0LjwvcD4NCg0KPHA+UGxheSBnYW1lcyB0byA3IG9yIDExIHBvaW50cy4gT25lIHBsYXllciBzZXJ2ZXMuIFRoZSByZXR1cm5lciBtdXN0IGhpdCB0aGUgbWFnaWMgYm94IG9yIGhlIGxvc2VzIHRoZSBwb2ludC4gSWYgaGUgaGl0cyB0aGUgYm94IHdpdGggaGlzIHJldHVybiwgdGhlIHBsYXllcnMgcGxheSBvdXQgdGhlIHBvaW50LiBDb250aW51ZSB0aWwgb25lIHBsYXllciB3aW5zIHRoZSBnYW1lIGFuZCB0aGVuIHN3aXRjaCBzZXJ2ZXJzLiBUaGUgZ2FtZSBnaXZlcyB5b3UgYW4gb2JqZWN0aXZlIHdheSB0byBtZWFzdXJlIHRoZSBjb25zaXN0ZW5jeSBhbmQgZWZmZWN0aXZlbmVzcyBvZiB5b3VyIGRlZXAgZG93biB0aGUgbWlkZGxlIHJldHVybnMgYW5kIGhvdyB0byBidWlsZCBwb2ludHMgb2ZmIHRoZW0gaW4gYSB3YXkgdGhhdCB3aWxsIHRyYW5zbGF0ZSBpbnRvIGJldHRlciByZXR1cm5zIGluIG1hdGNoIHBsYXkuPC9wPg0KDQo8cD48aW1nIGFsdD0iRmlndXJlIGZyb20gVWx0aW1hdGUgZHJpbGwgZ2FtZXMgdGhlIG1hZ2ljIGJveCIgc3JjPSIuLi8uLi8uLi8uLi9hc3NldHMvaW1hZ2VzL3VsdGltYXRlLWRyaWxsLWdhbWVzLXRoZS1tYWdpYy1ib3hfX2ltYWdlMS5qcGVnIiBzdHlsZT0ibWF4LXdpZHRoOjEwMCU7IGhlaWdodDphdXRvOyBib3JkZXItcmFkaXVzOjhweDsgYm94LXNoYWRvdzogMCA0cHggMTZweCByZ2JhKDAsMCwwLC4xNSk7IG1hcmdpbjogMS41cmVtIDA7IiAvPjwvcD4NCg0KPHA+Sm9yZ2UgQ2FwZXN0YW55IGlzIG9uZSBvZiBlbGV2ZW4gcGVvcGxlIHdvcmxkd2lkZSB0aGF0IGhhdmUgZWFybmVkIHRoZSBkaXN0aW5jdGlvbiBvZiBNYXN0ZXIgUHJvZmVzc2lvbmFsIHdpdGggdGhlIFVTUFRBIGFuZCBJbnRlcm5hdGlvbmFsIE1hc3RlciBQcm9mZXNzaW9uYWwgd2l0aCB0aGUgUFRSLiBKb3JnZSBpcyBhbHNvIGEgY2VydGlmaWVkIE1lbnRhbCBUb3VnaG5lc3MgU3BlY2lhbGlzdCB0aHJvdWdoIHRoZSBIdW1hbiBQZXJmb3JtYW5jZSBJbnN0aXR1dGUgYmFzZWQgb24gdGhlIGxpZmUgd29yayBvZiB0aGUgbGVnZW5kYXJ5IERyLiBKaW0gTG9laHIuPC9wPg0KDQo8cD5IZSBpcyB0aGUgZm91bmRlciBvZiBDYXBlc3RhbnkgVGVubmlzIEluYy4gd2hpY2ggcnVucyB0ZW5uaXMgd2Vic2l0ZXMgZm9yIHBsYXllcnMgYW5kIGNvYWNoZXMuIEhpcyB3ZWJzaXRlIFRlbm5pc0RyaWxsc1RWIChDbGljayBIZXJlKSBoYXMgdGhvdXNhbmRzIG9mIHN1YnNjcmliZXJzIGluIG1vcmUgdGhhbiA2NSBjb3VudHJpZXMgd29ybGR3aWRlIGFuZCBmZWF0dXJlcyBvdmVyIDEsMDAwIHZpZGVvcyBvZiB0ZW5uaXMgZHJpbGxzIHRoYXQgY2FuIGJlIHZpZXdlZCBvbmxpbmUgYW5kIGFsc28gcHJpbnRlZCBvZmYgaW4gZGlhZ3JhbSBmb3JtLiBIaXMgdGVhY2hpbmcgd2Vic2l0ZSAoQ2xpY2sgSGVyZSkgZmVhdHVyZXMgZnJlZSB2aWRlbyBsZXNzb25zIGZvciBwbGF5ZXJzIG9mIGFsbCBsZXZlbHMgYXMgd2VsbCBhcyBhIGZyZWUgTWVudGFsIFRvdWdobmVzcyBWaWRlbyBDb3Vyc2UgYW5kIGVCb29rLiBKb3JnZSBpcyBhbHNvIHRoZSBkaXJlY3RvciBvZiB0aGUgSG9wZSBDb2xsZWdlIFByb2Zlc3Npb25hbCBUZW5uaXMgTWFuYWdlbWVudCAoUFRNKSBwcm9ncmFtLjwvcD4NCg0KPHA+Sm9yZ2UgaXMgYSA2IHRpbWUgTWljaGlnYW4gUHJvIG9mIHRoZSBZZWFyIGFuZCAyIHRpbWUgTWlkd2VzdCBQcm8gb2YgdGhlIFllYXIuIEhlIGlzIGEgbWVtYmVyIG9mIHRoZSBVU1BUQSBNaWR3ZXN0IEhhbGwgb2YgRmFtZSBhbmQgd2FzIG5hbWVkIG5hdGlvbmFsIHBybyBvZiB0aGUgeWVhciBieSB0aGUgVVNQVEEgaW4gMjAxNS4gSm9yZ2XigJlzIHByb2dyYW1zIGhhdmUgZGV2ZWxvcGVkIG1vcmUgdGhhbiAxODAgSGlnaCBTY2hvb2wgU3RhdGUgVGVubmlzIENoYW1waW9ucyBpbiBNaWNoaWdhbiBhbmQgSm9yZ2UgaGFzIGJlZW4gdGhlIHBlcnNvbmFsIGNvYWNoIHRvIG1hbnkgbmF0aW9uYWxseSByYW5rZWQganVuaW9ycyBpbiB0aGUgVVMgaW5jbHVkaW5nIHRocmVlIG5hdGlvbmFsIGNoYW1waW9ucy4gSGUgc3BlYWtzIHJlZ3VsYXJseSBhdCBjb2FjaGluZyBjb252ZW50aW9ucyBhcm91bmQgdGhlIHdvcmxkLjwvcD4NCg0KPHA+VGVubmlzcGxheWVyIEZvcnVtPC9wPg0KDQo8cD5MZXQmI3gyNztzIFRhbGsgQWJvdXQgdGhpcyBBcnRpY2xlIVNoYXJlIFlvdXIgVGhvdWdodHMgd2l0aCBvdXIgU3Vic2NyaWJlcnMgYW5kIEF1dGhvcnMhQ2xpY2sgSGVyZTwvcD4NCg0KPHA+wqkgVGVubmlzcGxheWVyIDIwMTkuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuQ29udGFjdCBUZW5uaXNwbGF5ZXIgZGlyZWN0bHk6IGp5YW5kZWxsQHRlbm5pc3BsYXllci5uZXQ8L3A+DQoNCjxwPkNhbiB5b3UgbWFrZSA2IG91dCBvZiA2IGJveGVzIHJvdXRpbmVseT8gTWFueSBwbGF5ZXJzIGZpbmQgaXQgY2FuIHRha2UgdHdpY2Ugb3IgdGhyZWUgdGltZXMgYXMgbWFueSBzZXJ2ZXMgdG8gaGl0IGFsbCBzaXggYm94ZXMuIFlvdSBjYW4gYWxzbyB1c2UgcGljayBhbnkgYm94IHdoZXJlIHlvdSBzdHJ1Z2dsZSBhbmQgaGl0IDEwIHNlcnZlcyB0byB0aGF0IGJveC4gSG93IG1hbnkgb2YgMTAgaGl0IHRoZSBib3g/PC9wPg0KDQo8cD5Xb3JrIGJhY2sgYW5kIGZvcnRoIGJldHdlZW4gdGhlIGJveGVzLiBJZiB5b3UgY2FuIHJvdXRpbmVseSBtYWtlIGFsbCA2IGluIGEgcm93LCB0aGF04oCZcyB3b3JsZCBjbGFzcyBhY2N1cmFjeS48L3A+DQoNCjxwPjxpbWcgYWx0PSJGaWd1cmUgZnJvbSBVbHRpbWF0ZSBkcmlsbCBnYW1lcyB0aGUgbWFnaWMgYm94IiBzcmM9Ii4uLy4uLy4uLy4uL2Fzc2V0cy9pbWFnZXMvdWx0aW1hdGUtZHJpbGwtZ2FtZXMtdGhlLW1hZ2ljLWJveF9faW1hZ2UxLmpwZWciIHN0eWxlPSJtYXgtd2lkdGg6MTAwJTsgaGVpZ2h0OmF1dG87IGJvcmRlci1yYWRpdXM6OHB4OyBib3gtc2hhZG93OiAwIDRweCAxNnB4IHJnYmEoMCwwLDAsLjE1KTsgbWFyZ2luOiAxLjVyZW0gMDsiIC8+PC9wPg0KDQo8cD5Kb3JnZSBDYXBlc3RhbnkgaXMgb25lIG9mIGVsZXZlbiBwZW9wbGUgd29ybGR3aWRlIHRoYXQgaGF2ZSBlYXJuZWQgdGhlIGRpc3RpbmN0aW9uIG9mIE1hc3RlciBQcm9mZXNzaW9uYWwgd2l0aCB0aGUgVVNQVEEgYW5kIEludGVybmF0aW9uYWwgTWFzdGVyIFByb2Zlc3Npb25hbCB3aXRoIHRoZSBQVFIuIEpvcmdlIGlzIGFsc28gYSBjZXJ0aWZpZWQgTWVudGFsIFRvdWdobmVzcyBTcGVjaWFsaXN0IHRocm91Z2ggdGhlIEh1bWFuIFBlcmZvcm1hbmNlIEluc3RpdHV0ZSBiYXNlZCBvbiB0aGUgbGlmZSB3b3JrIG9mIHRoZSBsZWdlbmRhcnkgRHIuIEppbSBMb2Voci48L3A+DQoNCjxwPkhlIGlzIHRoZSBmb3VuZGVyIG9mIENhcGVzdGFueSBUZW5uaXMgSW5jLiB3aGljaCBydW5zIHRlbm5pcyB3ZWJzaXRlcyBmb3IgcGxheWVycyBhbmQgY29hY2hlcy4gSGlzIHdlYnNpdGUgVGVubmlzRHJpbGxzVFYgKENsaWNrIEhlcmUpIGhhcyB0aG91c2FuZHMgb2Ygc3Vic2NyaWJlcnMgaW4gbW9yZSB0aGFuIDY1IGNvdW50cmllcyB3b3JsZHdpZGUgYW5kIGZlYXR1cmVzIG92ZXIgMSwwMDAgdmlkZW9zIG9mIHRlbm5pcyBkcmlsbHMgdGhhdCBjYW4gYmUgdmlld2VkIG9ubGluZSBhbmQgYWxzbyBwcmludGVkIG9mZiBpbiBkaWFncmFtIGZvcm0uIEhpcyB0ZWFjaGluZyB3ZWJzaXRlIChDbGljayBIZXJlKSBmZWF0dXJlcyBmcmVlIHZpZGVvIGxlc3NvbnMgZm9yIHBsYXllcnMgb2YgYWxsIGxldmVscyBhcyB3ZWxsIGFzIGEgZnJlZSBNZW50YWwgVG91Z2huZXNzIFZpZGVvIENvdXJzZSBhbmQgZUJvb2suIEpvcmdlIGlzIGFsc28gdGhlIGRpcmVjdG9yIG9mIHRoZSBIb3BlIENvbGxlZ2UgUHJvZmVzc2lvbmFsIFRlbm5pcyBNYW5hZ2VtZW50IChQVE0pIHByb2dyYW0uPC9wPg0KDQo8cD5Kb3JnZSBpcyBhIDYgdGltZSBNaWNoaWdhbiBQcm8gb2YgdGhlIFllYXIgYW5kIDIgdGltZSBNaWR3ZXN0IFBybyBvZiB0aGUgWWVhci4gSGUgaXMgYSBtZW1iZXIgb2YgdGhlIFVTUFRBIE1pZHdlc3QgSGFsbCBvZiBGYW1lIGFuZCB3YXMgbmFtZWQgbmF0aW9uYWwgcHJvIG9mIHRoZSB5ZWFyIGJ5IHRoZSBVU1BUQSBpbiAyMDE1LiBKb3JnZeKAmXMgcHJvZ3JhbXMgaGF2ZSBkZXZlbG9wZWQgbW9yZSB0aGFuIDE4MCBIaWdoIFNjaG9vbCBTdGF0ZSBUZW5uaXMgQ2hhbXBpb25zIGluIE1pY2hpZ2FuIGFuZCBKb3JnZSBoYXMgYmVlbiB0aGUgcGVyc29uYWwgY29hY2ggdG8gbWFueSBuYXRpb25hbGx5IHJhbmtlZCBqdW5pb3JzIGluIHRoZSBVUyBpbmNsdWRpbmcgdGhyZWUgbmF0aW9uYWwgY2hhbXBpb25zLiBIZSBzcGVha3MgcmVndWxhcmx5IGF0IGNvYWNoaW5nIGNvbnZlbnRpb25zIGFyb3VuZCB0aGUgd29ybGQuPC9wPg0KDQo8cD5UZW5uaXNwbGF5ZXIgRm9ydW08L3A+DQoNCjxwPkxldCYjeDI3O3MgVGFsayBBYm91dCB0aGlzIEFydGljbGUhU2hhcmUgWW91ciBUaG91Z2h0cyB3aXRoIG91ciBTdWJzY3JpYmVycyBhbmQgQXV0aG9ycyFDbGljayBIZXJlPC9wPg0KDQo8cD7CqSBUZW5uaXNwbGF5ZXIgMjAxOS4gQWxsIFJpZ2h0cyBSZXNlcnZlZC5Db250YWN0IFRlbm5pc3BsYXllciBkaXJlY3RseToganlhbmRlbGxAdGVubmlzcGxheWVyLm5ldDwvcD4NCg0KPGhyIC8+DQoNCjxwPjxlbT5Tb3VyY2U6IDxhIGhyZWY9Imh0dHBzOi8vd3d3LnRlbm5pc3BsYXllci5uZXQvIj50ZW5uaXNwbGF5ZXIubmV0PC9hPiBhcmNoaXZlIOKAlCA8c3Ryb25nPlVsdGltYXRlIERyaWxsIEdhbWVzIC0gVGhlIE1hZ2ljIEJveC5kb2N4PC9zdHJvbmc+IChKb2huIFlhbmRlbGwgdGVhY2hpbmcgbGlicmFyeSwgMjAwMi0yMDIyKS4gRXh0cmFjdGVkIGFuZCByZW5kZXJlZCBhcyBIVE1MIGZvciBUZW5uaXMgRnV0dXJlIExhYi48L2VtPjwvcD4NCg0KICAgICAgICAgICAgPGRpdiBjbGFzcz0idmlkZW8tY29udGFpbmVyIj4NCiAgPGlmcmFtZSBzcmM9Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2VtYmVkL09zbV9rX3g0bHNFP3JlbD0wIiB3aWR0aD0iMTAwJSIgZnJhbWVib3JkZXI9IjAiIGFsbG93PSJhY2NlbGVyb21ldGVyOyBhdXRvcGxheTsgY2xpcGJvYXJkLXdyaXRlOyBlbmNyeXB0ZWQtbWVkaWE7IGd5cm9zY29wZTsgcGljdHVyZS1pbi1waWN0dXJlIiBhbGxvd2Z1bGxzY3JlZW4gaGVpZ2h0PSIxMDAlIj48L2lmcmFtZT4NCjwvZGl2Pg0KICAgIDwvYXJ0aWNsZT4NCiAgICAgICAgICAgICAgPC9kaXY+PHNjcmlwdD52YXIgdGFyZ2V0PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGxvY2F0aW9uLmhhc2guc2xpY2UoMSkpO3RhcmdldCYmdGFyZ2V0Lm5hbWUmJih0YXJnZXQuY2hlY2tlZD10YXJnZXQubmFtZS5zdGFydHNXaXRoKCJfX3RhYmJlZF8iKSk8L3NjcmlwdD4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIA0KICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0ibWQtdG9wIG1kLWljb24iIGRhdGEtbWQtY29tcG9uZW50PSJ0b3AiIGhpZGRlbj4NCiAgDQogIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMyAyMGgtMlY4bC01LjUgNS41LTEuNDItMS40MkwxMiA0LjE2bDcuOTIgNy45Mi0xLjQyIDEuNDJMMTMgOHoiLz48L3N2Zz4NCiAgVHLhu58gbOG6oWkgbeG7pWMgbOG7pWMNCjwvYnV0dG9uPg0KICAgICAgICANCiAgICAgIDwvbWFpbj4NCiAgICAgIA0KICAgICAgICA8Zm9vdGVyIGNsYXNzPSJtZC1mb290ZXIiPg0KICANCiAgICANCiAgDQogIDxkaXYgY2xhc3M9Im1kLWZvb3Rlci1tZXRhIG1kLXR5cGVzZXQiPg0KICAgIDxkaXYgY2xhc3M9Im1kLWZvb3Rlci1tZXRhX19pbm5lciBtZC1ncmlkIj4NCiAgICAgIDxkaXYgY2xhc3M9Im1kLWNvcHlyaWdodCI+DQogIA0KICAgIDxkaXYgY2xhc3M9Im1kLWNvcHlyaWdodF9faGlnaGxpZ2h0Ij4NCiAgICAgIMKpIDIwMjYgSGVucnkgUGjhuqFtIMSQ4bupYyDCtyBUZW5uaXMgRnV0dXJlIExhYiBSZXNlYXJjaCDCtyBBbGwgY29udGVudHMgYXJlIGZvciBlZHVjYXRpb25hbCBwdXJwb3NlLg0KICAgIDwvZGl2Pg0KICANCjwvZGl2Pg0KICAgICAgDQogICAgPC9kaXY+DQogIDwvZGl2Pg0KPC9mb290ZXI+DQogICAgICANCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJtZC1kaWFsb2ciIGRhdGEtbWQtY29tcG9uZW50PSJkaWFsb2ciPg0KICAgICAgPGRpdiBjbGFzcz0ibWQtZGlhbG9nX19pbm5lciBtZC10eXBlc2V0Ij48L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICANCiAgICANCiAgICANCiAgICAgIA0KICAgICAgDQogICAgICA8c2NyaXB0IGlkPSJfX2NvbmZpZyIgdHlwZT0iYXBwbGljYXRpb24vanNvbiI+eyJhbm5vdGF0ZSI6IG51bGwsICJiYXNlIjogIi4uLy4uLy4uLy4uIiwgImZlYXR1cmVzIjogWyJuYXZpZ2F0aW9uLnRhYnMiLCAibmF2aWdhdGlvbi5zZWN0aW9ucyIsICJuYXZpZ2F0aW9uLnRvcCIsICJuYXZpZ2F0aW9uLnBhdGgiLCAibmF2aWdhdGlvbi5leHBhbmQiLCAibmF2aWdhdGlvbi5pbmRleGVzIiwgIm5hdmlnYXRpb24ucHJ1bmUiLCAibmF2aWdhdGlvbi5wcmV2X25leHQiLCAibmF2aWdhdGlvbi5mb290ZXIiLCAic2VhcmNoLmhpZ2hsaWdodCIsICJzZWFyY2guc3VnZ2VzdCIsICJhbHRlcm5hdGUiXSwgInNlYXJjaCI6ICIuLi8uLi8uLi8uLi9hc3NldHMvamF2YXNjcmlwdHMvd29ya2Vycy9zZWFyY2guMmMyMTU3MzMubWluLmpzIiwgInRhZ3MiOiBudWxsLCAidHJhbnNsYXRpb25zIjogeyJjbGlwYm9hcmQuY29waWVkIjogIlx1MDExMFx1MDBlMyBzYW8gY2hcdTAwZTlwIiwgImNsaXBib2FyZC5jb3B5IjogIlNhbyBjaFx1MDBlOXAgdlx1MDBlMG8gYlx1MWVkOSBuaFx1MWVkYiB0XHUxZWExbSIsICJzZWFyY2gucmVzdWx0Lm1vcmUub25lIjogIjEgdFx1MWVlYiBraFx1MDBlMWMgdHJvbmcgdHJhbmciLCAic2VhcmNoLnJlc3VsdC5tb3JlLm90aGVyIjogIiMgdFx1MWVlYiBraFx1MDBlMWMgdHJvbmcgdHJhbmciLCAic2VhcmNoLnJlc3VsdC5ub25lIjogIktoXHUwMGY0bmcgdFx1MDBlY20gdGhcdTFlYTV5IHRcdTAwZTBpIGxpXHUxZWM3dSBsaVx1MDBlYW4gcXVhbiIsICJzZWFyY2gucmVzdWx0Lm9uZSI6ICIxIHRcdTAwZTBpIGxpXHUxZWM3dSBsaVx1MDBlYW4gcXVhbiIsICJzZWFyY2gucmVzdWx0Lm90aGVyIjogIiMgdFx1MDBlMGkgbGlcdTFlYzd1IGxpXHUwMGVhbiBxdWFuIiwgInNlYXJjaC5yZXN1bHQucGxhY2Vob2xkZXIiOiAiTmhcdTFlYWRwIFx1MDExMVx1MWVjMyBiXHUxZWFmdCBcdTAxMTFcdTFlYTd1IHRcdTAwZWNtIGtpXHUxZWJmbSIsICJzZWFyY2gucmVzdWx0LnRlcm0ubWlzc2luZyI6ICJLaFx1MDBmNG5nIiwgInNlbGVjdC52ZXJzaW9uIjogIkNoXHUxZWNkbiBwaGlcdTAwZWFuIGJcdTFlYTNuIn0sICJ2ZXJzaW9uIjogbnVsbH08L3NjcmlwdD4NCiAgICAgIA0KICAgICAgICA8c2NyaXB0IHNyYz0iLi4vLi4vLi4vLi4vYXNzZXRzL2pzL2V4dHJhLmpzIj48L3NjcmlwdD4NCiAgICAgIA0KICAgIA0KICANCjxmb290ZXIgY2xhc3M9InR1LWZvb3RlciIgc3R5bGU9ImJhY2tncm91bmQ6IHZhcigtLWNhcmQpOyBib3JkZXItdG9wOiAxcHggc29saWQgdmFyKC0tYm9yZGVyKTsgY29sb3I6IHZhcigtLWluay1tdXRlZCk7IHBhZGRpbmc6IDEuNXJlbSAxcmVtOyB0ZXh0LWFsaWduOiBjZW50ZXI7IGZvbnQtc2l6ZTogMC45MnJlbTsgbWFyZ2luLXRvcDogM3JlbTsiPg0KPGRpdiBzdHlsZT0iZm9udC1zaXplOiAwLjg1cmVtOyBjb2xvcjogdmFyKC0tYWNjZW50LWRhcmspOyI+VHJhbmcgd2ViIG7DoHkgxJHGsOG7o2MgeMOieSBk4buxbmcgduG7m2kg4p2k77iPIGNobyBj4buZbmcgxJHhu5NuZyBxdeG6p24gduG7o3QgVmnhu4d0IE5hbSDwn46+IGJ5IEhlbnJ5IFBo4bqhbTwvZGl2Pg0KPC9mb290ZXI+DQo8L2JvZHk+DQo8L2h0bWw+
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive unified tennis knowledge base — Fundamentals, Stroke Analysis, Reference Library, and more">
+      
+      
+        <meta name="author" content="Henry Pham">
+      
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../../fundamentals/ultimate-drill-games/ultimate-drill-games-the-magic-box/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="vi">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Ultimate drill games the magic box - Tennis Unified Library</title>
+      
+      
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+<!-- FLATTENED-TOP-NAV-START -->
+<div class="tu-topnav">
+  <a href="/vi/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/vi/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
+  <a href="/vi/doubles/" class="tu-nav-item" title="Đánh Đôi"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Đánh Đôi</span></a>
+  <a href="/vi/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
+  <a href="/vi/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
+  <a href="/vi/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
+  <a href="/vi/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
+  <a href="/vi/tnkb/vi/" class="tu-nav-item" title="Kho Tri Thức"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Kho Tri Thức</span></a>
+  <a href="/vi/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
+  <a href="/vi/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
+  <a href="/vi/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/vi/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to English"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">English</span></a>
+  <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
+</div>
+<!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ultimate-drill-games-the-magic-box" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../../" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tennis Unified Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ultimate drill games the magic box
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Chọn ngôn ngữ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../fundamentals/ultimate-drill-games/ultimate-drill-games-the-magic-box/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="vi" class="md-select__link">
+              Tiếng Việt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Tennis Unified Library" class="md-nav__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tennis Unified Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../coach-video-library/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thư Viện Video HLV
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+  
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<!-- TP-NAV-START -->
+
+<p><a href="../ultimate-drill-games-lobster-cup/"> Previous: Ultimate Drill Games - Lobster Cup</a> &nbsp;|&nbsp; <a href="../">🏠 Ultimate Drill Games Home</a> &nbsp;|&nbsp; <a href="../ultimate-drill-games-the-serve-box-six-targets-game/">Next: Ultimate Drill Games - The Serve Box - Six Targets Game </a></p>
+<hr />
+<!-- TP-NAV-END -->
+
+<h1 id="ultimate-drill-games-the-magic-bo">Ultimate drill games the magic box<a class="headerlink" href="#ultimate-drill-games-the-magic-bo" title="Permanent link"></a></h1>
+
+<p><strong>Comprehensive unified tennis knowledge base — Fundamentals, Stroke Analysis, Reference Library, and more</strong></p>
+
+<p>Ultimate Drill Games:The Magic Box</p>
+
+<p>Jorge Capestany</p>
+
+<p>One of the most effective service returns—and least used at lower levels—is deep and down the middle, into what I call the Magic Box. It’s a great way to rush the server, push him back in the court, nullify service angles, and get control of points.</p>
+
+<p>Here is how the game works. Define the Magic Box target area on the court with strips or other markers or even chalk. It’s should be roughly 8 feet by 8 feet.</p>
+
+<p>Play games to 7 or 11 points. One player serves. The returner must hit the magic box or he loses the point. If he hits the box with his return, the players play out the point. Continue til one player wins the game and then switch servers. The game gives you an objective way to measure the consistency and effectiveness of your deep down the middle returns and how to build points off them in a way that will translate into better returns in match play.</p>
+
+<p><img alt="Figure from Ultimate drill games the magic box" src="../../../../assets/images/ultimate-drill-games-the-magic-box__image1.jpeg" style="max-width:100%; height:auto; border-radius:8px; box-shadow: 0 4px 16px rgba(0,0,0,.15); margin: 1.5rem 0;" /></p>
+
+<p>Jorge Capestany is one of eleven people worldwide that have earned the distinction of Master Professional with the USPTA and International Master Professional with the PTR. Jorge is also a certified Mental Toughness Specialist through the Human Performance Institute based on the life work of the legendary Dr. Jim Loehr.</p>
+
+<p>He is the founder of Capestany Tennis Inc. which runs tennis websites for players and coaches. His website TennisDrillsTV (Click Here) has thousands of subscribers in more than 65 countries worldwide and features over 1,000 videos of tennis drills that can be viewed online and also printed off in diagram form. His teaching website (Click Here) features free video lessons for players of all levels as well as a free Mental Toughness Video Course and eBook. Jorge is also the director of the Hope College Professional Tennis Management (PTM) program.</p>
+
+<p>Jorge is a 6 time Michigan Pro of the Year and 2 time Midwest Pro of the Year. He is a member of the USPTA Midwest Hall of Fame and was named national pro of the year by the USPTA in 2015. Jorge’s programs have developed more than 180 High School State Tennis Champions in Michigan and Jorge has been the personal coach to many nationally ranked juniors in the US including three national champions. He speaks regularly at coaching conventions around the world.</p>
+
+<p>Tennisplayer Forum</p>
+
+<p>Let&#x27;s Talk About this Article!Share Your Thoughts with our Subscribers and Authors!Click Here</p>
+
+<p>© Tennisplayer 2019. All Rights Reserved.Contact Tennisplayer directly: jyandell@tennisplayer.net</p>
+
+<p>Can you make 6 out of 6 boxes routinely? Many players find it can take twice or three times as many serves to hit all six boxes. You can also use pick any box where you struggle and hit 10 serves to that box. How many of 10 hit the box?</p>
+
+<p>Work back and forth between the boxes. If you can routinely make all 6 in a row, that’s world class accuracy.</p>
+
+<p><img alt="Figure from Ultimate drill games the magic box" src="../../../../assets/images/ultimate-drill-games-the-magic-box__image1.jpeg" style="max-width:100%; height:auto; border-radius:8px; box-shadow: 0 4px 16px rgba(0,0,0,.15); margin: 1.5rem 0;" /></p>
+
+<p>Jorge Capestany is one of eleven people worldwide that have earned the distinction of Master Professional with the USPTA and International Master Professional with the PTR. Jorge is also a certified Mental Toughness Specialist through the Human Performance Institute based on the life work of the legendary Dr. Jim Loehr.</p>
+
+<p>He is the founder of Capestany Tennis Inc. which runs tennis websites for players and coaches. His website TennisDrillsTV (Click Here) has thousands of subscribers in more than 65 countries worldwide and features over 1,000 videos of tennis drills that can be viewed online and also printed off in diagram form. His teaching website (Click Here) features free video lessons for players of all levels as well as a free Mental Toughness Video Course and eBook. Jorge is also the director of the Hope College Professional Tennis Management (PTM) program.</p>
+
+<p>Jorge is a 6 time Michigan Pro of the Year and 2 time Midwest Pro of the Year. He is a member of the USPTA Midwest Hall of Fame and was named national pro of the year by the USPTA in 2015. Jorge’s programs have developed more than 180 High School State Tennis Champions in Michigan and Jorge has been the personal coach to many nationally ranked juniors in the US including three national champions. He speaks regularly at coaching conventions around the world.</p>
+
+<p>Tennisplayer Forum</p>
+
+<p>Let&#x27;s Talk About this Article!Share Your Thoughts with our Subscribers and Authors!Click Here</p>
+
+<p>© Tennisplayer 2019. All Rights Reserved.Contact Tennisplayer directly: jyandell@tennisplayer.net</p>
+
+<hr />
+
+<p><em>Source: <a href="https://www.tennisplayer.net/">tennisplayer.net</a> archive — <strong>Ultimate Drill Games - The Magic Box.docx</strong> (John Yandell teaching library, 2002-2022). Extracted and rendered as HTML for Tennis Future Lab.</em></p>
+
+            <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/Osm_k_x4lsE?rel=0" width="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen height="100%"></iframe>
+</div>
+    </article>
+              </div><script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+      
+        <script src="../../../../assets/js/extra.js"></script>
+      
+    
+  
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>
