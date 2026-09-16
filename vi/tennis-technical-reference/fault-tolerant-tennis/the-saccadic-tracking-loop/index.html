@@ -6,7 +6,7 @@
     <meta name="description" content="&#8220;Watch the ball&#8221; isn&#8217;t as simple as it sounds. When an object&#8217;s motion is sufficiently fast, it&#8217;s actually impossible for the eye ">
     <meta name="author" content="Fault Tolerant Tennis">
     <link rel="icon" href="/assets/images/favicon.png">
-    <title>The Saccadic Tracking Loop (Fault Tolerant Tennis) - Tham Khảo Kỹ Thuật</title>
+    <title>The Saccadic Tracking Loop - Fault Tolerant Tennis - Tennis Unified Library</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
     <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
@@ -28,9 +28,9 @@
   <a href="/tnkb/" class="tu-nav-item" title="Knowledgebase"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Knowledgebase</span></a>
   <a href="/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
   <a href="/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
-  <a href="/vi/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
   <a href="/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
-  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Chuyển sang Tiếng Việt"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">Tiếng Việt</span></a>
+  <a href="/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Chuyển sang Tiếng Việt"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">Tiếng Việt</span></a>
   <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
 </div>
 <!-- FLATTENED-TOP-NAV-END -->
@@ -51,16 +51,101 @@
   <main class="md-main" data-md-component="main">
     <div class="md-main__inner md-grid">
       <div class="md-content" data-md-component="content">
-        <article class="md-content__inner md-typeset"><h1 id="the_saccadic_tracking_loop">The Saccadic Tracking Loop (Fault Tolerant Tennis)<a class="headerlink" href="#the_saccadic_tracking_loop" title="Liên kết cố đĩnh"></a></h1>
-<p><strong>The Saccadic Tracking Loop (Fault Tolerant Tennis)</strong> mô tác the saccadic tracking loop trong bối cảnh fault tolerant tennis.</p>
-<h2 id="co-che-cot-loi-cach-hoat-dong">Cơ Chế Cốt Lợi / Cách Hoạt Động<a class="headerlink" href="#co-che-cot-loi-cach-hoat-dong" title="Liên kết cố đĩnh"></a></h2>
-<h3>Cơ Chế Cốt Lợi</h3><p><strong>Ứng Dụng trong Fault Tolerant Tennis:</strong></p><ul><li>Fault Tolerant Tennis-specific technique</li><li>Game integration</li></ul>
-<h2 id="cac-che-do-that-bai-cac-loi-thuong-gap-khi-no-bi-vo">Các Chế Độ Thất Bại / Các Lỗi Thường Gặp / Khi Nó Bị Vỡ<a class="headerlink" href="#cac-che-do-that-bai-cac-loi-thuong-gap-khi-no-bi-vo" title="Liên kết cố đĩnh"></a></h2>
-<table><thead><tr><th>Chế Độ Thất Bại</th><th>Nguyên Nhân</th><th>Hệ Quả</th></tr></thead<tbody><tr><td>Wrong technique</td><td>Lack of practice</td><td>Poor play</td></tr></tbody></table>
-<h2 id="huan-luyen-ung-dung-trien-khai">Huấn Luyện / Ứng Dụng / Triển khai<a class="headerlink" href="#huan-luyen-ung-dung-trien-khai" title="Liên kết cố đĩnh"></a></h2>
-<p>Practice drill for the saccadic tracking loop.</p>
-<h2 id="cac-khai-niem-lien-quan">Các Khái Niệm Liên Quan<a class="headerlink" href="#cac-khai-niem-lien-quan" title="Liên kết cố đĩnh"></a></h2>
-<ul><li><a href="../fault-tolerant-tennis/">Fault Tolerant Tennis</a></li></ul></article>
+        <article class="md-content__inner md-typeset">          <h1 id="the-saccadic-tracking-loop">Vòng Lặp Saccade Theo Dõi<a class="headerlink" href="#the-saccadic-tracking-loop" title="Liên kết cố định"></a></h1>
+          <p style="color:var(--ink-muted, #666); font-size:0.95rem; margin-top:-0.5rem; margin-bottom:1.5rem;">
+            By <strong>Fault Tolerant Tennis</strong> · <em>Visual Reference (2023)</em> · <a href="https://faulttoleranttennis.com/the-saccadic-tracking-loop/" target="_blank" rel="noopener noreferrer">Original Article ↗</a>
+          </p>
+          <hr />
+          <div class="article-content" style="font-size:1.05rem; line-height:1.8; margin-top:1.5rem;">
+            
+<p class="wp-block-paragraph"><strong>Saccadic tracking loop</strong> là vòng lặp thị giác mà mắt <strong>nhảy giữa các fixation</strong> (điểm nhìn cố định) thay vì track bóng liên tục. Đây là kỹ thuật thị giác của người chơi elite.</p>
+
+<h2 class="wp-block-heading">Saccade Là Gì?</h2>
+
+<p class="wp-block-paragraph"><strong>Saccade</strong> = <strong>nhảy mắt (eye jump)</strong> giữa các điểm nhìn cố định (fixation). Trong tennis, mắt nhảy giữa 4-5 điểm nhìn theo trình tự đã học.</p>
+
+<h2 class="wp-block-heading">3 Đặc Điểm Saccade</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Nhanh (Fast):</strong> Saccade xảy ra trong 30-50ms — quá nhanh để "thấy" bóng trong saccade.</li>
+
+<li><strong>2. Cố Ý (Involuntary):</strong> Sau khi học, saccade tự động.</li>
+
+<li><strong>3. Chính Xác (Accurate):</strong> Saccade chính xác đến điểm đã học.</li>
+</ol>
+
+<h2 class="wp-block-heading">5 Ví Dụ Saccadic Tracking</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Serve Return:</strong> Fixation 1 (server chạm bóng) → Saccade → Fixation 2 (ball leaving) → Saccade → Fixation 3 (bounce) → Saccade → Fixation 4 (contact).</li>
+
+<li><strong>2. Forehand Rally:</strong> Fixation 1 (đối thủ contact) → Saccade → Fixation 2 (ball leaving) → Saccade → Fixation 3 (bounce) → Saccade → Fixation 4 (your contact).</li>
+
+<li><strong>3. Volley:</strong> Tốc độ nhanh → saccade phải nhanh hơn.</li>
+
+<li><strong>4. Drop Shot Response:</strong> Bóng chậm → saccade chậm → có thời gian.</li>
+
+<li><strong>5. Serve:</strong> Mắt nhìn toss → saccade → nhìn ball toss → saccade → nhìn contact point.</li>
+</ol>
+
+<h2 class="wp-block-heading">5 Lợi Ích Của Saccadic Tracking</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Reaction Nhanh Hơn:</strong> Predictive saccade → reaction nhanh hơn 50-150ms.</li>
+
+<li><strong>2. Peripheral Vision Hoạt Động:</strong> Trong saccade, não xử lý peripheral vision.</li>
+
+<li><strong>3. Anticipation Cao:</strong> Dự đoán landing → đến vị trí trước.</li>
+
+<li><strong>4. Decision Quality:</strong> Thông tin đầy đủ → quyết định tốt.</li>
+
+<li><strong>5. Mental Energy:</strong> Mắt không "tracking" liên tục → não tiết kiệm energy.</li>
+</ol>
+
+<h2 class="wp-block-heading">3 Cách Tập Saccadic Tracking</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Call-out Drill:</strong> Trong rally, gọi to "1-2-3-4" tại mỗi fixation.</li>
+
+<li><strong>2. Ball Machine:</strong> Tennis ball machine bắn bóng → tập saccade.</li>
+
+<li><strong>3. Video Analysis:</strong> Quay video, kiểm tra saccade sequence.</li>
+</ol>
+
+<h2 class="wp-block-heading">Các Chế Độ Thất Bại</h2>
+<table>
+<thead><tr><th>Lỗi</th><th>Triệu Chứng</th><th>Sửa Chữa</th></tr></thead>
+<tbody>
+<tr><td>Tracking bóng liên tục (no saccade)</td><td>Mất peripheral vision</td><td>Call-out drill</td></tr>
+<tr><td>Saccade sai vị trí</td><td>Không thấy landing</td><td>Drill "saccade to landing"</td></tr>
+<tr><td>Quá ít saccade</td><td>Mất thông tin</td><td>4-fixation system</td></tr>
+<tr><td>Saccade quá chậm</td><td>Reaction chậm</td><td>Speed drill</td></tr>
+</tbody>
+</table>
+
+<h2 class="wp-block-heading">Huấn Luyện: Drill "Saccadic Tracking Mastery"</h2>
+<ol class="wp-block-list">
+<li><strong>Call-out drill (15 phút):</strong> Gọi to "1-2-3-4" tại mỗi fixation.</li>
+<li><strong>Ball machine (15 phút):</strong> Tập với tennis ball machine.</li>
+<li><strong>Speed drill (10 phút):</strong> Tăng tốc độ bóng.</li>
+<li><strong>Match simulation (15 phút):</strong> Áp dụng vào rally.</li>
+</ol>
+
+<h2 class="hp-block-heading">Mô Hình 2026: Saccadic Tracking Foundation</h2>
+<p class="wp-block-paragraph">Trong khung 2026, saccadic tracking = <strong>saccadic tracking foundation (nền tảng saccade)</strong>: mắt nhảy giữa fixation → thông tin đầy đủ → reaction nhanh. Đây là yếu tố phân biệt ATP top 10 vs top 100.</p>
+
+<h2 class="hp-block-heading">Các Khái Niệm Liên Quan</h2>
+<ul class="wp-block-list">
+<li><a href="../technique/saccade-tennis/">Saccade Tennis</a></li>
+<li><a href="../technique/4-fixation-visual-system/">Hệ Thống 4 Điểm Nhìn</a></li>
+<li><a href="../technique/quiet-eye/">Quiet Eye</a></li>
+<li><a href="../technique/predictive-saccades/">Saccade Dự Đoán</a></li>
+<li><a href="../technique/peripheral-vision/">Tầm Nhìn Ngoại Vi</a></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong><a href="../../../tennis-technical-reference/fault-tolerant-tennis/the-saccadic-tracking-loop/">Read in English</a></strong> — English version of this wiki</p>
+</blockquote></article>
       </div>
     </div>
   </main>
