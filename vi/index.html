@@ -1,402 +1,780 @@
-<!DOCTYPE html>
-<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Tennis Future Lab - Cẩm Nang Tennis Tiếng Việt</title>
-<meta name="description" content="Kho cẩm nang tennis tiếng Việt — cơ sinh học, lý thuyết điều khiển thần kinh, kỹ thuật cú đánh và chiến thuật thi đấu."/>
-<style>
 
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  :root {
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive unified tennis knowledge base — Fundamentals, Stroke Analysis, and Tennis Technical Reference">
+      
+      
+        <meta name="author" content="Henry Pham">
+      
+      
+      
+      
+        <link rel="next" href="coach-video-library/">
+      
+      
+        
+          <link rel="alternate" href="../" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="vi">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tennis Unified Library - Tennis Unified Library</title>
+      
+      
 
-    --ink: #0d0d0d;
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-    --paper: #f5f0e8;
-
-    --accent: #c8401a;
-
-    --green: #1a6b3c;
-
-    --gold: #c4952a;
-
-    --muted: #6b6255;
-
-    --divider: #d4cbbf;
-
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-
-    background: var(--paper);
-
-    color: var(--ink);
-
-    font-family: 'DM Sans', sans-serif;
-
-    font-size: 17px;
-
-    line-height: 1.75;
-
-  }
-
-  h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-
-    margin-bottom: 20px;
-
-    line-height: 1.2;
-
-  }
-
-  p { margin-bottom: 18px; color: #2a2520; }
-
-  /* ─── FOOTER ─── */
-
-  footer {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.75;
-    text-align: center;
-    padding: 32px;
-    margin-top: 80px;
-}
-
-/* Landing page specific styles */
-.hero {
-    text-align: center;
-    padding: 80px 24px 60px;
-    background: linear-gradient(180deg, var(--paper) 0%, #faf5ec 100%);
-}
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    line-height: 1.1;
-    max-width: 800px;
-    margin: 0 auto 24px;
-    color: var(--ink);
-}
-.hero .subtitle {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: var(--muted);
-    max-width: 700px;
-    margin: 0 auto 48px;
-    font-weight: 300;
-}
-.hero .brand-tag {
-    display: inline-block;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 20px;
-}
-.intro-content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 60px 24px;
-}
-.intro-content p {
-    font-size: 18px;
-    line-height: 1.85;
-    color: #2a2520;
-    margin-bottom: 28px;
-    text-align: justify;
-}
-.intro-content p:first-of-type::first-letter {
-    float: left;
-    font-family: 'Playfair Display', serif;
-    font-size: 4.5rem;
-    line-height: 0.85;
-    padding-right: 12px;
-    padding-top: 8px;
-    color: var(--accent);
-    font-weight: 700;
-}
-.cta-button { display: inline-block; padding: 16px 32px; background: var(--accent); color: white; font-family: 'Space Mono', monospace; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s; margin-top: 24px; }
-.cta-button:hover { background: #b03618; }
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-    margin: 60px 0;
-    padding: 0 24px;
-}
-.stat-card {
-    background: white;
-    border: 1.5px solid var(--divider);
-    border-radius: 4px;
-    padding: 32px 24px;
-    text-align: center;
-}
-.stat-card .number {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 8px;
-}
-.stat-card .label {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-@media (max-width: 600px) {
-    .hero { padding: 60px 16px 40px; }
-    .intro-content { padding: 40px 16px; }
-    .intro-content p { font-size: 17px; }
-    .intro-content p:first-of-type::first-letter { float: none; font-size: inherit; padding: 0; color: inherit; }
-}
-
-.footer-divider {
-    border: none;
-    border-top: 2px solid var(--ink);
-    margin: 48px auto 0 auto;
-    max-width: 900px;
-    width: 100%;
-}
-</style><style id="tfl-theme-system">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:wght@400;700&display=swap');
-
-:root {
-    --ink: #0d0d0d;
-    --paper: #ffffff;
-    --accent: #c8401a;
-    --green: #1a6b3c;
-    --gold: #c4952a;
-    --muted: #6b7280;
-    --divider: #e5e7eb;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    line-height: 1.75;
-}
-
-.masthead {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 64px 40px 48px;
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead .tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--accent);
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.masthead h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    line-height: 1.15;
-    max-width: 800px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.masthead .subtitle {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 600px;
-    font-weight: 300;
-}
-
-.content-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: var(--ink);
-    line-height: 1.25;
-}
-
-h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 24px; }
-h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--ink); }
-h3 { font-size: 1.3rem; margin: 32px 0 12px; }
-h4 { font-size: 1.1rem; margin: 24px 0 8px; font-weight: 700; }
-
-p { margin-bottom: 16px; }
-
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.styled-list { padding-left: 24px; margin: 16px 0; }
-.styled-list li { margin-bottom: 8px; }
-
-.page-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 24px 0;
-    margin-top: 48px;
-    border-top: 1.5px solid var(--divider);
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 1px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.page-nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px 16px;
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    background: white;
-    transition: all 0.2s ease;
-    flex: 1;
-    max-width: 240px;
-    text-align: center;
-}
-
-.page-nav a:hover {
-    background: var(--accent);
-    color: #ffffff;
-    border-color: var(--accent);
-}
-
-footer {
-    margin-top: 80px;
-    padding: 40px 24px;
-    background: var(--ink);
-    color: #ffffff;
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    text-align: center;
-    line-height: 1.75;
-}
-</style>
-<link rel="stylesheet" href="../assets/css/book-theme.css">
-  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
-  <link rel="alternate icon" type="image/png" href="../assets/images/favicon.png">
+    
+    
+  
 <link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
-<link rel="stylesheet" href="/assets/css/site.css">
-<script src="/assets/javascripts/lang-toggle.js" defer></script>
-<script src="/assets/javascripts/darkmode.js" defer></script>
-</head>
-<body>
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
 <!-- FLATTENED-TOP-NAV-START -->
 <div class="tu-topnav">
-  <a href="/vi/" class="tu-nav-item active" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/vi/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
   <a href="/vi/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
-  <a href="/vi/doubles/" class="tu-nav-item" title="Đánh Đôi"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Đánh Đôi</span></a>
+  <a href="/vi/doubles/" class="tu-nav-item" title="Chiến Thuật Đánh Đôi"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Đánh Đôi</span></a>
   <a href="/vi/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
   <a href="/vi/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
   <a href="/vi/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
   <a href="/vi/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
-  <a href="/tnkb/vi/" class="tu-nav-item" title="Kho Tri Thức"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Kho Tri Thức</span></a>
+  <a href="/vi/tnkb/vi/" class="tu-nav-item" title="Kho Tri Thức"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Kho Tri Thức</span></a>
   <a href="/vi/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
   <a href="/vi/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
   <a href="/vi/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
-  <a href="/vi/books/" class="tu-nav-item" title="Tủ Sách Tennis"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Tủ Sách Tennis</span></a>
-  <a href="/vi/books/glossary.html" class="tu-nav-item" title="Từ Điển Thuật Ngữ"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Từ Điển Thuật Ngữ</span></a>
-  <a href="/vi/books/court_diagrams.html" class="tu-nav-item" title="Sơ Đồ Chiến Thuật"><span class="tu-nav-emoji">🎯</span><span class="tu-nav-text">Sơ Đồ Chiến Thuật</span></a>
-  <a href="/books/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to English"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">English</span></a>
+  <a href="/vi/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to English"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">English</span></a>
   <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
 </div>
 <!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-tennis-unified-library" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-<div class="hero">
-    <span class="brand-tag">Tennis Future Lab</span>
-    <h1>Cẩm Nang Tennis Thống Nhất</h1>
-    <p class="subtitle">Hệ thống kiến thức tennis toàn diện tiếng Việt — từ Martial (thân pháp) đến Agentic (tâm pháp)</p>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="./" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tennis Unified Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tennis Unified Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Chọn ngôn ngữ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="vi" class="md-select__link">
+              Tiếng Việt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 </div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
 
-<div class="stats-grid">
-    <div class="stat-card">
-        <div class="number">100+</div>
-        <div class="label">Cuốn sách / Cẩm nang</div>
-    </div>
-    <div class="stat-card">
-        <div class="number">4</div>
-        <div class="label">Cấp độ tiến triển</div>
-    </div>
-    <div class="stat-card">
-        <div class="number">30+</div>
-        <div class="label">Chương cẩm nang thống nhất</div>
-    </div>
-    <div class="stat-card">
-        <div class="number">20+</div>
-        <div class="label">Năm kinh nghiệm</div>
-    </div>
-</div>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-<div class="intro-content">
-    <h2>Về Trang Web Này</h2>
+  
 
-    <p style="font-size: 18px; line-height: 1.85; color: #2a2520; margin-bottom: 28px; text-align: justify;">Kho tri thức này xuất phát từ nhu cầu học có hệ thống và chuyên sâu về tennis của tôi. Hầu hết huấn luyện chỉ nói <em>cái gì</em> cần làm — "đi dưới bóng," "đánh xuyên qua nó," "dùng chân" — nhưng không bao giờ giải thích <em>tại sao</em> hay <em>cách</em> hệ thần kinh của bạn thực sự học được các mẫu hình này.</p>
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./" title="Tennis Unified Library" class="md-nav__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
-    <p style="font-size: 18px; line-height: 1.85; color: #2a2520; margin-bottom: 28px; text-align: justify;">Mọi thứ ở đây đều dựa trên:</p>
-    <ul style="font-size: 18px; line-height: 1.85; color: #2a2520; margin-bottom: 28px; padding-left: 24px; text-align: justify;">
-        <li><strong>Tài liệu huấn luyện uy tín</strong> — từ các sách giáo khoa và tài liệu nghiên cứu về tennis.</li>
-        <li><strong>Song ngữ theo thiết kế</strong> — không phải là bản dịch, mà được viết trực tiếp và tự nhiên bằng cả hai ngôn ngữ.</li>
-        <li><strong>Lý thuyết điều khiển thần kinh</strong> — hiểu chuyển động theo cách bộ não thực sự học nó.</li>
-        <li><strong>Ứng dụng thực tiễn</strong> — bài tập và lộ trình tiến bộ bạn có thể dùng ngay hôm nay.</li>
-    </ul>
-    <p style="font-size: 18px; line-height: 1.85; color: #2a2520; margin-bottom: 28px; text-align: justify;"><em>Chỉ dành cho mục đích giáo dục. Không thay thế cho huấn luyện chuyên nghiệp.</em></p>
-
-    <div style="text-align: center; margin: 48px 0 24px;">
-        <a href="cam-nang/index.html" class="cta-button">Khám phá Cẩm Nang →</a>
-    </div>
-    <p style="text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px;">Hoặc xem <a href="../en/handbooks/index.html" style="color: var(--accent);">Cẩm Nang Tiếng Anh →</a></p>
-
-</div>
+    </a>
+    Tennis Unified Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
 
     
-    <div class="external-resources" style="margin: 48px auto; max-width: 800px;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--ink, #1a1a1a); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent, #c8401a);">📚 Thư Viện Tennis Mở Rộng (External Resources)</h2>
-        <p style="color: var(--muted, #6b7280); margin-bottom: 20px; font-size: 15px;">Các nguồn tài liệu tennis bổ sung từ hệ sinh thái Tennis Future Lab:</p>
+  </span>
+  
+  
 
-        <ul style="list-style: none; padding: 0;">
-            <li style="margin-bottom: 12px; padding: 12px; background: #faf8f4; border-left: 3px solid var(--accent, #c8401a); border-radius: 4px;">
-                <a href="https://henryphamduc.github.io/tennis-wiki-vi/cam-nang/ebook/" target="_blank" rel="noopener" style="color: var(--accent, #c8401a); font-weight: 600; text-decoration: none; font-size: 16px;">📖 Thư Viện Tennis Hoàn Chỉnh (35+ Tài Liệu)</a>
-                <p style="margin: 4px 0 0 0; color: var(--muted, #6b7280); font-size: 14px;">Bộ sưu tập 35+ tài liệu tennis từ cơ bản đến nâng cao.</p>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px; background: #faf8f4; border-left: 3px solid var(--accent, #c8401a); border-radius: 4px;">
-                <a href="https://henryphamduc.github.io/tennis-biomechanics/" target="_blank" rel="noopener" style="color: var(--accent, #c8401a); font-weight: 600; text-decoration: none; font-size: 16px;">🦴 Sinh Cơ Học Tennis - Cẩm Nang 2026</a>
-                <p style="margin: 4px 0 0 0; color: var(--muted, #6b7280); font-size: 14px;">Cẩm nang sinh cơ học tennis ứng dụng cho vận động viên và HLV.</p>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px; background: #faf8f4; border-left: 3px solid var(--accent, #c8401a); border-radius: 4px;">
-                <a href="https://henryphamduc.github.io/tennis-guide/" target="_blank" rel="noopener" style="color: var(--accent, #c8401a); font-weight: 600; text-decoration: none; font-size: 16px;">🎾 Tennis Control System Interactive Guide</a>
-                <p style="margin: 4px 0 0 0; color: var(--muted, #6b7280); font-size: 14px;">Hướng dẫn tương tác về hệ thống kiểm soát tennis — công cụ trực quan cho phân tích kỹ thuật.</p>
-            </li>
-            <li style="margin-bottom: 12px; padding: 12px; background: #faf8f4; border-left: 3px solid var(--accent, #c8401a); border-radius: 4px;">
-                <a href="https://henryphamduc.github.io/tennis-wiki/en/manual/absolute-tennis/index.html" target="_blank" rel="noopener" style="color: var(--accent, #c8401a); font-weight: 600; text-decoration: none; font-size: 16px;">🏆 ABSOLUTE TENNIS Manual - Tennis Knowledge Base</a>
-                <p style="margin: 4px 0 0 0; color: var(--muted, #6b7280); font-size: 14px;">Cơ sở tri thức tennis toàn diện — cẩm nang tham khảo cho mọi trình độ.</p>
-            </li>
-        </ul>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Your Entry Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-by-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start by Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="coach-video-library/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thư Viện Video HLV
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Mục lục
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Your Entry Point
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-by-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Start by Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+  
+
+              
+              <article class="md-content__inner md-typeset">
+
+<h1 id="welcome-to-tennis-unified-library">Welcome to Tennis Unified Library<a class="headerlink" href="#welcome-to-tennis-unified-library" title="Permanent link"></a></h1>
+<p><strong>The most comprehensive tennis knowledge base ever assembled</strong> — unified from 4 major sources into one searchable, bilingual (EN/VI) resource covering 1,300+ articles, 880+ videos, and the work of 38 world-class coaches across 17 major sections.</p>
+<hr />
+<div style="margin: 1.5rem 0 2rem;">
+<p style="margin-top: 0;"><strong style="font-size: 1.2em;">Tác Phẩm Nổi Bật: Sách Sân Thống Nhất (16 Chương Bản Dịch Toàn Diện) &amp; Mạng Nội Bộ Khoảng Trống Tri Thức</strong></p>
+<p style="margin-bottom: 12px; font-size: 1.05em; line-height: 1.5;">Chuyên luận kinh điển 16 chương tổng hợp cơ sinh học video tốc độ cao, nguyên lý võ học nội gia (<em>Triền Ty Kình</em>, Biotensegrity), động học cú đánh, thị giác thần kinh và chiến thuật đỉnh cao.</p>
+<p style="margin-bottom: 1rem;">
+  <a class="md-button md-button--primary" href="/vi/book/" style="margin-right: 8px;">Đọc Sách Sân Thống Nhất (16 Chương)</a>
+  <a class="md-button md-button--primary" href="/book/" style="margin-right: 8px;">🇬🇧 English Version</a>
+  <a class="md-button" href="/books/">Danh Mục 402 Sách</a>
+</p>
+<p style="margin-bottom: 0.5rem;">8 bài viết lưu trữ từ tenniskb.com được bảo tồn cho mục đích tham khảo lịch sử. Tri thức quần vợt kinh điển từ những ngày đầu của Tennis Future Lab.</p>
+<p style="margin-bottom: 0;"><a class="md-button md-button--primary" href="/vi/tenniskb-legacy/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span> Xem Chuyên Mục Lưu Trữ</a></p>
+</div>
+
+<div class="admonition note" style="background: linear-gradient(135deg, rgba(15,43,72,0.05), rgba(2,132,199,0.08)); border-left: 4px solid #0284c7; border-radius: 8px; padding: 1.5rem 1.75rem; margin: 2rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+    <span style="font-size: 1.5rem;">👥</span>
+    <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.08em; color: #0284c7;">Chuyên Đề Chiến Thuật &amp; Tâm Lý Đội Đôi</span>
+  </div>
+  <h2 style="margin: 0 0 0.75rem 0; font-size: 1.4rem; font-weight: 800; color: #0f172a; line-height: 1.3;">Tennis Đôi: Vì Sao Đây Là Môn Thể Thao Khác Biệt Hoàn Toàn So Với Đánh Đơn?</h2>
+  <p style="margin: 0 0 1rem 0; font-size: 1.02rem; line-height: 1.6; color: #334155;">
+    Rất nhiều tay vợt lầm tưởng rằng đánh đôi đơn thuần là <em>hai người đánh đơn cùng đứng chung một nửa sân</em>. Trên thực tế, đánh đôi là một bộ môn hoàn toàn khác biệt với hình học không gian, nhịp điệu và tâm lý thi đấu độc lập. Nếu đánh đơn là cuộc đua thể lực khốc liệt với những cú bứt tốc cạn kiệt năng lượng dọc vạch cuối sân, thì đánh đôi là <strong>bàn cờ chớp nhoáng của nghệ thuật mở góc, chiếm lĩnh mặt lưới, phản xạ đoạt điểm và sự đồng điệu tuyệt đối giữa hai đồng đội</strong>:
+  </p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+    <div style="background: rgba(255,255,255,0.85); padding: 1rem; border-radius: 6px; border: 1px solid rgba(2,132,199,0.15);">
+      <strong style="color: #0369a1; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">📐 Hình Học Sân Đấu &amp; Pha Bóng Ngắn</strong>
+      <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.45;">Sân mở rộng thêm 2.7m (hành lang đôi), nhưng mỗi người chỉ bảo vệ một nửa sân. Pha bóng ngắn hơn 30–40%, loại bỏ các pha chạy rút kiệt sức, biến cú bỏ nhỏ, góc chéo sân và đường dọc dây thành đòn quyết định.</p>
     </div>
+    <div style="background: rgba(255,255,255,0.85); padding: 1rem; border-radius: 6px; border: 1px solid rgba(2,132,199,0.15);">
+      <strong style="color: #0369a1; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">⚡ Làm Chủ Mặt Lưới Thay Vì Giằng Co</strong>
+      <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.45;">Đánh đơn lấy vạch cuối sân làm căn cứ; đánh đôi thì ai làm chủ mặt lưới người đó định đoạt điểm số. Đường bóng đánh vào giữa gây do dự, còn các cú bắt bài (poach) cắt bóng mang lại điểm thắng chớp nhoáng.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.85); padding: 1rem; border-radius: 6px; border: 1px solid rgba(2,132,199,0.15);">
+      <strong style="color: #0369a1; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">🤝 Tương Hỗ Đồng Điệu &amp; San Sẻ Tư Duy</strong>
+      <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.45;">Đánh đơn cô độc; đánh đôi là sự thấu hiểu qua ký hiệu tay, khẩu lệnh tức thời và bọc lót di chuyển nhịp nhàng — hiện thân của nguyên lý võ học <em>Hợp Nhất</em>: hai cơ thể chuyển động như một sinh thể sống.</p>
+    </div>
+    <div style="background: rgba(255,255,255,0.85); padding: 1rem; border-radius: 6px; border: 1px solid rgba(2,132,199,0.15);">
+      <strong style="color: #0369a1; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">⏳ Con Đường Trường Thọ Cho Tuổi 50+</strong>
+      <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.45;">Giảm thiểu tối đa áp lực xung chấn lên khớp gối và cột sống, giúp người chơi phong trào trình độ 3.5+ duy trì phong độ thi đấu đỉnh cao, tràn đầy đam mê và niềm vui gắn kết đến tận lứa tuổi 70+.</p>
+    </div>
+  </div>
+  <p style="margin: 0 0 1rem 0; font-size: 0.92rem; color: #334155;">
+    Chuyên trang Đánh Đôi cung cấp toàn bộ cẩm nang chiến thuật, Đội hình Úc, Đội hình Chữ I, thời điểm bắt bài, cùng 2 bộ sách dịch kinh điển hoàn chỉnh của tác giả <strong>Paul Metzler</strong> và huyền thoại Grand Slam <strong>Françoise Dürr</strong>.
+  </p>
+  <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+    <a href="/vi/doubles/" class="md-button md-button--primary" style="font-weight: 700; padding: 0.55rem 1.25rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 6px;">
+      Khám Phá Chiến Thuật &amp; Đội Hình Đánh Đôi →
+    </a>
+    <a href="/doubles/" class="md-button" style="font-weight: 600; padding: 0.55rem 1.25rem; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 6px;">
+      🇬🇧 English Version
+    </a>
+  </div>
+</div>
 
-<hr class="footer-divider">
+<h2 id="quick-start-by-goal" class="tu-section-title">Khởi Động Nhanh Theo Mục Tiêu<a class="headerlink" href="#quick-start-by-goal" title="Permanent link"></a></h2>
+<table>
+<thead>
+<tr>
+<th>Nếu bạn muốn...</th>
+<th>Bắt đầu tại đây</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Làm chủ cơ sinh học, cú đánh &amp; chiến thuật đỉnh cao</strong></td>
+<td><a href="/vi/book/">Sách Sân Thống Nhất (16 Chương)</a> · <a href="/book/">English Version</a></td>
+</tr>
+<tr>
+<td><strong>Tra cứu 402 sách &amp; báo cáo khoảng trống tri thức</strong></td>
+<td><a href="/books/">Danh Mục 402 Sách</a> · <a href="/vi/tennis-technical-reference/authoritative-sources/">Nguồn Uy Tín</a> · <a href="/vi/tennis-technical-reference/gemini-notebooks/">Gemini Notebooks</a></td>
+</tr>
+<tr>
+<td><strong>Luyện tập bài tập &amp; lập giáo án buổi tập</strong></td>
+<td><a href="/vi/drills/">🎯 Xưởng Bài Tập Tương Tác</a></td>
+</tr>
+<tr>
+<td><strong>Học nền tảng cơ bản từ đầu</strong></td>
+<td><a href="/vi/fundamentals/footwork/">Nền Tảng > Bộ Chân Di Chuyển</a></td>
+</tr>
+<tr>
+<td><strong>Hoàn thiện và sửa lỗi từng cú đánh cụ thể</strong></td>
+<td><a href="/vi/stroke-analysis/advanced-tennis/">Phân Tích Cú Đánh > Advanced Tennis</a></td>
+</tr>
+<tr>
+<td><strong>Học từ các huấn luyện viên đẳng cấp thế giới</strong></td>
+<td><a href="/vi/coach-video-library/">Thư Viện HLV > Tất Cả HLV</a></td>
+</tr>
+<tr>
+<td><strong>Xem video kỹ thuật trực quan từng động tác</strong></td>
+<td><a href="/vi/tennis-video-library/">Thư Viện Video Quần Vợt</a></td>
+</tr>
+<tr>
+<td><strong>Tra cứu tài liệu kỹ thuật song ngữ (Wiki)</strong></td>
+<td><a href="/vi/tennis-technical-reference/">Tài Liệu Kỹ Thuật (Wiki)</a></td>
+</tr>
+<tr>
+<td><strong>Khoa học thể thao &amp; cơ sinh học chuyên sâu</strong></td>
+<td><a href="/vi/fundamentals/dr-kovacs/">Dr Kovacs</a> hoặc <a href="/vi/biomechanics-neurology/">Cơ Sinh Học &amp; Thần Kinh Học</a></td>
+</tr>
+<tr>
+<td><strong>Chiến thuật đánh đôi &amp; phối hợp đồng đội</strong></td>
+<td><a href="/vi/doubles/">Đánh Đôi</a></td>
+</tr>
+<tr>
+<td><strong>Nội dung thi đấu vô địch &amp; chuyên gia</strong></td>
+<td><a href="/vi/elite/">Elite</a> hoặc <a href="/vi/advanced/">Nâng Cao</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="all-sections" class="tu-section-title">Tất Cả Các Phần</h2>
+<p>Khám phá tất cả các phần của Tennis Unified:</p>
+<ul class="tu-section-grid">
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/book/">
+    <h3 class="tu-section-card__title">Sách Sân Thống Nhất</h3>
+    <p class="tu-section-card__desc">Bộ 16 chương — phân tích chuyển động học, cơ sinh học, chiến thuật</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/tennis-technical-reference/authoritative-sources/">
+    <h3 class="tu-section-card__title">Nguồn Uy Tín</h3>
+    <p class="tu-section-card__desc">Phân tích 133 cuốn sách tennis & nghiên cứu hiện đại</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/drills/">
+    <h3 class="tu-section-card__title">🎯 Xưởng Bài Tập Tương Tác</h3>
+    <p class="tu-section-card__desc">Lọc bài tập theo cú đánh &amp; trình độ NTRP, lập giáo án buổi tập và đồng hồ bấm giờ rally</p>
+    <span class="tu-section-card__cta">Khám Phá →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/fundamentals/">
+    <h3 class="tu-section-card__title">Fundamentals</h3>
+    <p class="tu-section-card__desc">Nền tảng cơ bản — footwork, grips, basics</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/fundamentals/footwork/">
+    <h3 class="tu-section-card__title">Footwork</h3>
+    <p class="tu-section-card__desc">Di chuyển, split-step, recovery</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/stroke-analysis/">
+    <h3 class="tu-section-card__title">Stroke Analysis</h3>
+    <p class="tu-section-card__desc">Phân tích forehand, backhand, serve, volley</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/stroke-analysis/advanced-tennis/">
+    <h3 class="tu-section-card__title">Advanced Tennis</h3>
+    <p class="tu-section-card__desc">Phân tích video high-speed của John Yandell</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/coach-video-library/">
+    <h3 class="tu-section-card__title">Coach Library</h3>
+    <p class="tu-section-card__desc">38 HLV hàng đầu với bài học video</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/tennis-video-library/">
+    <h3 class="tu-section-card__title">Tennis Video Library</h3>
+    <p class="tu-section-card__desc">Thư viện video tennis tổng hợp</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/tennis-technical-reference/">
+    <h3 class="tu-section-card__title">Technical Reference (Wiki)</h3>
+    <p class="tu-section-card__desc">Tài liệu kỹ thuật tennis đầy đủ</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/biomechanics-neurology/">
+    <h3 class="tu-section-card__title">Biomechanics & Neurology</h3>
+    <p class="tu-section-card__desc">Sinh học, thần kinh học thể thao</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/doubles/">
+    <h3 class="tu-section-card__title">Doubles</h3>
+    <p class="tu-section-card__desc">Đánh đôi tennis chiến thuật</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/elite/">
+    <h3 class="tu-section-card__title">Elite</h3>
+    <p class="tu-section-card__desc">Trình độ cao — pro level coaching</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/advanced/">
+    <h3 class="tu-section-card__title">Advanced</h3>
+    <p class="tu-section-card__desc">Nâng cao — chuyên gia</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/blog/">
+    <h3 class="tu-section-card__title">Blog</h3>
+    <p class="tu-section-card__desc">Bài viết, tin tức tennis</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+<li class="tu-section-card">
+  <a class="tu-section-card__link" href="/vi/tenniskb-legacy/">
+    <h3 class="tu-section-card__title">Legacy Archive</h3>
+    <p class="tu-section-card__desc">Tài liệu cổ điển từ tenniskb.com</p>
+    <span class="tu-section-card__cta">Explore →</span>
+  </a>
+</li>
+</ul>
 
-    <footer>© 2026 Henry Phạm Đức · Tennis Future Lab · Toàn bộ nội dung chỉ nhằm mục đích giáo dục.</footer>
-</body></html>
+</article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Chân trang" >
+        
+        
+          
+          <a href="coach-video-library/" class="md-footer__link md-footer__link--next" aria-label="Sau: Tổng Quan">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sau
+              </span>
+              <div class="md-ellipsis">
+                Tổng Quan
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+      
+        <script src="../assets/js/extra.js"></script>
+      
+    
+  
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>
