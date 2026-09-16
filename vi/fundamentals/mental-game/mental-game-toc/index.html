@@ -1,1 +1,656 @@
-DQo8IWRvY3R5cGUgaHRtbD4NCjxodG1sIGxhbmc9InZpIiBjbGFzcz0ibm8tanMiPg0KICA8aGVhZD4NCjxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9Sm9zdDppdGFsLHdnaHRAMCwyMDA7MCwzMDA7MCw0MDA7MCw1MDA7MCw2MDA7MSwzMDAmZmFtaWx5PURNK1NhbnM6aXRhbCx3Z2h0QDAsMzAwOzAsNDAwOzAsNTAwOzEsNDAwJmZhbWlseT1TcGFjZStNb25vOndnaHRANDAwOzcwMCZkaXNwbGF5PXN3YXAiIHJlbD0ic3R5bGVzaGVldCI+DQoNCiAgICANCiAgICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4NCiAgICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsaW5pdGlhbC1zY2FsZT0xIj4NCiAgICAgIA0KICAgICAgICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iQ29tcHJlaGVuc2l2ZSB1bmlmaWVkIHRlbm5pcyBrbm93bGVkZ2UgYmFzZSDigJQgRnVuZGFtZW50YWxzLCBTdHJva2UgQW5hbHlzaXMsIFJlZmVyZW5jZSBMaWJyYXJ5LCBhbmQgbW9yZSI+DQogICAgICANCiAgICAgIA0KICAgICAgICA8bWV0YSBuYW1lPSJhdXRob3IiIGNvbnRlbnQ9IkhlbnJ5IFBoYW0iPg0KICAgICAgDQogICAgICANCiAgICAgIA0KICAgICAgDQogICAgICANCiAgICAgICAgDQogICAgICAgICAgPGxpbmsgcmVsPSJhbHRlcm5hdGUiIGhyZWY9Ii4uLy4uLy4uLy4uL2Z1bmRhbWVudGFscy9tZW50YWwtZ2FtZS9tZW50YWwtZ2FtZS10b2MvIiBocmVmbGFuZz0iZW4iPg0KICAgICAgICANCiAgICAgICAgICA8bGluayByZWw9ImFsdGVybmF0ZSIgaHJlZj0iLi8iIGhyZWZsYW5nPSJ2aSI+DQogICAgICAgIA0KICAgICAgDQogICAgICANCiAgICAgIDxsaW5rIHJlbD0iaWNvbiIgaHJlZj0iLi4vLi4vLi4vLi4vYXNzZXRzL2ltYWdlcy9mYXZpY29uLnBuZyI+DQogICAgICA8bWV0YSBuYW1lPSJnZW5lcmF0b3IiIGNvbnRlbnQ9Im1rZG9jcy0xLjYuMSwgbWtkb2NzLW1hdGVyaWFsLTkuNy43Ij4NCiAgICANCiAgICANCiAgICAgIA0KICAgICAgICA8dGl0bGU+TWVudGFsIGdhbWUgdG9jIC0gVGVubmlzIFVuaWZpZWQgTGlicmFyeTwvdGl0bGU+DQogICAgICANCiAgICAgIA0KDQoNCiAgICANCiAgICANCiAgICAgIA0KICAgIA0KICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgICANCiAgICAgICAgPGxpbmsgcmVsPSJwcmVjb25uZWN0IiBocmVmPSJodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tIiBjcm9zc29yaWdpbj4NCiAgICAgICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9RE0rU2FuczozMDAsMzAwaSw0MDAsNDAwaSw3MDAsNzAwaSU3Q1JvYm90bytNb25vOjQwMCw0MDBpLDcwMCw3MDBpJmRpc3BsYXk9ZmFsbGJhY2siPg0KICAgICAgICA8c3R5bGU+OnJvb3R7LS1tZC10ZXh0LWZvbnQ6IkRNIFNhbnMiOy0tbWQtY29kZS1mb250OiJSb2JvdG8gTW9ubyJ9PC9zdHlsZT4NCiAgICANCiAgICA8c2NyaXB0Pl9fbWRfc2NvcGU9bmV3IFVSTCgiLi4vLi4vLi4vLi4iLGxvY2F0aW9uKSxfX21kX2hhc2g9ZT0+Wy4uLmVdLnJlZHVjZSgoKGUsXyk9PihlPDw1KS1lK18uY2hhckNvZGVBdCgwKSksMCksX19tZF9nZXQ9KGUsXz1sb2NhbFN0b3JhZ2UsdD1fX21kX3Njb3BlKT0+SlNPTi5wYXJzZShfLmdldEl0ZW0odC5wYXRobmFtZSsiLiIrZSkpLF9fbWRfc2V0PShlLF8sdD1sb2NhbFN0b3JhZ2UsYT1fX21kX3Njb3BlKT0+e3RyeXt0LnNldEl0ZW0oYS5wYXRobmFtZSsiLiIrZSxKU09OLnN0cmluZ2lmeShfKSl9Y2F0Y2goZSl7fX08L3NjcmlwdD4NCiAgICANCiAgICAgIA0KDQogICAgDQogICAgDQogIA0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvYXNzZXRzL3N0eWxlc2hlZXRzL2NlcnVsZWFuLm1pbi5jc3MiPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvYXNzZXRzL2Nzcy9zaXRlLmNzcyI+PHNjcmlwdCBzcmM9Ii9hc3NldHMvamF2YXNjcmlwdHMvbGFuZy10b2dnbGUuanMiIGRlZmVyPjwvc2NyaXB0PjxzY3JpcHQgc3JjPSIvYXNzZXRzL2phdmFzY3JpcHRzL2Rhcmttb2RlLmpzIiBkZWZlcj48L3NjcmlwdD48L2hlYWQ+DQogIA0KICANCiAgICANCiAgICANCiAgICANCiAgICANCiAgICANCiAgICA8Ym9keSBkaXI9Imx0ciIgZGF0YS1tZC1jb2xvci1zY2hlbWU9ImRlZmF1bHQiIGRhdGEtbWQtY29sb3ItcHJpbWFyeT0iY3VzdG9tIiBkYXRhLW1kLWNvbG9yLWFjY2VudD0iY3VzdG9tIj4NCjwhLS0gRkxBVFRFTkVELVRPUC1OQVYtU1RBUlQgLS0+DQo8ZGl2IGNsYXNzPSJ0dS10b3BuYXYiPg0KICA8YSBocmVmPSIvdmkvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJIb21lIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn4+gPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+SG9tZTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9mdW5kYW1lbnRhbHMvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJGdW5kYW1lbnRhbHMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfk5Y8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5GdW5kYW1lbnRhbHM8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvZG91Ymxlcy8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9IsSQw6FuaCDEkMO0aSI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+RpTwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPsSQw6FuaCDEkMO0aTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9zdHJva2UtYW5hbHlzaXMvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJTdHJva2UgQW5hbHlzaXMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfp6A8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5TdHJva2UgQW5hbHlzaXM8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvY29hY2gtdmlkZW8tbGlicmFyeS8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9IkNvYWNoIExpYnJhcnkiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjpM8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5Db2FjaCBMaWJyYXJ5PC9zcGFuPjwvYT4NCiAgPGEgaHJlZj0iL3ZpL3Rlbm5pcy12aWRlby1saWJyYXJ5LyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iVmlkZW8gTGlicmFyeSI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+OrDwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPlZpZGVvIExpYnJhcnk8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvdGVubmlzLXRlY2huaWNhbC1yZWZlcmVuY2UvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJUZWNobmljYWwgUmVmZXJlbmNlIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OaPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+VGVjaG5pY2FsIFJlZmVyZW5jZTwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS90bmtiL3ZpLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iS2hvIFRyaSBUaOG7qWMiPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfkqE8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5LaG8gVHJpIFRo4bupYzwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS90ZW5uaXMtZXZvbHV0aW9uLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iVGVubmlzIEV2b2x1dGlvbiI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+4pqhPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+VGVubmlzIEV2b2x1dGlvbjwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS9ibG9nLyIgY2xhc3M9InR1LW5hdi1pdGVtIiB0aXRsZT0iQmxvZyI+PHNwYW4gY2xhc3M9InR1LW5hdi1lbW9qaSI+8J+TnTwvc3Bhbj48c3BhbiBjbGFzcz0idHUtbmF2LXRleHQiPkJsb2c8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvYm9vay8iIGNsYXNzPSJ0dS1uYXYtaXRlbSIgdGl0bGU9Ik1hc3RlciBCb29rIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OVPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+TWFzdGVyIEJvb2s8L3NwYW4+PC9hPg0KICA8YSBocmVmPSIvdmkvYm9va3MvIiBjbGFzcz0idHUtbmF2LWl0ZW0iIHRpdGxlPSJCb29rcyBDYXRhbG9nIj48c3BhbiBjbGFzcz0idHUtbmF2LWVtb2ppIj7wn5OaPC9zcGFuPjxzcGFuIGNsYXNzPSJ0dS1uYXYtdGV4dCI+Qm9va3MgQ2F0YWxvZzwvc3Bhbj48L2E+DQogIDxhIGhyZWY9Ii92aS8iIGNsYXNzPSJ0dS1uYXYtaXRlbSB0dS1uYXYtbGFuZyIgZGF0YS1sYW5nLXRvZ2dsZSB0aXRsZT0iU3dpdGNoIHRvIEVuZ2xpc2giPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjJA8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5FbmdsaXNoPC9zcGFuPjwvYT4NCiAgPGJ1dHRvbiBjbGFzcz0idHUtbmF2LWl0ZW0gdHUtbmF2LWRhcmttb2RlIiB0aXRsZT0iRGFyayBNb2RlIiB0eXBlPSJidXR0b24iPjxzcGFuIGNsYXNzPSJ0dS1uYXYtZW1vamkiPvCfjJk8L3NwYW4+PHNwYW4gY2xhc3M9InR1LW5hdi10ZXh0Ij5EYXJrIE1vZGU8L3NwYW4+PC9idXR0b24+DQo8L2Rpdj4NCjwhLS0gRkxBVFRFTkVELVRPUC1OQVYtRU5EIC0tPg0KICAgIDxpbnB1dCBjbGFzcz0ibWQtdG9nZ2xlIiBkYXRhLW1kLXRvZ2dsZT0iZHJhd2VyIiB0eXBlPSJjaGVja2JveCIgaWQ9Il9fZHJhd2VyIiBhdXRvY29tcGxldGU9Im9mZiI+DQogICAgPGlucHV0IGNsYXNzPSJtZC10b2dnbGUiIGRhdGEtbWQtdG9nZ2xlPSJzZWFyY2giIHR5cGU9ImNoZWNrYm94IiBpZD0iX19zZWFyY2giIGF1dG9jb21wbGV0ZT0ib2ZmIj4NCiAgICA8bGFiZWwgY2xhc3M9Im1kLW92ZXJsYXkiIGZvcj0iX19kcmF3ZXIiPjwvbGFiZWw+DQogICAgPGRpdiBkYXRhLW1kLWNvbXBvbmVudD0ic2tpcCI+DQogICAgICANCiAgICAgICAgDQogICAgICAgIDxhIGhyZWY9IiNtZW50YWwtZ2FtZS10b2MiIGNsYXNzPSJtZC1za2lwIj4NCiAgICAgICAgICBC4buPIHF1YQ0KICAgICAgICA8L2E+DQogICAgICANCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGRhdGEtbWQtY29tcG9uZW50PSJhbm5vdW5jZSI+DQogICAgICANCiAgICA8L2Rpdj4NCiAgICANCiAgICANCiAgICAgIA0KDQo8aGVhZGVyIGNsYXNzPSJtZC1oZWFkZXIiIGRhdGEtbWQtY29tcG9uZW50PSJoZWFkZXIiPg0KICA8bmF2IGNsYXNzPSJtZC1oZWFkZXJfX2lubmVyIG1kLWdyaWQiIGFyaWEtbGFiZWw9IsSQ4bqndSB0cmFuZyI+DQogICAgPGEgaHJlZj0iLi4vLi4vIiB0aXRsZT0iVGVubmlzIFVuaWZpZWQgTGlicmFyeSIgY2xhc3M9Im1kLWhlYWRlcl9fYnV0dG9uIG1kLWxvZ28iIGFyaWEtbGFiZWw9IlRlbm5pcyBVbmlmaWVkIExpYnJhcnkiIGRhdGEtbWQtY29tcG9uZW50PSJsb2dvIj4NCiAgICAgIA0KICANCiAgPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDhhMyAzIDAgMCAwIDMtMyAzIDMgMCAwIDAtMy0zIDMgMyAwIDAgMC0zIDMgMyAzIDAgMCAwIDMgM20wIDMuNTRDOS42NCA5LjM1IDYuNSA4IDMgOHYxMWMzLjUgMCA2LjY0IDEuMzUgOSAzLjU0IDIuMzYtMi4xOSA1LjUtMy41NCA5LTMuNTRWOGMtMy41IDAtNi42NCAxLjM1LTkgMy41NCIvPjwvc3ZnPg0KDQogICAgPC9hPg0KICAgIDxsYWJlbCBjbGFzcz0ibWQtaGVhZGVyX19idXR0b24gbWQtaWNvbiIgZm9yPSJfX2RyYXdlciI+DQogICAgICANCiAgICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0zIDZoMTh2Mkgzem0wIDVoMTh2Mkgzem0wIDVoMTh2MkgzeiIvPjwvc3ZnPg0KICAgIDwvbGFiZWw+DQogICAgPGRpdiBjbGFzcz0ibWQtaGVhZGVyX190aXRsZSIgZGF0YS1tZC1jb21wb25lbnQ9ImhlYWRlci10aXRsZSI+DQogICAgICA8ZGl2IGNsYXNzPSJtZC1oZWFkZXJfX2VsbGlwc2lzIj4NCiAgICAgICAgPGRpdiBjbGFzcz0ibWQtaGVhZGVyX190b3BpYyI+DQogICAgICAgICAgPHNwYW4gY2xhc3M9Im1kLWVsbGlwc2lzIj4NCiAgICAgICAgICAgIFRlbm5pcyBVbmlmaWVkIExpYnJhcnkNCiAgICAgICAgICA8L3NwYW4+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJtZC1oZWFkZXJfX3RvcGljIiBkYXRhLW1kLWNvbXBvbmVudD0iaGVhZGVyLXRvcGljIj4NCiAgICAgICAgICA8c3BhbiBjbGFzcz0ibWQtZWxsaXBzaXMiPg0KICAgICAgICAgICAgDQogICAgICAgICAgICAgIE1lbnRhbCBnYW1lIHRvYw0KICAgICAgICAgICAgDQogICAgICAgICAgPC9zcGFuPg0KICAgICAgICA8L2Rpdj4NCiAgICAgIDwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIA0KICAgICAgDQogICAgDQogICAgDQogICAgDQogICAgICA8ZGl2IGNsYXNzPSJtZC1oZWFkZXJfX29wdGlvbiI+DQogIDxkaXYgY2xhc3M9Im1kLXNlbGVjdCI+DQogICAgDQogICAgPGJ1dHRvbiBjbGFzcz0ibWQtaGVhZGVyX19idXR0b24gbWQtaWNvbiIgYXJpYS1sYWJlbD0iQ2jhu41uIG5nw7RuIG5n4buvIj4NCiAgICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Im0xMi44NyAxNS4wNy0yLjU0LTIuNTEuMDMtLjAzQTE3LjUgMTcuNSAwIDAgMCAxNC4wNyA2SDE3VjRoLTdWMkg4djJIMXYyaDExLjE3QzExLjUgNy45MiAxMC40NCA5Ljc1IDkgMTEuMzUgOC4wNyAxMC4zMiA3LjMgOS4xOSA2LjY5IDhoLTJjLjczIDEuNjMgMS43MyAzLjE3IDIuOTggNC41NmwtNS4wOSA1LjAyTDQgMTlsNS01IDMuMTEgMy4xMXpNMTguNSAxMGgtMkwxMiAyMmgybDEuMTItM2g0Ljc1TDIxIDIyaDJ6bS0yLjYyIDcgMS42Mi00LjMzTDE5LjEyIDE3eiIvPjwvc3ZnPg0KICAgIDwvYnV0dG9uPg0KICAgIDxkaXYgY2xhc3M9Im1kLXNlbGVjdF9faW5uZXIiPg0KICAgICAgPHVsIGNsYXNzPSJtZC1zZWxlY3RfX2xpc3QiPg0KICAgICAgICANCiAgICAgICAgICA8bGkgY2xhc3M9Im1kLXNlbGVjdF9faXRlbSI+DQogICAgICAgICAgICA8YSBocmVmPSIuLi8uLi8uLi8uLi9mdW5kYW1lbnRhbHMvbWVudGFsLWdhbWUvbWVudGFsLWdhbWUtdG9jLyIgaHJlZmxhbmc9ImVuIiBjbGFzcz0ibWQtc2VsZWN0X19saW5rIj4NCiAgICAgICAgICAgICAgRW5nbGlzaA0KICAgICAgICAgICAgPC9hPg0KICAgICAgICAgIDwvbGk+DQogICAgICAgIA0KICAgICAgICAgIDxsaSBjbGFzcz0ibWQtc2VsZWN0X19pdGVtIj4NCiAgICAgICAgICAgIDxhIGhyZWY9Ii4vIiBocmVmbGFuZz0idmkiIGNsYXNzPSJtZC1zZWxlY3RfX2xpbmsiPg0KICAgICAgICAgICAgICBUaeG6v25nIFZp4buHdA0KICAgICAgICAgICAgPC9hPg0KICAgICAgICAgIDwvbGk+DQogICAgICAgIA0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgPC9kaXY+DQo8L2Rpdj4NCiAgICANCiAgICANCiAgICANCiAgPC9uYXY+DQogIA0KPC9oZWFkZXI+DQogICAgDQogICAgPGRpdiBjbGFzcz0ibWQtY29udGFpbmVyIiBkYXRhLW1kLWNvbXBvbmVudD0iY29udGFpbmVyIj4NCiAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgICAgIA0KICAgICAgICAgICAgDQoNCiAgICAgICAgICANCiAgICAgICAgDQogICAgICANCiAgICAgIDxtYWluIGNsYXNzPSJtZC1tYWluIiBkYXRhLW1kLWNvbXBvbmVudD0ibWFpbiI+DQogICAgICAgIDxkaXYgY2xhc3M9Im1kLW1haW5fX2lubmVyIG1kLWdyaWQiPg0KICAgICAgICAgIA0KICAgICAgICAgICAgDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyIG1kLXNpZGViYXItLXByaW1hcnkiIGRhdGEtbWQtY29tcG9uZW50PSJzaWRlYmFyIiBkYXRhLW1kLXR5cGU9Im5hdmlnYXRpb24iID4NCiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyX19zY3JvbGx3cmFwIj4NCiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1kLXNpZGViYXJfX2lubmVyIj4NCiAgICAgICAgICAgICAgICAgICAgDQoNCg0KICANCg0KDQo8bmF2IGNsYXNzPSJtZC1uYXYgbWQtbmF2LS1wcmltYXJ5IG1kLW5hdi0tbGlmdGVkIiBhcmlhLWxhYmVsPSJUaGFuaCDEkWnhu4F1IGjGsOG7m25nIiBkYXRhLW1kLWxldmVsPSIwIj4NCiAgPGxhYmVsIGNsYXNzPSJtZC1uYXZfX3RpdGxlIiBmb3I9Il9fZHJhd2VyIj4NCiAgICA8YSBocmVmPSIuLi8uLi8iIHRpdGxlPSJUZW5uaXMgVW5pZmllZCBMaWJyYXJ5IiBjbGFzcz0ibWQtbmF2X19idXR0b24gbWQtbG9nbyIgYXJpYS1sYWJlbD0iVGVubmlzIFVuaWZpZWQgTGlicmFyeSIgZGF0YS1tZC1jb21wb25lbnQ9ImxvZ28iPg0KICAgICAgDQogIA0KICA8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgOGEzIDMgMCAwIDAgMy0zIDMgMyAwIDAgMC0zLTMgMyAzIDAgMCAwLTMgMyAzIDMgMCAwIDAgMyAzbTAgMy41NEM5LjY0IDkuMzUgNi41IDggMyA4djExYzMuNSAwIDYuNjQgMS4zNSA5IDMuNTQgMi4zNi0yLjE5IDUuNS0zLjU0IDktMy41NFY4Yy0zLjUgMC02LjY0IDEuMzUtOSAzLjU0Ii8+PC9zdmc+DQoNCiAgICA8L2E+DQogICAgVGVubmlzIFVuaWZpZWQgTGlicmFyeQ0KICA8L2xhYmVsPg0KICANCiAgPHVsIGNsYXNzPSJtZC1uYXZfX2xpc3QiIGRhdGEtbWQtc2Nyb2xsZml4Pg0KICAgIA0KICAgICAgDQogICAgICANCiAgDQogIA0KICANCiAgDQogICAgPGxpIGNsYXNzPSJtZC1uYXZfX2l0ZW0iPg0KICAgICAgPGEgaHJlZj0iLi4vLi4vIiBjbGFzcz0ibWQtbmF2X19saW5rIj4NCiAgICAgICAgDQogIA0KICANCiAgPHNwYW4gY2xhc3M9Im1kLWVsbGlwc2lzIj4NCiAgICANCiAgDQogICAgVHJhbmcgQ2jhu6cNCiAgDQoNCiAgICANCiAgPC9zcGFuPg0KICANCiAgDQoNCiAgICAgIDwvYT4NCiAgICA8L2xpPg0KICANCg0KICAgIA0KICAgICAgDQogICAgICANCiAgDQogIA0KICANCiAgDQogICAgDQogICAgDQogICAgICANCiAgICAgICAgDQogICAgICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgDQogICAgDQogICAgDQogICAgDQogICAgICANCiAgICAgIA0KICAgICAgICANCiAgICAgIA0KICAgIA0KICAgIA0KICAgICAgDQogICAgICAgIA0KICAgICAgICANCiAgICAgIA0KICAgIA0KICAgIDxsaSBjbGFzcz0ibWQtbmF2X19pdGVtIG1kLW5hdl9faXRlbS0tcHJ1bmVkIG1kLW5hdl9faXRlbS0tbmVzdGVkIj4NCiAgICAgIA0KICAgICAgICANCiAgDQogIA0KICANCiAgICA8YSBocmVmPSIuLi8uLi8uLi9jb2FjaC12aWRlby1saWJyYXJ5LyIgY2xhc3M9Im1kLW5hdl9fbGluayI+DQogICAgICANCiAgDQogIA0KICA8c3BhbiBjbGFzcz0ibWQtZWxsaXBzaXMiPg0KICAgIA0KICANCiAgICBUaMawIFZp4buHbiBWaWRlbyBITFYNCiAgDQoNCiAgICANCiAgPC9zcGFuPg0KICANCiAgDQoNCiAgICAgIA0KICAgICAgICA8c3BhbiBjbGFzcz0ibWQtbmF2X19pY29uIG1kLWljb24iPjwvc3Bhbj4NCiAgICAgIA0KICAgIDwvYT4NCiAgDQoNCiAgICAgIA0KICAgIDwvbGk+DQogIA0KDQogICAgDQogIDwvdWw+DQo8L25hdj4NCiAgICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgIA0KICAgICAgICAgICAgDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyIG1kLXNpZGViYXItLXNlY29uZGFyeSIgZGF0YS1tZC1jb21wb25lbnQ9InNpZGViYXIiIGRhdGEtbWQtdHlwZT0idG9jIiA+DQogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ibWQtc2lkZWJhcl9fc2Nyb2xsd3JhcCI+DQogICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJtZC1zaWRlYmFyX19pbm5lciI+DQogICAgICAgICAgICAgICAgICAgIA0KDQo8bmF2IGNsYXNzPSJtZC1uYXYgbWQtbmF2LS1zZWNvbmRhcnkiIGFyaWEtbGFiZWw9Ik3hu6VjIGzhu6VjIj4NCiAgDQogIA0KICANCiAgICANCiAgDQogIA0KPC9uYXY+DQogICAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgICA8L2Rpdj4NCiAgICAgICAgICAgICAgPC9kaXY+DQogICAgICAgICAgICANCiAgICAgICAgICANCiAgICAgICAgICANCiAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1kLWNvbnRlbnQiIGRhdGEtbWQtY29tcG9uZW50PSJjb250ZW50Ij4NCiAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgDQoNCg0KDQogIA0KDQoNCiAgICAgICAgICAgICAgDQogICAgICAgICAgICAgIDxhcnRpY2xlIGNsYXNzPSJtZC1jb250ZW50X19pbm5lciBtZC10eXBlc2V0Ij4NCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgIA0KDQoNCg0KPCEtLSBUUC1OQVYtU1RBUlQgLS0+DQoNCjxwPjxhIGhyZWY9Ii4uL21hdGNoLXByZXBhcmF0aW9uLyI+IFByZXZpb3VzOiBNYXRjaCBQcmVwYXJhdGlvbjwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi8iPvCfj6AgTWVudGFsIEdhbWUgSG9tZTwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi9tZW50YWwtdG91Z2huZXNzLXRyYWluaW5nLXRoZS0xNi1zZWNvbmQtY3VyZS1wMS8iPk5leHQ6IE1lbnRhbCBUb3VnaG5lc3MgVHJhaW5pbmc6IFRoZSAxNiBTZWNvbmQgQ3VyZSAtIFBhcnQgMSA8L2E+PC9wPg0KPGhyIC8+DQo8IS0tIFRQLU5BVi1FTkQgLS0+DQoNCjxoMSBpZD0ibWVudGFsLWdhbWUtdG9jIj5NZW50YWwgZ2FtZSBUT0M8YSBjbGFzcz0iaGVhZGVybGluayIgaHJlZj0iI21lbnRhbC1nYW1lLXRvYyIgdGl0bGU9IlBlcm1hbmVudCBsaW5rIj48L2E+PC9oMT4NCjxwPjxzdHJvbmc+TWVudGFsIEdhbWU8L3N0cm9uZz48L3A+DQo8cD48c3Ryb25nPlNlY3Rpb24gT3ZlcnZpZXc8L3N0cm9uZz48L3A+DQo8cD5JdCdzIHRvbyBiYWQgdGhhdCBtb3JlIHBsYXllcnMgZG9uJ3QgcHV0IGEgZnJhY3Rpb24gb2YgdGhlIGVmZm9ydCBpbnRvDQpkZXZlbG9waW5nIHRoZSBtZW50YWwgZ2FtZSB0aGF0IHRoZXkgZG8gaW50byBvYnNlc3NpbmcgYWJvdXQgdGhlaXINCnN0cm9rZXMuIExldCdzIGZhY2UgaXQsIGZvciBhIGxvdCBhIHBsYXllcnMsIGl0IGp1c3QgZ2V0cyB0b28gc2NhcnkuPC9wPg0KPHA+RG8geW91IGhhdmUgdGhlIGNvdXJhZ2UgdG8gYWN0dWFsbHkgdGFrZSBhIGhhcmQgbG9vayBhdCB5b3Vyc2VsZiBhcyBhDQpjb21wZXRpdG9yPyBJZiB5b3UgZG8sIHRoZXkgeW91IGhhdmUgdGhlIHBvdGVudGlhbCB0byByYWlzZSB5b3VyIGdhbWUsDQpwb3NzaWJseSBieSBtdWx0aXBsZSBsZXZlbHMuIE9uIFRlbm5pc3BsYXllciwgd2UgaGF2ZSB0aGUgYmVzdCBjb2FjaGVzDQppbiB0aGUgd29ybGQgd2hvIGNhbiBoZWxwIHlvdSBkbyBpdC48L3A+DQo8cD5KaW0gTG9laHIgdmlydHVhbGx5IGludmVudGVkIHRoZSBjb25jZXB0IG9mIG1lbnRhbCB0b3VnaG5lc3MuIEhpcyB3b3JrDQpoYXMgYmVlbiBzbyBzZW1pbmFsIGFuZCBzbyBpbmZsdWVudGlhbCwgdGhhdCB0b3AgcHJvIHBsYXllcnMgcm91dGluZWx5DQptb2RlbCB0aGVtc2VsdmVzIG9uIGhpcyB3b3JrIHdpdGhvdXQgZXZlbiBrbm93aW5nIHRoZSBvcmlnaW5hbCBzb3VyY2UuDQpUYWtpbmcgeW91ciB0aW1lIGJldHdlZW4gcG9pbnRzLCBsZWFybmluZyB0byBzdGF5IHBvc2l0aXZlIHdpdGggeW91cg0KYm9keSBsYW5ndWFnZS0tdG9kYXkgdGhlcmUgYXJlIGh1bmRyZWRzIG9mIGNvYWNoZXMgYW5kIHNwb3J0cw0KcHN5Y2hvbG9naXN0cyB3aG8gYXBwcm9wcmlhdGUgaGlzIGluc2lnaHRzIGFuZCB0ZXJtaW5vbG9neSBldmVyeWRheS48L3A+DQo8cD5IZXJlIHlvdSBjYW4gc2VlIEppbSdzIGNvbXBsZXRlIHN5c3RlbSwgcHJlc2VudGVkIGJ5IHRoZSBtYXN0ZXINCmhpbXNlbGYuIEl0J3MgYXdlc29tZS4gSSBrbm93IGZyb20gbXkgcGVyc29uYWwgZXhwZXJpZW5jZSwgYW5kIHlvdSBjYW4NCnRvby48L3A+DQo8cD5BbGxlbiBGb3ggaXMgdW5pcXVlIGluIHRlbm5pcyBjb2FjaGluZywgYmVjYXVzZSBoZSBub3Qgb25seSBwbGF5ZWQgYXQNCnRoZSBoaWdoZXN0IGxldmVscyBvZiB0aGUgZ2FtZSwgaGUgYmFja2VkIHRoYXQgdXAgd2l0aCBhIFBoRCBpbg0KcHN5Y2hvbG9neSBmcm9tIFVDTEEuIFRoYXQncyBhbiBhY2NvbXBsaXNobWVudCBJIGRvdWJ0IHdpbGwgYmUgZXF1YWxlZA0KYnkgYW55IG1vZGVybiBwcm8gcGxheWVyLiBPbmUgb2YgdGhlIGZhc2NpbmF0aW5nIGFzcGVjdHMgb2YgdGhpcyBzZWN0aW9uDQpvZiBUZW5uaXNwbGF5ZXIgaXMgcmVhZGluZyBoaXMgd29yayBhbmQgc2VlaW5nIGhvdyBpdCBjb21wbGltZW50cywgYW5kDQphbHNvIGF0IHRpbWUgY2hhbGxlbmdlcywgdGhlIHBlcnNwZWN0aXZlIGNyZWF0ZWQgYnkgTG9laHIuPC9wPg0KPHA+QWxpc3RhaXIgSGlnaGFtIGlzIHRoZSBtb3N0IGltcG9ydGFudCBuZXcgdm9pY2UgdG8gYXBwZWFyIGluIHRoZSBmaWVsZA0Kc2luY2UgTG9laHIgYW5kIEZveC4gSGlzIHdvcmsgb24gbW9tZW50dW0gaXMgdHJ1bHkgb3JpZ2luYWwsIHVubGlrZSB0aGUNCndvcmsgb2Ygc28gbWFueSBjb2FjaGVzIHdobyBhcmUgcGFycm90aW5nIHRoZSBpbnNpZ2h0cyBvZiBvdGhlcnMuIEJhc2VkDQpvbiB5ZWFycyBvZiBrZWVuIG9ic2VydmF0aW9uIG9uIHRoZSBpbnRlcm5hdGlvbmFsIHRvdXIgYXQgYm90aCB0aGUNCnByb2Zlc3Npb25hbCBhbmQganVuaW9yIGxldmVsLCBBbGlzdGFpcidzIHdvcmsgYWxsb3dzIHVzIHRvIGNvbXByZWhlbmQNCnRoZSBwb3dlcmZ1bCBidXQgaGlkZGVuIGZvcmNlcyB0aGF0IGNvbnRyb2wgdmlydHVhbGx5IGFsbCBjb21wZXRpdGl2ZQ0KbWF0Y2hlcy0tYW5kIG1vc3QgaW50ZXJlc3RpbmdseSB0byBsZWFybiB0byBob3cgaW5mbHVlbmNlIGFuZC9vciBzaGFwZQ0KdGhlc2UgZm9yY2VzLjwvcD4NCjxwPjxzdHJvbmc+RGF2aWQgU2FtbWVsPC9zdHJvbmc+PC9wPg0KPHA+U3RhdGVtZW50czwvcD4NCjxwPkxvY2tlciBSb29tIFBvd2VyOiBUaGUgTGFkZGVyIG9mIEdhaW48L3A+DQo8cD5XaGF0IGlzIExvY2tlciBSb29tIFBvd2VyPzwvcD4NCjxwPjxzdHJvbmc+Sm9obiBTaGVyd29vZDwvc3Ryb25nPjwvcD4NCjxwPkNydXNoaW5nIHRoZSBCcmVha2VyPC9wPg0KPHA+VGhlIEluc2lkZSBPdXQgQmFja2hhbmQ8L3A+DQo8cD48c3Ryb25nPkRhbWllbiBMYWZvbnQ8L3N0cm9uZz48L3A+DQo8cD5UaXRhbnMgb2YgVGVhY2hpbmcgWm9uZQ0KVGVubmlzPC9wPg0KPHA+RG9lcyB0aGUgWm9uZSBFeGlzdD88L3A+DQo8cD5IZWFkIEZpeGF0aW9uIGFuZCB0aGUgTWVudGFsDQpHYW1lPC9wPg0KPHA+PHN0cm9uZz5LeWxlIExhQ3JvaXg8L3N0cm9uZz48L3A+DQo8cD5UaGUgTG9zZXIncyBFZGdlPC9wPg0KPHA+PHN0cm9uZz5CZW4gTG9lYjwvc3Ryb25nPjwvcD4NCjxwPkZsb3dpbmcgaW4gdGhlIFpvbmUgLSBORVc8L3A+DQo8cD5FbW90aW9uYWwgYW5kIE1lbnRhbA0KUGl0ZmFsbHM8L3A+DQo8cD5UZWNobmlxdWVzIGZvciBEZXZlbG9waW5nDQpDb25maWRlbmNlPC9wPg0KPHA+U2VsZi1BY2NlcHRhbmNlIGFuZA0KQ29uZmlkZW5jZTwvcD4NCjxwPjxzdHJvbmc+QWxpc3RhaXIgSGlnaGFtPC9zdHJvbmc+PC9wPg0KPHA+PHN0cm9uZz5Nb21lbnR1bTo8L3N0cm9uZz48L3A+DQo8cD5BbiBJbnRyb2R1Y3Rpb24gdG8gdGhlIDUNClN0YWdlczwvcD4NCjxwPldoZW4gTW9tZW50dW0gaXMgVG90YWxsbHkgV2l0aA0KWW91PC9wPg0KPHA+V2hlbiBNb21lbnR1bSBJcyBXaXRoDQpZb3U8L3A+DQo8cD5XaGVuIE1vbWVudHVtIElzIE5ldXRyYWw8L3A+DQo8cD5XaGVuIE1vbWVudHVtIGlzIFRvdGFsbHkgQWdhaW5zdA0KWW91PC9wPg0KPHA+V2hlbiBNb21lbnR1bSBpcyBBZ2FpbnN0DQpZb3U8L3A+DQo8cD48c3Ryb25nPkZyYW5rIEdpYW1wYW9sbzwvc3Ryb25nPjwvcD4NCjxwPk1hdGNoIFByZXBhcmF0aW9uPC9wPg0KPHA+VGhlIEFydCBvZiBXaW5uaW5nPC9wPg0KPHA+UGFyZW50YWwgVGVubmlzDQpCbHVuZGVyczwvcD4NCjxwPjxzdHJvbmc+Sm9leSBKb2huc29uPC9zdHJvbmc+PC9wPg0KPHA+VGhlIFBhbmljIFNpZ25hbDwvcD4NCjxwPlJlc2lzdGFuY2UgYW5kIEJyZWFrdGhyb3VnaA0KUG9pbnRzPC9wPg0KPHA+PHN0cm9uZz5KZWZmIEdyZWVud2FsZDwvc3Ryb25nPjwvcD4NCjxwPldhbGtpbmcgdGhlIE1lbnRhbCBHYW1lIFRhbGs6DQpDb25maWRlbmNlPC9wPg0KPHA+V2Fsa2luZyB0aGUgTWVudGFsIFRvdWdobmVzcyBUYWxrOiBUaGUgR29sZA0KQmFsbDwvcD4NCjxwPlRoZSBNaW5kIG9mIHRoZSBCYXNlbGluZXItLS1hbmQgSG93IHRvIFRyYW5zZm9ybQ0KSXQhPC9wPg0KPHA+VGhlIE9wcG9ydHVuaXR5IEF0dGFjazwvcD4NCjxwPkludGVncmF0aW5nIHRoZSBUZWNobmljYWwgYW5kIHRoZSBNZW50YWwNCkdhbWVzPC9wPg0KPHA+TWluZGZ1bG5lc3M6IENhbiBZb3UgQWN0dWFsbHkgQ2hhbmdlIFlvdXINCkJyYWluPzwvcD4NCjxwPldoeSBDYW4ndCBJIFBsYXkgdGhlIFdheSBJDQpQcmFjdGljZT88L3A+DQo8cD5GaW5kaW5nIFBsZWFzdXJlIGluIFByZXNzdXJlPC9wPg0KPHA+T3ZlcmNvbWluZyBOZWdhdGl2ZSBFbW90aW9uczwvcD4NCjxwPjxzdHJvbmc+QWxsZW4gRm94PC9zdHJvbmc+PC9wPg0KPHA+PHN0cm9uZz5XaW5uaW5nIHRoZSBNZW50YWwgTWF0Y2g8L3N0cm9uZz48L3A+DQo8cD5PdmVyY29taW5nIENob2tpbmc8L3A+DQo8cD5XaGF0IGlzIENob2tpbmc/PC9wPg0KPHA+VGhlIFByb2JsZW0gb2YgRmluaXNoaW5nPC9wPg0KPHA+VGhlIFJlYWxpdHkgb2YgUGVyZmVjdGlvbmlzbTwvcD4NCjxwPlVucmVhbGlzdGljIFBlcmZlY3Rpb25pc208L3A+DQo8cD5SZWR1Y2luZyBTdHJlc3M8L3A+DQo8cD5EZWZlbnNlIE1lY2hhbmlzbXM8L3A+DQo8cD5XaHkgRW1vdGlvbnMgQ2FuIGJlIENvdW50ZXINClByb2R1Y3RpdmU8L3A+DQo8cD5XaHkgRG8gV2UgV2FudCB0byBXaW4/PC9wPg0KPHA+PHN0cm9uZz5KaW0gTG9laHI8L3N0cm9uZz48L3A+DQo8cD48c3Ryb25nPlRoZSBPbmx5IFdheSB0byBXaW48L3N0cm9uZz48L3A+DQo8cD5BbWVyaWNhbiBKdW5pb3INClRlbm5pczwvcD4NCjxwPkNvbmZpZGVuY2U8L3A+DQo8cD5UaGUgUG93ZXIgb2YNClN0b3J5PC9wPg0KPHA+VGhlIFByaXZhdGUNClZvaWNlPC9wPg0KPHA+V2hhdCBPdXIgQWNhZGVteSBQbGF5ZXJzDQpEbzwvcD4NCjxwPk91ciBBY2FkZW15PC9wPg0KPHA+SW50cm9kdWN0aW9uPC9wPg0KPHA+PHN0cm9uZz5KaW0gTG9laHI8L3N0cm9uZz48L3A+DQo8cD5Mb3ZlIHRoZSBCYXR0bGU6IFJhZmFlbCBOYWRhbDwvcD4NCjxwPkxvdmUgdGhlIEJhdHRsZTogUGF0aHdheXMgdG8gUGVyZm9ybWluZyBVbmRlcg0KUHJlc3N1cmU8L3A+DQo8cD5UaGUgSWRlYWwgUGVyZm9ybWFuY2UgU3RhdGU8L3A+DQo8cD5UaGUgMTYgU2Vjb25kIEN1cmU6IFBhcnQNCjE8L3A+DQo8cD5UaGUgMTYgU2Vjb25kIEN1cmU6IFBhcnQNCjI8L3A+DQo8cD5CcmVhdGhpbmcgYW5kIHRoZSBNZW50YWwNCkdhbWU8L3A+DQo8cD5NYXN0ZXJpbmcgWW91ciBDaG9raW5nDQpSZXNwb25zZTwvcD4NCjxwPkZyb20gUG9zaXRpdmUgdG8gTmVnYXRpdmU8L3A+DQo8cD5JbiBZb3VyIE1pbmQncyBFeWU8L3A+DQo8cD48c3Ryb25nPkFsbGVuIEZveDwvc3Ryb25nPjwvcD4NCjxwPlRoZSBSb2xlIG9mIE9wdGltaXNtIGluIFlvdXINCkdhbWU8L3A+DQo8cD5UaGUgVmFsdWUgb2YgT3B0aW1pc206IEJyYWQNCkdpbGJlcnQ8L3A+DQo8cD5UaGUgVmFsdWUgb2YgT3B0aW1pc206IE1pY2hhZWwNCkNoYW5nPC9wPg0KPHA+Rml4aW5nIFN0cm9rZSBQaG9iaWFzPC9wPg0KPHA+UmVwbGFjaW5nIENvbmZpZGVuY2Ugd2l0aA0KRGlzY2lwbGluZTwvcD4NCjxwPkluY3JlYXNpbmcgQ29uZmlkZW5jZTwvcD4NCjxwPlNlbGYgQmVsaWVmPC9wPg0KPHA+UGVyc29uYWwgQW50YWdvbmlzbSBEb2Vzbid0DQpQYXk8L3A+DQo8cD5DbGlmZiBSaWNoZXkncyBOZXcgQm9vazogQWNpbmcNCkRlcHJlc3Npb248L3A+DQo8cD5TaG91bGQgV2UgQmFuIFJlY3JlYXRpb25hbA0KRHJ1Z3M/PC9wPg0KPHA+VGhlIEF1c3RyYWxpYW4gT3BlbiBGaW5hbCAtIGFuZCBZb3VyDQpHYW1lPC9wPg0KPHA+VGhlIERpYWJvbGljYWwgU2NvcmluZyBTeXN0ZW0gb2YNClRlbm5pczwvcD4NCjxwPkJyZWFraW5nIERvd24gWW91ciBPcHBvbmVudCB3aXRoDQpBdHRpdHVkZTwvcD4NCjxwPktlZXAgdGhlIEdvYWwgaW4gTWluZDwvcD4NCjxwPlRob3VnaHRzIG9uIHRoZSBBZ2Fzc2kNClJldmVsYXRpb25zPC9wPg0KPHA+VGhlIERhbmdlcnMgT2YgU3Ryb25nDQpFbW90aW9uczwvcD4NCjxwPkVzdGFibGlzaGluZyBEb21pbmFuY2U8L3A+DQo8cD5DaG9raW5nLCBFdmVuIGluIHRoZSBVUyBPcGVuDQpGaW5hbDwvcD4NCjxwPkJlY29taW5nIEEgR3JlYXQgQ29tcGV0aXRvcjwvcD4NCjxwPkV2ZW4gQ2hhbXBpb25zIENob2tlPC9wPg0KPHA+QmUgV2FyeSBvZiBIaWRkZW4gRmVhcjwvcD4NCjxwPjxzdHJvbmc+QmFycnkgQnVzczwvc3Ryb25nPjwvcD4NCjxwPk9mZmVuc2UgQXMgRGVmZW5zZTwvcD4NCjxwPkRlYWxpbmcgd2l0aCBCYWQgTGluZSBDYWxsczwvcD4NCjxwPjxzdHJvbmc+S2VpdGggSGF5ZXM8L3N0cm9uZz48L3A+DQo8cD5IZWFkIEh1bnRpbmc8L3A+DQo8cD5UaGUgQmVzdCBUaXAgRXZlcjwvcD4NCjxwPkZhbWlseSBUZW5uaXM8L3A+DQo8cD5UaGUgTG9vazwvcD4NCjxwPk15IFRlbm5pcyBNb3JuaW5nIHdpdGggSm9obm55DQpDYXJzb248L3A+DQo8cD5UaGUgQW50aS1DaGFtcGlvbnM8L3A+DQo8cD5Db252ZXJzYXRpb25zIHdpdGggRHIuIEZveDogQW4gQWR2YW5jZWQgRGVncmVlIGluIFRlbm5pcw0KVGhlb3J5PC9wPg0KPHA+PHN0cm9uZz5KZWZmIE1jQ3VsbG91Z2g8L3N0cm9uZz48L3A+DQo8cD5QYXRob2xvZ2ljYWwgTG9zZXJzOiBNeSBWaWMgQnJhZGVuDQpJbnRlcnZpZXc8L3A+DQo8cD5Sb2QgTGF2ZXIgYW5kIFRoZSBNZWFuDQpTdHJlYWs8L3A+DQo8cD5BIFByYWN0aWNhbCBHdWlkZSB0byBQZWFrIFBlcmZvcm1hbmNlOiBQYXJ0DQoyPC9wPg0KPHA+QSBQcmFjdGljYWwgR3VpZGUgdG8gUGVhayBQZXJmb3JtYW5jZTogUGFydA0KMTwvcD4NCjxwPjxzdHJvbmc+Sm9obiBOZXdjb21iZTwvc3Ryb25nPjwvcD4NCjxwPlRoZSBUd28gTWluZHM8L3A+DQo8cD48c3Ryb25nPkNyYWlnIEthcmRvbjwvc3Ryb25nPjwvcD4NCjxwPldoYXQgSXMgQ29uZmlkZW5jZT88L3A+DQo8cD48c3Ryb25nPk1pY2hhZWwgRnJpZWRtYW48L3N0cm9uZz48L3A+DQo8cD5Db25jZW50cmF0aW9uPC9wPg0KPCEtLSBUUC1OQVYtU1RBUlQgLS0+DQoNCjxwPjxhIGhyZWY9Ii4uL21hdGNoLXByZXBhcmF0aW9uLyI+IFByZXZpb3VzOiBNYXRjaCBQcmVwYXJhdGlvbjwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi8iPvCfj6AgTWVudGFsIEdhbWUgSG9tZTwvYT4gJm5ic3A7fCZuYnNwOyA8YSBocmVmPSIuLi9tZW50YWwtdG91Z2huZXNzLXRyYWluaW5nLXRoZS0xNi1zZWNvbmQtY3VyZS1wMS8iPk5leHQ6IE1lbnRhbCBUb3VnaG5lc3MgVHJhaW5pbmc6IFRoZSAxNiBTZWNvbmQgQ3VyZSAtIFBhcnQgMSA8L2E+PC9wPg0KPGhyIC8+DQo8IS0tIFRQLU5BVi1FTkQgLS0+DQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgIDwvYXJ0aWNsZT4NCiAgICAgICAgICAgIDwvZGl2Pg0KICAgICAgICAgIA0KICAgICAgICAgIA0KPHNjcmlwdD52YXIgdGFyZ2V0PWRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGxvY2F0aW9uLmhhc2guc2xpY2UoMSkpO3RhcmdldCYmdGFyZ2V0Lm5hbWUmJih0YXJnZXQuY2hlY2tlZD10YXJnZXQubmFtZS5zdGFydHNXaXRoKCJfX3RhYmJlZF8iKSk8L3NjcmlwdD4NCiAgICAgICAgPC9kaXY+DQogICAgICAgIA0KICAgICAgICAgIDxidXR0b24gdHlwZT0iYnV0dG9uIiBjbGFzcz0ibWQtdG9wIG1kLWljb24iIGRhdGEtbWQtY29tcG9uZW50PSJ0b3AiIGhpZGRlbj4NCiAgDQogIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xMyAyMGgtMlY4bC01LjUgNS41LTEuNDItMS40MkwxMiA0LjE2bDcuOTIgNy45Mi0xLjQyIDEuNDJMMTMgOHoiLz48L3N2Zz4NCiAgVHLhu58gbOG6oWkgbeG7pWMgbOG7pWMNCjwvYnV0dG9uPg0KICAgICAgICANCiAgICAgIDwvbWFpbj4NCiAgICAgIA0KICAgICAgICA8Zm9vdGVyIGNsYXNzPSJtZC1mb290ZXIiPg0KICANCiAgICANCiAgDQogIDxkaXYgY2xhc3M9Im1kLWZvb3Rlci1tZXRhIG1kLXR5cGVzZXQiPg0KICAgIDxkaXYgY2xhc3M9Im1kLWZvb3Rlci1tZXRhX19pbm5lciBtZC1ncmlkIj4NCiAgICAgIDxkaXYgY2xhc3M9Im1kLWNvcHlyaWdodCI+DQogIA0KICAgIDxkaXYgY2xhc3M9Im1kLWNvcHlyaWdodF9faGlnaGxpZ2h0Ij4NCiAgICAgIMKpIDIwMjYgSGVucnkgUGjhuqFtIMSQ4bupYyDCtyBUZW5uaXMgRnV0dXJlIExhYiBSZXNlYXJjaCDCtyBBbGwgY29udGVudHMgYXJlIGZvciBlZHVjYXRpb25hbCBwdXJwb3NlLg0KICAgIDwvZGl2Pg0KICANCjwvZGl2Pg0KICAgICAgDQogICAgPC9kaXY+DQogIDwvZGl2Pg0KPC9mb290ZXI+DQogICAgICANCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJtZC1kaWFsb2ciIGRhdGEtbWQtY29tcG9uZW50PSJkaWFsb2ciPg0KICAgICAgPGRpdiBjbGFzcz0ibWQtZGlhbG9nX19pbm5lciBtZC10eXBlc2V0Ij48L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICANCiAgICANCiAgICANCiAgICAgIA0KICAgICAgDQogICAgICA8c2NyaXB0IGlkPSJfX2NvbmZpZyIgdHlwZT0iYXBwbGljYXRpb24vanNvbiI+eyJhbm5vdGF0ZSI6IG51bGwsICJiYXNlIjogIi4uLy4uLy4uLy4uIiwgImZlYXR1cmVzIjogWyJuYXZpZ2F0aW9uLnRhYnMiLCAibmF2aWdhdGlvbi5zZWN0aW9ucyIsICJuYXZpZ2F0aW9uLnRvcCIsICJuYXZpZ2F0aW9uLnBhdGgiLCAibmF2aWdhdGlvbi5leHBhbmQiLCAibmF2aWdhdGlvbi5pbmRleGVzIiwgIm5hdmlnYXRpb24ucHJ1bmUiLCAibmF2aWdhdGlvbi5wcmV2X25leHQiLCAibmF2aWdhdGlvbi5mb290ZXIiLCAic2VhcmNoLmhpZ2hsaWdodCIsICJzZWFyY2guc3VnZ2VzdCIsICJhbHRlcm5hdGUiXSwgInNlYXJjaCI6ICIuLi8uLi8uLi8uLi9hc3NldHMvamF2YXNjcmlwdHMvd29ya2Vycy9zZWFyY2guMmMyMTU3MzMubWluLmpzIiwgInRhZ3MiOiBudWxsLCAidHJhbnNsYXRpb25zIjogeyJjbGlwYm9hcmQuY29waWVkIjogIlx1MDExMFx1MDBlMyBzYW8gY2hcdTAwZTlwIiwgImNsaXBib2FyZC5jb3B5IjogIlNhbyBjaFx1MDBlOXAgdlx1MDBlMG8gYlx1MWVkOSBuaFx1MWVkYiB0XHUxZWExbSIsICJzZWFyY2gucmVzdWx0Lm1vcmUub25lIjogIjEgdFx1MWVlYiBraFx1MDBlMWMgdHJvbmcgdHJhbmciLCAic2VhcmNoLnJlc3VsdC5tb3JlLm90aGVyIjogIiMgdFx1MWVlYiBraFx1MDBlMWMgdHJvbmcgdHJhbmciLCAic2VhcmNoLnJlc3VsdC5ub25lIjogIktoXHUwMGY0bmcgdFx1MDBlY20gdGhcdTFlYTV5IHRcdTAwZTBpIGxpXHUxZWM3dSBsaVx1MDBlYW4gcXVhbiIsICJzZWFyY2gucmVzdWx0Lm9uZSI6ICIxIHRcdTAwZTBpIGxpXHUxZWM3dSBsaVx1MDBlYW4gcXVhbiIsICJzZWFyY2gucmVzdWx0Lm90aGVyIjogIiMgdFx1MDBlMGkgbGlcdTFlYzd1IGxpXHUwMGVhbiBxdWFuIiwgInNlYXJjaC5yZXN1bHQucGxhY2Vob2xkZXIiOiAiTmhcdTFlYWRwIFx1MDExMVx1MWVjMyBiXHUxZWFmdCBcdTAxMTFcdTFlYTd1IHRcdTAwZWNtIGtpXHUxZWJmbSIsICJzZWFyY2gucmVzdWx0LnRlcm0ubWlzc2luZyI6ICJLaFx1MDBmNG5nIiwgInNlbGVjdC52ZXJzaW9uIjogIkNoXHUxZWNkbiBwaGlcdTAwZWFuIGJcdTFlYTNuIn0sICJ2ZXJzaW9uIjogbnVsbH08L3NjcmlwdD4NCiAgICAgIA0KICAgICAgICA8c2NyaXB0IHNyYz0iLi4vLi4vLi4vLi4vYXNzZXRzL2pzL2V4dHJhLmpzIj48L3NjcmlwdD4NCiAgICAgIA0KICAgIA0KICANCjxmb290ZXIgY2xhc3M9InR1LWZvb3RlciIgc3R5bGU9ImJhY2tncm91bmQ6IHZhcigtLWNhcmQpOyBib3JkZXItdG9wOiAxcHggc29saWQgdmFyKC0tYm9yZGVyKTsgY29sb3I6IHZhcigtLWluay1tdXRlZCk7IHBhZGRpbmc6IDEuNXJlbSAxcmVtOyB0ZXh0LWFsaWduOiBjZW50ZXI7IGZvbnQtc2l6ZTogMC45MnJlbTsgbWFyZ2luLXRvcDogM3JlbTsiPg0KPGRpdiBzdHlsZT0iZm9udC1zaXplOiAwLjg1cmVtOyBjb2xvcjogdmFyKC0tYWNjZW50LWRhcmspOyI+VHJhbmcgd2ViIG7DoHkgxJHGsOG7o2MgeMOieSBk4buxbmcgduG7m2kg4p2k77iPIGNobyBj4buZbmcgxJHhu5NuZyBxdeG6p24gduG7o3QgVmnhu4d0IE5hbSDwn46+IGJ5IEhlbnJ5IFBo4bqhbTwvZGl2Pg0KPC9mb290ZXI+DQo8L2JvZHk+DQo8L2h0bWw+
+
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive unified tennis knowledge base — Fundamentals, Stroke Analysis, Reference Library, and more">
+      
+      
+        <meta name="author" content="Henry Pham">
+      
+      
+      
+      
+      
+        
+          <link rel="alternate" href="../../../../fundamentals/mental-game/mental-game-toc/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="vi">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Mental game toc - Tennis Unified Library</title>
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+<!-- FLATTENED-TOP-NAV-START -->
+<div class="tu-topnav">
+  <a href="/vi/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/vi/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
+  <a href="/vi/doubles/" class="tu-nav-item" title="Đánh Đôi"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Đánh Đôi</span></a>
+  <a href="/vi/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
+  <a href="/vi/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
+  <a href="/vi/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
+  <a href="/vi/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
+  <a href="/vi/tnkb/vi/" class="tu-nav-item" title="Kho Tri Thức"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Kho Tri Thức</span></a>
+  <a href="/vi/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
+  <a href="/vi/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
+  <a href="/vi/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/vi/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to English"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">English</span></a>
+  <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
+</div>
+<!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mental-game-toc" class="md-skip">
+          Bỏ qua
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Đầu trang">
+    <a href="../../" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tennis Unified Library
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mental game toc
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Chọn ngôn ngữ">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../fundamentals/mental-game/mental-game-toc/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="vi" class="md-select__link">
+              Tiếng Việt
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Thanh điều hướng" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Tennis Unified Library" class="md-nav__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tennis Unified Library
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trang Chủ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../coach-video-library/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thư Viện Video HLV
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Mục lục">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- TP-NAV-START -->
+
+<p><a href="../match-preparation/"> Previous: Match Preparation</a> &nbsp;|&nbsp; <a href="../">🏠 Mental Game Home</a> &nbsp;|&nbsp; <a href="../mental-toughness-training-the-16-second-cure-p1/">Next: Mental Toughness Training: The 16 Second Cure - Part 1 </a></p>
+<hr />
+<!-- TP-NAV-END -->
+
+<h1 id="mental-game-toc">Mental game TOC<a class="headerlink" href="#mental-game-toc" title="Permanent link"></a></h1>
+<p><strong>Mental Game</strong></p>
+<p><strong>Section Overview</strong></p>
+<p>It's too bad that more players don't put a fraction of the effort into
+developing the mental game that they do into obsessing about their
+strokes. Let's face it, for a lot a players, it just gets too scary.</p>
+<p>Do you have the courage to actually take a hard look at yourself as a
+competitor? If you do, they you have the potential to raise your game,
+possibly by multiple levels. On Tennisplayer, we have the best coaches
+in the world who can help you do it.</p>
+<p>Jim Loehr virtually invented the concept of mental toughness. His work
+has been so seminal and so influential, that top pro players routinely
+model themselves on his work without even knowing the original source.
+Taking your time between points, learning to stay positive with your
+body language--today there are hundreds of coaches and sports
+psychologists who appropriate his insights and terminology everyday.</p>
+<p>Here you can see Jim's complete system, presented by the master
+himself. It's awesome. I know from my personal experience, and you can
+too.</p>
+<p>Allen Fox is unique in tennis coaching, because he not only played at
+the highest levels of the game, he backed that up with a PhD in
+psychology from UCLA. That's an accomplishment I doubt will be equaled
+by any modern pro player. One of the fascinating aspects of this section
+of Tennisplayer is reading his work and seeing how it compliments, and
+also at time challenges, the perspective created by Loehr.</p>
+<p>Alistair Higham is the most important new voice to appear in the field
+since Loehr and Fox. His work on momentum is truly original, unlike the
+work of so many coaches who are parroting the insights of others. Based
+on years of keen observation on the international tour at both the
+professional and junior level, Alistair's work allows us to comprehend
+the powerful but hidden forces that control virtually all competitive
+matches--and most interestingly to learn to how influence and/or shape
+these forces.</p>
+<p><strong>David Sammel</strong></p>
+<p>Statements</p>
+<p>Locker Room Power: The Ladder of Gain</p>
+<p>What is Locker Room Power?</p>
+<p><strong>John Sherwood</strong></p>
+<p>Crushing the Breaker</p>
+<p>The Inside Out Backhand</p>
+<p><strong>Damien Lafont</strong></p>
+<p>Titans of Teaching Zone
+Tennis</p>
+<p>Does the Zone Exist?</p>
+<p>Head Fixation and the Mental
+Game</p>
+<p><strong>Kyle LaCroix</strong></p>
+<p>The Loser's Edge</p>
+<p><strong>Ben Loeb</strong></p>
+<p>Flowing in the Zone - NEW</p>
+<p>Emotional and Mental
+Pitfalls</p>
+<p>Techniques for Developing
+Confidence</p>
+<p>Self-Acceptance and
+Confidence</p>
+<p><strong>Alistair Higham</strong></p>
+<p><strong>Momentum:</strong></p>
+<p>An Introduction to the 5
+Stages</p>
+<p>When Momentum is Totallly With
+You</p>
+<p>When Momentum Is With
+You</p>
+<p>When Momentum Is Neutral</p>
+<p>When Momentum is Totally Against
+You</p>
+<p>When Momentum is Against
+You</p>
+<p><strong>Frank Giampaolo</strong></p>
+<p>Match Preparation</p>
+<p>The Art of Winning</p>
+<p>Parental Tennis
+Blunders</p>
+<p><strong>Joey Johnson</strong></p>
+<p>The Panic Signal</p>
+<p>Resistance and Breakthrough
+Points</p>
+<p><strong>Jeff Greenwald</strong></p>
+<p>Walking the Mental Game Talk:
+Confidence</p>
+<p>Walking the Mental Toughness Talk: The Gold
+Ball</p>
+<p>The Mind of the Baseliner---and How to Transform
+It!</p>
+<p>The Opportunity Attack</p>
+<p>Integrating the Technical and the Mental
+Games</p>
+<p>Mindfulness: Can You Actually Change Your
+Brain?</p>
+<p>Why Can't I Play the Way I
+Practice?</p>
+<p>Finding Pleasure in Pressure</p>
+<p>Overcoming Negative Emotions</p>
+<p><strong>Allen Fox</strong></p>
+<p><strong>Winning the Mental Match</strong></p>
+<p>Overcoming Choking</p>
+<p>What is Choking?</p>
+<p>The Problem of Finishing</p>
+<p>The Reality of Perfectionism</p>
+<p>Unrealistic Perfectionism</p>
+<p>Reducing Stress</p>
+<p>Defense Mechanisms</p>
+<p>Why Emotions Can be Counter
+Productive</p>
+<p>Why Do We Want to Win?</p>
+<p><strong>Jim Loehr</strong></p>
+<p><strong>The Only Way to Win</strong></p>
+<p>American Junior
+Tennis</p>
+<p>Confidence</p>
+<p>The Power of
+Story</p>
+<p>The Private
+Voice</p>
+<p>What Our Academy Players
+Do</p>
+<p>Our Academy</p>
+<p>Introduction</p>
+<p><strong>Jim Loehr</strong></p>
+<p>Love the Battle: Rafael Nadal</p>
+<p>Love the Battle: Pathways to Performing Under
+Pressure</p>
+<p>The Ideal Performance State</p>
+<p>The 16 Second Cure: Part
+1</p>
+<p>The 16 Second Cure: Part
+2</p>
+<p>Breathing and the Mental
+Game</p>
+<p>Mastering Your Choking
+Response</p>
+<p>From Positive to Negative</p>
+<p>In Your Mind's Eye</p>
+<p><strong>Allen Fox</strong></p>
+<p>The Role of Optimism in Your
+Game</p>
+<p>The Value of Optimism: Brad
+Gilbert</p>
+<p>The Value of Optimism: Michael
+Chang</p>
+<p>Fixing Stroke Phobias</p>
+<p>Replacing Confidence with
+Discipline</p>
+<p>Increasing Confidence</p>
+<p>Self Belief</p>
+<p>Personal Antagonism Doesn't
+Pay</p>
+<p>Cliff Richey's New Book: Acing
+Depression</p>
+<p>Should We Ban Recreational
+Drugs?</p>
+<p>The Australian Open Final - and Your
+Game</p>
+<p>The Diabolical Scoring System of
+Tennis</p>
+<p>Breaking Down Your Opponent with
+Attitude</p>
+<p>Keep the Goal in Mind</p>
+<p>Thoughts on the Agassi
+Revelations</p>
+<p>The Dangers Of Strong
+Emotions</p>
+<p>Establishing Dominance</p>
+<p>Choking, Even in the US Open
+Final</p>
+<p>Becoming A Great Competitor</p>
+<p>Even Champions Choke</p>
+<p>Be Wary of Hidden Fear</p>
+<p><strong>Barry Buss</strong></p>
+<p>Offense As Defense</p>
+<p>Dealing with Bad Line Calls</p>
+<p><strong>Keith Hayes</strong></p>
+<p>Head Hunting</p>
+<p>The Best Tip Ever</p>
+<p>Family Tennis</p>
+<p>The Look</p>
+<p>My Tennis Morning with Johnny
+Carson</p>
+<p>The Anti-Champions</p>
+<p>Conversations with Dr. Fox: An Advanced Degree in Tennis
+Theory</p>
+<p><strong>Jeff McCullough</strong></p>
+<p>Pathological Losers: My Vic Braden
+Interview</p>
+<p>Rod Laver and The Mean
+Streak</p>
+<p>A Practical Guide to Peak Performance: Part
+2</p>
+<p>A Practical Guide to Peak Performance: Part
+1</p>
+<p><strong>John Newcombe</strong></p>
+<p>The Two Minds</p>
+<p><strong>Craig Kardon</strong></p>
+<p>What Is Confidence?</p>
+<p><strong>Michael Friedman</strong></p>
+<p>Concentration</p>
+<!-- TP-NAV-START -->
+
+<p><a href="../match-preparation/"> Previous: Match Preparation</a> &nbsp;|&nbsp; <a href="../">🏠 Mental Game Home</a> &nbsp;|&nbsp; <a href="../mental-toughness-training-the-16-second-cure-p1/">Next: Mental Toughness Training: The 16 Second Cure - Part 1 </a></p>
+<hr />
+<!-- TP-NAV-END -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Trở lại mục lục
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0110\u00e3 sao ch\u00e9p", "clipboard.copy": "Sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m", "search.result.more.one": "1 t\u1eeb kh\u00e1c trong trang", "search.result.more.other": "# t\u1eeb kh\u00e1c trong trang", "search.result.none": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u00e0i li\u1ec7u li\u00ean quan", "search.result.one": "1 t\u00e0i li\u1ec7u li\u00ean quan", "search.result.other": "# t\u00e0i li\u1ec7u li\u00ean quan", "search.result.placeholder": "Nh\u1eadp \u0111\u1ec3 b\u1eaft \u0111\u1ea7u t\u00ecm ki\u1ebfm", "search.result.term.missing": "Kh\u00f4ng", "select.version": "Ch\u1ecdn phi\u00ean b\u1ea3n"}, "version": null}</script>
+      
+        <script src="../../../../assets/js/extra.js"></script>
+      
+    
+  
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>
