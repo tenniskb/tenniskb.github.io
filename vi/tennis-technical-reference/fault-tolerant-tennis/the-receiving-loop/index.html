@@ -6,7 +6,7 @@
     <meta name="description" content="In the 2011 Miami Final, Rafael Nadal hit a winner past Novak Djokovic that looked rather strange on TV ( the point ). The ball landed quite close to him, at le">
     <meta name="author" content="Fault Tolerant Tennis">
     <link rel="icon" href="/assets/images/favicon.png">
-    <title>The Receiving Loop (Fault Tolerant Tennis) - Tham Khảo Kỹ Thuật</title>
+    <title>The Receiving Loop - Fault Tolerant Tennis - Tennis Unified Library</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
     <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
@@ -28,9 +28,9 @@
   <a href="/tnkb/" class="tu-nav-item" title="Knowledgebase"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Knowledgebase</span></a>
   <a href="/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
   <a href="/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
-  <a href="/vi/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
   <a href="/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
-  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Chuyển sang Tiếng Việt"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">Tiếng Việt</span></a>
+  <a href="/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Chuyển sang Tiếng Việt"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">Tiếng Việt</span></a>
   <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
 </div>
 <!-- FLATTENED-TOP-NAV-END -->
@@ -51,16 +51,111 @@
   <main class="md-main" data-md-component="main">
     <div class="md-main__inner md-grid">
       <div class="md-content" data-md-component="content">
-        <article class="md-content__inner md-typeset"><h1 id="the_receiving_loop">The Receiving Loop (Fault Tolerant Tennis)<a class="headerlink" href="#the_receiving_loop" title="Liên kết cố đĩnh"></a></h1>
-<p><strong>The Receiving Loop (Fault Tolerant Tennis)</strong> mô tác the receiving loop trong bối cảnh fault tolerant tennis.</p>
-<h2 id="co-che-cot-loi-cach-hoat-dong">Cơ Chế Cốt Lợi / Cách Hoạt Động<a class="headerlink" href="#co-che-cot-loi-cach-hoat-dong" title="Liên kết cố đĩnh"></a></h2>
-<h3>Cơ Chế Cốt Lợi</h3><p><strong>Ứng Dụng trong Fault Tolerant Tennis:</strong></p><ul><li>Fault Tolerant Tennis-specific technique</li><li>Game integration</li></ul>
-<h2 id="cac-che-do-that-bai-cac-loi-thuong-gap-khi-no-bi-vo">Các Chế Độ Thất Bại / Các Lỗi Thường Gặp / Khi Nó Bị Vỡ<a class="headerlink" href="#cac-che-do-that-bai-cac-loi-thuong-gap-khi-no-bi-vo" title="Liên kết cố đĩnh"></a></h2>
-<table><thead><tr><th>Chế Độ Thất Bại</th><th>Nguyên Nhân</th><th>Hệ Quả</th></tr></thead<tbody><tr><td>Wrong technique</td><td>Lack of practice</td><td>Poor play</td></tr></tbody></table>
-<h2 id="huan-luyen-ung-dung-trien-khai">Huấn Luyện / Ứng Dụng / Triển khai<a class="headerlink" href="#huan-luyen-ung-dung-trien-khai" title="Liên kết cố đĩnh"></a></h2>
-<p>Practice drill for the receiving loop.</p>
-<h2 id="cac-khai-niem-lien-quan">Các Khái Niệm Liên Quan<a class="headerlink" href="#cac-khai-niem-lien-quan" title="Liên kết cố đĩnh"></a></h2>
-<ul><li><a href="../fault-tolerant-tennis/">Fault Tolerant Tennis</a></li></ul></article>
+        <article class="md-content__inner md-typeset">          <h1 id="the-receiving-loop">Vòng Lặp Nhận Bóng (Receiving Loop)<a class="headerlink" href="#the-receiving-loop" title="Liên kết cố định"></a></h1>
+          <p style="color:var(--ink-muted, #666); font-size:0.95rem; margin-top:-0.5rem; margin-bottom:1.5rem;">
+            By <strong>Fault Tolerant Tennis</strong> · <em>Visual Reference (2023)</em> · <a href="https://faulttoleranttennis.com/the-receiving-loop/" target="_blank" rel="noopener noreferrer">Original Article ↗</a>
+          </p>
+          <hr />
+          <div class="article-content" style="font-size:1.05rem; line-height:1.8; margin-top:1.5rem;">
+            
+<p class="wp-block-paragraph"><strong>Receiving loop</strong> (vòng lặp nhận bóng) là quy trình thị giác 4 bước khi <strong>nhận bóng từ đối thủ</strong>. Đây là nền tảng của visual processing trong tennis.</p>
+
+<h2 class="wp-block-heading">Receiving Loop Là Gì?</h2>
+
+<p class="wp-block-paragraph">Receiving loop = quy trình thị giác lặp lại mỗi lần nhận bóng:</p>
+
+<ol class="wp-block-list">
+<li><strong>1. Identify (Nhận Diện):</strong> Nhìn đối thủ chuẩn bị → nhận diện loại cú.</li>
+
+<li><strong>2. Track (Theo Dõi):</strong> Nhìn bóng rời dây vợt đối thủ → quỹ đạo.</li>
+
+<li><strong>3. Predict (Dự Đoán):</strong> Nhìn điểm nảy → dự đoán landing.</li>
+
+<li><strong>4. Execute (Thực Thi):</strong> Nhìn contact point → thực hiện cú đánh.</li>
+</ol>
+
+<h2 class="wp-block-heading">3 Yếu Tố Của Receiving Loop</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Visual Focus (Tập Trung Thị Giác):</strong> Mắt nhìn 4 fixation, không "tracking" liên tục.</li>
+
+<li><strong>2. Anticipation (Dự Đoán):</strong> Dựa trên pattern đối thủ → đoán landing.</li>
+
+<li><strong>3. Quiet Eye (Mắt Tĩnh):</strong> Mắt ổn định tại contact 200-300ms.</li>
+</ol>
+
+<h2 class="wp-block-heading">5 Lợi Ích Của Receiving Loop</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Processing Time Hiệu Quả:</strong> Não xử lý thông tin có tổ chức → nhanh hơn.</li>
+
+<li><strong>2. Decision Quality:</strong> Quyết định cú từ thông tin đầy đủ.</li>
+
+<li><strong>3. Anticipation Cao:</strong> Dự đoán tốt → reaction nhanh.</li>
+
+<li><strong>4. Confidence:</strong> Biết mình đang nhìn gì → tự tin.</li>
+
+<li><strong>5. Consistency:</strong> Loop lặp lại → cú đánh ổn định.</li>
+</ol>
+
+<h2 class="wp-block-heading">5 Ví Dụ Receiving Loop</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Nhận Serve:</strong> Fixation 1 (đối thủ chạm bóng) → Fixation 2 (bóng rời vợt) → Fixation 3 (điểm nảy) → Fixation 4 (contact point).</li>
+
+<li><strong>2. Nhận Forehand:</strong> Tương tự, 4 fixation cho mỗi cú.</li>
+
+<li><strong>3. Nhận Volley:</strong> Tốc độ nhanh → 4 fixation cần nhanh hơn.</li>
+
+<li><strong>4. Nhận Drop Shot:</strong> Bóng chậm → có nhiều thời gian hơn.</li>
+
+<li><strong>5. Nhận Slice:</strong> Bóng thấp + trượt → fixation 3 quan trọng.</li>
+</ol>
+
+<h2 class="wp-block-heading">3 Cách Tập Receiving Loop</h2>
+
+<ol class="wp-block-list">
+<li><strong>1. Cố Ý Gọi Tên Fixation:</strong> Trong tập, gọi to "1-2-3-4" tại 4 fixation.</li>
+
+<li><strong>2. Ball Machine Drill:</strong> Máy bắn bóng, bạn tập 4 fixation.</li>
+
+<li><strong>3. Match Recording:</strong> Quay video trận tập, xem bạn có dùng 4 fixation không.</li>
+</ol>
+
+<h2 class="wp-block-heading">Các Chế Độ Thất Bại</h2>
+<table>
+<thead><tr><th>Lỗi</th><th>Triệu Chứng</th><th>Sửa Chữa</th></tr></head>
+<tbody>
+<tr><td>Tracking bóng liên tục (no fixation)</td><td>Mất peripheral awareness</td><td>4-fixation drill</td></tr>
+<tr><td>Bỏ fixation nào đó</td><td>Mất thông tin</td><td>Gọi to từng fixation</td></tr>
+<tr><td>Quiet eye quá ngắn</td><td>Mất precision</td><td>Drill "hold gaze 300ms"</td></tr>
+<tr><td>Không predictive saccade</td><td>Luôn chạy trễ</td><td>Drill "saccade to landing"</td></tr>
+</tbody>
+</table>
+
+<h2 class="wp-block-heading">Huấn Luyện: Drill "Receiving Loop Mastery"</h2>
+<ol class="wp-block-list">
+<li><strong>Call-out drill (15 phút):</strong> Gọi to "1-2-3-4" tại mỗi fixation.</li>
+<li><strong>Ball machine drill (15 phút):</strong> Tập với tennis ball machine.</li>
+<li><strong>Match recording (15 phút):</strong> Quay trận, kiểm tra loop.</li>
+<li><strong>Speed drill (10 phút):</strong> Tăng tốc độ bóng → loop phải nhanh hơn.</li>
+</ol>
+
+<h2 class="hp-block-heading">Mô Hình 2026: Visual Processing Framework</h2>
+<p class="wp-block-paragraph">Trong khung 2026, receiving loop = <strong>visual processing framework (khung xử lý thị giác)</strong>: 4 bước lặp lại mỗi lần nhận bóng. Đây là nền tảng cho predictive saccade, quiet eye, peripheral vision.</p>
+
+<h2 class="hp-block-heading">Các Khái Niệm Liên Quan</h2>
+<ul class="wp-block-list">
+<li><a href="../technique/4-fixation-visual-system/">Hệ Thống 4 Điểm Nhìn</a></li>
+<li><a href="../technique/predictive-saccades/">Saccade Dự Đoán</a></li>
+<li><a href="../technique/quiet-eye/">Quiet Eye</a></li>
+<li><a href="../technique/peripheral-vision/">Tầm Nhìn Ngoại Vi</a></li>
+<li><a href="../technique/anticipation-tennis/">Dự Đoán Tennis</a></li>
+</ul>
+<hr />
+<blockquote>
+<p><strong><a href="../../../tennis-technical-reference/fault-tolerant-tennis/the-receiving-loop/">Read in English</a></strong> — English version of this wiki</p>
+</blockquote></article>
       </div>
     </div>
   </main>
