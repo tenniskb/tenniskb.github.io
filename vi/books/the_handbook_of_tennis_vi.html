@@ -424,10 +424,72 @@
             }
         }
     </style>
+
+<style>
+/* Instructional Diagram Cards */
+.instructional-fig {
+    margin: 24px auto;
+    max-width: 720px;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.instructional-fig:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.instructional-fig img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #000;
+}
+.instructional-fig figcaption {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-main, #1e293b);
+    font-weight: 500;
+    border-top: 1px solid var(--border, #e2e8f0);
+    background: var(--bg-page, #f8fafc);
+}
+.fig-badge {
+    display: inline-block;
+    background: #15803d;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+}
+</style>
+
 </head>
 <body>
 
-    
+    <!-- Language & Navigation Topbar -->
+    <nav class="tu-topnav">
+        <a href="/vi/books/" class="brand">
+            <i class="fa-solid fa-tennis-ball"></i>
+            <span>Tennis Unified</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/vi/books/">Thư Viện Sách</a></li>
+            <li><a href="/vi/fundamentals/">Nền Tảng</a></li>
+            <li><a href="/vi/stroke-analysis/">Phân Tích Động Tác</a></li>
+            <li><a href="/vi/drills/">Bài Tập & Giáo Án</a></li>
+            <li><a href="/books/" data-lang-toggle="en"><i class="fa-solid fa-globe"></i> English</a></li>
+        </ul>
+        <div class="controls">
+            <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i> Giao Diện Tối
+            </button>
+        </div>
+    </nav>
 
     <div class="reading-progress-bar" id="progressBar"></div>
 
@@ -520,6 +582,23 @@ Trải qua hơn một thế kỷ tiến hóa, kích thước sân bãi, chiều 
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-hand"></i> Bát Giác Cán Vợt Và Các Kiểu Cầm Vợt Thiết Yếu</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_grips_detail.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_grips_detail.jpg" alt="Hệ thống 8 cạnh cán vợt và vị trí các kiểu cầm vợt căn bản: Continental, Eastern và Semi-Western" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Minh Họa Cán Vợt</span> Hệ thống 8 cạnh cán vợt và vị trí các kiểu cầm vợt căn bản: Continental, Eastern và Semi-Western</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-01" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_01_holding_racket_grips.jpg" alt="The Octagonal Bevels & Eleven Basic Racket Grips" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 01):</strong> Cấu trúc hình học bát giác của cán vợt và 11 kiểu cầm vợt căn bản theo hệ thống hướng dẫn của Paul Douglas.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: The Octagonal Bevels & Eleven Basic Racket Grips]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Mỗi kiểu cầm vợt mang lại một góc tiếp xúc và khả năng tạo lực hoàn toàn khác nhau. Nắm vững hình học bát giác của cán vợt là bước đi nền tảng đầu tiên:
 
@@ -528,6 +607,15 @@ Kiểu Cầm Continental (Cầm Búa): Khớp ngón trỏ đặt ở cạnh vát
 Kiểu Cầm Eastern Forehand: Khớp ngón trỏ nằm ở cạnh số 3, mang lại mặt vợt tiếp xúc thẳng góc vào sau quả bóng, tối ưu cho những cú đánh bóng phẳng đầy uy lực.
 
 Kiểu Cầm Semi-Western: Khớp ngón trỏ nằm ở cạnh số 4, cho phép người chơi dễ dàng vuốt bóng từ dưới lên để tạo độ xoáy cuộn topspin cực cao mà vẫn duy trì lực phát bóng mạnh mẽ.
+
+<figure class="book-illustration" id="plate-02" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_02_continental_eastern_selection.jpg" alt="Continental vs Eastern Grip Selection & Impact Angle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 02):</strong> Phân tích góc mở mặt vợt và phạm vi ứng dụng thực chiến giữa kiểu cầm Continental và Eastern.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Continental vs Eastern Grip Selection & Impact Angle]</span>
+  </figcaption>
+</figure>
+
         </p>
     </div>
 
@@ -538,6 +626,23 @@ Kiểu Cầm Semi-Western: Khớp ngón trỏ nằm ở cạnh số 4, cho phép
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-arrows-spin"></i> Bản Chất Vật Lý Của Các Loại Độ Xoáy (Spin)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_spin_physics.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_spin_physics.jpg" alt="Cơ chế khí động học và quỹ đạo bóng xoáy cuộn (Topspin) cùng xoáy cắt (Underspin)" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Cơ Học Vật Lý</span> Cơ chế khí động học và quỹ đạo bóng xoáy cuộn (Topspin) cùng xoáy cắt (Underspin)</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-03" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_03_understanding_spin_mechanics.jpg" alt="Aerodynamics of Spin: Flight Trajectory & Bounce Profiles" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 03):</strong> Khí động học của độ xoáy: Quỹ đạo bay vòng cung của Topspin và độ lướt trượt là là sát sân của Underspin (Slice).
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Aerodynamics of Spin: Flight Trajectory & Bounce Profiles]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Hiểu rõ khí động học của trái bóng là bí quyết kiểm soát sân đấu:
 
@@ -555,6 +660,31 @@ Xoáy Ngược (Underspin / Slice): Mặt vợt chém từ trên xuống dưới
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-burst"></i> Cơ Học Cú Thuận Tay Cơ Bản (Forehand Drive)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_forehand_contact.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_forehand_contact.jpg" alt="Giai đoạn tiếp xúc bóng phía trước và đẩy bóng qua mục tiêu" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Điểm Tiếp Xúc Bóng</span> Giai đoạn tiếp xúc bóng phía trước và đẩy bóng qua mục tiêu</figcaption>
+    </figure>
+    
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_forehand_prep.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_forehand_prep.jpg" alt="Giai đoạn mở đà và xoay trục thân trên cú thuận tay (Unit Turn & Backswing)" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Chuỗi Động Học Mở Đà</span> Giai đoạn mở đà và xoay trục thân trên cú thuận tay (Unit Turn & Backswing)</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-04" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_04_forehand_drive_mechanics.jpg" alt="Classical Forehand Drive Kinetic Chain Progression" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 04):</strong> Chuỗi động học liên hoàn học cú đánh thuận tay cổ điển: Mở vợt xoay vai, tăng tốc đầu vợt và vung theo đà qua vai.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Classical Forehand Drive Kinetic Chain Progression]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Cú thuận tay phẳng là nền móng tấn công uy lực từ vạch đáy sân. Một cú thuận tay hoàn chỉnh đòi hỏi sự phối hợp nhịp nhàng của toàn bộ cơ thể:
 
@@ -573,6 +703,23 @@ Giai đoạn Vung theo đà: Cánh tay vung hết biên độ qua vai đối di�
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-tornado"></i> Biến Thể Cú Thuận Tay Xoáy Cuộn (Topspin Forehand)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_forehand_topspin.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_forehand_topspin.jpg" alt="Quỹ đạo vung vợt dốc đứng từ dưới lên trên tạo xoáy cuộn topspin bão táp" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Quỹ Đạo Đòn Đánh</span> Quỹ đạo vung vợt dốc đứng từ dưới lên trên tạo xoáy cuộn topspin bão táp</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-05" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_05_topspin_forehand_drive.jpg" alt="Topspin Forehand Drive & Vertical Racket Brush" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 05):</strong> Kỹ thuật vuốt bóng từ dưới lên tạo độ xoáy cuộn Topspin Forehand an toàn qua lưới và cắm sâu cuối sân.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Topspin Forehand Drive & Vertical Racket Brush]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Trong quần vợt hiện đại, cú thuận tay topspin là vũ khí thống trị. Bằng cách sử dụng kiểu cầm Semi-Western và hạ đầu vợt sâu hơn vị trí bóng khoảng 20 đến 30 cm, bạn thực hiện một cú quét vợt dốc ngược từ dưới lên trên.
 
@@ -589,6 +736,31 @@ Trong quần vợt hiện đại, cú thuận tay topspin là vũ khí thống t
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-person-running"></i> Cơ Học Cú Trái Tay Một Tay (One-Handed Backhand Drive)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_backhand_1hb_finish.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_backhand_1hb_finish.jpg" alt="Mở rộng sải tay và giải phóng quán tính kết thúc lên cao" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Pha Kết Thúc Trái Tay</span> Mở rộng sải tay và giải phóng quán tính kết thúc lên cao</figcaption>
+    </figure>
+    
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_backhand_1hb_prep.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_backhand_1hb_prep.jpg" alt="Chuẩn bị mở vợt ngang hông và bước chuyển trọng tâm cú trái tay một tay cổ điển" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Kỹ Thuật Mở Vợt Trái Tay</span> Chuẩn bị mở vợt ngang hông và bước chuyển trọng tâm cú trái tay một tay cổ điển</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-06" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_06_backhand_drive_eastern.jpg" alt="One-Handed Eastern Backhand Coil & Contact Point" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 06):</strong> Cú trái tay một tay: Xoay vai sâu hướng lưng về lưới, khóa cứng cổ tay và tiếp xúc bóng trước đầu gối.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: One-Handed Eastern Backhand Coil & Contact Point]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Cú trái tay một tay là biểu tượng của sự thanh thoát và uy lực cổ điển trong quần vợt. Để thực hiện cú đánh này hoàn hảo, tay vợt phải chuyển sang kiểu cầm Eastern Backhand (khớp ngón trỏ đặt ở cạnh số 1).
 
@@ -603,6 +775,23 @@ Cú trái tay một tay là biểu tượng của sự thanh thoát và uy lực
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-hands"></i> Cú Trái Tay Hai Tay (Double-Handed Backhand)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_backhand_2hb.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_backhand_2hb.jpg" alt="Cơ học hai tay nắm vợt: Tay trái trợ lực phát lực xoay thân mạnh mẽ" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Trái Tay Hai Tay Hiện Đại</span> Cơ học hai tay nắm vợt: Tay trái trợ lực phát lực xoay thân mạnh mẽ</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-07" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_07_double_handed_backhand.jpg" alt="Double-Handed Backhand Leverage & Stability" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 07):</strong> Cú trái tay hai tay hiện đại: Tận dụng tay không thuận làm đòn bẩy thứ hai để tăng tốc đầu vợt và giữ mặt vợt ổn định.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Double-Handed Backhand Leverage & Stability]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Cú trái hai tay mang lại sự chắc chắn và kiểm soát vượt trội, đặc biệt hữu ích khi xử lý các pha bóng nảy cao khó chịu. Bằng việc đặt tay không thuận ở vị trí trên tay thuận, người chơi có thêm một đòn bẩy thứ hai để tăng tốc đầu vợt và truyền toàn bộ lực xoay của hông vào trái bóng.
 
@@ -629,6 +818,31 @@ Cú Nửa Volley (Half-Volley): Là kỹ thuật xúc bóng ngay khoảnh khắc
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-bolt"></i> Chuỗi động học liên hoàn Học Toàn Thân Của Cú Giao Bóng</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_serve_contact.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_serve_contact.jpg" alt="Vươn thẳng tay chạm bóng tại điểm cao nhất và úp cổ tay phát lực" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Pha Chạm Bóng Điểm Cao</span> Vươn thẳng tay chạm bóng tại điểm cao nhất và úp cổ tay phát lực</figcaption>
+    </figure>
+    
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_serve_trophy.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_serve_trophy.jpg" alt="Tư thế chiếc cúp (Trophy Pose) và pha gập gối tạo phản lực mặt đất" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Tư Thế Chiếc Cúp</span> Tư thế chiếc cúp (Trophy Pose) và pha gập gối tạo phản lực mặt đất</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-08" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_08_basic_service_motion.jpg" alt="Basic Service Motion, Trophy Pose & Kinetic Sequence" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 08):</strong> Chuỗi động học liên hoàn học quả phát bóng: Chùng gối nạp lực vào tư thế Trophy Position và bật người vươn cao đón bóng.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Basic Service Motion, Trophy Pose & Kinetic Sequence]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Giao bóng là cú đánh phức tạp nhất nhưng cũng mang lại lợi thế chủ động lớn nhất trong quần vợt. Đây là một Chuỗi động học liên hoàn học liên hoàn từ mặt đất lên đỉnh vợt:
 
@@ -645,6 +859,23 @@ Tiếp theo là pha rơi đầu vợt ra sau lưng (Racket Drop) tạo đà vung
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-compass"></i> Ba Biến Thể Giao Bóng: Phẳng (Flat), Cắt Xoáy (Slice) Và Xoáy Nảy (Kick)</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_serve_variations.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_serve_variations.jpg" alt="Vị trí tiếp xúc bóng trên mặt đồng hồ: Flat (12h), Slice (1h-2h) và Kick (11h-1h)" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">3 Biến Thể Giao Bóng</span> Vị trí tiếp xúc bóng trên mặt đồng hồ: Flat (12h), Slice (1h-2h) và Kick (11h-1h)</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-09" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_09_topspin_slice_serves.jpg" alt="Spin Variations in Service: Flat, Slice & Kick" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 09):</strong> Ba biến thể giao bóng: Giao bóng phẳng xé gió (Flat), cắt xoáy dạt biên (Slice) và xoáy cược nảy bốc (Kick).
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Spin Variations in Service: Flat, Slice & Kick]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Tay vợt thông minh không bao giờ chỉ giao một kiểu bóng đơn điệu:
 
@@ -665,6 +896,23 @@ Giao Bóng Xoáy Nảy (Topspin / Kick): Quét mặt vợt từ dưới lên tr�
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-hand-fist"></i> Cầm Vợt Continental Và Kỹ Thuật Đấm Bóng Gọn Gàng</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_volley_punch.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_volley_punch.jpg" alt="Cầm vợt Continental và kỹ thuật đấm bóng tĩnh tại không vung đà" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Kiểm Soát Lưới</span> Cầm vợt Continental và kỹ thuật đấm bóng tĩnh tại không vung đà</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-10" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_10_forehand_volley_punch.jpg" alt="Forehand Volley Punch Mechanics & Minimal Backswing" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 10):</strong> Kỹ thuật bắt volley thuận tay: Giữ mặt vợt trước ngực, không mở vợt ra sau, bước đạp chân đón điểm tiếp xúc.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Forehand Volley Punch Mechanics & Minimal Backswing]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Lên lưới là con đường ngắn nhất để kết liễu một điểm số trong quần vợt đỉnh cao. Để làm chủ khu vực này, bạn phải sử dụng kiểu cầm Continental duy nhất cho cả bên thuận lẫn bên trái, giúp loại bỏ hoàn toàn thời gian lãng phí để xoay cán vợt.
 
@@ -679,6 +927,23 @@ Cú volley chuẩn xác không bao giờ có động tác vung vợt ra sau (bac
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-wand-magic-sparkles"></i> Các Biến Thể Volley: Drive Volley, Stop Volley Và Soft Volley</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_volley_low_high.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_volley_low_high.jpg" alt="Kỹ thuật gập gối cứu volley tầm thấp và volley tầm ngang ngực" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Biến Thể Volley</span> Kỹ thuật gập gối cứu volley tầm thấp và volley tầm ngang ngực</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-11" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_11_backhand_volley_mechanics.jpg" alt="Backhand Volley & Soft Drop Volley Variations" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 11):</strong> Cú bắt volley trái tay và kỹ thuật triệt tiêu lực tinh tế (Drop Volley) khống chế các pha bóng tấn công mạnh.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Backhand Volley & Soft Drop Volley Variations]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Một bậc thầy lưới cần sở hữu đầy đủ bộ công cụ:
 
@@ -701,10 +966,43 @@ Soft Volley: Cú volley góc ngắn đưa bóng tạt chéo sân ra sát mép l�
         <p class="section-text">
 Lốp bóng là nghệ thuật khống chế không gian trên cao của sân đấu. Cú lốp bóng bổng phòng thủ đưa bóng bay lên cao tít giúp bạn tái chiếm vị trí thăng bằng. Trong khi đó, cú lốp bóng xoáy cuộn topspin là một đòn trừng phạt tàn khốc: Bằng động tác vuốt bóng cực nhanh từ dưới lên, bóng vượt qua đầu đối thủ trên lưới rồi cắm phập xuống góc sân phía sau.
         </p>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_lob_defense.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_lob_defense.jpg" alt="Kỹ thuật lốp bóng phòng thủ vồng cao hóa giải góc ép của đối phương" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Chiến Thuật Lốp Bóng</span> Kỹ thuật lốp bóng phòng thủ vồng cao hóa giải góc ép của đối phương</figcaption>
+    </figure>
+    
     </div>
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-hammer"></i> Cú Đập Smash: Basic, Jump Smash Và Backhand Smash</h3>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_smash_footwork.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_smash_footwork.jpg" alt="Bộ chân lùi bước chéo đón điểm rơi quả lốp để thực hiện cú smash hoàn hảo" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Bộ Chân Lùi Đón Smash</span> Bộ chân lùi bước chéo đón điểm rơi quả lốp để thực hiện cú smash hoàn hảo</figcaption>
+    </figure>
+    
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_smash_overhead.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_smash_overhead.jpg" alt="Pha tiếp xúc và bẻ cổ tay cắm bóng dứt điểm trên không" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Đòn Đập Smash</span> Pha tiếp xúc và bẻ cổ tay cắm bóng dứt điểm trên không</figcaption>
+    </figure>
+    
+
+<figure class="book-illustration" id="plate-12" style="margin: 28px 0; text-align: center;">
+  <img src="the_handbook_assets/handbook_plate_12_basic_smash_overhead.jpg" alt="Overhead Smash Execution & Aerial Positioning" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;" loading="lazy">
+  <figcaption style="margin-top: 10px; font-size: 0.95rem; color: #4a5568; font-style: italic; line-height: 1.5;">
+    <strong>Hình minh họa (Plate 12):</strong> Cú đập bóng trên không (Smash): Xoay nghiêng thân người, chỉ tay ngắm bóng và đập bóng quyết đoán dứt điểm.
+    <br><span style="color: #718096; font-size: 0.85rem;">[English: Overhead Smash Execution & Aerial Positioning]</span>
+  </figcaption>
+</figure>
+
         <p class="section-text">
 Cú đập smash là dấu chấm hết cho mọi nỗ lực phòng ngự của đối thủ. Hãy xoay nghiêng người ngay lập tức khi bóng bổng xuất hiện, tay không thuận chỉ lên trời, di chuyển lùi bằng bước trượt ngang và bật nhảy vươn người tiếp xúc bóng ở điểm cao nhất.
 
@@ -716,7 +1014,8 @@ Nếu bạn bị đối phương đẩy bóng qua đầu bên phía trái tay, c
 <!-- PHẦN 7: CHIẾN THUẬT ĐÁNH ĐƠN -->
 <section id="singles-strategy" class="chapter-box">
     <h2 class="chapter-title">Phần 7: Chiến Thuật Đánh Đơn Đỉnh Cao</h2>
-    <p class="chapter-sub">Part 7: Singles Strategy — Geometry, Court Coverage, and Tactical Styles</p>
+    
+<p class="chapter-sub">Part 7: Singles Strategy — Geometry, Court Coverage, and Tactical Styles</p>
 
     <div class="section-item">
         <h3 class="section-heading"><i class="fa-solid fa-draw-polygon"></i> Hình Học Sân Bãi Và Vị Trí Phân Bổ Tâm Điểm Góc Đánh</h3>
@@ -725,6 +1024,14 @@ Mỗi vị trí quả bóng nằm trên sân đều tạo ra một hình quạt 
 
 Nếu bạn đánh bóng chéo sân sâu về góc phải đối phương, vị trí đứng chờ bóng của bạn phải hơi lệch về phía bên phải so với mốc tâm sân một chút. Nếu bạn đánh bóng dọc dây, bạn phải dịch chuyển sang bên trái. Việc đứng sai vị trí phân giác sẽ để lộ ra khoảng sân trống thênh thang cho đối thủ khai thác.
         </p>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_singles_angles.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_singles_angles.jpg" alt="Hình học sân đơn: Khai thác góc đánh chéo sân an toàn và thời điểm dọc dây" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Hình Học Sân Đơn</span> Hình học sân đơn: Khai thác góc đánh chéo sân an toàn và thời điểm dọc dây</figcaption>
+    </figure>
+    
     </div>
 
     <div class="figure-wrap">
@@ -741,6 +1048,14 @@ Khi đối đầu tay vợt chuyên bám đáy sân (Baseliner): Hãy kiên nh�
 
 Khi đối đầu tay vợt chuyên giao bóng lên lưới (Serve & Volleyer): Hãy tập trung trả bóng cắm sâu xuống chân họ khi họ đang di chuyển dâng lên, hoặc tung ra cú lốp bóng bổng giải tỏa ngay khi họ áp sát mép lưới.
         </p>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_approach_shot.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_approach_shot.jpg" alt="Kỹ thuật đánh cú tiếp cận (Approach Shot) cắt sâu ép đối thủ để lên lưới" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Tiếp Cận Lưới</span> Kỹ thuật đánh cú tiếp cận (Approach Shot) cắt sâu ép đối thủ để lên lưới</figcaption>
+    </figure>
+    
     </div>
 </section>
 
@@ -757,6 +1072,14 @@ Khi đối đầu tay vợt chuyên giao bóng lên lưới (Serve & Volleyer): 
 
 Một đội đôi ăn ý phải di chuyển như thể được nối với nhau bằng một sợi dây vô hình: Khi người đứng lưới di chuyển áp sát lưới thì người cuối sân phải giữ khoảng cách bọc lót; khi người đứng lưới di chuyển dạt sang phải để bắt bóng thì người đứng sau tự động lùi bước che chắn khoảng sân bên trái.
         </p>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_doubles_basics.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_doubles_basics.jpg" alt="Vị trí xuất phát hình chữ I và sự dịch chuyển đồng bộ trong đánh đôi" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Chiến Thuật Đánh Đôi</span> Vị trí xuất phát hình chữ I và sự dịch chuyển đồng bộ trong đánh đôi</figcaption>
+    </figure>
+    
     </div>
 
     <div class="figure-wrap">
@@ -771,6 +1094,14 @@ Trong nội dung đôi nam nữ, chiến thuật đòi hỏi sự tinh tế và 
 
 Chìa khóa chiến thắng trong đôi nam nữ là sự động viên liên tục, nâng đỡ tinh thần và tuyệt đối không bao giờ tạo áp lực tâm lý lên bạn cặp.
         </p>
+
+    <figure class="instructional-fig">
+        <a href="douglas_handbook_assets/douglas_diag_doubles_poach.jpg" target="_blank" title="Nhấp để xem hình gốc độ phân giải cao">
+            <img src="douglas_handbook_assets/douglas_diag_doubles_poach.jpg" alt="Kỹ thuật cắt mặt bắt lưới (Poaching) áp đảo đối phương trong đánh đôi" loading="lazy">
+        </a>
+        <figcaption><span class="fig-badge">Bắt Bài Cắt Mặt (Poach)</span> Kỹ thuật cắt mặt bắt lưới (Poaching) áp đảo đối phương trong đánh đôi</figcaption>
+    </figure>
+    
     </div>
 </section>
 
