@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting...</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      if (path.indexOf('/tennis-unified') === 0) {
+        var rest = path.replace(/^\/tennis-unified\/?/, '/');
+        window.location.replace('https://tennis-unified.github.io' + rest + search + hash);
+        return;
+      }
+      window.location.replace('/' + search + hash);
+    })();
+  </script>
+</head>
+<body>
+  <p>Page not found. Redirecting to <a href="https://tennis-unified.github.io/">Tennis Unified Library</a>...</p>
+</body>
+</html>
