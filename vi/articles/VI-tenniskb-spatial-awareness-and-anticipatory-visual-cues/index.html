@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="TennisKB — Bài viết 001: Nhận Thức Không Gian &amp; Tín Hiệu Thị Giác Dự Đoán | Tennis Future Lab">
+
+        <meta name="author" content="Henry Pham">
+
+          <link rel="alternate" href="/en/articles/EN-tenniskb-spatial-awareness-and-anticipatory-visual-cues/" hreflang="en">
+
+          <link rel="alternate" href="/vi/articles/VI-tenniskb-spatial-awareness-and-anticipatory-visual-cues/" hreflang="vi">
+
+      <link rel="icon" href="/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+
+        <title>Bài viết 001: Nhận Thức Không Gian &amp; Tín Hiệu Thị Giác Dự Đoán - Tennis Unified Library</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+
+<script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+<link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script><script id="MathJax" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"]],processEscapes:true,processEnvironments:true},loader:{lineWidth:128}};</script>
+</head>
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+<!-- FLATTENED-TOP-NAV-START -->
+<div class="tu-topnav">
+  <a href="/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
+  <a href="/doubles/" class="tu-nav-item" title="Doubles"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Doubles</span></a>
+  <a href="/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
+  <a href="/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
+  <a href="/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
+  <a href="/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
+  <a href="/tnkb/" class="tu-nav-item" title="Knowledgebase"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Knowledgebase</span></a>
+  <a href="/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
+  <a href="/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
+  <a href="/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/articles/" class="tu-nav-item" title="Tennis Fundamentals"><span class="tu-nav-emoji">🎯</span><span class="tu-nav-text">Tennis Fundamentals</span></a>
+  <a href="/vi/Tenniskb-5 Pillars/" class="tu-nav-item" title="5 Trụ Cột"><span class="tu-nav-emoji">🏛️</span><span class="tu-nav-text">5 Trụ Cột</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to Vietnamese"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">VI</span></a>
+  <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
+</div>
+<!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+        <a href="#content" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+  </nav>
+</header>
+
+<div class="md-container" data-md-component="container">
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+
+<!-- TP-BREADCRUMB-START -->
+<p><a href="/">🏠 Home</a> &nbsp;›&nbsp; <a href="/vi/articles/">Tennis Fundamentals</a> &nbsp;›&nbsp; <a href="/vi/articles/than-kinh/">Thần Kinh Thể Thao & Nhận Thức</a> &nbsp;›&nbsp; Nhận Thức Không Gian &amp; Tín Hiệu Thị Giác Dự Đoán</p>
+<hr />
+<!-- TP-NAV-END -->
+
+<h1 id="content">Nhận Thức Không Gian &amp; Tín Hiệu Thị Giác Dự Đoán</h1>
+
+
+<blockquote>
+<p><strong>CUE CHUYÊN GIA:</strong> Đừng nhìn bóng ở vị trí hiện tại — hãy nhìn nơi nó <em>sẽ ở</em>. Vệ tinh không đuổi mục tiêu — nó dự báo quỹ đạo.</p>
+</blockquote>
+
+<h2>1. Tóm Tắt Điều Hành & Ý Đồ Thể Thao</h2>
+
+<p><strong>Nhận thức không gian (Spatial Awareness)</strong> là khả năng xây dựng bản đồ mental real-time của sân: vị trí bóng, đối thủ, chính mình, và các vùng đích chiến thuật. <strong>Cue thị giác dự báo (Anticipatory Visual Cues)</strong> là các tín hiệu động học từ đối thủ (xoay vai, độ sâu ra sau, grip, tư thế) cho phép não dự đoán quỹ đạo bóng <strong>trước khi đối thủ đập bóng</strong>. Bài viết này định nghĩa hai luồng xử lý thị giác (ventral/dorsal), thư viện cue dự báo, giao thức huấn luyện "nhìn sớm — hành động sớm", và ma trận chẩn đoán cho sự chậm trễ nhận thức.</p>
+
+<p>Ý định thể thao ba khía cạnh: thứ nhất, phân biệt <strong>nhìn phản ứng (reactive)</strong> vs <strong>nhìn dự báo (anticipatory)</strong> — vận động viên đẳng cấp bắt đầu di chuyển <em>trước</em> khi bóng rời vợt đối thủ. Thứ hai, định nghĩa <strong>thư viện 12 cue dự báo</strong> có thứ tự ưu tiên (từ sớm đến muộn). Thứ ba, cung cấp <strong>bài tập decoupling</strong> — tách rời nhận diện cue khỏi thực thi kỹ thuật để tăng tốc độ xử lý.</p>
+
+<h2>2. Nền Tảng Thần Kinh - Thị Giác</h2>
+
+<h3>2.1 Hai Luồng Xử Lý Thị Giác (Two Visual Streams)</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Luồng</th>
+<th style="text-align: left;">Tên Gọi</th>
+<th style="text-align: left;">Vùng Não</th>
+<th style="text-align: left;">Chức Năng Tennis</th>
+<th style="text-align: left;">Độ Trễ</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;"><strong>Ventral</strong></td>
+<td style="text-align: left;">"What" (Foveal)</td>
+<td style="text-align: left;">Temporal lobe</td>
+<td style="text-align: left;">Nhận diện chi tiết: xoay bóng, seam, logo, điểm tiếp xúc chính xác</td>
+<td style="text-align: left;">~100 ms (ý thức)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dorsal</strong></td>
+<td style="text-align: left;">"Where/How" (Ambient)</td>
+<td style="text-align: left;">Parietal lobe</td>
+<td style="text-align: left;">Định vị không gian: tốc độ, góc, vị trí đối thủ, optic flow, TTC (Time-to-Contact)</td>
+<td style="text-align: left;">~50 ms (tự động)</td>
+</tr>
+</tbody></table>
+
+<p><strong>Ứng dụng tennis:</strong></p>
+<ul>
+<li><strong>Ventral:</strong> Quiet Eye fixation trên cửa sổ tiếp xúc (Bài 041) — độ chính xác va chạm.</li>
+<li><strong>Dorsal:</strong> Theo dõi đối thủ ngoại vi, dự báo quỹ đạo, điều khiển di chuyển chân — <strong>không cần ý thức</strong>.</li>
+</ul>
+
+<h3>2.2 Thư Viện 12 Cue Dự Báo (Theo Thứ Tự Thời Gian)</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Cue</th>
+<th style="text-align: left;">Giai Đoạn</th>
+<th style="text-align: left;">Thời Gian Trước Va Chạm ĐT</th>
+<th style="text-align: left;">Độ Tin Cậy</th>
+<th style="text-align: left;">Cue Học Tập</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><strong>Tư thế chuẩn bị (Setup)</strong></td>
+<td style="text-align: left;">Trước ra sau</td>
+<td style="text-align: left;">-2.0 đến -1.5 s</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">Open stance ↔ Cross-court; Closed ↔ Down-line</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><strong>Grip change</strong></td>
+<td style="text-align: left;">Ra sau sớm</td>
+<td style="text-align: left;">-1.5 đến -1.0 s</td>
+<td style="text-align: left;">90%</td>
+<td style="text-align: left;">Continental → Slice/Volley; Eastern → Drive</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><strong>Độ sâu ra sau (Backswing depth)</strong></td>
+<td style="text-align: left;">Ra sau</td>
+<td style="text-align: left;">-1.0 đến -0.8 s</td>
+<td style="text-align: left;">80%</td>
+<td style="text-align: left;">Sâu → Topspin/Deep; Ngắn → Drop/Short</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><strong>Xoay vai/hông (Trunk rotation)</strong></td>
+<td style="text-align: left;">Ra sau muộn</td>
+<td style="text-align: left;">-0.8 đến -0.5 s</td>
+<td style="text-align: left;">88%</td>
+<td style="text-align: left;">Xoay nhiều → Cross-court power; Ít → Redirect/Inside-out</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><strong>Góc mặt vợt (Racket face angle)</strong></td>
+<td style="text-align: left;">Ra sau cuối</td>
+<td style="text-align: left;">-0.5 đến -0.3 s</td>
+<td style="text-align: left;">75%</td>
+<td style="text-align: left;">Mở → Lob/High; Đóng → Drive/Flat</td>
+</tr>
+<tr>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><strong>Tải trọng chân (Weight loading)</strong></td>
+<td style="text-align: left;">Chuyển thể</td>
+<td style="text-align: left;">-0.3 đến -0.1 s</td>
+<td style="text-align: left;">85%</td>
+<td style="text-align: left;">Chân sau tải → Drive; Chân trước tải → Push/Block</td>
+</tr>
+<tr>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;"><strong>Điểm cao nhất ra sau (Peak backswing)</strong></td>
+<td style="text-align: left;">Chuyển thể</td>
+<td style="text-align: left;">-0.2 đến -0.1 s</td>
+<td style="text-align: left;">70%</td>
+<td style="text-align: left;">Cao → Topspin; Thấp → Flat/Slice</td>
+</tr>
+<tr>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;"><strong>Tốc độ ra sau (Backswing speed)</strong></td>
+<td style="text-align: left;">Chuyển thể</td>
+<td style="text-align: left;">-0.2 đến -0.1 s</td>
+<td style="text-align: left;">65%</td>
+<td style="text-align: left;">Nhanh → Power; Chậm → Disguise/Drop</td>
+</tr>
+<tr>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;"><strong>Hướng ngón tay/Điểm hướng (Point finger)</strong></td>
+<td style="text-align: left;">Chuyển thể</td>
+<td style="text-align: left;">-0.15 đến -0.05 s</td>
+<td style="text-align: left;">60%</td>
+<td style="text-align: left;">Chỉ đích → Honest; Giấu → Deception</td>
+</tr>
+<tr>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;"><strong>Toss location (Giao bóng)</strong></td>
+<td style="text-align: left;">Giao bóng</td>
+<td style="text-align: left;">-0.5 đến -0.1 s</td>
+<td style="text-align: left;">95%</td>
+<td style="text-align: left;">Toss phải → Wide/Body; Toss trái → T/Body</td>
+</tr>
+<tr>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;"><strong>Head/Chin position</strong></td>
+<td style="text-align: left;">Tất cả</td>
+<td style="text-align: left;">Liên tục</td>
+<td style="text-align: left;">55%</td>
+<td style="text-align: left;">Cằm cao → Lob/Defensive; Cằm thấp → Attack</td>
+</tr>
+<tr>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;"><strong>Pattern history (Lịch sử mẫu)</strong></td>
+<td style="text-align: left;">Meta-cognitive</td>
+<td style="text-align: left;">Toàn trận</td>
+<td style="text-align: left;">80%+</td>
+<td style="text-align: left;">Tendency tracking: 70% FH cross-court on BP</td>
+</tr>
+</tbody></table>
+
+<h3>2.3 Mô Hình Dự Báo Bayesian (Predictive Brain)</h3>
+
+<p>Não vận động viên đẳng cấp vận hành như <strong>bộ lọc Bayesian</strong>:</p>
+<ul>
+<li><strong>Prior:</strong> Lịch sử đối thủ (70% FH cross-court) + Cue setup (Open stance)</li>
+<li><strong>Likelihood:</strong> Cue real-time (Backswing sâu + Xoay vai mạnh)</li>
+<li><strong>Posterior:</strong> P(Cross-court topspin deep) = 0.89 → <strong>Khởi động di chuyển cross-court trước khi DT đập bóng</strong></li>
+</ul>
+
+<p><strong>Độ trễ xử lý:</strong></p>
+<ul>
+<li>Expert: 80–120 ms từ cue → khởi động motor</li>
+<li>Novice: 250–400 ms (chờ bóng bay → phản ứng)</li>
+</ul>
+
+<h2>3. Trình Tự Thực Thi Kỹ Thuật (Checkpoints)</h2>
+
+<h3>Giai Đoạn 1: Decoupling Nhận Diện Cue (Cue Recognition Decoupling)</h3>
+
+<p><strong>Bài tập: "Frozen Video — Dự Báo Quỹ Đạo"</strong></p>
+<ul>
+<li>Video đối thủ đập bóng, dừng tại 8 mốc: Setup, Grip, Backswing depth, Trunk rotation, Racket face, Weight load, Peak backswing, Toss.</li>
+<li>Tại mỗi mốc: Vận động viên <strong>viết/nghe dự báo</strong> (Hướng, Xoay, Độ sâu, Tốc độ).</li>
+<li>Không di chuyển — chỉ nhận diện.</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> ≥80% chính xác tại mốc 4 (Trunk rotation) — "Early commitment".</p>
+
+<h3>Giai Đoạn 2: Coupling Cue → Hành Động (Cue-Action Coupling)</h3>
+
+<p><strong>Bài tập: "Shadow First Step"</strong></p>
+<ul>
+<li>HLV feed bóng (hoặc máy), VĐV chỉ thực hiện <strong>bước đầu tiên</strong> (split-step + directional step).</li>
+<li>Dừng ngay sau bước 1. HLV hỏi: "Tại sao bước hướng đó?" → VĐV trả lời cue.</li>
+<li>Lặp 50 lần/buổi, tăng dần tốc độ feed.</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> Bước 1 chính xác ≥85% trên feed ngẫu nhiên 30 mph.</p>
+
+<h3>Giai Đoạn 3: Peripheral Opponent Tracking (Theo Dõi Đối Thủ Ngoại Vi)</h3>
+
+<p><strong>Bài tập: "Dual-Task Rally"</strong></p>
+<ul>
+<li>Rally cross-court. VĐV phải:</li>
+</ul>
+<p>  1. Đánh bóng bình thường (foveal on ball).</p>
+<p>  2. <strong>Gọi to</strong> vị trí đối thủ mỗi lần DT đập: "Trái / Phải / Giữa / Lùi / Tiến".</p>
+<ul>
+<li>Sử dụng ambient/dorsal stream — không nhìn trực tiếp DT.</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> 100% gọi đúng vị trí DT trên 20 điệp liên tiếp.</p>
+
+<h3>Giai Đoạn 4: Anticipation Under Pressure (Dự Báo Dưới Áp Lực)</h3>
+
+<p><strong>Bài tập: "Tiebreak Anticipation"</strong></p>
+<ul>
+<li>Chơi tiebreak. Điểm thưởng: Nếu VĐV khởi động di chuyển <strong>trước</strong> khi DT đập bóng (xác minh video) → +2 điểm.</li>
+<li>Phạt: Khởi động sau khi DT đập → -1 điểm.</li>
+<li>Ép não ưu tiên dorsal stream.</li>
+</ul>
+
+<h2>4. Chỉ Số Hiệu Suất & Liều Lượng Huấn Luyện</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Chỉ Số</th>
+<th style="text-align: left;">Đang Phát Triển</th>
+<th style="text-align: left;">Đạt Chuẩn</th>
+<th style="text-align: left;">Nâng Cao</th>
+<th style="text-align: left;">Đẳng Cấp</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">Thời gian khởi động (cue → step 1)</td>
+<td style="text-align: left;">>300 ms</td>
+<td style="text-align: left;">200–300 ms</td>
+<td style="text-align: left;">120–200 ms</td>
+<td style="text-align: left;"><100 ms (trước va chạm DT)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Độ chính xác dự báo hướng</td>
+<td style="text-align: left;"><50%</td>
+<td style="text-align: left;">50–65%</td>
+<td style="text-align: left;">65–80%</td>
+<td style="text-align: left;">>85% (từ mốc 4)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Độ chính xác dự báo xoay</td>
+<td style="text-align: left;"><40%</td>
+<td style="text-align: left;">40–55%</td>
+<td style="text-align: left;">55–70%</td>
+<td style="text-align: left;">>75%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Theo dõi đối thủ ngoại vi</td>
+<td style="text-align: left;">0% nhận diện</td>
+<td style="text-align: left;">50%</td>
+<td style="text-align: left;">80%</td>
+<td style="text-align: left;">100% (dual-task)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tỷ lệ "Early commitment"</td>
+<td style="text-align: left;"><20%</td>
+<td style="text-align: left;">20–40%</td>
+<td style="text-align: left;">40–60%</td>
+<td style="text-align: left;">>70%</td>
+</tr>
+</tbody></table>
+
+<h3>Liều Lượng Huấn Luyện</h3>
+
+<ul>
+<li><strong>Hàng ngày (10'):</strong> Frozen video 10 clip (5 FH, 5 BH, 5 Serve) — viết dự báo.</li>
+<li><strong>Tập kỹ thuật (15'):</strong> Shadow first step 50 lần (HLV gọi cue ngẫu nhiên).</li>
+<li><strong>Rally (15'):</strong> Dual-task — gọi vị trí DT mỗi điệp.</li>
+<li><strong>Trận mô phỏng (20'):</strong> Tiebreak anticipation scoring.</li>
+<li><strong>Tần suất:</strong> 4×/tuần. Video review tuần: phân tích 5 điểm early/late commitment.</li>
+</ul>
+
+<h2>5. Lỗi Thường Gặp, Nguyên Nhân & Giao Thức Khắc Phục</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Lỗi Quan Sát</th>
+<th style="text-align: left;">Nguyên Nhân Gốc</th>
+<th style="text-align: left;">Giao Thức Khắc Phục</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">"Wait and see" — đứng yên chờ bóng qua lưới</td>
+<td style="text-align: left;">Thói phản xạ, không có mô hình dự báo</td>
+<td style="text-align: left;">"Move on the racket" — bước 1 khi DT ra sau tối đa</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nhìn chăm chăm bóng (foveal lock)</td>
+<td style="text-align: left;">Không tách dorsal/ventral</td>
+<td style="text-align: left;">Strobe glasses / Peripheral tap drill — ép ambient tracking</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dự báo sai do deception (drop shot disguise)</td>
+<td style="text-align: left;">Chỉ dùng cue muộn (racket face)</td>
+<td style="text-align: left;">Ưu tiên cue sớm: Setup + Grip + Backswing depth (weighted 70%)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Di chuyển sai hướng (cross-court vs down-line)</td>
+<td style="text-align: left;">Không đọc trunk rotation</td>
+<td style="text-align: left;">Drill: DT chỉ xoay vai trái/phải — VĐV bước trước khi đập</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mất theo dõi DT khi bóng nhanh</td>
+<td style="text-align: left;">Dorsal stream overload</td>
+<td style="text-align: left;">Baseline micro-hops (Bài 002) — duy trì SSC readiness cho step 1</td>
+</tr>
+</tbody></table>
+
+<h2>6. Sơ Đồ Chẩn Đoán & Ra Quyết Định</h2>
+
+<p><strong>Với Quiet Eye (Bài 041):</strong> QE = foveal anchor. Dorsal stream tự do theo dõi DT khi QE cố định cửa sổ tiếp xúc.</p>
+
+<p><strong>Với VOR (Bài 042):</strong> Đầu ổn định = optic flow chính xác. Đầu rung = nhiễu dorsal stream.</p>
+
+<p><strong>Với Self 1/2 (Bài 045):</strong> Dự báo = Self 2 (dorsal stream). Self 1 phân tích cue = chậm. "Cue → Action" không qua ngôn ngữ.</p>
+
+<p><strong>Với Amygdala (Bài 044):</strong> Stress → tunnel vision (foveal only) → mất dorsal tracking. 16-sec cure = restore peripheral awareness.</p>
+
+<p><strong>Với Tactics (Trụ IV):</strong> Cue dự báo = input cho Shot-Tree Decision Model (Bài 140). Early commitment = time advantage cho tactical execution.</p>
+
+<h2>7. Video Minh Họa & Phân Tích Kỹ Thuật</h2>
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube-nocookie.com/embed/526H8zXwp2w" title="Spatial Awareness and Anticipatory Visual Cues in Rallies" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<p><p><em>Video: Spatial Awareness and Anticipatory Visual Cues in Rallies (Top Tennis Training).</em></p></p>
+
+<h2>8. Ứng Dụng Liên Ngành & Phối Hợp Đa Trụ Cột</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Điểm Kiểm</th>
+<th style="text-align: left;">Mức 1 (Reactive)</th>
+<th style="text-align: left;">Mức 2 (Early Reactive)</th>
+<th style="text-align: left;">Mức 3 (Anticipatory)</th>
+<th style="text-align: left;">Mức 4 (Predictive Mastery)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">Khởi động bước 1</td>
+<td style="text-align: left;">Sau bóng qua lưới</td>
+<td style="text-align: left;">Khi DT đập bóng</td>
+<td style="text-align: left;">Ra sau DT (mốc 4–6)</td>
+<td style="text-align: left;">Setup/Grip (mốc 1–3)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dự báo hướng (mốc 4)</td>
+<td style="text-align: left;"><50%</td>
+<td style="text-align: left;">50–65%</td>
+<td style="text-align: left;">65–80%</td>
+<td style="text-align: left;">>85%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Theo dõi DT ngoại vi</td>
+<td style="text-align: left;">Không</td>
+<td style="text-align: left;">Đôi khi</td>
+<td style="text-align: left;">80%</td>
+<td style="text-align: left;">100% dual-task</td>
+</tr>
+<tr>
+<td style="text-align: left;">Commitment مبكر</td>
+<td style="text-align: left;">Không bao giờ</td>
+<td style="text-align: left;">Thỉnh thoảng</td>
+<td style="text-align: left;">Thường xuyên</td>
+<td style="text-align: left;">Mặc định mọi điểm</td>
+</tr>
+</tbody></table>
+
+<p>Chấm điểm: 4–7 = anticipation audit fail. 8–11 = late commitment. 12–14 = functional anticipation. 15–16 = predictive mastery.</p>
+
+<h2>9. Bảng Tự Đánh Giá (Rubric Đa Cấp Độ)</h2>
+
+<p><strong>MỤC TIÊU BUỔI:</strong> Khởi động di chuyển trước khi đối thủ đập bóng (mốc 1–4).</p>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Khối</th>
+<th style="text-align: left;">Bài Tập</th>
+<th style="text-align: left;">Liều Lượng</th>
+<th style="text-align: left;">Cue</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">A — Khởi Động (5')</td>
+<td style="text-align: left;">Frozen video 5 clip: dừng mốc 1–4, viết dự báo</td>
+<td style="text-align: left;">5 clip</td>
+<td style="text-align: left;">"Setup → Grip → Depth → Rotation"</td>
+</tr>
+<tr>
+<td style="text-align: left;">B — Mẫu Hình (10')</td>
+<td style="text-align: left;">Shadow first step: HLV gọi cue, VĐV bước ngay</td>
+<td style="text-align: left;">30 lần</td>
+<td style="text-align: left;">"Cue → Step ngay lập tức"</td>
+</tr>
+<tr>
+<td style="text-align: left;">C — Chuyển Giao (15')</td>
+<td style="text-align: left;">Dual-task rally: đánh + gọi vị trí DT</td>
+<td style="text-align: left;">20 phút</td>
+<td style="text-align: left;">"Mắt nhìn bóng, não nhìn người"</td>
+</tr>
+<tr>
+<td style="text-align: left;">D — Kiểm Toán (5')</td>
+<td style="text-align: left;">Video rally: đếm % early commitment (trước va chạm DT)</td>
+<td style="text-align: left;">2 clip</td>
+<td style="text-align: left;">"Early commitment >70%?"</td>
+</tr>
+</tbody></table>
+
+<p><strong>Tần suất:</strong> 3×/tuần. <strong>Cổng:</strong> Video cho thấy early commitment ≥70% trên rally 20 điệp.</p>
+
+<hr />
+
+<p><em>Tham chiếu chéo: Bài 041, 042, 044, 045, 140. Trụ II: Thần Kinh Thể Thao & Kỹ Thuật — TennisKB 200 Bài.</em></p>
+
+<!-- TP-NAV-START -->
+<p class="article-nav" style="margin-top:2rem;font-size:0.95rem"><a href="/vi/articles/VI-tenniskb-subconscious-motor-program-recruitment-self-1-vs-self-2/">← Trước</a> &nbsp;|&nbsp; <a href="/vi/articles/">🏠 Trang chủ</a> &nbsp;|&nbsp; <a href="/vi/articles/VI-tenniskb-pre-point-routines-and-sympathetic-modulation/">Sau →</a></p>
+<!-- TP-NAV-END -->
+
+</article>
+
+
+
+          </div>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+      </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+        <script src="/assets/js/extra.js"></script>
+
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>

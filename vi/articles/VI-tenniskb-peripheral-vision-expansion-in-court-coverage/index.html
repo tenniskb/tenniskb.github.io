@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="TennisKB — Bài viết 001: Mở Rộng Thị Giác Ngoại Vi Trong Độ Phủ Sân | Tennis Future Lab">
+
+        <meta name="author" content="Henry Pham">
+
+          <link rel="alternate" href="/en/articles/EN-tenniskb-peripheral-vision-expansion-in-court-coverage/" hreflang="en">
+
+          <link rel="alternate" href="/vi/articles/VI-tenniskb-peripheral-vision-expansion-in-court-coverage/" hreflang="vi">
+
+      <link rel="icon" href="/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+
+        <title>Bài viết 001: Mở Rộng Thị Giác Ngoại Vi Trong Độ Phủ Sân - Tennis Unified Library</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+
+<script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+<link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script><script id="MathJax" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"]],processEscapes:true,processEnvironments:true},loader:{lineWidth:128}};</script>
+</head>
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+<!-- FLATTENED-TOP-NAV-START -->
+<div class="tu-topnav">
+  <a href="/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
+  <a href="/doubles/" class="tu-nav-item" title="Doubles"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Doubles</span></a>
+  <a href="/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
+  <a href="/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
+  <a href="/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
+  <a href="/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
+  <a href="/tnkb/" class="tu-nav-item" title="Knowledgebase"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Knowledgebase</span></a>
+  <a href="/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
+  <a href="/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
+  <a href="/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/articles/" class="tu-nav-item" title="Tennis Fundamentals"><span class="tu-nav-emoji">🎯</span><span class="tu-nav-text">Tennis Fundamentals</span></a>
+  <a href="/vi/Tenniskb-5 Pillars/" class="tu-nav-item" title="5 Trụ Cột"><span class="tu-nav-emoji">🏛️</span><span class="tu-nav-text">5 Trụ Cột</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to Vietnamese"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">VI</span></a>
+  <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
+</div>
+<!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+        <a href="#content" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+  </nav>
+</header>
+
+<div class="md-container" data-md-component="container">
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+
+<!-- TP-BREADCRUMB-START -->
+<p><a href="/">🏠 Home</a> &nbsp;›&nbsp; <a href="/vi/articles/">Tennis Fundamentals</a> &nbsp;›&nbsp; <a href="/vi/articles/than-kinh/">Thần Kinh Thể Thao & Nhận Thức</a> &nbsp;›&nbsp; Mở Rộng Thị Giác Ngoại Vi Trong Độ Phủ Sân</p>
+<hr />
+<!-- TP-NAV-END -->
+
+<h1 id="content">Mở Rộng Thị Giác Ngoại Vi Trong Độ Phủ Sân</h1>
+
+
+<blockquote>
+<p><strong>CUE CHUYÊN GIA:</strong> Mắt fovea chỉ thấy 2° — ngoại vi thấy 180°. Đẳng cấp không nhìn bóng nhiều hơn — họ nhìn <em>sân</em> nhiều hơn. Mở rộng "cửa sổ ngoại vi"; độ phủ sân tăng 40% không cần nhanh hơn.</p>
+</blockquote>
+
+<h2>1. Tóm Tắt Điều Hành & Ý Đồ Thể Thao</h2>
+
+<p><strong>Thị giác ngoại vi (Peripheral Vision / Ambient Vision)</strong> là hệ thống dorsal stream (luồng "where/how") xử lý chuyển động, optic flow, không gian lên đến 180° với độ phân giải thấp nhưng tốc độ cực cao (magnocellular pathway, >100 fps). <strong>Độ phủ sân (Court Coverage)</strong> không chỉ phụ thuộc tốc độ chân — nó phụ thuộc <strong>sớm bao nhiêu VĐV nhận biết không gian trống, vị trí đối thủ, đường bay bóng</strong>. Bài viết này định nghĩa khoa học dorsal stream, so sánh gaze behavior Elite vs Club (Visual Search Heuristics), giao thức mở rộng trường ngoại vi (Strobe, Peripheral targets, Dual-task), và ma trận đo lường độ phủ sân qua thị giác.</p>
+
+<p>Ý định thể thao ba khía cạnh: thứ nhất, làm <strong>thị giác ngoại vi thành kỹ năng có thể huấn luyện, đo lường</strong> — không phải thiên phú. Thứ hai, định nghĩa <strong>quy luật "Ít cố định hơn, lâu hơn, giàu thông tin hơn"</strong> (Elite: 2.8 fixations/s, 250–350ms/fixation vs Novice: 6.2 fixations/s, scattered). Thứ ba, cung cấp <strong>bộ 4 drill tiến trình</strong> từ tĩnh đến động, từ đơn giản đến phức tạp, tích hợp vào rally thực tế.</p>
+
+<h2>2. Nền Tảng Thần Kinh - Thị Giác</h2>
+
+<h3>2.1 Hai Luồng Thị Giác (Two Visual Streams) — Lược Đồ</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Đặc Điểm</th>
+<th style="text-align: left;"><strong>Ventral Stream (Foveal / "What")</strong></th>
+<th style="text-align: left;"><strong>Dorsal Stream (Ambient / Peripheral / "Where/How")</strong></th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;"><strong>Vùng não</strong></td>
+<td style="text-align: left;">Temporal lobe (V1 → V4 → IT)</td>
+<td style="text-align: left;">Parietal lobe (V1 → MT/MST → PPC)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Đường truyền</strong></td>
+<td style="text-align: left;">Parvocellular (P-cells)</td>
+<td style="text-align: left;"><strong>Magnocellular (M-cells)</strong> — lớn, nhanh, nhạy chuyển động</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trường nhìn</strong></td>
+<td style="text-align: left;">2° trung tâm (fovea)</td>
+<td style="text-align: left;"><strong>180°+</strong> (cả hai mắt)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Độ phân giải</strong></td>
+<td style="text-align: left;">Cao (chi tiết, màu, chữ)</td>
+<td style="text-align: left;">Thấp (hình dạng, chuyển động, không gian)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tốc độ xử lý</strong></td>
+<td style="text-align: left;">~100 ms (ý thức)</td>
+<td style="text-align: left;"><strong>~30–50 ms (tự động, dưới ý thức)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Chức năng tennis</strong></td>
+<td style="text-align: left;">Quiet Eye: điểm tiếp xúc, seam bóng</td>
+<td style="text-align: left;"><strong>Theo dõi đối thủ, độ phủ sân, optic flow, TTC</strong></td>
+</tr>
+</tbody></table>
+
+<p><strong>Khoa học đẳng cấp (Visual Search Heuristics - ATP Top 10 vs Club):</strong></p>
+<table>
+<thead><tr>
+<th style="text-align: left;">Chỉ Số</th>
+<th style="text-align: left;">Club Player</th>
+<th style="text-align: left;">ATP Top 10</th>
+<th style="text-align: left;">Chênh Lệch</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;"><strong>Fixations/giây</strong></td>
+<td style="text-align: left;">6.2 (loạn)</td>
+<td style="text-align: left;"><strong>2.8</strong> (gom cụm)</td>
+<td style="text-align: left;"><strong>55% ít hơn</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Thời gian fixation</strong></td>
+<td style="text-align: left;">120–180 ms</td>
+<td style="text-align: left;"><strong>250–350 ms</strong></td>
+<td style="text-align: left;"><strong>2x lâu hơn</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vùng fixation</strong></td>
+<td style="text-align: left;">Racket, đầu, bóng, line (rải rác)</td>
+<td style="text-align: left;"><strong>Core-Hip axis + Contact window</strong> (2 vùng)</td>
+<td style="text-align: left;"><strong>Tập trung 80% thông tin</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Thông tin/fixation</strong></td>
+<td style="text-align: left;">1x</td>
+<td style="text-align: left;"><strong>4x</strong></td>
+<td style="text-align: left;"><strong>Hiệu quả 4x</strong></td>
+</tr>
+</tbody></table>
+
+<h3>2.2 Optic Flow & Time-to-Contact (TTC) Trong Ngoại Vi</h3>
+
+<p><strong>Dorsal stream tính toán TTC (Time-to-Contact) tự động từ optic flow expansion rate:</strong></p>
+<pre><code>τ (Tau) = θ / θ̇  (Góc nhìn / Tốc độ mở rộng góc)</code></pre>
+<ul>
+<li>Không cần ý thức — tiểu não + parietal cortex xử lý song song.</li>
+<li><strong>Ứng dụng:</strong> Biết chính xác "bao lâu nữa bóng chạm đất" → điều chỉnh bước chân, ra sau <em>trước khi</em> bóng qua lưới.</li>
+</ul>
+
+<h3>2.3 Trường Nhìn Hiệu Quả Trong Tennis (Effective Visual Field)</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Vùng</th>
+<th style="text-align: left;">Góc Độ</th>
+<th style="text-align: left;">Chức Năng</th>
+<th style="text-align: left;">Drill Mục Tiêu</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;"><strong>Foveal Core</strong></td>
+<td style="text-align: left;">0–2°</td>
+<td style="text-align: left;">Quiet Eye: điểm va chạm, seam</td>
+<td style="text-align: left;">QE drills (Bài 041)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Near Peripheral</strong></td>
+<td style="text-align: left;">2–10°</td>
+<td style="text-align: left;">Mặt vợt, tay, vai đối thủ gần</td>
+<td style="text-align: left;">Peripheral target taps</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mid Peripheral</strong></td>
+<td style="text-align: left;">10–30°</td>
+<td style="text-align: left;"><strong>Core-Hip axis ĐT, vị trí sân</strong></td>
+<td style="text-align: left;"><strong>MỞ RỘNG CHÍNH</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Far Peripheral</strong></td>
+<td style="text-align: left;">30–90°</td>
+<td style="text-align: left;">Đường bay bóng, biên sân, đối thủ xa</td>
+<td style="text-align: left;">Strobe + Optic flow</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Extreme Peripheral</strong></td>
+<td style="text-align: left;">90–180°</td>
+<td style="text-align: left;">Bóng cao (lob), chuyển động bất ngờ</td>
+<td style="text-align: left;">Safety awareness</td>
+</tr>
+</tbody></table>
+
+<h2>3. Trình Tự Thực Thi Kỹ Thuật (Checkpoints)</h2>
+
+<h3>Giai Đoạn 1: Static Peripheral Expansion (Mở Rộng Tĩnh)</h3>
+
+<p><strong>Bài tập 1: "Peripheral Target Grid" (Lưới Mục Tiêu Ngoại Vi)</strong></p>
+<ul>
+<li>VĐV nhìn cố định điểm trung tâm (mũi tên trên tường/màn hình).</li>
+<li>HLV/đồng đội cầm đèn LED/target ở 8 vị trí ngoại vi (0°, 45°, 90°, 135°, 180°...).</li>
+<li>VĐV <strong>không được chuyển mắt</strong> → chỉ dùng ngoại vi → gọi vị trí/ màu target.</li>
+<li>Bắt đầu gần (10°) → dần xa (60°).</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> Nhận diện 100% target ở 30° ngoại vi, ≥80% ở 60°.</p>
+
+<p><strong>Bài tập 2: "Number Calling" (Gọi Số Ngoại Vi)</strong></p>
+<ul>
+<li>Màn hình hiển thị số ngẫu nhiên tại các vị trí ngoại vi (2°–60°).</li>
+<li>VĐV fixation trung tâm → gọi to số xuất hiện ở ngoại vi.</li>
+<li>Tăng tốc độ hiển thị: 2s → 1s → 500ms → 200ms.</li>
+</ul>
+
+<h3>Giai Đoạn 2: Dynamic Peripheral Tracking (Theo Dõi Động Ngoại Vi)</h3>
+
+<p><strong>Bài tập 3: "Dual-Task Rally - Opponent Tracking" (Rally Nhiệm Vụ Kép)</strong></p>
+<ul>
+<li>Rally cross-court tốc độ vừa. VĐV:</li>
+</ul>
+<p>  1. Đánh bóng bình thường (Foveal: Quiet Eye trên bóng).</p>
+<p>  2. <strong>Gọi to vị trí ĐT</strong> mỗi lần ĐT đập: "Trái / Phải / Giữa / Tiến / Lùi / Nhảy".</p>
+<ul>
+<li>Ép dorsal stream xử lý ĐT position song song với foveal tracking bóng.</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> 30 điệp liên tiếp gọi đúng ≥95%, không làm chậm swing.</p>
+
+<p><strong>Bài tập 4: "Ball + Opponent Dual Tracking"</strong></p>
+<ul>
+<li>Feed bóng ngẫu nhiên (máy/coach). VĐV:</li>
+</ul>
+<p>  1. Theo dõi bóng (foveal).</p>
+<p>  2. <strong>Vẽ hình chữ nhật trong không khí</strong> (bằng tay/ vợt) biểu diễn vị trí ĐT ước lượng.</p>
+<ul>
+<li>HLV kiểm tra video: hình chữ nhật có khớp vị trí ĐT thực tế không.</li>
+</ul>
+
+<h3>Giai Đoạn 3: Strobe & Occlusion Training (Strobe & Che Khuất)</h3>
+
+<p><strong>Bài tập 5: "Strobe Goggles Rally" (Kính Strobe Rally)</strong></p>
+<ul>
+<li>Đeo kính Strobe (nhấp nháy 5–10 Hz, duty cycle 20–50%).</li>
+<li>Rally: VĐV chỉ thấy "snapshot" bóng → não buộc phải <strong>dự báo quỹ đạo</strong> (dorsal stream extrapolation).</li>
+<li>Bắt đầu 10 Hz, 50% duty → dần giảm Hz, giảm duty (khó hơn).</li>
+</ul>
+
+<p><strong>Bài tập 6: "Occlusion Glasses - Late Vision" (Kính Che - Thấy Muộn)</strong></p>
+<ul>
+<li>Kính che 150–200 ms sau khi ĐT đập bóng.</li>
+<li>VĐV phải khởi động di chuyển <em>trước khi</em> thấy bóng (dựa trên cue ĐT - Bài 046).</li>
+<li>Test early commitment capability.</li>
+</ul>
+
+<h3>Giai Đoạn 4: Integrated Court Coverage (Độ Phủ Sân Tích Hợp)</h3>
+
+<p>**Bài tập 7: "Court Coverage Mapping" (Bản Đồ Độ Phủ Sân)"</p>
+<ul>
+<li>HLV feed bóng 4 góc: Wide FH, Wide BH, Body, Short.</li>
+<li>VĐV phải: (1) Đánh trả target zone, (2) <strong>Gọi to vị trí ĐT</strong>, (3) <strong>Gọi to vùng sân trống</strong> sau khi đánh.</li>
+<li>Video phân tích: Thời gian từ va chạm ĐT → VĐV gọi "vùng trống" = peripheral processing speed.</li>
+</ul>
+
+<p><strong>Drill "Shadow Coverage" (Bóng Ma):</strong></p>
+<ul>
+<li>Không bóng. HLV chỉ hướng (cây vợt/chỉ tay). VĐV di chuyển độ phủ sân tối ưu.</li>
+<li>Focus: <strong>Giữ đầu yên, mắt nhìn "điểm vô cực" trước mặt</strong> → ngoại vi quét toàn sân.</li>
+</ul>
+
+<h2>4. Chỉ Số Hiệu Suất & Liều Lượng Huấn Luyện</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Chỉ Số</th>
+<th style="text-align: left;">Đang Phát Triển</th>
+<th style="text-align: left;">Đạt Chuẩn</th>
+<th style="text-align: left;">Nâng Cao</th>
+<th style="text-align: left;">Đẳng Cấp</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">Peripheral detection angle</td>
+<td style="text-align: left;"><20°</td>
+<td style="text-align: left;">20–35°</td>
+<td style="text-align: left;">35–50°</td>
+<td style="text-align: left;">>60° (Elite)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Detection accuracy at 30°</td>
+<td style="text-align: left;"><50%</td>
+<td style="text-align: left;">50–70%</td>
+<td style="text-align: left;">70–90%</td>
+<td style="text-align: left;">>95%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dual-task rally call accuracy</td>
+<td style="text-align: left;"><70%</td>
+<td style="text-align: left;">70–85%</td>
+<td style="text-align: left;">85–95%</td>
+<td style="text-align: left;">>98%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fixations/second (rally)</td>
+<td style="text-align: left;">>5.0</td>
+<td style="text-align: left;">4.0–5.0</td>
+<td style="text-align: left;">3.0–4.0</td>
+<td style="text-align: left;"><strong>2.5–3.0 (Elite)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Fixation duration (ms)</td>
+<td style="text-align: left;"><150</td>
+<td style="text-align: left;">150–200</td>
+<td style="text-align: left;">200–300</td>
+<td style="text-align: left;"><strong>250–350 (Elite)</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Court coverage area (m²/điểm)</td>
+<td style="text-align: left;"><15</td>
+<td style="text-align: left;">15–22</td>
+<td style="text-align: left;">22–30</td>
+<td style="text-align: left;">>30 (Alcaraz/Nadal)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Early commitment rate</td>
+<td style="text-align: left;"><20%</td>
+<td style="text-align: left;">20–40%</td>
+<td style="text-align: left;">40–60%</td>
+<td style="text-align: left;">>70%</td>
+</tr>
+</tbody></table>
+
+<h3>Liều Lượng Huấn Luyện</h3>
+
+<ul>
+<li><strong>Hàng ngày (5'):</strong> Peripheral target grid 2' + Number calling 3' (tăng độ khó tuần).</li>
+<li><strong>Tập kỹ thuật (15'):</strong> Dual-task rally 30 điệp × 3 set (gọi vị trí ĐT).</li>
+<li>**Đặc biệt (10'): Strobe rally 2×5' (tuần 1: 10Hz; tuần 2: 7Hz; tuần 3: 5Hz).</li>
+<li><strong>Tích hợp (10'):</strong> Court coverage mapping 20 bóng feed ngẫu nhiên.</li>
+<li><strong>Tần suất:</strong> 4×/tuần. Eye-tracker review tháng: fixation clustering, duration, coverage map.</li>
+</ul>
+
+<h2>5. Lỗi Thường Gặp, Nguyên Nhân & Giao Thức Khắc Phục</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Lỗi Quan Sát</th>
+<th style="text-align: left;">Nguyên Nhân Gốc</th>
+<th style="text-align: left;">Giao Thức Khắc Phục</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">"Mắt theo bóng quá chặt — không thấy ĐT"</td>
+<td style="text-align: left;">Foveal lock (ventral dominance)</td>
+<td style="text-align: left;">Strobe goggles ép dorsal stream; Dual-task bắt buộc gọi ĐT</td>
+</tr>
+<tr>
+<td style="text-align: left;">Đi muộn, không kịp độ phủ</td>
+<td style="text-align: left;">Peripheral processing chậm</td>
+<td style="text-align: left;">Occlusion glasses: ép early commitment dựa trên cue ĐT</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mất bóng khi chuyển hướng nhanh</td>
+<td style="text-align: left;">VOR yếu + peripheral gap</td>
+<td style="text-align: left;">VOR drills (Bài 042) + Head stabilization trong peripheral tasks</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chỉ thấy 1 bên sân (weak side)</td>
+<td style="text-align: left;">Asymmetry peripheral attention</td>
+<td style="text-align: left;">Weak-side only drills: feed 80% weak side, ép ngoại vi bên đó</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dưới áp lực → tunnel vision</td>
+<td style="text-align: left;">Amygdala → ventral only</td>
+<td style="text-align: left;">16s cure (Bài 044) + Power pose (cằm lên = peripheral mở)</td>
+</tr>
+</tbody></table>
+
+<h2>6. Sơ Đồ Chẩn Đoán & Ra Quyết Định</h2>
+
+<p><strong>Với Quiet Eye (Bài 041):</strong> QE = foveal anchor (2°). Dorsal stream tự do xử lý ngoại vi <strong>chỉ khi</strong> foveal stable. QE training = prerequisite cho peripheral expansion.</p>
+
+<p><strong>Với Spatial Awareness (Bài 046):</strong> Cue dự báo (trunk rotation, grip...) được nhận diện BỞI dorsal stream qua ngoại vi. Mở rộng ngoại vi = nhận diện cue sớm hơn.</p>
+
+<p><strong>Với Sensory Gating (Bài 049):</strong> Corollary discharge gating self-motion noise = dorsal stream bandwidth cho đối thủ/bóng.</p>
+
+<p><strong>Với Neuro-Priming (Bài 048):</strong> Micro-hops 3–5 Hz duy trì dorsal stream readiness (optic flow calibration).</p>
+
+<p><strong>Với Amygdala (Bài 044):</strong> Stress → tunnel vision (foveal only). Amygdala reset = khôi phục peripheral field.</p>
+
+<p><strong>Với Tactics (Trụ IV):</strong> Peripheral court map = input cho Shot-Tree Decision (Bài 140). Không map = đoán mò.</p>
+
+<h2>7. Video Minh Họa & Phân Tích Kỹ Thuật</h2>
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube-nocookie.com/embed/SwLx2q6qc3I" title="Peripheral Vision Expansion for Complete Court Coverage" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<p><p><em>Video: Peripheral Vision Expansion for Complete Court Coverage (Tennis Hacker).</em></p></p>
+
+<h2>8. Ứng Dụng Liên Ngành & Phối Hợp Đa Trụ Cột</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Điểm Kiểm</th>
+<th style="text-align: left;">Mức 1 (Foveal Lock)</th>
+<th style="text-align: left;">Mức 2 (Peripheral Nhận Biết)</th>
+<th style="text-align: left;">Mức 3 (Peripheral Tích Hợp)</th>
+<th style="text-align: left;">Mức 4 (Panoramic Mastery)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">Detection angle</td>
+<td style="text-align: left;"><20°</td>
+<td style="text-align: left;">20–35°</td>
+<td style="text-align: left;">35–50°</td>
+<td style="text-align: left;">>60°</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dual-task accuracy</td>
+<td style="text-align: left;"><70%</td>
+<td style="text-align: left;">70–85%</td>
+<td style="text-align: left;">85–95%</td>
+<td style="text-align: left;">>98%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fixation rate (rally)</td>
+<td style="text-align: left;">>5.0/s</td>
+<td style="text-align: left;">4.0–5.0</td>
+<td style="text-align: left;">3.0–4.0</td>
+<td style="text-align: left;">2.5–3.0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Fixation duration</td>
+<td style="text-align: left;"><150ms</td>
+<td style="text-align: left;">150–200ms</td>
+<td style="text-align: left;">200–300ms</td>
+<td style="text-align: left;">250–350ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">Court coverage</td>
+<td style="text-align: left;"><15 m²</td>
+<td style="text-align: left;">15–22</td>
+<td style="text-align: left;">22–30</td>
+<td style="text-align: left;">>30 m²</td>
+</tr>
+</tbody></table>
+
+<p>Chấm điểm: 5–8 = peripheral audit fail. 9–12 = tunnel leak. 13–16 = functional expansion. 17–20 = panoramic mastery.</p>
+
+<h2>9. Bảng Tự Đánh Giá (Rubric Đa Cấp Độ)</h2>
+
+<p><strong>MỤC TIÊU BUỔI:</strong> Peripheral detection ≥50°, Dual-task rally call ≥95%, Fixation rate ≤3.0/s.</p>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Khối</th>
+<th style="text-align: left;">Bài Tập</th>
+<th style="text-align: left;">Liều Lượng</th>
+<th style="text-align: left;">Cue</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">A — Khởi Động (5')</td>
+<td style="text-align: left;">Peripheral target grid: 8 vị trí, fixation trung tâm</td>
+<td style="text-align: left;">2 phút</td>
+<td style="text-align: left;">"Mắt giữa — Não toàn cảnh"</td>
+</tr>
+<tr>
+<td style="text-align: left;">B — Mẫu Hình (15')</td>
+<td style="text-align: left;">Dual-task rally: đánh + gọi vị trí ĐT mọi điệp</td>
+<td style="text-align: left;">30 điệp × 2</td>
+<td style="text-align: left;">"Fovea: Bóng — Dorsal: Người"</td>
+</tr>
+<tr>
+<td style="text-align: left;">C — Chuyển Giao (10')</td>
+<td style="text-align: left;">Strobe rally: 5Hz, 30% duty, rally tốc độ match</td>
+<td style="text-align: left;">2 × 5'</td>
+<td style="text-align: left;">"Ít nhìn hơn — Dự báo tốt hơn"</td>
+</tr>
+<tr>
+<td style="text-align: left;">D — Kiểm Toán (5')</td>
+<td style="text-align: left;">Video: fixation clustering, court coverage map</td>
+<td style="text-align: left;">2 clip</td>
+<td style="text-align: left;">"Fixation ≤3/s? Coverage ≥25m²?"</td>
+</tr>
+</tbody></table>
+
+<p><strong>Tần suất:</strong> 3×/tuần. <strong>Cổng:</strong> Dual-task ≥95% trên 30 điệp + Strobe rally không lỗi không gọi ĐT.</p>
+
+<hr />
+
+<p><em>Tham chiếu chéo: Bài 041, 042, 044, 046, 048, 049, 140. Trụ II: Thần Kinh Thể Thao & Kỹ Thuật — TennisKB 200 Bài.</em></p>
+
+<!-- TP-NAV-START -->
+<p class="article-nav" style="margin-top:2rem;font-size:0.95rem"><a href="/vi/articles/VI-tenniskb-neural-myelination-through-high-density-precision-repetitions/">← Trước</a> &nbsp;|&nbsp; <a href="/vi/articles/">🏠 Trang chủ</a> &nbsp;|&nbsp; <a href="/vi/articles/VI-tenniskb-cognitive-load-reduction-through-automated-tactical-heuristics/">Sau →</a></p>
+<!-- TP-NAV-END -->
+
+</article>
+
+
+
+          </div>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+      </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+        <script src="/assets/js/extra.js"></script>
+
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>
