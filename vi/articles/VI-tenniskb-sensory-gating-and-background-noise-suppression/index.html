@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+  <head>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="TennisKB — Bài viết 001: Cổng Cảm Giác &amp; Ức Chế Nhiễu Nền | Tennis Future Lab">
+
+        <meta name="author" content="Henry Pham">
+
+          <link rel="alternate" href="/en/articles/EN-tenniskb-sensory-gating-and-background-noise-suppression/" hreflang="en">
+
+          <link rel="alternate" href="/vi/articles/VI-tenniskb-sensory-gating-and-background-noise-suppression/" hreflang="vi">
+
+      <link rel="icon" href="/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+
+        <title>Bài viết 001: Cổng Cảm Giác &amp; Ức Chế Nhiễu Nền - Tennis Unified Library</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"Roboto Mono"}</style>
+
+<script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+
+
+<link rel="stylesheet" href="/assets/stylesheets/cerulean.min.css">
+<link rel="stylesheet" href="/assets/css/site.css"><script src="/assets/javascripts/lang-toggle.js" defer></script><script src="/assets/javascripts/darkmode.js" defer></script><script id="MathJax" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"]],processEscapes:true,processEnvironments:true},loader:{lineWidth:128}};</script>
+</head>
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+<!-- FLATTENED-TOP-NAV-START -->
+<div class="tu-topnav">
+  <a href="/" class="tu-nav-item" title="Home"><span class="tu-nav-emoji">🏠</span><span class="tu-nav-text">Home</span></a>
+  <a href="/fundamentals/" class="tu-nav-item" title="Fundamentals"><span class="tu-nav-emoji">📖</span><span class="tu-nav-text">Fundamentals</span></a>
+  <a href="/doubles/" class="tu-nav-item" title="Doubles"><span class="tu-nav-emoji">👥</span><span class="tu-nav-text">Doubles</span></a>
+  <a href="/stroke-analysis/" class="tu-nav-item" title="Stroke Analysis"><span class="tu-nav-emoji">🧠</span><span class="tu-nav-text">Stroke Analysis</span></a>
+  <a href="/coach-video-library/" class="tu-nav-item" title="Coach Library"><span class="tu-nav-emoji">🎓</span><span class="tu-nav-text">Coach Library</span></a>
+  <a href="/tennis-video-library/" class="tu-nav-item" title="Video Library"><span class="tu-nav-emoji">🎬</span><span class="tu-nav-text">Video Library</span></a>
+  <a href="/tennis-technical-reference/" class="tu-nav-item" title="Technical Reference"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Technical Reference</span></a>
+  <a href="/tnkb/" class="tu-nav-item" title="Knowledgebase"><span class="tu-nav-emoji">💡</span><span class="tu-nav-text">Knowledgebase</span></a>
+  <a href="/tennis-evolution/" class="tu-nav-item" title="Tennis Evolution"><span class="tu-nav-emoji">⚡</span><span class="tu-nav-text">Tennis Evolution</span></a>
+  <a href="/blog/" class="tu-nav-item" title="Blog"><span class="tu-nav-emoji">📝</span><span class="tu-nav-text">Blog</span></a>
+  <a href="/book/" class="tu-nav-item" title="Master Book"><span class="tu-nav-emoji">📕</span><span class="tu-nav-text">Master Book</span></a>
+  <a href="/books/" class="tu-nav-item" title="Books Catalog"><span class="tu-nav-emoji">📚</span><span class="tu-nav-text">Books Catalog</span></a>
+  <a href="/vi/articles/" class="tu-nav-item" title="Tennis Fundamentals"><span class="tu-nav-emoji">🎯</span><span class="tu-nav-text">Tennis Fundamentals</span></a>
+  <a href="/vi/Tenniskb-5 Pillars/" class="tu-nav-item" title="5 Trụ Cột"><span class="tu-nav-emoji">🏛️</span><span class="tu-nav-text">5 Trụ Cột</span></a>
+  <a href="/vi/" class="tu-nav-item tu-nav-lang" data-lang-toggle title="Switch to Vietnamese"><span class="tu-nav-emoji">🌐</span><span class="tu-nav-text">VI</span></a>
+  <button class="tu-nav-item tu-nav-darkmode" title="Dark Mode" type="button"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button>
+</div>
+<!-- FLATTENED-TOP-NAV-END -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+
+        <a href="#content" class="md-skip">
+          Skip to content
+        </a>
+
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="/" title="Tennis Unified Library" class="md-header__button md-logo" aria-label="Tennis Unified Library" data-md-component="logo">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+  </nav>
+</header>
+
+<div class="md-container" data-md-component="container">
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+
+<!-- TP-BREADCRUMB-START -->
+<p><a href="/">🏠 Home</a> &nbsp;›&nbsp; <a href="/vi/articles/">Tennis Fundamentals</a> &nbsp;›&nbsp; <a href="/vi/articles/than-kinh/">Thần Kinh Thể Thao & Nhận Thức</a> &nbsp;›&nbsp; Cổng Cảm Giác &amp; Ức Chế Nhiễu Nền</p>
+<hr />
+<!-- TP-NAV-END -->
+
+<h1 id="content">Cổng Cảm Giác &amp; Ức Chế Nhiễu Nền</h1>
+
+
+<blockquote>
+<p><strong>CUE CHUYÊN GIA:</strong> Mỗi cử động tạo ra nhiễu nội tại — vỏ não vận động gửi "bản sao corollary discharge" để trừ đi nhiễu, khuếch đại tín hiệu ngoài. Học cách gạt tiếng gõ vợt của chính mình để nghe tiếng "pop" của đối thủ.</p>
+</blockquote>
+
+<h2>1. Tóm Tắt Điều Hành & Ý Đồ Thể Thao</h2>
+
+<p><strong>Cổng cảm giác (Sensory Gating)</strong> là cơ chế não bộ lọc bỏ tín hiệu tự sinh (self-generated noise) — tiếng gõ giày, tiếng gió vợt, bản thể cảm giác từ cử động của chính mình — để khuếch đại tín hiệu quan trọng: <strong>âm thanh va chạm bóng đối thủ</strong>, <strong>xoay bóng</strong>, <strong>đường bay</strong>. <strong>Corollary Discharge (Bản sao hiệu lệnh)</strong> là bản sao ức chế của lệnh vận động gửi đến vỏ não cảm giác <strong>trước khi</strong> cử động xảy ra, trừ đi nhiễu dự đoán được. Bài viết này định nghĩa kiến trúc thần kinh của sensory attenuation, tỷ lệ tín hiệu/nhiễu (SNR) 18 dB, thư viện âm thanh xoay bóng, và giao thức huấn luyện "nghe bóng — không nghe mình".</p>
+
+<p>Ý định thể thao ba khía cạnh: thứ nhất, làm <strong>sensory attenuation thành kỹ năng có thể đo lường</strong> — không phải phù phép. Thứ hai, định nghĩa <strong>ngưỡng SNR 18 dB</strong> cần đạt để phân biệt topspin vs flat drive dưới 20 ms. Thứ ba, cung cấp <strong>bài tập mù (blindfolded) và acoustic pitch differentiation</strong> để calibrate cổng cảm giác.</p>
+
+<h2>2. Nền Tảng Thần Kinh - Cảm Giác</h2>
+
+<h3>2.1 Kiến Trúc Corollary Discharge (Bản Sao Hiệu Lệnh)</h3>
+
+<pre><code>[Vỏ Não Vận Động (M1)] ──► [Lệnh Vận Động] ──► [Cơ Bắp]
+        │
+        └──► [Efference Copy / Corollary Discharge] ──► [Vỏ Não Thính Giác / Bản Thể / Thị Giác]
+                                            │
+                                            ▼
+                                    [Ước Lượng Nhiễu Tự Sinh]
+                                            │
+                                            ▼
+                                    [Trừ Đi Khỏi Tín Đầu Vào]
+                                            │
+                                            ▼
+                                    [Tín Hiệu Ngoài Sạch (SNR ↑ 18 dB)]</code></pre>
+
+<p><strong>Thời gian:</strong> Corollary discharge đến vỏ não cảm giác <strong>~20–50 ms TRƯỚC</strong> khi tín hiệu cảm giác thực tế đến — "giấy phép thông hành" cho não biết cái gì là do mình tạo ra.</p>
+
+<h3>2.2 Tỷ Lệ Tín Hiệu/Nhiễu (SNR) Trong Tennis</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Nguồn Nhiễu Tự Sinh</th>
+<th style="text-align: left;">Cường Độ</th>
+<th style="text-align: left;">Corollary Discharge Giảm</th>
+<th style="text-align: left;">SNR Sau Giảm</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">Tiếng gõ giày (squeak)</td>
+<td style="text-align: left;">65–75 dB</td>
+<td style="text-align: left;">~15 dB</td>
+<td style="text-align: left;">18 dB tín hiệu bóng</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tiếng gió vợt (whoosh)</td>
+<td style="text-align: left;">55–65 dB</td>
+<td style="text-align: left;">~12 dB</td>
+<td style="text-align: left;">Phân biệt xoay topspin/flat</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rung bản thể cảm (vibration)</td>
+<td style="text-align: left;">Proprioceptive noise</td>
+<td style="text-align: left;">~20 dB</td>
+<td style="text-align: left;">Cảm giác điểm va chạm chính xác</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chuyển động thị giác vợt (visual motion)</td>
+<td style="text-align: left;">Optic flow self</td>
+<td style="text-align: left;">~15 dB</td>
+<td style="text-align: left;">Theo dõi bóng đối thủ rõ ràng</td>
+</tr>
+</tbody></table>
+
+<p><strong>Kết quả:</strong> Vận động viên đẳng cấp nghe được <strong>ma sát tần số cao của topspin</strong> (hiss) vs <strong>pop phẳng của flat drive</strong> trong <strong><20 ms</strong> sau va chạm đối thủ.</p>
+
+<h3>2.3 Chữ Ký Âm Thanh Của Xoay Bóng (Acoustic Signature of Spin)</h3>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Loại Bóng</th>
+<th style="text-align: left;">Đặc Điểm Âm Thanh</th>
+<th style="text-align: left;">Tần Số Chủ Đạo</th>
+<th style="text-align: left;">Thời Gian Phân Biệt</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;"><strong>Heavy Topspin</strong></td>
+<td style="text-align: left;">"Hiss" + "Pop" mềm</td>
+<td style="text-align: left;">2–5 kHz (ma sát sợi dây) + 200–500 Hz (va chạm)</td>
+<td style="text-align: left;">12–18 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Flat Drive</strong></td>
+<td style="text-align: left;">"Pop" sắc, lớn</td>
+<td style="text-align: left;">500–1500 Hz (va chạm thuần túy)</td>
+<td style="text-align: left;">8–12 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Slice/Underspin</strong></td>
+<td style="text-align: left;">"Swish" + "Thud" thấp</td>
+<td style="text-align: left;">300–800 Hz (trượt) + 100–300 Hz</td>
+<td style="text-align: left;">15–22 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Kick Serve</strong></td>
+<td style="text-align: left;">"Hiss" dài + "Pop" giòn</td>
+<td style="text-align: left;">1–4 kHz kéo dài</td>
+<td style="text-align: left;">10–15 ms</td>
+</tr>
+</tbody></table>
+
+<p><strong>Ứng dụng:</strong> Nghe "hiss" → chuẩn bị phản ứng cao, đệm sâu; Nghe "pop" sắc → bước vào, đánh sớm.</p>
+
+<h2>3. Trình Tự Thực Thi Kỹ Thuật (Checkpoints)</h2>
+
+<h3>Giai Đoạn 1: Calibration Corollary Discharge (Hiệu Chỉnh Bản Sao)</h3>
+
+<p><strong>Bài tập: "Self-Noise Mapping" (Bản Đồ Nhiễu Tự Thân)</strong></p>
+<p>1. Đứng yên, đóng mắt. HLV/đồng đội gõ giày, vung vợt, nhảy — VĐV <strong>ghi âm não</strong> (mental note) cường độ, tần số, vị trí.</p>
+<p>2. Tự thực hiện cùng hành động — so sánh: <strong>"Đây là tiếng MÌNH — não đã gạt rồi."</strong></p>
+<p>3. Lặp 20 lần/loại nhiễu. Mục tiêu: Não tự động gán nhãn "Self" trong <50 ms.</p>
+
+<p><strong>Tiêu chí đỗ:</strong> Phân biệt được "Self noise" vs "External noise" 100% trong 20 trial.</p>
+
+<h3>Giai Đoạn 2: Acoustic Spin Discrimination (Phân Biệt Xoay Qua Âm Thanh)</h3>
+
+<p><strong>Bài tập: "Blindfolded Spin ID" (Mù — Nhận Diện Xoay)</strong></p>
+<ul>
+<li>VĐV đeo khăn che mắt. HLV/đồng đội đập bóng (feed) 4 loại: Heavy topspin, Flat, Slice, Kick serve.</li>
+<li>VĐV <strong>chỉ nghe</strong> → gọi tên loại bóng + hướng (cross/down-line) + độ sâu (ngắn/dài).</li>
+<li>Không được dùng thị giác — ép não tăng cường auditory gating.</li>
+</ul>
+
+<p><strong>Tiến trình:</strong></p>
+<ul>
+<li>Tuần 1: 4 loại, 10 lần/loại, khoảng cách 3m → mục tiêu ≥70% chính xác</li>
+<li>Tuần 2: Khoảng cách 6m, thêm biến thể tốc độ → ≥80%</li>
+<li>Tuần 3: Rally thực tế, VĐV nghe → dự báo trước khi bóng qua lưới → ≥85%</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> ≥85% chính xác trên 40 bóng rally mù.</p>
+
+<h3>Giai Đoạn 3: Auditory Gating Under Load (Cổng Thính Giác Dưới Tải)</h3>
+
+<p><strong>Bài tập: "Dual-Task Auditory Focus"</strong></p>
+<ul>
+<li>Rally cross-court tốc độ cao. VĐV phải:</li>
+</ul>
+<p>  1. Đánh bóng bình thường (motor task)</p>
+<p>  2. <strong>Gọi to</strong> loại xoay bóng đối thủ <em>ngay khi nghe va chạm</em> ("Topspin!" / "Flat!" / "Slice!")</p>
+<ul>
+<li>Ép não ưu tiên auditory stream ngay cả khi motor load cao.</li>
+</ul>
+
+<p><strong>Tiêu chí đỗ:</strong> 20 điệp liên tiếp gọi đúng ≥90%, không làm chậm swing.</p>
+
+<h3>Giai Đoạn 4: Sensory Gating Trong Áp Lực (Pressure Test)</h3>
+
+<p><strong>Bài tập: "Tiebreak Auditory Only"</strong></p>
+<ul>
+<li>Chơi tiebreak. Điểm thưởng: Nếu VĐV gọi đúng loại xoay bóng ĐT <em>trước khi bóng qua lưới</em> (xác minh video + audio) → +2 điểm.</li>
+<li>Phạt: Gọi sai hoặc không gọi → -1 điểm.</li>
+<li>Test khả năng sensory gating khi cortisol cao, HR cao.</li>
+</ul>
+
+<h2>4. Chỉ Số Hiệu Suất & Liều Lượng Huấn Luyện</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Chỉ Số</th>
+<th style="text-align: left;">Đang Phát Triển</th>
+<th style="text-align: left;">Đạt Chuẩn</th>
+<th style="text-align: left;">Nâng Cao</th>
+<th style="text-align: left;">Đẳng Cấp</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">SNR improvement (dB)</td>
+<td style="text-align: left;"><10 dB</td>
+<td style="text-align: left;">10–14 dB</td>
+<td style="text-align: left;">14–18 dB</td>
+<td style="text-align: left;">≥18 dB (elite)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Thời gian phân biệt xoay (ms)</td>
+<td style="text-align: left;">>30 ms</td>
+<td style="text-align: left;">20–30 ms</td>
+<td style="text-align: left;">12–20 ms</td>
+<td style="text-align: left;"><12 ms (Sinner-level)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Blindfolded spin ID accuracy</td>
+<td style="text-align: left;"><50%</td>
+<td style="text-align: left;">50–70%</td>
+<td style="text-align: left;">70–85%</td>
+<td style="text-align: left;">>90%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dual-task auditory call accuracy</td>
+<td style="text-align: left;"><60%</td>
+<td style="text-align: left;">60–80%</td>
+<td style="text-align: left;">80–90%</td>
+<td style="text-align: left;">>95%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Corollary discharge latency</td>
+<td style="text-align: left;">>80 ms</td>
+<td style="text-align: left;">50–80 ms</td>
+<td style="text-align: left;">30–50 ms</td>
+<td style="text-align: left;"><20 ms</td>
+</tr>
+</tbody></table>
+
+<h3>Liều Lượng Huấn Luyện</h3>
+
+<ul>
+<li><strong>Hàng ngày (5'):</strong> Self-noise mapping 3 loại (giày, vợt, nhảy) — 5 lần/loại.</li>
+<li><strong>Tập kỹ thuật (15'):</strong> Blindfolded spin ID 20 bóng (HLV feed ngẫu nhiên 4 loại).</li>
+<li><strong>Rally (15'):</strong> Dual-task auditory call — 30 điệp, gọi xoay bóng ĐT.</li>
+<li><strong>Mô phỏng (10'):</strong> Tiebreak auditory scoring.</li>
+<li><strong>Tần suất:</strong> 4×/tuần. Video+audio review tuần: phân tích latency gọi xoay.</li>
+</ul>
+
+<h2>5. Lỗi Thường Gặp, Nguyên Nhân & Giao Thức Khắc Phục</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Lỗi Quan Sát</th>
+<th style="text-align: left;">Nguyên Nhân Gốc</th>
+<th style="text-align: left;">Giao Thức Khắc Phục</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">"Điếc" không nghe xoay bóng ĐT</td>
+<td style="text-align: left;">Corollary discharge yếu / không calibrate</td>
+<td style="text-align: left;">Self-noise mapping hàng ngày 2 tuần → retrain gating</td>
+</tr>
+<tr>
+<td style="text-align: left;">Nhầm topspin là flat (hoặc ngược)</td>
+<td style="text-align: left;">Không đủ dữ liệu acoustic signature</td>
+<td style="text-align: left;">Acoustic library: nghe 100 sample/loại (có sẵn database)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dưới áp lực → sensory gating thất bại</td>
+<td style="text-align: left;">Amygdala hijack →ortical noise ↑</td>
+<td style="text-align: left;">16-sec cure (Bài 044) + Dantian reset (Bài 048) trước điểm</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mất tập trung khi rally dài</td>
+<td style="text-align: left;">Habituation → gating lười</td>
+<td style="text-align: left;">Biến đổi drill: thêm noise nền (crowd sound), ép não filter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Chỉ dùng mắt, bỏ qua tai</td>
+<td style="text-align: left;">Visual dominance habit</td>
+<td style="text-align: left;">Buổi tập "Tai chỉ": 30' chỉ nghe, không nhìn (blindfolded)</td>
+</tr>
+</tbody></table>
+
+<h2>6. Sơ Đồ Chẩn Đoán & Ra Quyết Định</h2>
+
+<p><strong>Với Quiet Eye (Bài 041):</strong> QE = foveal anchor. Auditory gating = ambient stream. Hai luồng song song: Mắt nhìn cửa sổ va chạm, Tai nghe xoay bóng.</p>
+
+<p><strong>Với Spatial Awareness (Bài 046):</strong> Dorsal stream xử lý cả optic flow VÀ auditory spatial cues. Sensory gating giải phóng bandwidth cho dorsal stream.</p>
+
+<p><strong>Với Self 1/2 (Bài 045):</strong> Corollary discharge = Self 2 (tự động). Self 1 cố gắng "nghe" = can thiệp, làm chậm gating.</p>
+
+<p><strong>Với Amygdala (Bài 044):</strong> Stress → amygdala → sensory flooding (không filter được). Reset amygdala = khôi phục gating.</p>
+
+<p><strong>Với Neuro-Priming (Bài 048):</strong> Priming auditory cortex trước điểm = set gain cho sensory gating.</p>
+
+<h2>7. Video Minh Họa & Phân Tích Kỹ Thuật</h2>
+
+<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; margin: 1.5rem 0;">
+  <iframe src="https://www.youtube-nocookie.com/embed/SwLx2q6qc3I" title="Sensory Gating and Background Noise Suppression in Matches" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<p><p><em>Video: Sensory Gating and Background Noise Suppression in Matches (Tennis Hacker).</em></p></p>
+
+<h2>8. Ứng Dụng Liên Ngành & Phối Hợp Đa Trụ Cột</h2>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Điểm Kiểm</th>
+<th style="text-align: left;">Mức 1 (Không Gating)</th>
+<th style="text-align: left;">Mức 2 (Gating Yếu)</th>
+<th style="text-align: left;">Mức 3 (Gating Chuẩn)</th>
+<th style="text-align: left;">Mức 4 (Gating Thần Thánh)</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">SNR improvement</td>
+<td style="text-align: left;"><10 dB</td>
+<td style="text-align: left;">10–14 dB</td>
+<td style="text-align: left;">14–18 dB</td>
+<td style="text-align: left;">≥18 dB</td>
+</tr>
+<tr>
+<td style="text-align: left;">Phân biệt xoay (ms)</td>
+<td style="text-align: left;">>30 ms</td>
+<td style="text-align: left;">20–30 ms</td>
+<td style="text-align: left;">12–20 ms</td>
+<td style="text-align: left;"><12 ms</td>
+</tr>
+<tr>
+<td style="text-align: left;">Blindfolded accuracy</td>
+<td style="text-align: left;"><50%</td>
+<td style="text-align: left;">50–70%</td>
+<td style="text-align: left;">70–85%</td>
+<td style="text-align: left;">>90%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Dual-task call accuracy</td>
+<td style="text-align: left;"><60%</td>
+<td style="text-align: left;">60–80%</td>
+<td style="text-align: left;">80–90%</td>
+<td style="text-align: left;">>95%</td>
+</tr>
+<tr>
+<td style="text-align: left;">Pressure resilience</td>
+<td style="text-align: left;">Sụp đổ tiebreak</td>
+<td style="text-align: left;">Giữ 50%</td>
+<td style="text-align: left;">Giữ 80%</td>
+<td style="text-align: left;">Giữ 95%+</td>
+</tr>
+</tbody></table>
+
+<p>Chấm điểm: 5–8 = gating audit fail. 9–12 = noise leak. 13–16 = functional gating. 17–20 = sensory mastery.</p>
+
+<h2>9. Bảng Tự Đánh Giá (Rubric Đa Cấp Độ)</h2>
+
+<p><strong>MỤC TIÊU BUỔI:</strong> Phân biệt 4 loại xoay qua âm thanh ≥85% mù, dual-task call ≥90% rally.</p>
+
+<table>
+<thead><tr>
+<th style="text-align: left;">Khối</th>
+<th style="text-align: left;">Bài Tập</th>
+<th style="text-align: left;">Liều Lượng</th>
+<th style="text-align: left;">Cue</th>
+</tr></thead><tbody>
+<tr>
+<td style="text-align: left;">A — Khởi Động (5')</td>
+<td style="text-align: left;">Self-noise mapping: giày, vợt, nhảy — gán nhãn "Self"</td>
+<td style="text-align: left;">15 lần</td>
+<td style="text-align: left;">"Tiếng mình — não đã gạt"</td>
+</tr>
+<tr>
+<td style="text-align: left;">B — Mẫu Hình (10')</td>
+<td style="text-align: left;">Blindfolded spin ID: HLV feed 4 loại ngẫu nhiên</td>
+<td style="text-align: left;">20 bóng</td>
+<td style="text-align: left;">"Chỉ tai — không mắt"</td>
+</tr>
+<tr>
+<td style="text-align: left;">C — Chuyển Giao (15')</td>
+<td style="text-align: left;">Dual-task rally: đánh + gọi xoay ĐT ngay lúc va chạm</td>
+<td style="text-align: left;">30 điệp</td>
+<td style="text-align: left;">"Nghe — Gọi — Đánh"</td>
+</tr>
+<tr>
+<td style="text-align: left;">D — Kiểm Toán (5')</td>
+<td style="text-align: left;">Video+audio: đo latency gọi xoay, accuracy</td>
+<td style="text-align: left;">2 clip</td>
+<td style="text-align: left;">"Latency <15ms? Accuracy >90%?"</td>
+</tr>
+</tbody></table>
+
+<p><strong>Tần suất:</strong> 3×/tuần. <strong>Cổng:</strong> Blindfolded ≥85% trên 20 bóng + Dual-task ≥90% trên 30 điệp.</p>
+
+<hr />
+
+<p><em>Tham chiếu chéo: Bài 041, 044, 045, 046, 048. Trụ II: Thần Kinh Thể Thao & Kỹ Thuật — TennisKB 200 Bài.</em></p>
+
+<!-- TP-NAV-START -->
+<p class="article-nav" style="margin-top:2rem;font-size:0.95rem"><a href="/vi/articles/VI-tenniskb-neuro-priming-protocols-for-explosive-first-step-readiness/">← Trước</a> &nbsp;|&nbsp; <a href="/vi/articles/">🏠 Trang chủ</a> &nbsp;|&nbsp; <a href="/vi/articles/VI-tenniskb-temporal-perception-and-slower-ball-tracking-in-flow-states/">Sau →</a></p>
+<!-- TP-NAV-END -->
+
+</article>
+
+
+
+          </div>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+      © 2026 Henry Phạm Đức · Tennis Future Lab Research · All contents are for educational purpose.
+    </div>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+      </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.prev_next", "navigation.footer", "search.highlight", "search.suggest", "alternate"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+
+        <script src="/assets/js/extra.js"></script>
+
+<footer class="tu-footer" style="background: var(--card); border-top: 1px solid var(--border); color: var(--ink-muted); padding: 1.5rem 1rem; text-align: center; font-size: 0.92rem; margin-top: 3rem;">
+<div style="font-size: 0.85rem; color: var(--accent-dark);">Trang web này được xây dựng với ❤️ cho cộng đồng quần vợt Việt Nam 🎾 by Henry Phạm</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+name: Link and Image Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '30 0 * * 0'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fast local link and image repair
+        run: python scripts/local_link_image_repair.py
+
+      - name: Commit automatic local repairs
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git reset -- SITE_LINK_IMAGE_AUDIT.md 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo 'No local repairs required.'
+          else
+            git commit -m 'fix(audit): repair broken local links and images'
+            git push
+          fi
+
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: tennis-unified-link-image-audit
+          path: SITE_LINK_IMAGE_AUDIT.md
