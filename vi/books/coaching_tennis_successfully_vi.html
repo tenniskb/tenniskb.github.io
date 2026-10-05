@@ -7,424 +7,856 @@
     <meta name="description" content="Bản dịch tiếng Việt trọn vẹn tác phẩm kinh điển Coaching Tennis Successfully của Hiệp hội Quần vợt Hoa Kỳ (USTA) và TS. Ron Woods, lời tựa bởi Stan Smith. Cẩm nang sư phạm hoàn chỉnh về kỹ thuật, chiến thuật đơn, đôi và quản lý đội tuyển.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+
+
+
+
+
         :root {
+
             --primary: #15803d;
+
             --primary-dark: #166534;
+
             --primary-light: #22c55e;
+
             --accent: #eab308;
+
             --bg-page: #f8fafc;
+
             --bg-card: #ffffff;
+
             --text-main: #1e293b;
+
             --text-muted: #64748b;
+
             --border: #e2e8f0;
+
             --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
             --header-bg: #0f172a;
+
         }
+
+
 
         body.dark-mode {
+
             --bg-page: #0f172a;
+
             --bg-card: #1e293b;
+
             --text-main: #f1f5f9;
+
             --text-muted: #94a3b8;
+
             --border: #334155;
+
             --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+
             --header-bg: #020617;
+
         }
+
+
 
         * {
+
             box-sizing: border-box;
+
             margin: 0;
+
             padding: 0;
+
         }
+
+
 
         body {
+
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
             background-color: var(--bg-page);
+
             color: var(--text-main);
-            line-height: 1.75;
+
+            line-height: 2.0;
+
             transition: background-color 0.3s, color 0.3s;
+
         }
+
+
 
         /* Standard Topnav */
+
         .tu-topnav {
+
             background: var(--header-bg);
+
             color: #fff;
+
             padding: 0.75rem 1.5rem;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
+
             box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
         }
+
+
 
         .tu-topnav .brand {
+
             font-weight: 700;
+
             font-size: 1.15rem;
+
             color: #fff;
+
             text-decoration: none;
+
             display: flex;
+
             align-items: center;
+
             gap: 0.5rem;
+
         }
+
+
 
         .tu-topnav .brand span {
+
             color: #22c55e;
+
         }
+
+
 
         .tu-topnav .nav-links {
+
             display: flex;
+
             align-items: center;
+
             gap: 1.25rem;
+
             list-style: none;
+
         }
+
+
 
         .tu-topnav .nav-links a {
+
             color: #cbd5e1;
+
             text-decoration: none;
+
             font-size: 0.95rem;
+
             transition: color 0.2s;
+
         }
+
+
 
         .tu-topnav .nav-links a:hover {
+
             color: #fff;
+
         }
+
+
 
         .tu-topnav .controls {
+
             display: flex;
+
             align-items: center;
+
             gap: 0.75rem;
+
         }
+
+
 
         .theme-toggle-btn {
+
             background: #334155;
+
             border: none;
+
             color: #f8fafc;
+
             padding: 0.4rem 0.8rem;
+
             border-radius: 9999px;
+
             cursor: pointer;
+
             font-size: 0.9rem;
+
             display: flex;
+
             align-items: center;
+
             gap: 0.4rem;
+
         }
+
+
 
         /* Progress Bar */
+
         .reading-progress-bar {
+
             position: fixed;
+
             top: 55px;
+
             left: 0;
+
             height: 4px;
+
             background: linear-gradient(90deg, #15803d, #22c55e);
+
             width: 0%;
+
             z-index: 999;
+
             transition: width 0.1s ease-out;
+
         }
+
+
 
         /* Hero Header */
+
         .hero {
+
             background: linear-gradient(135deg, #166534 0%, #15803d 50%, #14532d 100%);
+
             color: white;
+
             padding: 3.5rem 1.5rem 3rem;
+
             text-align: center;
+
             position: relative;
+
         }
+
+
 
         .hero-badge {
+
             display: inline-block;
+
             background: rgba(255, 255, 255, 0.2);
+
             backdrop-filter: blur(8px);
+
             padding: 0.4rem 1.25rem;
+
             border-radius: 9999px;
+
             font-size: 0.85rem;
+
             font-weight: 600;
+
             letter-spacing: 1px;
+
             text-transform: uppercase;
+
             margin-bottom: 1.25rem;
+
             border: 1px solid rgba(255, 255, 255, 0.3);
+
         }
+
+
 
         .hero h1 {
+
             font-size: 2.4rem;
+
             font-weight: 800;
+
             line-height: 1.25;
+
             margin-bottom: 0.75rem;
+
         }
+
+
 
         .hero p.subtitle {
+
             font-size: 1.25rem;
+
             opacity: 0.9;
+
             max-width: 800px;
+
             margin: 0 auto 1.5rem;
+
             font-weight: 300;
+
         }
+
+
 
         .hero-meta {
+
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 1.5rem;
+
             font-size: 0.95rem;
+
             opacity: 0.9;
+
         }
+
+
 
         .hero-meta span {
+
             display: flex;
+
             align-items: center;
+
             gap: 0.4rem;
+
         }
+
+
 
         /* Download Section */
+
         .download-banner {
+
             max-width: 900px;
+
             margin: -1.75rem auto 2rem;
+
             background: var(--bg-card);
+
             border: 1px solid var(--border);
+
             border-radius: 16px;
+
             padding: 1.25rem 2rem;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             box-shadow: var(--card-shadow);
+
             position: relative;
+
             z-index: 10;
+
         }
+
+
 
         .download-info {
+
             display: flex;
+
             align-items: center;
+
             gap: 1.25rem;
+
         }
+
+
 
         .pdf-badge {
+
             background: #ef4444;
+
             color: white;
+
             font-size: 1.5rem;
+
             width: 48px;
+
             height: 48px;
+
             border-radius: 10px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
         }
+
+
 
         .download-btn {
+
             background: #15803d;
+
             color: white;
+
             padding: 0.75rem 1.5rem;
+
             border-radius: 8px;
+
             text-decoration: none;
+
             font-weight: 600;
+
             display: flex;
+
             align-items: center;
+
             gap: 0.5rem;
+
             transition: background 0.2s, transform 0.1s;
+
         }
+
+
 
         .download-btn:hover {
+
             background: #166534;
+
             transform: translateY(-2px);
+
         }
+
+
 
         /* Container Layout */
+
         .main-container {
+
             max-width: 1200px;
+
             margin: 0 auto;
+
             padding: 1rem 1.5rem 4rem;
+
             display: grid;
+
             grid-template-columns: 280px 1fr;
+
             gap: 2.5rem;
+
         }
+
+
 
         /* Sticky Sidebar */
+
         .sidebar {
+
             position: sticky;
+
             top: 75px;
+
             height: calc(100vh - 90px);
+
             overflow-y: auto;
+
             padding-right: 0.5rem;
+
         }
+
+
 
         .toc-card {
+
             background: var(--bg-card);
+
             border: 1px solid var(--border);
+
             border-radius: 12px;
+
             padding: 1.25rem;
+
             box-shadow: var(--card-shadow);
+
         }
+
+
 
         .toc-card h3 {
+
             font-size: 1.05rem;
+
             font-weight: 700;
+
             margin-bottom: 1rem;
+
             padding-bottom: 0.5rem;
+
             border-bottom: 2px solid var(--primary);
+
             display: flex;
+
             align-items: center;
+
             gap: 0.5rem;
+
         }
+
+
 
         .toc-list {
+
             list-style: none;
+
             font-size: 0.9rem;
+
         }
+
+
 
         .toc-list li {
+
             margin-bottom: 0.5rem;
+
         }
+
+
 
         .toc-list a {
+
             color: var(--text-muted);
+
             text-decoration: none;
+
             display: block;
+
             padding: 0.35rem 0.5rem;
+
             border-radius: 6px;
+
             transition: all 0.2s;
+
+                    white-space: nowrap;
         }
+
+
 
         .toc-list a:hover {
+
             color: var(--primary);
+
             background: rgba(21, 128, 61, 0.1);
+
         }
+
+
 
         /* Content Area */
+
         .content-area {
+
             background: var(--bg-card);
+
             border: 1px solid var(--border);
+
             border-radius: 16px;
+
             padding: 3rem;
+
             box-shadow: var(--card-shadow);
+
         }
+
+
 
         .book-cover-wrap {
+
             text-align: center;
+
             margin-bottom: 3rem;
+
             padding-bottom: 2rem;
+
             border-bottom: 1px solid var(--border);
+
         }
+
+
 
         .book-cover-img {
+
             max-width: 320px;
+
             width: 100%;
+
             border-radius: 12px;
+
             box-shadow: 0 10px 25px -5px rgba(0,0,0,0.25);
+
             border: 1px solid var(--border);
+
         }
+
+
 
         .chapter-box {
+
             margin-bottom: 3.5rem;
+
             scroll-margin-top: 80px;
+
         }
+
+
 
         .part-header {
+
             background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+
             color: white;
+
             padding: 1rem 1.5rem;
+
             border-radius: 10px;
+
             margin-bottom: 2rem;
+
             font-size: 1.4rem;
+
             font-weight: 700;
+
         }
+
+
 
         .chapter-title {
+
             font-size: 1.75rem;
+
             font-weight: 800;
+
             color: var(--primary-dark);
+
             margin-bottom: 0.35rem;
+
             border-bottom: 2px solid var(--primary-light);
+
             padding-bottom: 0.5rem;
+
         }
+
+
 
         body.dark-mode .chapter-title {
+
             color: #4ade80;
+
         }
+
+
 
         .chapter-sub {
+
             font-size: 1.05rem;
+
             color: var(--text-muted);
+
             font-style: italic;
+
             margin-bottom: 1.5rem;
+
         }
+
+
 
         .section-item {
+
             margin-bottom: 2rem;
+
         }
+
+
 
         .section-heading {
+
             font-size: 1.25rem;
+
             font-weight: 700;
+
             color: var(--text-main);
+
             margin-bottom: 0.75rem;
+
             display: flex;
+
             align-items: center;
+
             gap: 0.5rem;
+
         }
 
+
+
         .section-heading i {
+
             color: var(--primary);
+
             font-size: 0.95rem;
+
         }
+
+
 
         .section-text {
             font-size: 1.05rem;
-            line-height: 1.8;
-            white-space: pre-line;
+            line-height: 2.0;
             color: var(--text-main);
         }
 
+
+
         .figure-wrap {
+
             margin: 2.25rem 0;
+
             text-align: center;
+
             background: rgba(0,0,0,0.02);
+
             padding: 1.25rem;
+
             border-radius: 12px;
+
             border: 1px solid var(--border);
+
         }
+
+
 
         .figure-img {
+
             max-width: 100%;
+
             height: auto;
+
             border-radius: 8px;
+
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
         }
+
+
 
         .figure-caption {
+
             font-size: 0.9rem;
+
             color: var(--text-muted);
+
             margin-top: 0.75rem;
+
             font-weight: 600;
+
         }
+
+
 
         .quote-box {
+
             background: rgba(21, 128, 61, 0.08);
+
             border-left: 4px solid var(--primary);
+
             padding: 1.25rem 1.5rem;
+
             border-radius: 0 10px 10px 0;
+
             margin: 1.5rem 0;
+
             font-style: italic;
+
         }
 
+
+
         /* Responsive */
+
         @media (max-width: 992px) {
+
             .main-container {
+
                 grid-template-columns: 1fr;
+
             }
+
             .sidebar {
+
                 display: none;
+
             }
+
             .content-area {
+
                 padding: 1.75rem;
+
             }
+
             .hero h1 {
+
                 font-size: 1.85rem;
+
             }
+
         }
+
+    
     </style>
 </head>
 <body>
 
-    
+    <!-- Language & Navigation Topbar -->
+    <nav class="tu-topnav">
+        <a href="/vi/books/" class="brand">
+            <i class="fa-solid fa-tennis-ball"></i>
+            <span>Tennis Unified</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/vi/books/">Thư Viện Sách</a></li>
+            <li><a href="/vi/fundamentals/">Nền Tảng</a></li>
+            <li><a href="/vi/stroke-analysis/">Phân Tích Động Tác</a></li>
+            <li><a href="/vi/drills/">Bài Tập & Giáo Án</a></li>
+            <li><a href="/books/" data-lang-toggle="en"><i class="fa-solid fa-globe"></i> English</a></li>
+        </ul>
+        <div class="controls">
+            <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon"></i> Giao Diện Tối
+            </button>
+        </div>
+    </nav>
 
     <div class="reading-progress-bar" id="progressBar"></div>
 
@@ -703,7 +1135,7 @@ Một huấn luyện viên chuyên nghiệp luôn vận hành dựa trên hệ t
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Cấu Trúc Chuẩn Của Buổi Tập Quần Vợt 2 Giờ (120 Phút)</h3>
                     <div class="section-text">Một buổi tập 120 phút đạt hiệu suất tối ưu được phân bổ khoa học theo cấu trúc 5 giai đoạn:
-1. Khởi động và kích hoạt cơ học (15 phút): 5 phút chạy nhẹ làm ấm cơ thể kết hợp các bài tập bước di chuyển (bước trượt ngang, bước chéo chân carioca), theo sau là 10 phút giãn cơ động và bài tập bóng ngắn (short court rally) để tìm cảm giác bóng mượt mà.
+1. Khởi động và kích hoạt cơ học (15 phút): 5 phút chạy nhẹ làm ấm cơ thể kết hợp các bài tập bước di chuyển (bước trượt ngang, Bước chân bắt chéo (crossover step) carioca), theo sau là 10 phút giãn cơ động và bài tập bóng ngắn (short court rally) để tìm cảm giác bóng mượt mà.
 2. Huấn luyện kỹ thuật và cơ sinh học (30 phút): Tập trung vào một chủ đề kỹ thuật duy nhất trong ngày (Ví dụ: Cú cắt bóng trái tay tiếp cận lưới, hoặc kỹ thuật bật chân phát lực giao bóng). Sử dụng hình thức tiếp bóng bằng tay (hand-feeding) hoặc bóng tung có kiểm soát để học trò hoàn thiện quỹ đạo vung vợt.
 3. Huấn luyện chiến thuật và bài tập tình huống (35 phút): Đưa kỹ thuật vừa học vào các kịch bản thi đấu bán tự do, ép người chơi phải đưa ra quyết định nhanh chóng dưới áp lực góc sân và vị trí của đối thủ.
 4. Thi đấu đối kháng có điều kiện (30 phút): Đấu tập các set đấu có áp điểm chấp, loạt tie-break áp lực cao (bắt đầu từ tỷ số 4-4 hoặc 30-30), hoặc thi đấu đôi với luật cấm lùi sau vạch giao bóng.
@@ -732,16 +1164,13 @@ Sau mỗi 20 hoặc 25 phút, các nhóm sẽ đồng loạt xoay chuyển trạ
                 <div class="chapter-sub">Stroke Production and Biomechanics</div>
                 
                 <div class="section-item">
-                    <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Chuỗi Động Lực Học (The Kinetic Chain) Trong Quần Vợt Hiện Đại</h3>
+                    <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Chuỗi động học liên hoàn Học (The Kinetic Chain) Trong Quần Vợt Hiện Đại</h3>
                     <div class="section-text">Mục tiêu cốt lõi của việc dạy kỹ thuật là trang bị cho mỗi vận động viên một nền tảng cơ học vững chắc và an toàn, giúp tạo ra lực đánh tối đa với mức tiêu hao năng lượng tối thiểu và loại trừ hoàn toàn nguy cơ chấn thương.
 
-Sức mạnh của một cú đánh đỉnh cao không sinh ra từ cánh tay hay bắp tay, mà được tạo ra thông qua "Chuỗi Động Lực Học" (Kinetic Chain). Năng lượng bắt đầu từ mặt đất: Lực phản hồi mặt đất truyền qua bàn chân, được khuếch đại bởi sự gập duỗi của khớp gối, truyền lên hông, xoay thân người trên (torso rotation), truyền qua khớp vai, cánh tay trên, cẳng tay, khớp cổ tay và cuối cùng phóng thích ra đầu vợt ngay tại khoảnh khắc tiếp xúc bóng. Nếu một mắt xích trong chuỗi này bị đứt đoạn (chẳng hạn như không nhún chân hoặc cổ tay lỏng lẻo), lực đánh sẽ suy giảm nghiêm trọng và cánh tay sẽ phải gồng cứng để bù đắp, dẫn đến viêm gân khuỷu tay (tennis elbow).</div>
+Sức mạnh của một cú đánh đỉnh cao không sinh ra từ cánh tay hay bắp tay, mà được tạo ra thông qua "Chuỗi động học liên hoàn Học" (Kinetic Chain). Năng lượng bắt đầu từ mặt đất: Lực phản hồi mặt đất truyền qua bàn chân, được khuếch đại bởi sự gập duỗi của khớp gối, truyền lên hông, xoay thân người trên (torso rotation), truyền qua khớp vai, cánh tay trên, cẳng tay, khớp cổ tay và cuối cùng phóng thích ra đầu vợt ngay tại khoảnh khắc tiếp xúc bóng. Nếu một mắt xích trong chuỗi này bị đứt đoạn (chẳng hạn như không nhún chân hoặc cổ tay lỏng lẻo), lực đánh sẽ suy giảm nghiêm trọng và cánh tay sẽ phải gồng cứng để bù đắp, dẫn đến viêm gân khuỷu tay (tennis elbow).</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_7_3_knuckle_alignment.jpg" alt="Căn chỉnh khớp ngón tay và các mặt vát cán vợt" class="figure-img">
-                    <div class="figure-caption">Hình 7.3: Hệ thống xác định vị trí khớp gốc ngón trỏ trên 8 mặt vát của cán vợt theo chuẩn USTA</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Hệ Thống Các Kiểu Cầm Vợt Và Căn Chỉnh Khớp Ngón Tay (Grip Alignment)</h3>
@@ -753,10 +1182,7 @@ Sức mạnh của một cú đánh đỉnh cao không sinh ra từ cánh tay ha
 - Cú trái hai tay (Two-handed Backhand): Tay thuận cầm kiểu Continental hoặc Eastern số 2 ở dưới cùng cán vợt; tay không thuận đặt ngay sát phía trên, cầm kiểu Eastern Forehand số 7 (tương đương tay phải đánh bóng thuận tay). Tay không thuận đóng vai trò cánh tay phát lực chính, trong khi tay thuận đóng vai trò định hướng và giữ thăng bằng.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_7_2_grips.jpg" alt="Các kiểu cầm vợt thuận tay và Continental" class="figure-img">
-                    <div class="figure-caption">Hình 7.2: Mặt trước và mặt sau của các kiểu cầm vợt Eastern Forehand và Continental</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Tư Thế Sẵn Sàng, Bước Tách Nhịp Và Các Loại Bộ Chân (Stances)</h3>
@@ -767,15 +1193,9 @@ Sức mạnh của một cú đánh đỉnh cao không sinh ra từ cánh tay ha
 - Bộ chân mở (Open Stance): Hai bàn chân mở rộng song song với lưới. Năng lượng được nạp bằng cách hạ thấp chân ngoài cùng, sau đó xoay bùng nổ khớp hông và thân trên để quét qua bóng. Bộ chân mở là vũ khí sống còn trong các pha bóng bền tốc độ cao cuối sân vì nó giúp người chơi giữ vững thăng bằng và phục hồi vị trí nhanh hơn 0.5 giây so với bộ chân truyền thống.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_7_8_ready_position.jpg" alt="Tư thế sẵn sàng và thăng bằng động" class="figure-img">
-                    <div class="figure-caption">Hình 7.8: Tư thế sẵn sàng chuẩn mực (Ready Position) và hạ thấp trọng tâm</div>
-                </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_7_9_stances.jpg" alt="Bộ chân vuông góc và bộ chân mở" class="figure-img">
-                    <div class="figure-caption">Hình 7.9: Bộ chân vuông góc (Square Stance) truyền thống và Bộ chân mở (Open Stance) hiện đại</div>
-                </div>
+
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Kỹ Thuật Cú Giao Bóng: Khởi Đầu Của Sự Chủ Động</h3>
@@ -792,14 +1212,11 @@ Quy trình giao bóng chuẩn mực gồm 4 giai đoạn:
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Cú Vô-Lê, Đập Bóng Trên Không Và Cắt Bóng</h3>
                     <div class="section-text">Để làm chủ khu vực trên lưới, vận động viên cần nắm vững các nguyên tắc cơ bản:
 - Cú Vô-Lê (Volley): Nguyên tắc vàng là "Không Lấy Đà Sau" (No Backswing). Cú vô-lê là một động tác chặn và đấm bóng (punching action) ngắn gọn. Khóa chặt khớp cổ tay, dùng bước chân trước tiến chéo về phía bóng và dùng khối lượng toàn thân để chặn đường bay của quả bóng.
-- Đập bóng trên không (Overhead Smash): Ngay khi thấy đối thủ lốp bóng, người chơi phải xoay nghiêng người ngay lập tức (Turn side-on), bước lùi bằng các bước chéo chân, giơ tay không thuận chỉ thẳng lên quả bóng trên không để đo cự ly, và vung vợt tiếp xúc bóng ở điểm cao nhất phía trước trán như một quả giao bóng sấm sét.
+- Đập bóng trên không (Overhead Smash): Ngay khi thấy đối thủ lốp bóng, người chơi phải xoay nghiêng người ngay lập tức (Turn side-on), bước lùi bằng các Bước chân bắt chéo (crossover step), giơ tay không thuận chỉ thẳng lên quả bóng trên không để đo cự ly, và vung vợt tiếp xúc bóng ở điểm cao nhất phía trước trán như một quả giao bóng sấm sét.
 - Cắt bóng trái tay (Backhand Slice): Dùng kiểu cầm Continental số 2. Hãy hình dung động tác như một cú "chặt karate" nghiêng từ trên xuống dưới và lướt ngang đáy bóng, tạo ra độ xoáy ngược (backspin) khiến bóng bay sát mép lưới và trượt là là trên mặt sân khi nảy lên.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_7_12_six_targets.jpg" alt="Hệ thống 6 vùng mục tiêu chiến lược trên sân" class="figure-img">
-                    <div class="figure-caption">Hình 7.12: Sơ đồ 6 vùng mục tiêu chiến lược của USTA rèn luyện độ chính xác</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Hệ Thống 6 Vùng Mục Tiêu (Six Target Areas) Và Các Bài Tập Rèn Luyện</h3>
@@ -820,10 +1237,7 @@ Các bài tập kinh điển phát triển kỹ năng:
                 <h2 class="chapter-title">Chương 8: Chiến Thuật Thi Đấu Đơn</h2>
                 <div class="chapter-sub">Singles Strategy and Court Geometry</div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_8_1_aim_points.jpg" alt="Các điểm ngắm an toàn cách biên 1.8m" class="figure-img">
-                    <div class="figure-caption">Hình 8.1: Nguyên tắc biên độ an toàn - Ngắm bóng cách vạch biên và vạch cuối sân 1.8 mét (6 feet)</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Triết Lý Xác Suất Thống Kê Trong Quần Vợt Đơn (Playing the Percentages)</h3>
@@ -835,10 +1249,7 @@ Tay vợt giành chiến thắng trong quần vợt không phải là người t
 3. Ưu tiên đường bóng chéo sân (Crosscourt preference): Lưới ở khu vực trung tâm thấp hơn 15 cm so với hai bên cột lưới, và đường chéo sân dài hơn đường thẳng dọc dây gần 2 mét. Đánh bóng chéo sân cho phép bạn đánh với tốc độ cao hơn mà bóng vẫn nằm gọn trong sân.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_8_3_bisecting_angle.jpg" alt="Nguyên tắc đường phân giác góc đánh trả" class="figure-img">
-                    <div class="figure-caption">Hình 8.3: Vị trí hồi vị tối ưu dựa trên đường phân giác của các góc đánh trả có thể xảy ra</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Hình Học Sân Đấu Và Nguyên Tắc Đường Phân Giác (Bisecting the Angle)</h3>
@@ -850,10 +1261,7 @@ Khi bạn ép đối thủ dạt sang góc xa bên tay trái của họ:
 - Vì góc mở của đường chéo sân rộng hơn nhiều so với đường thẳng, nên nếu bạn đứng ở chính giữa sân, bạn sẽ để hở một khoảng trống mênh mông bên phía chéo sân. Để che chắn sân đấu hiệu quả nhất, bạn phải di chuyển lệch sang phía đối diện với vị trí của đối thủ khoảng 1 mét, đứng ngay trên đường phân giác của góc đánh trả. Điều này giúp quãng đường di chuyển sang cả hai bên cánh là hoàn toàn cân bằng.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_8_2_angles.jpg" alt="Hình học góc đánh khi tiến vào sân" class="figure-img">
-                    <div class="figure-caption">Hình 8.2: Càng tiến gần lưới, góc mở sân đấu và cơ hội dứt điểm winner càng nhân rộng</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Bốn Phong Cách Thi Đấu Đơn Kinh Điển</h3>
@@ -864,10 +1272,7 @@ Khi bạn ép đối thủ dạt sang góc xa bên tay trái của họ:
 4. Tay vợt toàn diện (All-Court Player): Có kỹ năng hoàn hảo ở mọi vị trí trên sân, từ cuối sân đến khu vực trên lưới. Họ có khả năng đọc trận đấu xuất sắc và linh hoạt thay đổi chiến thuật tùy theo điểm yếu của từng đối thủ cụ thể.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_8_5_inside_out_drill.jpg" alt="Bài tập Né trái đánh phải Inside-Out" class="figure-img">
-                    <div class="figure-caption">Hình 8.5: Sơ đồ bài tập né trái đánh phải dứt điểm (Inside-Out Forehand Drill)</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Các Bài Tập Chiến Thuật Đơn Đặc Trưng (Pattern Play)</h3>
@@ -890,10 +1295,7 @@ Khi bạn ép đối thủ dạt sang góc xa bên tay trái của họ:
 Nguyên lý cốt lõi của đánh đôi là: "Chiếm Lĩnh Khu Vực Lưới Bằng Cả Hai Người" (The Wall Concept). Đội bóng nào đưa được cả hai thành viên lên áp sát mép lưới trước sẽ nắm giữ hơn 80% cơ hội thắng điểm số đó. Khi hai người đứng trên lưới, họ tạo thành một bức tường thép di động che chắn toàn bộ góc sân và có thể đập bóng dứt điểm xuống bất kỳ khoảng trống nào dưới chân đối thủ.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_9_1_doubles_drill.jpg" alt="Bài tập nửa sân đôi Half-Court Doubles" class="figure-img">
-                    <div class="figure-caption">Hình 9.1: Bài tập nửa sân đôi (Half-Court Doubles Drill) rèn luyện độ chính xác và phản xạ trên lưới</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Bốn Đội Hình Chiến Thuật Cơ Bản Trong Đánh Đôi</h3>
@@ -942,10 +1344,7 @@ Giao tiếp là chất keo gắn kết đội hình:
 Khi vận động viên bước vào sân với một bức tranh chiến thuật rõ ràng trong tâm trí, mức độ lo âu và căng thẳng thần kinh sẽ tự động giảm đi một nửa. Họ không còn rơi vào trạng thái hoang mang tự hỏi "Mình phải làm gì bây giờ?", mà chỉ cần tập trung thực thi từng phương án đã được chuẩn bị chu đáo.</div>
                 </div>
 
-                <div class="figure-wrap">
-                    <img src="coaching_assets/fig_10_1_scouting_report.jpg" alt="Biểu mẫu báo cáo trinh sát đối thủ" class="figure-img">
-                    <div class="figure-caption">Hình 10.1: Biểu mẫu báo cáo trinh sát đối thủ (Scouting Report Form) chính thức của USTA</div>
-                </div>
+
 
                 <div class="section-item">
                     <h3 class="section-heading"><i class="fa-solid fa-chevron-right"></i> Báo Cáo Trinh Sát Đối Thủ (The Scouting Report)</h3>
