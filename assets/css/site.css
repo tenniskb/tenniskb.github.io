@@ -696,15 +696,16 @@ button[aria-label*="reset" i] {
 
 /* === Video player styling =============================================== */
 
-.tp-video-embed {
-  margin: 1.5rem 0;
-  text-align: center;
-}
+/* The OUTER wrapper is the aspect-ratio box and the positioning context.
+   The player (iframe/video) is absolutely positioned to fill it exactly.
+   Getting this backwards collapses the wrapper to height 0 and lets the
+   player escape to a positioned ancestor, where it paints over the article
+   text (the bug reported on the Dr. Kovacs / iTPA blog pages). */
 
-.tp-video-embed video,
-.tp-video-embed iframe,
+.tp-video-embed,
 .video-container {
   position: relative;
+  display: block;
   width: 100% !important;
   max-width: 1200px;
   aspect-ratio: 16 / 9;
@@ -718,6 +719,7 @@ button[aria-label*="reset" i] {
 
 .tp-video-embed iframe,
 .tp-video-embed video,
+.tp-video-embed embed,
 .video-container iframe,
 .video-container video,
 .video-container embed {
@@ -731,10 +733,17 @@ button[aria-label*="reset" i] {
   object-fit: contain !important;
 }
 
+/* A bare player element that is NOT wrapped still needs its own box. */
+iframe.tp-video-embed,
+video.tp-video-embed {
+  position: relative !important;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+}
+
 /* Responsive: scale down on small screens */
 @media (max-width: 600px) {
-  .tp-video-embed video,
-  .tp-video-embed iframe,
+  .tp-video-embed,
   .video-container {
     max-width: 100%;
     border-radius: 8px;
