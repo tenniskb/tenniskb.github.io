@@ -18,6 +18,9 @@
     try {
       var saved = localStorage.getItem(STORAGE_KEY);
       if (saved === 'dark' || saved === 'light') return saved;
+      // Legacy book/doubles pages stored their preference under the key 'theme'
+      var legacy = localStorage.getItem('theme');
+      if (legacy === 'dark' || legacy === 'light') return legacy;
     } catch (e) {}
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark';
@@ -36,6 +39,9 @@
     var body = document.body;
     if (body) {
       body.setAttribute('data-md-color-scheme', theme === 'dark' ? 'slate' : 'default');
+      // Legacy book/doubles pages drive their own palette with body.dark-mode
+      if (theme === 'dark') body.classList.add('dark-mode');
+      else body.classList.remove('dark-mode');
     }
 
     syncMaterialPalette(theme);
@@ -109,7 +115,9 @@
 
     // Event delegation for .tu-nav-darkmode click
     document.addEventListener('click', function (e) {
-      var btn = e.target.closest('.tu-nav-darkmode');
+      var t = e.target;
+      if (!t || typeof t.closest !== 'function') return;
+      var btn = t.closest('.tu-nav-darkmode');
       if (btn) {
         e.preventDefault();
         toggleTheme();
@@ -118,7 +126,9 @@
 
     // Sync with Material palette icon clicks
     document.addEventListener('click', function (e) {
-      var lbl = e.target.closest('label[for^="__palette_"]');
+      var t = e.target;
+      if (!t || typeof t.closest !== 'function') return;
+      var lbl = t.closest('label[for^="__palette_"]');
       if (lbl) {
         setTimeout(function () {
           var p1 = document.getElementById('__palette_1');
@@ -152,4 +162,31 @@
   } else {
     init();
   }
+})();
+/* ---- Redesigned "Main" dropdown nav (no icons) ---- */
+(function () {
+  'use strict';
+  function initDropdown() {
+    document.querySelectorAll('.mm-dropdown').forEach(function (d) {
+      var btn = d.querySelector('.mm-dropbtn');
+      if (!btn) return;
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = d.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      document.querySelectorAll('.mm-dropdown.open').forEach(function (d) {
+        if (!d.contains(e.target)) {
+          d.classList.remove('open');
+          var b = d.querySelector('.mm-dropbtn');
+          if (b) b.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDropdown);
+  } else { initDropdown(); }
 })();

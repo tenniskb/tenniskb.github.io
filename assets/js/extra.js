@@ -5,7 +5,7 @@
 // to point at the *other* language's site root.
 (function () {
   function fixCrossLangTab() {
-    var path = window.location.pathname;  // e.g. "/vi/..."
+    var path = window.location.pathname;  // e.g. "/tenniskb/vi/..."
     var isVi = path.indexOf("/vi/") !== -1 || /\/vi(\/|$|\.)/.test(path);
     var crossLinks = document.querySelectorAll(".md-tabs__link[href*='tenniskb/'], .md-nav__link[href*='tenniskb/']");
     crossLinks.forEach(function (a) {
@@ -18,7 +18,7 @@
       } else {
         // Currently on EN site (or root) -> point cross-link to VI site
         if (href.indexOf("/en/index.html") !== -1 || href.indexOf("/en/") !== -1) {
-          a.setAttribute("href", "https://henryphamduc.github.io/vi/index.html");
+          a.setAttribute("href", "https://henryphamduc.github.io/tenniskb/vi/index.html");
         }
       }
     });

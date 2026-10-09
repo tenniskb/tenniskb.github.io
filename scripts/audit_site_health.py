@@ -125,8 +125,8 @@ core_destinations = [
     '/vi/tennis-technical-reference/the-racquet/',
     '/tennis-technical-reference/gemini-notebooks/',
     '/vi/tennis-technical-reference/gemini-notebooks/',
-    '/',
-    '/vi/'
+    '/tnkb/',
+    '/vi/tnkb/'
 ]
 
 all_dest_valid = True
