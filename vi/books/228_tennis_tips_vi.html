@@ -402,6 +402,428 @@ aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
   margin-right: auto !important;
 }
 </style>
+<style id="tu-standard-reader">
+:root {
+            --primary: #1e3a8a;
+            --primary-dark: #172554;
+            --primary-light: #3b82f6;
+            --accent: #d97706;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --sidebar-width: 290px;
+        }
+
+        [data-theme="dark"] {
+            --primary: #60a5fa;
+            --primary-dark: #3b82f6;
+            --primary-light: #93c5fd;
+            --accent: #fbbf24;
+            --bg-page: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.7;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .header-nav a:hover {
+            color: var(--primary);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-lang {
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-lang:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: color 0.2s;
+        }
+
+        .btn-icon:hover {
+            color: var(--primary);
+        }
+
+        .reader-layout {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            height: calc(100vh - 60px);
+            position: sticky;
+            top: 60px;
+            border-right: 1px solid var(--border);
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex-shrink: 0;
+            background-color: var(--bg-card);
+        }
+
+        .sidebar-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .toc-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toc-item a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+            line-height: 1.4;
+        }
+
+        .toc-item a:hover,
+        .toc-item.active a {
+            color: var(--primary);
+            background-color: rgba(30, 58, 138, 0.08);
+            font-weight: 600;
+        }
+
+        .sidebar-download {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-download-pdf {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+            transition: all 0.2s;
+        }
+
+        .btn-download-pdf:hover {
+            background-color: var(--primary-dark);
+            box-shadow: 0 4px 8px rgba(30, 58, 138, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .main-article {
+            flex: 1;
+            max-width: 900px;
+            padding: 2.5rem 3rem;
+            background-color: var(--bg-card);
+            min-height: calc(100vh - 60px);
+            border-right: 1px solid var(--border);
+        }
+
+        .hero-banner {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(30, 58, 138, 0.1);
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 2.3rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .book-part {
+            margin-bottom: 4rem;
+            padding-top: 1rem;
+        }
+
+        .part-header {
+            margin-bottom: 2rem;
+        }
+
+        .part-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .part-header h2 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+        }
+
+        .part-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .part-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .figure-box {
+            margin: 2rem 0;
+            background-color: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .figure-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .figure-caption {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            background-color: var(--bg-card);
+        }
+
+        .content-body h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-body p {
+            font-size: 1.02rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+
+        .content-body ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .content-body li {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .pro-tip {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+            background: rgba(30, 58, 138, 0.05);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .pro-tip-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .pro-tip p {
+            margin-bottom: 0;
+            font-size: 0.98rem;
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+            .main-article {
+                padding: 2rem 1.5rem;
+                max-width: 100%;
+                border-right: none;
+            }
+            .hero-title {
+                font-size: 1.9rem;
+            }
+        }
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
 </head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
@@ -426,285 +848,658 @@ aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
         <a href="/vi/Tenniskb-10 Pillars/">10 Trụ Cột</a>
       </div></div></nav><div class="mm-right"><a class="tu-nav-lang mm-langbtn" href="/books/" title="Switch language">🌐 EN</a><button class="tu-nav-darkmode mm-darkbtn" type="button" aria-pressed="false" title="Dark Mode"><span class="tu-nav-emoji">🌙</span><span class="tu-nav-text">Dark Mode</span></button></div></header>
 
+    <div class="progress-bar-wrap"><div class="progress-bar" id="readingProgress"></div></div>
 
-    <!-- Reading Progress Bar -->
-    <div class="progress-bar-wrap">
-        <div class="progress-bar" id="readingProgress"></div>
-    </div>
-
-    <!-- Hero Header -->
-    <header class="book-hero">
-        <div class="book-hero-inner">
-            <div class="book-badge"><i class="fa-solid fa-trophy"></i> Tinh Hoa Huấn Luyện Từ Huyền Thoại Hai Lần Calendar Grand Slam</div>
-            <h1>228 Lời Khuyên Quần Vợt Vàng</h1>
-            <p class="book-hero-subtitle">228 Tennis Tips by Rod Laver — Cẩm nang thực chiến chắt lọc: Làm chủ bộ chân, đè bóng bằng trọng lượng, đấm vô-lê sát thủ và chiến thuật quần vợt phần trăm.</p>
-            <div class="book-meta">
-                <span><i class="fa-solid fa-user-tie"></i> Tác giả: Rod Laver (Huyền thoại Grand Slam)</span>
-                <span><i class="fa-solid fa-paintbrush"></i> Minh họa: Jim Jonson</span>
-                <span><i class="fa-solid fa-language"></i> Ngôn ngữ: Bản dịch tiếng Việt chuyên sâu</span>
-            </div>
-            <div class="book-actions">
-                <a href="#phan-1" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Đọc Trực Tuyến</a>
-                <a href="228_Tennis_Tips_Vietnamese_Final.pdf" class="btn btn-outline" download><i class="fa-solid fa-file-pdf"></i> Tải PDF Vector Bản Đẹp</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Reader Layout -->
     <div class="reader-layout">
+      <main class="reader-content">
+
+        <div class="hero-banner">
+          <span class="hero-badge">Bản Dịch Toàn Văn &middot; Trọn Bộ 225 Lời Khuyên</span>
+          <h1 class="hero-title">228 Lời Khuyên Quần Vợt Vàng</h1>
+          <p class="hero-subtitle">Bản dịch tiếng Việt trọn vẹn cuốn <em>228 Tennis Tips</em> của huyền thoại hai lần giành trọn Calendar Grand Slam Rod Laver, minh họa gốc của Jim Jonson &mdash; từ khóa cổ tay, bộ chân đè trọng lượng, giao bóng, vô-lê cho tới toàn bộ hệ thống chiến thuật quần vợt phần trăm.</p>
+          <div class="hero-meta">
+            <span><i class="fa-solid fa-user-tie"></i> Tác giả: Rod Laver</span>
+            <span><i class="fa-solid fa-paintbrush"></i> Minh họa: Jim Jonson</span>
+            <span><i class="fa-solid fa-book"></i> 225 lời khuyên trọn vẹn</span>
+            <span><i class="fa-solid fa-file-pdf"></i> <a href="228_Tennis_Tips_Vietnamese_Final.pdf" download>Tải PDF bản đẹp</a></span>
+          </div>
+        </div>
 
 
-        <!-- Main Content -->
-        <main class="reader-content">
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 1 – 25</h2></div>
+</section>
 
-<section id="phan-1" class="chapter-box">
-  <h2 class="chapter-title">Phần I: Bộ Chân, Khóa Cổ Tay &amp; Nền Tảng Cú Thuận Tay Vững Chắc</h2>
-  <div class="chapter-sub">Những lời khuyên cốt tử từ huyền thoại hai lần giành trọn Calendar Grand Slam Rod Laver: Bí quyết khóa chặt cổ tay, bước chân đè trọng lượng và xử lý bóng thuận tay khi đang bứt tốc</div>
-
-  <div class="section-item">
-    <h3 class="section-heading">1. Khóa Chặt Cổ Tay: Nền Tảng Cốt Tử Của Kiểm Soát Bóng</h3>
-    <div class="section-text">Hãy nắm cán vợt thật chắc chắn; nếu bạn thả lỏng tay cầm một cách lười biếng, bạn sẽ hoàn toàn đánh mất quyền kiểm soát trái bóng.
-    
-Khi một đường bóng uy lực của đối phương bay đến và va chạm vào mặt lưới, cây vợt sẽ bị vặn xoắn và quả bóng sẽ nảy ra ngoài một cách mất kiểm soát nếu lực nắm tay của bạn lỏng lẻo.
-    
-Ngoại trừ cú phát bóng và cú đập bóng trên đầu (Overhead smash) đòi hỏi sự bẻ cổ tay linh hoạt để tăng tốc đầu vợt, trong mọi cú đánh chạm đất (Groundstroke), cổ tay của bạn bắt buộc phải được khóa cứng tuyệt đối.
-    
-Một khi cây vợt đã bắt đầu chuyển động tiến về phía trước để tiếp xúc bóng, khớp cổ tay phải vững như bàn thạch.
-    
-Rất nhiều người chơi phong trào có thói quen vẩy cổ tay vào thời Điểm tiếp xúc bóng với hy vọng tạo thêm độ xoáy; đó là một thói quen tai hại dẫn tới sự thất thường kinh niên và những cơn đau nhức cổ tay dai dẳng.
-    
-Hãy để chuyển động của bả vai và sự xoay chuyển của toàn bộ thân trên thực hiện nhiệm vụ truyền lực, chứ không phải khớp cổ tay mong manh của bạn.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_wrist_grip.jpg" alt="Bí quyết cầm vợt thả lỏng cánh tay và khóa chắc cổ tay Rod Laver" loading="lazy">
-    <figcaption>Hình 1.1: Nguyên tắc vàng của Rod Laver: Thả lỏng toàn bộ cánh tay khi chuẩn bị nhưng khóa chặt và giữ cổ tay cực kỳ vững chắc tại thời điểm tiếp xúc bóng.</figcaption>
-  </figure>
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">2. Đừng Bao Giờ Đứng Chết Chân: Bí Quyết Bộ Chân Linh Hoạt</h3>
-    <div class="section-text">Có thể bộ chân chính là vấn đề lớn nhất đang kìm hãm trình độ của bạn mà bạn không hề hay biết.
-    
-Trong quần vợt, phản xạ với một quả bóng đang bay đòi hỏi bạn phải có đôi chân cực kỳ linh hoạt và nhanh nhẹn.
-    
-Những tay vợt hàng đầu không bao giờ đứng bệt cả bàn chân xuống mặt sân (Flat-footed); họ luôn nhún nhảy trên các đầu ngón chân như một võ sĩ quyền anh đang di chuyển trên sàn đấu.
-    
-Ngay khi đối phương vung vợt đánh bóng, bạn phải thực hiện bước nhún tách chân và sẵn sàng bứt tốc.
-    
-Đừng bao giờ đứng yên một chỗ chờ đợi quả bóng bay đến với mình; hãy chủ động di chuyển đón đầu quả bóng.
-    
-Việc tiến về phía trước không chỉ giúp bạn dồn toàn bộ trọng lượng cơ thể vào cú đánh để gia tăng lực sát thương, mà còn ngăn không cho quả bóng rơi quá thấp xuống dưới tầm thắt lưng, đồng thời tạo ra một áp lực tâm lý đè nặng lên đối thủ ở phần sân bên kia.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_footwork_balance.jpg" alt="Bộ chân thăng bằng và tư thế đĩnh đạc của tay vợt đẳng cấp Rod Laver" loading="lazy">
-    <figcaption>Hình 2.1: Bộ chân thăng bằng &amp; tư thế đĩnh đạc (Balance &amp; Poise): Luôn nhún nhảy trên nửa trước bàn chân, giữ lưng thẳng và hạ thấp trọng tâm để tiếp cận bóng hoàn hảo.</figcaption>
-  </figure>
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">3. Đòn Thuận Tay Khi Đang Chạy: Thu Ngắn Mở Vợt &amp; Hạ Thấp Vai</h3>
-    <div class="section-text">Thực hiện một cú thuận tay khi đang đứng yên là điều ai cũng có thể làm được; nhưng thực hiện một cú thuận tay mẫu mực khi đang phải chạy hết tốc lực sang hai góc sân lại là một câu chuyện hoàn toàn khác.
-    
-Khi bạn bị đối phương ép chạy dạt ra biên, quy tắc sống còn là phải thu ngắn biên độ mở vợt ra sau (Short backswing).
-    
-Nếu bạn vẫn cố vung vợt ra sau thật rộng như khi đứng thong thả ở giữa sân, bạn chắc chắn sẽ tiếp xúc bóng trễ phía sau hông và đánh bóng rúc lưới hoặc văng ra ngoài hàng mét.
-    
-Hãy hạ thấp vai trước của bạn hướng về phía quả bóng, giữ đầu cố định và giữ trọng tâm cơ thể thật thăng bằng.
-    
-Thay vì cố gắng tung ra một cú giật bóng ăn điểm không tưởng, hãy tập trung vào việc đánh một đường bóng sâu, an toàn qua lưới với độ cao cách mép lưới ít nhất nửa mét để kịp thời Bước hồi vị (recovery step) về trung tâm sân đấu.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_forehand_prepare_early.jpg" alt="Mở vợt sớm và đánh bóng phía trước thân người của Rod Laver" loading="lazy">
-    <figcaption>Hình 3.1: Chuẩn bị sớm &amp; Đánh bóng phía trước (Prepare Early, Hit in Front): Bí quyết giải phóng sức mạnh đòn thuận tay với nỗ lực cơ bắp tối thiểu bằng cách đón bóng phía trước mũi chân.</figcaption>
-  </figure>
-
+<section class="book-part">
+  <div class="content-body">
+    <h3>1. Hãy nắm vững vợt!</h3>
+    <p>Nếu bạn thả lỏng tay cầm, bạn không thể kiểm soát bóng. Khi một quả bóng được đánh chắc chắn vào dây vợt của bạn, nó sẽ bị giật mạnh nếu tay cầm của bạn được thả lỏng. Không sử dụng đòn giật cổ tay ngoại trừ khi giao bóng và giao bóng trên cao — hãy tập đánh các cú đánh trên mặt đất bằng cổ tay bị khóa. Cổ tay và các ngón tay chắc chắn nhưng lại thả lỏng.</p>
+    <h3>2. Dừng chạy vòng tay trái của bạn!</h3>
+    <p>Động tác trái tay về nhiều mặt là mặt tự nhiên hơn. Chắc chắn sẽ thoải mái hơn khi vung vợt ra xa cơ thể hơn là vung ngang cơ thể, như bạn thực hiện với cú thuận tay. Đi ngang vào lưới. Hãy lấy lại vợt của bạn sớm. Dồn trọng lượng của bạn vào cú đánh. Hãy vượt qua mặc cảm tự ti của bạn về cú đánh này!</p>
+    <h3>3. Phát triển tập trung— học cách xem bóng tất cả các cách trên vợt!</h3>
+    <p>Cú vô lê của bạn sẽ cải thiện nếu bạn giữ khuỷu tay hơi khép vào và cúi người về phía trước để đầu bạn gần quỹ đạo của quả bóng hơn. Bây giờ hãy đấm thẳng vào quả bóng với tư thế cầm chặt và cổ tay chắc chắn. Chuyển trọng lượng của bạn lên bàn chân trước.</p>
+    <h3>4. Hãy cẩn thận với các chụp cổ tay!</h3>
+    <p>Tôi khuyên bạn nên tập đánh những cú chạm đất bằng cổ tay bị khóa. Hãy tập trung vào ý tưởng rằng một khi vợt của bạn bắt đầu hướng về phía trước để gặp bóng, cổ tay của bạn sẽ hoàn toàn chắc chắn! Trước tiên, bạn phải học cách thực hiện các cú chạm đất thuận tay và trái tay bằng ngón tay và cổ tay chắc chắn trước khi bổ sung thêm các cú đánh bằng cổ tay vào kho vũ khí của mình.</p>
+    <h3>5. Cần giúp đỡ về những bài tay di chuyển?</h3>
+    <p>Hãy rút ngắn động tác backswing của bạn và khi tiếp bóng, hãy giữ đầu của bạn hướng xuống gần quỹ đạo của quả bóng đang lao tới. Đưa vợt qua mà không búng nhẹ cổ tay của bạn và đưa vợt theo hướng bạn muốn hướng cú đánh. Đừng kéo lên bằng đầu của bạn!</p>
+    <h3>6. Bạn sẽ phải làm nhiều hơn chỉ chỉ đánh bóng</h3>
+    <p>Hãy thăm dò điểm yếu của đối thủ và khi bạn phát hiện ra điểm yếu đó. Di chuyển xung quanh sân sau đó đánh vào điểm yếu của anh ta và tiến vào để giết. Hãy duy trì mô hình này miễn là nó mang lại chiến thắng cho bạn.</p>
+    <h3>7. Ok, gals, hãy chiến thắng lần tiếp theo với một số lob hit hit!</h3>
+    <p>Đây là một vũ khí nguy hiểm, thậm chí đối với những người chơi bóng bẩy. Nó khiến họ không an toàn trên lưới và mắc lỗi—đánh bóng nhẹ nhàng nhưng bằng một cú đánh đầy đủ. Đi qua quả bóng với khuôn mặt mở. Giữ nó sâu!</p>
+    <h3>8. Bạn không cần đến tòa để thực hành!</h3>
+    <p>Hãy ra ngoài sân của bạn với một cầu thủ muốn tiến bộ. Tìm một khu vực khá bằng phẳng và đặt mình cách nhau 10 thước. Bây giờ để cải thiện cảm giác vợt và kỹ thuật chuyền bóng của bạn. Chơi bóng qua lại, cẩn thận đặt bóng cho đối tác của bạn trên tâm trí - động tác bằng chân và giữ chắc cổ tay để phát triển khả năng kiểm soát tốt!</p>
+    <h3>9. Bạn có thể đạt được hiệu quả khi sao lưu không?</h3>
+    <p>Với những cú lốp bóng sâu, bạn sẽ thường phải đánh trong khi lùi về phía sau và nhảy vào Bài tập, bước nhanh về phía sau bằng chân phải. Tiếp theo đẩy chân phải của bạn ra và nhảy lên và lùi lại, tiếp đất bằng chân trái khi bạn xoay người. Hành động đá kéo này sẽ cho phép bạn trở thành đối tác đánh đôi hiệu quả hơn nhiều.</p>
+    <h3>10. Có thể bàn chân là vấn đề lớn của bạn?</h3>
+    <p>Để phản ứng với một quả bóng đang chuyển động, điều cần thiết là phải nhanh chân. Những cầu thủ giỏi hơn không bao giờ bằng chân khi họ tiếp cận quả bóng. Nếu quả bóng nảy lên hoặc trượt vào bạn hoặc ra xa bạn, hãy nhanh nhẹn và di chuyển cơ thể mệt mỏi của bạn một cách nhanh chóng. Nó có thể tạo nên sự khác biệt!</p>
+    <h3>11. Khi bạn tiếp cận mạng</h3>
+    <p>Đừng đợi bóng qua lưới mới chuẩn bị cho cú vô lê! Đọc góc của quả bóng khi nó rời vợt đối phương và ngay lập tức bắt đầu di chuyển vợt của bạn vào vị trí để thực hiện cú vô lê.</p>
+    <h3>12. Thử thực hành với một người bạn với tốc độ nửa nửa</h3>
+    <p>Điều này không có nghĩa là sử dụng nửa cú đánh. Đánh bóng hoàn toàn nhưng làm chậm cú vung. Làm việc theo nhịp điệu và thời gian của cảnh quay. Cố gắng để có được bước chân hoàn hảo. Việc đánh sai thường có thể được khắc phục ở nhịp độ chậm hơn này. Theo dõi quỹ đạo của quả bóng và thiết lập cho phù hợp.</p>
+    <h3>13. Hãy lên khuỷu tay đó lên!</h3>
+    <p>Tôi là một trong những chi phí sử dụng vũ khí phụ tại các câu lạc bộ khác nhau mà tôi thường xuyên lui tới. Rất chính xác hoặc nhất quán. Hãy chú ý cách những người chơi giỏi hơn trong giải đấu giơ khuỷu tay lên khi họ đưa vợt lên từ phía sau.</p>
+    <h3>14. Chắc chắn khi trở lại phục vụ hơn tốc độ!</h3>
+    <p>Trong đánh đôi, cố gắng để người giao bóng phải đoán và do dự—một cú đánh nhẹ vào chân người giao bóng, một cú đánh qua đầu đồng đội của anh ta, một cú giao bóng chéo góc sắc nét sẽ khiến đội kia phải đoán. Thỉnh thoảng một vụ nổ xảy ra ngay trên lưới hoặc xuống con hẻm của anh ta sẽ giúp anh ta không bị săn trộm.</p>
+    <h3>15. NẾU BẠN ĐANG Huấn luyện một TRẺ</h3>
+    <p>bắt đầu giao bóng với cây vợt úp xuống lưng với tư thế gãi lưng. Bóng nên được giữ nhẹ trong đầu ngón tay. Thả bóng nhẹ nhàng, thẳng trước vai trái. Hãy chắc chắn rằng quả bóng bay đủ cao để có thể đánh nó với tư thế duỗi thẳng hoàn toàn!</p>
+    <h3>16. Đừng đứng đó chờ đó!</h3>
+    <p>Hãy cố gắng tiếp tục tiến về phía trước với tất cả những cú vô lê đó. Nó sẽ dồn trọng lượng của bạn vào cú đánh, ngăn bóng rơi quá thấp và nói chung là đe dọa đối thủ bằng cách thể hiện sự tự tin mạnh mẽ như vậy.</p>
+    <h3>17. Giữa phía đông và lục địa,</h3>
+    <p>bạn sẽ tìm thấy cái được gọi là kiểu cầm vợt kiểu Úc. Nó cho phép thực hiện nhiều cú đánh đa dạng nhất—bạn có thể lái nó, cắt nó, nó hoặc, với cùng một sự chuẩn bị, trong một cú đánh đẹp mắt với tay cầm này.</p>
+    <h3>18. Đừng sợ đạt được!</h3>
+    <p>Đôi khi một cú lao tốt sẽ phát huy tác dụng - hãy quyết tâm rằng bạn sẽ đưa bóng trở lại lưới bất kể bạn phải chạy nước rút và tiếp cận bao xa. Nếu đó là một cú giao bóng nhanh và rộng, hãy bằng lòng chỉ chặn bóng lại.</p>
+    <h3>19. Hãy thử nghĩ về điều này trên bàn tay của bạn</h3>
+    <p>—khi bóng tiến đến gần khu vực tấn công một feet, hãy đưa vai trước của bạn chỉ vào bóng. Nếu bạn quan sát những người chơi giỏi hơn, bạn sẽ nhận thấy rằng một mũi tên xuyên qua vai họ sẽ chỉ vào mục tiêu đang đến gần. Hãy thử nó!</p>
+    <h3>20. Thôi cô gái, bạn phải lại!</h3>
+    <p>Bất chấp tất cả sự chuẩn bị chu đáo mà bạn đã thực hiện cho các cú đánh của mình, sẽ có những lúc chỉ cần một nguồn năng lượng bùng nổ và một cú lao tới sẽ cứu được điểm. Điều hòa sau đó sẽ tạo ra sự khác biệt. Tốt hơn hết bạn nên dành chút thời gian để chạy bộ và tập thể dục mềm dẻo nếu muốn trở thành một người vận động tốt.</p>
+    <h3>21. Đây là một mẹo</h3>
+    <p>để giúp bạn nằm nghiêng và không mở vai quá sớm khiến bạn phải kéo bóng thay vì vuốt bóng. Đưa tay của bạn về phía trước theo hướng của lưới trong quá trình vung vợt về phía sau. Xoay vợt của bạn qua quả bóng kéo dài về phía trước cho đến khi tay cầm chạm tới tay kia.</p>
+    <h3>22. Bạn muốn cải thiện tổng quát của bạn?</h3>
+    <p>Một điều khá quan trọng đối với một cú đánh qua đầu tốt là phần bên trái của cơ thể bạn hướng vào lưới. Một cách khác là đảm bảo hai chân cách nhau một cách thoải mái. Không sử dụng nhiều động tác backswing. Hãy tưởng tượng quả bóng là một chiếc đinh ở điểm cao nhất mà bạn có thể chạm tới. Đập nó bằng một cú đánh mạnh xuống. Nếu đó là một điểm ngắn!</p>
+    <h3>23. Đừng luôn chơi cùng cùng!</h3>
+    <p>Nếu bạn thấy mình luôn đánh cùng một cú đánh trong một tình huống cụ thể, thì ngay cả đối thủ chậm chạp nhất cũng sẽ nắm bắt được trò chơi của bạn. Sử dụng một số thay đổi- Thay đổi chiến thuật của bạn. Hãy sử dụng chút trí tưởng tượng, nó sẽ tắt.</p>
+    <h3>24. Tại sao bạn không xem bóng?</h3>
+    <p>Bạn có xem nó đến tận điểm tiếp xúc không? Đó là quả bóng đòi hỏi sự chú ý của bạn. Tòa án không di chuyển! Hãy đánh bại mong muốn có được cái nhìn nhanh vào phút cuối xem đối thủ của bạn sẽ đi đâu. Nó sẽ chỉ gây ra một vụ bắn gỗ. Ai cần những thứ này, phải không?</p>
+    <h3>25. Hướng dẫn đầu của bạn đến gần bóng!</h3>
+    <p>Bạn không thể đưa đầu vợt vào bóng một cách nhất quán trừ khi bạn đưa mắt xuống gần mặt phẳng quỹ đạo của quả bóng hơn. Hãy xuống để ngắm mục tiêu tốt hơn. Sự tập trung thị giác có ảnh hưởng mạnh mẽ đến việc xác định thời điểm tốt.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_wrist_grip.jpg" alt="Khóa chặt cổ tay — nền tảng của mọi cú đánh ổn định." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Khóa chặt cổ tay — nền tảng của mọi cú đánh ổn định.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p7_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
   </div>
 </section>
 
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 26 – 50</h2></div>
+</section>
 
-<section id="phan-2" class="chapter-box">
-  <h2 class="chapter-title">Phần II: Giải Mã Cú Trái Tay, Đòn Cắt Xoáy &amp; Trái Tay Hai Tay</h2>
-  <div class="chapter-sub">Kỹ thuật định vị vai dẫn hướng, tối ưu hóa điểm tiếp xúc phía trước, cơ chế phát lực của cú trái hai tay và nghệ thuật cắt bóng phòng thủ phản công</div>
-
-  <div class="section-item">
-    <h3 class="section-heading">4. Vai Dẫn Hướng: Chỉ Thẳng Vào Quả Bóng</h3>
-    <div class="section-text">Đây là bí quyết đơn giản nhưng mang lại hiệu quả kỳ diệu nhất cho cú trái tay một tay của bạn:
-    
-Khi quả bóng của đối phương tiếp cận đến cách khu vực chạm bóng khoảng hai mét, hãy xoay thân người và hướng vai trước (vai phải của người thuận tay phải) chỉ thẳng vào quả bóng đang bay tới.
-    
-Hành động này tự động đưa cơ thể bạn vào tư thế nghiêng hoàn hảo, khóa hông và tạo điều kiện cho lưng hơi xoay về phía lưới để tích lũy thế năng xoắn.
-    
-Hầu hết các cú đánh trái tay hỏng đều xuất phát từ việc người chơi mở ngực quá sớm về phía lưới trước khi tiếp xúc bóng.
-    
-Khi ngực bạn mở sớm, mặt vợt sẽ bị giật chéo sang một bên và điểm tiếp xúc bóng bị kéo lùi về phía sau thân người.
-    
-Hãy giữ vai trước hướng vào bóng cho đến khi bạn vung vợt xuyên qua điểm tiếp xúc ở phía trước mũi chân trước; chỉ khi bóng đã rời mặt lưới, cơ thể mới tự nhiên xoay mở theo đà vung vợt.</div>
-
-
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">5. Cú Trái Tay Hai Tay: Giữ Hai Tay Sát Nhau &amp; Xoay Vai Tối Đa</h3>
-    <div class="section-text">Đối với những tay vợt sử dụng cú trái hai tay, có ba nguyên tắc cơ bản bạn tuyệt đối không được vi phạm:
-    
-Thứ nhất, hai bàn tay trên cán vợt phải luôn được đặt sát vào nhau, không được để hở bất kỳ khoảng cách nào; nếu hai bàn tay tách rời, đòn bẩy sẽ bị chia cắt và lực đánh sẽ bị suy giảm nghiêm trọng.
-    
-Thứ hai, cú trái tay hai tay đòi hỏi độ xoay vai sâu hơn đáng kể so với cú trái một tay.
-    
-Vì cánh tay bị giới hạn bởi cả hai tay cùng bám vào cán, bạn bắt buộc phải xoay toàn bộ thân trên nhiều hơn để tạo ra không gian cho đường vung vợt từ thấp lên cao.
-    
-Thứ ba, khi đối mặt với một quả bóng đang rơi thấp dưới tầm thắt lưng, đừng bao giờ cúi gập lưng xuống để với bóng.
-    
-Hãy khuỵu sâu hai đầu gối, hạ thấp trọng tâm cơ thể xuống ngang tầm quả bóng và sử dụng tay không thuận để đẩy bóng vút qua lưới với độ xoáy cuộn an toàn.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_two_handed_backhand.jpg" alt="Đòn trái tay hai tay cuộn gối sau và xoay hông tối đa" loading="lazy">
-    <figcaption>Hình 5.1: Kỹ thuật trái tay hai tay hiệu quả: Cuộn đầu gối sau vào trong, giữ hai bàn tay sát nhau trên cán vợt và dùng đòn bẩy hông tạo lực topspin cuộn bóng sâu.</figcaption>
-  </figure>
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">6. Đòn Cắt Xoáy (Slice): Chiếc Phao Cứu Sinh &amp; Vũ Khí Đổi Nhịp</h3>
-    <div class="section-text">Cú cắt trái tay không chỉ là một công cụ phòng thủ tuyệt hảo khi bị đối phương dồn ép ra góc sân; đó còn là một vũ khí tấn công vô cùng xảo quyệt.
-    
-Khi bạn thực hiện cú cắt bóng, mặt vợt di chuyển từ trên cao xuống thấp theo một quỹ đạo nghiêng thoai thoải, lướt nhẹ qua đáy quả bóng với cổ tay được giữ chắc chắn.
-    
-Đừng bổ vợt xuống quá gắt như đang băm củi; hãy nghĩ về động tác này như việc bạn đang dùng dao thái một lát bánh mì thật ngọt ngào.
-    
-Quả bóng cắt xoáy ngược sẽ bay là là mép lưới, trượt dài trên mặt sân và nảy rất thấp, tước đoạt toàn bộ góc đánh và lực đàn hồi của đối phương, buộc họ phải nhấc bổng quả bóng lên và tạo cơ hội bằng vàng cho bạn bước lên lưới dứt điểm.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_slice_backhand.jpg" alt="Cắt xoáy trái tay slice nghệ thuật thay đổi nhịp độ Rod Laver" loading="lazy">
-    <figcaption>Hình 6.1: Cắt bóng trái tay (Slice Backhand): Mở nhẹ mặt vợt, vuốt chém từ trên cao xuống dưới và xuyên ra trước để triệt tiêu sức bật của bóng, ghìm đối thủ sát vạch cuối sân.</figcaption>
-  </figure>
-
+<section class="book-part">
+  <div class="content-body">
+    <h3>26. Thực hành chạy xuống các thúc sâu khó khăn</h3>
+    <p>cố gắng tiếp cận khi bạn đuổi kịp họ và bằng một số động tác bằng cổ tay, hãy ném một quả bóng có quỹ đạo sâu, cao để giúp bạn có thời gian lấy lại vị trí sân tốt và bắt đầu tấn công.</p>
+    <h3>27. Dành cho bạn những người làm việc bằng hai tay—</h3>
+    <p>do yêu cầu xoay rất nhỏ gọn khi sử dụng cả hai tay, bạn có thể thấy tầm với của mình bị hạn chế ở những cú đánh rộng. Hãy tính đến việc phải bước thêm một bước so với bình thường để bắt được quả bóng. Điều này sẽ yêu cầu bạn phải đọc bóng ngay khi nó rời vợt đối phương.</p>
+    <h3>28. Hãy đặt một số tăng trưởng trong những bóng chuyện đó!</h3>
+    <p>Một cú đấm tốt vào mũi - đó là cú vô lê. Một cú đánh nhanh ngắn và hầu như không có động tác backswing. Cổ tay chắc chắn khi bạn đấm và bạn sử dụng tốc độ từ cú đánh của đối thủ. Bạn muốn vát vợt một chút để có thể đánh nhẹ vào dưới bóng nhằm tạo ra một số xoáy xuống giúp bạn kiểm soát tốt hơn. Hãy tiến về phía trước để có thêm cú đấm!</p>
+    <h3>29. Một số điểm quan trọng hơn các điểm khác!</h3>
+    <p>Nếu trận đấu hòa hoặc bạn đang dẫn trước—nhưng mệt mỏi—bạn sẽ không cố gắng hết sức để giành được điểm 40-0 hoặc 0-40.Nhưng điểm trong một trận đấu sát nút sẽ đưa bạn đến điểm trò chơi—chẳng hạn như 15-30—phải được thi đấu với quyết tâm cao độ. Hãy cố gắng giành chiến thắng trong game đầu tiên của mỗi set.</p>
+    <h3>30. NẾU BẠN CÓ VAI TỐT, BẬT BACKSWING, NÓ SẼ Ở DƯỚI Cằm BẠN.</h3>
+    <p>Khi bạn xoay người và thu vợt lại, dùng tay kéo vai lại để bạn có thể nhận biết rõ vai dưới cằm trong khi quan sát quả bóng đang đến gần.</p>
+    <h3>31. Thoải mái!thực sự được lên cao!</h3>
+    <p>Khi bạn bắt đầu đưa vợt qua quả giao bóng của mình, bạn phải giơ cao khuỷu tay của mình để thực hiện động tác roi giúp chuyển động của bạn bắt kịp thời gian. Hãy trì hoãn việc tháo cổ tay của bạn cho đến giây phút cuối cùng!</p>
+    <h3>32. Dành cho người chơi cơ sở</h3>
+    <p>hầu hết các cầu thủ trẻ đều cố gắng đánh bóng quá mạnh - điều cần thiết là phát triển khả năng kiểm soát, độ sâu và độ chính xác. Để phát triển điều này, người ta phải nỗ lực để có được một cú vung bóng dài, mượt mà, dễ dàng từ tư thế vững chắc sang một bên vào lưới. Những cú đánh mặt đất hiệu quả đòi hỏi một thời gian dài thực hiện.</p>
+    <h3>33. Quý vị, nếu bạn muốn chơi đôi tốt, hãy bóng chuyền!</h3>
+    <p>Trọng lượng hướng về phía trước, đón bóng ra phía trước—khi một quả bóng nặng chạm vào dây vợt, nó sẽ văng ra mạnh nếu tay vợt được thả lỏng. Cổ tay phải chắc chắn như các ngón tay.</p>
+    <h3>34. Hãy phát triển trò chơi ali- tòa án!</h3>
+    <p>Tại sao lại giới hạn bản thân ở mức người chơi ở cấp độ “'B"'' hoặc "'C"'?Mở rộng tiềm năng của bạn Điều này đòi hỏi phải thành thạo các nét tiêu chuẩn;giao bóng, cả cắt và xoắn—lái, xoay trên và cắt—đánh rơi, vô lê và đập—bạn cũng phải học cách thay đổi độ sâu—bây giờ bạn đã sẵn sàng!</p>
+    <h3>35. Đừng luôn đánh vào bên tòa mở!</h3>
+    <p>Đó có lẽ là nơi đối thủ của bạn đang hướng tới. Nếu bạn có thể bắt được chúng bằng toàn bộ trọng lượng của chúng theo một cách, hãy đánh ngược sang phía chúng đang bận rời đi. Chiến thuật này được gọi là đánh nhầm đối thủ và những người chơi giỏi hơn thường sử dụng nó.</p>
+    <h3>36. Nhận trọng lượng của bạn vào súng</h3>
+    <p>== tài liệu?thực hiện các cú đánh trái tay có độ sâu và tốc độ, chỉ cần khả năng thiết lập nhanh chóng để 10 cho phép chuyển tiếp tốt để bạn có thể chạm bóng bằng chân. Giữ dbow của bạn xuống và bạn sẽ có thêm 10</p>
+    <h3>37. Nếu bạn muốn bóng thả ngắn</h3>
+    <p>Bạn bắt đầu thực hiện cú vô lê, đưa vợt úp mặt xuống ném bóng bằng cổ tay. Giữ khuôn mặt mở và sử dụng chuyển động của ô. Hãy sử dụng cú đánh đó khi đối thủ của bạn không thành công.</p>
+    <h3>38. Hãy làm một số công việc trên lob của bạn</h3>
+    <p>2000 là điều cần thiết để chơi ở cấp độ cao nhất. Hãy nhớ lại hai điều sau: bạn phải sử dụng một cú đánh trơn tru, giữ bóng trên vợt càng lâu càng tốt và đặt cú đánh tối đa vào máy đánh bóng.</p>
+    <h3>39. Đây là khởi đầu của một lát back-tay</h3>
+    <p>việc chuẩn bị là đặc biệt quan trọng. Vai quay tốt và đầu cúi xuống. Quan sát bóng qua vai - cổ tay cao hơn bóng và đầu vợt được mở ra và giữ bằng tay cổng cao hơn cổ tay. Đầu tiên hãy tấn công chéo sân cho đến khi bạn giành được quyền kiểm soát!</p>
+    <h3>40. Dừng và thiết lập!</h3>
+    <p>Nhiều người trong số các bạn lao thẳng vào lưới ngay giữa đường chạy nước rút của mình và sau đó sút quá vạch cuối sân. Bạn nên di chuyển nhanh, dừng lại, di chuyển sang trái hoặc phải để thực hiện cú vô lê và sau đó dừng lại để thực hiện cú trả bóng.</p>
+    <h3>41. Chỉ vào bóng!</h3>
+    <p>Để vai của bạn có thái độ đúng đắn để đánh những cú đánh qua đầu tốt. Chuyển động tương tự như động tác giao bóng, nhưng động tác backswing phải ngắn hơn. Đánh bóng khá phẳng và xoay qua bóng. Hãy nghĩ đến việc cố gắng ném vợt qua lưới khi phía bên phải của bạn đi qua. Gặp bóng với sự mở rộng hoàn toàn của bạn! Giữ cho nó trơn tru!</p>
+    <h3>42. Làm việc để tìm hiểu và sự cân bằng khi di chuyển!</h3>
+    <p>Xem cách các cầu thủ của giải đấu bao vây sân— những cầu thủ giỏi hơn sẽ di chuyển xung quanh sân để khiến những cú đánh khó nhất trở nên dễ dàng. Nằm xuống, giữ đầu gối cong và sử dụng bên trái để giữ thăng bằng. Đừng đánh quá mạnh vào những cú chạy!</p>
+    <h3>43. Có vấn đề phục vụ?</h3>
+    <p>Đó có thể là cú ném của bạn—nhiều người trong số các bạn dành khá nhiều giờ mỗi tuần trên sân để cố gắng khám phá lý do tại sao các cú giao bóng của bạn lại khác nhau trong quá trình chơi. Bạn dường như không bao giờ tìm thấy cú xoay có rãnh mà bạn quan sát thấy ở những người chơi giỏi hơn - tung bóng là phần quan trọng trong một hành động giao bóng nhất quán. Cố gắng di chuyển trái thẳng xuống từ vị trí bắt đầu rồi lên trên, giữ cho nó duỗi thẳng khi bạn ném. Đừng để nó trôi sang trái hoặc phải. Để lòng bàn tay hướng lên trên!</p>
+    <h3>44. Đừng luôn đánh cùng một cút từ cùng vị trí tòa!</h3>
+    <p>Hãy rèn luyện bản thân để nhận thức rõ ràng vị trí của đối thủ khi bạn tiếp cận bóng. Có phải anh ấy quá sâu sắc? Anh ấy đang chuyển đến à? Anh ấy có hồi phục- từ bên ngoài đường biên không? Nhận thức chính là ý nghĩa của tòa án. Hãy phát triển nó!</p>
+    <h3>45. Tiếp cận mạng</h3>
+    <p>Việc đưa bóng vào lưới phụ thuộc vào một cú đánh tiếp cận sâu và được đặt chính xác để buộc phải trả bóng yếu. Hầu hết những người chơi bóng chuyền giỏi thích kiểu cầm vợt lục địa hoặc trái tay, cho phép mặt hơi mở, cần thiết để nâng bóng thấp. Cú vô lê đầu tiên này nên được đặt sâu trong sân! Hãy đạt được độ sâu và độ chính xác ở cú vô lê đầu tiên!</p>
+    <h3>46. C'mon gals, hãy cố gắng ở qua tòa án từ đối tác của bạn.</h3>
+    <p>Khi anh ta lùi từ lưới để thực hiện một cú đập từ trên cao, hãy lùi lại hoặc sẽ có một khoảng cách giữa bạn và đối tác của bạn mà đối thủ đối mặt với đối tác của bạn có thể thực hiện một cú đánh góc cạnh. Cả hai bạn nên trở lại vị trí lưới tốt ngay sau khi thực hiện cú đánh trên cao.</p>
+    <h3>47. Đầu tư của bạn ở đâu?</h3>
+    <p>Bạn phải có một cú đập bóng từ trên cao tốt nếu bạn có ý định tấn công lưới và có thể ghi điểm với nó! Thực hiện động tác cổ tay tốt ở đầu cú swing. Đưa đầu về phía trước và xuống. Kiểm tra xem tay cầm có hướng lên trên khi bạn hoàn thành hay không. Sẽ rất hữu ích nếu bạn xem bóng lâu hơn!</p>
+    <h3>48. Bước chân tốt là chìa khóa</h3>
+    <p>để thành công trong hầu hết các môn thể thao. Trong quần vợt, có một khoảng thời gian ngắn khi bóng và cơ thể ở đúng vị trí cạnh nhau để truyền tốc độ và tốc độ cho cú đánh. Hãy dành thời gian phát triển động tác bằng chân của bạn và những cú đánh khó hơn sẽ trở nên dễ dàng hơn.</p>
+    <h3>49. Một vị trí đọc thoải mái—a_</h3>
+    <p>good_ tư thế sẵn sàng thoải mái có nghĩa là đứng hai chân cách nhau rộng bằng vai và trọng lượng của bạn dồn lên đầu bàn chân. Đầu gối được uốn cong. Vợt được cầm ở phía trước, hướng về phía đối thủ và có thể được kéo sang hai bên một cách nhanh chóng. Vị trí sẵn sàng là Po đặc biệt quan trọng trong việc nhận giao bóng và trong lưới thi đấu. Xem các chuyên gia vào vị trí. Vấn đề của bạn có thể chỉ là sự lười biếng—hãy giữ cân nặng của bạn tăng lên! Hãy sẵn sàng để di chuyển.</p>
+    <h3>50. Khi bạn đang lập tức và mất vị trí</h3>
+    <p>đừng dùng một cú đánh có rủi ro cao. Hãy rèn luyện bản thân để suy nghĩ về tỷ lệ phần trăm quần vợt. Nếu đối thủ của bạn di chuyển vào lưới, hãy ném một cú Lob cao sâu về phía góc trái tay. Việc lùi lại và di chuyển sang phía trái tay để đánh một cú qua đầu sẽ khó khăn hơn nhiều. Nếu đối thủ của bạn lùi lại, hãy thực hiện một cú đánh sâu có quỹ đạo khá cao để bạn có thời gian lấy lại vị trí sân tốt.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_footwork_balance.jpg" alt="Bộ chân và thăng bằng: nhún nhảy trên đầu ngón chân." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Bộ chân và thăng bằng: nhún nhảy trên đầu ngón chân.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p8_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
   </div>
 </section>
 
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 51 – 75</h2></div>
+</section>
 
-<section id="phan-3" class="chapter-box">
-  <h2 class="chapter-title">Phần III: Nghệ Thuật Lên Lưới: Cú Vô-Lê Sắc Lẹm, Đập Smash &amp; Lốp Bóng Chiến Thuật</h2>
-  <div class="chapter-sub">Bí quyết làm chủ lưới từ tay vợt giao bóng lên lưới vĩ đại: Kỹ thuật đấm vô-lê dứt khoát, định vị khuỷu tay khi đập smash và biến cú lốp bóng thành đòn trừng phạt</div>
-
-  <div class="section-item">
-    <h3 class="section-heading">7. Cú Vô-Lê Sắc Lẹm: Đấm Dứt Khoát &amp; Luôn Tiến Về Phía Trước</h3>
-    <div class="section-text">Quy tắc vàng số một khi đứng trên lưới: Hãy luôn di chuyển tiến về phía trước trong mọi cú bắt vô-lê.
-    
-Việc lao người về phía trước giúp bạn đưa toàn bộ trọng lượng cơ thể đè vào đường bóng, ngăn không cho quả bóng rơi quá thấp dưới mép lưới và khiến đối phương khiếp sợ trước sự hiện diện áp đảo của bạn.
-    
-Đừng bao giờ vung vợt ra phía sau; cú vô-lê không phải là một cú vung tay mà là một cú đấm dứt khoát (Punching action).
-    
-Hãy ngả cổ tay ra sau nhẹ nhàng (Layback wrist), giữ đầu vợt luôn cao hơn cổ tay và chặn đứng quả bóng ở ngay phía trước tầm mắt.
-    
-Đối với những quả bóng bay thấp dưới tầm lưới, hãy mở nhẹ mặt vợt và gập sâu đầu gối để xúc bóng qua lưới; đừng cố gắng biến mọi cú vô-lê thành một pha dứt điểm ngoạn mục nếu bạn đang ở tư thế khó khăn.
-    
-Một cú vô-lê sâu và chắc chắn vào góc sân thường là quá đủ để ép đối phương đánh hỏng hoặc trả về một quả bóng bổng vô hại.</div>
-
-
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">8. Cú Smash Trên Đầu: Nâng Cao Khuỷu Tay &amp; Nghiêng Người Đón Bóng</h3>
-    <div class="section-text">Tôi thường chứng kiến rất nhiều người chơi thực hiện những cú smash kỳ dị theo kiểu quét ngang cánh tay như chém phẩy; rất ít cú đánh kiểu đó đạt được độ chính xác hay tính ổn định cần thiết.
-    
-Hãy quan sát các tay vợt thi đấu chuyên nghiệp:
-    
-Họ luôn nâng cao khuỷu tay tay cầm vợt lên cao ngang tai khi đưa vợt lên từ phía sau lưng.
-    
-Điều kiện tiên quyết để có một cú smash uy lực là mạn sườn trái của bạn (đối với người thuận tay phải) phải hướng thẳng về phía lưới.
-    
-Hai bàn chân phải mở rộng thoải mái và di chuyển bằng các bước trượt ngang hoặc bước lùi chéo chân (Cross-step) để giữ thăng bằng.
-    
-Hãy giơ cánh tay không cầm vợt lên cao, chỉ thẳng ngón tay vào quả bóng đang rơi trên không trung để định vị không gian và giữ đầu ngửa cố định.
-    
-Hãy tưởng tượng quả bóng là một quả bóng bay treo lơ lửng ngay phía trên trán của bạn và tung ra cú đập bóng ở điểm cao nhất với toàn bộ sự quyết đoán.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_overhead_smash.jpg" alt="Cú đập smash trên đầu kiểm soát thăng bằng không nhảy thừa" loading="lazy">
-    <figcaption>Hình 8.1: Đập smash trên đầu (Overhead Smash): Đừng nhảy thừa nếu không bắt buộc; giương cao khuỷu tay, nghiêng vai lấy đà và đập bóng ở đỉnh cao nhất với sự cân bằng tuyệt đối.</figcaption>
-  </figure>
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">9. Vũ Khí Lốp Bóng (The Lob): Nghệ Thuật Lật Ngược Thế Cờ</h3>
-    <div class="section-text">Cú lốp bóng là một vũ khí cực kỳ nguy hiểm, ngay cả khi đối đầu với những tay vợt dày dạn kinh nghiệm nhất trên lưới.
-    
-Nó khiến đối phương cảm thấy bất an, buộc họ phải liên tục ngoái nhìn lại phía sau và làm tiêu hao thể lực cũng như sự tự tin của họ.
-    
-Hãy đánh bóng một cách êm ái nhưng với một vòng vung vợt trọn vẹn, vuốt vợt từ dưới lên trên qua quả bóng để tạo độ xoáy cuộn (Topspin lob) giúp bóng bay vọt qua đầu tay vợt đứng lưới rồi cắm nhanh xuống góc sân.
-    
-Khi rơi vào thế phòng ngự bị đối phương dồn ép đến chân tường, một cú lốp bóng phòng ngự thật cao và sâu với cổ tay khóa cứng sẽ mua cho bạn ba đến bốn giây quý giá để hồi phục lại vị trí trung tâm và tái lập thế trận cân bằng.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_lob_technique.jpg" alt="Vũ khí lốp bóng đảo ngược tình thế phòng ngự và tấn công" loading="lazy">
-    <figcaption>Hình 9.1: Nghệ thuật lốp bóng (The Lob): Khóa chặt cổ tay trên đòn lốp phòng ngự để điều bóng bổng sâu vào góc sân, kéo dài thời gian tái lập vị trí trung tâm.</figcaption>
-  </figure>
-
+<section class="book-part">
+  <div class="content-body">
+    <h3>51. KHI BẠN CHUYỂN VÀO ĐỂ Đấm BÓNG CHUYỆN ĐÓ,</h3>
+    <p>đưa khuỷu tay và cổ tay của bạn ra phía trước! Điều này sẽ ngăn cản đầu vợt lao ra trước bàn tay trước khi tiếp xúc và bị đánh ra ngoài sân về bên trái.</p>
+    <h3>52. Lên và nhận bóng!</h3>
+    <p>Nếu bạn không thể quay lại, hãy đứng dậy để thực hiện những cú thùy sâu đó. Nhảy lên với một cú đá kéo và đánh bóng trong tầm với của bạn. Cảm thấy rằng bạn đang ném đầu vợt vào quả bóng. Cú đánh này cần có thời gian hợp lý, nhưng nỗ lực cần có để có được cú đập này là xứng đáng!</p>
+    <h3>53. Đi xuống dòng!</h3>
+    <p>Hầu hết những người mới bắt đầu và những người chơi ở trình độ trung cấp, tôi đều đánh hầu hết các cú chạm đất của họ trên mặt sân. Nếu bạn xoay người sang lưới nhanh hơn và tập đánh bóng nhiều hơn, bạn sẽ không kéo được mọi thứ theo đường chéo sân.</p>
+    <h3>54. Giảm cân bàn chân trước của bạn</h3>
+    <p>Cố lên các cô gái, bạn phải thả chân trước xuống nếu muốn có thể bước vào bóng! Khi bạn nhanh chóng xoay người sang một bên và cầm vợt về phía thuận tay, đặt trọng lượng lên chân phải, từ đó giảm trọng lượng cho bàn chân trái. Bây giờ bạn đã sẵn sàng bước về phía lưới và dồn trọng lượng của mình vào cú đánh. Hãy thử thực hành động tác này trước gương cho đến khi thành thạo.</p>
+    <h3>55. Hút đầu và vai của bạn hút xuống và về phía trước nếu bạn muốn đến đó nhanh chóng!</h3>
+    <p>Tại sao bạn lại nhất quyết như thể eo và đầu gối của bạn sẽ không uốn cong? Hãy cúi xuống và giữ nguyên tư thế đó khi bạn di chuyển đến quả bóng. Thực hành trên quả bóng của bàn chân của bạn. Thực hiện một vài lần chạy nước rút ngắn.ieve</p>
+    <h3>56. Hãy bỏ lên các bánh xếp đó trên dịch vụ- ice trả lại!</h3>
+    <p>Khi nhận bóng, đứng cúi người thoải mái, dồn trọng lượng về phía trước, vợt hướng về phía người giao bóng và hai chân rộng bằng vai. Nhảy ngay khi người giao bóng đánh bóng, nhờ đó cơ thể bạn sẵn sàng di chuyển nhanh chóng theo một trong hai hướng. Sử dụng một cú backswing phẳng ngắn.</p>
+    <h3>57. Đôi khi chỉ cần giữ vững quan điểm là đủ!</h3>
+    <p>Hãy đối mặt với điều đó, bạn sẽ bị mất vị trí và mất thăng bằng. Đây là lúc để giữ bóng trong cuộc và không cố gắng giành chiến thắng hoàn toàn. Cho đến nay, hầu hết các điểm đều có lỗi, vì vậy hãy cho người chơi của bạn mọi cơ hội để mắc lỗi đó. Hãy kiên nhẫn!</p>
+    <h3>58. Trái hai tay cho trẻ em—</h3>
+    <p>Ngày nay, trẻ em học quần vợt từ rất sớm và nhiều người thấy việc hỗ trợ ban đầu bằng tay kia là điều tự nhiên. Cú đánh trái tay đòi hỏi một cổ tay rất chắc chắn vì phía sau vợt có rất ít lực để giằng hiệp ước;do đó nhiều bạn trẻ bắt đầu sử dụng trái tay bằng hai tay. Khi cổ tay tăng sức mạnh, bàn tay hỗ trợ có thể thả ra trước khi tiếp xúc và sẽ tạo ra một cú xoay hoàn toàn, tự do. Kiểu bắn này giới hạn tầm với của người chơi.</p>
+    <h3>59. Khuỷu tay đầu tiên, sau đó là vợt!</h3>
+    <p>Trong cú giao bóng ngược của bạn, khi vợt hạ xuống phía sau lưng bạn, hãy bắt đầu đưa khuỷu tay của bạn lên và về phía trước, sau đó đưa vợt lên và thả lỏng cổ tay của bạn ở phía trên để tạo thêm tốc độ đầu vợt tại điểm tiếp xúc với bóng.</p>
+    <h3>60. Có một số người cao cấp có rất rất nhỏ khuỷu tay không?</h3>
+    <p>Nếu bạn thực hiện hầu hết các cú đánh của mình bằng vai sau và đứng bằng chân phẳng, bỏ qua việc chuyển trọng lượng của mình sang bàn chân trước, thì bạn đang kéo bóng, khiến khuỷu tay bị căng quá mức. Hãy thử chuẩn bị nhanh hơn. Gặp bóng ở phía trước!</p>
+    <h3>61. Hãy chỉ tay tay về tòa đối lại</h3>
+    <p>khi bạn đặt vợt ở vị trí bắt đầu cú đánh về phía trước. Tôi muốn bạn hướng tay cầm vợt vào vị trí gần nhất trên sân mà bạn sẽ hướng bóng tới. Quá nhiều cú backswing có thể khiến bạn thường xuyên bị trễ.</p>
+    <h3>62. Lắng nghe, các cô gái đừng qua mạng với cơ thể mất kiểm soát!</h3>
+    <p>Cơ hội thực hiện cú vô lê hiệu quả khi bạn đến đó là khá xa vời. Lấy bóng ngắn từ đối thủ và phối hợp cách tiếp cận lưới của bạn với việc xác định vị trí chuyền bóng chính xác!</p>
+    <h3>63. Tại sao tôi không bao giờ thấy bạn dropshot?</h3>
+    <p>Cú đánh này nếu thực hiện đúng có thể được ngụy trang cho đến giây phút cuối cùng. Nó hiệu quả nhất trên bề mặt chậm. Nếu bóng đến với bạn nảy bên trong sân giao bóng và ở vị trí thấp, đối với một cú đánh rơi chỉ cách lưới vài feet.</p>
+    <h3>64. Đừng cố cố quay ngược những người chạy bác trái!</h3>
+    <p>Trừ khi trò chơi của bạn khá nâng cao, tôi khuyên bạn nên chơi những cú đánh cực rộng đó bằng một lát cắt. Cố gắng thực hiện một cú sút tốc độ trung bình ngang sân và giữ bóng sâu. Độ sâu sẽ cho phép bạn có thời gian để phục hồi vị trí và bằng cách đi chéo sân, bạn sẽ giảm thiểu khả năng tạo góc của đối thủ. Giữ quỹ đạo bóng cao!</p>
+    <h3>65. Gals sẵn sàng—d đây là hướng dẫn tốt cho bác trái của bạn</h3>
+    <p>Trong cú backswing của bạn, hãy để cán vợt hướng theo hướng bạn muốn đánh bóng sau đó bước về phía lưới. Đưa mặt vợt vòng quanh và xuyên qua quả bóng. Hãy giữ vững cổ tay của bạn!</p>
+    <h3>66. QUÉT BÓNG PHÍA TRƯỚC TRÊN cú đánh TIẾP CẬN CỦA BẠN</h3>
+    <p>Khi bạn đang di chuyển để chống lại một cú đánh ngắn, đừng tát vào bóng. Giữ cổ tay chắc chắn và cầm nắm chắc chắn. Đưa đầu vợt xuyên qua quả bóng một cách mượt mà.</p>
+    <h3>67. Phát triển một phục vụ hiệu quả!</h3>
+    <p>Hầu hết các vấn đề về giao bóng đều có thể bắt nguồn từ kỹ thuật ném bóng bị lỗi. Việc ném bóng phải nhất quán đến cùng một vị trí. Tập bế bóng lên cho đến khi duỗi thẳng hoàn toàn trước khi thả bóng. Một khi bạn đã hoàn thiện cú ném, tốt nhất là về phía trước đường biên ngang, nghiêng người ra hoàn toàn và thả lỏng cổ tay để tăng tốc độ đầu vợt khi tiếp xúc.</p>
+    <h3>68. ĐỪNG Lười biếng MÁM MÁU!</h3>
+    <p>Tôi nhận thấy rất nhiều bạn ở các câu lạc bộ và công viên dành hàng giờ để đánh bóng qua lại từ sân cuối sân mà không hề cố gắng lấy được những quả bóng ngắn trong lần nảy đầu tiên. Đây rõ ràng là một cách luyện tập kém cỏi để thi đấu. Đặc biệt, các cầu thủ trẻ có xu hướng lùi quá sâu và chờ bóng đến. Thức dậy!</p>
+    <h3>69. ‘cân bằng và đẹp’—phong cách của chuyên gia!</h3>
+    <p>Một điều bạn nên chú ý khi quan sát hầu hết các tay vợt hàng đầu trong các giải đấu là sự khéo léo khi họ thực hiện những cú đánh khó nhất. Bạn nên bắt đầu nỗ lực để không bị vấp ngã và lảo đảo quanh sân. Lướt qua sớm, thiết lập và đánh bóng.</p>
+    <h3>70. Lấy vợt đó xuống lưng của bạn!</h3>
+    <p>Động tác gãi lưng:teC với khuỷu tay phải giơ cao, mắt nhìn vào bóng, dồn trọng lượng về phía bóng của bàn chân trái là thái độ cổ điển để có một cú giao bóng tuyệt vời. Cơ thể của bạn cong lên khi bạn nghiêng người ra ngoài sân sẵn sàng đưa phần bên phải của bạn nắm quyền và kiểm soát.</p>
+    <h3>71. Hãy hiểu tennis tỷ trung tâm!</h3>
+    <p>Các trận đấu được thực hiện bởi những người chơi ở lại điểm. Đây là bản chất của tỷ lệ phần trăm quần vợt! Đừng cố gắng áp dụng kỹ thuật bắn súng vượt quá khả năng của bạn. Đừng xếp hàng khi một sân bên trong sẽ hoàn thành công việc. Bạn phải làm cho đối thủ của bạn kiếm được từng điểm máu. Hãy quên đi sự ngoạn mục!</p>
+    <h3>72. Đánh chắc chắc?</h3>
+    <p>Nếu bạn thực sự quan sát quả bóng đến tận điểm tiếp xúc, bạn sẽ thấy có một hoặc hai giây ngay sau khi đánh bóng khi bạn vẫn đang nhìn vào vị trí mà quả bóng ở ngay lúc bạn đánh nó.</p>
+    <h3>73. Vòng đó!</h3>
+    <p>Ở cú đánh trái tay, cả hai chân phải hướng về phía con hẻm mặc dù bạn chưa thực hiện một bước nào mà chỉ xoay sang trái. Nếu vị trí của bạn đúng, bạn sẽ quan sát bóng qua vai. Khi cơ thể bạn bắt đầu cuộn tròn, hãy bước về phía lưới và chuyển trọng lượng của bạn sang bàn chân trước. Vai đóng vai trò như một điểm tựa cho</p>
+    <h3>74. Chơi hopscotch trên bóng chuyền đầu tiên!</h3>
+    <p>Nếu bạn nhớ mình đã chơi trò nhảy lò cò như thế nào, điều đó sẽ giúp ích rất nhiều cho bạn trong việc thực hiện cú vô lê đầu tiên đó. Chỉ cần giả sử thái độ chia bước được minh họa ở đây khi vợt của đối thủ gặp bóng. Từ vị trí này, bạn có thể đẩy ra theo đường chéo để gặp bóng ở hai bên. Sau đó tiếp tục thực hiện cú vô lê tiếp theo.</p>
+    <h3>75. Bây giờ thư giãn cánh tay đó-</h3>
+    <p>Trẻ em và hầu hết những người mới tập, khi được yêu cầu cầm vợt chắc chắn, thường căng thẳng toàn bộ. Họ chỉ nên bóp cán vợt bằng cổ tay và các ngón tay chắc chắn trong khi vẫn giữ trạng thái thoải mái. Cố gắng hơi khép khuỷu tay qua điểm tiếp xúc. Điều này có nghĩa là nó hơi cong.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_forehand_prepare_early.jpg" alt="Chuẩn bị sớm và mở vợt ngắn khi bị ép chạy biên." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Chuẩn bị sớm và mở vợt ngắn khi bị ép chạy biên.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p9_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
   </div>
 </section>
 
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 76 – 100</h2></div>
+</section>
 
-<section id="phan-4" class="chapter-box">
-  <h2 class="chapter-title">Phần IV: Chiến Thuật Thi Đấu, Quần Vợt Phần Trăm &amp; Nghệ Thuật Đánh Đôi</h2>
-  <div class="chapter-sub">Làm chủ chiến thuật quần vợt phần trăm: Nhận diện các điểm số bản lề, nghệ thuật giấu đòn đánh và công thức thống trị mặt lưới trong thi đấu đánh đôi</div>
-
-  <div class="section-item">
-    <h3 class="section-heading">10. Quần Vợt Phần Trăm: Nhận Diện Các Điểm Số Bản Lề</h3>
-    <div class="section-text">Bạn phải làm được nhiều điều hơn là chỉ đơn thuần đánh quả bóng qua lưới; bạn phải thi đấu bằng cái đầu đầy toan tính.
-    
-Trong một trận đấu quần vợt đỉnh cao, không phải mọi điểm số đều có giá trị tương đương nhau.
-    
-Những điểm số như ba mươi-đều, ba mươi-bốn mươi (Break point), hay lợi điểm là những thời khắc sống còn quyết định kẻ thắng người thua.
-    
-Ở những thời điểm căng thẳng này, hãy tuân thủ triệt để nguyên lý Quần vợt phần trăm (Percentage tennis):
-    
-Đừng bao giờ mạo hiểm tung ra một cú đánh khó có tỷ lệ thành công dưới năm mươi phần trăm nhằm tìm kiếm sự hào nhoáng.
-    
-Hãy nhắm vào những mục tiêu an toàn và rộng lớn: Đánh bóng cao hơn mép lưới từ nửa mét đến một mét, hướng bóng chéo sân sâu về phía điểm yếu của đối thủ và ép họ phải tự mắc sai lầm dưới áp lực ngột ngạt.
-    
-Kẻ biết kiên nhẫn tích lũy tỷ lệ phần trăm an toàn sẽ là kẻ giơ cao chiếc cúp vô địch vào cuối ngày.</div>
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">11. Nghệ Thuật Giấu Đòn Đánh &amp; Tấn Công Triệt Để Bóng Ngắn</h3>
-    <div class="section-text">Đừng bao giờ để đối thủ đọc được ý đồ đánh bóng của bạn như đọc một cuốn sách mở.
-    
-Hãy học cách chuẩn bị động tác giống hệt nhau cho mọi cú đánh: Dù bạn định tung ra một cú vụt bóng sấm sét chéo sân hay một cú bỏ nhỏ (Drop shot) tinh tế, tư thế mở vợt ban đầu phải hoàn toàn tương đồng.
-    
-Chỉ vào một phần mười giây cuối cùng trước khi chạm bóng, bạn mới thay đổi tốc độ vung vợt hoặc góc mặt vợt để khiến đối phương hoàn toàn bị lỡ đà.
-    
-Đặc biệt, mỗi khi quả bóng của đối phương rơi ngắn vào trong ô giao bóng, bạn phải lập tức di chuyển tiến vào sân để tấn công.
-    
-Đừng lùi lại phía sau vạch cuối sân để chờ bóng nảy; hãy đón bóng ở đỉnh điểm nảy ngang tầm thắt lưng, vung vợt đè sâu sang góc sân và theo đà lao thẳng lên lưới để khép lại điểm số bằng một cú vô-lê dứt điểm gọn gàng.</div>
-
-  <figure class="diagram-figure">
-    <img src="rod_laver_tips_assets/laver_disguised_dropshot.jpg" alt="Nghệ thuật giấu đòn bỏ nhỏ và triệt hạ đối phương bóng ngắn" loading="lazy">
-    <figcaption>Hình 11.1: Cú bỏ nhỏ giấu bài tuyệt hảo: Tiếp cận bóng với tư thế chuẩn bị đánh bóng sâu uy lực rồi bất ngờ giảm lực và đệm mặt vợt lướt nhẹ dưới bóng, khiến đối thủ trở tay không kịp.</figcaption>
-  </figure>
-
-  </div>
-
-  <div class="section-item">
-    <h3 class="section-heading">12. Chiến Thuật Đánh Đôi: Chiếm Lĩnh Mặt Lưới &amp; Phản Xạ Sát Thủ</h3>
-    <div class="section-text">Trong thi đấu đánh đôi, toàn bộ các pha hành động quyết định đều diễn ra ở khu vực lưới.
-    
-Đội nào chiếm lĩnh được lưới trước sẽ nắm giữ tới bảy mươi lăm phần trăm cơ hội giành chiến thắng điểm số đó.
-    
-Khi trả giao bóng trong đánh đôi, sự chắc chắn và độ an toàn phải được đặt lên hàng đầu thay vì tốc độ; mục tiêu tối thượng của bạn là phải đưa quả bóng đi chéo sân và rơi thấp dưới chân người đang di chuyển lên lưới của đối phương, tuyệt đối không được đánh bóng bổng vào tầm vợt của người đứng lưới sẵn.
-    
-Người đứng lưới phải luôn chủ động, liên tục nhún nhảy và sẵn sàng di chuyển cắt mặt (Poaching) để bắt gọn những đường bóng lơ lửng của đối phương.
-    
-Hãy luôn giữ cự ly yểm trợ và giao tiếp chặt chẽ với người đồng đội; một cặp đôi ăn ý và tràn đầy năng lượng tích cực trên lưới sẽ là một pháo đài bất khả chiến bại.</div>
+<section class="book-part">
+  <div class="content-body">
+    <h3>76. BẠN CÓ Lười CHÂN HƠN KHÔNG?</h3>
+    <p>Xu hướng đánh từ chân sau khiến cầu thủ không thể di chuyển trọng lượng của mình vào cú đánh, do đó đòi hỏi nhiều năng lượng hơn để đạt được tốc độ và độ sâu. Nó cũng làm cho vai mở ra sớm hơn một chút và có xu hướng kéo cú đánh chéo sân. Cố gắng thiết lập nhanh hơn và bước về phía trước bằng chân trước.</p>
+    <h3>77. The lob—đúng đúng, đúng thời gian</h3>
+    <p>Quần vợt tốt không nhất thiết đồng nghĩa với tốc độ không đổi. Tôi cảm thấy hầu hết các cầu thủ cấp câu lạc bộ không dành đủ thời gian luyện tập cho kỹ thuật lốp bóng của họ.</p>
+    <h3>78. Bạn luôn luôn trễ?</h3>
+    <p>Nếu bạn nhận thấy nhiều lần bạn đánh bằng chân sau, có thể bạn đang đánh bóng với cây vợt vẫn được giữ ở phía trước. Để cải thiện, hãy bắt đầu thu vợt lại khi bạn xoay và di chuyển theo hướng bóng. Bây giờ hãy chuyển trọng lượng của bạn lên bàn chân trước khi bạn bắt đầu vung!</p>
+    <h3>79. Chuyển vào!chuyển vào!</h3>
+    <p>Bạn đang chờ đợi điều gì? Áp sát và thực hiện cú vô lê đó trước khi bạn phải thực hiện một cú vô lê khó khăn. Giữ áp lực lên đối thủ trong suốt thời gian bạn ở trên lưới. Đầu gối co lại giúp bạn xuất phát nhanh và xuống nhanh để thực hiện cú đánh thấp.</p>
+    <h3>80. Các cô gái, hãy giữ tay của bạn trong các bút bằng hai tay!</h3>
+    <p>Nếu những cô gái thích đánh bằng hai tay và muốn thành công hơn, hãy giữ hai bàn tay của bạn gần nhau nhất có thể và cẳng tay duỗi thẳng ngay sau tay cầm. Khi thực hiện động tác tiếp theo, tạ tiến về phía trước, bên phải sẽ cong và bên trái thẳng. Hãy để vai của bạn đi qua.</p>
+    <h3>81. BẠN ĐÃ LÀM CHỦ ĐƯỢC BÓNG CHUYỀN THẢ chưa?</h3>
+    <p>Đó là một cú đánh khó, đòi hỏi sự hoàn hảo để trở thành tài sản. Vợt phải nghiêng về phía sau và dùng một lượng nhỏ cổ tay để quét vợt xuống dưới bóng khi tiếp xúc. Cảnh quay này đòi hỏi sự liên lạc và nghệ thuật tuyệt vời.</p>
+    <h3>82. Chỉ tay vào mục tiêu</h3>
+    <p>xoay người sang một bên và thu vợt lại thật nhanh. Đặt cổ tay của bạn ra sau và cố gắng hạn chế động tác vung vợt về phía sau đến điểm mà tay cầm hướng vào vị trí trên sân mà bạn đang hướng bóng tới. Nằm xuống!</p>
+    <h3>83. Dài tay khác để cân bằng</h3>
+    <p>khi bạn di chuyển qua để thực hiện cú vô lê đó. Nó sẽ giúp bạn xoay người tốt hơn để đấm bóng. Đừng quên giữ cổ tay nằm ngửa trong suốt quá trình thực hiện cú vô lê. Đừng hất vợt!</p>
+    <h3>84. Để tấn công—bắt bóng eo cao trên đỉnh nảy</h3>
+    <p>và giữ mặt vợt thẳng đứng, tay cầm song song với mặt đất khi bạn chuyển trọng lượng của mình vào cú đánh. Lái mặt vợt xuyên qua quả bóng, kéo dài mặt vợt khi bạn đi qua. Có một mục tiêu trong đầu sẽ khiến đối thủ của bạn di chuyển!</p>
+    <h3>85. Sử dụng tay trái để kiếm vợt xoay qua trên swix sau</h3>
+    <p>điều này sẽ đảm bảo một cú xoay vai tốt và đặt vợt đúng vị trí để có một cú đánh hiệu quả. Không cuộn khuỷu tay phải của bạn lên mà giữ nó hướng xuống và hơi uốn cong. Cho phép nó thẳng khi bạn đi qua.</p>
+    <h3>86. Nếu bạn phải lại vào để nhận một giải</h3>
+    <p>BẮN giữ vợt ở phía trước và cổ tay của bạn ở phía sau. Đấm bóng sâu về phía trái tay của đối thủ. Bây giờ di chuyển vào lưới hơi chếch về bên phải của đường giữa sân. Hãy chuẩn bị cho một điều có thể</p>
+    <h3>87. Giữ mắt của bạn trên bóng!</h3>
+    <p>Các bạn ơi, khi tôi giữ bóng cho bạn có nghĩa là hãy quan sát quả bóng đó từ khi bạn tung nó lên để giao bóng cho đến khi điểm đến và ngừng lo lắng về việc đối thủ của bạn sẽ đi đâu. Hầu hết người chơi đều quan sát quả bóng cho đến khi nó nảy lên và sau đó nhìn đi nơi khác khi họ bắt đầu vung vợt, gây ra rất nhiều cú đánh sai.</p>
+    <h3>88. Một hành động cổ tay đầy đủ trong phục vụ</h3>
+    <p>được yêu cầu để di chuyển quả bóng về phía trước với tốc độ. Vợt tiếp tục đi theo, xuyên qua cơ thể từ phải sang trái. Động lượng từ cú xoay hoàn toàn sẽ đưa bạn tiến về phía sân - ý chí của bạn sẽ kết thúc ở bên trái cơ thể.</p>
+    <h3>89. Xem bóng khi bạn lại lại!</h3>
+    <p>Nếu bạn không tiếp tục theo dõi quỹ đạo của quả bóng khi nó bay qua lưới và bạn nhảy lùi lại để thiết lập bên dưới quả bóng, rất tiếc là bạn sẽ không thể thực hiện được một cú đập hiệu quả!</p>
+    <h3>90. Hãy đảm bảo vợt di chuyển vào bóng trên cùng mặt bằng như bóng!</h3>
+    <p>Cố gắng tiếp xúc ngay phía trước bên phải của bạn Hướng mặt vợt xuyên qua quả bóng theo hướng bạn muốn bóng Kết thúc với đầu vợt cao nhưng mở rộng về phía sân đối diện.</p>
+    <h3>91. Hãy làm những bóng chuyện đó</h3>
+    <p>—bạn sẽ chỉ có thời gian cho một cú backswing ngắn nhưng bằng cách giữ trọng lượng của bạn về phía trước và cổ tay vững chắc, bạn sẽ có đủ lực và độ sâu. Chơi bóng ở phía trước với đầu gối cong. Di chuyển về phía trước để bắt bóng cao hơn trong chuyến bay, từ đó mang lại cho bạn góc nhìn về phần sân của đối thủ!</p>
+    <h3>92. Bạn có biết cách đánh một lob vòng trượt không?</h3>
+    <p>Một vũ khí tốt để chống lại một tấm lưới quá mạnh là cú đánh xoáy mạnh. Cú đánh mạnh qua đầu anh ta, nhỏ giọt mạnh và sau đó lao về phía hàng rào phía sau. Cú đánh này đòi hỏi kỹ thuật vuốt ve ở mức độ cao. Bạn nên có một cú đánh chạm đất xoáy lên tốt trước khi thực hiện động tác này. Tôi thấy tốt nhất là tiếp xúc bóng ngay sau chân trước và cao ngang thắt lưng.</p>
+    <h3>93. Tìm hiểu cách ngụy phục cách chia sẻ hiệu quả- ly!</h3>
+    <p>Khi bạn di chuyển với một quả bóng ngắn, bạn có báo hiệu cú đánh của mình về hướng, tốc độ và độ sâu bằng thái độ cơ thể của bạn không? Nếu đối thủ của bạn có thể đọc được cú đánh trước khi bạn thực hiện, họ sẽ mất đi yếu tố bất ngờ rất quan trọng. Thiết lập theo cùng một cách cho tất cả các bức ảnh!</p>
+    <h3>94. Bạn có dành thời gian thực hành lob của mình không?</h3>
+    <p>Với cả hai kiểu lốp bóng, tấn công và phòng thủ, bạn đánh bóng giống như khi bạn đánh bóng. Không nên đánh bóng giật mạnh, dừng vợt quá sớm. Giữ bóng trên vợt càng lâu càng tốt. Điểm cao nhất phải ở ngay phía trên đối thủ của bạn.</p>
+    <h3>95. Trái slice có nhiều công dụng</h3>
+    <p>nó có thể mang lại cho bạn một cú đánh rơi cũng như một cú sút góc chéo sân sắc nét. Bạn có thể nâng một quả bóng thấp lên bằng một cú cắt bóng và sử dụng nó để trả lại một quả giao bóng nhanh. Kéo quả bóng xuống và nhớ bám theo hết chặng đường nếu không bạn sẽ đánh được một cú chip.</p>
+    <h3>96. Như cánh tay của bạn nhận bóng lên—tấm trọng lượng của bạn vào chân trước của bạn!</h3>
+    <p>Điều này không có nghĩa là bạn chỉ cần di chuyển đầu về phía lưới. Ngược lại, hãy di chuyển trọng lượng cơ thể của bạn qua hông, tạo một đường cong cho cơ thể để cho phép vai trước giữ nguyên lâu nhất có thể.</p>
+    <h3>97. Trong dịch vụ trả lại đôi, quan trọng nhất</h3>
+    <p>i YẾU TỐ TANT LÀ ĐỂ CÓ ĐƯỢC</p>
+    <h3>98. Bóng trong trận chơi từ net man!</h3>
+    <p>Thực hiện cú trả bóng chéo sân, thấp và nông dưới chân người giao bóng khi anh ta tiến vào sau cú giao bóng của mình. Nếu lưới chơi quá gần và có xu hướng săn trộm, hãy đánh xuống ngõ.</p>
+    <h3>99. ĐẶT CỔ TAY LẬP LẠI VÀ KIẾM Cẳng tay đằng sau cú vô lê!</h3>
+    <p>Bất cứ khi nào tôi có thể để có được sức mạnh và cú đấm, hãy dành thời gian phát triển tư thế chuyền bóng như trong hình này. Tất nhiên, khi bạn phải mở rộng để thực hiện một cú đánh rất rộng, thái độ này sẽ ở mức tối thiểu, nhưng trong một cú vô lê cố định, bạn phải chắc chắn và chắc chắn. Đấm xuyên qua quả bóng.</p>
+    <h3>100. Khi đối thủ đang tiêu chuẩn bạn bằng ổ cứng và trò chơi mạng rắn</h3>
+    <p>—đừng cố gắng chơi trò chơi của anh ấy. Thay vì cố gắng đánh nhanh hơn, hãy thay đổi nhịp độ và bạn có thể làm đảo lộn nhịp điệu của anh ấy—hãy chậm lại! Anh ấy có thể thích bắt kịp tốc độ của bạn. Đưa ra những quả bóng sâu và phao có độ nảy cao và chậm! Sĩ VA</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_backhand_shoulder_turn.jpg" alt="Xoay vai hoàn toàn để đưa bóng vào tầm đánh trái tay." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Xoay vai hoàn toàn để đưa bóng vào tầm đánh trái tay.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p10_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
   </div>
 </section>
 
-        </main>
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 101 – 125</h2></div>
+</section>
+
+<section class="book-part">
+  <div class="content-body">
+    <h3>101. Quay vai và di chuyển vào!</h3>
+    <p>Hãy kết thúc những khoản lợi nhuận cao yếu đó bằng những bước tiến nhanh về phía trước và một cú bỏ đi rõ ràng. Cú vô lê trái tay tương tự như đòn karate được thực hiện ở phía trước từ khuỷu tay.</p>
+    <h3>102. Hãy xuống cú đáng này như một người chơi bóng chày kiếm một bóng đá</h3>
+    <p>xoay người nhanh chóng và đưa vai của bạn song song với đường bay của quả bóng. Nếu bạn đang vội, hãy bỏ qua động tác backswing! Hãy cúi xuống càng gần mặt đất càng tốt nhưng hãy giữ thăng bằng tốt. Đừng nhấc lên khi bạn thực hiện cú đánh. Mở nhẹ mặt vợt để nâng vợt lên.</p>
+    <h3>103. Nhiều người chơi trung cấp để bóng thả quá thấp khi nảy!</h3>
+    <p>Đặc biệt trên các bề mặt chậm, hãy di chuyển tới và bắt bóng trước khi nó rơi xuống dưới độ cao của lưới. Quy trình này sẽ giữ đối thủ của bạn ở thế phòng thủ và cho phép bạn mắc lỗi. Bạn cũng sẽ có thể thực hiện cú đánh này với tốc độ nhanh hơn!</p>
+    <h3>104. NHẬN MỘT ZIP NHỎ TRONG CÁC Ổ đĩa ĐÓ!</h3>
+    <p>Để truyền đạt một số tốc độ cho các cú thuận tay của bạn mà vẫn ổn định, tôi khuyên bạn nên sử dụng một lượng xoáy lên vừa phải. Hãy chắc chắn rằng vợt của bạn đang di chuyển về phía trước, song song với mặt đất. Vuốt bóng nhẹ lên khi tiếp xúc, tiếp tục vung ra và hướng lên trên.</p>
+    <h3>105. Cách tốt nhất để mang vợt trở lại là nhanh chóng!</h3>
+    <p>Khi bạn thực hiện lượt của mình, hãy đưa vợt thẳng về phía sau mà không cần vung vợt hoặc rườm rà bằng tay trái để dẫn vợt vào vị trí thích hợp. Cố gắng tiếp bóng ở phía trước bên phải của bạn từ 12 đến 18 inch. Cố gắng đánh bóng ở độ cao ngang thắt lưng để có lực tối đa.</p>
+    <h3>106. MỘT SỐ BẠN KHÔNG NHẬN THỨC RẰNG ĐẦU GỐI CỦA MÌNH SẼ Uốn cong!</h3>
+    <p>Trong những chuyến đi của mình, tôi nhận thấy nhiều cầu thủ câu lạc bộ chưa bao giờ học được thói quen tốt của vận động viên là di chuyển với đầu gối cong. Từ vị trí sẵn sàng cho đến khi hoàn thành cú đánh, di chuyển với đầu gối gập lại!</p>
+    <h3>107. Để đảm bảo kiểm soát, hãy sử dụng theo dõi đầy đủ!</h3>
+    <p>Việc theo dõi cho phép dây vợt giữ bóng lâu hơn và đảm bảo có thể hướng cú đánh của bạn đến điểm trên sân. Kết thúc với tư thế vợt giơ cao và hướng về phía trước. Bạn sẽ lưu ý rằng không cần thiết phải duỗi thẳng đầu gối để hoàn thành với động tác theo sát cao— hãy cúi xuống!</p>
+    <h3>108. Bắt đầu đúng—kết thúc đúng!</h3>
+    <p>Bắt đầu với tư thế hai tay cao ngang thắt lưng, giữ bóng bằng các ngón tay chứ không phải trong lòng bàn tay. Khi tay trái từ từ giơ lên và duỗi thẳng, tay vợt thả xuống qua bên phải Chuyển động phải trơn tru và thoải mái. Hãy quan sát quả bóng từ trên cao cho đến khi nó được đánh trúng. Đừng trượt chân trước!</p>
+    <h3>109. Hãy dẹp lưng một chút</h3>
+    <p>Nếu bạn quan sát hầu hết những cầu thủ giỏi hơn, bạn sẽ thấy rằng họ giữ lưng khá thẳng khi tiếp xúc. Chỗ uốn cong ở đầu gối. Đừng bướu qua quả bóng! Bạn có thể hạ bóng xuống thấp nhất ngay cả khi đầu gối của bạn gần như chạm đất.</p>
+    <h3>110. Bạn có muốn nhiều sức mạnh trái trái hơn không?</h3>
+    <p>Một khi bạn đã học được cách giữ bóng trong cuộc và hướng nó đến các điểm khác nhau trên sân, bạn sẽ muốn phát triển một số lực. Bạn phải duy trì cú vung vợt dễ dàng để không làm mất đi độ chính xác. Sức mạnh đến từ: đánh vào giữa vợt, bóng chạm vào phía trước cơ thể, xoay vai tốt khi thực hiện cú đánh sau, cổ tay vững chắc, trọng lượng cơ thể di chuyển về phía trước và theo sau tốt!</p>
+    <h3>111. Đấm ĐÓ, ĐỪNG quất nó!</h3>
+    <p>Nếu bạn thấy mình gặp khó khăn trong việc thực hiện cú vô lê của mình, có thể bạn đã không đấm bóng bằng cổ tay chắc chắn. Tôi quan sát thấy nhiều người chơi vung vợt khi thực hiện cú vô lê và lắc cổ tay của họ, khiến tốc độ đầu vợt đi qua điểm tiếp xúc bóng quá nhanh.</p>
+    <h3>112. Chụp di chuyển là khó nhất!</h3>
+    <p>Tỷ lệ lỗi của mọi cầu thủ đều tăng lên khi anh ta buộc phải chạy để chạm bóng. Do đó, hãy dành nhiều thời gian hơn với các bạn tập của bạn, di chuyển nhau xung quanh sân, từ bên này sang bên kia, lên và lùi. Đừng dành quá nhiều thời gian luyện tập chỉ đơn giản là đưa bóng qua lại ở giữa đường cuối sân. Luyện tập để cải thiện mắt xích yếu nhất của bạn!</p>
+    <h3>113. Không thể có âm thanh mà không có kiểm soát đầu vợt tốt mọi lúc!</h3>
+    <p>Việc kiểm soát đầu vợt sẽ khó khăn hơn nhiều nếu bạn ở quá xa cơ thể. Giữ phần trên của bạn hướng xuống và khuỷu tay kéo vào trong khi thực hiện backswing.</p>
+    <h3>114. Sử dụng tay trái để tránh khỏi quay trên chuẩn bị bóng chuyền</h3>
+    <p>nhiều người chơi đưa vợt về phía sau quá xa trong cú vô lê trái tay của họ. Bạn phải đón bóng ở phía trước cơ thể mình. Bằng cách giữ bên trái của bạn gần với xương sườn, bên phải của bạn sẽ dừng lại ngắn hơn khi thực hiện động tác backswing và bạn sẽ tung cú vô lê về phía trước!</p>
+    <h3>115. Mẹo trái tay!</h3>
+    <p>Rút vợt nhanh về phía sau bằng tay trái. Khi kết thúc động tác backswing, vai đã xoay và bạn đang quan sát bóng qua vai phải của mình. Tay trái vẫn ở cổ vợt và sẽ thả tự do khi bạn bắt đầu vung vợt về phía trước.</p>
+    <h3>116. ĐẶT CỔ TAY LẠI VÀ Đấm bóng chuyền!</h3>
+    <p>Có quá nhiều cô gái trong số các bạn quá chú trọng vào cú vô lê. Tiến lại gần quả bóng hơn và luôn nhỏ gọn. Bây giờ hãy đấm về phía trước. Không có cú búng tay! Cố gắng có được cảm giác giữ khuỷu tay và cẳng tay của bạn phía sau vợt.</p>
+    <h3>117. ĐỪNG THIẾT LẬP QUÁ GẦN BÓNG HOẶC BẠN SẼ PHẢI nghiêng người ra xa để thực hiện cú sút!</h3>
+    <p>Hãy thử kiểm tra cú vung vợt của bạn trước Ghi chú khi bạn đưa vợt đi qua, khoảng cách giữa cơ thể bạn và tâm mặt vợt. Điều này sẽ giúp bạn có ý tưởng tốt hơn về khoảng cách để thiết lập tính từ đường bóng.</p>
+    <h3>118. NẾU BẠN MUỐN CÓ VÒNG CƠ THỂ TỐT, HÃY Uốn ĐẦU GỐI!</h3>
+    <p>Khi vợt bắt đầu hạ xuống theo tư thế gãi lưng, bạn kiễng chân lên và hơi cong đầu gối về phía trước. Khi vợt đi lên trên quả bóng, khuỷu tay của bạn phải duỗi thẳng và cổ tay của bạn bị gãy khi bạn đi ra khỏi vòm. Bây giờ tất cả mọi thứ, chân, cơ thể, vai, cổ tay và vợt, cho đến lực của cú giao bóng.</p>
+    <h3>119. Giữ bóng lên và trên băng lưới đó bằng lãi an toàn!</h3>
+    <p>Hầu hết những người chơi trung bình đều có quan niệm sai lầm rằng họ phải đánh mọi quả bóng thật mạnh và thấp đến lưới. Để giữ bóng sâu trong phần sân đối phương, hãy đánh bóng cao hơn lưới từ 3 đến 4 feet với tốc độ trung bình và hướng cú sút.</p>
+    <h3>120. Nâng đầu vợt không phải khuỷu tay của bạn!</h3>
+    <p>Khi thực hiện cú vô lê ngang vai, hãy nghiêng người về phía trước, uốn cong khuỷu tay, cứng cổ tay và nâng mặt vợt lên. Bây giờ hãy đấm xuyên qua quả bóng.</p>
+    <h3>121. Bóng chuyền trái cao cần kỹ năng tuyệt vời!</h3>
+    <p>Hầu hết người chơi ở cấp câu lạc bộ đều thổi được nhiều điểm khi thực hiện cú đánh này chỉ bằng một cú búng tay. Bạn phải xoay nhẹ vai khi đưa đầu vào bóng, giữ vững cổ tay. Đừng đóng mặt vợt!</p>
+    <h3>122. Chuẩn bị đủ nhanh để gặp bóng ngoài trước cơ thể của bạn!</h3>
+    <p>Phải mất nhiều tháng luyện tập trước khi bạn bắt đầu có được khả năng căn thời gian cho cú vung vợt của mình để tiếp bóng một cách mượt mà ở phía trước. Bạn không thể phát triển tốc độ nếu bạn luôn đến muộn và bị buộc phải thực hiện cú đánh theo sau. Thực hành khiến người chơi phải thực hiện!</p>
+    <h3>123. Backtay backswing</h3>
+    <p>Khi hoàn thành động tác vung vợt sau, hãy chuẩn bị chuyển trọng lượng của bạn lên 4 bàn chân trước. Vai phải hướng về phía trước, tay trái vẫn giữ vợt gần cổ, mặt vợt hơi ngả ra sau, khuỷu tay thả lỏng và hướng xuống sân. Khi bạn di chuyển bằng chân trước, bạn bắt đầu về phía trước và hơi duỗi thẳng, cổ tay vững chắc!</p>
+    <h3>124. Quý vị cố gặp bóng cao hơn lưới</h3>
+    <p>ngay khi bạn biết bóng đang bay về phía nào, hãy di chuyển về phía trước và tới bóng. Cố gắng đánh bóng cao đến thắt lưng, nó mang lại sức mạnh và khả năng kiểm soát tối đa. Nếu bóng cao, hãy duỗi chân ra, cao hơn một chút bằng cách kiễng chân lên. Ngay khi bạn bắt đầu hướng về phía bóng, hãy đưa vợt trở lại vị trí ngay sau chân sau. Điều này sẽ xoay cơ thể theo hướng của cú đánh dự định. Việc chuẩn bị vợt nhanh chóng là hoàn toàn cần thiết.</p>
+    <h3>125. Dài lên cao để có bóng chuyền cao, nhưng hãy giữ đầu của bạn về phía trước!</h3>
+    <p>Tận dụng tối đa chiều cao của bạn trong cả cú vô lê cao và cú đánh trên mặt đất. Có thể có một xu hướng mạnh mẽ khi bạn đứng thẳng và kéo đầu ra sau. Điều này sẽ khiến vai trước của bạn mở ra quá sớm, khiến mặt vợt bị kéo bóng ra ngoài.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_two_handed_backhand.jpg" alt="Trái tay hai tay: cuộn đầu gối và mở hông đúng nhịp." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Trái tay hai tay: cuộn đầu gối và mở hông đúng nhịp.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p11_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 126 – 150</h2></div>
+</section>
+
+<section class="book-part">
+  <div class="content-body">
+    <h3>126. Mở rộng qua bóng!</h3>
+    <p>Ngay cả khi bạn không thể đặt chân để bước một bước về phía lưới, bạn vẫn có thể tăng tốc độ thực hiện cú đánh của mình bằng cách đảm bảo đưa bóng hoàn toàn về hướng sân sau. Đừng rụt rè!</p>
+    <h3>127. Hãy xuống đến bóng!</h3>
+    <p>Hãy đến đủ gần với đường bay của quả bóng để bạn có thể giữ đầu cúi xuống và vai về phía trước. Hãy theo dõi cú đánh và bạn sẽ kiên định hơn. Mắt bạn càng gần điểm tiếp xúc thì càng dễ dàng đặt bóng vào tâm vợt.</p>
+    <h3>128. Thường xuyên bạn sẽ phải bật cổ tay của mình!</h3>
+    <p>Khi bạn bị quả bóng sâu ở phía sau bắt được, bạn phải dùng đến cú đánh của người chơi bóng quần và đưa tay ra sau để đánh bóng trở lại cuộc chơi.</p>
+    <h3>129. Bạn có muốn đặt phim này cho người chiến thắng không?</h3>
+    <p>Khi bạn thực hiện cú vô lê với quả bóng cao đáng yêu mà bạn đang chờ đợi, đừng tát nó như thể bạn đang đánh một quả bóng cao đến gần, hãy di chuyển trọng lượng của bạn về phía trước. Nếu bạn ở khá gần, hãy kéo bóng chéo sân bằng cách uốn mặt vợt quanh mép ngoài giống như bóc một quả cam.</p>
+    <h3>130. Bạn có chắc chắn rằng bạn đang đánh qua bóng không?</h3>
+    <p>Điều quan trọng là bạn phải giữ bóng trên vợt của mình càng lâu càng tốt và cố gắng thực hiện cú theo dõi hoàn chỉnh nhất có thể. Một mẹo hay là hãy tưởng tượng mỗi quả bóng đến với bạn có ba quả bóng ngay phía sau nó. Hãy nghĩ đến việc luồn cả bốn quả bóng qua vợt khi bạn di chuyển nó về phía trước.</p>
+    <h3>131. Cánh tay mở rộng, cổ tay vững chắc, súng ngược tối thiểu cho những bóng chuyền rộng</h3>
+    <p>đừng ném đầu vợt vào bóng. Đẩy tay vợt về phía trước và đầu sẽ đồng loạt di chuyển về phía trước. Sử dụng rất ít theo dõi. Đưa bóng trở lại sâu và chuẩn bị sẵn sàng cho cú vô lê tiếp theo. Có thể phải mất vài cú vô lê để mở sân cho một cú vô lê chiến thắng. Hãy kiên nhẫn!</p>
+    <h3>132. Bóng trái hai tay cần phải quay vai nhiều hơn!</h3>
+    <p>Để đạt được độ mở rộng tốt qua khu vực đánh bóng và theo hướng tự nhiên, bạn phải cho phép xoay vai hoàn toàn. Nếu không có điều này, tay dự phòng không thể đưa ra phía trước và sẽ làm hỏng cú xoay. Động tác vai cực đoan này không cần thiết trong cú đánh trái tay bằng một tay.</p>
+    <h3>133. Khi bạn phải đánh từ thế kỳ mở</h3>
+    <p>cố gắng giữ cho khuỷu tay của bạn được uốn cong và khuỷu tay của bạn thoải mái gần với cơ thể. Thả nhẹ đầu vợt. Cố gắng đón bóng ở phía trước vị trí của bạn so với lưới để có được sức mạnh của cẳng tay sau cú đánh.</p>
+    <h3>134. Di chuyển hông của bạn hướng đến tòa án dịch vụ</h3>
+    <p>nhiều người trong số các bạn đã quá cứng nhắc khi giao bóng. Khi bạn đưa bóng lên để giao bóng với tư thế duỗi thẳng hoàn toàn, hãy cố gắng di chuyển trọng lượng của bạn về phía lưới bằng cách đẩy về phía trước— chứ không phải đầu của bạn! Lúc này bạn sẽ cảm thấy các cơ bên trái bị kéo căng.</p>
+    <h3>135. Hãy để thân của bạn bắt đầu bung ra!</h3>
+    <p>Khi bạn đưa vợt vào bóng, bạn sẽ cảm thấy căng ở lưng dưới khi bạn thả vợt ra. Đừng tập trung vào quả bóng. Di chuyển sang một bên và vào bóng với tư thế duỗi thẳng hoàn toàn. Đánh bóng một cách tự tin và có lực, nhưng đừng hy sinh khả năng kiểm soát.</p>
+    <h3>136. Hãy chỉ vào bóng!</h3>
+    <p>Để có được khả năng kéo dài tốt cho cú theo bóng của bạn và tránh việc kéo bóng lên quá sớm, hãy thử đưa tay về phía hướng bay của quả bóng mà bạn vừa đánh. Bạn sẽ thấy rằng có thể bạn đang chỉ vào quả bóng đang lùi lại. Điều này sẽ làm cho những cú đánh dường như chết trên vợt của bạn.</p>
+    <h3>137. Chuyển qua và di chuyển theo đường chéo!</h3>
+    <p>Đối với những cú vô lê rộng ở phía thuận tay, hãy bắt chéo chân bằng chân trái nhưng hơi hướng về phía lưới. Xoay nhanh bằng chân phải khi bạn bước ra và bạn'!thấy rằng bạn không chỉ có thể vươn xa hơn mà còn có thể dễ dàng giữ vững những cú vô lê thấp khó đó.</p>
+    <h3>138. Bên trái tay của bạn hãy gặp bóng ngoài trước-</h3>
+    <p>Đó là cách duy nhất để có được lực trong cú đánh và tránh kéo bóng. Đưa vai của bạn sang một bên lưới. Khi trọng lượng của bạn di chuyển về phía trước trên bàn chân phải của bạn, phần bên phải của bạn sẽ vững lên và chịu lực đẩy của cú vung về phía trước giống như một cầu thủ bóng chày đánh tay trái.</p>
+    <h3>139. Bước qua bằng chân phải để thực hiện bóng chuyển trái rộng rộng!</h3>
+    <p>Bạn sẽ thấy rằng bạn có phạm vi tiếp cận lớn hơn nhiều khi sử dụng kỹ thuật này thay vì bước bằng chân gần. Phương pháp này cho phép vai phải vượt qua và có xu hướng tăng khả năng tiếp cận thêm ba hoặc bốn feet.</p>
+    <h3>140. Ước mơ sẽ không thành công!sẽ thực hành</h3>
+    <p>Để thành thạo cú vô lê trái tay thấp đó, bạn sẽ phải dành nhiều giờ cần thiết để luyện tập uốn cong đầu gối, cúi đầu xuống, giữ vững cổ tay và quan sát bóng như một con chim ưng.</p>
+    <h3>141. Chơi bóng có giới hạn cao!</h3>
+    <p>Thông thường, đó là sự thật, bạn sẽ thấy những cầu thủ hàng đầu trong giải đấu thực hiện các cú đánh bằng chân thẳng và kiễng chân lên. Điều này giúp họ có thể gặp bóng sớm hơn bằng cách đánh bóng cao hơn khi nảy và vẫn sử dụng cú xoay người tự nhiên hơn ở khu vực chung của cơ thể. Những người chơi giỏi hơn không để những quả bóng có biên độ cao hơn ép họ vào quá sâu trong sân.</p>
+    <h3>142. Ngắn trên bóng ngắn, rộng!</h3>
+    <p>Khi bạn di chuyển vào để nhặt những quả bóng ngắn và rộng đó—hãy rút ngắn cú đánh ra sau của bạn! Thu vợt về phía sau khi bạn di chuyển để đón bóng, nhưng đừng để khuỷu tay của bạn quá xa bạn. Giữ tay cầm song song với mặt đất và không đánh quá mạnh. Hãy nhớ rằng, nếu bạn vào sân tốt, bạn sẽ không có chiều sâu để đánh.</p>
+    <h3>143. Hãy nói về trái phim của bạn!</h3>
+    <p>Tất cả những người chơi ở cấp độ cao nhất đều có thể cắt những cú trái tay của họ, đặc biệt là khi đối phó với những quả bóng có độ đá cao. Nâng vợt lên trong quá trình vung vợt về phía sau để bắt đầu vung vợt về phía trước phía trên điểm tiếp xúc. Giữ mặt hơi mở khi tiếp xúc và kéo quả bóng xuống bằng cổ tay chắc chắn.</p>
+    <h3>144. ĐỪNG Lăn CỔ TAY KHI ĐÁNH CÁC BÚT THUẬN TAY TOPSPIN TUYỆT VỜI!</h3>
+    <p>Cố gắng đánh bóng như khi nó ở trên mặt vợt. Giữ cổ tay của bạn trở lại khi bạn kéo lên và kết thúc ở mức cao. Đầu của bạn hướng về phía sau và phần mở rộng của bạn sẽ ngắn hơn so với khi chụp phẳng. Để có xoáy lên tối đa, hãy kéo lên từ khuỷu tay khi vợt tiếp xúc với bóng.</p>
+    <h3>145. C'mon gals, hãy xuống đến những bóng chuyện đó</h3>
+    <p>—uốn cong đầu gối, uốn cong từ thắt lưng và đưa đầu qua quả bóng. Bạn sẽ thấy mình đánh với tốc độ và độ chính xác cao hơn cũng như có thể phục hồi nhanh hơn cho lần đánh tiếp theo.</p>
+    <h3>146. Làm thế nào để đưa một số hop vào phục vụ của bạn?</h3>
+    <p>Món ăn kiểu Mỹ chỉ ngon nếu được phục vụ tốt! Nếu không nó sẽ là một thiết lập dễ dàng. Nó phải sâu và có cú đá cao về phía trái tay. Tung vợt sang trái khi bạn đưa vợt lên và ngang qua quả bóng từ trái sang phải. Tập trung vào việc vượt qua lẽ phải</p>
+    <h3>147. Chắc chắn, bạn thấy một số cầu thủ hàng đầu đánh đấu chân sau của họ</h3>
+    <p>thông thường, họ đánh bóng cực cao và muốn bắt bóng xa hơn về phía bên phải của họ và sau đó có thể giữ bóng trên vợt của họ lâu hơn, tạo ra độ xoáy cực cao khi họ lau bóng.</p>
+    <h3>148. Cố gắng không chạy bóng khi tăng rộng để súp!</h3>
+    <p>Một trong những lỗi mà những người chơi ổn định thường mắc phải là không đánh giá chính xác khoảng cách mà họ phải di chuyển đến bóng và thực hiện cú đánh quá nhanh. Dành nhiều thời gian hơn trong thời gian luyện tập để di chuyển đến những quả bóng rộng, từ đó cải thiện khả năng phán đoán của bạn.</p>
+    <h3>149. Kiếm tiền tốt vào mạng sẽ giúp bàn chân!</h3>
+    <p>Nếu các bạn cố gắng hướng đầu về phía sân đối diện khi chuẩn bị đánh bóng, bạn sẽ buộc phải bước vào cú đánh khi bạn xoay người để lấy lại thăng bằng, nếu không sẽ ngã sang một bên. Điều này sẽ ngăn chặn xu hướng đánh chân sau của bạn. Hãy thử!</p>
+    <h3>150. MẶT VỢI PHẢI MỞ MỘT PHẦN ĐỂ TRẢ LƯỢT CÚT THẤP BẰNG cú vô lê!</h3>
+    <p>Cúi thấp để bóng rõ ràng. Co duỗi đầu gối và giữ thẳng lưng. Mở rộng về phía trước — bật lên trước khi bạn hoàn thành cú vô lê sẽ khiến bạn mất quyền kiểm soát.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_slice_backhand.jpg" alt="Trái tay cắt bóng: mặt vợt mở, đường bóng thấp và sâu." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Trái tay cắt bóng: mặt vợt mở, đường bóng thấp và sâu.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p12_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 151 – 175</h2></div>
+</section>
+
+<section class="book-part">
+  <div class="content-body">
+    <h3>151. Đủ tốc độ và độ sâu trên phục vụ của bạn?</h3>
+    <p>Khi khởi động vợt từ tư thế gãi lưng, hãy nghĩ đến việc ném đầu vợt vào bóng. Chuyển động giao bóng chính xác là lên xuống với hành động của cổ tay xác định tốc độ đầu vợt di chuyển qua bóng. Để có được chiều sâu, hãy nhớ đưa cánh phải về phía trước.</p>
+    <h3>152. Chuẩn bị sớm!đánh trước!</h3>
+    <p>Bạn sẽ có được nhiều sức mạnh hơn trong cú đánh của mình với ít nỗ lực hơn. Người chơi luôn đánh muộn sẽ phát triển kiểu đánh cổ tay. Tiếp bóng tốt ở phía trước bằng cú trái tay với cách cầm chắc chắn và đặt cổ tay!</p>
+    <h3>153. Cuộn cổ tay của bạn để có vòng quay top!</h3>
+    <p>Khi bạn đánh bóng đang trên cao - và muốn có một số xoáy lên, bạn có thể phải xoay nhẹ cổ tay để đưa mép trên của vợt về phía trước một chút. Bây giờ hãy lái vợt xuyên qua quả bóng, giữ cho cổ tay của bạn thật chắc chắn. Hãy dành chút thời gian để luyện tập cú đánh này trước khi thực hiện nó trong trận đấu!</p>
+    <h3>154. Đừng cứng cứng trong phục vụ của bạn—tôi</h3>
+    <p>nhiều người chơi sợ vặn vai ra xa bóng khi thực hiện backswing. Bên cạnh việc cong lưng, bạn phải thực hiện một số động tác cuộn người ở thắt lưng. Tập trung giữ vai trái cao hơn vai phải cho đến khi bạn sẵn sàng thả lỏng. Hãy coi cơ thể của bạn như một chiếc roi khi bạn ném vai phải và cơ thể của mình vào sân với động tác tiếp theo.</p>
+    <h3>155. Bạn có đang xuống những trái pháp mọi nơi không?</h3>
+    <p>Cố gắng giữ chắc cổ tay khi bạn kéo dài cú đánh của mình qua quả bóng, tạo cảm giác như đang mang quả bóng trên mặt vợt. Khi thực hiện backswing, giữ khuỷu tay của bạn sát với cơ thể. Gặp bóng với vợt đang bay lên. Trong lần tiếp theo, để khuỷu tay duỗi ra hoàn toàn khỏi cơ thể.</p>
+    <h3>156. Một túi xả được ngụy hình là tiền trong ngân hàng</h3>
+    <p>'nếu bạn có thể có được khả năng tiếp cận cú đánh của mình chứ không phải điện báo những gì bạn sắp làm— bạn sẽ có một người ghi điểm thực sự trong cú đánh rơi, đặc biệt nếu bạn có thể theo dõi nó với một Gals giỏi, hãy thử nó với một số đối thủ chân chậm hơn của bạn.</p>
+    <h3>157. Bóng thả và bóng trái hai tay!</h3>
+    <p>Khi bạn phải vươn người về phía trước và thấp để đánh bóng và sử dụng trái tay bằng hai tay, bạn sẽ phải đứng dậy nhanh và mở vai đón bóng để cả hai tay đặt trên vợt khi tiếp xúc.</p>
+    <h3>158. Chuyển vượt để đạt được súng rộng!</h3>
+    <p>Nếu bạn bước ra bằng chân ở bên cạnh quả bóng, bạn sẽ thấy trong nhiều trường hợp bạn không thể thực hiện được những cú vô lê rộng đó. Bước qua và bạn sẽ đến đó! Bước một chút về phía trước và trọng lượng của bạn sẽ tác động mạnh.</p>
+    <h3>159. Để tấn công, hãy tiến lên phía trước khi bạn kiếm tiền</h3>
+    <p>những người tung lưới giỏi hơn đã phát triển kỹ thuật tác động bằng chân cho phép họ đánh từ tư thế mở. Họ di chuyển nhanh về phía trước bằng chân thường đặt ở phía sau, chuyển động về phía trước bằng chân kia sau cú xoay. Điều này tạo ra động lực lớn.</p>
+    <h3>160. Nếu bạn đang chắc chắn và bóng bóng thấp</h3>
+    <p>đừng thử làm những điều quá ngoạn mục! Hãy nhớ rằng, từ vị trí này bạn phải nhấc bóng lên để xóa băng. Nếu đối thủ của bạn ở khá sâu, bạn có thể thử một cú vô lê ngắn, nếu không hãy bằng lòng giữ bóng sâu trong sân và đợi bóng cao hơn để ném đi.</p>
+    <h3>161. Bạn có chắc chắn rằng mình đang sử dụng một số cổ tay trong phục vụ của mình không?</h3>
+    <p>Để có được một chút cú giao bóng như kem đó, bạn phải tăng tốc độ đầu vợt thông qua điểm tiếp xúc, chứ không phải chỉ bằng cách tăng tốc độ. Hãy để cổ tay của bạn búng đầu vợt lên, về phía trước và qua, đồng thời lưu ý tốc độ bổ sung mà bạn thực hiện khi giao bóng.</p>
+    <h3>162. Để có độ chính xác và sức mạnh, đánh qua bóng!</h3>
+    <p>Phát triển cảm giác giữ vợt trên bóng càng lâu càng tốt. Điều này đòi hỏi phải kéo dài cú vung vợt xa nhất có thể về phía lưới trước khi cho phép mặt vợt đi vòng qua đường bay của bóng. Đừng do dự!</p>
+    <h3>163. Rút rằng cú đánh ngược khi bạn chuyển vào để chơi cú đó gần dòng dịch vụ!</h3>
+    <p>Lấy vợt của bạn lại, nhanh chóng hướng về phía hàng rào bên. Di chuyển tới bóng và đấm về phía trước qua bóng, cẩn thận đừng làm cản trở cú đánh. Nếu nó thấp;giữ cho mặt vợt hơi mở.</p>
+    <h3>164. Đừng để đối thủ của bạn được nghỉ ngơi</h3>
+    <p>4 GIỮA CÁC PHÚT!Hãy thử đánh bóng theo hướng tăng lên 1 thời gian hồi phục của đối thủ. Nếu bạn có thể ngăn chúng khỏi bị thiết lập, chúng sẽ kiếm được nhiều tiền hơn và sẽ đạt được lợi nhuận yếu. Di chuyển vào 2 quả bóng ngắn.</p>
+    <h3>165. NẾU CON BẠN MUỐN Đánh BÓNG TENNIS Ở LỚP TUỔI NHẸ</h3>
+    <p>cầu thủ trẻ sẽ thành công hơn và nhiều hơn nữa nếu bạn giảm chiều dài của vợt trẻ xuống 5 hoặc 6 inch. Các bậc cha mẹ đừng nhấn mạnh - đó chỉ là một trò chơi mà thôi!</p>
+    <h3>166. Vẫn gặp gặp rất rất rất rất rất rất rất lớn để có được vòng trượt trên những bóng cao này?</h3>
+    <p>Hãy nhanh chóng thu vợt lại để bạn có thời gian chắc chắn rằng đầu vợt đang tiến đến điểm tiếp xúc từ phía dưới một chút. Một số bạn sử dụng tay cầm lục địa có thể gặp khó khăn trong việc giữ cho mặt vợt không bị mở ra. Điều này sẽ làm bóng bay.</p>
+    <h3>167. ĐỪNG hoảng sợ khi bạn đi đến hiệp một-Bóng chuyền</h3>
+    <p>quay nhanh sang một bên và hướng đầu vợt về phía sân. Đó là tất cả những động tác backswing mà bạn có thời gian. Cúi đầu xuống và cố gắng giữ cán vợt song song với mặt đất. Quét về phía trước qua quả bóng. Nằm xuống!</p>
+    <h3>168. Dành cho những bác bay thấp rộng</h3>
+    <p>nhận được ngay khi bạn bóng đi rộng. Chừa chỗ để đánh bóng bằng phần mở rộng. Cong đầu gối của bạn và cúi xuống quả bóng. Bạn muốn đánh cú đánh này mà không làm rơi đầu vợt. Ở lại khi bạn đánh và xem bóng!</p>
+    <h3>169. Bạn gặp một sự cố khi đánh tay lưng của bạn dưới dòng?</h3>
+    <p>Hãy thử để bóng đi sâu hơn một chút vào khu vực đánh bóng và đừng để vai của bạn bị xê dịch khi thực hiện cú đánh tiếp theo. Kết thúc với tư thế ngực vẫn hướng về phía sân và duỗi thẳng hoàn toàn theo hướng bạn muốn đánh bóng. Đừng búng cổ tay vào cú đánh này.</p>
+    <h3>170. Trong nhân đôi, hành động là trên mạng, cần quyết định nhanh chóng và phản hồi ngay lập tức</h3>
+    <p>Khi cả bốn người đều ở trên lưới, hãy gây bất ngờ cho bạn. Đưa một trong những quả vô lê của họ lên và đưa nó qua đầu họ ở giữa sân. Rất có thể họ sẽ nghiêng người về phía trước để chuẩn bị cho một cú vô lê thấp. Phải?</p>
+    <h3>171. Bạn có gặp gặp trả lại phục vụ cứng?nó có trượt ra khỏi giới hạn không?</h3>
+    <p>Lùi lại một bước. Rút ngắn cú vung sau của bạn và đưa bóng ra phía trước. Mở rộng qua quả bóng với một cổ tay vững chắc. Đừng cố hất bóng mà hãy đấm xuyên qua. Mục tiêu trở lại tốt bên trong của bên lề.</p>
+    <h3>172. Vẫn bỏ lỡ nửa nóng này?</h3>
+    <p>Những cú đánh vào chân bạn là một rắc rối lớn. Cong đầu gối của bạn và cúi đầu xuống. Ở mức thấp. Chuẩn bị vợt của bạn một cách nhanh chóng. Backswing cực kỳ ngắn. Gặp bóng với trọng lượng của bạn di chuyển về phía trước!</p>
+    <h3>173. Giữ vai của bạn xuống!</h3>
+    <p>Khi bạn nâng vai lên, bạn sẽ co cơ hình thang, một cơ phẳng lớn ở lưng trên và cổ, cản trở sự chuyển động tự do của hốc vai. Hãy thử giữ cho vai của bạn thư giãn và chỉ cần nâng đầu vợt lên để gặp những quả bóng có độ nảy cao đó bằng cách đến gần quả bóng hơn và uốn cong cổ tay và khuỷu tay của bạn một chút.62/Rod Laver'sMẹo chơi quần vợt</p>
+    <h3>174. Khi bạn chuyển vào đến volley ngắn rằng</h3>
+    <p>Ga BALL giữ trọng tâm của bạn ở mức thấp! Đầu cúi xuống, VÀ) đầu gối cong, hướng về phía vợt phía trước lưới. Cổ tay và chắc chắn, mũi chân xử lý song song với 2 mặt đất.</p>
+    <h3>175. Có thể bạn cần một vòng trượt tốt</h3>
+    <p>--—cú đánh này có nhiều lợi thế hơn: bóng có thể bị đánh mạnh và vẫn tiếp đất trên sân, nó kiểm soát và mang lại sự an toàn hơn, đồng thời là một cú đánh tấn công. Đầu vợt hơi thấp hơn đường bay của bóng do trọng lượng được chuyển sang chân phải. Tại thời điểm va chạm, cổ tay bị khóa khi vai xoay về phía trước. Quá trình theo dõi kết thúc ở mức cao trên mức vai. Cú đánh này đòi hỏi phải luyện tập chăm chỉ để thành thạo.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_volley_punch.jpg" alt="Vô-lê: tay và cổ tay đưa ra trước, đấm xuyên bóng." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Vô-lê: tay và cổ tay đưa ra trước, đấm xuyên bóng.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p13_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 176 – 200</h2></div>
+</section>
+
+<section class="book-part">
+  <div class="content-body">
+    <h3>176. Hãy bước tiến lên mạng!</h3>
+    <p>Khi bạn xoay và rút vợt về phía sau chuẩn bị bước ngang sân để đánh bóng rộng, hãy đến vị trí bằng chân sau, cho phép bước cuối cùng hướng thẳng về phía lưới bằng chân trước.</p>
+    <h3>177. Trở lại rằng đá cao có phục vụ vấn đề của bạn không?</h3>
+    <p>Điều tốt nhất của bạn có thể là đứng yên và đánh bóng khi đang đi lên—sử dụng động tác vung vợt về phía sau ngắn, giữ trọng lượng của bạn về phía trước. Bắt đầu cú vung vợt về phía trước của bạn từ phía trên quả bóng với mặt mở và với cổ tay chắc chắn kéo xuống qua quả bóng để tạo ra xoáy xuống hoặc lát cắt.</p>
+    <h3>178. Hãy sẵn sàng cho cuộc chia sẻ rộng đó!</h3>
+    <p>Hãy thu vợt lại khi bạn xoay người để chạy tới cú đánh rộng đó, sau đó khi đến đó bạn sẽ sẵn sàng đánh bóng mà không cần vội vã. Đây là thủ thuật để đưa tin tốt về tòa án. Ngay khi bạn có thể xác định được hướng mà cú đánh của đối thủ sẽ hướng tới, hãy quay sang một bên và thu vợt lại khi bạn di chuyển tới bóng. Bạn sẽ không bị trễ!</p>
+    <h3>179. Một mẹo bóng chuyền!</h3>
+    <p>Đây là cách sẽ cứu bạn khi họ đưa bóng thẳng vào bạn. Hãy chuyền bóng bằng trái tay của bạn! Nhiều người trong số các bạn đang cố gắng thực hiện cú vô lê này bằng cú thuận tay của mình. Điều đó gần như là không thể trừ khi bạn là một người uốn dẻo!</p>
+    <h3>180. Hiểu vòng quay!</h3>
+    <p>Bạn phải hiểu tác động của cú xoáy của đối thủ khi nó bật ra khỏi vợt của bạn! Cú cắt hoặc xoáy xuống của đối thủ sẽ có xu hướng lệch xuống khi tiếp xúc với vợt của bạn. Để khắc phục điều này, mặt vợt phải hơi mở và cú đánh được thực hiện bằng cổ tay thật chắc chắn.</p>
+    <h3>181. Cô gái, bạn có muốn thêm một chút vòng tuyệt vời trên vòng trượt trang đó không?</h3>
+    <p>Hãy thử đặt cổ tay của bạn lùi lại nhiều hơn khi thực hiện động tác backswing. Bây giờ đưa đầu vợt về phía trước từ bên dưới điểm tiếp xúc và nghĩ đến việc đánh bóng ở đường cong thấp bên ngoài khi bạn lướt qua bóng.</p>
+    <h3>182. Bạn có thể đến với bóng chuyền lob không?</h3>
+    <p>Nó chủ yếu là một cú đánh đôi được sử dụng khi cả bốn người đều ở trên lưới và bạn gần như không thể thực hiện cú vô lê xuyên qua. Nếu bạn có thể học cách ném bóng ra ngoài tầm với khi đối thủ của bạn nghiêng người để thực hiện cú vô lê, thì đó gần như luôn là người chiến thắng chắc chắn. Nó đòi hỏi một sự tiếp xúc tinh tế nhất.</p>
+    <h3>183. Thả đầu vợt của bạn!y</h3>
+    <p>ở đó Lara ENG có những lúc bạn buộc phải thả đầu vợt xuống thấp hơn nhiều so với cổ tay để thực hiện một cú đánh cưỡng bức. Chỉ cần đảm bảo không hất bóng và thổi bay nó ra khỏi sân. Điều cực kỳ quan trọng trong cú đánh này là giữ cho mặt vợt di chuyển về phía trước và không hất cổ tay của bạn.</p>
+    <h3>184. Bạn có muốn cải thiện?sử dụng bảng sau!</h3>
+    <p>Luyện tập dựa vào tường sẽ tạo rãnh cho cú đánh của bạn, giúp bạn nhanh hơn và ổn định hơn nhiều. Bảng sau không bao giờ trượt. Chọn một điểm mục tiêu trên tường và đánh bóng với tốc độ trung bình. Pee không có thời gian để theo dõi, chuẩn bị nhanh chóng cho cú đánh tiếp theo. Sau một thời gian cố gắng chơi bóng trên cao.</p>
+    <h3>185. Thật thú vị khi đánh được cú lốp xoáy top</h3>
+    <p>bạn nên có một cú đánh chạm đất xoáy lên tốt trước khi thực hiện cú đánh này. Dễ dàng thực hiện cú đánh này nhất trên các mặt chậm, nơi bóng được tạo thành. Tôi bắt đầu với đầu vợt ở dưới cổ tay và mặt vợt thẳng đứng. Vợt sẽ giữ bóng trong giây lát khi tôi thả lỏng cổ tay, đưa mặt về phía trước và hướng lên trên chỉ bằng một cú búng tay. Một cú đánh xoáy lên khéo léo có thể làm nên điều kỳ diệu cho Tại sao bạn không có một con dê?</p>
+    <h3>186. Tấn công tất cả các bóng ngắn!</h3>
+    <p>Có quá nhiều cầu thủ trong câu lạc bộ các bạn cố gắng làm quá nhiều với những quả bóng sâu và không nhận ra rằng quả bóng ngắn mới là thứ đáng để ngấu nghiến. Đánh sâu và tiến vào! Nếu bạn định đánh với tốc độ cao, hãy chéo sân. Lưới thấp hơn sáu 4 inch ở dải băng giữa. Đây là lúc bạn phải gây áp lực cực độ lên đối thủ.</p>
+    <h3>187. Hãy để đó nhỏ đó chặn rack- et</h3>
+    <p>bằng cách cho phép những đứa trẻ nhỏ hơn di chuyển tay lên trên tay cầm, chúng sẽ thành công hơn khi chạm được quả bóng vào giữa. Một điều tuyệt vời nữa là cho phép họ đứng tốt bên trong đường cuối sân để chơi trên sân rút ngắn, từ đó tăng cường khả năng của họ.</p>
+    <h3>188. Đặt mặt mở trên tất cả các vol-ley thấp này!</h3>
+    <p>Nếu bạn đánh bóng từ bất kỳ vị trí nào dưới đầu gối của mình, hãy cố gắng hướng mặt vợt về phía sau để góc lệch sẽ đưa bóng trở lại đường bay như cũ. Điều này sẽ đảm bảo cú đánh của bạn có đủ độ cao để vượt qua lưới.</p>
+    <h3>189. Đánh thuận tay rộng từ tư thế mở!</h3>
+    <p>Nhiều người chơi nâng cao đánh thuận tay rộng từ tư thế mở để phục hồi nhanh— điều này cho phép họ đẩy bóng từ chân phải, do đó tiết kiệm được một tích tắc để thực hiện cú đánh tiếp theo. Bí quyết là không để hông của bạn mở ra lưới trước khi gặp bóng và uốn cong đầu gối phải của bạn để sẵn sàng bật ngược về phía giữa.</p>
+    <h3>190. Hãy dựa vào cú đánh của bạn để có thêm sức mạnh!</h3>
+    <p>Hãy đối mặt với điều đó, sẽ có nhiều lúc bạn không sẵn sàng kịp thời để thực hiện bước cuối cùng đáng yêu đó đưa bóng về phía lưới. Nếu bạn cố gắng ít nhất dựa vào lưới trong những trường hợp này, bạn có thể đạt được điều tương tự.</p>
+    <h3>191. Chuyển vào nhanh chóng!hit booper ngắn đó bằng trên đầu của bạn!</h3>
+    <p>Nào, các cô gái, di chuyển đôi chân của mình đi. Đừng chỉ đứng đó để cho đòn đánh trả lại yếu ớt của cú đánh tiếp cận bắt buộc của bạn rơi xuống trước mặt bạn. Di chuyển lên và sử dụng đầu của bạn để đưa bóng đi. Quá nhiều người trong số các bạn đã để đối thủ của mình thoát khỏi vòng vây bằng cách lùi lại những pha trả bóng vốn có thể là những pha bắt bóng dễ dàng.</p>
+    <h3>192. TRỪ KHI BẠN LÀ NGƯỜI uốn dẻo</h3>
+    <p>đừng chọc thủng lưới trong trận đấu đôi trước khi đối thủ của bạn bắt đầu vợt về phía trước! Ngoài ra, bạn nên có một tín hiệu cho đối tác biết quyết định vượt qua của bạn để anh ấy có thể tiến vào hỗ trợ cho phía bạn sắp rời đi. Nếu không, bạn có thể bị coi là khá ngu ngốc.</p>
+    <h3>193. Cố gắng đặt bóng càng sâu càng tốt khi trả giao bóng!</h3>
+    <p>Đừng chỉ dựa vào sức mạnh để đạt được chiều sâu khi quay trở lại. Bạn đang sử dụng quỹ đạo hình vòng cung thay vì quỹ đạo phẳng thấp. Khả năng kiểm soát của bạn sẽ lớn hơn và bạn sẽ có nhiều thời gian hơn để khôi phục vị thế tốt trước tòa.</p>
+    <h3>194. Đặt mặt mở trên tất cả các lcy vol-leys này!</h3>
+    <p>Nếu bạn đánh bóng từ bất kỳ vị trí nào:&gt; dưới đầu gối của bạn, hãy cố gắng hướng vào mặt vợt sao cho góc lệch sẽ đưa bóng trở lại cùng một đường bay. Điều này sẽ đảm bảo đủ Jight cho cú đánh của bạn để phá lưới.</p>
+    <h3>195. Đánh tránh rộng từ tư thế mở!</h3>
+    <p>Nhiều người chơi thuận tay đánh thuận tay rộng từ một thế đứng mở để phục hồi, điều này cho phép họ đẩy bóng từ chân phải, tiết kiệm được một tích tắc khi chuyển sang cú đánh tiếp theo°.cuộc gặp gỡ lừa là không để bóng và trong mẹo của bạn, bạn có thể mở quyền vào lưới đầu gối để sẵn sàng bật trở lại trung tâm.</p>
+    <h3>196. Hãy dựa vào cú đánh của bạn để có thêm sức mạnh!</h3>
+    <p>Hãy đối mặt với điều đó, sẽ có nhiều lúc bạn không sẵn sàng kịp thời để thực hiện bước cuối cùng đáng yêu đó đưa bóng về phía lưới. Nếu bạn cố gắng ít nhất dựa vào lưới trong những trường hợp này, bạn có thể đạt được điều tương tự.68/Lời khuyên về quần vợt của Rod Lav er</p>
+    <h3>197. Chuyển vào nhanh chóng!đánh</h3>
+    <p>Một</p>
+    <h3>198. Bloper với tổng quát của bạn!</h3>
+    <p>các cô gái, hãy di chuyển đôi chân của bạn. Đừng chỉ đứng đó trước sự đáp trả yếu ớt của cú sút tiếp cận ép buộc của bạn. Di chuyển lên và sử dụng bộ quá nhiệt của bạn để cất đi.bằng cách treo quá nhiều tiền vào các cú trả bóng, bạn để cho đối thủ của bạn shobue đối thủ eadsy “kin the 1X TIONIST KHÔNG TRỪ KHI BẠN LÀ CONTOR- trên lưới Mf '1 đánh đôi trước khi đối thủ của bạn bắt đầu vợt về phía trước! Điều đó cũng cho thấy bạn nên nghĩ rằng đối tác của bạn có một tín hiệu cho quyết định của bạn để vượt qua, VẬY, anh ấy có thể rời đi.</p>
+    <h3>199. Đây là một bước để đưa bạn vào mạng!</h3>
+    <p>Thực hiện một cú đánh có quỹ đạo cao sâu về phía trái tay— bạn sẽ có nhiều thời gian để thực hiện cú vô lê sâu và thấp tới góc bên kia. Đừng cần người chiến thắng trong cú vô lê đầu tiên- Khiến đối thủ của bạn mất vị trí bằng một loạt cú đánh.</p>
+    <h3>200. Bạn có thể trả lại mash trên đầu đó!</h3>
+    <p>Đứng khá thẳng vì bạn sẽ nhận được một quả bóng có độ nảy cao. Trọng lượng của bạn là về phía trước. Thực hiện một cú xoay ngắn bằng vai khi bóng đến chỗ bạn để vợt của bạn hướng vào hàng rào bên. Bây giờ, chặn cú đánh lại.</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_overhead_smash.jpg" alt="Cú đập trên đầu: khuỷu tay cao, vươn hết tầm với." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Cú đập trên đầu: khuỷu tay cao, vươn hết tầm với.</figcaption>
+      </div>
+    </figure>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/img_p14_1.jpeg" alt="Minh họa gốc" loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Minh họa gốc của Jim Jonson.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="book-part part-divider" style="text-align:center;">
+  <div class="part-header"><h2>Lời Khuyên 201 – 225</h2></div>
+</section>
+
+<section class="book-part">
+  <div class="content-body">
+    <h3>201. Hãy tự tin khi bạn di chuyển ra để cắt đỡ đang cố đưa đưa bắn vào mạng!</h3>
+    <p>Xoay lưng tối thiểu, đầu gối cong, thẳng, cổ tay chắc chắn, mặt vợt hơi mở, không rời mắt khỏi quả bóng cho đến khi nó chạm vào vợt. Cố gắng giữ bóng thấp qua lưới để không tạo cơ hội cho đối thủ-</p>
+    <h3>202. Bạn có phải là gun-shy trên mạng không?</h3>
+    <p>Hãy thử làm việc sâu hơn một chút trong sân giao bóng. Điều này sẽ giúp bạn có thêm một phần giây để chuẩn bị và tiến về phía trước trong cú vô lê. Nếu đối thủ của bạn đánh nhẹ - hãy di chuyển chặt chẽ hơn.</p>
+    <h3>203. Nào, quý vị, bạn phải học để di chuyển!</h3>
+    <p>Phụ nữ thường gặp khó khăn trong việc tiếp cận quả bóng. Bạn chỉ cần biết cách chạy. Nếu bạn đủ cơ động, bạn sẽ ở vào vị trí tốt và kịp thời để thực hiện cú thuận tay, trái tay hoặc vô lê hiệu quả. Hãy thử nhảy dây hàng ngày. Chạy lên cầu thang sẽ giúp ích.</p>
+    <h3>204. Giữ cổ tay thú vị khi bạn dài về phía trước trên bóng ngắn!</h3>
+    <p>Nếu bạn đang đánh một trong những quả bóng ngắn đó hoặc đánh một cú đánh bằng gỗ, có thể bạn đang đóng mặt vợt bằng cách không duy trì tư thế cổ tay, được chỉ ra ở đây, thông qua điểm tiếp xúc. Với sự tập trung trong quá trình luyện tập, bạn có thể phát triển khả năng kiểm soát tuyệt vời với cú đánh này.</p>
+    <h3>205. Cô gái, nếu bạn chỉ vào lob bạn sẽ nhận được vai của mình đúng vị trí</h3>
+    <p>quan sát các cầu thủ trong giải đấu xoay người nhanh sang một bên, lùi xuống dưới và theo bóng bằng tay trái. Hãy quan sát xem họ giơ vợt lên nhanh như thế nào để sẵn sàng tung ra một cú đánh sắc bén trên đầu. Bạn nên tập cú đánh này vài giờ mỗi tuần.</p>
+    <h3>206. Bạn có muốn tốc độ thêm cho phục vụ của mình không?</h3>
+    <p>Khi bạn chuyển trọng lượng hoàn toàn về phía trước, hãy cố gắng có đủ vận tốc đầu vợt để đưa bạn xuống ngang cơ thể, kết thúc ở phía đối diện phía sau bên trái. Đây là một điểm cực kỳ quan trọng trong một cú giao bóng nhanh!</p>
+    <h3>207. Nếu bạn muốn là con hổ trên mạng</h3>
+    <p>bạn phải dành thời gian cần thiết để rèn luyện kỹ năng chuyền bóng của mình đến mức bạn thích di chuyển vào lưới ở mọi thời điểm! Chừng nào bạn còn tiếp tục trốn ở sân sau, bạn sẽ không bao giờ phát triển được kỹ năng tự tin cần thiết để trở thành một con hổ ở lưới.</p>
+    <h3>208. Bỏ vai và chỉ vào bóng thấp đó!</h3>
+    <p>Thói quen này sẽ đảm bảo bạn sẽ chúi đầu vào cú đánh và giúp bạn không nhặt được bóng. Không cần thiết bạn cũng phải quan sát bóng và giữ vững cổ tay trong toàn bộ cú đánh.</p>
+    <h3>209. Bạn đã được kéo rộng để thực hiện nói — bây giờ hãy trở lại tòa án!</h3>
+    <p>Cho dù bạn thực hiện cú đánh từ bên ngoài đường biên tuyệt vời đến đâu, nếu bạn đứng ngoài đó chiêm ngưỡng nó, bạn sẽ bị hạ gục— mức độ chơi càng tốt, bạn sẽ càng nhận thức được tầm quan trọng của việc phục hồi nhanh chóng. Thực hành chạy nước rút tốc độ khởi động nhanh ngắn.</p>
+    <h3>210. Trục và đổi ánh sáng của bạn</h3>
+    <p>Fi Li</p>
+    <h3>211. Kiểm soát khi bạn đánh phục vụ của mình bằng hành động đầy đủ cổ tay!</h3>
+    <p>Nếu bạn thấy mình giao bóng còn thiếu, hãy thử thêm các động tác trên vào hành động của bạn. Hãy chắc chắn ném bóng đủ xa vào sân để có thể thể hiện tốt.</p>
+    <h3>212. Giả sử bạn bị bắt lùi lại và không thể dồn trọng lượng vào cú đánh!</h3>
+    <p>Bạn vẫn có thể thực hiện được cú đánh này nếu bạn tập trung vào việc đạt được tốc độ đầu vợt và đưa mặt vợt của bạn thẳng qua quả bóng. Ít nhất hãy cố gắng nghiêng vai về phía lưới và quan sát bóng.</p>
+    <h3>213. Giới thiệu về tất cả các cú đánh bằng hai tay này</h3>
+    <p>—có một số lý do để đánh bằng hai tay. Hai cổ tay củng cố lẫn nhau để tăng thêm sức mạnh. Nó ngăn không cho khuỷu tay dẫn đầu khi đánh trái tay. Nắm chặt bằng hai tay sẽ giúp phát triển khả năng xoay vai và chuyển trọng lượng tốt.</p>
+    <h3>214. Khi bạn nói lob phòng ngủ, hãy sử dụng cổ tay tuyệt đối chắc chắn!</h3>
+    <p>Bất kỳ hành động nào của cổ tay trong cú đánh này đều có xu hướng tạo ra tốc độ vợt quá cao, giảm thiểu khả năng kiểm soát và tạo ra quá nhiều chiều sâu. Luyện tập để phát triển cảm giác cầm bóng trên mặt chứ không phải dùng cổ tay hất bóng.</p>
+    <h3>215. Đánh trực tiếp trên cơ thể của bạn!</h3>
+    <p>Cố gắng làm cho cú swing của bạn đi xuyên qua và chạm bóng tại một điểm gần như là hướng 12 giờ trên mặt đồng hồ. Tôi đã thực hiện quá nhiều pha đánh đầu khi gặp bóng trong khoảng thời gian từ 10 đến 11. Hãy giơ khuỷu tay lên!</p>
+    <h3>216. Đừng để những cú đánh trái cao này phá hủy sự tin tưởng của bạn!</h3>
+    <p>Hai điều sẽ giúp bạn thực hiện cú đánh này: đầu tiên bạn phải học cách nâng ổ cắm ở vai trong khi vẫn duy trì góc tự nhiên giữa cẳng tay và cán vợt. Đừng cố nâng khuỷu tay lên cao ngang đầu vợt. Giây- di chuyển trọng lượng của bạn về phía trước!</p>
+    <h3>217. Đưa trọng lượng của bạn về phía trước và bước vào tòa án!</h3>
+    <p>Bây giờ bạn đã có cổ tay tốt để bắt CP ở đỉnh cú swing, bạn phải để động lượng đưa bạn tiến về phía sân. Không được do dự trong chuyển động về phía trước tại thời điểm đó. Trong tư thế này, bàn chân trái đóng vai trò là điểm xoay. Làm việc để chuyển động trơn tru.</p>
+    <h3>218. SÚNG LỚN CỦA TENNIS—Cú thuận tay xoáy lên!</h3>
+    <p>Cú công bóng xoáy lên có thể mang lại tốc độ lớn. Khi bóng nảy lên, xoáy lên làm cho bóng bay về phía trước và nảy nhanh hơn và cao hơn. Bạn phải đánh mặt vợt hướng lên trên cũng như hướng về phía trước khi nó gặp bóng. Giữ cổ tay bị khóa khi bóng ở trên vợt và kết thúc với độ theo sát cao. Trọng lượng là về phía trước. Thực hiện cú đánh này cách lưới vài feet để có được độ sâu tốt.</p>
+    <h3>219. Bạn đang kiếm được quá nhiều điều này?</h3>
+    <p>Nếu vậy, có thể bạn đã tiếp xúc với quả bóng ở quá xa phía trước cổ tay của mình. Hãy thử gặp bóng khi vợt và vợt của bạn được kéo dài hoàn toàn theo đường thẳng và hơi ở phía trước đầu bạn. Nếu đối thủ của bạn lốp bóng theo chiều gió, bóng sẽ bay chậm hơn, đòi hỏi bạn phải giữ cổ tay hất nhẹ về phía sau-</p>
+    <h3>220. Nếu bạn muốn đánh đánh bay trái hai tay hiệu quả</h3>
+    <p>tốt hơn hết bạn nên học cách cuộn đầu gối sau vào và ra phía trước để có được hành động chính xác. Hông mở ra, cho phép vai đi qua. Nếu không có hành động này, bạn sẽ không bao giờ có được một pha mở rộng tốt về phía trước khi đưa bóng bằng cả hai tay trên vợt.</p>
+    <h3>221. Trượt một lớp sâu sang bên trái-</h3>
+    <p>và di chuyển vào lưới để tiêu diệt! Khi bạn có thể di chuyển về phía trước đường cuối sân để đưa bóng đi lên, hãy thực hiện một cú đánh lùi ngắn và giữ thái độ thoải mái. Bất kỳ áp lực nào tác dụng lên tay cầm đều đến từ tay cầm và cổ tay chắc chắn. Thực hiện cú đánh này với khuỷu tay hơi thu vào. Căng thẳng tốt khi theo dõi.</p>
+    <h3>222. Lob tắt một bóng chuyền?</h3>
+    <p>Tất nhiên rồi! Đôi khi đó là cảnh quay duy nhất—điều này đòi hỏi sự tiếp xúc tinh tế. Nếu đối thủ của bạn vừa lao vào để thực hiện cú đánh thả bóng của bạn và bạn đang ở vạch giao bóng, hãy thử tung cú trả bóng qua đầu của anh ta đến góc trái tay.</p>
+    <h3>223. Di chuyển trên bóng ngắn và cánh đó</h3>
+    <p>sâu, chắc chắn, quỹ đạo thấp, bắn về phía đối phương và di chuyển vào để thực hiện cú vô lê. Nếu bạn có thể buộc họ đánh một quả bóng trượt thấp từ phía sau đường biên ngang, rất có thể bạn sẽ có cơ hội thực hiện một cú vô lê dễ dàng.</p>
+    <h3>224. Đừng nhảy vì đó trên trước khi bạn phải làm!</h3>
+    <p>Sẽ có lúc nhảy là cách duy nhất để kéo phần trên cao ra, nhưng nếu bạn có thể vào đúng vị trí để thực hiện cú đánh này duy trì sự tiếp xúc với mặt đất thì hiệu quả của bạn sẽ cao hơn. Khi đó, chi phí sẽ liên quan chặt chẽ hơn đến các chuyển động được sử dụng trong cú giao bóng.</p>
+    <h3>225. Đẹp và cân bằng là yêu cầu hàng đầu!</h3>
+    <p>Ở tất cả những cầu thủ hàng đầu, những yếu tố này luôn hiển nhiên. Nếu nhiều người trong số các bạn dành thời gian nhảy dây, thực hiện một số bài tập điều hòa, luyện tập để có được phong cách vuốt ve và quan sát cẩn thận các bước di chuyển của những người chơi hàng đầu, tôi đảm bảo rằng thành tích thắng-thua của bạn sẽ cho thấy sự cải thiện rõ rệt nhất!</p>
+    <figure class="book-figure" style="margin: 28px 0; text-align: center; clear: both;">
+      <div style="display:inline-block; max-width:100%; background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px;">
+        <img src="rod_laver_tips_assets/laver_lob_technique.jpg" alt="Cú bổng phòng ngự: khóa cứng cổ tay, đưa bóng thật sâu." loading="lazy" style="max-width:100%; height:auto; border-radius:6px; display:block; margin:0 auto;" />
+        <figcaption style="margin-top:10px; font-size:.9em; color:#475569; text-align:left; line-height:1.5;">Cú bổng phòng ngự: khóa cứng cổ tay, đưa bóng thật sâu.</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+</main>
     </div>
 
     <script>
