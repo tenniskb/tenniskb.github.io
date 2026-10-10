@@ -504,7 +504,19 @@
             color: var(--text-main);
         }
 </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -560,29 +572,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#frontmatter">Lời Nói Đầu & Triết Lý Huấn Luyện</a></li>
-                    <li><a href="#ch1">Chương 1: Hệ Thống Đào Tạo</a></li>
-                    <li><a href="#ch2">Chương 2: Nguyên Lý Cú Đánh</a></li>
-                    <li><a href="#ch3">Chương 3: Thuận Tay Sát Thủ</a></li>
-                    <li><a href="#ch4">Chương 4: Trái Tay Bộc Phá</a></li>
-                    <li><a href="#ch5">Chương 5: Giao Bóng Siêu Thanh</a></li>
-                    <li><a href="#ch6">Chương 6: Trả Giao Phản Kích</a></li>
-                    <li><a href="#ch7">Chương 7: Lưới Ngoan Cường</a></li>
-                    <li><a href="#ch8">Chương 8: Cú Đánh Biến Ảo</a></li>
-                    <li><a href="#ch9">Chương 9: Chiến Thuật Đánh Đôi</a></li>
-                    <li><a href="#ch10">Chương 10: Luyện Tập Có Mục Tiêu</a></li>
-                    <li><a href="#ch11">Chương 11: Thể Lực SAQ Đỉnh Cao</a></li>
-                    <li><a href="#ch12">Chương 12: Tinh Thần Thép</a></li>
-                    <li><a href="#ch13">Chương 13: Chiến Lược Tác Chiến</a></li>
-                    <li><a href="#ch14">Chương 14: Vợt, Dây & Cán</a></li>
-                    <li><a href="#ch15">Chương 15: Tương Lai Quần Vợt</a></li>
-                </ul>
-            </div>
-        </aside>
+        
 
         <!-- Main Content -->
         <main class="content-area">

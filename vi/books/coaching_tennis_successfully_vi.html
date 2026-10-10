@@ -839,7 +839,19 @@
 
     
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -895,36 +907,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#foreword">Lời Tựa Của Stan Smith</a></li>
-                    <li><a href="#intro">Giới Thiệu từ USTA</a></li>
-                    <li><strong>PHẦN I: NỀN TẢNG</strong></li>
-                    <li><a href="#ch1">Chương 1: Triết Lý Huấn Luyện</a></li>
-                    <li><a href="#ch2">Chương 2: Giao Tiếp Sư Phạm</a></li>
-                    <li><a href="#ch3">Chương 3: Truyền Cảm Hứng & Động Lực</a></li>
-                    <li><a href="#ch4">Chương 4: Xây Dựng Đội Tuyển</a></li>
-                    <li><strong>PHẦN II: KẾ HOẠCH</strong></li>
-                    <li><a href="#ch5">Chương 5: Kế Hoạch Mùa Giải</a></li>
-                    <li><a href="#ch6">Chương 6: Giáo Án Buổi Tập</a></li>
-                    <li><strong>PHẦN III: KỸ CHIẾN THUẬT</strong></li>
-                    <li><a href="#ch7">Chương 7: Cơ Học Cú Đánh</a></li>
-                    <li><a href="#ch8">Chương 8: Chiến Thuật Đơn</a></li>
-                    <li><a href="#ch9">Chương 9: Chiến Thuật Đôi</a></li>
-                    <li><strong>PHẦN IV: ĐIỀU HÀNH TRẬN ĐẤU</strong></li>
-                    <li><a href="#ch10">Chương 10: Chuẩn Bị Trận Đấu</a></li>
-                    <li><a href="#ch11">Chương 11: Quản Lý Thi Đấu</a></li>
-                    <li><strong>PHẦN V: ĐÁNH GIÁ</strong></li>
-                    <li><a href="#ch12">Chương 12: Đánh Giá Vận Động Viên</a></li>
-                    <li><a href="#ch13">Chương 13: Đánh Giá Chương Trình</a></li>
-                    <li><a href="#appendix-a">Phụ Lục A: Huấn Luyện Hè</a></li>
-                    <li><a href="#appendix-b">Phụ Lục B: Bài Tập Thể Lực</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

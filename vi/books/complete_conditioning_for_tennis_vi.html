@@ -416,7 +416,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -472,30 +484,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#foreword">Lời Tựa Của Tom Gullikson</a></li>
-                    <li><a href="#preface">Lời Mở Đầu Tác Giả</a></li>
-                    <li><strong>PHẦN 1: ĐÁNH GIÁ & KHỞI ĐỘNG</strong></li>
-                    <li><a href="#ch1">Chương 1: Nhu Cầu Thể Chất</a></li>
-                    <li><a href="#ch2">Chương 2: 17 Bài Kiểm Tra Thể Lực</a></li>
-                    <li><a href="#ch3">Chương 3: Khởi Động & Giãn Cơ</a></li>
-                    <li><strong>PHẦN 2: SỨC MẠNH & SỨC BỀN</strong></li>
-                    <li><a href="#ch4">Chương 4: Huấn Luyện Sức Mạnh</a></li>
-                    <li><a href="#ch5">Chương 5: Sức Bền Tim Mạch</a></li>
-                    <li><strong>PHẦN 3: TỐC ĐỘ & BÀI TẬP SÂN</strong></li>
-                    <li><a href="#ch6">Chương 6: 12 Bài Tập Nhanh Nhẹn</a></li>
-                    <li><a href="#ch7">Chương 7: 18 Bài Tập Bóng & Vợt</a></li>
-                    <li><a href="#ch8">Chương 8: Thiết Kế Chương Trình</a></li>
-                    <li><strong>PHẦN 4: GIÁO ÁN & AN TOÀN</strong></li>
-                    <li><a href="#ch9">Chương 9: Giáo Án Mùa Giải</a></li>
-                    <li><a href="#ch10">Chương 10: Phòng Tránh Chấn Thương</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

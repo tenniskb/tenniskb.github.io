@@ -851,7 +851,19 @@
         }
 </style>
     <link rel="stylesheet" href="court-diagram.css">
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -896,24 +908,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#frontmatter">Về Tác Phẩm & Tác Giả</a></li>
-                    <li><a href="#foreword">Lời Tựa Của Arthur R. Ashe</a></li>
-                    <li><a href="#preface">Lời Nói Đầu Của Chris Evert Lloyd</a></li>
-                    <li><a href="#ch1">Chương 1: Giới Thiệu Chung</a></li>
-                    <li><a href="#ch2">Chương 2: Lược Sử Quần Vợt</a></li>
-                    <li><a href="#ch3">Chương 3: Bản Chất Các Thể Thức Thi Đấu</a></li>
-                    <li><a href="#ch4">Chương 4: Cú Giao Bóng</a></li>
-                    <li><a href="#ch5">Chương 5: Trả Giao Bóng</a></li>
-                    <li><a href="#ch6">Chương 6: Chiến Thuật Trên Lưới</a></li>
-                    <li><a href="#ch7">Chương 7: Chiến Thuật Cuối Sân</a></li>
-                    <li><a href="#ch8">Chương 8: Tổng Kết Chiến Thuật</a></li>
-                </ul>
-            </div>
-        </aside>
+        
 
         <!-- Main Content -->
         <main class="content-area">

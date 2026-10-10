@@ -429,7 +429,19 @@
         }
 
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -483,18 +495,7 @@
 
     <!-- Reader Layout -->
     <div class="reader-layout">
-        <!-- Sidebar Navigation -->
-        <aside class="reader-sidebar">
-            <div class="sidebar-title">
-                <i class="fa-solid fa-list-ol"></i> Mục Lục Nội Dung
-            </div>
-            <ul class="toc-list">
-                <li class="toc-item"><a href="#phan-1">Phần I: Khoa Học Thể Thao &amp; Cơ Sinh Học Bộ Chân</a></li>
-                <li class="toc-item"><a href="#phan-2">Phần II: Kiểm Soát vs Sức Mạnh &amp; Trái Tay</a></li>
-                <li class="toc-item"><a href="#phan-3">Phần III: Vật Lý Độ Xoáy &amp; Cú Vô-Lê Hoàn Hảo</a></li>
-                <li class="toc-item"><a href="#phan-4">Phần IV: Chuỗi Động Học Giao Bóng &amp; Sự Thật</a></li>
-            </ul>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="reader-content">

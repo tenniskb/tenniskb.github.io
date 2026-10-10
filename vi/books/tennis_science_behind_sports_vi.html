@@ -436,7 +436,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 
 <header class="mm-top"><a class="mm-brand" href="/vi/">Tennis Unified</a><nav class="mm-nav" aria-label="Sections"><div class="mm-dropdown"><button class="mm-dropbtn" type="button" aria-haspopup="true" aria-expanded="false">Main <span class="mm-caret">&#9662;</span></button><div class="mm-dropmenu">
@@ -484,16 +496,7 @@
 
 <!-- Reader Main Layout -->
 <main class="reader-layout">
-    <!-- Navigation Sidebar -->
-    <aside class="reader-sidebar">
-        <div class="sidebar-title"><i class="fa-solid fa-list-ol"></i> Mục Lục Sách</div>
-        <ul class="toc-list">
-            <li class="toc-item"><a href="#phan-1">Phần I: Lịch Sử, Vật Liệu &amp; Định Luật Newton</a></li>
-            <li class="toc-item"><a href="#phan-2">Phần II: Vật Lý Va Chạm &amp; Khí Động Học Xoáy</a></li>
-            <li class="toc-item"><a href="#phan-3">Phần III: Chuỗi Động Học &amp; Vật Lý Giao Bóng</a></li>
-            <li class="toc-item"><a href="#phan-4">Phần IV: Khoa Học Thần Kinh &amp; Não Bộ</a></li>
-        </ul>
-    </aside>
+
 
     <!-- Reading Content Container -->
     <article class="reader-content">

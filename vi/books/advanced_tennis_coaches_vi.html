@@ -840,7 +840,19 @@
     
     
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -917,24 +929,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#front_matter">📖 Lời cảm tạ & Lời tựa chuyên môn</a></li>
-<li><a href="#chapter1">🔬 Chương 1: Nguyên lý cơ sinh học ứng dụng trong quần vợt (The Biomechanical Principles)</a></li>
-<li><a href="#chapter2">🎓 Chương 2: Phương pháp luận sư phạm, quản lý lớp học và kỷ luật (Coaching Methodology)</a></li>
-<li><a href="#chapter3">🎾 Chương 3: Các hoạt động và bài tập bổ trợ cho người mới (Activities for Beginners)</a></li>
-<li><a href="#chapter4">🏃 Chương 4: Huấn luyện thể lực nâng cao trong quần vợt (Advanced Physical Fitness)</a></li>
-<li><a href="#chapter5">🎯 Chương 5: Chiến thuật đánh đơn toàn diện (Singles Tactics)</a></li>
-<li><a href="#chapter6">👥 Chương 6: Chiến thuật đánh đôi đỉnh cao (Doubles Tactics)</a></li>
-<li><a href="#chapter7">🤝 Chương 7: Chiến thuật đánh đôi nam nữ hỗn hợp (Mixed Doubles Tactics)</a></li>
-<li><a href="#chapter8">🏆 Chương 8: Bài học cơ sinh học từ các nhà vô địch vĩ đại (What We Can Learn from the Champions)</a></li>
-<li><a href="#glossary">📚 Bảng thuật ngữ cơ sinh học và chiến thuật quần vợt (Glossary)</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

@@ -414,7 +414,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -464,18 +476,7 @@
 
     <!-- Reader Layout -->
     <div class="reader-layout">
-        <!-- Sidebar Navigation -->
-        <aside class="reader-sidebar">
-            <div class="sidebar-title">
-                <i class="fa-solid fa-list-ol"></i> Mục Lục Nội Dung
-            </div>
-            <ul class="toc-list">
-                <li class="toc-item"><a href="#phan-1">Phần 1: Con Đường Bollettieri & Cha Mẹ - HLV</a></li>
-                <li class="toc-item"><a href="#phan-2">Phần 2: Kỹ Thuật Tấn Công & Bài Tập NBTA</a></li>
-                <li class="toc-item"><a href="#phan-3">Phần 3: Lộ Trình Vàng Từ 8 Đến 18 Tuổi</a></li>
-                <li class="toc-item"><a href="#phan-4">Phần 4: Thi Đấu Giải, Luật & Dinh Dưỡng</a></li>
-            </ul>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="reader-content">

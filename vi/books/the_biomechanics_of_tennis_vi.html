@@ -428,7 +428,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 
 <header class="mm-top"><a class="mm-brand" href="/vi/">Tennis Unified</a><nav class="mm-nav" aria-label="Sections"><div class="mm-dropdown"><button class="mm-dropbtn" type="button" aria-haspopup="true" aria-expanded="false">Main <span class="mm-caret">&#9662;</span></button><div class="mm-dropmenu">
@@ -483,23 +495,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#introduction">Lời Tựa Pat Cash & Mở Đầu</a></li>
-                    <li><a href="#principles">Chương 1: Nguyên Lý Cơ Sinh Học</a></li>
-                    <li><a href="#forehand-base">Chương 2: Thuận Tay Nền Tảng</a></li>
-                    <li><a href="#forehand-champions">Chương 3: Thuận Tay Các Nhà Vô Địch</a></li>
-                    <li><a href="#serve-biomechanics">Chương 4: Cơ Sinh Học Giao Bóng</a></li>
-                    <li><a href="#backhand-volley">Chương 5: Trái Tay & Volley</a></li>
-                    <li><a href="#injury-prevention">Chương 6: Mô Hình & Chấn Thương</a></li>
-                    <li><a href="#manifesto-faq">Tuyên Ngôn & Giải Đáp Thắc Mắc</a></li>
-                    <li><a href="#about-author">Về Tác Giả & Pat Cash</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

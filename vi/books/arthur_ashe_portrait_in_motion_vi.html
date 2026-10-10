@@ -418,7 +418,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -474,41 +486,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Nhật Ký</h3>
-                <ul class="toc-list">
-                    <li><a href="#preface">Lời Tựa Của Arthur Ashe</a></li>
-                    <li><strong>PHẦN 1: TOUR ĐẤU & KỲ VỌNG</strong></li>
-                    <li><a href="#ch1">Chương 1: Thế Kỷ Thứ Hai</a></li>
-                    <li><a href="#ch2">Chương 2: Forest Hills</a></li>
-                    <li><a href="#ch3">Chương 3: Đấu Sĩ & Hát Rong</a></li>
-                    <li><a href="#ch4">Chương 4: Hai Trận Chung Kết</a></li>
-                    <li><a href="#ch5">Chương 5: Niềm Vui Biến Mất</a></li>
-                    <li><a href="#ch6">Chương 6: Gánh Nặng Kỳ Vọng</a></li>
-                    <li><strong>PHẦN 2: TÂM LÝ & SỰ ĐIỀM ĐẠM</strong></li>
-                    <li><a href="#ch7">Chương 7: Ngày Tồi Tệ Nhất</a></li>
-                    <li><a href="#ch8">Chương 8: Hậu Phương & Bạn Bè</a></li>
-                    <li><a href="#ch9">Chương 9: Nghẽn Tâm Lý (Choke)</a></li>
-                    <li><a href="#ch10">Chương 10: Sự Điềm Đạm (Cool)</a></li>
-                    <li><a href="#ch11">Chương 11: Những Xung Đột</a></li>
-                    <li><strong>PHẦN 3: ĐẤU TRANH & ĐỐI THỦ</strong></li>
-                    <li><a href="#ch12">Chương 12: Bước Đến Nam Phi</a></li>
-                    <li><a href="#ch13">Chương 13: Giao Tiếp Chân Thành</a></li>
-                    <li><a href="#ch14">Chương 14: Mỗi Người Một Cú Đánh</a></li>
-                    <li><a href="#ch15">Chương 15: Nỗi Cô Đơn Quần Vợt</a></li>
-                    <li><a href="#ch16">Chương 16: Vùng Thăng Hoa (The Zone)</a></li>
-                    <li><a href="#ch17">Chương 17: Những Người Bạn Úc</a></li>
-                    <li><strong>PHẦN 4: HỒI SINH & VƯƠNG QUYỀN</strong></li>
-                    <li><a href="#ch18">Chương 18: Khủng Hoảng Tuổi 30</a></li>
-                    <li><a href="#ch19">Chương 19: Nắng Ấm Valencia</a></li>
-                    <li><a href="#ch20">Chương 20: Giới Hạn Cơ Thể</a></li>
-                    <li><a href="#ch21">Chương 21: Quyết Định Khó Khăn</a></li>
-                    <li><a href="#ch22">Chương 22: Lời Hứa Wimbledon</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

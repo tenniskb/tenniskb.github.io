@@ -428,7 +428,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 
 <header class="mm-top"><a class="mm-brand" href="/vi/">Tennis Unified</a><nav class="mm-nav" aria-label="Sections"><div class="mm-dropdown"><button class="mm-dropbtn" type="button" aria-haspopup="true" aria-expanded="false">Main <span class="mm-caret">&#9662;</span></button><div class="mm-dropmenu">
@@ -483,27 +495,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#introduction">Lời Mở Đầu: Triết Lý Cười & Thắng</a></li>
-                    <li><a href="#chapter-1">Chương 1: Những Yếu Tố Cốt Lõi</a></li>
-                    <li><a href="#chapter-2">Chương 2: Chọn Bạn Cặp & Não Bộ</a></li>
-                    <li><a href="#chapter-3">Chương 3: Quyết Định Phối Hợp Ban Đầu</a></li>
-                    <li><a href="#chapter-4">Chương 4: Vị Trí Xuất Phát Chuẩn</a></li>
-                    <li><a href="#chapter-5">Chương 5: Thi Đấu Ở 4 Vị Trí</a></li>
-                    <li><a href="#chapter-6">Chương 6: Lối Chơi Đồng Đội & Chiến Thuật</a></li>
-                    <li><a href="#chapter-7">Chương 7: Cú Đánh Cá Nhân Then Chốt</a></li>
-                    <li><a href="#chapter-8">Chương 8: Bạn, Tâm Lý & Đồng Đội</a></li>
-                    <li><a href="#chapter-9">Chương 9: Bài Tập Nổi Tiếng Thứ Sáu</a></li>
-                    <li><a href="#chapter-10">Chương 10: Ứng Phó Với Mọi Biến Số</a></li>
-                    <li><a href="#glossary-wisdom">Thuật Ngữ & Đúc Kết Vàng</a></li>
-                    <li><a href="#about-author">Về Các Tác Giả Vic Braden & Bill Bruns</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

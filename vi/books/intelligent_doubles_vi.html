@@ -489,7 +489,19 @@
             }
         }
     </style>
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 <button id="themeToggleBtn" type="button" style="display:none" aria-hidden="true"></button>
 
@@ -545,26 +557,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#foreword">Lời Tựa Của Rod Laver</a></li>
-                    <li><a href="#chapter-1">Chương 1: Sự Khác Biệt Của Đánh Đôi</a></li>
-                    <li><a href="#chapter-2">Chương 2: Phát Triển Một Đội Toàn Diện</a></li>
-                    <li><a href="#chapter-3">Chương 3: Kiểm Soát Cuộc Chơi</a></li>
-                    <li><a href="#chapter-4">Chương 4: Bố Trí Vị Trí Để Chiến Thắng</a></li>
-                    <li><a href="#chapter-5">Chương 5: Đạt Kết Quả Ổn Định</a></li>
-                    <li><a href="#chapter-6">Chương 6: Lợi Thế Giữa Sân</a></li>
-                    <li><a href="#chapter-7">Chương 7: Cú Lốp Bóng Đáng Sợ</a></li>
-                    <li><a href="#chapter-8">Chương 8: Những Tay Săn Bàn Lưới</a></li>
-                    <li><a href="#chapter-9">Chương 9: Thăng Tiến Qua Các Cấp Độ</a></li>
-                    <li><a href="#chapter-10">Chương 10: Quần Vợt "Tòa Án Ly Hôn"</a></li>
-                    <li><a href="#chapter-11">Chương 11: Nhân Đôi Niềm Vui</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">

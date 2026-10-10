@@ -118,6 +118,18 @@ body.pdf-lock{overflow:hidden;}
 @media (max-width:640px){.pdf-toolbar .pdf-title{display:none;}#pdf-pageinfo{min-width:62px;}}
 </style>
   <script src="/assets/javascripts/darkmode.js" defer></script>
+<style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
 </head>
 <body>
 
@@ -170,21 +182,7 @@ body.pdf-lock{overflow:hidden;}
 <div id="progress-container"><div id="progress-bar"></div></div>
 
 <div class="book-wrapper">
-  <aside class="book-sidebar">
-    <div class="toc-title">Mục Lục Tác Phẩm</div>
-    <nav class="toc-nav">
-      <ul>
-<li><a href="#intro">Lời giới thiệu</a></li>
-<li><a href="#ch-1">Những yếu tố của đánh đôi</a></li>
-<li><a href="#ch-2">Những người chơi</a></li>
-<li><a href="#ch-3">Sự hợp tác</a></li>
-<li><a href="#ch-4">Chiến thuật đánh đôi</a></li>
-<li><a href="#ch-5">Sổ tay chiến thuật</a></li>
-<li><a href="#ch-6">Chơi thứ quần vợt hay nhất của bạn</a></li>
-<li><a href="#ch-7">Sửa chữa lỗi sai</a></li>
-      </ul>
-    </nav>
-  </aside>
+  
 
   <main class="book-content" id="book-content">
     <div class="book-hero">

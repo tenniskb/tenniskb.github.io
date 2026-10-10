@@ -472,7 +472,19 @@
 }
 </style>
 
-<script src="/assets/javascripts/darkmode.js" defer></script></head>
+<script src="/assets/javascripts/darkmode.js" defer></script><style id="tu-no-sidebar">
+/* Left-hand table-of-contents sidebar removed -- reading column centred. */
+aside.reader-sidebar, aside.sidebar, aside.book-sidebar, aside.toc-sidebar,
+.reader-sidebar, .book-sidebar, .toc-sidebar { display: none !important; }
+.reader-layout, .main-container, .page-container, .book-wrapper {
+  display: block !important;
+  grid-template-columns: none !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+</style>
+</head>
 <body>
 
 <header class="mm-top"><a class="mm-brand" href="/vi/">Tennis Unified</a><nav class="mm-nav" aria-label="Sections"><div class="mm-dropdown"><button class="mm-dropbtn" type="button" aria-haspopup="true" aria-expanded="false">Main <span class="mm-caret">&#9662;</span></button><div class="mm-dropmenu">
@@ -527,28 +539,7 @@
 
     <!-- Layout -->
     <div class="main-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="toc-card">
-                <h3><i class="fa-solid fa-list-ul"></i> Mục Lục Sách</h3>
-                <ul class="toc-list">
-                    <li><a href="#introduction">Lời Giới Thiệu & Triết Lý</a></li>
-                    <li><a href="#chapter-1">Chương 1: Các Kiểu Cầm Vợt</a></li>
-                    <li><a href="#chapter-2">Chương 2: Bộ Chân & Di Chuyển</a></li>
-                    <li><a href="#chapter-3">Chương 3: Cú Thuận Tay Cơ Bản</a></li>
-                    <li><a href="#chapter-4">Chương 4: Cú Trái Tay Uy Lực</a></li>
-                    <li><a href="#chapter-5">Chương 5: Kỹ Thuật Volley Lưới</a></li>
-                    <li><a href="#chapter-6">Chương 6: Cú Lốp Bóng Chiến Thuật</a></li>
-                    <li><a href="#chapter-7">Chương 7: Cú Đập Bóng Trên Cao</a></li>
-                    <li><a href="#chapter-8">Chương 8: Nghệ Thuật Cú Bỏ Nhỏ</a></li>
-                    <li><a href="#chapter-9">Chương 9: Cú Giao Bóng Nền Tảng</a></li>
-                    <li><a href="#chapter-10">Chương 10: Trả Giao Bóng Thực Chiến</a></li>
-                    <li><a href="#chapter-11">Chương 11: Chiến Thuật Đánh Đơn</a></li>
-                    <li><a href="#chapter-12">Chương 12: Chiến Thuật Đánh Đôi</a></li>
-                    <li><a href="#about-author">Về Tác Giả Carol Matsuzaki</a></li>
-                </ul>
-            </div>
-        </aside>
+
 
         <!-- Main Content -->
         <main class="content-area">
